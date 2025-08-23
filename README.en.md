@@ -1,36 +1,85 @@
-# linlan-config
+# eframe-java-backend
 
-#### Description
-系统配置包，可包含配置工具、系统全局、要素模型、站点会员管理平台资源
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+![java version](https://img.shields.io/badge/JAVA-1.8-green.svg)
+![gitee star](https://gitee.com/linlannet/eframe-java-backend/badge/star.svg)
 
-#### Software Architecture
-Software architecture description
+## Introduce
 
-#### Installation
+The enterprise-level back-end framework (EFRAME) developed by JAVA is based on Springboot, and adopts the framework and security supporting the highest version of JAVA 1.8. The back-end data access adopts Mybatis framework, which supports a set of code adaptation of various databases, and provides scaffolding to quickly generate Mapper, etc. 
+Learn from the framework, realize the most basic administrator, organization, role, authority, grouping, message management, and provide framework support application extension for various enterprise applications.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+**common tools：** <a target="_blank">https://gitee.com/linlannet/java-tools-parent
 
-#### Instructions
+**code generate：** <a target="_blank">https://gitee.com/linlannet/java-tools-generate
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+**smart doc plugin：** <a target="_blank">https://gitee.com/linlannet/java-plugin-doc-generate
 
 
-#### Gitee Feature
+Front-end engineering path:
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+**VUE+TS：** <a target="_blank">https://gitee.com/linlannet/eframe-java-backend
+
+
+## Change Log
+
+[CHANGELOG](./CHANGELOG.md)
+
+
+## Application effect
+
+**Guide to the use of EFRAME ：** <a target="_blank">https://gitee.com/linlannet/eframe-docs
+
+## Technical Guidelines
+### Software Architecture
+```
+Springboot + Framework + Security + Mybatis
+```
+
+### Installation
+1. mvn clean install
+2. mvn clean deploy
+
+### Instructions
+1. use by maven
+```
+   <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>${artifactId}</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+   </dependency>
+```
+2. use direct jar
+
+## Contribution
+1.  Fork repository
+2.  new Feat_1.0.0 branch
+3.  commit
+```
+git config user.name linlaninfo
+git config user.email linlannet@163.com
+git config --global --list
+git config --list
+```
+4. new Pull Request
+5. create and commit tag
+```
+create
+git tag -a 1.0.0 -m "initial version"
+list
+git tag
+commit
+git push origin --tags
+delete
+git tag -d 1.0.0
+
+install: mvn clean install
+deploy: mvn clean deploy
+
+```
+6. other
+
+## Licence
+
+[Apache 2.0 © eframe-java-backend 2023](./LICENSE)
