@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.config.dao.PublicUnionMessageDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.config.entity.PublicUnionMessage" id="publicUnionMessageMap">
+        <id property="id" column="RECORD_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="type" column="TYPE"/>
+        <result property="bizType" column="BIZ_TYPE"/>
+        <result property="msgCreateTime" column="MSG_CREATE_TIME"/>
+        <result property="msgId" column="MSG_ID"/>
+        <result property="msgType" column="MSG_TYPE"/>
+        <result property="msgTitle" column="MSG_TITLE"/>
+        <result property="msgAbstract" column="MSG_ABSTRACT"/>
+        <result property="msgAccountId" column="MSG_ACCOUNT_ID"/>
+        <result property="msgAccountName" column="MSG_ACCOUNT_NAME"/>
+        <result property="msgModuleId" column="MSG_MODULE_ID"/>
+        <result property="msgModuleName" column="MSG_MODULE_NAME"/>
+        <result property="msgUserId" column="MSG_USER_ID"/>
+        <result property="msgUserName" column="MSG_USER_NAME"/>
+        <result property="msgOrganId" column="MSG_ORGAN_ID"/>
+        <result property="msgOrganName" column="MSG_ORGAN_NAME"/>
+        <result property="msgUrl" column="MSG_URL"/>
+        <result property="msgLabels" column="MSG_LABELS"/>
+        <result property="msgContent" column="MSG_CONTENT"/>
+        <result property="status" column="STATUS"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="publicUnionMessageMap">
+        SELECT
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM PUBLIC_UNION_MESSAGE B
+        WHERE B.RECORD_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="publicUnionMessageMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_MESSAGE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.RECORD_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.RECORD_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="id != null and id != ''">
+            and B.RECORD_ID = #{id}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and B.SITE_ID = #{siteId}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="bizType != null and bizType != ''">
+            and B.BIZ_TYPE = #{bizType}
+        </if>
+        <if test="msgCreateTime != null and msgCreateTime != ''">
+            and B.MSG_CREATE_TIME = #{msgCreateTime}
+        </if>
+        <if test="msgId != null and msgId != ''">
+            and B.MSG_ID = #{msgId}
+        </if>
+        <if test="msgType != null and msgType != ''">
+            and B.MSG_TYPE = #{msgType}
+        </if>
+        <if test="msgTitle != null and msgTitle != ''">
+            and B.MSG_TITLE = #{msgTitle}
+        </if>
+        <if test="msgAbstract != null and msgAbstract != ''">
+            and B.MSG_ABSTRACT = #{msgAbstract}
+        </if>
+        <if test="msgAccountId != null and msgAccountId != ''">
+            and B.MSG_ACCOUNT_ID = #{msgAccountId}
+        </if>
+        <if test="msgAccountName != null and msgAccountName != ''">
+            and B.MSG_ACCOUNT_NAME = #{msgAccountName}
+        </if>
+        <if test="msgModuleId != null and msgModuleId != ''">
+            and B.MSG_MODULE_ID = #{msgModuleId}
+        </if>
+        <if test="msgModuleName != null and msgModuleName != ''">
+            and B.MSG_MODULE_NAME = #{msgModuleName}
+        </if>
+        <if test="msgUserId != null and msgUserId != ''">
+            and B.MSG_USER_ID = #{msgUserId}
+        </if>
+        <if test="msgUserName != null and msgUserName != ''">
+            and B.MSG_USER_NAME = #{msgUserName}
+        </if>
+        <if test="msgOrganId != null and msgOrganId != ''">
+            and B.MSG_ORGAN_ID = #{msgOrganId}
+        </if>
+        <if test="msgOrganName != null and msgOrganName != ''">
+            and B.MSG_ORGAN_NAME = #{msgOrganName}
+        </if>
+        <if test="msgUrl != null and msgUrl != ''">
+            and B.MSG_URL = #{msgUrl}
+        </if>
+        <if test="msgLabels != null and msgLabels != ''">
+            and B.MSG_LABELS = #{msgLabels}
+        </if>
+        <if test="msgContent != null and msgContent != ''">
+            and B.MSG_CONTENT = #{msgContent}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opOrganName != null and opOrganName != ''">
+            and B.OP_ORGAN_NAME = #{opOrganName}
+        </if>
+        <if test="creatorId != null and creatorId != ''">
+            and B.CREATOR_ID = #{creatorId}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.config.entity.PublicUnionMessage">
+        INSERT INTO PUBLIC_UNION_MESSAGE
+        (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+#{id}, #{siteId}, #{foreignId}, #{type}, #{bizType}, #{msgCreateTime}, #{msgId}, #{msgType}, #{msgTitle}, #{msgAbstract}, #{msgAccountId}, #{msgAccountName}, #{msgModuleId}, #{msgModuleName}, #{msgUserId}, #{msgUserName}, #{msgOrganId}, #{msgOrganName}, #{msgUrl}, #{msgLabels}, #{msgContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO PUBLIC_UNION_MESSAGE
+                (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO PUBLIC_UNION_MESSAGE
+                    (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.config.entity.PublicUnionMessage">
+        UPDATE PUBLIC_UNION_MESSAGE
+        <set>
+            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
+            <if test="msgCreateTime != null">MSG_CREATE_TIME = #{msgCreateTime}, </if>
+            <if test="msgId != null">MSG_ID = #{msgId}, </if>
+            <if test="msgType != null">MSG_TYPE = #{msgType}, </if>
+            <if test="msgTitle != null">MSG_TITLE = #{msgTitle}, </if>
+            <if test="msgAbstract != null">MSG_ABSTRACT = #{msgAbstract}, </if>
+            <if test="msgAccountId != null">MSG_ACCOUNT_ID = #{msgAccountId}, </if>
+            <if test="msgAccountName != null">MSG_ACCOUNT_NAME = #{msgAccountName}, </if>
+            <if test="msgModuleId != null">MSG_MODULE_ID = #{msgModuleId}, </if>
+            <if test="msgModuleName != null">MSG_MODULE_NAME = #{msgModuleName}, </if>
+            <if test="msgUserId != null">MSG_USER_ID = #{msgUserId}, </if>
+            <if test="msgUserName != null">MSG_USER_NAME = #{msgUserName}, </if>
+            <if test="msgOrganId != null">MSG_ORGAN_ID = #{msgOrganId}, </if>
+            <if test="msgOrganName != null">MSG_ORGAN_NAME = #{msgOrganName}, </if>
+            <if test="msgUrl != null">MSG_URL = #{msgUrl}, </if>
+            <if test="msgLabels != null">MSG_LABELS = #{msgLabels}, </if>
+            <if test="msgContent != null">MSG_CONTENT = #{msgContent}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opOrganName != null">OP_ORGAN_NAME = #{opOrganName}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE RECORD_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM PUBLIC_UNION_MESSAGE
+        WHERE RECORD_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM PUBLIC_UNION_MESSAGE
+        WHERE RECORD_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM PUBLIC_UNION_MESSAGE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.config.dto.PublicUnionMessageDto" extends="publicUnionMessageMap" id="publicUnionMessageDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="publicUnionMessageDtoMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_MESSAGE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="publicUnionMessageDtoMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_MESSAGE B
+        WHERE RECORD_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+
+
+</mapper>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminDeptRoleDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.AdminDeptRole" id="adminDeptRoleMap">
+        <id property="id" column="DEPTROLE_ID"/>
+        <result property="roleId" column="ROLE_ID"/>
+        <result property="deptId" column="DEPT_ID"/>
+    </resultMap>
+    
+    <!-- 以下为新增特定的操作 -->
+    <select id="getCountByDeptId" resultType="Integer">
+        select count(1) from ADMIN_ROLE_DEPT where DEPT_ID=#{deptId}
+    </select>
+
+    <delete id="deleteByRoleId" parameterType="Long">
+        delete from ADMIN_ROLE_DEPT where ROLE_ID=#{roleId}
+    </delete>
+
+    <delete id="deleteByRoleIds" parameterType="Long">
+        delete from ADMIN_ROLE_DEPT where ROLE_ID in
+        <foreach collection="array" item="roleId" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </delete>
+
+    <insert id="batchSaveDeptRole">
+        insert into ADMIN_ROLE_DEPT (ROLE_ID, DEPT_ID) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (#{item.roleId}, #{item.deptId})
+        </foreach>
+    </insert>
+
+</mapper>

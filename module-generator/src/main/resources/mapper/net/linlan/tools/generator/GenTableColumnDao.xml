@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-generator - generator代码生成模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.tools.generator.dao.GenTableColumnDao">
+
+    <resultMap type="net.linlan.tools.generator.entity.GenTableColumn" id="genTableColumnMap">
+        <id     property="columnId"       column="COLUMN_ID"      />
+        <result property="tableId"        column="TABLE_ID"       />
+        <result property="columnName"     column="COLUMN_NAME"    />
+        <result property="columnComment"  column="COLUMN_COMMENT" />
+        <result property="columnType"     column="COLUMN_TYPE"    />
+        <result property="javaType"       column="JAVA_TYPE"      />
+        <result property="javaField"      column="JAVA_FIELD"     />
+        <result property="isPk"           column="IS_PK"          />
+        <result property="isIncrement"    column="IS_INCREMENT"   />
+        <result property="isRequired"     column="IS_REQUIRED"    />
+        <result property="isInsert"       column="IS_INSERT"      />
+        <result property="isEdit"         column="IS_EDIT"        />
+        <result property="isList"         column="IS_LIST"        />
+        <result property="isQuery"        column="IS_QUERY"       />
+        <result property="queryType"      column="QUERY_TYPE"     />
+        <result property="htmlType"       column="HTML_TYPE"      />
+        <result property="dictType"       column="DICT_TYPE"      />
+        <result property="priority"       column="PRIORITY"           />
+        <result property="creatorId"      column="CREATOR_ID"      />
+        <result property="createTime"     column="CREATE_TIME"    />
+        <result property="lastTime"       column="LAST_TIME"    />
+    </resultMap>
+
+	<sql id="selectGenTableColumnVo">
+        select COLUMN_ID, TABLE_ID, COLUMN_NAME, COLUMN_COMMENT, COLUMN_TYPE, JAVA_TYPE, JAVA_FIELD, IS_PK, IS_INCREMENT, IS_REQUIRED, IS_INSERT, IS_EDIT, IS_LIST, IS_QUERY, QUERY_TYPE, HTML_TYPE, DICT_TYPE, PRIORITY, CREATOR_ID, CREATE_TIME, LAST_TIME from GEN_TABLE_COLUMN
+    </sql>
+
+    <select id="selectGenTableColumnListByTableId" parameterType="Long" resultMap="genTableColumnMap">
+        <include refid="selectGenTableColumnVo"/>
+        where TABLE_ID = #{tableId}
+        order by priority
+    </select>
+
+    <select id="selectDbTableColumnsByName" parameterType="String" resultMap="genTableColumnMap">
+		select COLUMN_NAME, (case when (is_nullable = 'no' <![CDATA[ && ]]> column_key != 'PRI') then '1' else '0' end) as IS_REQUIRED, (case when column_key = 'PRI' then '1' else '0' end) as IS_PK, ordinal_position as PRIORITY, COLUMN_COMMENT, (case when extra = 'auto_increment' then '1' else '0' end) as IS_INCREMENT, COLUMN_TYPE
+		from information_schema.columns where table_schema = (select database()) and TABLE_NAME = (#{tableName})
+		order by ordinal_position
+	</select>
+
+    <insert id="insertGenTableColumn" parameterType="net.linlan.tools.generator.entity.GenTableColumn" useGeneratedKeys="true" keyProperty="columnId">
+        insert into GEN_TABLE_COLUMN (
+			<if test="columnId != null">COLUMN_ID,</if>
+			<if test="tableId != null">TABLE_ID,</if>
+			<if test="columnName != null and columnName != ''">COLUMN_NAME,</if>
+			<if test="columnComment != null and columnComment != ''">COLUMN_COMMENT,</if>
+			<if test="columnType != null and columnType != ''">COLUMN_TYPE,</if>
+			<if test="javaType != null and javaType != ''">JAVA_TYPE,</if>
+			<if test="javaField != null  and javaField != ''">JAVA_FIELD,</if>
+			<if test="isPk != null and isPk != ''">IS_PK,</if>
+			<if test="isIncrement != null and isIncrement != ''">IS_INCREMENT,</if>
+			<if test="isRequired != null and isRequired != ''">IS_REQUIRED,</if>
+			<if test="isInsert != null and isInsert != ''">IS_INSERT,</if>
+			<if test="isEdit != null and isEdit != ''">IS_EDIT,</if>
+			<if test="isList != null and isList != ''">IS_LIST,</if>
+			<if test="isQuery != null and isQuery != ''">IS_QUERY,</if>
+			<if test="queryType != null and queryType != ''">QUERY_TYPE,</if>
+			<if test="htmlType != null and htmlType != ''">HTML_TYPE,</if>
+			<if test="dictType != null and dictType != ''">DICT_TYPE,</if>
+			<if test="priority != null">PRIORITY,</if>
+			<if test="creatorId != null and creatorId != ''">CREATOR_ID,</if>
+			CREATE_TIME
+         )values(
+			<if test="columnId != null">#{columnId},</if>
+			<if test="tableId != null">#{tableId},</if>
+			<if test="columnName != null and columnName != ''">#{columnName},</if>
+			<if test="columnComment != null and columnComment != ''">#{columnComment},</if>
+			<if test="columnType != null and columnType != ''">#{columnType},</if>
+			<if test="javaType != null and javaType != ''">#{javaType},</if>
+			<if test="javaField != null and javaField != ''">#{javaField},</if>
+			<if test="isPk != null and isPk != ''">#{isPk},</if>
+			<if test="isIncrement != null and isIncrement != ''">#{isIncrement},</if>
+			<if test="isRequired != null and isRequired != ''">#{isRequired},</if>
+			<if test="isInsert != null and isInsert != ''">#{isInsert},</if>
+			<if test="isEdit != null and isEdit != ''">#{isEdit},</if>
+			<if test="isList != null and isList != ''">#{isList},</if>
+			<if test="isQuery != null and isQuery != ''">#{isQuery},</if>
+			<if test="queryType != null and queryType != ''">#{queryType},</if>
+			<if test="htmlType != null and htmlType != ''">#{htmlType},</if>
+			<if test="dictType != null and dictType != ''">#{dictType},</if>
+			<if test="priority != null">#{priority},</if>
+			<if test="creatorId != null and creatorId != ''">#{creatorId},</if>
+			sysdate()
+         )
+    </insert>
+
+    <update id="updateGenTableColumn" parameterType="net.linlan.tools.generator.entity.GenTableColumn">
+        update GEN_TABLE_COLUMN
+        <set>
+            <if test="columnComment != null">COLUMN_COMMENT = #{columnComment},</if>
+            <if test="javaType != null">JAVA_TYPE = #{javaType},</if>
+            <if test="javaField != null">JAVA_FIELD = #{javaField},</if>
+            <if test="isInsert != null">IS_INSERT = #{isInsert},</if>
+            <if test="isEdit != null">IS_EDIT = #{isEdit},</if>
+            <if test="isList != null">IS_LIST = #{isList},</if>
+            <if test="isQuery != null">IS_QUERY = #{isQuery},</if>
+            <if test="isRequired != null">IS_REQUIRED = #{isRequired},</if>
+            <if test="queryType != null">QUERY_TYPE = #{queryType},</if>
+            <if test="htmlType != null">HTML_TYPE = #{htmlType},</if>
+            <if test="dictType != null">DICT_TYPE = #{dictType},</if>
+            <if test="priority != null">PRIORITY = #{priority},</if>
+            LAST_TIME = sysdate()
+        </set>
+        where COLUMN_ID = #{columnId}
+    </update>
+
+    <delete id="deleteGenTableColumnByIds" parameterType="Long">
+        delete from GEN_TABLE_COLUMN where TABLE_ID in
+        <foreach collection="array" item="tableId" open="(" separator="," close=")">
+            #{tableId}
+        </foreach>
+    </delete>
+
+    <delete id="deleteGenTableColumns">
+        delete from GEN_TABLE_COLUMN where COLUMN_ID in
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item.columnId}
+        </foreach>
+    </delete>
+
+</mapper>

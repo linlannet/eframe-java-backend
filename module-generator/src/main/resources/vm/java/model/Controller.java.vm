@@ -1,0 +1,144 @@
+package ${packageName}.controller;
+
+import javax.annotation.Resource;
+
+import net.linlan.annotation.LimitScope;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import com.github.pagehelper.Page;
+import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+
+import net.linlan.annotation.Encrypt;
+import net.linlan.commons.core.RandomUtils;
+import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.annotation.PlatLog;
+
+import net.linlan.utils.constant.Constants;
+import net.linlan.utils.constant.UserConstants;
+import net.linlan.utils.exception.CommonException;
+
+import ${packageName}.dto.${ClassName}Dto;
+import ${packageName}.entity.${ClassName};
+import ${packageName}.param.${ClassName}Param;
+import ${packageName}.service.${ClassName}Service;
+import net.linlan.frame.view.admin.utils.ExcelUtil;
+
+ /**
+ *
+ * ${ClassName}控制域:${functionName}读写控制类
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+@RestController
+@RequestMapping("/api/${moduleName}")
+public class ${ClassName}Controller extends BaseController
+{
+    @Resource
+    private ${ClassName}Service ${className}Service;
+
+    /** Get ${ClassName} list. 获取${functionName}列表或分页, 返回${ClassName}对象.
+     * @param param 参数查询对象
+     * @return 获取${functionName}列表或分页, 返回${ClassName}对象:null,error;page,success
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:list')")
+#if($table.tree)
+    @PlatLog(value = "查询${functionName}列表")
+    @GetMapping("/${businessName}/list")
+    @Encrypt
+    public ResponseResult<List<${ClassName}>> list(${ClassName} param)
+    {
+        List<${ClassName}> list = ${className}Service.getList(JsonMapUtils.beanToMap(param));
+        return success(list);
+    }
+#else
+    @PlatLog(value = "查询${functionName}分页")
+    @GetMapping("/${businessName}/list")
+    @Encrypt
+    public ResponseResult<List<${ClassName}>> list(${ClassName}Param param)
+    {
+        Page<${ClassName}Dto> result = ${className}Service.getPageDto(param);
+        if (result == null){
+            return empty();
+        }
+        return successPage(result.getResult(), result.getPageSize(), result.getPageNum(), result.getTotal());
+    }
+#end
+
+    /** ${ClassName} Operation. ${ClassName}数据操作逻辑，导出操作.
+     * @param response 响应体
+     * @param param 参数查询对象
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:export')")
+    @PlatLog(value = "导出${functionName}列表", category = 52)
+    @PostMapping("/${businessName}/export")
+    @Encrypt
+    public void export(HttpServletResponse response, ${ClassName}Param param)
+    {
+        List<${ClassName}> list = ${className}Service.getList(JsonMapUtils.beanToMap(param));
+        ExcelUtil<${ClassName}> util = new ExcelUtil<${ClassName}>(${ClassName}.class);
+        util.exportExcel(response, list, "${functionName}数据导出");
+    }
+
+    /**
+     * Get ${ClassName} by id. 主键获取${functionName}详细信息.
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     * @return {@link ${ClassName}}:空null,error;分页page,success
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:detail')")
+    @PlatLog(value = "主键获取${functionName}详细信息", category = 1)
+    @GetMapping(value = "/${businessName}/{${pkColumn.javaField}}")
+    @Encrypt
+    public ResponseResult<${ClassName}> get${ClassName}ById(@PathVariable("${pkColumn.javaField}") ${pkColumn.javaType} ${pkColumn.javaField})
+    {
+        return success(${className}Service.findById(${pkColumn.javaField}));
+    }
+
+    /** ${ClassName} Operation. 新增${functionName}数据操作逻辑，根据操作类型，执行新增操作.
+     * @param input 对象信息，输入${ClassName}对象
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:save')")
+    @PlatLog(value = "新增${functionName}", category = 10)
+    @PostMapping("/${businessName}/save")
+    @Encrypt
+    @LimitScope(name = "${className}Save", key = "${className}Save")
+    public ResponseResult<String> save(@RequestBody ${ClassName} input)
+    {
+        ${className}Service.save(input);
+        return success();
+    }
+
+    /** ${ClassName} Operation. 修改${functionName}数据操作逻辑，根据操作类型，执行修改操作.
+     * @param input 对象信息，输入${ClassName}对象
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:update')")
+    @PlatLog(value = "修改${functionName}", category = 20)
+    @PostMapping("/${businessName}/update")
+    @Encrypt
+    @LimitScope(name = "${className}Update", key = "${className}Update")
+    public ResponseResult<String> update(@RequestBody ${ClassName} input)
+    {
+        return success(${className}Service.update(input));
+    }
+
+    /** ${ClassName} Operation. 删除${functionName}数据操作逻辑，根据操作类型，执行删除操作.
+     * @param ${pkColumn.javaField}s #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end:null;1;1,2,3|1
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:delete')")
+    @PlatLog(value = "删除${functionName}", category = 40)
+	@PostMapping("/${businessName}/delete/{${pkColumn.javaField}s}")
+    @Encrypt
+    @LimitScope(name = "${className}Delete", key = "${className}Delete")
+    public ResponseResult<String> delete(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s)
+    {
+        return success(${className}Service.deleteByIds(${pkColumn.javaField}s));
+    }
+
+}

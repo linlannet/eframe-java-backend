@@ -1,0 +1,81 @@
+package ${packageName}.view;
+
+import com.google.common.base.Function;
+import ${packageName}.entity.${ClassName};
+import ${packageName}.dto.${ClassName}Dto;
+import lombok.Data;
+import org.springframework.lang.Nullable;
+import java.util.Date;
+
+/**
+ *
+ * ${ClassName}视图域:${functionName}显示Vo类
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+@Data
+public class ${ClassName}Vo {
+#foreach ($column in $columns)
+    /**
+     * $column.columnComment
+     */
+    private $column.javaType $column.javaField;
+#end
+
+    /**
+     * 无参构造方法
+     */
+    public ${ClassName}Vo() {}
+
+    /**
+     * 数据赋值TO方法，将${ClassName}的input对象赋值给${ClassName}Vo
+     */
+    public static final Function TO = new Function<${ClassName}, ${ClassName}Vo>() {
+        @Nullable
+        @Override
+        public ${ClassName}Vo apply(@Nullable ${ClassName} input) {
+            return new ${ClassName}Vo(input);
+        }
+    };
+
+    /**
+     * @param input 数据库查询出的entity对象，对VO对象进行赋值，默认的字段为全部字段，可结合实际调整
+     */
+    public ${ClassName}Vo(${ClassName} input) {
+#foreach ($column in $columns)
+#if($column.javaField.length() > 2 && $column.javaField.substring(1,2).matches("[A-Z]"))
+#set($AttrName=$column.javaField)
+#else
+#set($AttrName=$column.javaField.substring(0,1).toUpperCase() + ${column.javaField.substring(1)})
+#end
+        this.$column.javaField = input.get${AttrName}();
+#end
+    }
+
+    /**
+     * 数据赋值DTO方法，将${ClassName}Dto的input对象赋值给${ClassName}Vo
+     */
+    public static final Function DTO = new Function<${ClassName}Dto, ${ClassName}Vo>() {
+        @Nullable
+        @Override
+        public ${ClassName}Vo apply(@Nullable ${ClassName}Dto input) {
+            return new ${ClassName}Vo(input);
+        }
+    };
+
+    /**
+     * @param input 数据库查询出的Dto对象，对VO对象进行赋值，默认的字段为全部字段，可结合实际调整
+     */
+    public ${ClassName}Vo(${ClassName}Dto input) {
+#foreach ($column in $columns)
+#if($column.javaField.length() > 2 && $column.javaField.substring(1,2).matches("[A-Z]"))
+#set($AttrName=$column.javaField)
+#else
+#set($AttrName=$column.javaField.substring(0,1).toUpperCase() + ${column.javaField.substring(1)})
+#end
+        this.$column.javaField = input.get${AttrName}();
+#end
+    }
+
+}

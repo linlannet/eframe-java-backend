@@ -1,0 +1,204 @@
+package ${packageName}.service;
+
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import net.linlan.commons.core.ObjectUtils;
+#if($table.sub)
+import java.util.ArrayList;
+import org.springframework.transaction.annotation.Transactional;
+import ${packageName}.entity.${subClassName};
+#end
+import ${packageName}.dao.${ClassName}Dao;
+import ${packageName}.entity.${ClassName};
+import ${packageName}.dto.${ClassName}Dto;
+import ${packageName}.param.${ClassName}Param;
+import lombok.extern.slf4j.Slf4j;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * ${functionName}Service业务层处理
+ *
+ * @author ${author}
+ * CreateTime ${datetime}
+ */
+@Service
+@Slf4j
+public class ${ClassName}Service
+{
+    @Resource
+    private ${ClassName}Dao dao;
+
+    /** get the list of entity ${ClassName} by map
+     * 通过Map参数查询列表方法，返回${functionName}
+     * @param map the input select conditions
+     * @return {@link List<${ClassName}>}
+     */
+    //@DataFilter(tableAlias = "B", owner = false)
+    public List<${ClassName}> getList(Map<String, Object> map)
+    {
+        return dao.getList(map);
+    }
+
+    /** get the list of entity ${ClassName} by param
+     * 通过Param参数查询${functionName}不分页列表
+     *
+     * @param ${className} ${functionName}
+     * @return ${functionName}
+     */
+    public List<${ClassName}> selectList(${ClassName}Param ${className})
+    {
+        return dao.selectList(${className});
+    }
+
+    /** find the entity by input id, return entity
+     * 对象详情方法，通过id查询对象${functionName}
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     * @return ${ClassName}
+     */
+    public ${ClassName} findById(${pkColumn.javaType} ${pkColumn.javaField})
+    {
+        if (ObjectUtils.isEmpty(${pkColumn.javaField})){
+            return null;
+        }
+        return dao.findById(${pkColumn.javaField});
+    }
+
+    /** save the entity with input object
+     * 保存对象方法${functionName}
+     * @param ${className} the input ${className}
+     */
+#if($table.sub)
+    @Transactional
+#end
+    public void save(${ClassName} ${className})
+    {
+        ${className}.init();
+#if($table.sub)
+        dao.save(${className});
+        // 保存关联信息
+        insert${subClassName}(${className});
+#else
+        dao.save(${className});
+#end
+    }
+
+    /** batch save the entity with input list
+     * 保存对象${functionName}，批量保存list
+     * @param list {@link ${ClassName}}
+     */
+    public void batchSave(List<${ClassName}> list)
+    {
+        dao.batchSave(list);
+    }
+
+    /** update the entity with input object
+     * 更新对象方法,修改${functionName}
+     * @param ${className} the input ${className}
+     * @return 结果
+     */
+#if($table.sub)
+    @Transactional
+#end
+    public int update(${ClassName} ${className})
+    {
+#if($table.sub)
+        // 删除关联信息，然后重新保存
+        dao.delete${subClassName}By${subTableFkClassName}(${className}.get${pkColumn.capJavaField}());
+        insert${subClassName}(${className});
+#end
+        return dao.update(${className});
+    }
+
+    /** delete the entity by input id
+     * 删除方法，通过id删除${functionName}
+     *
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     */
+    public int deleteById(${pkColumn.javaType} ${pkColumn.javaField}) {
+        if (ObjectUtils.isEmpty(${pkColumn.javaField})){
+            return 0;
+        }
+        return deleteByIds(new ${pkColumn.javaType}[]{ ${pkColumn.javaField} });
+    }
+
+    /** batch delete the entity by input ids
+     * 批量删除方法，通过ids删除对象，批量删除${functionName}
+     * @param ${pkColumn.javaField}s the input ids
+     * @return 结果
+     */
+#if($table.sub)
+    @Transactional
+#end
+    public int deleteByIds(${pkColumn.javaType}[] ${pkColumn.javaField}s)
+    {
+#if($table.sub)
+        // 删除关联信息
+        dao.delete${subClassName}By${subTableFkClassName}s(${pkColumn.javaField}s);
+#end
+        return dao.deleteByIds(${pkColumn.javaField}s);
+    }
+
+    /** query the total count by input select conditions
+ * 通过输入的条件查询记录总数
+ * @param map the input select conditions
+ * @return total count
+ */
+    public int getCount(Map<String, Object> map)
+    {
+        return dao.getCount(map);
+    }
+
+    /** get the page of dto ${ClassName}Dto
+     * 列表分页方法，返回分页DTO对象列表
+     * @param param the input param {@link ${ClassName}Param }
+     * @return 分页的${functionName}数据 {@link Page} 对象，包含 {@link ${ClassName}} 列表
+     */
+    //@DataFilter(tableAlias = "B", owner = false)
+    public Page<${ClassName}Dto> getPageDto(${ClassName}Param param)
+    {
+        PageHelper.startPage(param.getPage(), param.getLimit());
+        return dao.getPageDto(param);
+    }
+
+    /** get the dto by input id, return dto
+     * 对象详情方法，通过id查询对象{@link ${ClassName}Dto}
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     * @return {@link ${ClassName}Dto}
+     */
+    public ${ClassName}Dto getDtoById(${pkColumn.javaType} ${pkColumn.javaField}) {
+        if (ObjectUtils.isEmpty(${pkColumn.javaField})){
+            return null;
+        }
+        return dao.getDtoById(${pkColumn.javaField});
+    }
+
+    #if($table.sub)
+
+    /**
+     * 新增${subTable.functionName}
+     *
+     * @param ${className} ${functionName}对象
+     */
+    public void insert${subClassName}(${ClassName} ${className})
+    {
+        List<${subClassName}> ${subclassName}List = ${className}.get${subClassName}List();
+        ${pkColumn.javaType} ${pkColumn.javaField} = ${className}.get${pkColumn.capJavaField}();
+        if (ObjectUtils.isNotEmpty(${subclassName}List))
+        {
+            List<${subClassName}> list = new ArrayList<${subClassName}>();
+            for (${subClassName} ${subclassName} : ${subclassName}List)
+            {
+                ${subclassName}.set${subTableFkClassName}(${pkColumn.javaField});
+                list.add(${subclassName});
+            }
+            if (list.size() > 0)
+            {
+                dao.batchSave${subClassName}(list);
+            }
+        }
+    }
+#end
+}

@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-java-backend - JAVA开发的企业级后端框架，基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等，借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.linlan.eframe</groupId>
     <artifactId>eframe-java-backend</artifactId>
-    <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <version>1.1.0</version>
+    <packaging>pom</packaging>
     <name>eframe-java-backend</name>
     <description>JAVA开发的企业级后端框架，基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等，借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
     </description>
 
-
     <properties>
 
-        <java.eframe.version>1.0.0</java.eframe.version>
+        <linlan.eframe.version>1.1.0</linlan.eframe.version>
         <linlan.plugin.version>2.3.12</linlan.plugin.version>
         <linlan.tools.version>2.6.6</linlan.tools.version>
 
@@ -31,20 +49,20 @@
         <maven.sonatype.version>0.7.0</maven.sonatype.version>
         <spring.boot.version>2.7.18</spring.boot.version>
         <spring-framework.version>5.3.31</spring-framework.version>
-        <spring-security.version>5.7.10</spring-security.version>
-        <mybatis.spring.version>2.2.2</mybatis.spring.version>
+        <spring-security.version>5.7.11</spring-security.version>
+        <mybatis.spring.version>2.3.2</mybatis.spring.version>
         <druid.version>1.2.23</druid.version>
         <quartz.version>2.3.0</quartz.version>
         <commons-pool2.version>2.12.0</commons-pool2.version>
         <bitwalker.version>1.21</bitwalker.version>
         <springfox.version>2.9.2</springfox.version>
         <kaptcha.version>2.3.3</kaptcha.version>
-        <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
+        <pagehelper.boot.version>2.1.0</pagehelper.boot.version>
         <lombok.version>1.18.30</lombok.version>
         <fastjson2.version>2.0.31</fastjson2.version>
         <fasterxml.version>2.13.5</fasterxml.version>
         <oshi.version>5.5.1</oshi.version>
-        <snakeyaml.version>1.30.0</snakeyaml.version>
+        <snakeyaml.version>1.30</snakeyaml.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <commons.io.version>2.13.0</commons.io.version>
         <poi.version>4.1.2</poi.version>
@@ -54,6 +72,12 @@
         <apache.httpclient.version>4.5.5</apache.httpclient.version>
         <jedis.version>3.8.0</jedis.version>
         <aspectj.version>1.8.13</aspectj.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <mysql.version>8.0.32</mysql.version>
+        <license-maven-plugin.version>4.2</license-maven-plugin.version>
+        <formatter-maven-plugin.version>2.16.0</formatter-maven-plugin.version>
+        <impsort-maven-plugin.version>1.6.2</impsort-maven-plugin.version>
 
     </properties>
 
@@ -82,6 +106,16 @@
         </developer>
     </developers>
 
+    <modules>
+        <module>eframe-support</module>
+        <module>eframe-model</module>
+        <module>eframe-core</module>
+        <module>eframe-view</module>
+        <module>eframe-api</module>
+        <module>module-generator</module>
+        <module>module-quartz</module>
+        <module>eframe-web</module>
+    </modules>
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
@@ -90,17 +124,18 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
                 <version>${spring-framework.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
 
             <!-- SpringSecurity的依赖配置-->
             <dependency>
                 <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-bom</artifactId>
+                <artifactId>spring-security-web</artifactId>
                 <version>${spring-security.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
 
             <!-- SpringBoot的依赖配置-->
@@ -187,6 +222,16 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-autoconfigure</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.quartz-scheduler</groupId>
@@ -261,6 +306,88 @@
                 <groupId>pro.fessional</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+
+            <!-- io常用工具类 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+
+            <!-- excel工具 -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.linlan.commons</groupId>
+                <artifactId>commons-core</artifactId>
+                <version>${linlan.tools.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.github.pagehelper</groupId>
+                        <artifactId>pagehelper</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>eframe-support</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>eframe-core</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>eframe-model</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>eframe-view</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>eframe-api</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>module-generator</artifactId>
+                <version>${linlan.eframe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.linlan.eframe</groupId>
+                <artifactId>module-quartz</artifactId>
+                <version>${linlan.eframe.version}</version>
             </dependency>
 
         </dependencies>
@@ -358,6 +485,135 @@
                     <publishingServerId>sonatype-central</publishingServerId>
                     <autoPublish>true</autoPublish>
                 </configuration>
+            </plugin>
+            <!--license 文件版权插件 -->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>${license-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>remove</goal>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <quiet>true</quiet>
+                    <header>${user.dir}/scripts/codestyle/HEADER</header>
+                    <properties>
+                        <owner>Linlan</owner>
+                        <year>2020-2025</year>
+                        <email>open@linlan.net</email>
+                    </properties>
+                    <includes>
+                        <!-- Java/Kotlin -->
+                        <include>**/*.java</include>
+
+                        <!-- 前端文件 -->
+                        <include>**/*.ts</include>
+                        <include>**/*.tsx</include>
+                        <include>**/*.js</include>
+                        <include>**/*.jsx</include>
+                        <include>**/*.vue</include>
+                        <include>**/*.css</include>
+
+                        <!-- 配置文件 -->
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                        <include>**/*.yaml</include>
+
+                    </includes>
+                    <excludes>
+                        <exclude>*.sh</exclude>
+                        <exclude>*.yml</exclude>
+                        <exclude>*.iml</exclude>
+                        <exclude>*.config</exclude>
+                        <exclude>**/*.ftlh</exclude>
+                        <exclude>.editorconfig</exclude>
+                        <exclude>.gitignore</exclude>
+                        <exclude>LICENSE</exclude>
+                        <exclude>**/*.md</exclude>
+                        <exclude>**/*.log</exclude>
+                        <exclude>**/codestyle/HEADER</exclude>
+                        <exclude>**/.gitkeep</exclude>
+                        <exclude>**/spring.factories</exclude>
+                        <exclude>**/.mvn/**</exclude>
+                        <exclude>**/mvnw</exclude>
+                        <exclude>**/ip2region.db</exclude>
+                        <exclude>**/resources/template/**</exclude>
+                        <exclude>**/node_modules/**</exclude>
+                        <exclude>**/.umi-production/**</exclude>
+                        <exclude>**/docs/**</exclude>
+                        <exclude>**/dictionaries/**</exclude>
+                        <exclude>**/static/antd.min.css</exclude>
+                        <exclude>**/META-INF/**</exclude>
+                    </excludes>
+                    <strictCheck>true</strictCheck>
+                    <mapping>
+                        <java>SLASHSTAR_STYLE</java>
+                        <ts>JAVADOC_STYLE</ts>
+                        <tsx>JAVADOC_STYLE</tsx>
+                    </mapping>
+                </configuration>
+            </plugin>
+            <!--formatter 代码格式化插件-->
+            <plugin>
+                <groupId>net.revelc.code.formatter</groupId>
+                <artifactId>formatter-maven-plugin</artifactId>
+                <version>${formatter-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>format</goal>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configFile>${user.dir}/scripts/codestyle/Formatter.xml</configFile>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <excludes>
+                        <exclude>**/static/antd.min.css</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <!-- impsort -->
+            <plugin>
+                <groupId>net.revelc.code</groupId>
+                <artifactId>impsort-maven-plugin</artifactId>
+                <version>${impsort-maven-plugin.version}</version>
+                <configuration>
+                    <compliance>${java.version}</compliance>
+                    <groups>java.,javax.,org.,com.,cn.,lombok.</groups>
+                    <staticGroups>java.,javax.,org.,com.,cn.,lombok.</staticGroups>
+                    <!-- 允许省略静态和非静态部分之间的空白行。-->
+                    <joinStaticWithNonStatic>false</joinStaticWithNonStatic>
+                    <staticAfter>true</staticAfter>
+                    <!--移除未使用-->
+                    <removeUnused>true</removeUnused>
+                    <treatSamePackageAsUnused>true</treatSamePackageAsUnused>
+                    <joinStaticWithNonStatic>true</joinStaticWithNonStatic>
+                    <treatSamePackageAsUnused>true</treatSamePackageAsUnused>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sort-imports</id>
+                        <goals>
+                            <goal>sort</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-utils</artifactId>
+                        <version>3.5.1</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

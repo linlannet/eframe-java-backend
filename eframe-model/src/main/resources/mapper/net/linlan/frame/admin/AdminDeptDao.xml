@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminDeptDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.AdminDept" id="adminDeptMap">
+        <id property="id" column="DEPT_ID"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="depttypeId" column="DEPTTYPE_ID"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="createType" column="CREATE_TYPE"/>
+        <result property="type" column="TYPE"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="areaCode" column="AREA_CODE"/>
+        <result property="organLeader" column="ORGAN_LEADER"/>
+        <result property="leaderId" column="LEADER_ID"/>
+        <result property="leaderMobile" column="LEADER_MOBILE"/>
+        <result property="isOrganLevel" column="IS_ORGAN_LEVEL"/>
+        <result property="isVirtual" column="IS_VIRTUAL"/>
+        <result property="isLeaf" column="IS_LEAF"/>
+        <result property="isDisabled" column="IS_DISABLED"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="status" column="STATUS"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="adminDeptMap">
+        SELECT
+        DEPT_ID, ORGAN_ID, PARENT_ID, APP_ID, DEPTTYPE_ID, FOREIGN_ID, CREATE_TYPE, TYPE, NAME, SNAME, AREA_CODE, ORGAN_LEADER, LEADER_ID, LEADER_MOBILE, IS_ORGAN_LEVEL, IS_VIRTUAL, IS_LEAF, IS_DISABLED, SEARCH_CODE, IMAGE_PATH, PRIORITY, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+        FROM ADMIN_DEPT B
+        WHERE B.DEPT_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="adminDeptMap">
+        SELECT
+        B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM ADMIN_DEPT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.DEPT_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.DEPT_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="deptId != null and deptId != ''">
+            and B.DEPT_ID = #{deptId}
+        </if>
+        <if test="organId != null and organId != ''">
+            and B.ORGAN_ID = #{organId}
+        </if>
+        <if test="parentId != null">
+            <choose>
+                <when test="parentId == 0">
+                    AND ( B.PARENT_ID = 0 OR B.PARENT_ID IS NULL )
+                </when>
+                <otherwise>
+                    and B.PARENT_ID = #{parentId}
+                </otherwise>
+            </choose>
+        </if>
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="depttypeId != null and depttypeId != ''">
+            and B.DEPTTYPE_ID = #{depttypeId}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="createType != null and createType != ''">
+            and B.CREATE_TYPE = #{createType}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME = #{sname}
+        </if>
+        <if test="areaCode != null and areaCode != ''">
+            and B.AREA_CODE = #{areaCode}
+        </if>
+        <if test="organLeader != null and organLeader != ''">
+            and B.ORGAN_LEADER = #{organLeader}
+        </if>
+        <if test="leaderId != null and leaderId != ''">
+            and B.LEADER_ID = #{leaderId}
+        </if>
+        <if test="leaderMobile != null and leaderMobile != ''">
+            and B.LEADER_MOBILE = #{leaderMobile}
+        </if>
+        <if test="isOrganLevel != null and isOrganLevel != ''">
+            and B.IS_ORGAN_LEVEL = #{isOrganLevel}
+        </if>
+        <if test="isVirtual != null and isVirtual != ''">
+            and B.IS_VIRTUAL = #{isVirtual}
+        </if>
+        <if test="isLeaf != null and isLeaf != ''">
+            and B.IS_LEAF = #{isLeaf}
+        </if>
+        <if test="isDisabled != null and isDisabled != ''">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            and B.SEARCH_CODE = #{searchCode}
+        </if>
+        <if test="imagePath != null and imagePath != ''">
+            and B.IMAGE_PATH = #{imagePath}
+        </if>
+        <if test="status != null">
+            AND B.STATUS = #{status}
+        </if>
+        <if test="creatorId != null and creatorId != ''">
+            and B.CREATOR_ID = #{creatorId}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+        <if test="q != null and ''!=q">
+            AND  (B.NAME like concat(concat('%',#{q}),'%')
+            or B.SNAME like concat(concat('%',#{q}),'%')
+            or B.ORGAN_LEADER like concat(concat('%',#{q}),'%')
+            )
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.admin.entity.AdminDept">
+        INSERT INTO ADMIN_DEPT
+        (
+        DEPT_ID, ORGAN_ID, PARENT_ID, APP_ID, DEPTTYPE_ID, FOREIGN_ID, CREATE_TYPE, TYPE, NAME, SNAME, AREA_CODE, ORGAN_LEADER, LEADER_ID, LEADER_MOBILE, IS_ORGAN_LEVEL, IS_VIRTUAL, IS_LEAF, IS_DISABLED, SEARCH_CODE, IMAGE_PATH, PRIORITY, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+        #{id}, #{organId}, #{parentId}, #{appId}, #{depttypeId}, #{foreignId}, #{createType}, #{type}, #{name}, #{sname}, #{areaCode}, #{organLeader}, #{leaderId}, #{leaderMobile}, #{isOrganLevel}, #{isVirtual}, #{isLeaf}, #{isDisabled}, #{searchCode}, #{imagePath}, #{priority}, #{status}, #{creatorId}, #{createTime}, #{lastTime}, #{delFlag}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO ADMIN_DEPT
+                (
+                DEPT_ID, ORGAN_ID, PARENT_ID, APP_ID, DEPTTYPE_ID, FOREIGN_ID, CREATE_TYPE, TYPE, NAME, SNAME, AREA_CODE, ORGAN_LEADER, LEADER_ID, LEADER_MOBILE, IS_ORGAN_LEVEL, IS_VIRTUAL, IS_LEAF, IS_DISABLED, SEARCH_CODE, IMAGE_PATH, PRIORITY, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.organId}, #{item.parentId}, #{item.appId}, #{item.depttypeId}, #{item.foreignId}, #{item.createType}, #{item.type}, #{item.name}, #{item.sname}, #{item.areaCode}, #{item.organLeader}, #{item.leaderId}, #{item.leaderMobile}, #{item.isOrganLevel}, #{item.isVirtual}, #{item.isLeaf}, #{item.isDisabled}, #{item.searchCode}, #{item.imagePath}, #{item.priority}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO ADMIN_DEPT
+                    (
+                    DEPT_ID, ORGAN_ID, PARENT_ID, APP_ID, DEPTTYPE_ID, FOREIGN_ID, CREATE_TYPE, TYPE, NAME, SNAME, AREA_CODE, ORGAN_LEADER, LEADER_ID, LEADER_MOBILE, IS_ORGAN_LEVEL, IS_VIRTUAL, IS_LEAF, IS_DISABLED, SEARCH_CODE, IMAGE_PATH, PRIORITY, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.organId}, #{item.parentId}, #{item.appId}, #{item.depttypeId}, #{item.foreignId}, #{item.createType}, #{item.type}, #{item.name}, #{item.sname}, #{item.areaCode}, #{item.organLeader}, #{item.leaderId}, #{item.leaderMobile}, #{item.isOrganLevel}, #{item.isVirtual}, #{item.isLeaf}, #{item.isDisabled}, #{item.searchCode}, #{item.imagePath}, #{item.priority}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.admin.entity.AdminDept">
+        UPDATE ADMIN_DEPT
+        <set>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="parentId != null">PARENT_ID = #{parentId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="depttypeId != null">DEPTTYPE_ID = #{depttypeId}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="createType != null">CREATE_TYPE = #{createType}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="areaCode != null">AREA_CODE = #{areaCode}, </if>
+            <if test="organLeader != null">ORGAN_LEADER = #{organLeader}, </if>
+            <if test="leaderId != null">LEADER_ID = #{leaderId}, </if>
+            <if test="leaderMobile != null">LEADER_MOBILE = #{leaderMobile}, </if>
+            <if test="isOrganLevel != null">IS_ORGAN_LEVEL = #{isOrganLevel}, </if>
+            <if test="isVirtual != null">IS_VIRTUAL = #{isVirtual}, </if>
+            <if test="isLeaf != null">IS_LEAF = #{isLeaf}, </if>
+            <if test="isDisabled != null">IS_DISABLED = #{isDisabled}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE DEPT_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        UPDATE ADMIN_DEPT SET DEL_FLAG = 2 WHERE DEPT_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        UPDATE ADMIN_DEPT SET DEL_FLAG = 2 WHERE DEPT_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM ADMIN_DEPT B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.admin.dto.AdminDeptDto" extends="adminDeptMap" id="adminDeptDtoMap">
+        <result property="parentName" column="PARENT_NAME" />
+        <result property="organName" column="ORGAN_NAME" />
+        <result property="childNum" column="CHILD_NUM" />
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="adminDeptDtoMap">
+        SELECT
+        B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
+        , (select COUNT(DEPT_ID) from ADMIN_DEPT where PARENT_ID = B.DEPT_ID AND DEL_FLAG = 0) CHILD_NUM
+        FROM ADMIN_DEPT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="adminDeptDtoMap">
+        SELECT
+        B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
+        , (select NAME from BASE_ORGAN where ORGAN_ID = B.ORGAN_ID) ORGAN_NAME
+        FROM ADMIN_DEPT B
+        WHERE DEPT_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <select id="selectDeptListByRoleId" resultType="Long">
+        select B.DEPT_ID
+        from ADMIN_DEPT B
+        left join ADMIN_ROLE_DEPT ADR on B.DEPT_ID = ADR.DEPT_ID
+        where ADR.ROLE_ID = #{roleId}
+        <if test="deptCheckStrictly">
+            and B.DEPT_ID not in (select B.PARENT_ID from ADMIN_DEPT B inner join ADMIN_ROLE_DEPT ADR on B.DEPT_ID = ADR.DEPT_ID and ADR.ROLE_ID = #{roleId})
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+    </select>
+
+    <select id="checkDeptExistUser" parameterType="Long" resultType="int">
+        select count(1) from ADMIN_USER where DEPT_ID = #{deptId} and DEL_FLAG = 0
+    </select>
+
+    <select id="hasChildByDeptId" parameterType="Long" resultType="int">
+        select count(1) from ADMIN_DEPT
+        where DEL_FLAG = 0 and PARENT_ID = #{deptId} limit 1
+    </select>
+
+    <select id="selectChildrenDeptById" parameterType="Long" resultMap="adminDeptDtoMap">
+        select * from ADMIN_DEPT where find_in_set(#{deptId}, SEARCH_CODE)
+    </select>
+
+    <select id="selectNormalChildrenDeptById" parameterType="Long" resultType="int">
+        select count(*) from ADMIN_DEPT where  DEL_FLAG = 0 and find_in_set(#{deptId}, SEARCH_CODE)
+    </select>
+
+    <select id="checkDeptNameUnique" resultMap="adminDeptDtoMap">
+        SELECT
+        B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
+        FROM ADMIN_DEPT B
+        where NAME=#{deptName} and PARENT_ID = #{parentId} and DEL_FLAG = 0 limit 1
+    </select>
+
+    <update id="updateDeptChildren" parameterType="java.util.List">
+        update ADMIN_DEPT set SEARCH_CODE =
+        <foreach collection="depts" item="item" index="index"
+                 separator=" " open="case DEPT_ID" close="end">
+            when #{item.deptId} then #{item.SEARCH_CODE}
+        </foreach>
+        where DEPT_ID in
+        <foreach collection="depts" item="item" index="index"
+                 separator="," open="(" close=")">
+            #{item.deptId}
+        </foreach>
+    </update>
+
+    <update id="updateDeptStatusNormal" parameterType="Long">
+        update ADMIN_DEPT set DEL_FLAG = 1 where DEPT_ID in
+        <foreach collection="array" item="deptId" open="(" separator="," close=")">
+            #{deptId}
+        </foreach>
+    </update>
+
+    <resultMap id="childTreeMap" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"></result>
+        <result property="childNum" column="childNum"></result>
+        <result property="parentId" column="parentId"></result>
+    </resultMap>
+    <select id="allDepttreeList" resultMap="childTreeMap">
+        select B.DEPT_ID as id, B.NAME as label, B.PARENT_ID as parentId
+        <if test="roleId!='' and roleId !=null">
+            ,(SELECT COUNT(1) FROM ADMIN_ROLE_DEPT WHERE DEPT_ID = B.DEPT_ID AND ROLE_ID = #{roleId}) AS checked
+        </if>
+        ,(SELECT COUNT(1) FROM ADMIN_DEPT AM WHERE AM.PARENT_ID = B.DEPT_ID and AM.DEL_FLAG = 0
+        ) AS childNum
+        from ADMIN_DEPT B
+        where 1 = 1 and B.DEL_FLAG = 0
+        <if test="q!='' and q != null">
+            AND B.NAME like concat('%',concat(#{q},'%'))
+        </if>
+        <if test="appId!='' and appId != null">
+            AND B.APP_ID = #{appId}
+        </if>
+        order by B.PRIORITY asc
+    </select>
+
+</mapper>

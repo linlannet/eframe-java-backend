@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.config.dao.PublicNoticeDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.config.entity.PublicNotice" id="publicNoticeMap">
+        <id property="id" column="MSG_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="bizType" column="BIZ_TYPE"/>
+        <result property="type" column="TYPE"/>
+        <result property="title" column="TITLE"/>
+        <result property="content" column="CONTENT"/>
+        <result property="msgUrl" column="MSG_URL"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="iconStyle" column="ICON_STYLE"/>
+        <result property="recvMemberId" column="RECV_MEMBER_ID"/>
+        <result property="recvGroupId" column="RECV_GROUP_ID"/>
+        <result property="recvOrganId" column="RECV_ORGAN_ID"/>
+        <result property="recvTargetid" column="RECV_TARGETID"/>
+        <result property="status" column="STATUS"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="updatorId" column="UPDATOR_ID"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="publicNoticeMap">
+        SELECT
+MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+        FROM PUBLIC_NOTICE B
+        WHERE B.MSG_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="publicNoticeMap">
+        SELECT
+B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM PUBLIC_NOTICE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.MSG_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.MSG_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="id != null and id != ''">
+            and B.MSG_ID = #{id}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and B.SITE_ID = #{siteId}
+        </if>
+        <if test="organId != null and organId != ''">
+            and B.ORGAN_ID = #{organId}
+        </if>
+        <if test="bizType != null and bizType != ''">
+            and B.BIZ_TYPE = #{bizType}
+        </if>
+        <if test="type != null">
+            and B.TYPE = #{type}
+        </if>
+        <if test="title != null and title != ''">
+            and B.TITLE = #{title}
+        </if>
+        <if test="content != null and content != ''">
+            and B.CONTENT = #{content}
+        </if>
+        <if test="msgUrl != null and msgUrl != ''">
+            and B.MSG_URL = #{msgUrl}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="imagePath != null and imagePath != ''">
+            and B.IMAGE_PATH = #{imagePath}
+        </if>
+        <if test="iconStyle != null and iconStyle != ''">
+            and B.ICON_STYLE = #{iconStyle}
+        </if>
+        <if test="recvMemberId != null and recvMemberId != ''">
+            and (B.RECV_MEMBER_ID  = #{recvMemberId} or (B.RECV_MEMBER_ID IS NULL OR B.RECV_MEMBER_ID = ""))
+        </if>
+        <if test="recvGroupId != null and recvGroupId != ''">
+            and B.RECV_GROUP_ID = #{recvGroupId}
+        </if>
+        <if test="recvOrganId != null and recvOrganId != ''">
+            and B.RECV_ORGAN_ID = #{recvOrganId}
+        </if>
+        <if test="recvTargetid != null and recvTargetid != ''">
+            and B.RECV_TARGETID = #{recvTargetid}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="creatorId != null and creatorId != ''">
+            and B.CREATOR_ID = #{creatorId}
+        </if>
+        <if test="updatorId != null and updatorId != ''">
+            and B.UPDATOR_ID = #{updatorId}
+        </if>
+        <if test="updateTime != null and updateTime != ''">
+            and B.UPDATE_TIME = #{updateTime}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.config.entity.PublicNotice">
+        INSERT INTO PUBLIC_NOTICE
+        (
+MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+#{id}, #{siteId}, #{organId}, #{bizType}, #{type}, #{title}, #{content}, #{msgUrl}, #{foreignId}, #{imagePath}, #{iconStyle}, #{recvMemberId}, #{recvGroupId}, #{recvOrganId}, #{recvTargetid}, #{status}, #{createTime}, #{creatorId}, #{updatorId}, #{updateTime}, #{lastTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO PUBLIC_NOTICE
+                (
+MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+#{item.id}, #{item.siteId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO PUBLIC_NOTICE
+                    (
+MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+#{item.id}, #{item.siteId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.config.entity.PublicNotice">
+        UPDATE PUBLIC_NOTICE
+        <set>
+            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="title != null">TITLE = #{title}, </if>
+            <if test="content != null">CONTENT = #{content}, </if>
+            <if test="msgUrl != null">MSG_URL = #{msgUrl}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="iconStyle != null">ICON_STYLE = #{iconStyle}, </if>
+            <if test="recvMemberId != null">RECV_MEMBER_ID = #{recvMemberId}, </if>
+            <if test="recvGroupId != null">RECV_GROUP_ID = #{recvGroupId}, </if>
+            <if test="recvOrganId != null">RECV_ORGAN_ID = #{recvOrganId}, </if>
+            <if test="recvTargetid != null">RECV_TARGETID = #{recvTargetid}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="updatorId != null">UPDATOR_ID = #{updatorId}, </if>
+            <if test="updateTime != null">UPDATE_TIME = #{updateTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE MSG_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM PUBLIC_NOTICE
+        WHERE MSG_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM PUBLIC_NOTICE
+        WHERE MSG_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM PUBLIC_NOTICE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.config.dto.PublicNoticeDto" extends="publicNoticeMap" id="publicNoticeDtoMap">
+        <result property="readStatus" column="readStatus"/>
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="publicNoticeDtoMap">
+        SELECT
+B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM PUBLIC_NOTICE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="publicNoticeDtoMap">
+        SELECT
+B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM PUBLIC_NOTICE B
+        WHERE MSG_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <select id="getMyselfList" resultMap="publicNoticeDtoMap">
+        select B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+             , B.readStatus
+        from
+        (
+        SELECT
+        B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION,
+        (case when (( EXISTS (SELECT A.RECORD_ID FROM PORTAL_UNION_MESSAGE A WHERE A.TYPE='PUBLIC_NOTICE' AND A.MSG_USER_ID =#{recvMemberId} AND A.MSG_ID = B.MSG_ID ))) then 1 else 0 end) as readStatus
+        FROM PUBLIC_NOTICE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+        ) B
+        where 1=1
+        <if test="readStatus != null and readStatus != ''">
+            and B.readStatus = #{readStatus}
+        </if>
+    </select>
+
+</mapper>

@@ -1,0 +1,99 @@
+package ${packageName}.entity;
+
+#foreach ($import in $importList)
+import ${import};
+#end
+import net.linlan.annotation.Excel;
+#if($table.tree)
+#else
+#end
+import lombok.Data;
+
+/**
+ *
+ * ${ClassName}数据域:${functionName}实体类
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+#if($table.tree)
+#set($Entity="TreeEntity")
+#else
+#set($Entity="BaseEntity")
+#end
+@Data
+public class ${ClassName} extends ${Entity}
+{
+    private static final long serialVersionUID = 1L;
+
+#foreach ($column in $columns)
+#if(!$table.isSuperColumn($column.javaField))
+    /**
+     * $column.columnComment
+     */
+#if($column.list)
+#set($parentheseIndex=$column.columnComment.indexOf("，"))
+#if($parentheseIndex != -1)
+#set($comment=$column.columnComment.substring(0, $parentheseIndex))
+#else
+#set($comment=$column.columnComment)
+#end
+#if($parentheseIndex != -1)
+    @Excel(name = "${comment}", readConverterExp = "$column.readConverterExp()")
+#elseif($column.javaType == 'Date')
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Excel(name = "${comment}", width = 30, dateFormat = "yyyy-MM-dd")
+#else
+    @Excel(name = "${comment}")
+#end
+#end
+    private $column.javaType $column.javaField;
+#end
+
+#end
+#if($table.sub)
+    /**
+     * $table.subTable.functionName
+     */
+    private List<${subClassName}> ${subclassName}List;
+
+#end
+
+#if($table.sub)
+    public List<${subClassName}> get${subClassName}List()
+    {
+        return ${subclassName}List;
+    }
+
+    public void set${subClassName}List(List<${subClassName}> ${subclassName}List)
+    {
+        this.${subclassName}List = ${subclassName}List;
+    }
+
+#end
+
+    /**
+    * 初始化方法
+    */
+    public void init() {
+        //添加对数据库或实体对象的默认值处理
+#if($pkColumn.javaField.length() > 2 && $pkColumn.javaField.substring(1,2).matches("[A-Z]"))
+#set($AttrName=$pkColumn.javaField)
+#else
+#set($AttrName=$pkColumn.javaField.substring(0,1).toUpperCase() + ${pkColumn.javaField.substring(1)})
+#end
+        if(get${AttrName}() == null) {
+#if(${pkColumn.javaType} == 'String')
+            set${AttrName}(RandomUtils.randomSid());
+#elseif(${pkColumn.javaType} == 'Long')
+            set${AttrName}(RandomUtils.randomLid());
+#elseif(${pkColumn.javaType} == 'Integer')
+            set${AttrName}(RandomUtils.random());
+#else
+            set${AttrName}(RandomUtils.randomSid());
+#end
+        }
+
+    }
+
+}

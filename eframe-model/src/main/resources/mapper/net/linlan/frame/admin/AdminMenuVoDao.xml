@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminMenuVoDao">
+
+	<resultMap type="net.linlan.frame.admin.dto.AdminMenuVo" id="adminMenuMap">
+		<id     property="menuId"         column="MENU_ID"        />
+		<result property="menuName"       column="NAME"      />
+		<result property="type"       column="TYPE"      />
+		<result property="parentName"     column="PARENT_NAME"    />
+		<result property="parentId"       column="PARENT_ID"      />
+		<result property="priority"       column="PRIORITY"      />
+		<result property="path"           column="ENAME"           />
+		<result property="component"      column="MENU_SEQ"      />
+		<result property="query"          column="JS_EVENT"          />
+		<result property="routeName"      column="URL"     />
+		<result property="isFrame"        column="IS_CHECK"       />
+		<result property="isCache"        column="SPARE2"       />
+		<result property="menuType"       column="URL_TYPE"      />
+		<result property="visible"        column="IS_DISPLAY"        />
+		<result property="status"         column="IS_DISABLED"         />
+		<result property="perms"          column="PERMS"          />
+		<result property="icon"           column="ICON"           />
+		<result property="imagePath"           column="ICON"           />
+		<result property="creatorId"       column="creatorId"      />
+		<result property="createTime"     column="CREATE_TIME"    />
+		<result property="lastTime"     column="LAST_TIME"    />
+		<result property="description"         column="DESCRIPTION"         />
+		<result property="delFlag"         column="DEL_FLAG"         />
+		<result property="listJson"         column="DESIGN_JSON"         />
+		<result property="childNum"         column="CHILD_NUM"         />
+	</resultMap>
+
+    <select id="selectMenuList" resultMap="adminMenuMap">
+        select B.MENU_ID, B.PARENT_ID, B.NAME, B.ENAME,B.TYPE, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON,B.IMAGE_PATH, B.PRIORITY, B.CREATE_TIME
+        from ADMIN_MENU B
+        WHERE 1=1  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+		<where>
+            <if test="currAppId != null and currAppId != ''">
+                AND B.APP_ID = #{currAppId}
+            </if>
+			<if test="menuName != null and menuName != ''">
+				AND NAME like concat('%', #{menuName}, '%')
+			</if>
+			<if test="visible != null and visible != ''">
+				AND IS_DISPLAY = #{visible}
+			</if>
+			<if test="status != null and status != ''">
+				AND IS_DISABLED = #{status}
+			</if>
+		</where>
+		order by PARENT_ID, PRIORITY
+	</select>
+
+	<select id="selectMenuListPage" resultMap="adminMenuMap">
+		select B.MENU_ID, B.PARENT_ID, B.NAME, B.ENAME,B.TYPE, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON,B.DEL_FLAG, B.PRIORITY, B.CREATE_TIME
+		, (select COUNT(MENU_ID) from ADMIN_MENU where PARENT_ID = B.MENU_ID AND DEL_FLAG = 0) CHILD_NUM
+		from ADMIN_MENU B
+		WHERE 1=1  AND B.TYPE = 'ADMIN'
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+		<choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+		<if test="menuType != null and menuType != ''">
+			AND B.URL_TYPE = #{menuType}
+		</if>
+		<where>
+			<if test="menuName != null and menuName != ''">
+				AND NAME like concat('%', #{menuName}, '%')
+			</if>
+			<if test="visible != null and visible != ''">
+				AND IS_DISPLAY = #{visible}
+			</if>
+			<if test="status != null and status != ''">
+				AND IS_DISABLED = #{status}
+			</if>
+		</where>
+		<choose>
+			<when test="parentId != null">
+				<choose>
+					<when test="parentId == 0">
+						AND ( B.PARENT_ID = 0 OR B.PARENT_ID IS NULL )
+					</when>
+					<otherwise>
+						and B.PARENT_ID = #{parentId}
+					</otherwise>
+				</choose>
+			</when>
+			<otherwise>
+				AND (B.PARENT_ID = 0 OR B.PARENT_ID IS NULL)
+			</otherwise>
+		</choose>
+		<if test="q != null and ''!=q">
+			AND  (B.NAME like concat(concat('%',#{q}),'%')
+			or B.ENAME like concat(concat('%',#{q}),'%')
+			or B.MENU_SEQ like concat(concat('%',#{q}),'%')
+			)
+		</if>
+		order by PARENT_ID, PRIORITY
+	</select>
+	
+	<select id="selectMenuTreeAll" resultMap="adminMenuMap">
+		select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+		from ADMIN_MENU B
+		where B.URL_TYPE in ('CATAGORY', 'MENU') and B.IS_DISABLED = 0  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+		order by B.PARENT_ID, B.PRIORITY
+	</select>
+	
+	<select id="selectMenuListByAdminId" resultMap="adminMenuMap">
+		select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+		from ADMIN_MENU B
+		left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+		left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
+		left join ADMIN_ROLE SR on AUR.ROLE_ID = SR.ROLE_ID
+		where AUR.ADMIN_ID = #{adminId}  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+		<if test="menuName != null and menuName != ''">
+            AND B.NAME like concat('%', #{menuName}, '%')
+		</if>
+		<if test="visible != null and visible != ''">
+            AND B.IS_DISPLAY = #{visible}
+		</if>
+		<if test="status != null and status != ''">
+            AND B.IS_DISABLED = #{status}
+		</if>
+		order by B.PARENT_ID, B.PRIORITY
+	</select>
+    
+    <select id="selectMenuTreeByAdminId" resultMap="adminMenuMap">
+		select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+		from ADMIN_MENU B
+			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
+			 left join ADMIN_ROLE SR on AUR.ROLE_ID = SR.ROLE_ID
+			 left join ADMIN_USER UR on AUR.ADMIN_ID = UR.ADMIN_ID
+		where UR.ADMIN_ID = #{adminId} and B.URL_TYPE in ('CATAGORY', 'MENU') and B.IS_DISABLED = 0
+		  AND SR.STATUS = 0  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+	</select>
+	
+	<select id="selectMenuListByRoleId" resultType="Long">
+		select B.MENU_ID
+		from ADMIN_MENU B
+            left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        where SRM.ROLE_ID = #{roleId}  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        <if test="menuCheckStrictly">
+            and B.MENU_ID not in (select B.PARENT_ID from ADMIN_MENU B inner join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID and SRM.ROLE_ID = #{roleId})
+        </if>
+		order by B.PARENT_ID, B.PRIORITY
+	</select>
+	
+	<select id="selectMenuPerms" resultType="String">
+		select distinct B.PERMS
+		from ADMIN_MENU B
+			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
+		where 1 = 1  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+
+	<select id="selectMenuPermsByAdminId" parameterType="Long" resultType="String">
+		select distinct B.PERMS
+		from ADMIN_MENU B
+			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
+			 left join ADMIN_ROLE SR on SR.ROLE_ID = AUR.ROLE_ID
+		where B.IS_DISABLED = 0 and SR.STATUS = 0  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0 and AUR.ADMIN_ID = #{userId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+	
+	<select id="selectMenuPermsByRoleId" resultType="String">
+		select distinct B.PERMS
+		from ADMIN_MENU B
+			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+		where B.IS_DISABLED = 0 AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0 and SRM.ROLE_ID = #{roleId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+
+	<select id="hasChildByParentId" resultType="Integer">
+		select count(1) from ADMIN_MENU where PARENT_ID = #{parentId} AND DEL_FLAG = 0
+	</select>
+
+	<delete id="deleteByParentId" parameterType="Long">
+		delete from ADMIN_MENU where PARENT_ID=#{parentId} AND URL_TYPE = 'BUTTON'
+	</delete>
+
+	<resultMap id="buttonMap" type="net.linlan.sys.role.dto.SysMenuButtonDto">
+		<id property="id" column="MENU_ID"/>
+		<result property="parentId" column="PARENT_ID"/>
+		<result property="code" column="ENAME"/>
+		<result property="name" column="NAME"/>
+	</resultMap>
+	<select id="getButtons" resultMap="buttonMap">
+		SELECT
+		M.MENU_ID,
+		M.PARENT_ID,
+		M.NAME,
+		M.ENAME
+		FROM
+		ADMIN_MENU M
+		WHERE
+		1 = 1
+		AND M.PARENT_ID = #{menuId}
+		AND M.URL_TYPE = 'BUTTON'
+	</select>
+
+</mapper>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.core.dao.CoreAccountDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.core.entity.CoreAccount" id="coreAccountMap">
+        <id property="id" column="ACCOUNT_ID"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="organName" column="ORGAN_NAME"/>
+        <result property="inoutMode" column="INOUT_MODE"/>
+        <result property="name" column="NAME"/>
+        <result property="cname" column="CNAME"/>
+        <result property="type" column="TYPE"/>
+        <result property="clientId" column="CLIENT_ID"/>
+        <result property="clientSecret" column="CLIENT_SECRET"/>
+        <result property="aesKey" column="AES_KEY"/>
+        <result property="aesIvKey" column="AES_IV_KEY"/>
+        <result property="serverIp" column="SERVER_IP"/>
+        <result property="serverType" column="SERVER_TYPE"/>
+        <result property="serverUrl" column="SERVER_URL"/>
+        <result property="serverConf1" column="SERVER_CONF1"/>
+        <result property="serverConf2" column="SERVER_CONF2"/>
+        <result property="serverConf3" column="SERVER_CONF3"/>
+        <result property="currCount" column="CURR_COUNT"/>
+        <result property="confLimit" column="CONF_LIMIT"/>
+        <result property="isAdmin" column="IS_ADMIN"/>
+        <result property="isSingle" column="IS_SINGLE"/>
+        <result property="isDisabled" column="IS_DISABLED"/>
+        <result property="status" column="STATUS"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="coreAccountMap">
+        SELECT B.*
+        FROM MEMBER_ACCOUNT B
+        WHERE ACCOUNT_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象
+    如果offset和limit不为空（Query对象传入），则采用相应的分页规则和commonList内的条件，
+        查询出相应记录并进行分页处理取出offset页的limit条记录
+    否则，根据commonList内的条件取出全部记录
+    全部列表的参数详见commonList内的各个条件说明
+    -->
+    <select id="getList" resultMap="coreAccountMap">
+        SELECT B.*
+        FROM
+        <choose>
+            <when test="offset != null and limit != null">
+                <!-- mysql为limit函数进行处理 -->
+                <choose>
+                    <when test='_databaseId == "mysql" or _databaseId == "xg"'>
+                        (SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName from MEMBER_ACCOUNT B
+                        <include refid="commonUnionJoin"></include>
+                        WHERE 1 = 1
+                        <include refid="commonList"></include>
+                        <include refid="getListOrderBy"></include>
+                        ) B
+                        LIMIT #{offset}, #{limit}
+                    </when>
+                    <otherwise>    <!-- 其他数据库为通用的分页处理，包括Oracle，DM达梦数据库等统一 -->
+                        ( SELECT ROW_NUMBER() OVER (
+                            <include refid="getListOrderBy"></include>
+                        ) AS RN, A.* FROM (
+                            SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName FROM
+                            MEMBER_ACCOUNT B
+                        <include refid="commonUnionJoin"></include>
+                            WHERE 1 = 1
+                            <include refid="commonList"></include>
+                        ) A ) B
+                        <![CDATA[ WHERE RN <= (#{offset} + #{limit}) AND RN > #{offset} ]]>
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ( select B.*,ORG.NAME as inOrganName, GA.NAME as appName from MEMBER_ACCOUNT B
+                <include refid="commonUnionJoin"></include>
+                WHERE 1 = 1
+                <include refid="commonList"></include>
+                <include refid="getListOrderBy"></include>
+                ) B
+
+            </otherwise>
+        </choose>
+    </select>
+    <!-- 通用排序SQL -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY ACCOUNT_ID DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY ACCOUNT_ID ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY CREATE_TIME ASC
+                    </when>
+                    <otherwise>
+                        <choose>
+                            <when test='sidx != null and sidx.trim() != ""'>
+                                ORDER BY ${sidx} ${order}
+                            </when>
+                            <otherwise>
+                                ORDER BY ACCOUNT_ID DESC
+                            </otherwise>
+                        </choose>
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                <choose>
+                    <when test='sidx != null and sidx.trim() != ""'>
+                        ORDER BY ${sidx} ${order}
+                    </when>
+                    <otherwise>
+                        ORDER BY ACCOUNT_ID DESC
+                    </otherwise>
+                </choose>
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+    LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+    LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+    </sql>
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!-- 公共查询条件-->
+        <if test='existKey != null and existKey !=""'>
+            AND B.ACCOUNT_ID = #{existKey}
+        </if>
+        <if test="inoutMode != null and inoutMode.trim() != ''">
+         AND B.INOUT_MODE = #{inoutMode}
+        </if>
+        <if test="appId != null and appId.trim() != ''">
+         AND B.APP_ID = #{appId}
+        </if>
+        <if test="organName != null and organName.trim() != ''">
+            AND B.ORGAN_NAME = #{organName}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+
+        <if test="status != null and status.trim() != ''">
+            and B.STATUS = #{status}
+        </if>
+
+        <if test="type != null  and type.trim() != ''">
+            and B.TYPE = #{type}
+        </if>
+
+        <if test="serverIp != null and serverIp.trim() != ''">
+            and B.SERVER_IP = #{serverIp}
+        </if>
+
+        <if test="description != null and description.trim() != ''">
+            and B.DESCRIPTION like concat('%',concat(#{description},'%'))
+        </if>
+        <if test="organId != null and organId.trim() != ''">
+            and B.ORGAN_ID like concat('%',concat(#{organId},'%'))
+        </if>
+        <if test="name != null and name.trim() != ''">
+            and B.NAME like concat('%',concat(#{name},'%'))
+        </if>
+
+        <if test="q != null and q.trim() != ''">
+            and ( B.NAME like concat('%',concat(#{q},'%'))
+            or B.CNAME like concat('%',concat(#{q},'%'))
+            or B.CLIENT_ID like concat('%',concat(#{q},'%'))
+            or B.SERVER_URL like concat('%',concat(#{q},'%'))
+            )
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.LAST_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                      AND date_format(B.LAST_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "oracle"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND to_date(B.LAST_TIME,'YYYY-MM-DD') >= to_date(#{startTime},'YYYY-MM-DD')
+                AND to_date(B.LAST_TIME,'YYYY-MM-DD') <= to_date(#{endTime},'YYYY-MM-DD') ]]>
+                </if>
+            </when>
+            <otherwise>    <!-- 其他数据库为通用的分页处理，包括Oracle，DM达梦数据库等统一 -->
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.LAST_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                      AND date_format(B.LAST_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d') ]]>
+                </if>
+            </otherwise>
+        </choose>
+        <!-- 可以增加特定查询条件 -->
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.core.entity.CoreAccount">
+        INSERT INTO MEMBER_ACCOUNT
+        (
+        ACCOUNT_ID,
+        ORGAN_ID, APP_ID, ORGAN_NAME, INOUT_MODE, NAME, CNAME, TYPE, CLIENT_ID, CLIENT_SECRET, AES_KEY, AES_IV_KEY, SERVER_IP, SERVER_TYPE, SERVER_URL, SERVER_CONF1, SERVER_CONF2, SERVER_CONF3,CURR_COUNT, CONF_LIMIT, IS_ADMIN, IS_SINGLE, IS_DISABLED, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION    )
+        VALUES
+        (
+        #{id},
+        #{organId}, #{appId}, #{organName}, #{inoutMode}, #{name}, #{cname}, #{type}, #{clientId}, #{clientSecret}, #{aesKey}, #{aesIvKey}, #{serverIp}, #{serverType}, #{serverUrl}, #{serverConf1}, #{serverConf2}, #{serverConf3},#{currCount}, #{confLimit}, #{isAdmin}, #{isSingle}, #{isDisabled}, #{status}, #{creatorId}, #{createTime}, #{lastTime}, #{description}    )
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.core.entity.CoreAccount">
+        UPDATE MEMBER_ACCOUNT
+        <set>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="organName != null">ORGAN_NAME = #{organName}, </if>
+            <if test="inoutMode != null">INOUT_MODE = #{inoutMode}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="cname != null">CNAME = #{cname}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="clientId != null">CLIENT_ID = #{clientId}, </if>
+            <if test="clientSecret != null">CLIENT_SECRET = #{clientSecret}, </if>
+            <if test="aesKey != null">AES_KEY = #{aesKey}, </if>
+            <if test="aesIvKey != null">AES_IV_KEY = #{aesIvKey}, </if>
+            <if test="serverIp != null">SERVER_IP = #{serverIp}, </if>
+            <if test="serverType != null">SERVER_TYPE = #{serverType}, </if>
+            <if test="serverUrl != null">SERVER_URL = #{serverUrl}, </if>
+            <if test="serverConf1 != null">SERVER_CONF1 = #{serverConf1}, </if>
+            <if test="serverConf2 != null">SERVER_CONF2 = #{serverConf2}, </if>
+            <if test="serverConf3 != null">SERVER_CONF3 = #{serverConf3}, </if>
+            <if test="currCount != null">CURR_COUNT = #{currCount}, </if>
+            <if test="confLimit != null">CONF_LIMIT = #{confLimit}, </if>
+            <if test="isAdmin != null">IS_ADMIN = #{isAdmin}, </if>
+            <if test="isSingle != null">IS_SINGLE = #{isSingle}, </if>
+            <if test="isDisabled != null">IS_DISABLED = #{isDisabled}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE ACCOUNT_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM MEMBER_ACCOUNT
+        WHERE ACCOUNT_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM MEMBER_ACCOUNT
+        WHERE ACCOUNT_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(ACCOUNT_ID) FROM
+        MEMBER_ACCOUNT B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <resultMap type="net.linlan.sys.core.dto.CoreAccountDto" extends="coreAccountMap" id="coreAccountDtoMap">
+                <result property="inOrganName" column="inOrganName"/>
+        <result property="userName" column="userName"/>
+        <result property="appName" column="appName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="coreAccountDtoMap">
+        SELECT
+        B.ACCOUNT_ID, B.ORGAN_ID, B.APP_ID, B.ORGAN_NAME, B.INOUT_MODE, B.NAME, B.CNAME, B.TYPE, B.CLIENT_ID, B.CLIENT_SECRET, B.AES_KEY, B.AES_IV_KEY, B.SERVER_IP, B.SERVER_TYPE, B.SERVER_URL, B.SERVER_CONF1, B.SERVER_CONF2, B.SERVER_CONF3, B.CURR_COUNT, B.CONF_LIMIT, B.IS_ADMIN, B.IS_SINGLE, B.IS_DISABLED, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM MEMBER_ACCOUNT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="coreAccountDtoMap">
+
+        SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName
+        FROM MEMBER_ACCOUNT B
+                 LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+                 LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+        WHERE ACCOUNT_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <select id="getByParams" resultMap="coreAccountMap">
+        select B.* from MEMBER_ACCOUNT B
+        WHERE 1 = 1
+        and B.IS_DISABLED = 0
+        and B.STATUS = 1
+        <if test="accountId != null">
+            and B.ACCOUNT_ID = #{accountId}
+        </if>
+        <if test="clientId != null">
+            and B.CLIENT_ID = #{clientId}
+        </if>
+        <if test="clientSecret != null">
+            and B.CLIENT_SECRET = #{clientSecret}
+        </if>
+        <if test="serverIp != null and serverIp.trim() != ''">
+            and B.SERVER_IP = #{serverIp}
+        </if>
+
+    </select>
+
+    <!-- 单独更新Count和ConfLimit -->
+    <update id="updateCurrCountOrConfLimit" parameterType="net.linlan.sys.core.entity.CoreAccount">
+        UPDATE MEMBER_ACCOUNT
+        <set>
+            <if test="currCount != null">CURR_COUNT = #{currCount}, </if>
+            <if test="confLimit != null">CONF_LIMIT = #{confLimit}</if>
+        </set>
+        WHERE ACCOUNT_ID = #{id}
+    </update>
+
+
+
+    <resultMap type="net.linlan.sys.core.dto.CoreAccountMapDto" id="coreAccountKvMap">
+        <id property="cmsKey" column="cmsKey"/>
+        <result property="cmsValue" column="cmsValue"/>
+    </resultMap>
+
+    <select id="getKeyValueList" resultMap="coreAccountKvMap">
+        SELECT B.ACCOUNT_ID AS cmsKey, B.NAME as cmsValue from MEMBER_ACCOUNT B
+        LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+        LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+        WHERE 1 = 1
+        <!-- 公共查询条件-->
+        <if test='existKey != null and existKey !=""'>
+            AND B.ACCOUNT_ID = #{existKey}
+        </if>
+        <if test="inoutMode != null and inoutMode.trim() != ''">
+            AND B.INOUT_MODE = #{inoutMode}
+        </if>
+        <if test="appId != null and appId.trim() != ''">
+            AND B.APP_ID = #{appId}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+
+        <if test="status != null and status.trim() != ''">
+            and B.STATUS = #{status}
+        </if>
+
+        <if test="type != null  and type.trim() != ''">
+            and B.TYPE = #{type}
+        </if>
+
+        <if test="serverIp != null and serverIp.trim() != ''">
+            and B.SERVER_IP = #{serverIp}
+        </if>
+
+        <if test="description != null and description.trim() != ''">
+            and B.DESCRIPTION like concat('%',concat(#{description},'%'))
+        </if>
+        <if test="organId != null and organId.trim() != ''">
+            and B.ORGAN_ID like concat('%',concat(#{organId},'%'))
+        </if>
+        <if test="name != null and name.trim() != ''">
+            and B.NAME like concat('%',concat(#{name},'%'))
+        </if>
+
+        <if test="q != null and q.trim() != ''">
+            and ( B.NAME like concat('%',concat(#{q},'%'))
+            or B.CNAME like concat('%',concat(#{q},'%'))
+            or B.CLIENT_ID like concat('%',concat(#{q},'%'))
+            or B.SERVER_URL like concat('%',concat(#{q},'%'))
+            )
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+        <!-- 可以增加特定查询条件 -->
+
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY ACCOUNT_ID DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY ACCOUNT_ID ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY CREATE_TIME ASC
+                    </when>
+                    <otherwise>
+                        <choose>
+                            <when test='sidx != null and sidx.trim() != ""'>
+                                ORDER BY ${sidx} ${order}
+                            </when>
+                            <otherwise>
+                                ORDER BY ACCOUNT_ID DESC
+                            </otherwise>
+                        </choose>
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                <choose>
+                    <when test='sidx != null and sidx.trim() != ""'>
+                        ORDER BY ${sidx} ${order}
+                    </when>
+                    <otherwise>
+                        ORDER BY ACCOUNT_ID DESC
+                    </otherwise>
+                </choose>
+            </otherwise>
+        </choose>
+    </select>
+
+    <resultMap id="organBaseMap" type="net.linlan.sys.core.dto.OrganBaseInfoDto">
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="organName" column="NAME"/>
+        <result property="organSName" column="SNAME"/>
+        <result property="tel" column="TEL"/>
+        <result property="address" column="ADDRESS"/>
+        <result property="wlType" column="ORGAN_TYPE"/>
+        <result property="contactName" column="CONTACT_NAME"/>
+        <result property="contactEmail" column="CONTACT_EMAIL"/>
+        <result property="contactMobile" column="CONTACT_MOBILE"/>
+        <result property="organCode" column="UNION_CODE"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+    </resultMap>
+
+    <select id="getCoreOrganList" resultMap="organBaseMap">
+        select B.ORGAN_ID,B.NAME,GOE.SNAME,GOE.TEL,GOE.ADDRESS,SO.ORGAN_TYPE,
+        GOE.CONTACT_NAME,GOE.CONTACT_MOBILE,GOE.CONTACT_EMAIL,B.UNION_CODE,
+        B.DEL_FLAG,B.CREATE_TIME,B.LAST_TIME,B.PRIORITY
+        from BASE_ORGAN B
+        LEFT JOIN BASE_ORGAN_EXT GOE on GOE.ORGAN_ID = B.ORGAN_ID
+        LEFT JOIN CORE_ORGAN SO ON B.ORGAN_ID = SO.SYSORGAN_ID
+        WHERE 1=1
+        <if test="organName != null and ''!=organName">
+            AND  B.NAME like concat(concat('%',#{organName}),'%')
+        </if>
+        <if test="delFlag != null">
+            AND  B.DEL_FLAG = #{delFlag}
+        </if>
+        <if test="wlType != null and ''!=wlType">
+            AND  SO.ORGAN_TYPE like concat(concat('%',#{wlType}),'%')
+        </if>
+        <if test="q != null and ''!=q">
+            AND  (B.NAME like concat(concat('%',#{q}),'%')
+            or GOE.SNAME like concat(concat('%',#{q}),'%')
+            or GOE.ADDRESS like concat(concat('%',#{q}),'%')
+            )
+        </if>
+        order by B.PRIORITY asc,B.CREATE_TIME DESC
+    </select>
+
+    <select id="getCoreOrganInfo" resultMap="organBaseMap">
+        select B.ORGAN_ID,B.NAME,GOE.SNAME,GOE.TEL,GOE.ADDRESS,SO.ORGAN_TYPE,
+               GOE.CONTACT_NAME,GOE.CONTACT_MOBILE,GOE.CONTACT_EMAIL,B.UNION_CODE,B.DESCRIPTION,
+               B.DEL_FLAG,B.CREATE_TIME,B.LAST_TIME,B.PRIORITY
+        from BASE_ORGAN B
+                 LEFT JOIN BASE_ORGAN_EXT GOE on GOE.ORGAN_ID = B.ORGAN_ID
+                 LEFT JOIN CORE_ORGAN SO ON B.ORGAN_ID = SO.SYSORGAN_ID
+        WHERE 1=1
+          AND B.ORGAN_ID=#{organId}
+    </select>
+
+</mapper>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.config.dao.PublicUnionTodoDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.config.entity.PublicUnionTodo" id="publicUnionTodoMap">
+        <id property="id" column="RECORD_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="type" column="TYPE"/>
+        <result property="bizType" column="BIZ_TYPE"/>
+        <result property="todoCreateTime" column="TODO_CREATE_TIME"/>
+        <result property="todoId" column="TODO_ID"/>
+        <result property="todoType" column="TODO_TYPE"/>
+        <result property="todoName" column="TODO_NAME"/>
+        <result property="todoAbstract" column="TODO_ABSTRACT"/>
+        <result property="todoAccountId" column="TODO_ACCOUNT_ID"/>
+        <result property="todoAccountName" column="TODO_ACCOUNT_NAME"/>
+        <result property="todoModuleId" column="TODO_MODULE_ID"/>
+        <result property="todoModuleName" column="TODO_MODULE_NAME"/>
+        <result property="todoUserId" column="TODO_USER_ID"/>
+        <result property="todoUserName" column="TODO_USER_NAME"/>
+        <result property="todoOrganId" column="TODO_ORGAN_ID"/>
+        <result property="todoOrganName" column="TODO_ORGAN_NAME"/>
+        <result property="todoProcessName" column="TODO_PROCESS_NAME"/>
+        <result property="todoProcessStatus" column="TODO_PROCESS_STATUS"/>
+        <result property="todoProcessInfo" column="TODO_PROCESS_INFO"/>
+        <result property="todoCurrInfo" column="TODO_CURR_INFO"/>
+        <result property="todoNextInfo" column="TODO_NEXT_INFO"/>
+        <result property="todoUrl" column="TODO_URL"/>
+        <result property="todoLabels" column="TODO_LABELS"/>
+        <result property="todoContent" column="TODO_CONTENT"/>
+        <result property="status" column="STATUS"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="publicUnionTodoMap">
+        SELECT
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM PUBLIC_UNION_TODO B
+        WHERE B.RECORD_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="publicUnionTodoMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_TODO B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.RECORD_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.RECORD_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="id != null and id != ''">
+            and B.RECORD_ID = #{id}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and B.SITE_ID = #{siteId}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="bizType != null and bizType != ''">
+            and B.BIZ_TYPE = #{bizType}
+        </if>
+        <if test="todoCreateTime != null and todoCreateTime != ''">
+            and B.TODO_CREATE_TIME = #{todoCreateTime}
+        </if>
+        <if test="todoId != null and todoId != ''">
+            and B.TODO_ID = #{todoId}
+        </if>
+        <if test="todoType != null and todoType != ''">
+            and B.TODO_TYPE = #{todoType}
+        </if>
+        <if test="todoName != null and todoName != ''">
+            and B.TODO_NAME = #{todoName}
+        </if>
+        <if test="todoAbstract != null and todoAbstract != ''">
+            and B.TODO_ABSTRACT = #{todoAbstract}
+        </if>
+        <if test="todoAccountId != null and todoAccountId != ''">
+            and B.TODO_ACCOUNT_ID = #{todoAccountId}
+        </if>
+        <if test="todoAccountName != null and todoAccountName != ''">
+            and B.TODO_ACCOUNT_NAME = #{todoAccountName}
+        </if>
+        <if test="todoModuleId != null and todoModuleId != ''">
+            and B.TODO_MODULE_ID = #{todoModuleId}
+        </if>
+        <if test="todoModuleName != null and todoModuleName != ''">
+            and B.TODO_MODULE_NAME = #{todoModuleName}
+        </if>
+        <if test="todoUserId != null and todoUserId != ''">
+            and B.TODO_USER_ID = #{todoUserId}
+        </if>
+        <if test="todoUserName != null and todoUserName != ''">
+            and B.TODO_USER_NAME = #{todoUserName}
+        </if>
+        <if test="todoOrganId != null and todoOrganId != ''">
+            and B.TODO_ORGAN_ID = #{todoOrganId}
+        </if>
+        <if test="todoOrganName != null and todoOrganName != ''">
+            and B.TODO_ORGAN_NAME = #{todoOrganName}
+        </if>
+        <if test="todoProcessName != null and todoProcessName != ''">
+            and B.TODO_PROCESS_NAME = #{todoProcessName}
+        </if>
+        <if test="todoProcessStatus != null and todoProcessStatus != ''">
+            and B.TODO_PROCESS_STATUS = #{todoProcessStatus}
+        </if>
+        <if test="todoProcessInfo != null and todoProcessInfo != ''">
+            and B.TODO_PROCESS_INFO = #{todoProcessInfo}
+        </if>
+        <if test="todoCurrInfo != null and todoCurrInfo != ''">
+            and B.TODO_CURR_INFO = #{todoCurrInfo}
+        </if>
+        <if test="todoNextInfo != null and todoNextInfo != ''">
+            and B.TODO_NEXT_INFO = #{todoNextInfo}
+        </if>
+        <if test="todoUrl != null and todoUrl != ''">
+            and B.TODO_URL = #{todoUrl}
+        </if>
+        <if test="todoLabels != null and todoLabels != ''">
+            and B.TODO_LABELS = #{todoLabels}
+        </if>
+        <if test="todoContent != null and todoContent != ''">
+            and B.TODO_CONTENT = #{todoContent}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opOrganName != null and opOrganName != ''">
+            and B.OP_ORGAN_NAME = #{opOrganName}
+        </if>
+        <if test="creatorId != null and creatorId != ''">
+            and B.CREATOR_ID = #{creatorId}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.config.entity.PublicUnionTodo">
+        INSERT INTO PUBLIC_UNION_TODO
+        (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+#{id}, #{siteId}, #{foreignId}, #{type}, #{bizType}, #{todoCreateTime}, #{todoId}, #{todoType}, #{todoName}, #{todoAbstract}, #{todoAccountId}, #{todoAccountName}, #{todoModuleId}, #{todoModuleName}, #{todoUserId}, #{todoUserName}, #{todoOrganId}, #{todoOrganName}, #{todoProcessName}, #{todoProcessStatus}, #{todoProcessInfo}, #{todoCurrInfo}, #{todoNextInfo}, #{todoUrl}, #{todoLabels}, #{todoContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO PUBLIC_UNION_TODO
+                (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO PUBLIC_UNION_TODO
+                    (
+RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.config.entity.PublicUnionTodo">
+        UPDATE PUBLIC_UNION_TODO
+        <set>
+            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
+            <if test="todoCreateTime != null">TODO_CREATE_TIME = #{todoCreateTime}, </if>
+            <if test="todoId != null">TODO_ID = #{todoId}, </if>
+            <if test="todoType != null">TODO_TYPE = #{todoType}, </if>
+            <if test="todoName != null">TODO_NAME = #{todoName}, </if>
+            <if test="todoAbstract != null">TODO_ABSTRACT = #{todoAbstract}, </if>
+            <if test="todoAccountId != null">TODO_ACCOUNT_ID = #{todoAccountId}, </if>
+            <if test="todoAccountName != null">TODO_ACCOUNT_NAME = #{todoAccountName}, </if>
+            <if test="todoModuleId != null">TODO_MODULE_ID = #{todoModuleId}, </if>
+            <if test="todoModuleName != null">TODO_MODULE_NAME = #{todoModuleName}, </if>
+            <if test="todoUserId != null">TODO_USER_ID = #{todoUserId}, </if>
+            <if test="todoUserName != null">TODO_USER_NAME = #{todoUserName}, </if>
+            <if test="todoOrganId != null">TODO_ORGAN_ID = #{todoOrganId}, </if>
+            <if test="todoOrganName != null">TODO_ORGAN_NAME = #{todoOrganName}, </if>
+            <if test="todoProcessName != null">TODO_PROCESS_NAME = #{todoProcessName}, </if>
+            <if test="todoProcessStatus != null">TODO_PROCESS_STATUS = #{todoProcessStatus}, </if>
+            <if test="todoProcessInfo != null">TODO_PROCESS_INFO = #{todoProcessInfo}, </if>
+            <if test="todoCurrInfo != null">TODO_CURR_INFO = #{todoCurrInfo}, </if>
+            <if test="todoNextInfo != null">TODO_NEXT_INFO = #{todoNextInfo}, </if>
+            <if test="todoUrl != null">TODO_URL = #{todoUrl}, </if>
+            <if test="todoLabels != null">TODO_LABELS = #{todoLabels}, </if>
+            <if test="todoContent != null">TODO_CONTENT = #{todoContent}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opOrganName != null">OP_ORGAN_NAME = #{opOrganName}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE RECORD_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM PUBLIC_UNION_TODO
+        WHERE RECORD_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM PUBLIC_UNION_TODO
+        WHERE RECORD_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM PUBLIC_UNION_TODO B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.config.dto.PublicUnionTodoDto" extends="publicUnionTodoMap" id="publicUnionTodoDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="publicUnionTodoDtoMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_TODO B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="publicUnionTodoDtoMap">
+        SELECT
+B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_UNION_TODO B
+        WHERE RECORD_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+
+
+</mapper>

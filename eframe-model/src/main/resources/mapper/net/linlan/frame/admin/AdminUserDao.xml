@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminUserDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.AdminUser" id="adminUserMap">
+        <id property="id" column="ADMIN_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="deptId" column="DEPT_ID"/>
+        <result property="createType" column="CREATE_TYPE"/>
+        <result property="name" column="NAME"/>
+        <result property="username" column="USERNAME"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="email" column="EMAIL"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="salt" column="SALT"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="adminType" column="ADMIN_TYPE"/>
+        <result property="isSuperAdmin" column="IS_SUPER_ADMIN"/>
+        <result property="isAuditAdmin" column="IS_AUDIT_ADMIN"/>
+        <result property="isSelfAdmin" column="IS_SELF_ADMIN"/>
+        <result property="adminRange" column="ADMIN_RANGE"/>
+        <result property="adminPerms" column="ADMIN_PERMS"/>
+        <result property="lastAppId" column="LAST_APP_ID"/>
+        <result property="lastLoginTime" column="LAST_LOGIN_TIME"/>
+        <result property="lastLoginIp" column="LAST_LOGIN_IP"/>
+        <result property="loginCount" column="LOGIN_COUNT"/>
+        <result property="status" column="STATUS"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="adminUserMap">
+        SELECT
+ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, IMAGE_PATH, ADMIN_TYPE, IS_SUPER_ADMIN, IS_AUDIT_ADMIN, IS_SELF_ADMIN, ADMIN_RANGE, ADMIN_PERMS, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LOGIN_COUNT, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, SPARE1, SPARE2
+        FROM ADMIN_USER B
+        WHERE B.ADMIN_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="adminUserMap">
+        SELECT
+B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        FROM ADMIN_USER B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.ADMIN_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.ADMIN_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="adminId != null and adminId != ''">
+            and B.ADMIN_ID = #{adminId}
+        </if>
+        <if test="organId != null and organId != ''">
+            and B.ORGAN_ID = #{organId}
+        </if>
+        <if test="deptId != null and deptId != ''">
+            and B.DEPT_ID = #{deptId}
+        </if>
+        <if test="createType != null and createType != ''">
+            and B.CREATE_TYPE = #{createType}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="username != null and username != ''">
+            and B.USERNAME = #{username}
+        </if>
+        <if test="mobile != null and mobile != ''">
+            and B.MOBILE = #{mobile}
+        </if>
+        <if test="email != null and email != ''">
+            and B.EMAIL = #{email}
+        </if>
+        <if test="password != null and password != ''">
+            and B.PASSWORD = #{password}
+        </if>
+        <if test="salt != null and salt != ''">
+            and B.SALT = #{salt}
+        </if>
+        <if test="imagePath != null and imagePath != ''">
+            and B.IMAGE_PATH = #{imagePath}
+        </if>
+        <if test="adminType != null and adminType != ''">
+            and B.ADMIN_TYPE = #{adminType}
+        </if>
+        <if test="isSuperAdmin != null and isSuperAdmin != ''">
+            and B.IS_SUPER_ADMIN = #{isSuperAdmin}
+        </if>
+        <if test="isAuditAdmin != null and isAuditAdmin != ''">
+            and B.IS_AUDIT_ADMIN = #{isAuditAdmin}
+        </if>
+        <if test="isSelfAdmin != null and isSelfAdmin != ''">
+            and B.IS_SELF_ADMIN = #{isSelfAdmin}
+        </if>
+        <if test="adminRange != null and adminRange != ''">
+            and B.ADMIN_RANGE = #{adminRange}
+        </if>
+        <if test="adminPerms != null and adminPerms != ''">
+            and B.ADMIN_PERMS = #{adminPerms}
+        </if>
+        <if test="lastAppId != null and lastAppId != ''">
+            and B.LAST_APP_ID = #{lastAppId}
+        </if>
+        <if test="lastLoginTime != null and lastLoginTime != ''">
+            and B.LAST_LOGIN_TIME = #{lastLoginTime}
+        </if>
+        <if test="lastLoginIp != null and lastLoginIp != ''">
+            and B.LAST_LOGIN_IP = #{lastLoginIp}
+        </if>
+        <if test="loginCount != null and loginCount != ''">
+            and B.LOGIN_COUNT = #{loginCount}
+        </if>
+        <choose>
+            <when test="status != null">
+                AND B.STATUS = #{status}
+            </when>
+            <otherwise>
+                AND B.STATUS = 1
+            </otherwise>
+        </choose>
+        <if test="creatorId != null and creatorId != ''">
+            and B.CREATOR_ID = #{creatorId}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+        <if test="q != null and ''!=q">
+            AND  (B.NAME like concat(concat('%',#{q}),'%')
+            or B.USERNAME like concat(concat('%',#{q}),'%')
+            or B.MOBILE like concat(concat('%',#{q}),'%')
+            )
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        INSERT INTO ADMIN_USER
+        (
+ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, IMAGE_PATH, ADMIN_TYPE, IS_SUPER_ADMIN, IS_AUDIT_ADMIN, IS_SELF_ADMIN, ADMIN_RANGE, ADMIN_PERMS, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LOGIN_COUNT, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, SPARE1, SPARE2
+        )
+        VALUES
+        (
+#{id}, #{userId}, #{organId}, #{deptId}, #{createType}, #{name}, #{username}, #{mobile}, #{email}, #{password}, #{salt}, #{imagePath}, #{adminType}, #{isSuperAdmin}, #{isAuditAdmin}, #{isSelfAdmin}, #{adminRange}, #{adminPerms}, #{lastAppId}, #{lastLoginTime}, #{lastLoginIp}, #{loginCount}, #{status}, #{creatorId}, #{createTime}, #{lastTime}, #{delFlag}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO ADMIN_USER
+                (
+ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, IMAGE_PATH, ADMIN_TYPE, IS_SUPER_ADMIN, IS_AUDIT_ADMIN, IS_SELF_ADMIN, ADMIN_RANGE, ADMIN_PERMS, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LOGIN_COUNT, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+#{item.id}, #{item.userId}, #{item.organId}, #{item.deptId}, #{item.createType}, #{item.name}, #{item.username}, #{item.mobile}, #{item.email}, #{item.password}, #{item.salt}, #{item.imagePath}, #{item.adminType}, #{item.isSuperAdmin}, #{item.isAuditAdmin}, #{item.isSelfAdmin}, #{item.adminRange}, #{item.adminPerms}, #{item.lastAppId}, #{item.lastLoginTime}, #{item.lastLoginIp}, #{item.loginCount}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO ADMIN_USER
+                    (
+ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, IMAGE_PATH, ADMIN_TYPE, IS_SUPER_ADMIN, IS_AUDIT_ADMIN, IS_SELF_ADMIN, ADMIN_RANGE, ADMIN_PERMS, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LOGIN_COUNT, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+#{item.id}, #{item.userId}, #{item.organId}, #{item.deptId}, #{item.createType}, #{item.name}, #{item.username}, #{item.mobile}, #{item.email}, #{item.password}, #{item.salt}, #{item.imagePath}, #{item.adminType}, #{item.isSuperAdmin}, #{item.isAuditAdmin}, #{item.isSelfAdmin}, #{item.adminRange}, #{item.adminPerms}, #{item.lastAppId}, #{item.lastLoginTime}, #{item.lastLoginIp}, #{item.loginCount}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        UPDATE ADMIN_USER
+        <set>
+            <if test="userId != null">USER_ID = #{userId}, </if>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="deptId != null">DEPT_ID = #{deptId}, </if>
+            <if test="createType != null">CREATE_TYPE = #{createType}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="username != null">USERNAME = #{username}, </if>
+            <if test="mobile != null">MOBILE = #{mobile}, </if>
+            <if test="email != null">EMAIL = #{email}, </if>
+            <if test="password != null">PASSWORD = #{password}, </if>
+            <if test="salt != null">SALT = #{salt}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="adminType != null">ADMIN_TYPE = #{adminType}, </if>
+            <if test="isSuperAdmin != null">IS_SUPER_ADMIN = #{isSuperAdmin}, </if>
+            <if test="isAuditAdmin != null">IS_AUDIT_ADMIN = #{isAuditAdmin}, </if>
+            <if test="isSelfAdmin != null">IS_SELF_ADMIN = #{isSelfAdmin}, </if>
+            <if test="adminRange != null">ADMIN_RANGE = #{adminRange}, </if>
+            <if test="adminPerms != null">ADMIN_PERMS = #{adminPerms}, </if>
+            <if test="lastAppId != null">LAST_APP_ID = #{lastAppId}, </if>
+            <if test="lastLoginTime != null">LAST_LOGIN_TIME = #{lastLoginTime}, </if>
+            <if test="lastLoginIp != null">LAST_LOGIN_IP = #{lastLoginIp}, </if>
+            <if test="loginCount != null">LOGIN_COUNT = #{loginCount}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE ADMIN_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        UPDATE ADMIN_USER SET DEL_FLAG = 2 WHERE ADMIN_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        UPDATE ADMIN_USER SET DEL_FLAG = 2 WHERE ADMIN_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM ADMIN_USER B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.admin.dto.AdminUserDto" extends="adminUserMap" id="adminUserDtoMap">
+        <result property="nickName"     column="NAME"    />
+        <result property="deptName"     column="DEPT_NAME"    />
+        <result property="organName"     column="ORGAN_NAME"    />
+        <association property="dept" javaType="net.linlan.frame.admin.entity.AdminDept" resultMap="deptMap" />
+        <collection  property="roles"   javaType="java.util.List"  resultMap="roleMap" />
+    </resultMap>
+
+    <resultMap id="deptMap" type="net.linlan.frame.admin.entity.AdminDept">
+        <id     property="id"           column="DEPT_ID"     />
+        <result property="parentId"     column="PARENT_ID"   />
+        <result property="name"         column="NAME"   />
+        <result property="searchCode"   column="SEARCH_CODE"   />
+        <result property="priority"     column="PRIORITY"   />
+        <result property="organLeader"  column="ORGAN_LEADER"      />
+        <result property="status"       column="DEPT_STATUS" />
+    </resultMap>
+
+    <resultMap id="roleMap" type="net.linlan.sys.role.entity.SysRole">
+        <id     property="id"       column="ROLE_ID"        />
+        <result property="name"     column="NAME"      />
+        <result property="code"      column="CODE"       />
+        <result property="priority"     column="PRIORITY"      />
+        <result property="status"       column="ROLE_STATUS"    />
+    </resultMap>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join ADMIN_DEPT AD on B.DEPT_ID = AD.DEPT_ID
+        left join ADMIN_USER_ROLE AUR on B.ADMIN_ID = AUR.ADMIN_ID
+        left join ADMIN_ROLE SR on SR.ROLE_ID = AUR.ROLE_ID
+    </sql>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , AD.DEPT_ID, AD.PARENT_ID, AD.SEARCH_CODE, AD.NAME, AD.PRIORITY, AD.ORGAN_LEADER, AD.STATUS as DEPT_STATUS
+        , SR.ROLE_ID, SR.NAME, SR.CODE, SR.PRIORITY, SR.STATUS as ROLE_STATUS
+        FROM ADMIN_USER B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , AD.DEPT_ID, AD.PARENT_ID, AD.SEARCH_CODE, AD.NAME, AD.PRIORITY, AD.ORGAN_LEADER, AD.STATUS as DEPT_STATUS
+        , SR.ROLE_ID, SR.NAME, SR.CODE, SR.PRIORITY, SR.STATUS as ROLE_STATUS
+        FROM ADMIN_USER B
+        <include refid="commonUnionJoin"></include>
+        WHERE ADMIN_ID = #{value}
+    </select>
+
+    <select id="selectUserByUsername" parameterType="String" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , AD.DEPT_ID, AD.PARENT_ID, AD.SEARCH_CODE, AD.NAME AS DEPT_NAME, AD.PRIORITY, AD.ORGAN_LEADER, AD.STATUS as DEPT_STATUS
+        , SR.ROLE_ID, SR.NAME, SR.CODE, SR.PRIORITY, SR.STATUS as ROLE_STATUS
+        FROM ADMIN_USER B
+        <include refid="commonUnionJoin"></include>
+        where B.USERNAME = #{username} and B.DEL_FLAG = 0
+    </select>
+
+    <select id="selectUserByMobile" parameterType="String" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , AD.DEPT_ID, AD.PARENT_ID, AD.SEARCH_CODE, AD.NAME, AD.PRIORITY, AD.ORGAN_LEADER, AD.STATUS as DEPT_STATUS
+        , SR.ROLE_ID, SR.NAME, SR.CODE, SR.PRIORITY, SR.STATUS as ROLE_STATUS
+        FROM ADMIN_USER B
+        <include refid="commonUnionJoin"></include>
+        where B.MOBILE = #{mobile} and B.DEL_FLAG = 0
+    </select>
+
+    <select id="selectAdminById" parameterType="Long" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , AD.DEPT_ID, AD.PARENT_ID, AD.SEARCH_CODE, AD.NAME AS DEPT_NAME, AD.PRIORITY, AD.ORGAN_LEADER, AD.STATUS as DEPT_STATUS
+        , SR.ROLE_ID, SR.NAME, SR.CODE, SR.PRIORITY, SR.STATUS as ROLE_STATUS
+        , ORG.NAME AS ORGAN_NAME
+        FROM ADMIN_USER B
+        LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+        <include refid="commonUnionJoin"></include>
+        where B.ADMIN_ID = #{adminId}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <select id="selectAllocatedList" resultMap="adminUserDtoMap">
+        select distinct B.ADMIN_ID, B.USER_ID, B.DEPT_ID, B.ORGAN_ID, B.USERNAME, B.NAME, B.EMAIL, B.MOBILE,
+        B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.STATUS, B.CREATE_TIME
+        from ADMIN_USER B
+        left join ADMIN_DEPT AD on B.DEPT_ID = AD.DEPT_ID
+        left join ADMIN_USER_ROLE AUR on B.ADMIN_ID = AUR.ADMIN_ID
+        left join ADMIN_ROLE SR on SR.ROLE_ID = AUR.ROLE_ID
+        where B.DEL_FLAG = 0 and SR.ROLE_ID = #{roleId}
+        <if test="username != null and username != ''">
+            AND B.USERNAME like concat('%', #{username}, '%')
+        </if>
+        <if test="mobile != null and mobile != ''">
+            AND B.MOBILE like concat('%', #{mobile}, '%')
+        </if>
+    </select>
+
+    <select id="selectUnallocatedList" resultMap="adminUserDtoMap">
+        select distinct B.ADMIN_ID, B.USER_ID, B.DEPT_ID, B.ORGAN_ID, B.USERNAME, B.NAME, B.EMAIL, B.MOBILE,
+        B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.STATUS, B.CREATE_TIME
+        from ADMIN_USER B
+        left join ADMIN_DEPT AD on B.DEPT_ID = AD.DEPT_ID
+        left join ADMIN_USER_ROLE AUR on B.ADMIN_ID = AUR.ADMIN_ID
+        left join ADMIN_ROLE SR on SR.ROLE_ID = AUR.ROLE_ID
+        where B.DEL_FLAG = 0 and (r.ROLE_ID != #{roleId} or SR.ROLE_ID IS NULL)
+        and B.ADMIN_ID not in (select B.ADMIN_ID from ADMIN_USER UR inner join ADMIN_USER_ROLE AUR on B.ADMIN_ID = AUR.ADMIN_ID and AUR.ROLE_ID = #{roleId})
+        <if test="username != null and username != ''">
+            AND B.USERNAME like concat('%', #{username}, '%')
+        </if>
+        <if test="mobile != null and mobile != ''">
+            AND B.MOBILE like concat('%', #{mobile}, '%')
+        </if>
+    </select>
+
+
+    <select id="checkUsernameUnique" parameterType="String" resultMap="adminUserMap">
+        select ADMIN_ID, USERNAME from ADMIN_USER where USERNAME = #{username} limit 1
+    </select>
+
+    <select id="checkMobileUnique" parameterType="String" resultMap="adminUserMap">
+        select ADMIN_ID, MOBILE from ADMIN_USER where MOBILE = #{mobile} and DEL_FLAG = 0 limit 1
+    </select>
+
+    <select id="checkEmailUnique" parameterType="String" resultMap="adminUserMap">
+        select ADMIN_ID, EMAIL from ADMIN_USER where EMAIL = #{email} and DEL_FLAG = 0 limit 1
+    </select>
+
+    <update id="updateUserStatus" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        update ADMIN_USER set status = #{status} where ADMIN_ID = #{adminId}
+    </update>
+
+    <update id="updateUserImagePath" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        update ADMIN_USER set IMAGE_PATH = #{imagePath} where USERNAME = #{username}
+    </update>
+
+    <update id="resetUserPwd" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        update ADMIN_USER set PASSWORD = #{password} where USERNAME = #{username}
+    </update>
+
+    <delete id="deleteUserById" parameterType="Long">
+        update ADMIN_USER set DEL_FLAG = 2 where ADMIN_ID = #{adminId}
+    </delete>
+
+    <delete id="deleteUserByIds" parameterType="Long">
+        update ADMIN_USER set DEL_FLAG = 2 where ADMIN_ID in
+        <foreach collection="array" item="adminId" open="(" separator="," close=")">
+            #{adminId}
+        </foreach>
+    </delete>
+
+</mapper>

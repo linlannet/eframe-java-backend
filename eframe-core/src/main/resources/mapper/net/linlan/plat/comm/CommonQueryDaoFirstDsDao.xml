@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-core - core核心共性模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.comm.dao.CommonQueryFirstDsDao">
+
+    <select id="executeSql" parameterType="String" resultType="map" statementType="STATEMENT">
+        <![CDATA[
+            ${value}
+        ]]>
+    </select>
+
+
+    <select id="isExistsTable" resultType="Boolean">
+
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                SELECT EXISTS (
+                SELECT 1
+                FROM information_schema.tables
+                WHERE table_name = ${tableName}
+                ) AS isExists
+            </when>
+            <when test='_databaseId == "oracle"'>
+                SELECT CASE
+                WHEN COUNT(*) > 0 THEN '1'
+                ELSE '0'
+                END AS isExists
+                FROM ALL_TABLES
+                WHERE TABLE_NAME = UPPER(${tableName})
+            </when>
+            <otherwise>
+                SELECT EXISTS (
+                SELECT 1
+                FROM information_schema.tables
+                WHERE table_name = ${tableName}
+                ) AS isExists
+            </otherwise>
+        </choose>
+
+    </select>
+
+    <select id="hasData" resultType="Boolean">
+        SELECT CASE
+                   WHEN EXISTS (SELECT 1 FROM ${tableName}) THEN 1
+                   ELSE 0
+                   END AS hasData
+    </select>
+
+
+
+
+
+
+    <insert id="saveData">
+        INSERT INTO ${tableName}
+        <if test="columns != null and !columns.isEmpty()">
+            <foreach collection="columns" item="column" separator="," open="(" close=")">
+                ${column.columnName}
+            </foreach>
+            VALUES
+            <foreach collection="columns" item="column" separator="," open="(" close=")">
+                <if test="column.columnValue != null">
+                    #{column.columnValue}
+                </if>
+            </foreach>
+        </if>
+    </insert>
+
+
+    <insert id="updateDataById">
+        UPDATE ${tableName}
+        <set>
+            <foreach collection="columns" item="column" separator="," >
+                <if test="column.columnName != null and column.columnValue != null and column.isPk != 1">
+                    ${column.columnName} = #{column.columnValue}
+                </if>
+            </foreach>
+        </set>
+        <where>
+            <foreach collection="columns" item="column" separator="and" >
+                <if test="column.isPk == 1">
+                    ${column.columnName} = #{column.columnValue}
+                </if>
+            </foreach>
+        </where>
+    </insert>
+
+    <insert id="updateData">
+        UPDATE ${tableName}
+        <set>
+            <foreach collection="columns" item="column" separator="," >
+                <if test="column.columnName != null and column.columnValue != null and column.isPk != 1">
+                    ${column.columnName} = #{column.columnValue}
+                </if>
+            </foreach>
+        </set>
+        <where>
+            <foreach collection="columns" item="column" separator="and" >
+                <if test="column.isQuery == 1">
+                    #{column.columnName} = #{column.columnValue}
+                </if>
+            </foreach>
+        </where>
+    </insert>
+
+    <delete id="deleteData">
+        <bind name="idList" value="ids.split(',')"/>
+        delete from ${tableName}
+        where ${idName} IN
+        <foreach item="id" collection="idList" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <select id="findData" resultType="java.util.Map">
+        select B.*
+        from ${tableName} B
+        <where>
+            <bind name="idNameWithDot" value="'B.' + idName"/>
+            ${idNameWithDot} = #{id}
+        </where>
+    </select>
+
+    <select id="getData" resultType="java.util.Map">
+        select B.*
+        from ${tableName} B
+        <where>
+            <foreach collection="columns" item="column" separator="and">
+                <if test="column.isQuery == 1">
+                    <bind name="columnNameWithPrefix" value="'B.' + column.columnName"/>
+                    ${columnNameWithPrefix} = #{column.columnValue}
+                </if>
+            </foreach>
+        </where>
+        <if test="orderColums != null and !orderColums.isEmpty()">
+            order by
+            <foreach collection="orderColums" item="orderColum" separator="," index="index" open="" close="">
+                <if test="orderColum.isOrder == 1">
+                    <bind name="columnNameWithPrefix" value="'B.' + orderColum.columnName"/>
+                    ${columnNameWithPrefix} = #{orderColum.columnValue}
+                </if>
+            </foreach>
+        </if>
+        <bind name="offset" value="(pages - 1) * limit"/>
+        <bind name="pagedLimit" value="limit"/>
+        limit #{offset}, #{pagedLimit}
+    </select>
+
+    <select id="getDataCount" resultType="java.lang.Integer">
+        select count(1)
+        from ${tableName} B
+        <where>
+            <foreach collection="columns" item="column" separator="and" >
+                <if test="column.isQuery == 1">
+                    <!-- 直接使用B.和column.columnName拼接 -->
+                    B.${column.columnName} = #{column.columnValue}
+                </if>
+            </foreach>
+        </where>
+    </select>
+
+
+    <select id="getDataV2" resultType="java.util.Map">
+        select B.*
+        from ${tableName} B
+        <where>
+            <foreach collection="paramColumns" item="column" separator="and">
+                <bind name="columnNameWithPrefix" value="'B.' + column.columnName"/>
+                ${columnNameWithPrefix} LIKE CONCAT('%', #{column.columnValue}, '%')
+            </foreach>
+        </where>
+        <!-- 引用排序片段 -->
+        <include refid="orderByFragment"/>
+        <bind name="offset" value="(pages - 1) * limit"/>
+        <bind name="pagedLimit" value="limit"/>
+        limit #{offset}, #{pagedLimit}
+    </select>
+
+
+    <!-- 排序片段定义 奇数表示降序，偶数表示升序-->
+    <sql id="orderByFragment">
+        <if test="orderBy != null and allColumns != null and orderBy >= 1">
+            order by
+            <bind name="columnNameWithPrefix" value="'B.' + allColumns[(orderBy - 1)].columnName"/>
+            <if test="sortOrder == 1">
+                ${columnNameWithPrefix} DESC
+            </if>
+            <if test="sortOrder == 0">
+                ${columnNameWithPrefix} ASC
+            </if>
+        </if>
+    </sql>
+
+
+</mapper>

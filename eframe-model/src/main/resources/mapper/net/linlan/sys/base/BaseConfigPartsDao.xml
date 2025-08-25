@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseConfigPartsDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseConfigParts" id="baseConfigPartsMap">
+        <id property="id" column="CFG_KEY"/>
+        <result property="cfgValue" column="CFG_VALUE"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseConfigPartsMap">
+        SELECT
+        CFG_KEY, CFG_VALUE
+        FROM BASE_CONFIG_PARTS
+        WHERE CFG_KEY = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseConfigPartsMap">
+        SELECT
+        B.CFG_KEY, B.CFG_VALUE
+        FROM BASE_CONFIG_PARTS B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY CFG_KEY ASC
+            </when>
+            <otherwise>
+                ORDER BY CFG_KEY DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test='cfgKey != null and cfgKey !=""'>
+            and B.CFG_KEY like concat(#{cfgKey},'%')
+        </if>
+        <if test='q != null and q !=""'>
+            and B.CFG_KEY like concat('%',concat(#{q},'%'))
+        </if>
+        <if test="ids != null ">
+            and B.CFG_KEY IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseConfigParts">
+        INSERT INTO BASE_CONFIG_PARTS
+        (
+            CFG_KEY, CFG_VALUE
+        )
+        VALUES
+        (
+            #{id}, #{cfgValue}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_CONFIG_PARTS
+                (
+                CFG_KEY, CFG_VALUE
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.cfgValue}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_CONFIG_PARTS
+                    (
+                    CFG_KEY, CFG_VALUE
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.cfgValue}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseConfigParts">
+        UPDATE BASE_CONFIG_PARTS
+        <set>
+            <if test="cfgValue != null">CFG_VALUE = #{cfgValue}</if>
+        </set>
+        WHERE CFG_KEY = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM BASE_CONFIG_PARTS
+        WHERE CFG_KEY = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM BASE_CONFIG_PARTS
+        WHERE CFG_KEY IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_CONFIG_PARTS B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseConfigPartsDto" extends="baseConfigPartsMap" id="baseConfigPartsDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseConfigPartsDtoMap">
+        SELECT
+        B.CFG_KEY, B.CFG_VALUE
+        FROM BASE_CONFIG_PARTS B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseConfigPartsDtoMap">
+        SELECT
+        CFG_KEY, CFG_VALUE
+        FROM BASE_CONFIG_PARTS
+        WHERE CFG_KEY = #{value}
+    </select>
+
+
+</mapper>

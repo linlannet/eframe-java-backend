@@ -1,0 +1,73 @@
+package ${packageName}.dao;
+
+import java.util.List;
+import com.github.pagehelper.Page;
+import ${packageName}.entity.${ClassName};
+import ${packageName}.dto.${ClassName}Dto;
+import ${packageName}.param.${ClassName}Param;
+import org.apache.ibatis.annotations.Mapper;
+import net.linlan.commons.db.mybatis.MybatisBaseDao;
+#if($table.sub)
+import ${packageName}.entity.${subClassName};
+#end
+
+/**
+*
+* ${ClassName}数据域:${functionName}持久层Dao
+* @author ${author}
+* CreateTime ${datetime}
+*
+*/
+@Mapper
+public interface ${ClassName}Dao extends MybatisBaseDao<${ClassName}>
+{
+
+    /**
+     * 查询${functionName}列表
+     * 
+     * @param param the input param ${functionName}查询参数
+     * @return ${functionName}集合
+     */
+    List<${ClassName}> selectList(${ClassName}Param param);
+
+    /** get the page of dto ${ClassName}Dto
+     * 列表分页方法，返回分页DTO对象列表
+     * @param param the input param ${functionName}查询参数
+     * @return 分页的${functionName}数据 {@link Page} 对象，包含 {@link ${ClassName}} 列表
+     */
+    Page<${ClassName}Dto> getPageDto(${ClassName}Param param);
+
+    /** get the dto by input id, return dto
+     * 对象详情方法，通过id查询对象{@link ${ClassName}Dto}
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     * @return {@link ${ClassName}Dto}
+     */
+    ${ClassName}Dto getDtoById(${pkColumn.javaType} ${pkColumn.javaField});
+
+#if($table.sub)
+
+    /**
+     * 批量删除${subTable.functionName}
+     * 
+     * @param ${pkColumn.javaField}s 需要删除的数据主键集合
+     * @return 结果
+     */
+    int delete${subClassName}By${subTableFkClassName}s(${pkColumn.javaType}[] ${pkColumn.javaField}s);
+    
+    /**
+     * 批量新增${subTable.functionName}
+     * 
+     * @param ${subclassName}List ${subTable.functionName}列表
+     * @return 结果
+     */
+    int batchSave${subClassName}(List<${subClassName}> ${subclassName}List);
+
+    /**
+     * 通过${functionName}主键删除${subTable.functionName}
+     * 
+     * @param ${pkColumn.javaField} ${functionName}ID
+     * @return 结果
+     */
+    int delete${subClassName}By${subTableFkClassName}(${pkColumn.javaType} ${pkColumn.javaField});
+#end
+}

@@ -1,0 +1,225 @@
+{
+    "pageData": {
+        "pageTitle": "${functionName}",
+        "pageSubTitle": "",
+        "showLeftTree": false,
+        "treeApiUrl": "",
+        "treeSearchAble": true,
+        "treeApiParams": {},
+        "treeTableProperty": "parentId",
+        "btnGroup": [
+            {
+                "name": "新增",
+                "color": "#046BCA",
+                "icon": "Plus",
+                "type": "primary",
+                "triggerMethodsName": "handleAdd"
+            },
+            {
+                "name": "删除",
+                "color": "#D80A0D",
+                "icon": "Delete",
+                "type": "primary",
+                "triggerMethodsName": "handleMoreDel"
+            }
+        ],
+        #foreach($column in $columns)
+            #if($column.isPk)
+              "delApiUrl": "/api/model/comm/delete/${tableName}/${column.columnName}/",
+            #end
+        #end
+        "delApiParams": {},
+##        #foreach($column in $columnsParam)
+##            #if($column.isPk)
+##              "delApiParams2": {"field":"${column.columnName}","value":"","isPk":"${column.isPk}"},
+##            #end
+##        #end
+        "tableApiUrl": "/api/model/comm/list/${modelId}",
+        "tableApiParams": {},
+        "tableFilterParams": {
+            "q": "",
+            "orderBy": 1
+        },
+        "nameFilterKeyName": "q",
+        "tableFilterConfig": {
+            "showFilter": true,
+            "configArr": [
+                #foreach($column in $columnsParam)
+                #set($comment=$column.columnMean)
+                #set($dictType=$column.dictType)
+                #if($column.htmlType == "input"||$column.htmlType == "textarea"||$column.htmlType == "inputNumber"||$column.htmlType == "switch")
+                {
+                    "type": "$column.htmlType",
+                    "label": "${comment}",
+                    "field": "${column.columnName}",
+                    "defaultValue": "",
+                    "othersExtends": {}
+                },
+                #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" != $dictType)
+                {
+                    "type": "$column.htmlType",
+                    "label": "${comment}",
+                    "field": "${column.columnName}",
+                    "defaultValue": "",
+                    "othersExtends": {
+                        "isAsync": true,
+                        "asyncConfig": {
+                            "url": "/api/admin/dictionary/type/${dictType}",
+                            "params": {},
+                            "dataPath": "data"
+                        },
+                        "options": [],
+                        "labelProperty": "name",
+                        "valueProperty": "cddValue"
+                    }
+                },
+                #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && $dictType=="")
+                {
+                    "type": "$column.htmlType",
+                    "label": "${comment}",
+                    "field": "${column.columnName}",
+                    "defaultValue": "",
+                    "othersExtends": {
+                        "isAsync": false,
+                        "asyncConfig": {
+                            "url": "",
+                            "params": {},
+                            "dataPath": "data"
+                        },
+                        "options": [],
+                        "labelProperty": "label",
+                        "valueProperty": "value"
+                    }
+                },
+                #elseif($column.htmlType == "datetime" )
+                               {
+                                    "type": "$column.htmlType",
+                                    "label": "${comment}",
+                                    "field": "${column.columnName}",
+                                    "defaultValue": "",
+                                    "othersExtends": {}
+                                },
+                #else
+                  {
+                    "type": "$column.htmlType",
+                    "label": "${comment}",
+                    "field": "${column.columnName}",
+                    "defaultValue": "",
+                    "othersExtends": {}
+                  },
+                #end
+                #end
+
+              {}
+            ]
+        },
+        "tableColumns": [
+            {
+                "type": "index",
+                "label": "序号",
+                "minWidth": 60
+            },
+            #foreach($column in $columns)
+            #set($columnName=$column.columnName)
+            #set($comment=$column.columnMean)
+            #if($column.isDisplay)
+                #if($column.isPk)
+                            { "prop": "${columnName}", "label": "${comment}", "minWidth": 80,"notShow": true,"isPk": "${column.isPk}" },
+                #elseif($column.htmlType == "datetime")
+                            { "prop": "${columnName}", "label": "${comment}", "minWidth": 180 ,"isPk": "${column.isPk}"},
+                #elseif("" != $column.dictType)
+                            { "prop": "${columnName}", "label": "${comment}", "minWidth": 120 ,"isPk": "${column.isPk}"},
+                #elseif("" != $columnName)
+                            { "prop": "${columnName}", "label": "${comment}", "minWidth": 120 ,"isPk": "${column.isPk}"},
+                #else
+                #end
+            #end
+            #end
+          {}
+
+        ],
+        "tableDynamicData": true,
+        "tableList": [],
+        "tableShowSelection": true,
+        "tableShowOperation": true,
+        "tableOperationWith": 160,
+        "tableShowView": true,
+        "tableBtnView": "查看",
+        "tableShowEdit": true,
+        "tableBtnEdit": "修改",
+        "tableShowDel": true,
+        "tableBtnDel": "删除",
+        "tableOperation": [],
+        "editRouteName": "genericPage-universalOperate",
+        "viewRouteName": "genericPage-universalOperate",
+        "extendsObj": {}
+    },
+    "formData": {
+		"fields":[
+            #foreach($column in $columns)
+            #set($field=$column.columnName)
+            #set($comment=$column.columnMean)
+            #set($dictType=$column.dictType)
+            #set($columnType=$column.columnType)
+                #if(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" != $dictType)
+                  { "field": "${field}", "label": "${comment}", "isPk": "${column.isPk}", "htmlType": "${column.htmlType}", "javaType": "${columnType}", "dictType": "${dictType}" , "isNotNull": "${column.isNotNull}", "isSingle": "${column.isSingle}"},
+                #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" == $dictType )
+                  { "field": "${field}", "label": "${comment}", "isPk": "${column.isPk}", "htmlType": "${column.htmlType}", "javaType": "${columnType}", "dictType": "" , "isNotNull": "${column.isNotNull}", "isSingle": "${column.isSingle}"},
+                #else
+                  { "field": "${field}", "label": "${comment}", "isPk": "${column.isPk}", "htmlType": "${column.htmlType}", "javaType": "${columnType}", "dictType": "" , "isNotNull": "${column.isNotNull}", "isSingle": "${column.isSingle}"},
+                #end
+            #end
+            {}
+		                ],
+        "formFields": [],
+##      "fieldColums":[        #foreach($column in $columns)
+##          #set($field=$column.columnName)
+##          #set($comment=$column.columnMean)
+##          #set($columnType=$column.columnType)
+##          #set($dictType=$column.dictType)
+##        { "field": "${field}", "value": "", "label": "${comment}", "isPk": "${column.isPk}", "htmlType": "${column.htmlType}", "javaType": "${columnType}", "dictType": "" , "isNotNull": "${column.isNotNull}", "isSingle": "${column.isSingle}"},
+##      #end]
+
+##        "fieldColums": {
+##          "add":[#foreach($column in $columns)
+##              #set($field=$column.columnName)
+##              #set($comment=$column.columnMean)
+##              #set($columnType=$column.columnType)
+##              #set($isRequired=!$column.isPk)
+##              #set($dictType=$column.dictType)
+##            { "modelId": "${modelId}", "tableName": "${tableName}", "modelItemId": "", "columnName": "${field}", "columnValue": "" , "columnType":  "${columnType}" , "isPk": "${isRequired}"},
+##          #end],
+##          "update":[#foreach($column in $columns)
+##              #set($field=$column.columnName)
+##              #set($comment=$column.columnMean)
+##              #set($columnType=$column.columnType)
+##              #set($isRequired=!$column.isPk)
+##              #set($dictType=$column.dictType)
+##            { "modelId": "${modelId}", "tableName": "${tableName}", "modelItemId": "", "columnName": "${field}", "columnValue": "" , "columnType":  "${columnType}" , "isPk": "${isRequired}"},
+##          #end],
+##          "delete":[#foreach($column in $columns)
+##              #set($field=$column.columnName)
+##              #set($comment=$column.columnMean)
+##              #set($columnType=$column.columnType)
+##              #set($isRequired=!$column.isPk)
+##              #set($dictType=$column.dictType)
+##              #if($column.isRequired)
+##                { "modelId": "${modelId}","columnName": "${field}", "columnValue": ""  , "isPk": "${isRequired}"}
+##              #end
+##          #end]
+##        },
+##        "type":"2",
+        "formApi": {
+            "saveApiUrl": "/api/model/comm/save/${tableName}/${modelId}",
+            "saveApiParams": {},
+            "updateApiUrl": "/api/model/comm/update/${tableName}/${modelId}",
+            "updateApiParams": {},
+            #foreach($column in $columns)
+                #if($column.isPk)
+                  "detailApiUrl": "/api/model/comm/detail/${tableName}/${column.columnName}/",
+                #end
+            #end
+            "detailApiParams": {}
+        }
+    }
+}

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.comm.dao.CommImportDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.comm.entity.CommImport" id="commImportMap">
+        <id property="id" column="IMPORT_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="type" column="TYPE"/>
+        <result property="subType" column="SUB_TYPE"/>
+        <result property="name" column="NAME"/>
+        <result property="outFilePath" column="OUT_FILE_PATH"/>
+        <result property="targetTable" column="TARGET_TABLE"/>
+        <result property="funcCode" column="FUNC_CODE"/>
+        <result property="funcUrl" column="FUNC_URL"/>
+        <result property="importResult" column="IMPORT_RESULT"/>
+        <result property="dataNum" column="DATA_NUM"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opUserName" column="OP_USER_NAME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+        <result property="status" column="STATUS"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="commImportMap">
+        SELECT
+        IMPORT_ID, APP_ID, SITE_ID, TYPE, SUB_TYPE, NAME, OUT_FILE_PATH, TARGET_TABLE, FUNC_CODE, FUNC_URL, IMPORT_RESULT, DATA_NUM, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM COMM_IMPORT
+        WHERE IMPORT_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="commImportMap">
+        SELECT
+        B.IMPORT_ID, B.APP_ID, B.SITE_ID, B.TYPE, B.SUB_TYPE, B.NAME, B.OUT_FILE_PATH, B.TARGET_TABLE, B.FUNC_CODE, B.FUNC_URL, B.IMPORT_RESULT, B.DATA_NUM, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM COMM_IMPORT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY IMPORT_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY IMPORT_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and B.SITE_ID = #{siteId}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="subType != null and subType != ''">
+            and B.SUB_TYPE = #{subType}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="outFilePath != null and outFilePath != ''">
+            and B.OUT_FILE_PATH = #{outFilePath}
+        </if>
+        <if test="targetTable != null and targetTable != ''">
+            and B.TARGET_TABLE = #{targetTable}
+        </if>
+        <if test="funcCode != null and funcCode != ''">
+            and B.FUNC_CODE = #{funcCode}
+        </if>
+        <if test="funcUrl != null and funcUrl != ''">
+            and B.FUNC_URL = #{funcUrl}
+        </if>
+        <if test="importResult != null and importResult != ''">
+            and B.IMPORT_RESULT = #{importResult}
+        </if>
+        <if test="dataNum != null and dataNum != ''">
+            and B.DATA_NUM = #{dataNum}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opUserName != null and opUserName != ''">
+            and B.OP_USER_NAME = #{opUserName}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opOrganName != null and opOrganName != ''">
+            and B.OP_ORGAN_NAME = #{opOrganName}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test="q!=null and q != ''">
+            AND (B.NAME LIKE CONCAT('%',#{q},'%')
+            OR B.FUNC_URL LIKE CONCAT('%',#{q},'%')
+            )
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.comm.entity.CommImport">
+        INSERT INTO COMM_IMPORT
+        (
+        IMPORT_ID, APP_ID, SITE_ID, TYPE, SUB_TYPE, NAME, OUT_FILE_PATH, TARGET_TABLE, FUNC_CODE, FUNC_URL, IMPORT_RESULT, DATA_NUM, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+        #{id}, #{appId}, #{siteId}, #{type}, #{subType}, #{name}, #{outFilePath}, #{targetTable}, #{funcCode}, #{funcUrl}, #{importResult}, #{dataNum}, #{opTime}, #{opUserId}, #{opUserName}, #{opOrganId}, #{opOrganName}, #{status}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO COMM_IMPORT
+                (
+                IMPORT_ID, APP_ID, SITE_ID, TYPE, SUB_TYPE, NAME, OUT_FILE_PATH, TARGET_TABLE, FUNC_CODE, FUNC_URL, IMPORT_RESULT, DATA_NUM, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.appId}, #{item.siteId}, #{item.type}, #{item.subType}, #{item.name}, #{item.outFilePath}, #{item.targetTable}, #{item.funcCode}, #{item.funcUrl}, #{item.importResult}, #{item.dataNum}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO COMM_IMPORT
+                    (
+                    IMPORT_ID, APP_ID, SITE_ID, TYPE, SUB_TYPE, NAME, OUT_FILE_PATH, TARGET_TABLE, FUNC_CODE, FUNC_URL, IMPORT_RESULT, DATA_NUM, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.appId}, #{item.siteId}, #{item.type}, #{item.subType}, #{item.name}, #{item.outFilePath}, #{item.targetTable}, #{item.funcCode}, #{item.funcUrl}, #{item.importResult}, #{item.dataNum}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.comm.entity.CommImport">
+        UPDATE COMM_IMPORT
+        <set>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="subType != null">SUB_TYPE = #{subType}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="outFilePath != null">OUT_FILE_PATH = #{outFilePath}, </if>
+            <if test="targetTable != null">TARGET_TABLE = #{targetTable}, </if>
+            <if test="funcCode != null">FUNC_CODE = #{funcCode}, </if>
+            <if test="funcUrl != null">FUNC_URL = #{funcUrl}, </if>
+            <if test="importResult != null">IMPORT_RESULT = #{importResult}, </if>
+            <if test="dataNum != null">DATA_NUM = #{dataNum}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opUserName != null">OP_USER_NAME = #{opUserName}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opOrganName != null">OP_ORGAN_NAME = #{opOrganName}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE IMPORT_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM COMM_IMPORT
+        WHERE IMPORT_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM COMM_IMPORT
+        WHERE IMPORT_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM COMM_IMPORT B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.comm.dto.CommImportDto" extends="commImportMap" id="commImportDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="commImportDtoMap">
+        SELECT
+        B.IMPORT_ID, B.APP_ID, B.SITE_ID, B.TYPE, B.SUB_TYPE, B.NAME, B.OUT_FILE_PATH, B.TARGET_TABLE, B.FUNC_CODE, B.FUNC_URL, B.IMPORT_RESULT, B.DATA_NUM, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM COMM_IMPORT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="commImportDtoMap">
+        SELECT
+        IMPORT_ID, APP_ID, SITE_ID, TYPE, SUB_TYPE, NAME, OUT_FILE_PATH, TARGET_TABLE, FUNC_CODE, FUNC_URL, IMPORT_RESULT, DATA_NUM, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM COMM_IMPORT
+        WHERE IMPORT_ID = #{value}
+    </select>
+
+    <resultMap id="commImportListDtoMap" type="net.linlan.sys.comm.dto.CommImportDto">
+        <id property="id" column="IMPORT_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="type" column="TYPE"/>
+        <result property="subType" column="SUB_TYPE"/>
+        <result property="name" column="NAME"/>
+        <result property="outFilePath" column="OUT_FILE_PATH"/>
+        <result property="targetTable" column="TARGET_TABLE"/>
+        <result property="importResult" column="IMPORT_RESULT"/>
+        <result property="dataNum" column="DATA_NUM"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opUserName" column="OP_USER_NAME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+    </resultMap>
+
+    <select id="getCommImportList" resultMap="commImportListDtoMap">
+        SELECT B.IMPORT_ID, B.APP_ID, B.SITE_ID, B.TYPE, B.SUB_TYPE, B.NAME, B.OUT_FILE_PATH, B.TARGET_TABLE, B.IMPORT_RESULT, B.DATA_NUM,
+        B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID ,B.OP_ORGAN_NAME
+        FROM COMM_IMPORT B
+        WHERE 1=1
+        <if test="appId != null and appId != ''">
+            and APP_ID  =  #{appId}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and SITE_ID  =  #{siteId}
+        </if>
+        <if test="type != null and type != ''">
+            and TYPE  =  #{type}
+        </if>
+        <if test="subType != null and subType != ''">
+            and SUB_TYPE  =  #{subType}
+        </if>
+        <if test="name != null and name != ''">
+            and NAME  like  concat(concat('%',#{name}),'%')
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and OP_TIME  =  #{opTime}
+        </if>
+        <if test="status != null and status != ''">
+            and STATUS  =  #{status}
+        </if>
+    </select>
+
+</mapper>

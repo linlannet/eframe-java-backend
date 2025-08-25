@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseXzqhDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseXzqh" id="baseXzqhMap">
+        <id property="id" column="XZQH_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="countryId" column="COUNTRY_ID"/>
+        <result property="areatypeId" column="AREATYPE_ID"/>
+        <result property="lft" column="LFT"/>
+        <result property="rgt" column="RGT"/>
+        <result property="code" column="CODE"/>
+        <result property="name" column="NAME"/>
+        <result property="nameTotal" column="NAME_TOTAL"/>
+        <result property="sname" column="SNAME"/>
+        <result property="nameEn" column="NAME_EN"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="isDisplay" column="IS_DISPLAY"/>
+        <result property="hasContent" column="HAS_CONTENT"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="deleteTime" column="DELETE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseXzqhMap">
+        SELECT
+        XZQH_ID, PARENT_ID, COUNTRY_ID, AREATYPE_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+        FROM BASE_XZQH
+        WHERE XZQH_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseXzqhMap">
+        SELECT
+        B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        FROM BASE_XZQH B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY XZQH_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY XZQH_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+
+        <if test="parentId != null and parentId != ''">
+            and B.PARENT_ID = #{parentId}
+        </if>
+        <if test="countryId != null and countryId != ''">
+            and B.COUNTRY_ID = #{countryId}
+        </if>
+        <if test="areatypeId != null and areatypeId != ''">
+            and B.AREATYPE_ID = #{areatypeId}
+        </if>
+        <if test="lft != null and lft != ''">
+            and B.LFT = #{lft}
+        </if>
+        <if test="rgt != null and rgt != ''">
+            and B.RGT = #{rgt}
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="nameTotal != null and nameTotal != ''">
+            and B.NAME_TOTAL = #{nameTotal}
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME = #{sname}
+        </if>
+        <if test="nameEn != null and nameEn != ''">
+            and B.NAME_EN = #{nameEn}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            AND search_code like concat(#{searchCode}, '%')
+        </if>
+        <if test="isDisplay != null and isDisplay != ''">
+            and B.IS_DISPLAY = #{isDisplay}
+        </if>
+        <if test="hasContent != null and hasContent != ''">
+            and B.HAS_CONTENT = #{hasContent}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="deleteTime != null and deleteTime != ''">
+            and B.DELETE_TIME = #{deleteTime}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='q != null and q != ""'>
+            and (B.NAME like concat('%',concat(#{q},'%'))
+            or B.CODE like concat('%',concat(#{q},'%') )
+            or B.SEARCH_CODE like concat('%',concat(#{q},'%') )
+            )
+        </if>
+        <if test='code == "1"'> AND code like '%0000' </if>
+        <if test="code != null"> AND code = #{code} </if>
+
+        <if test="parentIds != null">
+            AND B.PARENT_ID IN
+            <foreach item="parentId" collection="parentIds" open="(" separator="," close=")">
+                #{parentId}
+            </foreach>
+        </if>
+        <if test="areatypeIds != null">
+            AND B.AREATYPE_ID IN
+            <foreach item="areatypeId" collection="areatypeIds" open="(" separator="," close=")">
+                #{areatypeId}
+            </foreach>
+        </if>
+        <if test="likeQuery != null">
+            AND (
+            B.NAME_TOTAL like concat('%', concat(#{likeString}, '%')) OR
+            lower(B.SEARCH_CODE) like concat('%', concat(#{likeString}, '%')) OR
+            B.CODE like concat('%', concat(#{likeString}, '%')) OR
+            B.XZQH_ID like concat('%', concat(#{likeString}, '%'))
+            )
+        </if>
+        <if test="ids != null ">
+            and B.XZQH_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseXzqh">
+        INSERT INTO BASE_XZQH
+        (
+            XZQH_ID, PARENT_ID, COUNTRY_ID, AREATYPE_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+            #{id}, #{parentId}, #{countryId}, #{areatypeId}, #{lft}, #{rgt}, #{code}, #{name}, #{nameTotal}, #{sname}, #{nameEn}, #{searchCode}, #{isDisplay}, #{hasContent}, #{priority}, #{createTime}, #{lastTime}, #{delFlag}, #{deleteTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_XZQH
+                (
+                XZQH_ID, PARENT_ID, COUNTRY_ID, AREATYPE_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.parentId}, #{item.countryId}, #{item.areatypeId}, #{item.lft}, #{item.rgt}, #{item.code}, #{item.name}, #{item.nameTotal}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.isDisplay}, #{item.hasContent}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_XZQH
+                    (
+                    XZQH_ID, PARENT_ID, COUNTRY_ID, AREATYPE_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.parentId}, #{item.countryId}, #{item.areatypeId}, #{item.lft}, #{item.rgt}, #{item.code}, #{item.name}, #{item.nameTotal}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.isDisplay}, #{item.hasContent}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseXzqh">
+        UPDATE BASE_XZQH
+        <set>
+            <if test="parentId != null">PARENT_ID = #{parentId}, </if>
+            <if test="countryId != null">COUNTRY_ID = #{countryId}, </if>
+            <if test="areatypeId != null">AREATYPE_ID = #{areatypeId}, </if>
+            <if test="lft != null">LFT = #{lft}, </if>
+            <if test="rgt != null">RGT = #{rgt}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="nameTotal != null">NAME_TOTAL = #{nameTotal}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="nameEn != null">NAME_EN = #{nameEn}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="isDisplay != null">IS_DISPLAY = #{isDisplay}, </if>
+            <if test="hasContent != null">HAS_CONTENT = #{hasContent}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="deleteTime != null">DELETE_TIME = #{deleteTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE XZQH_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <update id="deleteById">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_XZQH set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE XZQH_ID = #{value}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_XZQH set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE XZQH_ID = #{value}
+            </when>
+            <otherwise>
+                update BASE_XZQH set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE XZQH_ID = #{value}
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <update id="deleteByIds">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_XZQH set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE XZQH_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <otherwise>
+                update BASE_XZQH set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE XZQH_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_XZQH B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseXzqhDto" extends="baseXzqhMap" id="baseXzqhDtoMap">
+        <result property="parentName" column="parentName"/>
+        <result property="areatypeName" column="areatypeName"/>
+        <result property="countryName" column="countryName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseXzqhDtoMap">
+        SELECT
+        B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        , GX.NAME as parentName
+        , GA.NAME as areatypeName
+        , GC.NAME as countryName
+        FROM BASE_XZQH B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join BASE_XZQH GX on B.PARENT_ID = GX.XZQH_ID
+            left join BASE_AREATYPE GA on B.AREATYPE_ID = GA.AREATYPE_ID
+            left join BASE_COUNTRY GC on B.COUNTRY_ID = GC.COUNTRY_ID
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseXzqhDtoMap">
+        SELECT
+        B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        , GX.NAME as parentName
+        , GA.NAME as areatypeName
+        , GC.NAME as countryName
+        FROM BASE_XZQH B
+        <include refid="commonUnionJoin"></include>
+        WHERE XZQH_ID = #{value}
+    </select>
+
+    <select id="getDtoByParentId" resultMap="baseXzqhDtoMap">
+        SELECT
+        B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        , GX.NAME as parentName
+        , GA.NAME as areatypeName
+        , GC.NAME as countryName
+        FROM BASE_XZQH B
+        <include refid="commonUnionJoin"></include>
+        WHERE B.PARENT_ID = #{value}
+    </select>
+
+    <select id="getDtoByCode" resultMap="baseXzqhDtoMap">
+        SELECT
+        B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        , GX.NAME as parentName
+        , GA.NAME as areatypeName
+        , GC.NAME as countryName
+        FROM BASE_XZQH B
+        <include refid="commonUnionJoin"></include>
+        WHERE B.CODE = #{value}
+    </select>
+
+    <!-- 获取应用顶级行政区划 -->
+    <select id="getXzqhByAppAndAreaType" resultMap="baseXzqhMap">
+        <if test="appId != null and appId.trim() != '' and areaTypeId != null and areaTypeId.trim() != ''">
+            SELECT B.* FROM BASE_XZQH B,BASE_APP A WHERE B.XZQH_ID = A.XZQH_ID AND A.APP_ID = #{appId} AND AREATYPE_ID = #{areaTypeId}
+        </if>
+    </select>
+
+    <!--查找集合下所有的本身加上下一级子集的结果-->
+    <select id="getListSelfAndChildren" resultMap="baseXzqhMap" parameterType="java.util.List">
+        <foreach collection="list" index = "index"  item = "item" open="(" separator=" union all " close=")">
+            select * from BASE_XZQH t where t.PARENT_ID=#{item.id} or t.xzqh_id=#{item.id}
+        </foreach>
+    </select>
+
+    <resultMap id="xzqhIdNameMap" type="net.linlan.sys.base.dto.XzqhInitDto">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <select id="getChildren" resultMap="xzqhIdNameMap">
+        select XZQH_ID as id, NAME as name from BASE_XZQH where PARENT_ID=#{parendId}
+    </select>
+
+    <resultMap id="treeNodeMap" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="areaId"/>
+        <id property="areaId" column="areaId"/>
+        <id property="searchCode" column="searchCode"/>
+        <id property="shortName" column="shortName"/>
+        <result property="label" column="label"/>
+        <result property="childNum" column="childNum"/>
+    </resultMap>
+
+    <!--层级查找树级子节点-->
+    <select id="getXzqhChildren" resultMap="treeNodeMap">
+        select B.XZQH_ID as areaId, B.NAME as label, B.AREATYPE_ID as searchCode, B.SNAME as shortName,
+        (SELECT COUNT(A.XZQH_ID) FROM BASE_XZQH A WHERE A.PARENT_ID = B.XZQH_ID) AS childNum
+        from BASE_XZQH B
+        where 1 = 1
+        AND B.DEL_FLAG=0
+        <choose>
+            <when test="parentId != null and parentId != ''">
+                AND B.PARENT_ID = #{parentId}
+            </when>
+            <otherwise>
+                AND (B.PARENT_ID IS NULL OR B.PARENT_ID = 0 OR B.PARENT_ID = '')
+            </otherwise>
+        </choose>
+        ORDER BY B.PRIORITY,B.XZQH_ID ASC
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.BaseXzqhListDto" id="baseXzqhListMap">
+        <id property="id" column="XZQH_ID"/>
+        <result property="areatypeId" column="AREATYPE_ID"/>
+        <result property="code" column="CODE"/>
+        <result property="name" column="NAME"/>
+        <result property="nameTotal" column="NAME_TOTAL"/>
+        <result property="isDisplay" column="IS_DISPLAY"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+    </resultMap>
+
+    <select id="getXzqhListDto" resultMap="baseXzqhListMap">
+        select B.XZQH_ID,B.NAME,B.AREATYPE_ID,B.CODE,B.NAME_TOTAL,B.IS_DISPLAY,B.PRIORITY,B.CREATE_TIME
+        from BASE_XZQH B
+        where 1 = 1
+        <if test="parentId != null and parentId != ''">
+            AND B.PARENT_ID = #{parentId}
+        </if>
+        <if test='q != null and q != ""'>
+            and (B.NAME like concat('%',concat(#{q},'%'))
+            or B.CODE like concat('%',concat(#{q},'%') )
+            or B.SEARCH_CODE like concat('%',concat(#{q},'%') )
+            )
+        </if>
+        ORDER BY B.PRIORITY,B.XZQH_ID ASC
+    </select>
+
+    <insert id="saveOrUpdateBatch" parameterType="list">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                REPLACE INTO BASE_XZQH
+                (XZQH_ID, PARENT_ID, COUNTRY_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, AREATYPE_ID    )
+                VALUES
+                <foreach collection="list" item="item" open="" close="" separator=",">
+                    (#{item.id}, #{item.parentId}, #{item.countryId}, #{item.lft}, #{item.rgt}, #{item.code}, #{item.name}, #{item.nameTotal}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.isDisplay}, #{item.hasContent}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}, #{item.areatypeId}    )
+                </foreach>
+            </when>
+            <otherwise>
+                INSERT INTO BASE_XZQH
+                (XZQH_ID, PARENT_ID, COUNTRY_ID, LFT, RGT, CODE, NAME, NAME_TOTAL, SNAME, NAME_EN, SEARCH_CODE, IS_DISPLAY, HAS_CONTENT, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, AREATYPE_ID    )
+                VALUES
+                <foreach collection="list" item="item" open="" close="" separator=",">
+                    (#{item.id}, #{item.parentId}, #{item.countryId}, #{item.lft}, #{item.rgt}, #{item.code}, #{item.name}, #{item.nameTotal}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.isDisplay}, #{item.hasContent}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}, #{item.areatypeId}    )
+                </foreach>
+            </otherwise>
+        </choose>
+
+    </insert>
+
+</mapper>

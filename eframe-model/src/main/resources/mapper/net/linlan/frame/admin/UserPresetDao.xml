@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.UserPresetDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.UserPreset" id="userPresetMap">
+        <id property="id" column="PRESET_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="saveSource" column="SAVE_SOURCE"/>
+        <result property="unitName" column="UNIT_NAME"/>
+        <result property="name" column="NAME"/>
+        <result property="idNum" column="ID_NUM"/>
+        <result property="duty" column="DUTY"/>
+        <result property="telephone" column="TELEPHONE"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="extInfo1" column="EXT_INFO1"/>
+        <result property="extInfo2" column="EXT_INFO2"/>
+        <result property="extInfo3" column="EXT_INFO3"/>
+        <result property="needInitUser" column="NEED_INIT_USER"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="needInitOrgan" column="NEED_INIT_ORGAN"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="type" column="TYPE"/>
+        <result property="foreignUrl" column="FOREIGN_URL"/>
+        <result property="bizType" column="BIZ_TYPE"/>
+        <result property="bizOrganId" column="BIZ_ORGAN_ID"/>
+        <result property="bizAreaId" column="BIZ_AREA_ID"/>
+        <result property="bizGroupId" column="BIZ_GROUP_ID"/>
+        <result property="bizPower" column="BIZ_POWER"/>
+        <result property="bizMultiInfo" column="BIZ_MULTI_INFO"/>
+        <result property="needSetOrgan" column="NEED_SET_ORGAN"/>
+        <result property="needSetArea" column="NEED_SET_AREA"/>
+        <result property="needSetGroup" column="NEED_SET_GROUP"/>
+        <result property="needSetPower" column="NEED_SET_POWER"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opInfo" column="OP_INFO"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="status" column="STATUS"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="dataBatch" column="DATA_BATCH"/>
+        <result property="dataVersion" column="DATA_VERSION"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="syncMode" column="SYNC_MODE"/>
+        <result property="syncTime" column="SYNC_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="userPresetMap">
+        SELECT
+        PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
+        FROM USER_PRESET
+        WHERE PRESET_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="userPresetMap">
+        SELECT
+        B.PRESET_ID, B.APP_ID, B.SAVE_SOURCE, B.UNIT_NAME, B.NAME, B.ID_NUM, B.DUTY, B.TELEPHONE, B.MOBILE, B.EXT_INFO1, B.EXT_INFO2, B.EXT_INFO3, B.NEED_INIT_USER, B.USER_ID, B.NEED_INIT_ORGAN, B.ORGAN_ID, B.TYPE, B.FOREIGN_URL, B.BIZ_TYPE, B.BIZ_ORGAN_ID, B.BIZ_AREA_ID, B.BIZ_GROUP_ID, B.BIZ_POWER, B.BIZ_MULTI_INFO, B.NEED_SET_ORGAN, B.NEED_SET_AREA, B.NEED_SET_GROUP, B.NEED_SET_POWER, B.OP_USER_ID, B.OP_ORGAN_ID, B.OP_TIME, B.OP_INFO, B.PRIORITY, B.CREATE_TIME, B.STATUS, B.DEL_FLAG, B.DATA_BATCH, B.DATA_VERSION, B.UPDATE_TIME, B.SYNC_MODE, B.SYNC_TIME, B.DESCRIPTION
+        FROM USER_PRESET B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY PRESET_ID DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY PRESET_ID ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 4'>
+                        ORDER BY PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 5'>
+                        ORDER BY PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY PRESET_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY PRESET_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="saveSource != null and saveSource != ''">
+            and B.SAVE_SOURCE = #{saveSource}
+        </if>
+        <if test="unitName != null and unitName != ''">
+            and B.UNIT_NAME = #{unitName}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="idNum != null and idNum != ''">
+            and B.ID_NUM = #{idNum}
+        </if>
+        <if test="duty != null and duty != ''">
+            and B.DUTY = #{duty}
+        </if>
+        <if test="telephone != null and telephone != ''">
+            and B.TELEPHONE = #{telephone}
+        </if>
+        <if test="mobile != null and mobile != ''">
+            and B.MOBILE = #{mobile}
+        </if>
+        <if test="extInfo1 != null and extInfo1 != ''">
+            and B.EXT_INFO1 = #{extInfo1}
+        </if>
+        <if test="extInfo2 != null and extInfo2 != ''">
+            and B.EXT_INFO2 = #{extInfo2}
+        </if>
+        <if test="extInfo3 != null and extInfo3 != ''">
+            and B.EXT_INFO3 = #{extInfo3}
+        </if>
+        <if test="needInitUser != null and needInitUser != ''">
+            and B.NEED_INIT_USER = #{needInitUser}
+        </if>
+        <if test="needInitOrgan != null and needInitOrgan != ''">
+            and B.NEED_INIT_ORGAN = #{needInitOrgan}
+        </if>
+        <if test="organId != null and organId != ''">
+            and B.ORGAN_ID = #{organId}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="foreignUrl != null and foreignUrl != ''">
+            and B.FOREIGN_URL = #{foreignUrl}
+        </if>
+        <if test="bizType != null and bizType != ''">
+            and B.BIZ_TYPE = #{bizType}
+        </if>
+        <if test="bizOrganId != null and bizOrganId != ''">
+            and B.BIZ_ORGAN_ID = #{bizOrganId}
+        </if>
+        <if test="bizAreaId != null and bizAreaId != ''">
+            and B.BIZ_AREA_ID = #{bizAreaId}
+        </if>
+        <if test="bizGroupId != null and bizGroupId != ''">
+            and B.BIZ_GROUP_ID = #{bizGroupId}
+        </if>
+        <if test="bizPower != null and bizPower != ''">
+            and B.BIZ_POWER = #{bizPower}
+        </if>
+        <if test="bizMultiInfo != null and bizMultiInfo != ''">
+            and B.BIZ_MULTI_INFO = #{bizMultiInfo}
+        </if>
+        <if test="needSetOrgan != null and needSetOrgan != ''">
+            and B.NEED_SET_ORGAN = #{needSetOrgan}
+        </if>
+        <if test="needSetArea != null and needSetArea != ''">
+            and B.NEED_SET_AREA = #{needSetArea}
+        </if>
+        <if test="needSetGroup != null and needSetGroup != ''">
+            and B.NEED_SET_GROUP = #{needSetGroup}
+        </if>
+        <if test="needSetPower != null and needSetPower != ''">
+            and B.NEED_SET_POWER = #{needSetPower}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opInfo != null and opInfo != ''">
+            and B.OP_INFO = #{opInfo}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="dataBatch != null and dataBatch != ''">
+            and B.DATA_BATCH = #{dataBatch}
+        </if>
+        <if test="dataVersion != null and dataVersion != ''">
+            and B.DATA_VERSION = #{dataVersion}
+        </if>
+        <if test="syncMode != null and syncMode != ''">
+            and B.SYNC_MODE = #{syncMode}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.admin.entity.UserPreset">
+        INSERT INTO USER_PRESET
+        (
+        PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{appId}, #{saveSource}, #{unitName}, #{name}, #{idNum}, #{duty}, #{telephone}, #{mobile}, #{extInfo1}, #{extInfo2}, #{extInfo3}, #{needInitUser}, #{userId}, #{needInitOrgan}, #{organId}, #{type}, #{foreignUrl}, #{bizType}, #{bizOrganId}, #{bizAreaId}, #{bizGroupId}, #{bizPower}, #{bizMultiInfo}, #{needSetOrgan}, #{needSetArea}, #{needSetGroup}, #{needSetPower}, #{opUserId}, #{opOrganId}, #{opTime}, #{opInfo}, #{priority}, #{createTime}, #{status}, #{delFlag}, #{dataBatch}, #{dataVersion}, #{updateTime}, #{syncMode}, #{syncTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="net.linlan.frame.admin.entity.UserPreset">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO USER_PRESET
+                (
+                PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{id}, #{appId}, #{saveSource}, #{unitName}, #{name}, #{idNum}, #{duty}, #{telephone}, #{mobile}, #{extInfo1}, #{extInfo2}, #{extInfo3}, #{needInitUser}, #{userId}, #{needInitOrgan}, #{organId}, #{type}, #{foreignUrl}, #{bizType}, #{bizOrganId}, #{bizAreaId}, #{bizGroupId}, #{bizPower}, #{bizMultiInfo}, #{needSetOrgan}, #{needSetArea}, #{needSetGroup}, #{needSetPower}, #{opUserId}, #{opOrganId}, #{opTime}, #{opInfo}, #{priority}, #{createTime}, #{status}, #{delFlag}, #{dataBatch}, #{dataVersion}, #{updateTime}, #{syncMode}, #{syncTime}, #{description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO USER_PRESET
+                    (
+                    PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{id}, #{appId}, #{saveSource}, #{unitName}, #{name}, #{idNum}, #{duty}, #{telephone}, #{mobile}, #{extInfo1}, #{extInfo2}, #{extInfo3}, #{needInitUser}, #{userId}, #{needInitOrgan}, #{organId}, #{type}, #{foreignUrl}, #{bizType}, #{bizOrganId}, #{bizAreaId}, #{bizGroupId}, #{bizPower}, #{bizMultiInfo}, #{needSetOrgan}, #{needSetArea}, #{needSetGroup}, #{needSetPower}, #{opUserId}, #{opOrganId}, #{opTime}, #{opInfo}, #{priority}, #{createTime}, #{status}, #{delFlag}, #{dataBatch}, #{dataVersion}, #{updateTime}, #{syncMode}, #{syncTime}, #{description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.admin.entity.UserPreset">
+        UPDATE USER_PRESET
+        <set>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="saveSource != null">SAVE_SOURCE = #{saveSource}, </if>
+            <if test="unitName != null">UNIT_NAME = #{unitName}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="idNum != null">ID_NUM = #{idNum}, </if>
+            <if test="duty != null">DUTY = #{duty}, </if>
+            <if test="telephone != null">TELEPHONE = #{telephone}, </if>
+            <if test="mobile != null">MOBILE = #{mobile}, </if>
+            <if test="extInfo1 != null">EXT_INFO1 = #{extInfo1}, </if>
+            <if test="extInfo2 != null">EXT_INFO2 = #{extInfo2}, </if>
+            <if test="extInfo3 != null">EXT_INFO3 = #{extInfo3}, </if>
+            <if test="needInitUser != null">NEED_INIT_USER = #{needInitUser}, </if>
+            <if test="userId != null">USER_ID = #{userId}, </if>
+            <if test="needInitOrgan != null">NEED_INIT_ORGAN = #{needInitOrgan}, </if>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="foreignUrl != null">FOREIGN_URL = #{foreignUrl}, </if>
+            <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
+            <if test="bizOrganId != null">BIZ_ORGAN_ID = #{bizOrganId}, </if>
+            <if test="bizAreaId != null">BIZ_AREA_ID = #{bizAreaId}, </if>
+            <if test="bizGroupId != null">BIZ_GROUP_ID = #{bizGroupId}, </if>
+            <if test="bizPower != null">BIZ_POWER = #{bizPower}, </if>
+            <if test="bizMultiInfo != null">BIZ_MULTI_INFO = #{bizMultiInfo}, </if>
+            <if test="needSetOrgan != null">NEED_SET_ORGAN = #{needSetOrgan}, </if>
+            <if test="needSetArea != null">NEED_SET_AREA = #{needSetArea}, </if>
+            <if test="needSetGroup != null">NEED_SET_GROUP = #{needSetGroup}, </if>
+            <if test="needSetPower != null">NEED_SET_POWER = #{needSetPower}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opInfo != null">OP_INFO = #{opInfo}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="dataBatch != null">DATA_BATCH = #{dataBatch}, </if>
+            <if test="dataVersion != null">DATA_VERSION = #{dataVersion}, </if>
+            <if test="updateTime != null">UPDATE_TIME = #{updateTime}, </if>
+            <if test="syncMode != null">SYNC_MODE = #{syncMode}, </if>
+            <if test="syncTime != null">SYNC_TIME = #{syncTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE PRESET_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM USER_PRESET
+        WHERE PRESET_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM USER_PRESET
+        WHERE PRESET_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM USER_PRESET B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.admin.dto.UserPresetDto" extends="userPresetMap" id="userPresetDtoMap">
+        <result property="groupName" column="ROLE_NAME"/>
+        <result property="positionName" column="POSITION_NAME"/>
+        <result property="subdistrictName" column="SUBDISTRICT_NAME"/>
+        <result property="communityName" column="COMMUNITY_NAME"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="userPresetDtoMap">
+        SELECT
+        B.PRESET_ID, B.APP_ID, B.SAVE_SOURCE, B.UNIT_NAME, B.NAME, B.ID_NUM, B.DUTY, B.TELEPHONE, B.MOBILE, B.EXT_INFO1, B.EXT_INFO2, B.EXT_INFO3, B.NEED_INIT_USER, B.USER_ID, B.NEED_INIT_ORGAN, B.ORGAN_ID, B.TYPE, B.FOREIGN_URL, B.BIZ_TYPE, B.BIZ_ORGAN_ID, B.BIZ_AREA_ID, B.BIZ_GROUP_ID, B.BIZ_POWER, B.BIZ_MULTI_INFO, B.NEED_SET_ORGAN, B.NEED_SET_AREA, B.NEED_SET_GROUP, B.NEED_SET_POWER, B.OP_USER_ID, B.OP_ORGAN_ID, B.OP_TIME, B.OP_INFO, B.PRIORITY, B.CREATE_TIME, B.STATUS, B.DEL_FLAG, B.DATA_BATCH, B.DATA_VERSION, B.UPDATE_TIME, B.SYNC_MODE, B.SYNC_TIME, B.DESCRIPTION
+        , AR.NAME as ROLE_NAME
+        , AP.NAME as POSITION_NAME
+        , AXS.SUBDISTRICT_NAME
+        , CM.COMMUNITY_NAME
+        FROM USER_PRESET B
+        <include refid="commonUnionJoin"></include>
+        WHERE B.DEL_FLAG=0
+        <include refid="commonListDto"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <sql id="commonUnionJoin">
+        left join ADMIN_ROLE AR on B.BIZ_POWER = AR.ROLE_ID
+        left join ADMIN_POSITION AP on AP.POSITION_ID = B.EXT_INFO2
+        left join AREA_XZQH_SUBDISTRICT AXS on AXS.SUBDISTRICT_ID = B.BIZ_AREA_ID
+        LEFT JOIN AREA_XZQH_COMMUNITY CM  ON CM.COMMUNITY_ID=B.BIZ_AREA_ID
+    </sql>
+
+    <sql id="commonListDto">
+        <if test="type != null and type != ''">
+            AND B.TYPE like concat('%',#{type},'%')
+        </if>
+        <if test="status != null and status != ''">
+            AND B.STATUS=#{status}
+        </if>
+        <if test="roleTypeId != null and roleTypeId != ''">
+            AND B.SYNC_MODE=#{roleTypeId}
+        </if>
+        <if test="status != null">
+            AND B.STATUS=#{status}
+        </if>
+        <if test="groupId != null and groupId != ''">
+            AND B.BIZ_POWER=#{groupId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            AND B.EXT_INFO2=#{positionId}
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID=#{organId}
+        </if>
+        <if test="areaId != null and areaId != ''">
+            AND B.BIZ_AREA_ID=#{areaId}
+        </if>
+        <if test="batchId != null and batchId != ''">
+            AND B.DATA_BATCH=#{batchId}
+        </if>
+        <if test="appId != null and appId != ''">
+            AND B.APP_ID=#{appId}
+        </if>
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="keyWords != null and keyWords != ''">
+                    and(
+                    B.NAME like concat('%',#{keyWords},'%')
+                    or  B.MOBILE like concat('%',#{keyWords},'%')
+                    )
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test="keyWords != null and keyWords != ''">
+                    and(
+                    B.NAME like concat('%',#{keyWords},'%')
+                    or  B.MOBILE like concat('%',#{keyWords},'%')
+                    )
+                </if>
+            </when>
+            <otherwise>
+                <if test="keyWords != null and keyWords != ''">
+                    and(
+                    B.NAME like '%'||#{keyWords}||'%'
+                    or  B.MOBILE like '%'||#{keyWords}||'%'
+                    )
+                </if>
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="userPresetDtoMap">
+        select
+        B.PRESET_ID, B.APP_ID, B.SAVE_SOURCE, B.UNIT_NAME, B.NAME, B.ID_NUM, B.DUTY, B.TELEPHONE, B.MOBILE, B.EXT_INFO1, B.EXT_INFO2, B.EXT_INFO3, B.NEED_INIT_USER, B.USER_ID, B.NEED_INIT_ORGAN, B.ORGAN_ID, B.TYPE, B.FOREIGN_URL, B.BIZ_TYPE, B.BIZ_ORGAN_ID, B.BIZ_AREA_ID, B.BIZ_GROUP_ID, B.BIZ_POWER, B.BIZ_MULTI_INFO, B.NEED_SET_ORGAN, B.NEED_SET_AREA, B.NEED_SET_GROUP, B.NEED_SET_POWER, B.OP_USER_ID, B.OP_ORGAN_ID, B.OP_TIME, B.OP_INFO, B.PRIORITY, B.CREATE_TIME, B.STATUS, B.DEL_FLAG, B.DATA_BATCH, B.DATA_VERSION, B.UPDATE_TIME, B.SYNC_MODE, B.SYNC_TIME, B.DESCRIPTION
+        , AR.NAME as ROLE_NAME
+        , AP.NAME as POSITION_NAME
+        , AXS.SUBDISTRICT_NAME
+        , CM.COMMUNITY_NAME
+        from USER_PRESET B
+        <include refid="commonUnionJoin"></include>
+        WHERE B.DEL_FLAG = 0
+          AND PRESET_ID = #{value}
+    </select>
+
+    <select id="getByMobileAndType" resultMap="userPresetMap">
+        select *
+        from USER_PRESET
+        where MOBILE=#{mobile}
+          and TYPE=#{type}
+        <if test="areaId!=null">
+            AND BIZ_AREA_ID = #{areaId}
+        </if>
+        and DEL_FLAG=0
+    </select>
+
+
+
+
+    <update id="concatUser">
+        update MATERIAL_PEOPLE_BASE set CONN_USER_ID = #{userId}  where PEOPLE_ID=#{peopleId} and CONN_USER_ID is null
+    </update>
+
+    <insert id="addByPeopleId">
+        INSERT INTO USER_PRESET (
+        PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
+        )
+        SELECT
+        #{powerPresent.id}, #{powerPresent.appId}, #{powerPresent.saveSource},S.ORGAN_NAME,S.ID_NAME,S.ID_NUM, #{powerPresent.duty}, #{powerPresent.telephone},S.MOBILE, #{powerPresent.extInfo1}, #{powerPresent.extInfo2},
+        #{powerPresent.extInfo3}, #{powerPresent.needInitUser}, #{powerPresent.userId}, #{powerPresent.needInitOrgan},S.ORGAN_ID, #{powerPresent.type}, #{powerPresent.foreignUrl}, #{powerPresent.bizType},S.ORGAN_ID, #{powerPresent.bizAreaId},
+        #{powerPresent.bizGroupId}, #{powerPresent.bizPower}, #{powerPresent.bizMultiInfo}, #{powerPresent.needSetOrgan}, #{powerPresent.needSetArea}, #{powerPresent.needSetGroup}, #{powerPresent.needSetPower}, #{powerPresent.opUserId}, #{powerPresent.opOrganId}, #{powerPresent.opTime},
+        #{powerPresent.opInfo}, #{powerPresent.PRIORITY}, #{powerPresent.createTime}, #{powerPresent.status}, #{powerPresent.delFlag}, #{powerPresent.dataBatch}, #{powerPresent.dataVersion}, #{powerPresent.updateTime}, #{powerPresent.syncMode}, #{powerPresent.syncTime}, #{powerPresent.description}
+        FROM MATERIAL_PEOPLE_BASE S
+        WHERE 1=1 AND S.PEOPLE_ID IN
+        <foreach collection="ids" item="peopleId" open="(" separator="," close=")">
+            #{peopleId}
+        </foreach>
+    </insert>
+
+    <select id="getPresetByMobileAndPositionId" resultMap="userPresetMap">
+        select *
+        from USER_PRESET
+        where MOBILE = #{mobile}
+          AND EXT_INFO2=#{positionId}
+          and STATUS=0
+          AND DEL_FLAG=0
+          limit 1
+    </select>
+
+</mapper>

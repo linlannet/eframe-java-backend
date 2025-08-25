@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="${packageName}.dao.${ClassName}Dao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="${packageName}.entity.${ClassName}" id="${className}Map">
+#foreach($column in $columns)
+#if($column.columnName == $pkColumn.columnName)
+        <id property="${column.javaField}" column="${column.columnName}"/>
+#else
+        <result property="${column.javaField}" column="${column.columnName}"/>
+#end
+#end
+    </resultMap>
+
+#if($table.sub)
+    <resultMap id="${className}${subClassName}Map" type="${packageName}.entity.${ClassName}" extends="${className}Map">
+        <collection property="${subclassName}List" ofType="${subClassName}" column="${pkColumn.columnName}" select="select${subClassName}List" />
+    </resultMap>
+
+    <resultMap type="${subClassName}" id="${subClassName}Map">
+#foreach ($column in $subTable.columns)
+    <result property="${column.javaField}"    column="${column.columnName}"    />
+#end
+    </resultMap>
+#end
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="#if($table.sub)${className}${subClassName}Map#else${className}Map#end">
+        SELECT
+#foreach($column in $columns)B.$column.columnName#if($foreach.count != $columns.size()), #end#end
+
+        FROM ${tableName} B
+        WHERE B.${pkColumn.columnName} = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" parameterType="${packageName}.param.${ClassName}Param" resultMap="${className}Map">
+        SELECT
+#foreach($column in $columns)B.$column.columnName#if($foreach.count != $columns.size()), #end#end
+
+        FROM ${tableName} B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.${pkColumn.columnName} ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.${pkColumn.columnName} DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+#foreach($column in $columns)
+#set($queryType=$column.queryType)
+#set($javaField=$column.javaField)
+#set($javaType=$column.javaType)
+#set($columnName=$column.columnName)
+#if($column.query)
+#if($column.queryType == "EQ")
+#if($column.javaField == 'delFlag')
+        <choose>
+            <when test="$javaField != null">
+                AND B.$columnName = #{$javaField}
+            </when>
+            <otherwise>
+                AND ( B.$columnName = 0 OR B.$columnName IS NULL )
+            </otherwise>
+        </choose>
+#else
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName = #{$javaField}</if>
+#end
+#elseif($queryType == "NE")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName != #{$javaField}</if>
+#elseif($queryType == "GT")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName &gt; #{$javaField}</if>
+#elseif($queryType == "GTE")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName &gt;= #{$javaField}</if>
+#elseif($queryType == "LT")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName &lt; #{$javaField}</if>
+#elseif($queryType == "LTE")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName &lt;= #{$javaField}</if>
+#elseif($queryType == "LIKE")
+        <if test="$javaField != null #if($javaType == 'String' )and $javaField.trim() != ''#end"> and B.$columnName like concat('%', #{$javaField}, '%')</if>
+#end
+#end
+#end
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="${packageName}.entity.${ClassName}" #if($pkColumn.increment) useGeneratedKeys="true" keyProperty="$pkColumn.javaField"#end>
+        INSERT INTO ${tableName}
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+#foreach($column in $columns)
+#if($column.columnName != $pkColumn.columnName || !$pkColumn.increment)
+            <if test="$column.javaField != null#if($column.javaType == 'String' && $column.required) and $column.javaField != ''#end">$column.columnName,</if>
+#end
+#end
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+#foreach($column in $columns)
+#if($column.columnName != $pkColumn.columnName || !$pkColumn.increment)
+            <if test="$column.javaField != null#if($column.javaType == 'String' && $column.required) and $column.javaField != ''#end">#{$column.javaField},</if>
+#end
+#end
+        </trim>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="${packageName}.entity.${ClassName}">
+        UPDATE ${tableName}
+        <trim prefix="SET" suffixOverrides=",">
+#foreach($column in $columns)
+#if($column.columnName != $pkColumn.columnName)
+            <if test="$column.javaField != null#if($column.javaType == 'String' && $column.required) and $column.javaField != ''#end">$column.columnName = #{$column.javaField},</if>
+#end
+#end
+        </trim>
+        WHERE ${pkColumn.columnName} = #{${pkColumn.javaField}}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM ${tableName}
+        WHERE ${pkColumn.columnName} = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM ${tableName}
+        WHERE ${pkColumn.columnName} IN
+        <foreach item="${pkColumn.javaField}" collection="array" open="(" separator="," close=")">
+            #{${pkColumn.javaField}}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM ${tableName} B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="${packageName}.dto.${ClassName}Dto" extends="${className}Map" id="${className}DtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="${className}DtoMap">
+        SELECT
+#foreach($column in $columns)B.$column.columnName#if($foreach.count != $columns.size()), #end#end
+
+        FROM ${tableName} B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="${className}DtoMap">
+        SELECT
+#foreach($column in $columns)B.$column.columnName#if($foreach.count != $columns.size()), #end#end
+
+        FROM ${tableName} B
+        WHERE ${pkColumn.columnName} = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+#if($table.sub)
+    <select id="select${subClassName}List" resultMap="${subClassName}Map">
+        SELECT#foreach ($column in $subTable.columns) $column.columnName#if($foreach.count != $subTable.columns.size()),#end#end
+        FROM ${subTableName}
+        WHERE ${subTableFkName} = #{${subTableFkName}}
+    </select>
+#end
+
+#if($table.sub)
+
+    <delete id="delete${subClassName}By${subTableFkClassName}s" parameterType="String">
+        DELETE FROM ${subTableName} WHERE ${subTableFkName} IN
+        <foreach item="${subTableFkclassName}" collection="array" open="(" separator="," close=")">
+            #{${subTableFkclassName}}
+        </foreach>
+    </delete>
+
+    <delete id="delete${subClassName}By${subTableFkClassName}" parameterType="${pkColumn.javaType}">
+        DELETE FROM ${subTableName} WHERE ${subTableFkName} = #{${subTableFkclassName}}
+    </delete>
+
+    <insert id="batchSave${subClassName}">
+        INSERT INTO ${subTableName}(#foreach($column in $subTable.columns) $column.columnName#if($foreach.count != $subTable.columns.size()),#end#end) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (#foreach($column in $subTable.columns) #{item.$column.javaField}#if($foreach.count != $subTable.columns.size()),#end#end)
+        </foreach>
+    </insert>
+#end
+
+</mapper>

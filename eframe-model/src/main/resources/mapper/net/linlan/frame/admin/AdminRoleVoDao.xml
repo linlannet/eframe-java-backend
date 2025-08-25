@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminRoleVoDao">
+
+    <resultMap type="net.linlan.sys.role.entity.SysRole" id="sysRoleMap">
+        <id property="id" column="ROLE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="code" column="CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="isRegular" column="IS_REGULAR"/>
+        <result property="isSuper" column="IS_SUPER"/>
+        <result property="isPublic" column="IS_PUBLIC"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="status" column="STATUS"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+	<select id="selectRoleCodeByAdminId" parameterType="Long" resultType="String">
+        select distinct B.CODE
+        from SYS_ROLE B
+        left join ADMIN_USER_ROLE AUR on AUR.ROLE_ID = B.ROLE_ID
+		WHERE B.STATUS = 1 and AUR.ADMIN_ID = #{adminId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+
+	<select id="selectRoleListByAdminId" parameterType="Long" resultType="Long">
+		select B.ROLE_ID
+        from SYS_ROLE B
+	        left join ADMIN_USER_ROLE AUR on AUR.ROLE_ID = B.ROLE_ID
+	        left join ADMIN_USER UR on UR.ADMIN_ID = AUR.ADMIN_ID
+	    where UR.ADMIN_ID = #{adminId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+
+	<select id="selectRolesByUsername" parameterType="String" resultMap="sysRoleMap">
+        select distinct B.ROLE_ID, B.NAME, B.CODE, B.PRIORITY, B.SPARE1, B.IS_REGULAR, B.IS_PUBLIC,
+                        B.STATUS, B.CREATE_TIME, B.DESCRIPTION
+        from SYS_ROLE B
+                 left join ADMIN_USER_ROLE AUR on AUR.ROLE_ID = B.ROLE_ID
+                 left join ADMIN_USER UR on UR.ADMIN_ID = AUR.ADMIN_ID
+                 left join ADMIN_DEPT AD on UR.DEPT_ID = AD.DEPT_ID
+		WHERE B.STATUS = 1 and UR.USERNAME = #{username}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+	</select>
+
+</mapper>

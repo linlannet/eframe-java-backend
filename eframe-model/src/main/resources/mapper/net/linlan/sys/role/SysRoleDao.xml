@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.role.dao.SysRoleDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.role.entity.SysRole" id="sysRoleMap">
+        <id property="id" column="ROLE_ID"/>
+        <result property="roletypeId" column="ROLETYPE_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="code" column="CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="isRegular" column="IS_REGULAR"/>
+        <result property="isSuper" column="IS_SUPER"/>
+        <result property="isPublic" column="IS_PUBLIC"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="status" column="STATUS"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="sysRoleMap">
+        SELECT
+        ROLE_ID, ROLETYPE_ID, APP_ID, NAME, CODE, PRIORITY, IS_REGULAR, IS_SUPER, IS_PUBLIC, CREATOR_ID, CREATE_TIME, STATUS, DESCRIPTION
+        FROM SYS_ROLE
+        WHERE ROLE_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="sysRoleMap">
+        SELECT
+        B.ROLE_ID, B.ROLETYPE_ID, B.APP_ID, B.NAME, B.CODE, B.PRIORITY, B.IS_REGULAR, B.IS_SUPER, B.IS_PUBLIC, B.CREATOR_ID, B.CREATE_TIME, B.STATUS, B.DESCRIPTION
+        FROM SYS_ROLE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy ==0'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy ==1'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY ROLE_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY ROLE_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="id != null and id != ''">
+            and B.ROLE_ID = #{id}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            and B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <if test="isRegular != null and isRegular != ''">
+            and B.IS_REGULAR = #{isRegular}
+        </if>
+        <if test="isSuper != null and isSuper != ''">
+            and B.IS_SUPER = #{isSuper}
+        </if>
+        <if test="isPublic != null and isPublic != ''">
+            and B.IS_PUBLIC = #{isPublic}
+        </if>
+        <if test="status != null">
+            and B.STATUS = #{status}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='q != null and q != ""'>
+            and (B.NAME like concat('%',concat(#{q},'%'))
+            or B.CODE like concat('%',concat(#{q},'%') ))
+        </if>
+        <if test='ids != null'>
+            AND B.ROLE_ID IN
+            <foreach item="id" collection="ids" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                          AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d')
+                ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                          AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d')
+                ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD') >= to_char(#{startTime},'YYYY-MM-DD')
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD') <= to_char(#{endTime},'YYYY-MM-DD')
+               ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.role.entity.SysRole">
+        INSERT INTO SYS_ROLE
+        (
+        ROLE_ID, ROLETYPE_ID, APP_ID, NAME, CODE, PRIORITY, IS_REGULAR, IS_SUPER, IS_PUBLIC, CREATOR_ID, CREATE_TIME, STATUS, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{roletypeId}, #{appId}, #{name}, #{code}, #{priority}, #{isRegular}, #{isSuper}, #{isPublic}, #{creatorId}, #{createTime}, #{status}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO SYS_ROLE
+                (
+                ROLE_ID, ROLETYPE_ID, APP_ID, NAME, CODE, PRIORITY, IS_REGULAR, IS_SUPER, IS_PUBLIC, CREATOR_ID, CREATE_TIME, STATUS, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.roletypeId}, #{item.appId}, #{item.name}, #{item.code}, #{item.priority}, #{item.isRegular}, #{item.isSuper}, #{item.isPublic}, #{item.creatorId}, #{item.createTime}, #{item.status}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO SYS_ROLE
+                    (
+                    ROLE_ID, ROLETYPE_ID, APP_ID, NAME, CODE, PRIORITY, IS_REGULAR, IS_SUPER, IS_PUBLIC, CREATOR_ID, CREATE_TIME, STATUS, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.roletypeId}, #{item.appId}, #{item.name}, #{item.code}, #{item.priority}, #{item.isRegular}, #{item.isSuper}, #{item.isPublic}, #{item.creatorId}, #{item.createTime}, #{item.status}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.role.entity.SysRole">
+        UPDATE SYS_ROLE
+        <set>
+            <if test="roletypeId != null">ROLETYPE_ID = #{roletypeId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="isRegular != null">IS_REGULAR = #{isRegular}, </if>
+            <if test="isSuper != null">IS_SUPER = #{isSuper}, </if>
+            <if test="isPublic != null">IS_PUBLIC = #{isPublic}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE ROLE_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM SYS_ROLE
+        WHERE ROLE_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM SYS_ROLE
+        WHERE ROLE_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM SYS_ROLE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.role.dto.SysRoleDto" extends="sysRoleMap" id="sysRoleDtoMap">
+        <result property="appName" column="appName"/>
+        <result property="roletypeName" column="roletypeName"/>
+        <result property="parentName" column="parentName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="sysRoleDtoMap">
+        SELECT
+        B.ROLE_ID, B.ROLETYPE_ID, B.APP_ID, B.CREATOR_ID, B.NAME, B.CODE, B.PRIORITY, B.IS_REGULAR, B.IS_SUPER, B.IS_PUBLIC, B.CREATE_TIME, B.STATUS, B.DESCRIPTION
+        , GA.NAME as appName
+        , SR.NAME as roletypeName
+        FROM SYS_ROLE B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+        ORDER BY B.PRIORITY ASC, B.CREATE_TIME DESC
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join BASE_APP GA on B.APP_ID = GA.APP_ID
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="sysRoleDtoMap">
+        SELECT
+        B.ROLE_ID, B.ROLETYPE_ID, B.APP_ID, B.CREATOR_ID, B.NAME, B.CODE, B.PRIORITY, B.IS_REGULAR, B.IS_SUPER, B.IS_PUBLIC, B.CREATE_TIME, B.STATUS, B.DESCRIPTION
+        , GD.NAME as roletypeName
+        , AR.NAME as parentName
+        FROM SYS_ROLE B
+        LEFT JOIN BASE_DICTIONARY GD
+        <choose>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                ON GD.CDD_VALUE = cast(B.ROLETYPE_ID as varchar)
+            </when>
+            <otherwise>
+                ON GD.CDD_VALUE = B.ROLETYPE_ID
+            </otherwise>
+        </choose>
+
+        LEFT JOIN SYS_ROLE AR
+        <choose>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                ON cast(AR.ROLE_ID as varchar) = B.DESCRIPTION
+            </when>
+            <otherwise>
+                ON AR.ROLE_ID = B.DESCRIPTION
+            </otherwise>
+        </choose>
+        WHERE B.ROLE_ID = #{value}
+    </select>
+
+    <!--getTreeByRoletype 树结构-->
+    <select id="getTreeByRoletype" resultType="net.linlan.sys.role.dto.RoleTypeCode">
+        SELECT B.* FROM (
+        select SR.ROLETYPE_ID as id, NULL as parentId, 1 as isRoleType, SR.NAME as name, SR.PRIORITY as priority
+        from CORE_ROLETYPE SR
+        where SR.DEL_FLAG = 0
+        union all
+        select AR.ROLE_ID as id, AR.ROLETYPE_ID as parentId, 0 as isRoleType, AP.NAME as name, AP.PRIORITY as priority
+        from SYS_ROLE AR where 1=1
+        <if test='appId != null and appId != ""'>
+            AND AR.APP_ID = #{appId}
+        </if>
+        ) B
+        ORDER BY B.PRIORITY ASC
+    </select>
+
+    <resultMap id="childTreeMap" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+    </resultMap>
+    <select id="getRoleChildTree" resultMap="childTreeMap">
+        select SR.ROLETYPE_ID as id,SR.NAME as label
+        from CORE_ROLETYPE SR
+        where SR.DEL_FLAG = 0
+        <if test='appId != null and appId.trim() != ""'>
+            AND AR.APP_ID = #{appId}
+        </if>
+        ORDER BY priority ASC
+    </select>
+
+    <!--获取角色分类列表-->
+    <select id="getRoletypeList" resultType="net.linlan.sys.role.dto.RoleTypeCode">
+        select SR.ROLETYPE_ID as id, SR.NAME as name, SR.TYPE as type, SR.CODE as code, SR.PRIORITY as priority
+        from CORE_ROLETYPE SR
+        where SR.DEL_FLAG = 0
+        <if test='appId != null and appId.trim() != ""'>
+            AND AR.APP_ID = #{appId}
+        </if>
+        ORDER BY priority ASC
+    </select>
+
+    <!-- find by code，通过唯一值获取对象 -->
+    <select id="getByCode" resultMap="sysRoleMap">
+        SELECT * FROM SYS_ROLE
+        WHERE CODE = #{value}
+    </select>
+
+    <!-- 查询roldId关联的菜单列表，menuIds -->
+    <select id="getMenuIds" resultType="long">
+        SELECT MENU_ID FROM SYS_ROLE_MENU
+        WHERE ROLE_ID = #{roleId}
+    </select>
+
+    <!-- 对传入的menuIds进行分割，批量保存角色和菜单关联信息 -->
+    <insert id="saveMenuById">
+        insert into SYS_ROLE_MENU
+            ( MENUROLE_ID,ROLE_ID, MENU_ID )
+        values
+            ( #{menuroleId},#{roleId},#{menuId} )
+    </insert>
+
+    <!-- 对传入的menuIds进行分割，批量保存角色和菜单关联信息 -->
+    <insert id="saveAreaById">
+        insert into SYS_ROLE_AREATYPE
+            ( ROLEAREA_ID,ROLE_ID,AREATYPE_ID )
+        values
+            ( #{roleareaId},#{roleId},#{areaTypeId} )
+    </insert>
+
+    <!-- 通过roleId删除关联的菜单 -->
+    <delete id="deleteMenuById">
+        delete from SYS_ROLE_MENU where ROLE_ID = #{value}
+    </delete>
+
+    <delete id="deleteMenuByIds">
+        delete from SYS_ROLE_MENU where ROLE_ID in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 通过roleId删除关联的菜单 -->
+    <delete id="deleteAreaById">
+        delete from SYS_ROLE_AREATYPE where ROLE_ID = #{value}
+    </delete>
+
+    <delete id="deleteAreaByIds">
+        delete from SYS_ROLE_AREATYPE where ROLE_ID in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <insert id="saveSysRoleMenu" parameterType="net.linlan.sys.role.dto.SysRoleMenuDto">
+        insert into SYS_ROLE_MENU
+            ( MENUROLE_ID,MENU_ID,ROLE_ID )
+        values
+            ( #{menuroleId},#{menuId},#{roleId} )
+    </insert>
+
+    <insert id="saveSysRoleAreatype" parameterType="net.linlan.sys.role.entity.SysRoleAreatype">
+        INSERT INTO SYS_ROLE_AREATYPE
+        (
+            ROLEAREA_ID, ROLE_ID, AREATYPE_ID
+        )
+        VALUES
+            (
+                #{roleareaId}, #{roleId}, #{areatypeId}
+            )
+    </insert>
+
+    <select id="getRoleListByMenuId" resultType="java.lang.Long">
+        SELECT B.ROLE_ID
+        from SYS_ROLE_MENU B
+        where B.MENU_ID = #{menuId}
+    </select>
+
+    <insert id="sysRoleMenuBatchInsert" parameterType="net.linlan.sys.role.dto.SysRoleMenuDto">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO SYS_ROLE_MENU
+                ( MENUROLE_ID, MENU_ID, ROLE_ID )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    ( #{item.menuroleId}, #{item.menuId}, #{item.roleId} )
+                </foreach>
+            </when>
+
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO SYS_ROLE_MENU
+                    ( MENUROLE_ID,MENU_ID,ROLE_ID )
+                    VALUES
+                    ( #{item.menuroleId},#{item.menuId},#{item.roleId} )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteRoleMenuByMenuIds">
+        DELETE FROM SYS_ROLE_MENU
+        WHERE MENU_ID IN
+        <foreach item="menuId" collection="array" open="(" separator="," close=")">
+            #{menuId}
+        </foreach>
+    </delete>
+
+    <!-- 角色树第一层角色类型 -->
+    <!-- begin -->
+    <resultMap id="coreRoletypeChildTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{roletypeId=id}" select="getNextSysRole"></association>
+    </resultMap>
+
+    <select id="getCoreRoletypeChildTree" resultMap="coreRoletypeChildTree">
+        select B.ROLETYPE_ID as id, B.NAME as label, B.ROLETYPE_ID AS searchCode
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_POSITION WHERE ROLETYPE_ID = B.ROLETYPE_ID AND POSITION_ID = #{positionId}) AS checked
+        </if>
+        from CORE_ROLETYPE B
+        where B.DEL_FLAG = 0
+        and B.ROLETYPE_ID = #{roletypeId}
+        order by B.PRIORITY asc
+    </select>
+
+    <select id="getNextSysRole" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_ROLE B
+        WHERE B.ROLETYPE_ID = #{roletypeId}
+    </select>
+    <!-- end -->
+
+    <!-- 角色树第二层角色 -->
+    <!-- begin -->
+    <resultMap id="sysRoleChildTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{roleId=id}" select="getChildNum"></association>
+    </resultMap>
+
+    <select id="getSysRoleChildTree" resultMap="sysRoleChildTree">
+        select B.ROLE_ID as id, B.NAME as label, CONCAT(B.ROLETYPE_ID,CONCAT(',',B.ROLE_ID)) AS searchCode
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_ROLE_POSITION WHERE ROLE_ID = B.ROLE_ID AND POSITION_ID = #{positionId}) AS checked
+        </if>
+        from SYS_ROLE B
+        where 1=1
+        <if test="status !=null and status!=''">
+            AND B.STATUS = #{status}
+        </if>
+        <if test="roletypeId!=null and roletypeId!=''">
+            AND B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="parentId!=null and parentId!=''">
+            AND B.DESCRIPTION = #{parentId}
+        </if>
+        order by B.PRIORITY asc
+    </select>
+
+    <select id="getChildNum" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_ROLE B
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                WHERE B.DESCRIPTION = #{roleId}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                WHERE B.DESCRIPTION = cast(#{roleId} as varchar)
+            </when>
+            <otherwise>
+                WHERE B.DESCRIPTION = #{roleId}
+            </otherwise>
+        </choose>
+    </select>
+    <!-- end -->
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.role.dto.SysRoleListDto" id="sysRoleListMap">
+        <id property="id" column="ROLE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="code" column="CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="status" column="STATUS"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="appName" column="appName"/>
+        <result property="roletypeName" column="roletypeName"/>
+    </resultMap>
+
+    <select id="getSysMenuList" resultMap="sysRoleListMap">
+        SELECT B.ROLE_ID, B.NAME,B.CODE,B.PRIORITY,B.CREATE_TIME,B.STATUS,B.DESCRIPTION,
+        GA.NAME as appName, SR.NAME as roletypeName
+        FROM SYS_ROLE B
+        left join BASE_APP GA on B.APP_ID = GA.APP_ID
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+        ORDER BY B.PRIORITY ASC,B.CREATE_TIME DESC
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="baseDictionaryArMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="searchCode"/>
+    </resultMap>
+    <select id="getForSelect" resultMap="baseDictionaryArMap">
+        SELECT NAME as name, ROLE_ID as cddValue
+        FROM SYS_ROLE B where 1=1
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        ORDER BY B.PRIORITY ASC
+    </select>
+
+</mapper>

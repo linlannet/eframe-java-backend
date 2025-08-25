@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-generator - generator代码生成模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.tools.generator.dao.GenTableDao">
+
+    <resultMap type="net.linlan.tools.generator.entity.GenTable" id="genTableMap">
+        <id     property="tableId"        column="TABLE_ID"          />
+        <result property="tableName"      column="TABLE_NAME"        />
+        <result property="tableComment"   column="TABLE_COMMENT"     />
+        <result property="subTableName"   column="SUB_TABLE_NAME"    />
+        <result property="subTableFkName" column="SUB_TABLE_FK_NAME" />
+        <result property="className"      column="CLASS_NAME"        />
+        <result property="tplCategory"    column="TPL_CATEGORY"      />
+        <result property="tplWebType"     column="TPL_WEB_TYPE"      />
+        <result property="packageName"    column="PACKAGE_NAME"      />
+        <result property="moduleName"     column="MODULE_NAME"       />
+        <result property="businessName"   column="BUSINESS_NAME"     />
+        <result property="functionName"   column="FUNCTION_NAME"     />
+        <result property="functionAuthor" column="FUNCTION_AUTHOR"   />
+        <result property="formColNum"     column="FORM_COL_NUM"      />
+        <result property="genType"        column="GEN_TYPE"          />
+        <result property="genPath"        column="GEN_PATH"          />
+        <result property="optionLists"    column="OPTION_LISTS"           />
+        <result property="creatorId"      column="CREATOR_ID"         />
+        <result property="createTime"     column="CREATE_TIME"       />
+        <result property="lastTime"       column="LAST_TIME"       />
+        <result property="description"    column="DESCRIPTION"            />
+        <collection  property="columns"   javaType="java.util.List"  resultMap="genTableColumnMap" />
+    </resultMap>
+
+    <resultMap type="net.linlan.tools.generator.entity.GenTableColumn" id="genTableColumnMap">
+        <id     property="columnId"       column="COLUMN_ID"      />
+        <result property="tableId"        column="TABLE_ID"       />
+        <result property="columnName"     column="COLUMN_NAME"    />
+        <result property="columnComment"  column="COLUMN_COMMENT" />
+        <result property="columnType"     column="COLUMN_TYPE"    />
+        <result property="javaType"       column="JAVA_TYPE"      />
+        <result property="javaField"      column="JAVA_FIELD"     />
+        <result property="isPk"           column="IS_PK"          />
+        <result property="isIncrement"    column="IS_INCREMENT"   />
+        <result property="isRequired"     column="IS_REQUIRED"    />
+        <result property="isInsert"       column="IS_INSERT"      />
+        <result property="isEdit"         column="IS_EDIT"        />
+        <result property="isList"         column="IS_LIST"        />
+        <result property="isQuery"        column="IS_QUERY"       />
+        <result property="queryType"      column="QUERY_TYPE"     />
+        <result property="htmlType"       column="HTML_TYPE"      />
+        <result property="dictType"       column="DICT_TYPE"      />
+        <result property="priority"       column="PRIORITY"           />
+        <result property="creatorId"      column="CREATOR_ID"      />
+        <result property="createTime"     column="CREATE_TIME"    />
+        <result property="lastTime"       column="LAST_TIME"    />
+    </resultMap>
+
+    <sql id="selectGenTableVo">
+        select TABLE_ID, TABLE_NAME, TABLE_COMMENT, SUB_TABLE_NAME, SUB_TABLE_FK_NAME, CLASS_NAME, TPL_CATEGORY, TPL_WEB_TYPE, PACKAGE_NAME, MODULE_NAME, BUSINESS_NAME, FUNCTION_NAME, FUNCTION_AUTHOR, FORM_COL_NUM, GEN_TYPE, GEN_PATH, OPTION_LISTS, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION from GEN_TABLE
+    </sql>
+
+    <select id="selectGenTableList" parameterType="net.linlan.tools.generator.entity.GenTable" resultMap="genTableMap">
+        <include refid="selectGenTableVo"/>
+        <where>
+            <if test="tableName != null and tableName != ''">
+                AND lower(TABLE_NAME) like lower(concat('%', #{tableName}, '%'))
+            </if>
+            <if test="tableComment != null and tableComment != ''">
+                AND lower(TABLE_COMMENT) like lower(concat('%', #{tableComment}, '%'))
+            </if>
+            <if test="params.beginTime != null and params.beginTime != ''">
+                and date_format(create_time,'%Y%m%d') &gt;= date_format(#{params.beginTime},'%Y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''">
+                and date_format(create_time,'%Y%m%d') &lt;= date_format(#{params.endTime},'%Y%m%d')
+            </if>
+        </where>
+    </select>
+
+    <select id="selectDbTableList" parameterType="net.linlan.tools.generator.entity.GenTable" resultMap="genTableMap">
+        select TABLE_NAME, TABLE_COMMENT, CREATE_TIME, UPDATE_TIME from information_schema.tables
+        where table_schema = (select database())
+        AND TABLE_NAME NOT LIKE 'QRTZ\_%' AND TABLE_NAME NOT LIKE 'GEN\_%'
+        AND TABLE_NAME NOT IN (select TABLE_NAME from GEN_TABLE)
+        <if test="tableName != null and tableName != ''">
+            AND lower(TABLE_NAME) like lower(concat('%', #{tableName}, '%'))
+        </if>
+        <if test="tableComment != null and tableComment != ''">
+            AND lower(TABLE_COMMENT) like lower(concat('%', #{tableComment}, '%'))
+        </if>
+        order by CREATE_TIME desc
+    </select>
+
+    <select id="selectDbTablePageDto" parameterType="net.linlan.tools.generator.entity.GenTable" resultMap="genTableMap">
+        select TABLE_NAME, TABLE_COMMENT, CREATE_TIME, UPDATE_TIME from information_schema.tables
+        where table_schema = (select database())
+        AND TABLE_NAME NOT LIKE 'QRTZ\_%' AND TABLE_NAME NOT LIKE 'GEN\_%'
+        AND TABLE_NAME NOT IN (select TABLE_NAME from GEN_TABLE)
+        <if test="tableName != null and tableName != ''">
+            AND lower(TABLE_NAME) like lower(concat('%', #{tableName}, '%'))
+        </if>
+        <if test="tableComment != null and tableComment != ''">
+            AND lower(TABLE_COMMENT) like lower(concat('%', #{tableComment}, '%'))
+        </if>
+        order by CREATE_TIME desc
+    </select>
+
+    <select id="selectDbTableListByNames" resultMap="genTableMap">
+        select TABLE_NAME, TABLE_COMMENT, CREATE_TIME, UPDATE_TIME from information_schema.tables
+        where TABLE_NAME NOT LIKE 'QRTZ\_%' and TABLE_NAME NOT LIKE 'GEN\_%' and table_schema = (select database())
+        and TABLE_NAME in
+        <foreach collection="array" item="name" open="(" separator="," close=")">
+            #{name}
+        </foreach>
+    </select>
+
+    <select id="selectTableByName" parameterType="String" resultMap="genTableMap">
+        select TABLE_NAME, TABLE_COMMENT, CREATE_TIME, UPDATE_TIME from information_schema.tables
+        where TABLE_COMMENT <![CDATA[ <> ]]> '' and table_schema = (select database())
+          and TABLE_NAME = #{tableName}
+    </select>
+
+    <select id="selectGenTableById" parameterType="Long" resultMap="genTableMap">
+        SELECT t.TABLE_ID, t.TABLE_NAME, t.TABLE_COMMENT, t.SUB_TABLE_NAME, t.SUB_TABLE_FK_NAME, t.CLASS_NAME, t.TPL_CATEGORY, t.TPL_WEB_TYPE, t.PACKAGE_NAME, t.MODULE_NAME, t.BUSINESS_NAME, t.FUNCTION_NAME, t.FUNCTION_AUTHOR, t.FORM_COL_NUM, t.GEN_TYPE, t.GEN_PATH, t.OPTION_LISTS, t.DESCRIPTION,
+               c.COLUMN_ID, c.COLUMN_NAME, c.COLUMN_COMMENT, c.COLUMN_TYPE, c.JAVA_TYPE, c.JAVA_FIELD, c.IS_PK, c.IS_INCREMENT, c.IS_REQUIRED, c.IS_INSERT, c.IS_EDIT, c.IS_LIST, c.IS_QUERY, c.QUERY_TYPE, c.HTML_TYPE, c.DICT_TYPE, c.PRIORITY
+        FROM GEN_TABLE t
+                 LEFT JOIN GEN_TABLE_COLUMN c ON t.TABLE_ID = c.TABLE_ID
+        where t.TABLE_ID = #{tableId} order by c.PRIORITY
+    </select>
+
+    <select id="selectGenTableByName" parameterType="String" resultMap="genTableMap">
+        SELECT t.TABLE_ID, t.TABLE_NAME, t.TABLE_COMMENT, t.SUB_TABLE_NAME, t.SUB_TABLE_FK_NAME, t.CLASS_NAME, t.TPL_CATEGORY, t.TPL_WEB_TYPE, t.PACKAGE_NAME, t.MODULE_NAME, t.BUSINESS_NAME, t.FUNCTION_NAME, t.FUNCTION_AUTHOR, t.FORM_COL_NUM, t.GEN_TYPE, t.GEN_PATH, t.OPTION_LISTS, t.DESCRIPTION,
+               c.COLUMN_ID, c.COLUMN_NAME, c.COLUMN_COMMENT, c.COLUMN_TYPE, c.JAVA_TYPE, c.JAVA_FIELD, c.IS_PK, c.IS_INCREMENT, c.IS_REQUIRED, c.IS_INSERT, c.IS_EDIT, c.IS_LIST, c.IS_QUERY, c.QUERY_TYPE, c.HTML_TYPE, c.DICT_TYPE, c.PRIORITY
+        FROM GEN_TABLE t
+                 LEFT JOIN GEN_TABLE_COLUMN c ON t.TABLE_ID = c.TABLE_ID
+        where t.TABLE_NAME = #{tableName} order by c.PRIORITY
+    </select>
+
+    <select id="selectGenTableAll" parameterType="String" resultMap="genTableMap">
+        SELECT t.TABLE_ID, t.TABLE_NAME, t.TABLE_COMMENT, t.SUB_TABLE_NAME, t.SUB_TABLE_FK_NAME, t.CLASS_NAME, t.TPL_CATEGORY, t.TPL_WEB_TYPE, t.PACKAGE_NAME, t.MODULE_NAME, t.BUSINESS_NAME, t.FUNCTION_NAME, t.FUNCTION_AUTHOR, t.FORM_COL_NUM, t.GEN_TYPE, t.GEN_PATH, t.OPTION_LISTS, t.DESCRIPTION,
+               c.COLUMN_ID, c.COLUMN_NAME, c.COLUMN_COMMENT, c.COLUMN_TYPE, c.JAVA_TYPE, c.JAVA_FIELD, c.IS_PK, c.IS_INCREMENT, c.IS_REQUIRED, c.IS_INSERT, c.IS_EDIT, c.IS_LIST, c.IS_QUERY, c.QUERY_TYPE, c.HTML_TYPE, c.DICT_TYPE, c.PRIORITY
+        FROM GEN_TABLE t
+                 LEFT JOIN GEN_TABLE_COLUMN c ON t.TABLE_ID = c.TABLE_ID
+        order by c.PRIORITY
+    </select>
+
+    <insert id="insertGenTable" parameterType="net.linlan.tools.generator.entity.GenTable" useGeneratedKeys="true" keyProperty="tableId">
+        insert into GEN_TABLE (
+        <if test="tableId != null">TABLE_ID,</if>
+        <if test="tableName != null">TABLE_NAME,</if>
+        <if test="tableComment != null and tableComment != ''">TABLE_COMMENT,</if>
+        <if test="className != null and className != ''">CLASS_NAME,</if>
+        <if test="tplCategory != null and tplCategory != ''">TPL_CATEGORY,</if>
+        <if test="tplWebType != null and tplWebType != ''">TPL_WEB_TYPE,</if>
+        <if test="packageName != null and packageName != ''">PACKAGE_NAME,</if>
+        <if test="moduleName != null and moduleName != ''">MODULE_NAME,</if>
+        <if test="businessName != null and businessName != ''">BUSINESS_NAME,</if>
+        <if test="functionName != null and functionName != ''">FUNCTION_NAME,</if>
+        <if test="functionAuthor != null and functionAuthor != ''">FUNCTION_AUTHOR,</if>
+        <if test="formColNum != null and formColNum != ''">FORM_COL_NUM,</if>
+        <if test="genType != null and genType != ''">GEN_TYPE,</if>
+        <if test="genPath != null and genPath != ''">GEN_PATH,</if>
+        <if test="description != null and description != ''">DESCRIPTION,</if>
+        <if test="creatorId != null and creatorId != ''">CREATOR_ID,</if>
+        CREATE_TIME
+        )values(
+        <if test="tableId != null">#{tableId},</if>
+        <if test="tableName != null">#{tableName},</if>
+        <if test="tableComment != null and tableComment != ''">#{tableComment},</if>
+        <if test="className != null and className != ''">#{className},</if>
+        <if test="tplCategory != null and tplCategory != ''">#{tplCategory},</if>
+        <if test="packageName != null and packageName != ''">#{packageName},</if>
+        <if test="moduleName != null and moduleName != ''">#{moduleName},</if>
+        <if test="businessName != null and businessName != ''">#{businessName},</if>
+        <if test="functionName != null and functionName != ''">#{functionName},</if>
+        <if test="functionAuthor != null and functionAuthor != ''">#{functionAuthor},</if>
+        <if test="formColNum != null and formColNum != ''">#{formColNum},</if>
+        <if test="genType != null and genType != ''">#{genType},</if>
+        <if test="genPath != null and genPath != ''">#{genPath},</if>
+        <if test="description != null and description != ''">#{description},</if>
+        <if test="creatorId != null and creatorId != ''">#{creatorId},</if>
+        sysdate()
+        )
+    </insert>
+
+    <update id="createTable">
+        ${sql}
+    </update>
+
+    <update id="updateGenTable" parameterType="net.linlan.tools.generator.entity.GenTable">
+        update GEN_TABLE
+        <set>
+            <if test="tableName != null">TABLE_NAME = #{tableName},</if>
+            <if test="tableComment != null and tableComment != ''">TABLE_COMMENT = #{tableComment},</if>
+            <if test="subTableName != null">SUB_TABLE_NAME = #{subTableName},</if>
+            <if test="subTableFkName != null">SUB_TABLE_FK_NAME = #{subTableFkName},</if>
+            <if test="className != null and className != ''">CLASS_NAME = #{className},</if>
+            <if test="functionAuthor != null and functionAuthor != ''">FUNCTION_AUTHOR = #{functionAuthor},</if>
+            <if test="formColNum != null and formColNum != ''">FORM_COL_NUM = #{formColNum},</if>
+            <if test="genType != null and genType != ''">GEN_TYPE = #{genType},</if>
+            <if test="genPath != null and genPath != ''">GEN_PATH = #{genPath},</if>
+            <if test="tplCategory != null and tplCategory != ''">TPL_CATEGORY = #{tplCategory},</if>
+            <if test="tplWebType != null and tplWebType != ''">TPL_WEB_TYPE = #{tplWebType},</if>
+            <if test="packageName != null and packageName != ''">PACKAGE_NAME = #{packageName},</if>
+            <if test="moduleName != null and moduleName != ''">MODULE_NAME = #{moduleName},</if>
+            <if test="businessName != null and businessName != ''">BUSINESS_NAME = #{businessName},</if>
+            <if test="functionName != null and functionName != ''">FUNCTION_NAME = #{functionName},</if>
+            <if test="optionLists != null and optionLists != ''">OPTION_LISTS = #{optionLists},</if>
+            <if test="description != null">DESCRIPTION = #{description},</if>
+            LAST_TIME = sysdate()
+        </set>
+        where TABLE_ID = #{tableId}
+    </update>
+
+    <delete id="deleteGenTableByIds" parameterType="Long">
+        delete from GEN_TABLE where TABLE_ID in
+        <foreach collection="array" item="tableId" open="(" separator="," close=")">
+            #{tableId}
+        </foreach>
+    </delete>
+
+</mapper>

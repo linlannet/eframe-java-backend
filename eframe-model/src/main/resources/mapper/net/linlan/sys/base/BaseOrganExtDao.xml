@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseOrganExtDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseOrganExt" id="baseOrganExtMap">
+        <id property="id" column="ORGAN_ID"/>
+        <result property="namePy" column="NAME_PY"/>
+        <result property="sname" column="SNAME"/>
+        <result property="nameEn" column="NAME_EN"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="establishDate" column="ESTABLISH_DATE"/>
+        <result property="keywords" column="KEYWORDS"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="web" column="WEB"/>
+        <result property="fax" column="FAX"/>
+        <result property="tel" column="TEL"/>
+        <result property="contactName" column="CONTACT_NAME"/>
+        <result property="contactMobile" column="CONTACT_MOBILE"/>
+        <result property="contactEmail" column="CONTACT_EMAIL"/>
+        <result property="postCode" column="POST_CODE"/>
+        <result property="address" column="ADDRESS"/>
+        <result property="unitLogo" column="UNIT_LOGO"/>
+        <result property="unitQrcode" column="UNIT_QRCODE"/>
+        <result property="bgdSound" column="BGD_SOUND"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseOrganExtMap">
+        SELECT
+        ORGAN_ID, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, ESTABLISH_DATE, KEYWORDS, IMAGE_PATH, WEB, FAX, TEL, CONTACT_NAME, CONTACT_MOBILE, CONTACT_EMAIL, POST_CODE, ADDRESS, UNIT_LOGO, UNIT_QRCODE, BGD_SOUND, DESCRIPTION
+        FROM BASE_ORGAN_EXT
+        WHERE ORGAN_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseOrganExtMap">
+        SELECT
+        B.ORGAN_ID, B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.ESTABLISH_DATE, B.KEYWORDS, B.IMAGE_PATH, B.WEB, B.FAX, B.TEL, B.CONTACT_NAME, B.CONTACT_MOBILE, B.CONTACT_EMAIL, B.POST_CODE, B.ADDRESS, B.UNIT_LOGO, B.UNIT_QRCODE, B.BGD_SOUND, B.DESCRIPTION
+        FROM BASE_ORGAN_EXT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY ORGAN_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY ORGAN_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="namePy != null and namePy != ''">
+            and B.NAME_PY = #{namePy}
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME = #{sname}
+        </if>
+        <if test="nameEn != null and nameEn != ''">
+            and B.NAME_EN = #{nameEn}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            and B.SEARCH_CODE = #{searchCode}
+        </if>
+        <if test="establishDate != null and establishDate != ''">
+            and B.ESTABLISH_DATE = #{establishDate}
+        </if>
+        <if test="keywords != null and keywords != ''">
+            and B.KEYWORDS = #{keywords}
+        </if>
+        <if test="web != null and web != ''">
+            and B.WEB = #{web}
+        </if>
+        <if test="fax != null and fax != ''">
+            and B.FAX = #{fax}
+        </if>
+        <if test="tel != null and tel != ''">
+            and B.TEL = #{tel}
+        </if>
+        <if test="contactName != null and contactName != ''">
+            and B.CONTACT_NAME = #{contactName}
+        </if>
+        <if test="contactMobile != null and contactMobile != ''">
+            and B.CONTACT_MOBILE = #{contactMobile}
+        </if>
+        <if test="postCode != null and postCode != ''">
+            and B.POST_CODE = #{postCode}
+        </if>
+        <if test="address != null and address != ''">
+            and B.ADDRESS = #{address}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <!--汇商码特殊业务查询-->
+        <if test="'HSM'==querySource and keywords != null and keywords.trim() != ''">
+            AND instr(#{keywords}, B.KEYWORDS)>0
+        </if>
+        <if test="ids != null ">
+            and B.ORGAN_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseOrganExt">
+        INSERT INTO BASE_ORGAN_EXT
+        (
+            ORGAN_ID, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, ESTABLISH_DATE, KEYWORDS, IMAGE_PATH, WEB, FAX, TEL, CONTACT_NAME, CONTACT_MOBILE, CONTACT_EMAIL, POST_CODE, ADDRESS, UNIT_LOGO, UNIT_QRCODE, BGD_SOUND, DESCRIPTION
+        )
+        VALUES
+        (
+            #{id}, #{namePy}, #{sname}, #{nameEn}, #{searchCode}, #{establishDate}, #{keywords}, #{imagePath}, #{web}, #{fax}, #{tel}, #{contactName}, #{contactMobile}, #{contactEmail}, #{postCode}, #{address}, #{unitLogo}, #{unitQrcode}, #{bgdSound}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_ORGAN_EXT
+                (
+                ORGAN_ID, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, ESTABLISH_DATE, KEYWORDS, IMAGE_PATH, WEB, FAX, TEL, CONTACT_NAME, CONTACT_MOBILE, CONTACT_EMAIL, POST_CODE, ADDRESS, UNIT_LOGO, UNIT_QRCODE, BGD_SOUND, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.establishDate}, #{item.keywords}, #{item.imagePath}, #{item.web}, #{item.fax}, #{item.tel}, #{item.contactName}, #{item.contactMobile}, #{item.contactEmail}, #{item.postCode}, #{item.address}, #{item.unitLogo}, #{item.unitQrcode}, #{item.bgdSound}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_ORGAN_EXT
+                    (
+                    ORGAN_ID, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, ESTABLISH_DATE, KEYWORDS, IMAGE_PATH, WEB, FAX, TEL, CONTACT_NAME, CONTACT_MOBILE, CONTACT_EMAIL, POST_CODE, ADDRESS, UNIT_LOGO, UNIT_QRCODE, BGD_SOUND, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.establishDate}, #{item.keywords}, #{item.imagePath}, #{item.web}, #{item.fax}, #{item.tel}, #{item.contactName}, #{item.contactMobile}, #{item.contactEmail}, #{item.postCode}, #{item.address}, #{item.unitLogo}, #{item.unitQrcode}, #{item.bgdSound}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseOrganExt">
+        UPDATE BASE_ORGAN_EXT
+        <set>
+            <if test="namePy != null">NAME_PY = #{namePy}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="nameEn != null">NAME_EN = #{nameEn}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="establishDate != null">ESTABLISH_DATE = #{establishDate}, </if>
+            <if test="keywords != null">KEYWORDS = #{keywords}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="web != null">WEB = #{web}, </if>
+            <if test="fax != null">FAX = #{fax}, </if>
+            <if test="tel != null">TEL = #{tel}, </if>
+            <if test="contactName != null">CONTACT_NAME = #{contactName}, </if>
+            <if test="contactMobile != null">CONTACT_MOBILE = #{contactMobile}, </if>
+            <if test="contactEmail != null">CONTACT_EMAIL = #{contactEmail}, </if>
+            <if test="postCode != null">POST_CODE = #{postCode}, </if>
+            <if test="address != null">ADDRESS = #{address}, </if>
+            <if test="unitLogo != null">UNIT_LOGO = #{unitLogo}, </if>
+            <if test="unitQrcode != null">UNIT_QRCODE = #{unitQrcode}, </if>
+            <if test="bgdSound != null">BGD_SOUND = #{bgdSound}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE ORGAN_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM BASE_ORGAN_EXT
+        WHERE ORGAN_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM BASE_ORGAN_EXT
+        WHERE ORGAN_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_ORGAN_EXT B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseOrganExtDto" extends="baseOrganExtMap" id="baseOrganExtDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseOrganExtDtoMap">
+        SELECT
+        B.ORGAN_ID, B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.ESTABLISH_DATE, B.KEYWORDS, B.IMAGE_PATH, B.WEB, B.FAX, B.TEL, B.CONTACT_NAME, B.CONTACT_MOBILE, B.CONTACT_EMAIL, B.POST_CODE, B.ADDRESS, B.UNIT_LOGO, B.UNIT_QRCODE, B.BGD_SOUND, B.DESCRIPTION
+        FROM BASE_ORGAN_EXT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseOrganExtDtoMap">
+        SELECT
+        ORGAN_ID, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, ESTABLISH_DATE, KEYWORDS, IMAGE_PATH, WEB, FAX, TEL, CONTACT_NAME, CONTACT_MOBILE, CONTACT_EMAIL, POST_CODE, ADDRESS, UNIT_LOGO, UNIT_QRCODE, BGD_SOUND, DESCRIPTION
+        FROM BASE_ORGAN_EXT
+        WHERE ORGAN_ID = #{value}
+    </select>
+
+
+</mapper>

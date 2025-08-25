@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.comm.dao.CommFlowDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.comm.entity.CommFlow" id="commFlowMap">
+        <id property="id" column="FLOW_ID"/>
+        <result property="foreignType" column="FOREIGN_TYPE"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="objUserId" column="OBJ_USER_ID"/>
+        <result property="objOrganId" column="OBJ_ORGAN_ID"/>
+        <result property="objConnId" column="OBJ_CONN_ID"/>
+        <result property="flowType" column="FLOW_TYPE"/>
+        <result property="assignFlag" column="ASSIGN_FLAG"/>
+        <result property="currStatus" column="CURR_STATUS"/>
+        <result property="currName" column="CURR_NAME"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opUserName" column="OP_USER_NAME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+        <result property="opInfo" column="OP_INFO"/>
+        <result property="opBak1" column="OP_BAK1"/>
+        <result property="nextStatus" column="NEXT_STATUS"/>
+        <result property="nextName" column="NEXT_NAME"/>
+        <result property="nextOrganId" column="NEXT_ORGAN_ID"/>
+        <result property="nextOrganName" column="NEXT_ORGAN_NAME"/>
+        <result property="nextUserId" column="NEXT_USER_ID"/>
+        <result property="nextUserName" column="NEXT_USER_NAME"/>
+        <result property="isSign" column="IS_SIGN"/>
+        <result property="signTime" column="SIGN_TIME"/>
+        <result property="receiveDeadline" column="RECEIVE_DEADLINE"/>
+        <result property="receiveTime" column="RECEIVE_TIME"/>
+        <result property="receiveContent" column="RECEIVE_CONTENT"/>
+        <result property="receiveResult" column="RECEIVE_RESULT"/>
+        <result property="receiveBak1" column="RECEIVE_BAK1"/>
+        <result property="isOvertime" column="IS_OVERTIME"/>
+        <result property="overTime" column="OVER_TIME"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="commFlowMap">
+        SELECT
+        FLOW_ID, FOREIGN_TYPE, FOREIGN_ID, OBJ_USER_ID, OBJ_ORGAN_ID, OBJ_CONN_ID, FLOW_TYPE, ASSIGN_FLAG, CURR_STATUS, CURR_NAME, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, OP_INFO, OP_BAK1, NEXT_STATUS, NEXT_NAME, NEXT_ORGAN_ID, NEXT_ORGAN_NAME, NEXT_USER_ID, NEXT_USER_NAME, IS_SIGN, SIGN_TIME, RECEIVE_DEADLINE, RECEIVE_TIME, RECEIVE_CONTENT, RECEIVE_RESULT, RECEIVE_BAK1, IS_OVERTIME, OVER_TIME, CREATE_TIME, DESCRIPTION
+        FROM COMM_FLOW
+        WHERE FLOW_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="commFlowMap">
+        SELECT
+        B.FLOW_ID, B.FOREIGN_TYPE, B.FOREIGN_ID, B.OBJ_USER_ID, B.OBJ_ORGAN_ID, B.OBJ_CONN_ID, B.FLOW_TYPE, B.ASSIGN_FLAG, B.CURR_STATUS, B.CURR_NAME, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.OP_INFO, B.OP_BAK1, B.NEXT_STATUS, B.NEXT_NAME, B.NEXT_ORGAN_ID, B.NEXT_ORGAN_NAME, B.NEXT_USER_ID, B.NEXT_USER_NAME, B.IS_SIGN, B.SIGN_TIME, B.RECEIVE_DEADLINE, B.RECEIVE_TIME, B.RECEIVE_CONTENT, B.RECEIVE_RESULT, B.RECEIVE_BAK1, B.IS_OVERTIME, B.OVER_TIME, B.CREATE_TIME, B.DESCRIPTION
+        FROM COMM_FLOW B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY FLOW_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY FLOW_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="foreignType != null and foreignType != ''">
+            and B.FOREIGN_TYPE = #{foreignType}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="objUserId != null and objUserId != ''">
+            and B.OBJ_USER_ID = #{objUserId}
+        </if>
+        <if test="objOrganId != null and objOrganId != ''">
+            and B.OBJ_ORGAN_ID = #{objOrganId}
+        </if>
+        <if test="objConnId != null and objConnId != ''">
+            and B.OBJ_CONN_ID = #{objConnId}
+        </if>
+        <if test="flowType != null and flowType != ''">
+            and B.FLOW_TYPE = #{flowType}
+        </if>
+        <if test="assignFlag != null and assignFlag != ''">
+            and B.ASSIGN_FLAG = #{assignFlag}
+        </if>
+        <if test="currStatus != null and currStatus != ''">
+            and B.CURR_STATUS = #{currStatus}
+        </if>
+        <if test="currName != null and currName != ''">
+            and B.CURR_NAME = #{currName}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opUserName != null and opUserName != ''">
+            and B.OP_USER_NAME = #{opUserName}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opOrganName != null and opOrganName != ''">
+            and B.OP_ORGAN_NAME = #{opOrganName}
+        </if>
+        <if test="opInfo != null and opInfo != ''">
+            and B.OP_INFO = #{opInfo}
+        </if>
+        <if test="opBak1 != null and opBak1 != ''">
+            and B.OP_BAK1 = #{opBak1}
+        </if>
+        <if test="nextStatus != null and nextStatus != ''">
+            and B.NEXT_STATUS = #{nextStatus}
+        </if>
+        <if test="nextName != null and nextName != ''">
+            and B.NEXT_NAME = #{nextName}
+        </if>
+        <if test="nextOrganId != null and nextOrganId != ''">
+            and B.NEXT_ORGAN_ID = #{nextOrganId}
+        </if>
+        <if test="nextOrganName != null and nextOrganName != ''">
+            and B.NEXT_ORGAN_NAME = #{nextOrganName}
+        </if>
+        <if test="nextUserId != null and nextUserId != ''">
+            and B.NEXT_USER_ID = #{nextUserId}
+        </if>
+        <if test="nextUserName != null and nextUserName != ''">
+            and B.NEXT_USER_NAME = #{nextUserName}
+        </if>
+        <if test="isSign != null and isSign != ''">
+            and B.IS_SIGN = #{isSign}
+        </if>
+        <if test="signTime != null and signTime != ''">
+            and B.SIGN_TIME = #{signTime}
+        </if>
+        <if test="receiveDeadline != null and receiveDeadline != ''">
+            and B.RECEIVE_DEADLINE = #{receiveDeadline}
+        </if>
+        <if test="receiveTime != null and receiveTime != ''">
+            and B.RECEIVE_TIME = #{receiveTime}
+        </if>
+        <if test="receiveContent != null and receiveContent != ''">
+            and B.RECEIVE_CONTENT = #{receiveContent}
+        </if>
+        <if test="receiveResult != null and receiveResult != ''">
+            and B.RECEIVE_RESULT = #{receiveResult}
+        </if>
+        <if test="receiveBak1 != null and receiveBak1 != ''">
+            and B.RECEIVE_BAK1 = #{receiveBak1}
+        </if>
+        <if test="isOvertime != null and isOvertime != ''">
+            and B.IS_OVERTIME = #{isOvertime}
+        </if>
+        <if test="overTime != null and overTime != ''">
+            and B.OVER_TIME = #{overTime}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.comm.entity.CommFlow">
+        INSERT INTO COMM_FLOW
+        (
+        FLOW_ID, FOREIGN_TYPE, FOREIGN_ID, OBJ_USER_ID, OBJ_ORGAN_ID, OBJ_CONN_ID, FLOW_TYPE, ASSIGN_FLAG, CURR_STATUS, CURR_NAME, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, OP_INFO, OP_BAK1, NEXT_STATUS, NEXT_NAME, NEXT_ORGAN_ID, NEXT_ORGAN_NAME, NEXT_USER_ID, NEXT_USER_NAME, IS_SIGN, SIGN_TIME, RECEIVE_DEADLINE, RECEIVE_TIME, RECEIVE_CONTENT, RECEIVE_RESULT, RECEIVE_BAK1, IS_OVERTIME, OVER_TIME, CREATE_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{foreignType}, #{foreignId}, #{objUserId}, #{objOrganId}, #{objConnId}, #{flowType}, #{assignFlag}, #{currStatus}, #{currName}, #{opTime}, #{opUserId}, #{opUserName}, #{opOrganId}, #{opOrganName}, #{opInfo}, #{opBak1}, #{nextStatus}, #{nextName}, #{nextOrganId}, #{nextOrganName}, #{nextUserId}, #{nextUserName}, #{isSign}, #{signTime}, #{receiveDeadline}, #{receiveTime}, #{receiveContent}, #{receiveResult}, #{receiveBak1}, #{isOvertime}, #{overTime}, #{createTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO COMM_FLOW
+                (
+                FLOW_ID, FOREIGN_TYPE, FOREIGN_ID, OBJ_USER_ID, OBJ_ORGAN_ID, OBJ_CONN_ID, FLOW_TYPE, ASSIGN_FLAG, CURR_STATUS, CURR_NAME, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, OP_INFO, OP_BAK1, NEXT_STATUS, NEXT_NAME, NEXT_ORGAN_ID, NEXT_ORGAN_NAME, NEXT_USER_ID, NEXT_USER_NAME, IS_SIGN, SIGN_TIME, RECEIVE_DEADLINE, RECEIVE_TIME, RECEIVE_CONTENT, RECEIVE_RESULT, RECEIVE_BAK1, IS_OVERTIME, OVER_TIME, CREATE_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.foreignType}, #{item.foreignId}, #{item.objUserId}, #{item.objOrganId}, #{item.objConnId}, #{item.flowType}, #{item.assignFlag}, #{item.currStatus}, #{item.currName}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.opInfo}, #{item.opBak1}, #{item.nextStatus}, #{item.nextName}, #{item.nextOrganId}, #{item.nextOrganName}, #{item.nextUserId}, #{item.nextUserName}, #{item.isSign}, #{item.signTime}, #{item.receiveDeadline}, #{item.receiveTime}, #{item.receiveContent}, #{item.receiveResult}, #{item.receiveBak1}, #{item.isOvertime}, #{item.overTime}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO COMM_FLOW
+                    (
+                    FLOW_ID, FOREIGN_TYPE, FOREIGN_ID, OBJ_USER_ID, OBJ_ORGAN_ID, OBJ_CONN_ID, FLOW_TYPE, ASSIGN_FLAG, CURR_STATUS, CURR_NAME, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, OP_INFO, OP_BAK1, NEXT_STATUS, NEXT_NAME, NEXT_ORGAN_ID, NEXT_ORGAN_NAME, NEXT_USER_ID, NEXT_USER_NAME, IS_SIGN, SIGN_TIME, RECEIVE_DEADLINE, RECEIVE_TIME, RECEIVE_CONTENT, RECEIVE_RESULT, RECEIVE_BAK1, IS_OVERTIME, OVER_TIME, CREATE_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.foreignType}, #{item.foreignId}, #{item.objUserId}, #{item.objOrganId}, #{item.objConnId}, #{item.flowType}, #{item.assignFlag}, #{item.currStatus}, #{item.currName}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.opInfo}, #{item.opBak1}, #{item.nextStatus}, #{item.nextName}, #{item.nextOrganId}, #{item.nextOrganName}, #{item.nextUserId}, #{item.nextUserName}, #{item.isSign}, #{item.signTime}, #{item.receiveDeadline}, #{item.receiveTime}, #{item.receiveContent}, #{item.receiveResult}, #{item.receiveBak1}, #{item.isOvertime}, #{item.overTime}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.comm.entity.CommFlow">
+        UPDATE COMM_FLOW
+        <set>
+            <if test="foreignType != null">FOREIGN_TYPE = #{foreignType}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="objUserId != null">OBJ_USER_ID = #{objUserId}, </if>
+            <if test="objOrganId != null">OBJ_ORGAN_ID = #{objOrganId}, </if>
+            <if test="objConnId != null">OBJ_CONN_ID = #{objConnId}, </if>
+            <if test="flowType != null">FLOW_TYPE = #{flowType}, </if>
+            <if test="assignFlag != null">ASSIGN_FLAG = #{assignFlag}, </if>
+            <if test="currStatus != null">CURR_STATUS = #{currStatus}, </if>
+            <if test="currName != null">CURR_NAME = #{currName}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opUserName != null">OP_USER_NAME = #{opUserName}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opOrganName != null">OP_ORGAN_NAME = #{opOrganName}, </if>
+            <if test="opInfo != null">OP_INFO = #{opInfo}, </if>
+            <if test="opBak1 != null">OP_BAK1 = #{opBak1}, </if>
+            <if test="nextStatus != null">NEXT_STATUS = #{nextStatus}, </if>
+            <if test="nextName != null">NEXT_NAME = #{nextName}, </if>
+            <if test="nextOrganId != null">NEXT_ORGAN_ID = #{nextOrganId}, </if>
+            <if test="nextOrganName != null">NEXT_ORGAN_NAME = #{nextOrganName}, </if>
+            <if test="nextUserId != null">NEXT_USER_ID = #{nextUserId}, </if>
+            <if test="nextUserName != null">NEXT_USER_NAME = #{nextUserName}, </if>
+            <if test="isSign != null">IS_SIGN = #{isSign}, </if>
+            <if test="signTime != null">SIGN_TIME = #{signTime}, </if>
+            <if test="receiveDeadline != null">RECEIVE_DEADLINE = #{receiveDeadline}, </if>
+            <if test="receiveTime != null">RECEIVE_TIME = #{receiveTime}, </if>
+            <if test="receiveContent != null">RECEIVE_CONTENT = #{receiveContent}, </if>
+            <if test="receiveResult != null">RECEIVE_RESULT = #{receiveResult}, </if>
+            <if test="receiveBak1 != null">RECEIVE_BAK1 = #{receiveBak1}, </if>
+            <if test="isOvertime != null">IS_OVERTIME = #{isOvertime}, </if>
+            <if test="overTime != null">OVER_TIME = #{overTime}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE FLOW_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM COMM_FLOW
+        WHERE FLOW_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM COMM_FLOW
+        WHERE FLOW_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM COMM_FLOW B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.comm.dto.CommFlowDto" extends="commFlowMap" id="commFlowDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="commFlowDtoMap">
+        SELECT
+B.FLOW_ID, B.FOREIGN_TYPE, B.FOREIGN_ID, B.OBJ_USER_ID, B.OBJ_ORGAN_ID, B.OBJ_CONN_ID, B.FLOW_TYPE, B.ASSIGN_FLAG, B.CURR_STATUS, B.CURR_NAME, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.OP_INFO, B.OP_BAK1, B.NEXT_STATUS, B.NEXT_NAME, B.NEXT_ORGAN_ID, B.NEXT_ORGAN_NAME, B.NEXT_USER_ID, B.NEXT_USER_NAME, B.IS_SIGN, B.SIGN_TIME, B.RECEIVE_DEADLINE, B.RECEIVE_TIME, B.RECEIVE_CONTENT, B.RECEIVE_RESULT, B.RECEIVE_BAK1, B.IS_OVERTIME, B.OVER_TIME, B.CREATE_TIME, B.DESCRIPTION
+        FROM COMM_FLOW B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="commFlowDtoMap">
+        SELECT
+FLOW_ID, FOREIGN_TYPE, FOREIGN_ID, OBJ_USER_ID, OBJ_ORGAN_ID, OBJ_CONN_ID, FLOW_TYPE, ASSIGN_FLAG, CURR_STATUS, CURR_NAME, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, OP_INFO, OP_BAK1, NEXT_STATUS, NEXT_NAME, NEXT_ORGAN_ID, NEXT_ORGAN_NAME, NEXT_USER_ID, NEXT_USER_NAME, IS_SIGN, SIGN_TIME, RECEIVE_DEADLINE, RECEIVE_TIME, RECEIVE_CONTENT, RECEIVE_RESULT, RECEIVE_BAK1, IS_OVERTIME, OVER_TIME, CREATE_TIME, DESCRIPTION
+        FROM COMM_FLOW
+        WHERE FLOW_ID = #{value}
+    </select>
+
+    <delete id="deleteByForeignId">
+        DELETE FROM COMM_FLOW
+        where FOREIGN_ID = #{foreignId}
+    </delete>
+
+    <select id="getZblpTaskTimes" resultMap="commFlowMap">
+        SELECT STI.SCHEDULE_ID as FOREIGN_ID,SIGN_TIME,OVER_TIME FROM COMM_FLOW B
+        LEFT JOIN TASK_INFO STI ON B.FOREIGN_ID = STI.TASK_ID
+        WHERE STI.STATUS != '70' AND  STI.DESCRIPTION = #{idCard}
+        ORDER BY B.SIGN_TIME
+    </select>
+
+</mapper>

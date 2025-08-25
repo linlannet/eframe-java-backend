@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.role.dao.SysPositionDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.role.entity.SysPosition" id="sysPositionMap">
+        <id property="id" column="POSITION_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="postypeId" column="POSTYPE_ID"/>
+        <result property="roletypeId" column="ROLETYPE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="code" column="CODE"/>
+        <result property="oname" column="ONAME"/>
+        <result property="posFunction" column="POS_FUNCTION"/>
+        <result property="posRank" column="POS_RANK"/>
+        <result property="posType" column="POS_TYPE"/>
+        <result property="editorType" column="EDITOR_TYPE"/>
+        <result property="isEditorCreate" column="IS_EDITOR_CREATE"/>
+        <result property="status" column="POS_NATURE"/>
+        <result property="isPub" column="IS_PUB"/>
+        <result property="isAgent" column="IS_AGENT"/>
+        <result property="isLeader" column="IS_LEADER"/>
+        <result property="leaderId" column="LEADER_ID"/>
+        <result property="manageDeptids" column="MANAGE_DEPTIDS"/>
+        <result property="isBigContact" column="IS_BIG_CONTACT"/>
+        <result property="isSmallContact" column="IS_SMALL_CONTACT"/>
+        <result property="mobilePhone" column="MOBILE_PHONE"/>
+        <result property="officePhone" column="OFFICE_PHONE"/>
+        <result property="buildingId" column="BUILDING_ID"/>
+        <result property="roomNo" column="ROOM_NO"/>
+        <result property="extQmType" column="EXT_QM_TYPE"/>
+        <result property="extQmTypePhoto" column="EXT_QM_TYPE_PHOTO"/>
+        <result property="extPosName" column="EXT_POS_NAME"/>
+        <result property="extOrganName" column="EXT_ORGAN_NAME"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="priorityInOrgan" column="PRIORITY_IN_ORGAN"/>
+        <result property="priorityInDomain" column="PRIORITY_IN_DOMAIN"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updaterId" column="UPDATER_ID"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="remark" column="REMARK"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="sysPositionMap">
+        SELECT
+        POSITION_ID, PARENT_ID, POSTYPE_ID, ROLETYPE_ID, NAME, SNAME, CODE, ONAME, POS_FUNCTION, POS_RANK, POS_TYPE, EDITOR_TYPE, IS_EDITOR_CREATE, POS_NATURE, IS_PUB, IS_AGENT, IS_LEADER, LEADER_ID, MANAGE_DEPTIDS, IS_BIG_CONTACT, IS_SMALL_CONTACT, MOBILE_PHONE, OFFICE_PHONE, BUILDING_ID, ROOM_NO, EXT_QM_TYPE, EXT_QM_TYPE_PHOTO, EXT_POS_NAME, EXT_ORGAN_NAME, PRIORITY, PRIORITY_IN_ORGAN, PRIORITY_IN_DOMAIN, CREATOR_ID, CREATE_TIME, UPDATER_ID, UPDATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, REMARK
+        FROM SYS_POSITION
+        WHERE POSITION_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="sysPositionMap">
+        SELECT
+        B.POSITION_ID, B.PARENT_ID, B.POSTYPE_ID, B.ROLETYPE_ID, B.NAME, B.SNAME, B.CODE, B.ONAME, B.POS_FUNCTION, B.POS_RANK, B.POS_TYPE, B.EDITOR_TYPE, B.IS_EDITOR_CREATE, B.POS_NATURE, B.IS_PUB, B.IS_AGENT, B.IS_LEADER, B.LEADER_ID, B.MANAGE_DEPTIDS, B.IS_BIG_CONTACT, B.IS_SMALL_CONTACT, B.MOBILE_PHONE, B.OFFICE_PHONE, B.BUILDING_ID, B.ROOM_NO, B.EXT_QM_TYPE, B.EXT_QM_TYPE_PHOTO, B.EXT_POS_NAME, B.EXT_ORGAN_NAME, B.PRIORITY, B.PRIORITY_IN_ORGAN, B.PRIORITY_IN_DOMAIN, B.CREATOR_ID, B.CREATE_TIME, B.UPDATER_ID, B.UPDATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.REMARK
+        FROM SYS_POSITION B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY PRIORITY ASC
+            </when>
+            <otherwise>
+                ORDER BY PRIORITY DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="parentId != null and parentId != ''">
+            and B.PARENT_ID = #{parentId}
+        </if>
+        <if test="postypeId != null and postypeId != ''">
+            and B.POSTYPE_ID = #{postypeId}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            and B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <if test="posFunction != null and posFunction != ''">
+            and B.POS_FUNCTION = #{posFunction}
+        </if>
+        <if test="posRank != null and posRank != ''">
+            and B.POS_RANK = #{posRank}
+        </if>
+        <if test="posType != null and posType != ''">
+            and B.POS_TYPE = #{posType}
+        </if>
+        <choose>
+            <when test="status != null">
+                AND B.POS_NATURE = #{status}
+            </when>
+            <otherwise>
+                AND B.POS_NATURE = 1
+            </otherwise>
+        </choose>
+        <if test="isPub != null and isPub != ''">
+            and B.IS_PUB = #{isPub}
+        </if>
+        <if test="mobilePhone != null and mobilePhone != ''">
+            and B.MOBILE_PHONE = #{mobilePhone}
+        </if>
+        <if test="officePhone != null and officePhone != ''">
+            and B.OFFICE_PHONE = #{officePhone}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='ids != null'>
+            AND B.POSITION_ID IN
+            <foreach item="id" collection="ids" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.role.entity.SysPosition">
+        INSERT INTO SYS_POSITION
+        (
+        POSITION_ID, PARENT_ID, POSTYPE_ID, ROLETYPE_ID, NAME, SNAME, CODE, ONAME, POS_FUNCTION, POS_RANK, POS_TYPE, EDITOR_TYPE, IS_EDITOR_CREATE, POS_NATURE, IS_PUB, IS_AGENT, IS_LEADER, LEADER_ID, MANAGE_DEPTIDS, IS_BIG_CONTACT, IS_SMALL_CONTACT, MOBILE_PHONE, OFFICE_PHONE, BUILDING_ID, ROOM_NO, EXT_QM_TYPE, EXT_QM_TYPE_PHOTO, EXT_POS_NAME, EXT_ORGAN_NAME, PRIORITY, PRIORITY_IN_ORGAN, PRIORITY_IN_DOMAIN, CREATOR_ID, CREATE_TIME, UPDATER_ID, UPDATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, REMARK
+        )
+        VALUES
+        (
+        #{id}, #{parentId}, #{postypeId}, #{roletypeId}, #{name}, #{sname}, #{code}, #{oname}, #{posFunction}, #{posRank}, #{posType}, #{editorType}, #{isEditorCreate}, #{status}, #{isPub}, #{isAgent}, #{isLeader}, #{leaderId}, #{manageDeptids}, #{isBigContact}, #{isSmallContact}, #{mobilePhone}, #{officePhone}, #{buildingId}, #{roomNo}, #{extQmType}, #{extQmTypePhoto}, #{extPosName}, #{extOrganName}, #{priority}, #{priorityInOrgan}, #{priorityInDomain}, #{creatorId}, #{createTime}, #{updaterId}, #{updateTime}, #{lastTime}, #{delFlag}, #{description}, #{remark}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO SYS_POSITION
+                (
+                POSITION_ID, PARENT_ID, POSTYPE_ID, ROLETYPE_ID, NAME, SNAME, CODE, ONAME, POS_FUNCTION, POS_RANK, POS_TYPE, EDITOR_TYPE, IS_EDITOR_CREATE, POS_NATURE, IS_PUB, IS_AGENT, IS_LEADER, LEADER_ID, MANAGE_DEPTIDS, IS_BIG_CONTACT, IS_SMALL_CONTACT, MOBILE_PHONE, OFFICE_PHONE, BUILDING_ID, ROOM_NO, EXT_QM_TYPE, EXT_QM_TYPE_PHOTO, EXT_POS_NAME, EXT_ORGAN_NAME, PRIORITY, PRIORITY_IN_ORGAN, PRIORITY_IN_DOMAIN, CREATOR_ID, CREATE_TIME, UPDATER_ID, UPDATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, REMARK
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.parentId}, #{item.postypeId}, #{item.roletypeId}, #{item.name}, #{item.sname}, #{item.code}, #{item.oname}, #{item.posFunction}, #{item.posRank}, #{item.posType}, #{item.editorType}, #{item.isEditorCreate}, #{item.status}, #{item.isPub}, #{item.isAgent}, #{item.isLeader}, #{item.leaderId}, #{item.manageDeptids}, #{item.isBigContact}, #{item.isSmallContact}, #{item.mobilePhone}, #{item.officePhone}, #{item.buildingId}, #{item.roomNo}, #{item.extQmType}, #{item.extQmTypePhoto}, #{item.extPosName}, #{item.extOrganName}, #{item.priority}, #{item.priorityInOrgan}, #{item.priorityInDomain}, #{item.creatorId}, #{item.createTime}, #{item.updaterId}, #{item.updateTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.remark}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO SYS_POSITION
+                    (
+                    POSITION_ID, PARENT_ID, POSTYPE_ID, ROLETYPE_ID, NAME, SNAME, CODE, ONAME, POS_FUNCTION, POS_RANK, POS_TYPE, EDITOR_TYPE, IS_EDITOR_CREATE, POS_NATURE, IS_PUB, IS_AGENT, IS_LEADER, LEADER_ID, MANAGE_DEPTIDS, IS_BIG_CONTACT, IS_SMALL_CONTACT, MOBILE_PHONE, OFFICE_PHONE, BUILDING_ID, ROOM_NO, EXT_QM_TYPE, EXT_QM_TYPE_PHOTO, EXT_POS_NAME, EXT_ORGAN_NAME, PRIORITY, PRIORITY_IN_ORGAN, PRIORITY_IN_DOMAIN, CREATOR_ID, CREATE_TIME, UPDATER_ID, UPDATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, REMARK
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.parentId}, #{item.postypeId}, #{item.roletypeId}, #{item.name}, #{item.sname}, #{item.code}, #{item.oname}, #{item.posFunction}, #{item.posRank}, #{item.posType}, #{item.editorType}, #{item.isEditorCreate}, #{item.status}, #{item.isPub}, #{item.isAgent}, #{item.isLeader}, #{item.leaderId}, #{item.manageDeptids}, #{item.isBigContact}, #{item.isSmallContact}, #{item.mobilePhone}, #{item.officePhone}, #{item.buildingId}, #{item.roomNo}, #{item.extQmType}, #{item.extQmTypePhoto}, #{item.extPosName}, #{item.extOrganName}, #{item.priority}, #{item.priorityInOrgan}, #{item.priorityInDomain}, #{item.creatorId}, #{item.createTime}, #{item.updaterId}, #{item.updateTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.remark}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.role.entity.SysPosition">
+        UPDATE SYS_POSITION
+        <set>
+            <if test="parentId != null">PARENT_ID = #{parentId}, </if>
+            <if test="postypeId != null">POSTYPE_ID = #{postypeId}, </if>
+            <if test="roletypeId != null">ROLETYPE_ID = #{roletypeId}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="oname != null">ONAME = #{oname}, </if>
+            <if test="posFunction != null">POS_FUNCTION = #{posFunction}, </if>
+            <if test="posRank != null">POS_RANK = #{posRank}, </if>
+            <if test="posType != null">POS_TYPE = #{posType}, </if>
+            <if test="editorType != null">EDITOR_TYPE = #{editorType}, </if>
+            <if test="isEditorCreate != null">IS_EDITOR_CREATE = #{isEditorCreate}, </if>
+            <if test="status != null">POS_NATURE = #{status}, </if>
+            <if test="isPub != null">IS_PUB = #{isPub}, </if>
+            <if test="isAgent != null">IS_AGENT = #{isAgent}, </if>
+            <if test="isLeader != null">IS_LEADER = #{isLeader}, </if>
+            <if test="leaderId != null">LEADER_ID = #{leaderId}, </if>
+            <if test="manageDeptids != null">MANAGE_DEPTIDS = #{manageDeptids}, </if>
+            <if test="isBigContact != null">IS_BIG_CONTACT = #{isBigContact}, </if>
+            <if test="isSmallContact != null">IS_SMALL_CONTACT = #{isSmallContact}, </if>
+            <if test="mobilePhone != null">MOBILE_PHONE = #{mobilePhone}, </if>
+            <if test="officePhone != null">OFFICE_PHONE = #{officePhone}, </if>
+            <if test="buildingId != null">BUILDING_ID = #{buildingId}, </if>
+            <if test="roomNo != null">ROOM_NO = #{roomNo}, </if>
+            <if test="extQmType != null">EXT_QM_TYPE = #{extQmType}, </if>
+            <if test="extQmTypePhoto != null">EXT_QM_TYPE_PHOTO = #{extQmTypePhoto}, </if>
+            <if test="extPosName != null">EXT_POS_NAME = #{extPosName}, </if>
+            <if test="extOrganName != null">EXT_ORGAN_NAME = #{extOrganName}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="priorityInOrgan != null">PRIORITY_IN_ORGAN = #{priorityInOrgan}, </if>
+            <if test="priorityInDomain != null">PRIORITY_IN_DOMAIN = #{priorityInDomain}, </if>
+            <if test="updaterId != null">UPDATER_ID = #{updaterId}, </if>
+            <if test="updateTime != null">UPDATE_TIME = #{updateTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="remark != null">REMARK = #{remark}</if>
+        </set>
+        WHERE POSITION_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM SYS_POSITION
+        WHERE POSITION_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM SYS_POSITION
+        WHERE POSITION_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM SYS_POSITION B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.role.dto.SysPositionDto" extends="sysPositionMap" id="sysPositionDtoMap">
+        <result property="parentName" column="parentName"/>
+        <result property="roletypeName" column="roletypeName"/>
+        <result property="postypeName" column="postypeName"/>
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="sysPositionDtoMap">
+        SELECT
+        B.POSITION_ID, B.PARENT_ID, B.POSTYPE_ID, B.ROLETYPE_ID, B.NAME, B.SNAME, B.CODE, B.ONAME, B.POS_FUNCTION, B.POS_RANK, B.POS_TYPE, B.EDITOR_TYPE, B.IS_EDITOR_CREATE, B.POS_NATURE, B.IS_PUB, B.IS_AGENT, B.IS_LEADER, B.LEADER_ID, B.MANAGE_DEPTIDS, B.IS_BIG_CONTACT, B.IS_SMALL_CONTACT, B.MOBILE_PHONE, B.OFFICE_PHONE, B.BUILDING_ID, B.ROOM_NO, B.EXT_QM_TYPE, B.EXT_QM_TYPE_PHOTO, B.EXT_POS_NAME, B.EXT_ORGAN_NAME, B.PRIORITY, B.PRIORITY_IN_ORGAN, B.PRIORITY_IN_DOMAIN, B.CREATOR_ID, B.CREATE_TIME, B.UPDATER_ID, B.UPDATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.REMARK
+        , AP.NAME as parentName
+        , SR.NAME as roletypeName
+        , SP.NAME as postypeName
+        FROM SYS_POSITION B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join SYS_POSITION AP on B.PARENT_ID = AP.POSITION_ID
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join CORE_POSTYPE SP on B.POSTYPE_ID = SP.POSTYPE_ID
+
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="sysPositionDtoMap">
+        SELECT
+        B.POSITION_ID, B.PARENT_ID, B.POSTYPE_ID, B.ROLETYPE_ID, B.NAME, B.SNAME, B.CODE, B.ONAME, B.POS_FUNCTION, B.POS_RANK, B.POS_TYPE, B.EDITOR_TYPE, B.IS_EDITOR_CREATE, B.POS_NATURE, B.IS_PUB, B.IS_AGENT, B.IS_LEADER, B.LEADER_ID, B.MANAGE_DEPTIDS, B.IS_BIG_CONTACT, B.IS_SMALL_CONTACT, B.MOBILE_PHONE, B.OFFICE_PHONE, B.BUILDING_ID, B.ROOM_NO, B.EXT_QM_TYPE, B.EXT_QM_TYPE_PHOTO, B.EXT_POS_NAME, B.EXT_ORGAN_NAME, B.PRIORITY, B.PRIORITY_IN_ORGAN, B.PRIORITY_IN_DOMAIN, B.CREATOR_ID, B.CREATE_TIME, B.UPDATER_ID, B.UPDATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.REMARK
+        , AP.NAME as parentName
+        , SR.NAME as roletypeName
+        , SP.NAME as postypeName
+        FROM SYS_POSITION B
+        <include refid="commonUnionJoin"></include>
+        WHERE POSITION_ID = #{value}
+    </select>
+
+    <!--getTreeByPostype 树结构-->
+    <select id="getTreeByPostype" resultType="net.linlan.sys.role.dto.RoleTypeCode">
+        select SR.ROLETYPE_ID as id, NULL as parentId, 1 as isRoleType, SR.NAME as name, SR.PRIORITY as priority
+        from CORE_ROLETYPE SR
+        where SR.DEL_FLAG = 0
+        <if test='key != null and key.trim() != ""'>
+            AND NAME like concat('%',#{key},'%')
+        </if>
+        union all
+        select AP.POSITION_ID as id, AP.ROLETYPE_ID as parentId, 0 as isRoleType, AP.NAME as name, AP.PRIORITY as priority
+        from SYS_POSITION AP where 1=1
+        <if test='postypeId != null and postypeId.trim() != ""'>
+            AND AP.POSTYPE_ID = #{postypeId}
+        </if>
+        <if test='key != null and key.trim() != ""'>
+            AND NAME like concat('%',#{key},'%')
+        </if>
+        ORDER BY PRIORITY ASC
+
+    </select>
+
+    <resultMap type="net.linlan.sys.role.entity.SysRolePosition" id="sysRolePositionMap">
+        <id property="id" column="ROLEPOS_ID"/>
+        <result property="roleId" column="ROLE_ID"/>
+        <result property="positionId" column="POSITION_ID"/>
+        <result property="status" column="STATUS"/>
+        <result property="beginTime" column="BEGIN_TIME"/>
+        <result property="endTime" column="END_TIME"/>
+        <result property="remark" column="REMARK"/>
+    </resultMap>
+
+    <select id="getRoleListById" resultMap="sysRolePositionMap">
+        SELECT * FROM SYS_ROLE_POSITION
+        WHERE 1 = 1
+        <if test='positionId != null and positionId != ""'>
+            AND POSITION_ID = #{positionId}
+        </if>
+        <if test='roleIds != null and roleIds != ""'>
+            AND ROLE_ID IN
+            <foreach item="id" collection="roleIds" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+        <if test='status != null'>
+            AND STATUS = #{status}
+        </if>
+    </select>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteRolePositionByIds">
+        DELETE FROM SYS_ROLE_POSITION
+        WHERE ROLEPOS_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteRolePositionById">
+        DELETE FROM SYS_ROLE_POSITION
+        WHERE ROLEPOS_ID = #{id}
+    </delete>
+
+    <delete id="deleteByPositionId">
+        DELETE FROM SYS_ROLE_POSITION
+        WHERE POSITION_ID = #{id}
+    </delete>
+
+    <delete id="deleteByPositionIds">
+        DELETE FROM SYS_ROLE_POSITION
+        WHERE POSITION_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+
+    <!-- save object，保存对象信息 -->
+    <insert id="batchSaveRolePosition" parameterType="net.linlan.sys.role.entity.SysRolePosition">
+        INSERT INTO SYS_ROLE_POSITION
+        (
+        <choose>
+            <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+            </when>
+            <otherwise>
+                ROLEPOS_ID,
+            </otherwise>
+        </choose>
+        ROLE_ID, POSITION_ID, STATUS, BEGIN_TIME, END_TIME)
+        VALUES
+        <foreach collection="list" item="sysRolePosition" separator=",">
+            (
+            <choose>
+                <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+                </when>
+                <otherwise>
+                    #{sysRolePosition.id},
+                </otherwise>
+            </choose>
+             #{sysRolePosition.roleId}, #{sysRolePosition.positionId}, #{sysRolePosition.status}, #{sysRolePosition.beginTime}, #{sysRolePosition.endTime}
+             )
+        </foreach>
+    </insert>
+
+    <insert id="saveRolePosition" parameterType="net.linlan.sys.role.entity.SysRolePosition">
+        INSERT INTO SYS_ROLE_POSITION
+        (
+        <choose>
+            <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+            </when>
+            <otherwise>
+                ROLEPOS_ID,
+            </otherwise>
+        </choose>
+
+        ROLE_ID, POSITION_ID, STATUS, BEGIN_TIME, END_TIME)
+        VALUES
+        (
+        <choose>
+            <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+            </when>
+            <otherwise>
+                #{id},
+            </otherwise>
+        </choose>
+        #{roleId}, #{positionId}, #{status}, #{beginTime}, #{endTime}
+        )
+
+
+    </insert>
+
+    <resultMap id="positionSearchCodeMap" type="net.linlan.sys.role.dto.PositionSearchCodeDto">
+        <result property="positionId" column="POSITION_ID"></result>
+        <result property="parentId" column="PARENT_ID"></result>
+        <result property="name" column="NAME"></result>
+        <result property="roleId" column="ROLE_ID"></result>
+        <result property="roletypeId" column="ROLETYPE_ID"></result>
+    </resultMap>
+
+    <select id="findSearchCodeByPositionId" resultMap="positionSearchCodeMap">
+        SELECT DISTINCT B.POSITION_ID,B.PARENT_ID,B.NAME,E.ROLE_ID,F.ROLETYPE_ID
+        FROM SYS_POSITION B
+                 LEFT JOIN SYS_ROLE_POSITION D ON B.POSITION_ID = D.POSITION_ID
+                 LEFT JOIN SYS_ROLE E ON E.ROLE_ID = D.ROLE_ID
+                 LEFT JOIN CORE_ROLETYPE F ON F.ROLETYPE_ID = E.ROLETYPE_ID
+        where 1=1
+          AND B.POSITION_ID = #{positionId}
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="baseDictionaryApMap">
+        <result property="id" column="CDD_ID"/>
+        <result property="name" column="name"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+    </resultMap>
+    <select id="getForSelect" resultMap="baseDictionaryApMap">
+        SELECT NAME as name, POSITION_ID as cddValue
+        FROM SYS_POSITION B
+        WHERE B.DEL_FLAG = 0
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <select id="getPositionList" resultType="net.linlan.sys.role.dto.SysPositionDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName
+        FROM SYS_POSITION B
+        left join SYS_POSITION AP on B.PARENT_ID = AP.POSITION_ID
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join CORE_POSTYPE SP on B.POSTYPE_ID =SP.POSTYPE_ID
+        where 1 = 1
+        <if test="parentId = null or parentId = ''">
+            AND B.PARENT_ID is null
+        </if>
+        <if test="parentId != null and parentId != ''">
+            AND B.PARENT_ID =#{parentId}
+        </if>
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roleTypeId != null and roleTypeId != ''">
+            AND B.ROLETYPE_ID = #{roleTypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+        AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <select id="getPositionListByRoleType" resultType="net.linlan.sys.role.dto.SysPositionDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName
+        FROM
+        SYS_POSITION B
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        where 1 = 1
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roleTypeId != null and roleTypeId != ''">
+            AND B.ROLETYPE_ID = #{roleTypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.ROLETYPE_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+    <select id="getPositionListByRole" resultType="net.linlan.sys.role.dto.SysPositionDto">
+        SELECT  AP.POSITION_ID as id,AP.PARENT_ID,AP.NAME,AP.POS_RANK,AP.CREATE_TIME,AP.PRIORITY
+        , SR.NAME as roletypeName
+        FROM SYS_ROLE_POSITION B
+        LEFT JOIN SYS_POSITION AP ON B.POSITION_ID = AP.POSITION_ID
+        LEFT JOIN CORE_ROLETYPE SR ON AP.ROLETYPE_ID = SR.ROLETYPE_ID
+        where 1=1
+        <if test="name != null and name != ''">
+            AND AP.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND AP.POS_RANK = #{posRank}
+        </if>
+        <if test="roleTypeId != null and roleTypeId != ''">
+            AND AP.ROLETYPE_ID = #{roleTypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND AP.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.ROLE_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <select id="getPositionListByPosition" resultType="net.linlan.sys.role.dto.SysPositionDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName,B.CODE AS wlType
+        FROM
+        SYS_POSITION B
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        where 1 = 1
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roleTypeId != null and roleTypeId != ''">
+            AND B.ROLETYPE_ID = #{roleTypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.PARENT_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <resultMap id="sysRoletypeChildTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{roletypeId=ROLETYPE_ID}" select="getNextAdminRole">
+        </association>
+    </resultMap>
+
+    <select id="getSysRoletypeChildTree" resultMap="sysRoletypeChildTree">
+        select B.ROLETYPE_ID AS id, B.NAME AS label, B.ROLETYPE_ID AS searchCode
+        <if test="positionId != null and positionId != ''">
+            , (SELECT COUNT(1) FROM SYS_POSITION WHERE ROLETYPE_ID = B.ROLETYPE_ID AND POSITION_ID = #{positionId}) AS checked
+        </if>
+        from CORE_ROLETYPE B
+        where B.DEL_FLAG = 0
+        and B.ROLETYPE_ID=#{roletypeId}
+        order by B.PRIORITY asc
+    </select>
+
+    <select id="getNextAdminRole" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_ROLE B
+        WHERE B.ROLETYPE_ID = #{roletypeId}
+    </select>
+
+    <resultMap id="adminRoleChildTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{roleId=ROLE_ID}" select="getNextSysPosition">
+        </association>
+    </resultMap>
+
+    <select id="getAdminRoleChildTree" resultMap="adminRoleChildTree">
+        select B.ROLE_ID AS id, B.NAME AS label,CONCAT(B.ROLETYPE_ID,CONCAT(',',B.ROLE_ID)) AS searchCode
+
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_ROLE_POSITION WHERE ROLE_ID = B.ROLE_ID AND POSITION_ID = #{positionId}) AS checked
+        </if>
+        from SYS_ROLE B
+        where B.ROLETYPE_ID = #{roletypeId}
+        order by B.PRIORITY asc
+
+    </select>
+
+    <select id="getNextSysPosition" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_ROLE_POSITION B
+        WHERE B.ROLE_ID = #{roleId}
+
+    </select>
+
+    <resultMap id="adminPositionParentTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{positionId=id}" select="getNextSysPositionParent">
+        </association>
+    </resultMap>
+
+    <select id="getSysPositionParentTree" resultMap="adminPositionParentTree">
+        select B.POSITION_ID AS id, B.NAME AS label
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_POSITION  WHERE POSITION_ID = B.POSITION_ID and POSITION_ID = #{positionId}) AS checked
+        </if>
+        from SYS_POSITION B
+        left join SYS_ROLE_POSITION C ON B.POSITION_ID = C.POSITION_ID
+        where C.ROLE_ID = #{roleId} and B.PARENT_ID is null
+        order by B.PRIORITY asc
+
+    </select>
+
+    <select id="getNextSysPositionParent" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_POSITION B
+        WHERE B.PARENT_ID = #{positionId}
+    </select>
+
+    <resultMap id="adminPositionChildTree" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="checked" column="checked"/>
+        <association property="childNum" column="{positionId=id}" select="getNextSysPositionChild">
+        </association>
+    </resultMap>
+
+    <select id="getSysPositionChildTree" resultMap="adminPositionChildTree">
+        select B.POSITION_ID AS id, B.NAME AS label
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_POSITION  WHERE POSITION_ID = B.POSITION_ID and  PARENT_ID = #{positionId}) AS checked
+        </if>
+        from SYS_POSITION B
+        where B.PARENT_ID = #{parentId}
+        and B.ROLETYPE_ID = #{roletypeId}
+        order by B.PRIORITY asc
+
+    </select>
+
+    <select id="getNextSysPositionChild" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from SYS_POSITION B
+        WHERE B.PARENT_ID = #{positionId}
+    </select>
+
+    <select id="getSingleSysPositionParentTree" resultMap="adminPositionParentTree">
+        select B.POSITION_ID AS id, B.NAME AS label
+        <if test="positionId != null and positionId != ''">
+            ,(SELECT COUNT(1) FROM SYS_POSITION  WHERE POSITION_ID = B.POSITION_ID and POSITION_ID = #{positionId}) AS checked
+        </if>
+        from SYS_POSITION B
+        where B.PARENT_ID is null
+        and B.ROLETYPE_ID = #{roletypeId}
+        <if test="q!='' and q != null">
+            AND B.NAME like concat('%',concat(#{q},'%'))
+        </if>
+        order by B.PRIORITY asc
+
+    </select>
+
+</mapper>

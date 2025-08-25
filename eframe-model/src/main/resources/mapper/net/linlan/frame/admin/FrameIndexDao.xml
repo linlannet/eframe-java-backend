@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.FrameIndexDao">
+
+    <resultMap id="indexApplicationMap" type="net.linlan.frame.admin.dto.IndexApplicationDto">
+        <result property="organNum" column="organNum"/>
+        <result property="deptNum" column="deptNum"/>
+        <result property="peopleNum" column="peopleNum"/>
+        <result property="roleNum" column="roleNum"/>
+        <result property="dicTypeNum" column="dicTypeNum"/>
+        <result property="appNum" column="appNum"/>
+        <result property="fileNum" column="fileNum"/>
+        <result property="paramNum" column="paramNum"/>
+    </resultMap>
+
+
+    <select id="getIndexApplicationCount" resultType="net.linlan.frame.admin.dto.IndexApplicationDto">
+
+        SELECT A.TOTAL AS organNum,B.TOTAL AS deptNum,C.TOTAL AS peopleNum,D.TOTAL AS roleNum, E.TOTAL AS dicTypeNum,F.TOTAL AS appNum,G.TOTAL AS fileNum,H.TOTAL AS paramNum from
+        (SELECT count(*) AS TOTAL from BASE_ORGAN) A,
+        (SELECT count(*) AS TOTAL from ADMIN_DEPT ) B,
+        (SELECT count(*) AS TOTAL from ADMIN_USER ) C,
+        (SELECT count(*) AS TOTAL from ADMIN_ROLE) D,
+        (SELECT count(*) AS TOTAL from BASE_DIC_TYPE) E,
+        (SELECT count(*) AS TOTAL from BASE_APP) F,
+        (SELECT count(*) AS TOTAL from COMM_FILE)G,
+        (SELECT count(*) AS TOTAL from BASE_CONFIG_WHOLE)H
+
+
+    </select>
+
+    <resultMap id="indexElementMap" type="net.linlan.frame.admin.dto.IndexElementDto">
+        <result property="objectNum" column="objectNum"/>
+        <result property="modelNum" column="modelNum"/>
+    </resultMap>
+    <select id="getIndexElementCount" resultType="net.linlan.frame.admin.dto.IndexElementDto">
+
+        SELECT A.TOTAL AS objectNum,B.TOTAL AS modelNum from
+                         (SELECT count(*) AS TOTAL from META_DATA_ENTITY) A,
+                         (SELECT count(*) AS TOTAL from MODA_MODEL ) B
+
+    </select>
+
+    <resultMap id="indexManageMap" type="net.linlan.frame.admin.dto.IndexManageDto">
+        <result property="siteNum" column="siteNum"/>
+        <result property="accountNum" column="accountNum"/>
+        <result property="serviceOrganNum" column="serviceOrganNum"/>
+    </resultMap>
+    <select id="getIndexManageCount" resultType="net.linlan.frame.admin.dto.IndexManageDto">
+
+        SELECT A.TOTAL AS siteNum,B.TOTAL AS accountNum,C.TOTAL AS serviceOrganNum from
+        (SELECT count(*) AS TOTAL from MANAGE_SITE) A,
+        (SELECT count(*) AS TOTAL from MEMBER_ACCOUNT ) B,
+        (SELECT count(*) AS TOTAL from CORE_ORGAN  WHERE ORGAN_PROPERTY ='三方服务商' ) C
+
+    </select>
+
+
+
+
+</mapper>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.comm.dao.CommExportDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.comm.entity.CommExport" id="commExportMap">
+        <id property="id" column="EXPORT_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="siteId" column="SITE_ID"/>
+        <result property="foreignType" column="FOREIGN_TYPE"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="foreignName" column="FOREIGN_NAME"/>
+        <result property="type" column="TYPE"/>
+        <result property="opTime" column="OP_TIME"/>
+        <result property="opUserId" column="OP_USER_ID"/>
+        <result property="opUserName" column="OP_USER_NAME"/>
+        <result property="opOrganId" column="OP_ORGAN_ID"/>
+        <result property="opOrganName" column="OP_ORGAN_NAME"/>
+        <result property="downCount" column="DOWN_COUNT"/>
+        <result property="downPath" column="DOWN_PATH"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="status" column="STATUS"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="commExportMap">
+        SELECT
+        EXPORT_ID, APP_ID, SITE_ID, FOREIGN_TYPE, FOREIGN_ID, FOREIGN_NAME, TYPE, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, DOWN_COUNT, DOWN_PATH, PRIORITY, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM COMM_EXPORT
+        WHERE EXPORT_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="commExportMap">
+        SELECT
+        B.EXPORT_ID, B.APP_ID, B.SITE_ID, B.FOREIGN_TYPE, B.FOREIGN_ID, B.FOREIGN_NAME, B.TYPE, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.DOWN_COUNT, B.DOWN_PATH, B.PRIORITY, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM COMM_EXPORT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.EXPORT_ID DESC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.EXPORT_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="siteId != null and siteId != ''">
+            and B.SITE_ID = #{siteId}
+        </if>
+        <if test="foreignType != null and foreignType != ''">
+            and B.FOREIGN_TYPE = #{foreignType}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID like CONCAT('%',concat(#{foreignId},'%'))
+        </if>
+        <if test="foreignName != null and foreignName != ''">
+            and B.FOREIGN_NAME = #{foreignName}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="opTime != null and opTime != ''">
+            and B.OP_TIME = #{opTime}
+        </if>
+        <if test="opUserId != null and opUserId != ''">
+            and B.OP_USER_ID = #{opUserId}
+        </if>
+        <if test="opUserName != null and opUserName != ''">
+            and B.OP_USER_NAME = #{opUserName}
+        </if>
+        <if test="opOrganId != null and opOrganId != ''">
+            and B.OP_ORGAN_ID = #{opOrganId}
+        </if>
+        <if test="opOrganName != null and opOrganName != ''">
+            and B.OP_ORGAN_NAME = #{opOrganName}
+        </if>
+        <if test="downCount != null and downCount != ''">
+            and B.DOWN_COUNT = #{downCount}
+        </if>
+        <if test="priority != null and priority != ''">
+            and B.PRIORITY = #{priority}
+        </if>
+        <if test="downPath != null and downPath != ''">
+            and B.DOWN_PATH = #{downPath}
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.comm.entity.CommExport">
+        INSERT INTO COMM_EXPORT
+        (
+        EXPORT_ID, APP_ID, SITE_ID, FOREIGN_TYPE, FOREIGN_ID, FOREIGN_NAME, TYPE, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, DOWN_COUNT, DOWN_PATH, PRIORITY, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+        #{id}, #{appId}, #{siteId}, #{foreignType}, #{foreignId}, #{foreignName}, #{type}, #{opTime}, #{opUserId}, #{opUserName}, #{opOrganId}, #{opOrganName}, #{downCount}, #{downPath}, #{priority}, #{status}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO COMM_EXPORT
+                (
+                EXPORT_ID, APP_ID, SITE_ID, FOREIGN_TYPE, FOREIGN_ID, FOREIGN_NAME, TYPE, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, DOWN_COUNT, DOWN_PATH, PRIORITY, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.appId}, #{item.siteId}, #{item.foreignType}, #{item.foreignId}, #{item.foreignName}, #{item.type}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.downCount}, #{item.downPath}, #{item.priority}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO COMM_EXPORT
+                    (
+                    EXPORT_ID, APP_ID, SITE_ID, FOREIGN_TYPE, FOREIGN_ID, FOREIGN_NAME, TYPE, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, DOWN_COUNT, DOWN_PATH, PRIORITY, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.appId}, #{item.siteId}, #{item.foreignType}, #{item.foreignId}, #{item.foreignName}, #{item.type}, #{item.opTime}, #{item.opUserId}, #{item.opUserName}, #{item.opOrganId}, #{item.opOrganName}, #{item.downCount}, #{item.downPath}, #{item.priority}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.comm.entity.CommExport">
+        UPDATE COMM_EXPORT
+        <set>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="foreignType != null">FOREIGN_TYPE = #{foreignType}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="foreignName != null">FOREIGN_NAME = #{foreignName}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="opTime != null">OP_TIME = #{opTime}, </if>
+            <if test="opUserId != null">OP_USER_ID = #{opUserId}, </if>
+            <if test="opUserName != null">OP_USER_NAME = #{opUserName}, </if>
+            <if test="opOrganId != null">OP_ORGAN_ID = #{opOrganId}, </if>
+            <if test="opOrganName != null">OP_ORGAN_NAME = #{opOrganName}, </if>
+            <if test="downCount != null">DOWN_COUNT = #{downCount}, </if>
+            <if test="downPath != null">DOWN_PATH = #{downPath}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE EXPORT_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM COMM_EXPORT
+        WHERE EXPORT_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM COMM_EXPORT
+        WHERE EXPORT_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM COMM_EXPORT B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.comm.dto.CommExportDto" extends="commExportMap" id="commExportDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="commExportDtoMap">
+        SELECT
+        B.EXPORT_ID, B.APP_ID, B.SITE_ID, B.FOREIGN_TYPE, B.FOREIGN_ID, B.FOREIGN_NAME, B.TYPE, B.OP_TIME, B.OP_USER_ID, B.OP_USER_NAME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.DOWN_COUNT, B.DOWN_PATH, B.PRIORITY, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM COMM_EXPORT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="commExportDtoMap">
+        SELECT
+        EXPORT_ID, APP_ID, SITE_ID, FOREIGN_TYPE, FOREIGN_ID, FOREIGN_NAME, TYPE, OP_TIME, OP_USER_ID, OP_USER_NAME, OP_ORGAN_ID, OP_ORGAN_NAME, DOWN_COUNT, DOWN_PATH, PRIORITY, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM COMM_EXPORT
+        WHERE EXPORT_ID = #{value}
+    </select>
+
+    <resultMap id="packageMap" type="net.linlan.sys.comm.dto.PackageDto">
+        <id property="fileId" column="ATTACH_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="fileTypeId" column="RESTYPE_ID"/>
+        <result property="filePath" column="ATTACH_PATH"/>
+    </resultMap>
+    <select id="getPackageList" resultMap="packageMap">
+        select C.ATTACH_ID, T.NAME, C.RESTYPE_ID, C.ATTACH_PATH
+        from PUBLIC_PEOPLE_RELATION G
+                 LEFT JOIN COMM_ATTACH C on C.FOREIGN_ID = G.REF_ID
+                 LEFT JOIN TASK_INFO T on T.TASK_ID = G.REF_ID
+        where G.OBJ_ID = #{exportId}
+          and RELATION_TYPE = 'EXPORT'
+    </select>
+
+</mapper>

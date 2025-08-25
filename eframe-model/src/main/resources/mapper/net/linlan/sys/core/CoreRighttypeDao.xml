@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.core.dao.CoreRighttypeDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.core.entity.CoreRighttype" id="coreRighttypeMap">
+        <id property="id" column="RIGHTTYPE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="coreRighttypeMap">
+        SELECT
+        RIGHTTYPE_ID, NAME, SNAME, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        FROM CORE_RIGHTTYPE
+        WHERE RIGHTTYPE_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="coreRighttypeMap">
+        SELECT
+        B.RIGHTTYPE_ID, B.NAME, B.SNAME, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION
+        FROM CORE_RIGHTTYPE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY RIGHTTYPE_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY RIGHTTYPE_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="name != null and name != ''">
+            and B.NAME like concat('%',concat(#{name},'%'))
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME like concat('%',concat(#{sname},'%'))
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= to_date(#{startTime},'YYYY-MM-DD HH24:MI:SS')
+                and B.CREATE_TIME <= to_date(#{endTime},'YYYY-MM-DD HH24:MI:SS') ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.core.entity.CoreRighttype">
+        INSERT INTO CORE_RIGHTTYPE
+        (
+        RIGHTTYPE_ID, NAME, SNAME, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{name}, #{sname}, #{priority}, #{createTime}, #{lastTime}, #{delFlag}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO CORE_RIGHTTYPE
+                (
+                RIGHTTYPE_ID, NAME, SNAME, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.name}, #{item.sname}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO CORE_RIGHTTYPE
+                    (
+                    RIGHTTYPE_ID, NAME, SNAME, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.name}, #{item.sname}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.core.entity.CoreRighttype">
+        UPDATE CORE_RIGHTTYPE
+        <set>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE RIGHTTYPE_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM CORE_RIGHTTYPE
+        WHERE RIGHTTYPE_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM CORE_RIGHTTYPE
+        WHERE RIGHTTYPE_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM CORE_RIGHTTYPE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.core.dto.CoreRighttypeDto" extends="coreRighttypeMap" id="coreRighttypeDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="coreRighttypeDtoMap">
+        SELECT
+        B.RIGHTTYPE_ID, B.NAME, B.SNAME, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION
+        FROM CORE_RIGHTTYPE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="coreRighttypeDtoMap">
+        SELECT
+        RIGHTTYPE_ID, NAME, SNAME, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        FROM CORE_RIGHTTYPE
+        WHERE RIGHTTYPE_ID = #{value}
+    </select>
+
+
+</mapper>

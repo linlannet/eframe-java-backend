@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminLoginLogDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.AdminLoginLog" id="adminLoginLogMap">
+        <id property="id" column="LOG_ID"/>
+        <result property="adminId" column="ADMIN_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="category" column="CATEGORY"/>
+        <result property="title" column="TITLE"/>
+        <result property="content" column="CONTENT"/>
+        <result property="srcCode" column="SRC_CODE"/>
+        <result property="logTime" column="LOG_TIME"/>
+        <result property="logIp" column="LOG_IP"/>
+        <result property="logUrl" column="LOG_URL"/>
+        <result property="logBrowse" column="LOG_BROWSE"/>
+        <result property="logOs" column="LOG_OS"/>
+        <result property="status" column="STATUS"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="adminLoginLogMap">
+        SELECT
+LOG_ID, ADMIN_ID, USER_ID, APP_ID, CATEGORY, TITLE, CONTENT, SRC_CODE, LOG_TIME, LOG_IP, LOG_URL, LOG_BROWSE, LOG_OS, STATUS, DESCRIPTION
+        FROM ADMIN_LOGIN_LOG B
+        WHERE B.LOG_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="adminLoginLogMap">
+        SELECT
+B.LOG_ID, B.ADMIN_ID, B.USER_ID, B.APP_ID, B.CATEGORY, B.TITLE, B.CONTENT, B.SRC_CODE, B.LOG_TIME, B.LOG_IP, B.LOG_URL, B.LOG_BROWSE, B.LOG_OS, B.STATUS, B.DESCRIPTION
+        FROM ADMIN_LOGIN_LOG B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY B.LOG_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.LOG_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象 -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="logId != null and logId != ''">
+            and B.LOG_ID = #{logId}
+        </if>
+        <if test="adminId != null and adminId != ''">
+            and B.ADMIN_ID like concat('%',concat(#{adminId},'%'))
+        </if>
+        <if test="userId != null and userId != ''">
+            and B.USER_ID = #{userId}
+        </if>
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
+        </if>
+        <if test="category != null and category != ''">
+            and B.CATEGORY = #{category}
+        </if>
+        <if test="title != null and title != ''">
+            and B.TITLE like concat('%',concat(#{title},'%'))
+        </if>
+        <if test="content != null and content != ''">
+            and B.CONTENT like concat('%',concat(#{content},'%'))
+        </if>
+        <if test="srcCode != null and srcCode != ''">
+            and B.SRC_CODE = #{srcCode}
+        </if>
+        <if test="logTime != null and logTime != ''">
+            and B.LOG_TIME = #{logTime}
+        </if>
+        <if test="logIp != null and logIp != ''">
+            and B.LOG_IP like concat('%',concat(#{logIp},'%'))
+        </if>
+        <if test="logUrl != null and logUrl != ''">
+            and B.LOG_URL = #{logUrl}
+        </if>
+        <if test="logBrowse != null and logBrowse != ''">
+            and B.LOG_BROWSE like concat('%',concat(#{logBrowse},'%'))
+        </if>
+        <if test="logOs != null and logOs != ''">
+            and B.LOG_OS  like concat('%',concat(#{logOs},'%'))
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='q != null and q != ""'>
+            and (B.TITLE like concat('%',concat(#{q},'%'))
+            or B.LOG_IP like concat('%',concat(#{q},'%') )
+            or B.LOG_BROWSE like concat('%',concat(#{q},'%') )
+            or B.CONTENT like concat('%',concat(#{q},'%') )
+            )
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.admin.entity.AdminLoginLog">
+        INSERT INTO ADMIN_LOGIN_LOG
+        (
+LOG_ID, ADMIN_ID, USER_ID, APP_ID, CATEGORY, TITLE, CONTENT, SRC_CODE, LOG_TIME, LOG_IP, LOG_URL, LOG_BROWSE, LOG_OS, STATUS, DESCRIPTION
+        )
+        VALUES
+        (
+#{id}, #{adminId}, #{userId}, #{appId}, #{category}, #{title}, #{content}, #{srcCode}, #{logTime}, #{logIp}, #{logUrl}, #{logBrowse}, #{logOs}, #{status}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO ADMIN_LOGIN_LOG
+                (
+LOG_ID, ADMIN_ID, USER_ID, APP_ID, CATEGORY, TITLE, CONTENT, SRC_CODE, LOG_TIME, LOG_IP, LOG_URL, LOG_BROWSE, LOG_OS, STATUS, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+#{item.id}, #{item.adminId}, #{item.userId}, #{item.appId}, #{item.category}, #{item.title}, #{item.content}, #{item.srcCode}, #{item.logTime}, #{item.logIp}, #{item.logUrl}, #{item.logBrowse}, #{item.logOs}, #{item.status}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO ADMIN_LOGIN_LOG
+                    (
+LOG_ID, ADMIN_ID, USER_ID, APP_ID, CATEGORY, TITLE, CONTENT, SRC_CODE, LOG_TIME, LOG_IP, LOG_URL, LOG_BROWSE, LOG_OS, STATUS, DESCRIPTION
+                    )
+                    VALUES
+                    (
+#{item.id}, #{item.adminId}, #{item.userId}, #{item.appId}, #{item.category}, #{item.title}, #{item.content}, #{item.srcCode}, #{item.logTime}, #{item.logIp}, #{item.logUrl}, #{item.logBrowse}, #{item.logOs}, #{item.status}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.frame.admin.entity.AdminLoginLog">
+        UPDATE ADMIN_LOGIN_LOG
+        <set>
+            <if test="adminId != null">ADMIN_ID = #{adminId}, </if>
+            <if test="userId != null">USER_ID = #{userId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
+            <if test="category != null">CATEGORY = #{category}, </if>
+            <if test="title != null">TITLE = #{title}, </if>
+            <if test="content != null">CONTENT = #{content}, </if>
+            <if test="srcCode != null">SRC_CODE = #{srcCode}, </if>
+            <if test="logTime != null">LOG_TIME = #{logTime}, </if>
+            <if test="logIp != null">LOG_IP = #{logIp}, </if>
+            <if test="logUrl != null">LOG_URL = #{logUrl}, </if>
+            <if test="logBrowse != null">LOG_BROWSE = #{logBrowse}, </if>
+            <if test="logOs != null">LOG_OS = #{logOs}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE LOG_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM ADMIN_LOGIN_LOG
+        WHERE LOG_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM ADMIN_LOGIN_LOG
+        WHERE LOG_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM ADMIN_LOGIN_LOG B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.frame.admin.dto.AdminLoginLogDto" extends="adminLoginLogMap" id="adminLoginLogDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="adminLoginLogDtoMap">
+        SELECT
+B.LOG_ID, B.ADMIN_ID, B.USER_ID, B.APP_ID, B.CATEGORY, B.TITLE, B.CONTENT, B.SRC_CODE, B.LOG_TIME, B.LOG_IP, B.LOG_URL, B.LOG_BROWSE, B.LOG_OS, B.STATUS, B.DESCRIPTION
+        FROM ADMIN_LOGIN_LOG B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="adminLoginLogDtoMap">
+        SELECT
+B.LOG_ID, B.ADMIN_ID, B.USER_ID, B.APP_ID, B.CATEGORY, B.TITLE, B.CONTENT, B.SRC_CODE, B.LOG_TIME, B.LOG_IP, B.LOG_URL, B.LOG_BROWSE, B.LOG_OS, B.STATUS, B.DESCRIPTION
+        FROM ADMIN_LOGIN_LOG B
+        WHERE LOG_ID = #{value}
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+
+
+</mapper>

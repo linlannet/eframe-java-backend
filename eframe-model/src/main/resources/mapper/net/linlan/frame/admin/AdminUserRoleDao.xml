@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.frame.admin.dao.AdminUserRoleDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.frame.admin.entity.AdminUserRole" id="adminUserRoleMap">
+        <id property="id" column="USERROLE_ID"/>
+        <result property="roleId" column="ROLE_ID"/>
+        <result property="adminId" column="ADMIN_ID"/>
+    </resultMap>
+
+    <resultMap type="net.linlan.frame.admin.dto.AdminUserRoleDto" extends="adminUserRoleMap" id="adminUserRoleDtoMap">
+        <result property="deptId" column="DEPT_ID" />
+        <result property="deptName" column="DEPT_NAME" />
+        <result property="organId" column="ORGAN_ID" />
+        <result property="organName" column="ORGAN_NAME" />
+        <result property="roleName" column="ROLE_NAME" />
+    </resultMap>
+
+    <select id="selectUserRoleListByAdminId" resultMap="adminUserRoleDtoMap">
+        select distinct B.ADMIN_ID, B.ROLE_ID, AD.DEPT_ID, AD.ORGAN_ID, AR.NAME AS ROLE_NAME, AD.NAME AS DEPT_NAME,ORG.NAME AS ORGAN_NAME
+        from ADMIN_USER_ROLE B
+        left join ADMIN_ROLE AR on B.ROLE_ID = AR.ROLE_ID
+        left join ADMIN_USER AU on B.ADMIN_ID = AU.ADMIN_ID
+        left join ADMIN_DEPT AD on AU.DEPT_ID = AD.DEPT_ID
+        left join BASE_ORGAN ORG on AD.ORGAN_ID = ORG.ORGAN_ID
+        where 1 = 1
+        AND B.ADMIN_ID = #{adminId}
+    </select>
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.frame.admin.entity.AdminUserRole">
+        INSERT INTO ADMIN_USER_ROLE
+            (ADMIN_ID, ROLE_ID)
+        VALUES
+        (
+            #{adminId}, #{roleId}
+            )
+    </insert>
+    <!-- 以下为新增特定的操作 -->
+    <delete id="deleteByAdminId" parameterType="Long">
+        delete from ADMIN_USER_ROLE where ADMIN_ID=#{adminId}
+    </delete>
+
+    <delete id="deleteByAdminIds" parameterType="Long">
+        delete from ADMIN_USER_ROLE where ADMIN_ID in
+        <foreach collection="array" item="adminId" open="(" separator="," close=")">
+            #{adminId}
+        </foreach>
+    </delete>
+
+    <select id="countByRoleId" resultType="Integer">
+        select count(1) from ADMIN_USER_ROLE where ROLE_ID=#{roleId}
+    </select>
+
+    <insert id="batchSave">
+        insert into ADMIN_USER_ROLE (ADMIN_ID, ROLE_ID) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (#{item.adminId}, #{item.roleId})
+        </foreach>
+    </insert>
+
+    <delete id="deleteByRoleIdAdminId">
+        delete from ADMIN_USER_ROLE where ROLE_ID=#{roleId} and ADMIN_ID=#{adminId}
+    </delete>
+
+    <delete id="deleteByRoleIdAdminIds">
+        delete from ADMIN_USER_ROLE where ROLE_ID=#{roleId} and ADMIN_ID in
+        <foreach collection="adminIds" item="adminId" open="(" separator="," close=")">
+            #{adminId}
+        </foreach>
+    </delete>
+
+</mapper>

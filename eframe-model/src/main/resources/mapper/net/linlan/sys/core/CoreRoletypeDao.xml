@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.core.dao.CoreRoletypeDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.core.entity.CoreRoletype" id="coreRoletypeMap">
+        <id property="id" column="ROLETYPE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="type" column="TYPE"/>
+        <result property="code" column="CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="coreRoletypeMap">
+        SELECT
+        ROLETYPE_ID, NAME, TYPE, CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        FROM CORE_ROLETYPE
+        WHERE ROLETYPE_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="coreRoletypeMap">
+        SELECT
+        B.ROLETYPE_ID, B.NAME, B.TYPE, B.CODE, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION
+        FROM CORE_ROLETYPE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY PRIORITY,ROLETYPE_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY PRIORITY,ROLETYPE_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='existKey != null and existKey !=""'>
+            AND ROLETYPE_ID = #{existKey}
+        </if>
+        <if test='q != null and q != ""'>
+            and (B.NAME LIKE concat('%',concat(#{q},'%'))
+            or B.CODE LIKE concat('%',concat(#{q},'%'))
+            or B.DESCRIPTION LIKE concat('%',concat(#{q},'%'))
+            )
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                          AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d')
+                ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                          AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d')
+                ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+                    <![CDATA[
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD') >= to_char(#{startTime},'YYYY-MM-DD')
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD') <= to_char(#{endTime},'YYYY-MM-DD')
+               ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.core.entity.CoreRoletype">
+        INSERT INTO CORE_ROLETYPE
+        (
+        ROLETYPE_ID, NAME, TYPE, CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{name}, #{type}, #{code}, #{priority}, #{createTime}, #{lastTime}, #{delFlag}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO CORE_ROLETYPE
+                (
+                ROLETYPE_ID, NAME, TYPE, CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.name}, #{item.type}, #{item.code}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO CORE_ROLETYPE
+                    (
+                    ROLETYPE_ID, NAME, TYPE, CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.name}, #{item.type}, #{item.code}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.core.entity.CoreRoletype">
+        UPDATE CORE_ROLETYPE
+        <set>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE ROLETYPE_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <update id="deleteById">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = now() WHERE ROLETYPE_ID = #{value}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = sysdate() WHERE ROLETYPE_ID = #{value}
+            </when>
+            <otherwise>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = sysdate() WHERE ROLETYPE_ID = #{value}
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <update id="deleteByIds">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = now()
+                WHERE ROLETYPE_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = sysdate()
+                WHERE ROLETYPE_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <otherwise>
+                update CORE_ROLETYPE set DEL_FLAG = 1, LAST_TIME = sysdate()
+                WHERE ROLETYPE_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM CORE_ROLETYPE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.core.dto.CoreRoletypeDto" extends="coreRoletypeMap" id="coreRoletypeDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="coreRoletypeDtoMap">
+        SELECT
+        B.ROLETYPE_ID, B.NAME, B.TYPE, B.CODE, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION
+        FROM CORE_ROLETYPE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="coreRoletypeDtoMap">
+        SELECT
+        ROLETYPE_ID, NAME, TYPE, CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION
+        FROM CORE_ROLETYPE
+        WHERE ROLETYPE_ID = #{value}
+    </select>
+
+    <select id="findByCode" resultMap="coreRoletypeMap">
+        select B.*
+        from CORE_ROLETYPE B
+        where B.DEL_FLAG = 0
+        and B.CODE = #{code}
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="baseDictionarySrMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="searchCode"/>
+    </resultMap>
+    <select id="getForSelect" resultMap="baseDictionarySrMap">
+        SELECT NAME as name, ROLETYPE_ID as cddValue
+        FROM CORE_ROLETYPE B
+        WHERE B.ROLETYPE_ID = #{roletypeId}
+          AND B.DEL_FLAG = 0
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+</mapper>

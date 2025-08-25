@@ -1,0 +1,71 @@
+package ${packageName}.api;
+
+import net.linlan.frame.api.BaseController;
+import net.linlan.annotation.Encrypt;
+import ${packageName}.view.${ClassName}EntryManager;
+import ${packageName}.view.${ClassName}Vo;
+import ${packageName}.param.${ClassName}Param;
+import net.linlan.commons.core.ObjectUtils;
+import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.db.page.Pagination;
+import javax.annotation.Resource;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+/**
+ *
+ * ${ClassName}控制域:${functionName}查询读取控制类
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+@Encrypt
+@RestController
+@RequestMapping("api/entry/${moduleName}/")
+public class ${ClassName}EntryApi extends BaseController {
+
+    @Resource
+    private ${ClassName}EntryManager ${className}EntryManager;
+
+    /** Get ${ClassName} page. 获取${functionName}分页, 返回${ClassName}Vo对象.
+     * @param type 类型:1,分页page;2,其他特定类型;默认为1|1
+     * @param param 参数查询对象
+     * @return 获取${functionName}分页, 返回${ClassName}Vo对象:null,error;page,success
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:list')")
+    @PlatLog(value = "查询${functionName}分页, 返回${ClassName}Vo的分页对象.")
+    @GetMapping("${businessName}/list/{type}")
+    public ResponseResult<Pagination<${ClassName}Vo>> get${ClassName}Page(@PathVariable(value = "type") String type, ${ClassName}Param param) {
+        if (ObjectUtils.isEmpty(param)){
+            return failure();
+        }
+        Pagination result = ${className}EntryManager.get${ClassName}Page(type, param);
+        if (ObjectUtils.isEmpty(result)){
+            return empty();
+        }
+        return success(result);
+    }
+
+    /**
+     * Get ${ClassName} Vo by id and type. 主键获取${functionName}详情, 返回Vo对象.
+     * @param ${pkColumn.javaField} #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end|1
+     * @param type 类型:1,库entity;2,事务dto;3,其他other|2
+     * @return {@link ${ClassName}Vo}:空null,error;分页page,success
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:detail')")
+    @PlatLog(value = "主键获取${functionName}详细, 返回${ClassName}Vo对象.", category = 1)
+    @GetMapping("${businessName}/{${pkColumn.javaField}}/{type}")
+    public ResponseResult<${ClassName}Vo> get${ClassName}ById(@PathVariable("${pkColumn.javaField}") ${pkColumn.javaType} ${pkColumn.javaField},
+                                                              @PathVariable(value = "type") String type) {
+        if (ObjectUtils.isEmpty(${pkColumn.javaField})){
+            return failure();
+        }
+        ${ClassName}Vo result = ${className}EntryManager.get${ClassName}Vo(${pkColumn.javaField}, type);
+        if (ObjectUtils.isEmpty(result)){
+            return empty();
+        }
+        return success(result);
+    }
+
+}

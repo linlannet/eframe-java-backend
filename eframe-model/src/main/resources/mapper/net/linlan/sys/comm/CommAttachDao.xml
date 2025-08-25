@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.comm.dao.CommAttachDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.comm.entity.CommAttach" id="commAttachMap">
+        <id property="id" column="ATTACH_ID"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="opLId" column="OP_L_ID"/>
+        <result property="restypeId" column="RESTYPE_ID"/>
+        <result property="attachType" column="ATTACH_TYPE"/>
+        <result property="attachPath" column="ATTACH_PATH"/>
+        <result property="attachName" column="ATTACH_NAME"/>
+        <result property="showName" column="SHOW_NAME"/>
+        <result property="isImage" column="IS_IMAGE"/>
+        <result property="isVideo" column="IS_VIDEO"/>
+        <result property="previewPath" column="PREVIEW_PATH"/>
+        <result property="downCount" column="DOWN_COUNT"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="commAttachMap">
+        SELECT
+        ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE, IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION
+        FROM COMM_ATTACH
+        WHERE ATTACH_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="commAttachMap">
+        SELECT
+        B.ATTACH_ID, B.FOREIGN_ID, B.OP_L_ID, B.RESTYPE_ID, B.ATTACH_TYPE, B.ATTACH_PATH, B.ATTACH_NAME, B.SHOW_NAME, B.IS_IMAGE, B.IS_VIDEO, B.PREVIEW_PATH, B.DOWN_COUNT, B.PRIORITY, B.CREATE_TIME, B.DESCRIPTION
+        FROM COMM_ATTACH B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY ATTACH_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY ATTACH_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="opLId != null and opLId != ''">
+            and B.OP_L_ID = #{opLId}
+        </if>
+        <if test="restypeId != null and restypeId != ''">
+            and B.RESTYPE_ID = #{restypeId}
+        </if>
+        <if test="attachType != null and attachType != ''">
+            and B.ATTACH_TYPE = #{attachType}
+        </if>
+        <if test="attachPath != null and attachPath != ''">
+            and B.ATTACH_PATH = #{attachPath}
+        </if>
+        <if test="attachName != null and attachName != ''">
+            and B.ATTACH_NAME = #{attachName}
+        </if>
+        <if test="showName != null and showName != ''">
+            and B.SHOW_NAME = #{showName}
+        </if>
+        <if test="isImage != null and isImage != ''">
+            and B.IS_IMAGE = #{isImage}
+        </if>
+        <if test="isVideo != null and isVideo != ''">
+            and B.IS_VIDEO = #{isVideo}
+        </if>
+        <if test="previewPath != null and previewPath != ''">
+            and B.PREVIEW_PATH = #{previewPath}
+        </if>
+        <if test="downCount != null and downCount != ''">
+            and B.DOWN_COUNT = #{downCount}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.comm.entity.CommAttach">
+        INSERT INTO COMM_ATTACH
+        (
+        ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE, IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{foreignId}, #{opLId}, #{restypeId}, #{attachType}, #{attachPath}, #{attachName}, #{showName}, #{isImage}, #{isVideo}, #{previewPath}, #{downCount}, #{priority}, #{createTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO COMM_ATTACH
+                (
+                ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE, IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.foreignId}, #{item.opLId}, #{item.restypeId}, #{item.attachType}, #{item.attachPath}, #{item.attachName}, #{item.showName}, #{item.isImage}, #{item.isVideo}, #{item.previewPath}, #{item.downCount}, #{item.priority}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO COMM_ATTACH
+                    (
+                    ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE, IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.foreignId}, #{item.opLId}, #{item.restypeId}, #{item.attachType}, #{item.attachPath}, #{item.attachName}, #{item.showName}, #{item.isImage}, #{item.isVideo}, #{item.previewPath}, #{item.downCount}, #{item.priority}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.comm.entity.CommAttach">
+        UPDATE COMM_ATTACH
+        <set>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="opLId != null">OP_L_ID = #{opLId}, </if>
+            <if test="restypeId != null">RESTYPE_ID = #{restypeId}, </if>
+            <if test="attachType != null">ATTACH_TYPE = #{attachType}, </if>
+            <if test="attachPath != null">ATTACH_PATH = #{attachPath}, </if>
+            <if test="attachName != null">ATTACH_NAME = #{attachName}, </if>
+            <if test="showName != null">SHOW_NAME = #{showName}, </if>
+            <if test="isImage != null">IS_IMAGE = #{isImage}, </if>
+            <if test="isVideo != null">IS_VIDEO = #{isVideo}, </if>
+            <if test="previewPath != null">PREVIEW_PATH = #{previewPath}, </if>
+            <if test="downCount != null">DOWN_COUNT = #{downCount}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE ATTACH_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM COMM_ATTACH
+        WHERE ATTACH_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM COMM_ATTACH
+        WHERE ATTACH_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM COMM_ATTACH B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.comm.dto.CommAttachDto" extends="commAttachMap" id="commAttachDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="commAttachDtoMap">
+        SELECT
+        B.ATTACH_ID, B.FOREIGN_ID, B.OP_L_ID, B.RESTYPE_ID, B.ATTACH_TYPE, B.ATTACH_PATH, B.ATTACH_NAME, B.SHOW_NAME, B.IS_IMAGE, B.IS_VIDEO, B.PREVIEW_PATH, B.DOWN_COUNT, B.PRIORITY, B.CREATE_TIME, B.DESCRIPTION
+        FROM COMM_ATTACH B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象。 -->
+    <select id="getDtoById" resultMap="commAttachDtoMap">
+        SELECT
+        ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE, IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION
+        FROM COMM_ATTACH
+        WHERE ATTACH_ID = #{value}
+    </select>
+
+    <select id="getByResType" resultMap="commAttachMap">
+        select  * from COMM_ATTACH where  RESTYPE_ID =#{restypeId}
+        AND  FOREIGN_ID =  #{businessId}
+        <if test="attachType != null and attachType != ''">
+            AND ATTACH_TYPE=#{attachType}
+        </if>
+    </select>
+
+    <update id="changeBind">
+        update COMM_ATTACH set FOREIGN_ID= #{newBusinessId} where FOREIGN_ID=#{oldBusinessId}
+    </update>
+
+    <delete id="deleteByResType">
+        DELETE FROM COMM_ATTACH where RESTYPE_ID =#{restypeId}
+        AND  FOREIGN_ID =  #{businessId}
+
+        <if test="attachType != null and attachType != ''">
+            AND ATTACH_TYPE=#{attachType}
+        </if>
+    </delete>
+
+    <!-- 根据文章id获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getByForeignId" resultMap="commAttachMap">
+        SELECT * FROM
+            COMM_ATTACH
+        WHERE FOREIGN_ID = #{foreignId}
+        ORDER BY PRIORITY
+    </select>
+
+    <!-- 根据文章id和附件对象，批量插入附件信息 -->
+    <update id="batchUpdateByForeignId" >
+        UPDATE COMM_ATTACH
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="FOREIGN_ID=CASE" suffix="END,">
+                <foreach collection="array" item="item" index="index">
+                    when ID=#{item} then #{foreignId}
+                </foreach>
+            </trim>
+        </trim>
+        where
+        <foreach collection="array" separator="or" item="item" index="index">
+            ID=#{item}
+        </foreach>
+    </update>
+    <select id="getAttachList" resultMap="commAttachMap" parameterType="java.util.Map">
+        select * from COMM_ATTACH
+        where RESTYPE_ID = #{resTypeId}
+          AND FOREIGN_ID = #{foreignId}
+    </select>
+
+    <delete id="deleteByForeignId">
+        DELETE FROM COMM_ATTACH where
+            FOREIGN_ID =  #{foreignId}
+    </delete>
+
+    <select id="getByForeignIdAndFlowId" resultMap="commAttachMap">
+        SELECT *
+        FROM COMM_ATTACH
+        WHERE FOREIGN_ID = #{foreignId}
+        AND DESCRIPTION = #{flowId}
+        ORDER BY PRIORITY
+    </select>
+
+    <insert id="batchSaveByInit" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO COMM_ATTACH
+                (
+                ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME, IS_IMAGE,
+                IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (#{item.id}, #{item.foreignId}, #{item.opLId}, #{item.restypeId}, #{item.attachType},
+                    #{item.attachPath},
+                    #{item.attachName}, #{item.showName}, #{item.isImage}, #{item.isVideo}, #{item.previewPath},
+                    #{item.downCount}, #{item.priority}, #{item.createTime}, #{item.description})
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO COMM_ATTACH
+                    (
+                    ATTACH_ID, FOREIGN_ID, OP_L_ID, RESTYPE_ID, ATTACH_TYPE, ATTACH_PATH, ATTACH_NAME, SHOW_NAME,
+                    IS_IMAGE,
+                    IS_VIDEO, PREVIEW_PATH, DOWN_COUNT, PRIORITY, CREATE_TIME, DESCRIPTION )
+                    VALUES
+                    (#{item.id}, #{item.foreignId}, #{item.opLId}, #{item.restypeId}, #{item.attachType},
+                    #{item.attachPath},
+                    #{item.attachName}, #{item.showName}, #{item.isImage}, #{item.isVideo}, #{item.previewPath},
+                    #{item.downCount}, #{item.priority}, #{item.createTime}, #{item.description})
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+</mapper>

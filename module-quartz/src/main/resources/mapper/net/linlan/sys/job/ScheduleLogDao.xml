@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-quartz - quartz定时任务模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.job.dao.ScheduleLogDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.job.entity.ScheduleLog" id="scheduleLogMap">
+        <id property="id" column="LOG_ID"/>
+        <result property="scheduleId" column="SCHEDULE_ID"/>
+        <result property="status" column="STATUS"/>
+        <result property="error" column="ERROR"/>
+        <result property="times" column="TIMES"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="scheduleLogMap">
+        SELECT
+        LOG_ID, SCHEDULE_ID, STATUS, ERROR, TIMES, CREATE_TIME, SPARE1, SPARE2
+        FROM SCHEDULE_LOG
+        WHERE LOG_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="scheduleLogMap">
+        SELECT
+        B.LOG_ID, B.SCHEDULE_ID, B.STATUS, B.ERROR, B.TIMES, B.CREATE_TIME, B.SPARE1, B.SPARE2
+        FROM SCHEDULE_LOG B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY SCHEDULE_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY SCHEDULE_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test='scheduleId != null and scheduleId != ""'>
+            AND B.SCHEDULE_ID LIKE  concat('%', concat(#{scheduleId}, '%'))
+        </if>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="error != null and error != ''">
+            and B.ERROR = #{error}
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test='startTime != null and  startTime != "" and endTime != null and  endTime != "" '>
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test='startTime != null and  startTime != "" and endTime != null and  endTime != "" '>
+                    <![CDATA[ and date_format(B.CREATE_TIME,'%Y-%m-%d') >= date_format(#{startTime},'%Y-%m-%d')
+                and date_format(B.CREATE_TIME,'%Y-%m-%d') <= date_format(#{endTime},'%Y-%m-%d') ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test='startTime != null and  startTime != "" and endTime != null and  endTime != "" '>
+                    <![CDATA[ AND to_date(B.CREATE_TIME,'YYYY-MM-DD') >= to_date(#{startTime},'YYYY-MM-DD')
+                AND to_date(B.CREATE_TIME,'YYYY-MM-DD') <= to_date(#{endTime},'YYYY-MM-DD') ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.job.entity.ScheduleLog">
+        INSERT INTO SCHEDULE_LOG
+        (
+            LOG_ID, SCHEDULE_ID, STATUS, ERROR, TIMES, CREATE_TIME, SPARE1, SPARE2
+        )
+        VALUES
+        (
+            #{id}, #{scheduleId}, #{status}, #{error}, #{times}, #{createTime}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.job.entity.ScheduleLog">
+        UPDATE SCHEDULE_LOG
+        <set>
+            <if test="scheduleId != null">SCHEDULE_ID = #{scheduleId}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="error != null">ERROR = #{error}, </if>
+            <if test="times != null">TIMES = #{times}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE LOG_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM SCHEDULE_LOG
+        WHERE LOG_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM SCHEDULE_LOG
+        WHERE LOG_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM SCHEDULE_LOG B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.job.dto.ScheduleLogDto" extends="scheduleLogMap" id="scheduleLogDtoMap">
+        <result property="scheduleName" column="SCHEDULE_NAME"/>
+        <result property="jobType" column="JOB_TYPE"/>
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="scheduleLogDtoMap">
+        SELECT
+        B.LOG_ID, B.SCHEDULE_ID, B.STATUS, B.ERROR, B.TIMES, B.CREATE_TIME, B.SPARE1, B.SPARE2
+        , JSI.SCHEDULE_NAME, JSI.JOB_TYPE
+        FROM SCHEDULE_LOG B
+        LEFT JOIN SCHEDULE_INFO JSI ON B.SCHEDULE_ID = JSI.SCHEDULE_ID
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <if test="jobType != null and jobType.trim() != ''">
+            and JSI.JOB_TYPE = #{jobType}
+        </if>
+        <if test="scheduleName != null and scheduleName != ''">
+            and JSI.SCHEDULE_NAME like concat('%',concat(#{scheduleName},'%'))
+        </if>
+        ORDER BY B.CREATE_TIME DESC
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="scheduleLogDtoMap">
+        SELECT
+        LOG_ID, SCHEDULE_ID, STATUS, ERROR, TIMES, CREATE_TIME, SPARE1, SPARE2
+        FROM SCHEDULE_LOG
+        WHERE LOG_ID = #{value}
+    </select>
+
+</mapper>

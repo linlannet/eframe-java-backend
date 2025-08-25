@@ -1,0 +1,104 @@
+package ${packageName}.api;
+
+import javax.annotation.Resource;
+
+import net.linlan.annotation.LimitScope;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import com.github.pagehelper.Page;
+import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+
+import net.linlan.annotation.Encrypt;
+import net.linlan.commons.core.RandomUtils;
+import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.annotation.PlatLog;
+
+import net.linlan.commons.script.json.JsonMapUtils;
+import net.linlan.frame.mbiz.ApiIntfConfig;
+import ${packageName}.view.${ClassName}OpManager;
+import ${packageName}.view.${ClassName}Vo;
+import ${packageName}.entity.${ClassName};
+import ${packageName}.param.${ClassName}Param;
+import ${packageName}.service.${ClassName}Service;
+
+import net.linlan.frame.view.admin.utils.ExcelUtil;
+
+/**
+ *
+ * ${ClassName}控制域:${functionName}增删改操作控制类
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+@Encrypt
+@RestController
+@RequestMapping("api/op/${moduleName}")
+public class ${ClassName}OpApi extends BaseController {
+
+    @Resource
+    private ${ClassName}OpManager ${className}OpManager;
+    @Resource
+    private ${ClassName}Service ${className}Service;
+
+    /** ${ClassName} Operation. ${ClassName}数据操作逻辑，根据操作类型，执行新增操作.
+     * @param input 对象信息，输入Vo对象
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:save')")
+    @PlatLog(value = "新增${functionName}", category = 10)
+    @PostMapping("${businessName}/save")
+    @LimitScope(name = "${className}Save", key = "${className}Save")
+    public ResponseResult<String> ${className}AddOp(@RequestBody ${ClassName}Vo input) {
+        if (${className}OpManager.do${ClassName}Op(ApiIntfConfig.VALUE_AT_ADD, null, input)){
+            return success();
+        }
+        return failure();
+    }
+
+    /** ${ClassName} Operation. ${ClassName}数据操作逻辑，根据操作类型，执行修改操作.
+     * @param input 对象信息，输入Vo对象
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:update')")
+    @PlatLog(value = "修改${functionName}", category = 20)
+    @PostMapping("${businessName}/update")
+    @LimitScope(name = "${className}Update", key = "${className}Update")
+    public ResponseResult<String> ${className}UpdateOp(@RequestBody ${ClassName}Vo input) {
+        if (${className}OpManager.do${ClassName}Op(ApiIntfConfig.VALUE_AT_UPDATE, null, input)){
+            return success();
+        }
+        return failure();
+    }
+
+    /** ${ClassName} Operation. ${ClassName}数据操作逻辑，根据操作类型，执行删除操作.
+     * @param ${pkColumn.javaField}s #foreach($column in $columns)#if($column.columnName == $pkColumn.columnName)$column.columnComment#end#end:null;1;1,2,3|1
+     * @return {@link String}:操作成功0;操作失败1
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:delete')")
+    @PlatLog(value = "删除${functionName}", category = 40)
+    @PostMapping("${businessName}/delete/{${pkColumn.javaField}s}")
+    @LimitScope(name = "${className}Delete", key = "${className}Delete")
+    public ResponseResult<String> ${className}DeleteOp(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s) {
+        return success(${className}Service.deleteByIds(${pkColumn.javaField}s));
+    }
+
+    /** ${ClassName} Operation. ${ClassName}数据操作逻辑，导出操作.
+     * @param response 响应体
+     * @param param 参数查询对象
+     */
+    @PreAuthorize("@ss.hasPerms('${moduleName}:${businessName}:export')")
+    @PlatLog(value = "导出${functionName}列表", category = 52)
+    @PostMapping("/${businessName}/export")
+    @LimitScope(name = "${className}Export", key = "${className}Export")
+    public void export(HttpServletResponse response, ${ClassName}Param param)
+    {
+        List<${ClassName}> list = ${className}Service.getList(JsonMapUtils.beanToMap(param));
+        ExcelUtil<${ClassName}> util = new ExcelUtil<${ClassName}>(${ClassName}.class);
+        util.exportExcel(response, list, "${functionName}数据导出");
+    }
+
+}

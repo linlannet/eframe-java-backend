@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseLabelDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseLabel" id="baseLabelMap">
+        <id property="id" column="LABEL_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="attr" column="ATTR"/>
+        <result property="refCount" column="REF_COUNT"/>
+        <result property="accessCount" column="ACCESS_COUNT"/>
+        <result property="status" column="STATUS"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseLabelMap">
+        SELECT
+        LABEL_ID, NAME, ATTR, REF_COUNT, ACCESS_COUNT, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION
+        FROM BASE_LABEL
+        WHERE LABEL_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseLabelMap">
+        SELECT
+        B.LABEL_ID, B.NAME, B.ATTR, B.REF_COUNT, B.ACCESS_COUNT, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM BASE_LABEL B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY LABEL_ID DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY LABEL_ID ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 4'>
+                        ORDER BY REF_COUNT DESC
+                    </when>
+                    <when test='orderBy == 5'>
+                        ORDER BY REF_COUNT ASC
+                    </when>
+                    <when test='orderBy == 6'>
+                        ORDER BY ACCESS_COUNT DESC
+                    </when>
+                    <when test='orderBy == 7'>
+                        ORDER BY ACCESS_COUNT ASC
+                    </when>
+                    <when test='orderBy == 8'>
+                        ORDER BY REF_COUNT DESC,ACCESS_COUNT DESC
+                    </when>
+                    <when test='orderBy == 9'>
+                        ORDER BY REF_COUNT DESC,ACCESS_COUNT ASC
+                    </when>
+                    <when test='orderBy == 10'>
+                        ORDER BY REF_COUNT ASC,ACCESS_COUNT DESC
+                    </when>
+                    <when test='orderBy == 11'>
+                        ORDER BY REF_COUNT ASC,ACCESS_COUNT ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY LABEL_ID DESC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY LABEL_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test='attr != null and attr !=""'>
+            AND B.ATTR like concat('%',concat(#{attr},'%'))
+        </if>
+        <if test="refCount != null and refCount != ''">
+            and B.REF_COUNT = #{refCount}
+        </if>
+        <if test="accessCount != null and accessCount != ''">
+            and B.ACCESS_COUNT = #{accessCount}
+        </if>
+        <if test="status != null">
+            and B.STATUS = #{status}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='key != null and key !=""'>
+        AND  (
+        B.NAME like concat('%',concat(#{key},'%'))
+        )
+        </if>
+        <if test='entCode != null and entCode.trim() != ""'>
+            AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE 1=1 AND EPLTS.TYPE_ID IN (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE 1=1 AND  EPLT.FOREIGN_ID = (SELECT SOP.ORGAN_ID FROM net.linlan.ele.house.dto.ResidentialStatisORGAN_PERSONAL SOP WHERE SOP.ENT_CODE = #{entCode})))
+        </if>
+        <if test='organId != null and organId.trim() != ""'>
+            <if test='labelTypeName != null and labelTypeName.trim() != ""'>
+                AND B.LABEL_ID IN(
+                SELECT LABEL_ID from THEME_LABEL_TYPE_SET WHERE TYPE_ID =  (select TYPE_ID from THEME_LABEL_TYPE where FOREIGN_ID = #{organId} AND NAME = #{labelTypeName}))
+            </if>
+        </if>
+        <if test="labelTypeId != null and labelTypeId != '' ">
+            AND B.LABEL_ID IN(
+            SELECT EPLTS.LABEL_ID from ELE_PUB_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{labelTypeId}
+            )
+        </if>
+        <if test='organLabelId != null and organLabelId.trim() != ""'>
+            <if test='type == 1'><!-- 查询type -->
+                <if test='typeLabelStatus == 1'><!-- 查询已绑定 -->
+                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE EPLT.FOREIGN_ID =  #{organLabelId}))
+
+                </if>
+
+                <if test='typeLabelStatus == 2'><!-- 查询未绑定 -->
+                    AND B.LABEL_ID NOT IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE EPLT.FOREIGN_ID =  #{organLabelId}))
+                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
+                </if>
+            </if>
+
+            <if test='type == 2'><!-- 查询Organ -->
+                <if test='organLabelStatus == 1'><!-- 查询已绑定 -->
+                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
+                </if>
+
+                <if test='organLabelStatus == 2'><!-- 查询未绑定 -->
+                    AND B.LABEL_ID NOT IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
+                </if>
+            </if>
+
+            <if test='type == 3'><!-- 查询Organ -->
+                <if test='organLabelGroup == 1'><!-- 查询许愿组 -->
+                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{organLabelGroup})
+                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
+                </if>
+
+                <if test='organLabelGroup == 2'><!-- 查询祝福组 -->
+                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{organLabelGroup})
+                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
+                </if>
+            </if>
+
+        </if>
+        <if test='typeIdBind != null and typeIdBind == 1 '>
+            AND B.LABEL_ID IN(
+            SELECT EPLTS.LABEL_ID from THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID in
+            (select EPLT.TYPE_ID from THEME_LABEL_TYPE EPLT WHERE 1=1 AND EPLTS.TYPE_ID in
+            <foreach item="item" index="index" collection="typeId.split(',')" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+            )
+            )
+        </if>
+        <if test='typeIdBind != null and typeIdBind == 0'>
+            AND B.LABEL_ID NOT IN(
+            SELECT EPLTS.LABEL_ID from THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID in
+            (select EPLT.TYPE_ID from THEME_LABEL_TYPE EPLT WHERE 1=1 AND EPLTS.TYPE_ID in
+            <foreach item="item" index="index" collection="typeId.split(',')" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+            )
+            )
+        </if>
+        <if test='ids != null'>
+            AND LABEL_ID IN
+            <foreach item="id" collection="ids" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseLabel">
+        INSERT INTO BASE_LABEL
+        (
+        LABEL_ID, NAME, ATTR, REF_COUNT, ACCESS_COUNT, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{name}, #{attr}, #{refCount}, #{accessCount}, #{status}, #{createTime}, #{lastTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_LABEL
+                (
+                LABEL_ID, NAME, ATTR, REF_COUNT, ACCESS_COUNT, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.name}, #{item.attr}, #{item.refCount}, #{item.accessCount}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_LABEL
+                    (
+                    LABEL_ID, NAME, ATTR, REF_COUNT, ACCESS_COUNT, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.name}, #{item.attr}, #{item.refCount}, #{item.accessCount}, #{item.status}, #{item.createTime}, #{item.lastTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseLabel">
+        UPDATE BASE_LABEL
+        <set>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="attr != null">ATTR = #{attr}, </if>
+            <if test="refCount != null">REF_COUNT = #{refCount}, </if>
+            <if test="accessCount != null">ACCESS_COUNT = #{accessCount}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE LABEL_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM BASE_LABEL
+        WHERE LABEL_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM BASE_LABEL
+        WHERE LABEL_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_LABEL B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseLabelDto" extends="baseLabelMap" id="baseLabelDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseLabelDtoMap">
+        SELECT
+        B.LABEL_ID, B.NAME, B.ATTR, B.REF_COUNT, B.ACCESS_COUNT, B.STATUS, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        FROM BASE_LABEL B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseLabelDtoMap">
+        SELECT
+        LABEL_ID, NAME, ATTR, REF_COUNT, ACCESS_COUNT, STATUS, CREATE_TIME, LAST_TIME, DESCRIPTION
+        FROM BASE_LABEL
+        WHERE LABEL_ID = #{value}
+    </select>
+
+    <!-- find by NAME，通过NAME获取对象 -->
+    <select id="findByName" resultMap="baseLabelMap">
+        SELECT B.*
+        FROM BASE_LABEL B
+        WHERE NAME = #{value}
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- 根据Ids获取标签列表 -->
+    <select id="getLabelNameList" resultType="string">
+        select NAME as name
+        from BASE_LABEL
+        WHERE 1=1
+        AND LABEL_ID in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+</mapper>

@@ -1,0 +1,16 @@
+package ${packageName}.dto;
+
+import ${packageName}.entity.${ClassName};
+import lombok.Data;
+
+/**
+ *
+ * ${ClassName}数据域:${functionName}Dto对象
+ * @author ${author}
+ * CreateTime ${datetime}
+ *
+ */
+@Data
+public class ${ClassName}Dto extends ${ClassName} {
+
+}

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.core.dao.CoreDepttypeDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.core.entity.CoreDepttype" id="coreDepttypeMap">
+        <id property="id" column="DEPTTYPE_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="orgtypeId" column="ORGTYPE_ID"/>
+        <result property="areatypeId" column="AREATYPE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="code" column="CODE"/>
+        <result property="lft" column="LFT"/>
+        <result property="rgt" column="RGT"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="dispFlag" column="DISP_FLAG"/>
+        <result property="isDisabled" column="IS_DISABLED"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="coreDepttypeMap">
+        SELECT
+        DEPTTYPE_ID, PARENT_ID, ORGTYPE_ID, AREATYPE_ID, NAME, SNAME, CODE, LFT, RGT, SEARCH_CODE, DISP_FLAG, IS_DISABLED, CREATE_TIME, LAST_TIME, PRIORITY, DESCRIPTION
+        FROM CORE_DEPTTYPE
+        WHERE DEPTTYPE_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="coreDepttypeMap">
+        SELECT
+        B.DEPTTYPE_ID, B.PARENT_ID, B.ORGTYPE_ID, B.AREATYPE_ID, B.NAME, B.SNAME, B.CODE, B.LFT, B.RGT, B.SEARCH_CODE, B.DISP_FLAG, B.IS_DISABLED, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DESCRIPTION
+        FROM CORE_DEPTTYPE B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY DEPTTYPE_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY DEPTTYPE_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="parentId != null ">
+            <choose>
+                <when test='parentId == 0'>
+                    and B.PARENT_ID is null
+                </when>
+                <otherwise>
+                    and B.PARENT_ID = #{parentId}
+                </otherwise>
+            </choose>
+        </if>
+        <if test="orgtypeId != null and orgtypeId != ''">
+            and B.ORGTYPE_ID = #{orgtypeId}
+        </if>
+        <if test="areatypeId != null and areatypeId != ''">
+            and B.AREATYPE_ID = #{areatypeId}
+        </if>
+        <if test="name != null and name != ''">
+            AND B.NAME like concat('%',concat(#{name},'%'))
+        </if>
+        <if test="sname != null and sname != ''">
+            AND B.SNAME like concat('%',concat(#{sname},'%'))
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            and B.SEARCH_CODE = #{searchCode}
+        </if>
+        <if test="dispFlag != null and dispFlag != ''">
+            and B.DISP_FLAG = #{dispFlag}
+        </if>
+        <if test="isDisabled != null and isDisabled != ''">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='key != null and key !=""'>
+            AND  (
+            B.NAME like concat('%',concat(#{key},'%'))
+            )
+        </if>
+        <if test='q != null and q !=""'>
+            AND  (
+            B.NAME like concat('%',concat(#{q},'%'))
+            )
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.core.entity.CoreDepttype">
+        INSERT INTO CORE_DEPTTYPE
+        (
+        DEPTTYPE_ID, PARENT_ID, ORGTYPE_ID, AREATYPE_ID, NAME, SNAME, CODE, LFT, RGT, SEARCH_CODE, DISP_FLAG, IS_DISABLED, CREATE_TIME, LAST_TIME, PRIORITY, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{parentId}, #{orgtypeId}, #{areatypeId}, #{name}, #{sname}, #{code}, #{lft}, #{rgt}, #{searchCode}, #{dispFlag}, #{isDisabled}, #{createTime}, #{lastTime}, #{priority}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO CORE_DEPTTYPE
+                (
+                DEPTTYPE_ID, PARENT_ID, ORGTYPE_ID, AREATYPE_ID, NAME, SNAME, CODE, LFT, RGT, SEARCH_CODE, DISP_FLAG, IS_DISABLED, CREATE_TIME, LAST_TIME, PRIORITY, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.parentId}, #{item.orgtypeId}, #{item.areatypeId}, #{item.name}, #{item.sname}, #{item.code}, #{item.lft}, #{item.rgt}, #{item.searchCode}, #{item.dispFlag}, #{item.isDisabled}, #{item.createTime}, #{item.lastTime}, #{item.priority}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO CORE_DEPTTYPE
+                    (
+                    DEPTTYPE_ID, PARENT_ID, ORGTYPE_ID, AREATYPE_ID, NAME, SNAME, CODE, LFT, RGT, SEARCH_CODE, DISP_FLAG, IS_DISABLED, CREATE_TIME, LAST_TIME, PRIORITY, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.parentId}, #{item.orgtypeId}, #{item.areatypeId}, #{item.name}, #{item.sname}, #{item.code}, #{item.lft}, #{item.rgt}, #{item.searchCode}, #{item.dispFlag}, #{item.isDisabled}, #{item.createTime}, #{item.lastTime}, #{item.priority}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.core.entity.CoreDepttype">
+        UPDATE CORE_DEPTTYPE
+        <set>
+            <if test="parentId != null">PARENT_ID = #{parentId}, </if>
+            <if test="orgtypeId != null">ORGTYPE_ID = #{orgtypeId}, </if>
+            <if test="areatypeId != null">AREATYPE_ID = #{areatypeId}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="lft != null">LFT = #{lft}, </if>
+            <if test="rgt != null">RGT = #{rgt}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="dispFlag != null">DISP_FLAG = #{dispFlag}, </if>
+            <if test="isDisabled != null">IS_DISABLED = #{isDisabled}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE DEPTTYPE_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM CORE_DEPTTYPE
+        WHERE DEPTTYPE_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM CORE_DEPTTYPE
+        WHERE DEPTTYPE_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM CORE_DEPTTYPE B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.core.dto.CoreDepttypeDto" extends="coreDepttypeMap" id="coreDepttypeDtoMap">
+        <result property="parentName" column="parentName"/>
+        <result property="orgtypeName" column="orgtypeName"/>
+        <result property="areatypeName" column="areatypeName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="coreDepttypeDtoMap">
+        SELECT
+        B.DEPTTYPE_ID, B.PARENT_ID, B.ORGTYPE_ID, B.AREATYPE_ID, B.NAME, B.SNAME, B.CODE, B.LFT, B.RGT, B.SEARCH_CODE, B.DISP_FLAG, B.IS_DISABLED, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DESCRIPTION
+        ,SD.NAME as parentName
+        , SO.NAME as orgtypeName
+        , GA.NAME as areatypeName
+        FROM CORE_DEPTTYPE B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join CORE_DEPTTYPE SD on B.PARENT_ID = SD.DEPTTYPE_ID
+        left join CORE_ORGTYPE SO on B.ORGTYPE_ID = SO.ORGTYPE_ID
+        left join BASE_AREATYPE GA  on B.AREATYPE_ID = GA.AREATYPE_ID
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="coreDepttypeDtoMap">
+        SELECT
+        B.DEPTTYPE_ID, B.PARENT_ID, B.ORGTYPE_ID, B.AREATYPE_ID, B.NAME, B.SNAME, B.CODE, B.LFT, B.RGT, B.SEARCH_CODE, B.DISP_FLAG, B.IS_DISABLED, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DESCRIPTION
+        ,SD.NAME as parentName
+        , SO.NAME as orgtypeName
+        , GA.NAME as areatypeName
+        FROM CORE_DEPTTYPE B
+        <include refid="commonUnionJoin"></include>
+        WHERE B.DEPTTYPE_ID = #{value}
+    </select>
+
+    <resultMap id="treeNodeMap" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="childNum" column="childNum"/>
+    </resultMap>
+
+    <select id="getDeptTypeChildren" resultMap="treeNodeMap">
+        select B.DEPTTYPE_ID as id,B.NAME as label, B.SEARCH_CODE as searchCode,
+        (SELECT COUNT(A.DEPTTYPE_ID) FROM CORE_DEPTTYPE A WHERE A.PARENT_ID = B.DEPTTYPE_ID) AS childNum
+        from CORE_DEPTTYPE B
+        where 1 = 1
+        <choose>
+            <when test="parentId != null and parentId != ''">
+                AND B.PARENT_ID = #{parentId}
+            </when>
+            <otherwise>
+                AND (B.PARENT_ID IS NULL OR B.PARENT_ID = 0 OR B.PARENT_ID = '')
+            </otherwise>
+        </choose>
+        ORDER BY B.PRIORITY,B.DEPTTYPE_ID ASC
+    </select>
+
+</mapper>

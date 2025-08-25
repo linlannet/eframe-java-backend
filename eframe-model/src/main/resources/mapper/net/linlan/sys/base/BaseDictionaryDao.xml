@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseDictionaryDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseDictionary" id="baseDictionaryMap">
+        <id property="id" column="CDD_ID"/>
+        <result property="typeCode" column="TYPE_CODE"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="cddValue" column="CDD_VALUE"/>
+        <result property="cddLevel" column="CDD_LEVEL"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="dispFlag" column="DISP_FLAG"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="deleteTime" column="DELETE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseDictionaryMap">
+        SELECT
+        CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+        FROM BASE_DICTIONARY
+        WHERE CDD_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseDictionaryMap">
+        SELECT
+        B.CDD_ID, B.TYPE_CODE, B.PARENT_ID, B.NAME, B.SNAME, B.CDD_VALUE, B.CDD_LEVEL, B.SEARCH_CODE, B.DISP_FLAG, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        FROM BASE_DICTIONARY B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <when test='orderBy == 4'>
+                        ORDER BY CONVERT(B.NAME USING gbk) collate gbk_chinese_ci DESC
+                    </when>
+                    <when test='orderBy == 5'>
+                        ORDER BY CONVERT(B.NAME USING gbk) collate gbk_chinese_ci ASC
+                    </when>
+                    <otherwise>
+                        order by B.PRIORITY asc,B.CREATE_TIME desc
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY B.CDD_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="typeCode != null and typeCode != ''">
+            and B.TYPE_CODE = #{typeCode}
+        </if>
+        <if test="typeCodes != null ">
+            and B.TYPE_CODE IN
+            <foreach item="item" collection="typeCodes" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="parentId != null and parentId != ''">
+            <choose>
+                <when test="parentId == -1">
+                    AND B.PARENT_ID is null
+                </when>
+                <when test="isAllChild != null">
+                    <if test='_databaseId == "mysql"'>
+
+                    </if>
+                    <if test='_databaseId == "oracle"'>
+                        AND exists (select 1  from BASE_DICTIONARY where B.CDD_ID=CDD_ID and CDD_ID<![CDATA[ <> ]]>#{parentId} start with CDD_ID = #{parentId} connect by prior CDD_ID = PARENT_ID)
+                    </if>
+                    <if test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+                    </if>
+                </when>
+                <otherwise>
+                    AND B.PARENT_ID = #{parentId}
+                </otherwise>
+            </choose>
+        </if>
+        <if test="name != null and name != ''">
+            AND B.NAME like concat('%',concat(#{name},'%'))
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME = #{sname}
+        </if>
+        <if test="cddValue != null and cddValue != ''">
+            and B.CDD_VALUE = #{cddValue}
+        </if>
+        <if test="cddLevel != null and cddLevel != ''">
+            and B.CDD_LEVEL = #{cddLevel}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            and B.SEARCH_CODE = #{searchCode}
+        </if>
+        <if test="dispFlag != null and dispFlag != ''">
+            and B.DISP_FLAG = #{dispFlag}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                <choose>
+                    <when test="delFlag != 10">
+                        AND B.DEL_FLAG = #{delFlag}
+                    </when>
+                    <otherwise>
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='key != null and key !=""'>
+            AND (
+            B.SNAME like concat('%',concat(#{key},'%'))
+            or B.NAME like concat('%',concat(#{key},'%'))
+            or B.DESCRIPTION like concat('%',concat(#{key},'%'))
+            or B.SEARCH_CODE like concat('%',concat(#{key},'%'))
+            )
+        </if>
+        <if test='existKey != null and existKey !=""'> AND B.NAME = #{existKey}</if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= to_date(#{startTime},'YYYY-MM-DD HH24:MI:SS')
+                and B.CREATE_TIME <= to_date(#{endTime},'YYYY-MM-DD HH24:MI:SS') ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseDictionary">
+        INSERT INTO BASE_DICTIONARY
+        (
+            CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+            #{id}, #{typeCode}, #{parentId}, #{name}, #{sname}, #{cddValue}, #{cddLevel}, #{searchCode}, #{dispFlag}, #{priority}, #{createTime}, #{lastTime}, #{delFlag}, #{deleteTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_DICTIONARY
+                (
+                CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.typeCode}, #{item.parentId}, #{item.name}, #{item.sname}, #{item.cddValue}, #{item.cddLevel}, #{item.searchCode}, #{item.dispFlag}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_DICTIONARY
+                    (
+                    CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.typeCode}, #{item.parentId}, #{item.name}, #{item.sname}, #{item.cddValue}, #{item.cddLevel}, #{item.searchCode}, #{item.dispFlag}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseDictionary">
+        UPDATE BASE_DICTIONARY
+        <set>
+            <if test="typeCode != null">TYPE_CODE = #{typeCode}, </if>
+            <if test="parentId != null">PARENT_ID = #{parentId}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="cddValue != null">CDD_VALUE = #{cddValue}, </if>
+            <if test="cddLevel != null">CDD_LEVEL = #{cddLevel}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="dispFlag != null">DISP_FLAG = #{dispFlag}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="deleteTime != null">DELETE_TIME = #{deleteTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE CDD_ID = #{id}
+    </update>
+
+    <update id="deleteById">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE CDD_ID = #{value}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE CDD_ID = #{value}
+            </when>
+            <otherwise>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() WHERE CDD_ID = #{value}
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <update id="deleteByIds">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE CDD_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE CDD_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <otherwise>
+                update BASE_DICTIONARY set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE CDD_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_DICTIONARY B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseDictionaryDto" extends="baseDictionaryMap" id="baseDictionaryDtoMap">
+        <result property="typeCodeName" column="typeCodeName"/>
+        <result property="parentName" column="parentName"/>
+        <result property="childNum" column="childNum"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseDictionaryDtoMap">
+        SELECT
+        B.CDD_ID, B.TYPE_CODE, B.PARENT_ID, B.NAME, B.SNAME, B.CDD_VALUE, B.CDD_LEVEL, B.SEARCH_CODE, B.DISP_FLAG, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
+        , GDT.NAME as typeCodeName
+        , GD.NAME as parentName
+        , (select count(*) from BASE_DICTIONARY where PARENT_ID = B.CDD_ID) as childNum
+        FROM BASE_DICTIONARY B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <if test='q != null and q !=""'>
+            and B.TYPE_CODE like concat('%',concat(#{q},'%'))
+        </if>
+        <include refid="commonList"></include>
+        <include refid="joinCommonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseDictionaryDtoMap">
+        SELECT
+        CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
+        , (select GD.NAME from BASE_DICTIONARY GD where GD.CDD_ID = B.PARENT_ID) as parentName
+        FROM BASE_DICTIONARY B
+        WHERE CDD_ID = #{value}
+    </select>
+
+    <sql id="commonUnionJoin">
+        left join BASE_DIC_TYPE GDT on  B.TYPE_CODE = GDT.TYPE_ID
+        left join BASE_DICTIONARY GD on B.PARENT_ID = GD.CDD_ID
+    </sql>
+
+    <sql id="joinCommonList">
+        <if test="typeMode != null"> AND GDT.TYPE_MODE = #{typeMode} </if>
+    </sql>
+
+
+    <select id="getAllChild" resultMap="baseDictionaryMap">
+        SELECT * FROM
+        BASE_DICTIONARY B
+        WHERE 1=1
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="parentId != null and parentId != ''">
+                    AND  CDD_VALUE like concat(#{parentId},'%')
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test="parentId != null and parentId != ''">
+                    AND  CDD_VALUE like concat(#{parentId},'%')
+                </if>
+            </when>
+            <otherwise>
+                AND  CDD_VALUE like #{parentId}||'%'
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="getByTypeCodes" resultMap="baseDictionaryMap">
+        SELECT *
+        FROM BASE_DICTIONARY B
+        WHERE TYPE_CODE IN
+        <foreach item="typeCode" collection="list" open="(" separator="," close=")">
+            #{typeCode}
+        </foreach>
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="dictionaryInitMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="parentId" column="parentId"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="searchCode"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+    <select id="getChildren" resultMap="dictionaryInitMap">
+        SELECT CDD_ID as id, PARENT_ID as parentId,NAME as name, CDD_VALUE as cddValue, SEARCH_CODE as searchCode, DESCRIPTION as description
+        FROM BASE_DICTIONARY B
+        WHERE 1 = 1
+        AND PARENT_ID = #{parentId}
+        <if test="typeCode != null and typeCode != ''">
+            AND TYPE_CODE = #{typeCode}
+        </if>
+        AND DEL_FLAG=0
+        order by B.PRIORITY ASC
+    </select>
+
+    <select id="getInitByTypeCode" resultMap="dictionaryInitMap">
+        SELECT CDD_ID as id, NAME as name, CDD_VALUE as cddValue, PARENT_ID, SEARCH_CODE as searchCode, DESCRIPTION as description
+        FROM BASE_DICTIONARY B
+        WHERE TYPE_CODE=#{typeCode} AND DEL_FLAG=0 order by B.PRIORITY ASC
+    </select>
+
+    <select id="dicSearch" resultMap="dictionaryInitMap">
+        SELECT NAME as name, CDD_VALUE as cddValue, DESCRIPTION as searchCode, DESCRIPTION as description
+        FROM BASE_DICTIONARY B
+        WHERE TYPE_CODE=#{typeCode}
+          AND NAME LIKE concat('%',concat(#{q},'%'))
+          AND DEL_FLAG=0 order by B.PRIORITY ASC
+    </select>
+
+    <select id="getInitByTypeCodes" resultMap="dictionaryInitMap">
+        SELECT CDD_ID as id, NAME as name, CDD_VALUE as cddValue, PARENT_ID, SEARCH_CODE as searchCode, DESCRIPTION as description
+        FROM BASE_DICTIONARY B
+        WHERE 1=1
+        AND TYPE_CODE IN
+        <foreach item="typeCode" collection="typeCodes" open="(" separator="," close=")">
+            #{typeCode}
+        </foreach>
+        AND DEL_FLAG=0
+        order by B.PRIORITY ASC
+    </select>
+
+
+</mapper>

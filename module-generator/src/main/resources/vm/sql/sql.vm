@@ -1,0 +1,223 @@
+-- 菜单SQL
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}, '${parentMenuId}', '${defAppId}', '${functionName}', '${businessName}', 'ADMIN', null, '${code}', 2, null, '${moduleName}:${businessName}:list', 'MENU', 'generic-page/tableList/universalTablePage', 'fa fa-file-code-o', null, null, null, '?menuId=${menuId}', null, '${businessName}', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '${functionName}菜单', null, null);
+
+-- 菜单列表对应JSON
+insert into PUBLIC_MENU_DESIGN(MENU_ID, DESIGN_JSON, LIST_JSON, DETAIL_JSON, BAK_JSON, CREATE_TIME) VALUES (${menuId}, '{
+"pageData": {
+"pageTitle": "${functionName}",
+"pageSubTitle": "",
+"showLeftTree": false,
+"treeApiUrl": "",
+"treeSearchAble": true,
+"treeApiParams": {},
+"treeTableProperty": "parentId",
+"btnGroup": [
+{
+"name": "新增",
+"color": "#046BCA",
+"icon": "Plus",
+"type": "primary",
+"triggerMethodsName": "handleAdd"
+},
+{
+"name": "删除",
+"color": "#D80A0D",
+"icon": "Delete",
+"type": "primary",
+"triggerMethodsName": "handleMoreDel"
+}
+],
+"delApiUrl": "/api/${moduleName}/${businessName}/delete",
+"delApiParams": {},
+"tableApiUrl": "/api/${moduleName}/${businessName}/list",
+"tableApiParams": {},
+"tableFilterParams": {
+"q": "",
+"orderBy": 0
+},
+"nameFilterKeyName": "q",
+"tableFilterConfig": {
+"showFilter": true,
+"configArr": [
+#foreach($column in $columns)
+    #if($column.query)
+        #set($parentheseIndex=$column.columnComment.indexOf("，"))
+        #if($parentheseIndex != -1)
+            #set($comment=$column.columnComment.substring(0, $parentheseIndex))
+        #else
+            #set($comment=$column.columnComment)
+        #end
+        #set($dictType=$column.dictType)
+        #if($column.htmlType == "input"||$column.htmlType == "textarea"||$column.htmlType == "inputNumber"||$column.htmlType == "switch")
+        {
+        "type": "$column.htmlType",
+        "label": "${comment}",
+        "field": "${column.javaField}",
+        "defaultValue": "",
+        "othersExtends": {}
+        },
+        #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" != $dictType)
+        {
+        "type": "$column.htmlType",
+        "label": "${comment}",
+        "field": "${column.javaField}",
+        "defaultValue": "",
+        "othersExtends": {
+        "isAsync": true,
+        "asyncConfig": {
+        "url": "/api/admin/dictionary/type/${dictType}",
+        "params": {},
+        "dataPath": "data"
+        },
+        "options": [],
+        "labelProperty": "dictLabel",
+        "valueProperty": "dictValue"
+        }
+        },
+        #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && $dictType=="")
+        {
+        "type": "$column.htmlType",
+        "label": "${comment}",
+        "field": "${column.javaField}",
+        "defaultValue": "",
+        "othersExtends": {
+        "isAsync": false,
+        "asyncConfig": {
+        "url": "",
+        "params": {},
+        "dataPath": "data"
+        },
+        "options": [],
+        "labelProperty": "label",
+        "valueProperty": "value"
+        }
+        },
+        #elseif($column.htmlType == "datetime" )
+        {
+        "type": "$column.htmlType",
+        "label": "${comment}",
+        "field": "${column.javaField}",
+        "defaultValue": "",
+        "othersExtends": {}
+        },
+        #else
+        #end
+    #end
+#end
+{}
+]
+},
+"tableColumns": [
+{
+"type": "index",
+"label": "序号",
+"minWidth": 60
+},
+#foreach($column in $columns)
+    #set($javaField=$column.javaField)
+    #set($parentheseIndex=$column.columnComment.indexOf("，"))
+    #if($parentheseIndex != -1)
+        #set($comment=$column.columnComment.substring(0, $parentheseIndex))
+    #else
+        #set($comment=$column.columnComment)
+    #end
+    #if($column.pk)
+    { "prop": "${javaField}", "label": "${comment}", "minWidth": 80,"notShow": true },
+    #elseif($column.list && $column.htmlType == "datetime")
+    { "prop": "${javaField}", "label": "${comment}", "minWidth": 180 },
+    #elseif($column.list && "" != $column.dictType)
+    { "prop": "${javaField}", "label": "${comment}", "minWidth": 120 },
+    #elseif($column.list && "" != $javaField)
+    { "prop": "${javaField}", "label": "${comment}", "minWidth": 120 },
+    #else
+    #end
+#end
+{}
+
+],
+"tableDynamicData": true,
+"tableList": [],
+"tableShowSelection": true,
+"tableShowOperation": true,
+"tableOperationWith": 160,
+"tableShowView": true,
+"tableBtnView": "查看",
+"tableShowEdit": true,
+"tableBtnEdit": "修改",
+"tableShowDel": true,
+"tableBtnDel": "删除",
+"tableOperation": [],
+"editRouteName": "genericPage-universalOperate",
+"viewRouteName": "genericPage-universalOperate",
+"extendsObj": {}
+},
+"formData": {
+"fields":[
+#foreach($column in $columns)
+    #if($column.edit && !$column.pk)
+        #if(($column.usableColumn) || (!$column.superColumn))
+            #set($field=$column.javaField)
+            #set($parentheseIndex=$column.columnComment.indexOf("，"))
+            #if($parentheseIndex != -1)
+                #set($comment=$column.columnComment.substring(0, $parentheseIndex))
+            #else
+                #set($comment=$column.columnComment)
+            #end
+            #set($isRequired=$column.isRequired)
+            #if($column.edit && !$column.pk)
+                #if(($column.usableColumn) || (!$column.superColumn))
+                    #set($dictType=$column.dictType)
+                    #if($column.htmlType == "input")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "inputNumber")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "imageUpload")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "fileUpload")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "editor")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" != $dictType)
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "${dictType}" },
+                    #elseif(($column.htmlType == "select" || $column.htmlType == "checkbox" || $column.htmlType == "radio") && "" == $dictType )
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "datetime")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "textarea")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #elseif($column.htmlType == "switch")
+                    { "field": "${field}", "label": "${comment}", "isRequired": "${isRequired}", "htmlType": "${column.htmlType}", "dictType": "" },
+                    #else
+                    #end
+                #end
+            #end
+        #end
+    #end
+#end
+{}
+],
+"formFields": [],
+"formApi": {
+"saveApiUrl": "/api/${moduleName}/${businessName}/save",
+"saveApiParams": {},
+"updateApiUrl": "/api/${moduleName}/${businessName}/update",
+"updateApiParams": {},
+"detailApiUrl": "/api/${moduleName}/${businessName}",
+"detailApiParams": {}
+}
+}
+}', null, null, null, now());
+
+-- 菜单对应按钮SQL
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}+1, ${menuId}, '${defAppId}', '查看', '#', 'ADMIN', null, null, 3, null, '${moduleName}:${businessName}:list,${moduleName}:${businessName}:info', 'BUTTON', null, null, null, null, null, null, null, 'CK', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '查看', null, null);
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}+2, ${menuId}, '${defAppId}', '新增', '#', 'ADMIN', null, null, 3, null, '${moduleName}:${businessName}:save', 'BUTTON', null, null, null, null, null, null, null, 'XZ', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '新增', null, null);
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}+3, ${menuId}, '${defAppId}', '修改', '#', 'ADMIN', null, null, 3, null, '${moduleName}:${businessName}:update', 'BUTTON', null, null, null, null, null, null, null, 'XG', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '修改', null, null);
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}+4, ${menuId}, '${defAppId}', '删除', '#', 'ADMIN', null, null, 3, null, '${moduleName}:${businessName}:delete', 'BUTTON', null, null, null, null, null, null, null, 'SC', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '删除', null, null);
+insert into ADMIN_MENU (MENU_ID, PARENT_ID, APP_ID, NAME, ENAME, TYPE, USER_ID, CODE, MENU_LEVEL, SUB_COUNT, PERMS, URL_TYPE, URL, ICON, POP_POSITION, IMAGE_PATH, CSS, JS_EVENT, MENU_SEQ, SHORT_CUT, IS_LEAF, IS_DISPLAY, IS_PROTECT, IS_DISABLED, IS_CHECK, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2)
+values (${menuId}+5, ${menuId}, '${defAppId}', '导出', '#', 'ADMIN', null, null, 3, null, '${moduleName}:${businessName}:export', 'BUTTON', null, null, null, null, null, null, null, 'DC', 0, 1, 1, 0, 0, 10, now(), now(), 0, null, '导出', null, null);
+
