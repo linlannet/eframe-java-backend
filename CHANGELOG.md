@@ -1,4 +1,11 @@
 
+### 版本号：1.1.1
+- 更新日期：2025-08-25
+- 更新内容：
+1. 修复发布web文件过大
+2. 增加每个pom文件中必要的配置，name，develop，version，package等
+3. 增加module的扩展，后续增加sms和social融合模块
+
 ### 版本号：1.1.0
 - 更新日期：2025-08-25
 - 更新内容：
@@ -10,6 +17,7 @@
    2. [EFRAME-API-MD](./scripts/doc/ent-frame.html.md)
 5. 增加数据库默认结构SQL  [DB_STRUCTURE](./scripts/sql/db_structure.sql)
 6. 配置代码文件增加Formatter和Licence
+
 
 ### 版本号：1.0.0
 - 更新日期：2025-08-23

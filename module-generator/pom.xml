@@ -24,16 +24,39 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>module-generator</artifactId>
-
+    <version>1.1.1</version>
+    <packaging>jar</packaging>
+    <name>module-generator</name>
     <description>
         generator代码生成模块
     </description>
-
+    <url>https://gitee.com/linlannet/eframe-java-backend.git</url>
+    <licenses>
+        <license>
+            <name>Apache-2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://gitee.com/linlannet/eframe-java-backend/tree/master/module-generator</url>
+        <connection>scm:git:git://gitee.com/linlannet/eframe-java-backend.git</connection>
+    </scm>
+    <developers>
+        <developer>
+            <id>linlan</id>
+            <name>linlan info</name>
+            <email>linlannet@163.com</email>
+            <organization>Linlan Corporation</organization>
+            <roles>
+                <role>Member</role>
+            </roles>
+            <timezone>Asia/Beijing</timezone>
+        </developer>
+    </developers>
     <dependencies>
 
         <!-- velocity代码生成使用模板 -->
