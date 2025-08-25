@@ -63,7 +63,7 @@
         from SYS_ROLE B
                  left join ADMIN_USER_ROLE AUR on AUR.ROLE_ID = B.ROLE_ID
                  left join ADMIN_USER UR on UR.ADMIN_ID = AUR.ADMIN_ID
-                 left join ADMIN_DEPT AD on UR.DEPT_ID = AD.DEPT_ID
+                 left join ADMIN_DEPT DEPT on UR.DEPT_ID = DEPT.DEPT_ID
 		WHERE B.STATUS = 1 and UR.USERNAME = #{username}
         <if test="currAppId != null and currAppId != ''">
             AND B.APP_ID = #{currAppId}

@@ -242,7 +242,7 @@
     <select id="getPageDto" resultMap="scheduleInfoDtoMap">
         SELECT
         B.SCHEDULE_ID, B.APP_ID, B.JOB_SOURCE, B.JOB_TYPE, B.SCHEDULE_NAME, B.OBJECT_NAME, B.METHOD_NAME, B.PARAMS, B.CRON_EXPRESSION, B.JOB_CONFIG, B.START_DATE, B.END_DATE, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , GA.NAME AS appName
+        , APP.NAME AS appName
         FROM SCHEDULE_INFO B
         <include refid="commonUnionJoin"></include>
         WHERE 1=1
@@ -253,7 +253,7 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        LEFT JOIN BASE_APP GA ON GA.APP_ID = B.APP_ID
+        LEFT JOIN BASE_APP APP ON APP.APP_ID = B.APP_ID
     </sql>
 
     <!-- get dto with input id，通过ID，查询dto对象 -->

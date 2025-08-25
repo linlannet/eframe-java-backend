@@ -333,8 +333,8 @@
     <select id="getPageDto" resultMap="sysMenuDtoMap">
         SELECT
         B.MENU_ID, B.PARENT_ID, B.APP_ID, B.NAME, B.ENAME, B.SNAME, B.IS_PROTECT, B.TYPE, B.CODE, B.MENU_LEVEL, B.SUB_COUNT, B.PERMS, B.URL_TYPE, B.URL, B.ICON, B.POP_POSITION, B.IMAGE_PATH, B.CSS, B.JS_EVENT, B.MENU_SEQ, B.SHORT_CUT, B.IS_LEAF, B.IS_DISPLAY, B.IS_DISABLED, B.IS_CHECK, B.PRIORITY, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , AM.NAME parentName
-        , GA.NAME appName
+        , MENU.NAME parentName
+        , APP.NAME appName
         FROM SYS_MENU B
         <include refid="commonUnionJoin"></include>
 
@@ -346,16 +346,16 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        LEFT JOIN SYS_MENU AM ON B.PARENT_ID = AM.MENU_ID
-        LEFT JOIN BASE_APP GA ON B.APP_ID = GA.APP_ID
+        LEFT JOIN SYS_MENU MENU ON B.PARENT_ID = MENU.MENU_ID
+        LEFT JOIN BASE_APP APP ON B.APP_ID = APP.APP_ID
     </sql>
 
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="sysMenuDtoMap">
         SELECT
         B.MENU_ID, B.PARENT_ID, B.APP_ID, B.NAME, B.ENAME, B.SNAME, B.IS_PROTECT, B.TYPE, B.CODE, B.MENU_LEVEL, B.SUB_COUNT, B.PERMS, B.URL_TYPE, B.URL, B.ICON, B.POP_POSITION, B.IMAGE_PATH, B.CSS, B.JS_EVENT, B.MENU_SEQ, B.SHORT_CUT, B.IS_LEAF, B.IS_DISPLAY, B.IS_DISABLED, B.IS_CHECK, B.PRIORITY, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , AM.NAME parentName
-        , GA.NAME appName
+        , MENU.NAME parentName
+        , APP.NAME appName
         FROM SYS_MENU B
         <include refid="commonUnionJoin"></include>
         WHERE B.MENU_ID = #{value}
@@ -657,7 +657,7 @@
         <if test="roleId!='' and roleId !=null">
             ,(SELECT COUNT(1) FROM SYS_ROLE_MENU WHERE MENU_ID = B.MENU_ID AND ROLE_ID = #{roleId}) AS checked
         </if>
-        ,(SELECT COUNT(1) FROM SYS_MENU AM WHERE AM.PARENT_ID = B.MENU_ID ) AS childNum
+        ,(SELECT COUNT(1) FROM SYS_MENU MENU WHERE MENU.PARENT_ID = B.MENU_ID ) AS childNum
         from SYS_MENU B
         where 1 = 1 and B.DEL_FLAG = 0
         <if test="gnType!='' and gnType != null">
@@ -677,9 +677,9 @@
         <if test="roleId!='' and roleId !=null">
             ,(SELECT COUNT(1) FROM SYS_ROLE_MENU WHERE MENU_ID = B.MENU_ID AND ROLE_ID = #{roleId}) AS checked
         </if>
-        ,(SELECT COUNT(1) FROM SYS_MENU AM WHERE AM.PARENT_ID = B.MENU_ID ) AS childNum
+        ,(SELECT COUNT(1) FROM SYS_MENU MENU WHERE MENU.PARENT_ID = B.MENU_ID ) AS childNum
         <if test="showButton!='' and 'N'.toString()==showButton">
-            AND AM.URL_TYPE != 'BUTTON'
+            AND MENU.URL_TYPE != 'BUTTON'
         </if>
         ) AS childNum
         from SYS_MENU B

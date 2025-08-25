@@ -76,7 +76,7 @@
                 <!-- mysql为limit函数进行处理 -->
                 <choose>
                     <when test='_databaseId == "mysql" or _databaseId == "xg"'>
-                        (SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName from MEMBER_ACCOUNT B
+                        (SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName from MEMBER_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                         WHERE 1 = 1
                         <include refid="commonList"></include>
@@ -88,7 +88,7 @@
                         ( SELECT ROW_NUMBER() OVER (
                             <include refid="getListOrderBy"></include>
                         ) AS RN, A.* FROM (
-                            SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName FROM
+                            SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName FROM
                             MEMBER_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                             WHERE 1 = 1
@@ -99,7 +99,7 @@
                 </choose>
             </when>
             <otherwise>
-                ( select B.*,ORG.NAME as inOrganName, GA.NAME as appName from MEMBER_ACCOUNT B
+                ( select B.*,ORG.NAME as inOrganName, APP.NAME as appName from MEMBER_ACCOUNT B
                 <include refid="commonUnionJoin"></include>
                 WHERE 1 = 1
                 <include refid="commonList"></include>
@@ -154,7 +154,7 @@
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
     LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
-    LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+    LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
     </sql>
     <!-- sql commonList 通过输入的条件，获取返回的list列表对象
     -->
@@ -320,10 +320,10 @@
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="coreAccountDtoMap">
 
-        SELECT B.*,ORG.NAME as inOrganName, GA.NAME as appName
+        SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName
         FROM MEMBER_ACCOUNT B
                  LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
-                 LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+                 LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE ACCOUNT_ID = #{value}
     </select>
 
@@ -368,7 +368,7 @@
     <select id="getKeyValueList" resultMap="coreAccountKvMap">
         SELECT B.ACCOUNT_ID AS cmsKey, B.NAME as cmsValue from MEMBER_ACCOUNT B
         LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
-        LEFT JOIN BASE_APP GA on B.APP_ID = GA.APP_ID
+        LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE 1 = 1
         <!-- 公共查询条件-->
         <if test='existKey != null and existKey !=""'>
@@ -486,12 +486,12 @@
     </resultMap>
 
     <select id="getCoreOrganList" resultMap="organBaseMap">
-        select B.ORGAN_ID,B.NAME,GOE.SNAME,GOE.TEL,GOE.ADDRESS,SO.ORGAN_TYPE,
-        GOE.CONTACT_NAME,GOE.CONTACT_MOBILE,GOE.CONTACT_EMAIL,B.UNION_CODE,
+        select B.ORGAN_ID,B.NAME,ORGEXT.SNAME,ORGEXT.TEL,ORGEXT.ADDRESS,SO.ORGAN_TYPE,
+        ORGEXT.CONTACT_NAME,ORGEXT.CONTACT_MOBILE,ORGEXT.CONTACT_EMAIL,B.UNION_CODE,
         B.DEL_FLAG,B.CREATE_TIME,B.LAST_TIME,B.PRIORITY
         from BASE_ORGAN B
-        LEFT JOIN BASE_ORGAN_EXT GOE on GOE.ORGAN_ID = B.ORGAN_ID
-        LEFT JOIN CORE_ORGAN SO ON B.ORGAN_ID = SO.SYSORGAN_ID
+        LEFT JOIN BASE_ORGAN_EXT ORGEXT on ORGEXT.ORGAN_ID = B.ORGAN_ID
+        LEFT JOIN CORE_ORGAN CORG ON B.ORGAN_ID = CORG.SYSORGAN_ID
         WHERE 1=1
         <if test="organName != null and ''!=organName">
             AND  B.NAME like concat(concat('%',#{organName}),'%')
@@ -500,24 +500,24 @@
             AND  B.DEL_FLAG = #{delFlag}
         </if>
         <if test="wlType != null and ''!=wlType">
-            AND  SO.ORGAN_TYPE like concat(concat('%',#{wlType}),'%')
+            AND  CORG.ORGAN_TYPE like concat(concat('%',#{wlType}),'%')
         </if>
         <if test="q != null and ''!=q">
             AND  (B.NAME like concat(concat('%',#{q}),'%')
-            or GOE.SNAME like concat(concat('%',#{q}),'%')
-            or GOE.ADDRESS like concat(concat('%',#{q}),'%')
+            or ORGEXT.SNAME like concat(concat('%',#{q}),'%')
+            or ORGEXT.ADDRESS like concat(concat('%',#{q}),'%')
             )
         </if>
         order by B.PRIORITY asc,B.CREATE_TIME DESC
     </select>
 
     <select id="getCoreOrganInfo" resultMap="organBaseMap">
-        select B.ORGAN_ID,B.NAME,GOE.SNAME,GOE.TEL,GOE.ADDRESS,SO.ORGAN_TYPE,
-               GOE.CONTACT_NAME,GOE.CONTACT_MOBILE,GOE.CONTACT_EMAIL,B.UNION_CODE,B.DESCRIPTION,
+        select B.ORGAN_ID,B.NAME,ORGEXT.SNAME,ORGEXT.TEL,ORGEXT.ADDRESS,CORG.ORGAN_TYPE,
+               ORGEXT.CONTACT_NAME,ORGEXT.CONTACT_MOBILE,ORGEXT.CONTACT_EMAIL,B.UNION_CODE,B.DESCRIPTION,
                B.DEL_FLAG,B.CREATE_TIME,B.LAST_TIME,B.PRIORITY
         from BASE_ORGAN B
-                 LEFT JOIN BASE_ORGAN_EXT GOE on GOE.ORGAN_ID = B.ORGAN_ID
-                 LEFT JOIN CORE_ORGAN SO ON B.ORGAN_ID = SO.SYSORGAN_ID
+                 LEFT JOIN BASE_ORGAN_EXT ORGEXT on ORGEXT.ORGAN_ID = B.ORGAN_ID
+                 LEFT JOIN CORE_ORGAN CORG ON B.ORGAN_ID = CORG.SYSORGAN_ID
         WHERE 1=1
           AND B.ORGAN_ID=#{organId}
     </select>

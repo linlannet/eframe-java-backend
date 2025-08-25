@@ -33,7 +33,7 @@ import net.linlan.sys.role.entity.SysRole;
 import net.linlan.utils.entity.BaseEntity;
 
 /**
- * 角色表 ADMIN_ROLE
+ * 角色表 SYS_ROLE
  * 
  * @author Linlan
  */

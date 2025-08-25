@@ -239,9 +239,9 @@
     <select id="getPageDto" resultMap="coreDepttypeDtoMap">
         SELECT
         B.DEPTTYPE_ID, B.PARENT_ID, B.ORGTYPE_ID, B.AREATYPE_ID, B.NAME, B.SNAME, B.CODE, B.LFT, B.RGT, B.SEARCH_CODE, B.DISP_FLAG, B.IS_DISABLED, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DESCRIPTION
-        ,SD.NAME as parentName
-        , SO.NAME as orgtypeName
-        , GA.NAME as areatypeName
+        ,DEPTTYPE.NAME as parentName
+        , ORGTYPE.NAME as orgtypeName
+        , AREATYPE.NAME as areatypeName
         FROM CORE_DEPTTYPE B
         <include refid="commonUnionJoin"></include>
         WHERE 1=1
@@ -252,18 +252,18 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        left join CORE_DEPTTYPE SD on B.PARENT_ID = SD.DEPTTYPE_ID
-        left join CORE_ORGTYPE SO on B.ORGTYPE_ID = SO.ORGTYPE_ID
-        left join BASE_AREATYPE GA  on B.AREATYPE_ID = GA.AREATYPE_ID
+        left join CORE_DEPTTYPE DEPTTYPE on B.PARENT_ID = DEPTTYPE.DEPTTYPE_ID
+        left join CORE_ORGTYPE ORGTYPE on B.ORGTYPE_ID = ORGTYPE.ORGTYPE_ID
+        left join BASE_AREATYPE AREATYPE  on B.AREATYPE_ID = AREATYPE.AREATYPE_ID
     </sql>
 
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="coreDepttypeDtoMap">
         SELECT
         B.DEPTTYPE_ID, B.PARENT_ID, B.ORGTYPE_ID, B.AREATYPE_ID, B.NAME, B.SNAME, B.CODE, B.LFT, B.RGT, B.SEARCH_CODE, B.DISP_FLAG, B.IS_DISABLED, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DESCRIPTION
-        ,SD.NAME as parentName
-        , SO.NAME as orgtypeName
-        , GA.NAME as areatypeName
+        ,DEPTTYPE.NAME as parentName
+        , ORGTYPE.NAME as orgtypeName
+        , AREATYPE.NAME as areatypeName
         FROM CORE_DEPTTYPE B
         <include refid="commonUnionJoin"></include>
         WHERE B.DEPTTYPE_ID = #{value}

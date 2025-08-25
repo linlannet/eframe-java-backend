@@ -40,7 +40,7 @@
         (SELECT count(*) AS TOTAL from BASE_ORGAN) A,
         (SELECT count(*) AS TOTAL from ADMIN_DEPT ) B,
         (SELECT count(*) AS TOTAL from ADMIN_USER ) C,
-        (SELECT count(*) AS TOTAL from ADMIN_ROLE) D,
+        (SELECT count(*) AS TOTAL from SYS_ROLE) D,
         (SELECT count(*) AS TOTAL from BASE_DIC_TYPE) E,
         (SELECT count(*) AS TOTAL from BASE_APP) F,
         (SELECT count(*) AS TOTAL from COMM_FILE)G,

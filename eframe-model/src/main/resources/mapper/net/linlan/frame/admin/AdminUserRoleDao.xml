@@ -38,12 +38,12 @@
     </resultMap>
 
     <select id="selectUserRoleListByAdminId" resultMap="adminUserRoleDtoMap">
-        select distinct B.ADMIN_ID, B.ROLE_ID, AD.DEPT_ID, AD.ORGAN_ID, AR.NAME AS ROLE_NAME, AD.NAME AS DEPT_NAME,ORG.NAME AS ORGAN_NAME
+        select distinct B.ADMIN_ID, B.ROLE_ID, DEPT.DEPT_ID, DEPT.ORGAN_ID, RO.NAME AS ROLE_NAME, DEPT.NAME AS DEPT_NAME,ORG.NAME AS ORGAN_NAME
         from ADMIN_USER_ROLE B
-        left join ADMIN_ROLE AR on B.ROLE_ID = AR.ROLE_ID
-        left join ADMIN_USER AU on B.ADMIN_ID = AU.ADMIN_ID
-        left join ADMIN_DEPT AD on AU.DEPT_ID = AD.DEPT_ID
-        left join BASE_ORGAN ORG on AD.ORGAN_ID = ORG.ORGAN_ID
+        left join SYS_ROLE RO on B.ROLE_ID = RO.ROLE_ID
+        left join ADMIN_USER UR on B.ADMIN_ID = UR.ADMIN_ID
+        left join ADMIN_DEPT DEPT on UR.DEPT_ID = DEPT.DEPT_ID
+        left join BASE_ORGAN ORG on DEPT.ORGAN_ID = ORG.ORGAN_ID
         where 1 = 1
         AND B.ADMIN_ID = #{adminId}
     </select>

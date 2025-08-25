@@ -301,7 +301,7 @@
     <select id="getPageDto" resultMap="baseOrganDtoMap">
         SELECT
         B.ORGAN_ID, B.XZQH_ID, B.NAME, B.SOURCE, B.UNION_CODE, B.ORGAN_CODE, B.CREATE_TYPE, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , GX.NAME as xzqhName
+        , XZQH.NAME as xzqhName
         FROM BASE_ORGAN B
         <include refid="commonUnionJoin"></include>
         WHERE 1=1
@@ -314,7 +314,7 @@
     <select id="getDtoById" resultMap="baseOrganDtoMap">
         SELECT
         B.ORGAN_ID, B.XZQH_ID, B.NAME, B.SOURCE, B.UNION_CODE, B.ORGAN_CODE, B.CREATE_TYPE, B.CREATE_TIME, B.LAST_TIME, B.PRIORITY, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , GX.NAME as xzqhName
+        , XZQH.NAME as xzqhName
         FROM BASE_ORGAN B
         <include refid="commonUnionJoin"></include>
         WHERE ORGAN_ID = #{value}
@@ -322,7 +322,7 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        left join BASE_XZQH GX on B.XZQH_ID = GX.XZQH_ID
+        left join BASE_XZQH XZQH on B.XZQH_ID = XZQH.XZQH_ID
     </sql>
 
     <select id="getExportList" resultMap="baseOrganDtoMap">

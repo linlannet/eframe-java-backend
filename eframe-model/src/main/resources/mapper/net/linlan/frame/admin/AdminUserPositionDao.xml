@@ -36,7 +36,7 @@
 
     <select id="selectPostListByAdminId" parameterType="Long" resultType="Long">
         select B.POSITION_ID
-        from ADMIN_POSITION B
+        from SYS_POSITION B
                  left join ADMIN_USER_POSITION up on up.POSITION_ID = B.POSITION_ID
                  left join ADMIN_USER UR on UR.ADMIN_ID = up.ADMIN_ID
         where UR.ADMIN_ID = #{adminId}
@@ -76,7 +76,7 @@
 
     <select id="selectPositionsByUsername" parameterType="String" resultMap="adminPositionMap">
         select B.POSITION_ID, B.NAME, B.CODE
-        from ADMIN_POSITION B
+        from SYS_POSITION B
                  left join ADMIN_USER_POSITION AUP on AUP.POSITION_ID = B.POSITION_ID
                  left join ADMIN_USER UR on UR.ADMIN_ID = AUP.ADMIN_ID
         where UR.USERNAME = #{username}

@@ -322,8 +322,8 @@
     <select id="getPageDto" resultMap="baseDictionaryDtoMap">
         SELECT
         B.CDD_ID, B.TYPE_CODE, B.PARENT_ID, B.NAME, B.SNAME, B.CDD_VALUE, B.CDD_LEVEL, B.SEARCH_CODE, B.DISP_FLAG, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
-        , GDT.NAME as typeCodeName
-        , GD.NAME as parentName
+        , DICTYPE.NAME as typeCodeName
+        , DIC.NAME as parentName
         , (select count(*) from BASE_DICTIONARY where PARENT_ID = B.CDD_ID) as childNum
         FROM BASE_DICTIONARY B
         <include refid="commonUnionJoin"></include>
@@ -341,18 +341,18 @@
     <select id="getDtoById" resultMap="baseDictionaryDtoMap">
         SELECT
         CDD_ID, TYPE_CODE, PARENT_ID, NAME, SNAME, CDD_VALUE, CDD_LEVEL, SEARCH_CODE, DISP_FLAG, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION
-        , (select GD.NAME from BASE_DICTIONARY GD where GD.CDD_ID = B.PARENT_ID) as parentName
+        , (select DIC.NAME from BASE_DICTIONARY DIC where DIC.CDD_ID = B.PARENT_ID) as parentName
         FROM BASE_DICTIONARY B
         WHERE CDD_ID = #{value}
     </select>
 
     <sql id="commonUnionJoin">
-        left join BASE_DIC_TYPE GDT on  B.TYPE_CODE = GDT.TYPE_ID
-        left join BASE_DICTIONARY GD on B.PARENT_ID = GD.CDD_ID
+        left join BASE_DIC_TYPE DICTYPE on  B.TYPE_CODE = DICTYPE.TYPE_ID
+        left join BASE_DICTIONARY DIC on B.PARENT_ID = DIC.CDD_ID
     </sql>
 
     <sql id="joinCommonList">
-        <if test="typeMode != null"> AND GDT.TYPE_MODE = #{typeMode} </if>
+        <if test="typeMode != null"> AND DICTYPE.TYPE_MODE = #{typeMode} </if>
     </sql>
 
 

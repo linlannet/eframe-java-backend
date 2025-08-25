@@ -360,11 +360,11 @@
                     <includes>
                         <!--格式为：groupId:artifactId;参考如下-->
                         <include>net.linlan.commons:commons-core</include>
-                        <include>net.linlan.ent:eframe-support</include>
-                        <include>net.linlan.ent:module-generator</include>
-                        <include>net.linlan.ent:eframe-core</include>
-                        <include>net.linlan.ent:eframe-view</include>
-                        <include>net.linlan.ent:eframe-api</include>
+                        <include>net.linlan.eframe:eframe-support</include>
+                        <include>net.linlan.eframe:eframe-model</include>
+                        <include>net.linlan.eframe:eframe-core</include>
+                        <include>net.linlan.eframe:eframe-view</include>
+                        <include>net.linlan.eframe:eframe-api</include>
                     </includes>
                 </configuration>
                 <executions>

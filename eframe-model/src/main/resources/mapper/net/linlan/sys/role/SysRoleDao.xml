@@ -247,8 +247,8 @@
     <select id="getPageDto" resultMap="sysRoleDtoMap">
         SELECT
         B.ROLE_ID, B.ROLETYPE_ID, B.APP_ID, B.CREATOR_ID, B.NAME, B.CODE, B.PRIORITY, B.IS_REGULAR, B.IS_SUPER, B.IS_PUBLIC, B.CREATE_TIME, B.STATUS, B.DESCRIPTION
-        , GA.NAME as appName
-        , SR.NAME as roletypeName
+        , APP.NAME as appName
+        , ROLETYPE.NAME as roletypeName
         FROM SYS_ROLE B
         <include refid="commonUnionJoin"></include>
         WHERE 1 = 1
@@ -259,34 +259,34 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        left join BASE_APP GA on B.APP_ID = GA.APP_ID
-        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join BASE_APP APP on B.APP_ID = APP.APP_ID
+        left join CORE_ROLETYPE ROLETYPE on B.ROLETYPE_ID = ROLETYPE.ROLETYPE_ID
     </sql>
 
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="sysRoleDtoMap">
         SELECT
         B.ROLE_ID, B.ROLETYPE_ID, B.APP_ID, B.CREATOR_ID, B.NAME, B.CODE, B.PRIORITY, B.IS_REGULAR, B.IS_SUPER, B.IS_PUBLIC, B.CREATE_TIME, B.STATUS, B.DESCRIPTION
-        , GD.NAME as roletypeName
-        , AR.NAME as parentName
+        , DIC.NAME as roletypeName
+        , ROLETYPE.NAME as parentName
         FROM SYS_ROLE B
-        LEFT JOIN BASE_DICTIONARY GD
+        LEFT JOIN BASE_DICTIONARY DIC
         <choose>
             <when test='_databaseId == "dm8" or _databaseId == "xg"'>
-                ON GD.CDD_VALUE = cast(B.ROLETYPE_ID as varchar)
+                ON DIC.CDD_VALUE = cast(B.ROLETYPE_ID as varchar)
             </when>
             <otherwise>
-                ON GD.CDD_VALUE = B.ROLETYPE_ID
+                ON DIC.CDD_VALUE = B.ROLETYPE_ID
             </otherwise>
         </choose>
 
-        LEFT JOIN SYS_ROLE AR
+        LEFT JOIN SYS_ROLE RO
         <choose>
             <when test='_databaseId == "dm8" or _databaseId == "xg"'>
-                ON cast(AR.ROLE_ID as varchar) = B.DESCRIPTION
+                ON cast(RO.ROLE_ID as varchar) = B.DESCRIPTION
             </when>
             <otherwise>
-                ON AR.ROLE_ID = B.DESCRIPTION
+                ON RO.ROLE_ID = B.DESCRIPTION
             </otherwise>
         </choose>
         WHERE B.ROLE_ID = #{value}
@@ -295,14 +295,14 @@
     <!--getTreeByRoletype 树结构-->
     <select id="getTreeByRoletype" resultType="net.linlan.sys.role.dto.RoleTypeCode">
         SELECT B.* FROM (
-        select SR.ROLETYPE_ID as id, NULL as parentId, 1 as isRoleType, SR.NAME as name, SR.PRIORITY as priority
-        from CORE_ROLETYPE SR
-        where SR.DEL_FLAG = 0
+        select ROLETYPE.ROLETYPE_ID as id, NULL as parentId, 1 as isRoleType, ROLETYPE.NAME as name, ROLETYPE.PRIORITY as priority
+        from CORE_ROLETYPE ROLETYPE
+        where ROLETYPE.DEL_FLAG = 0
         union all
-        select AR.ROLE_ID as id, AR.ROLETYPE_ID as parentId, 0 as isRoleType, AP.NAME as name, AP.PRIORITY as priority
-        from SYS_ROLE AR where 1=1
+        select RO.ROLE_ID as id, RO.ROLETYPE_ID as parentId, 0 as isRoleType, POS.NAME as name, POS.PRIORITY as priority
+        from SYS_ROLE RO where 1=1
         <if test='appId != null and appId != ""'>
-            AND AR.APP_ID = #{appId}
+            AND RO.APP_ID = #{appId}
         </if>
         ) B
         ORDER BY B.PRIORITY ASC
@@ -314,22 +314,22 @@
         <result property="searchCode" column="searchCode"/>
     </resultMap>
     <select id="getRoleChildTree" resultMap="childTreeMap">
-        select SR.ROLETYPE_ID as id,SR.NAME as label
-        from CORE_ROLETYPE SR
-        where SR.DEL_FLAG = 0
+        select ROLETYPE.ROLETYPE_ID as id, ROLETYPE.NAME as label
+        from CORE_ROLETYPE ROLETYPE
+        where ROLETYPE.DEL_FLAG = 0
         <if test='appId != null and appId.trim() != ""'>
-            AND AR.APP_ID = #{appId}
+            AND RO.APP_ID = #{appId}
         </if>
         ORDER BY priority ASC
     </select>
 
     <!--获取角色分类列表-->
     <select id="getRoletypeList" resultType="net.linlan.sys.role.dto.RoleTypeCode">
-        select SR.ROLETYPE_ID as id, SR.NAME as name, SR.TYPE as type, SR.CODE as code, SR.PRIORITY as priority
-        from CORE_ROLETYPE SR
-        where SR.DEL_FLAG = 0
+        select ROLETYPE.ROLETYPE_ID as id, ROLETYPE.NAME as name, ROLETYPE.TYPE as type, ROLETYPE.CODE as code, ROLETYPE.PRIORITY as priority
+        from CORE_ROLETYPE ROLETYPE
+        where ROLETYPE.DEL_FLAG = 0
         <if test='appId != null and appId.trim() != ""'>
-            AND AR.APP_ID = #{appId}
+            AND RO.APP_ID = #{appId}
         </if>
         ORDER BY priority ASC
     </select>
@@ -528,10 +528,10 @@
 
     <select id="getSysMenuList" resultMap="sysRoleListMap">
         SELECT B.ROLE_ID, B.NAME,B.CODE,B.PRIORITY,B.CREATE_TIME,B.STATUS,B.DESCRIPTION,
-        GA.NAME as appName, SR.NAME as roletypeName
+        APP.NAME as appName, ROLETYPE.NAME as roletypeName
         FROM SYS_ROLE B
-        left join BASE_APP GA on B.APP_ID = GA.APP_ID
-        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join BASE_APP APP on B.APP_ID = APP.APP_ID
+        left join CORE_ROLETYPE ROLETYPE on B.ROLETYPE_ID = ROLETYPE.ROLETYPE_ID
         WHERE 1 = 1
         <include refid="commonList"></include>
         ORDER BY B.PRIORITY ASC,B.CREATE_TIME DESC

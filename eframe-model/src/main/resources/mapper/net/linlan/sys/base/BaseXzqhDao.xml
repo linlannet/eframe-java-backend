@@ -308,8 +308,8 @@
     <select id="getPageDto" resultMap="baseXzqhDtoMap">
         SELECT
         B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
-        , GX.NAME as parentName
-        , GA.NAME as areatypeName
+        , XZQH.NAME as parentName
+        , AREATYPE.NAME as areatypeName
         , GC.NAME as countryName
         FROM BASE_XZQH B
         <include refid="commonUnionJoin"></include>
@@ -321,8 +321,8 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        left join BASE_XZQH GX on B.PARENT_ID = GX.XZQH_ID
-            left join BASE_AREATYPE GA on B.AREATYPE_ID = GA.AREATYPE_ID
+        left join BASE_XZQH XZQH on B.PARENT_ID = XZQH.XZQH_ID
+            left join BASE_AREATYPE AREATYPE on B.AREATYPE_ID = AREATYPE.AREATYPE_ID
             left join BASE_COUNTRY GC on B.COUNTRY_ID = GC.COUNTRY_ID
     </sql>
 
@@ -330,8 +330,8 @@
     <select id="getDtoById" resultMap="baseXzqhDtoMap">
         SELECT
         B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
-        , GX.NAME as parentName
-        , GA.NAME as areatypeName
+        , XZQH.NAME as parentName
+        , AREATYPE.NAME as areatypeName
         , GC.NAME as countryName
         FROM BASE_XZQH B
         <include refid="commonUnionJoin"></include>
@@ -341,8 +341,8 @@
     <select id="getDtoByParentId" resultMap="baseXzqhDtoMap">
         SELECT
         B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
-        , GX.NAME as parentName
-        , GA.NAME as areatypeName
+        , XZQH.NAME as parentName
+        , AREATYPE.NAME as areatypeName
         , GC.NAME as countryName
         FROM BASE_XZQH B
         <include refid="commonUnionJoin"></include>
@@ -352,8 +352,8 @@
     <select id="getDtoByCode" resultMap="baseXzqhDtoMap">
         SELECT
         B.XZQH_ID, B.PARENT_ID, B.COUNTRY_ID, B.AREATYPE_ID, B.LFT, B.RGT, B.CODE, B.NAME, B.NAME_TOTAL, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.IS_DISPLAY, B.HAS_CONTENT, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION
-        , GX.NAME as parentName
-        , GA.NAME as areatypeName
+        , XZQH.NAME as parentName
+        , AREATYPE.NAME as areatypeName
         , GC.NAME as countryName
         FROM BASE_XZQH B
         <include refid="commonUnionJoin"></include>

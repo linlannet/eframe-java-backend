@@ -414,7 +414,7 @@
         <if test="roleId!='' and roleId !=null">
             ,(SELECT COUNT(1) FROM ADMIN_ROLE_DEPT WHERE DEPT_ID = B.DEPT_ID AND ROLE_ID = #{roleId}) AS checked
         </if>
-        ,(SELECT COUNT(1) FROM ADMIN_DEPT AM WHERE AM.PARENT_ID = B.DEPT_ID and AM.DEL_FLAG = 0
+        ,(SELECT COUNT(1) FROM ADMIN_DEPT DEPT WHERE DEPT.PARENT_ID = B.DEPT_ID and DEPT.DEL_FLAG = 0
         ) AS childNum
         from ADMIN_DEPT B
         where 1 = 1 and B.DEL_FLAG = 0

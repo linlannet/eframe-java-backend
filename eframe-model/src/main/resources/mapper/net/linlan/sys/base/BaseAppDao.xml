@@ -293,9 +293,9 @@
     <select id="getPageDto" resultMap="baseAppDtoMap">
         SELECT
         B.APP_ID, B.FTP_ID, B.DOMAIN_ID, B.ORGAN_ID, B.XZQH_ID, B.SERTYPE_ID, B.NAME, B.PATH, B.APP_TYPE, B.IS_SITE, B.IS_DISABLED, B.IS_MOBILE_APP, B.STATUS, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , GX.NAME as xzqhName
+        , XZQH.NAME as xzqhName
         FROM BASE_APP B
-        LEFT JOIN BASE_XZQH GX on B.XZQH_ID = GX.XZQH_ID
+        LEFT JOIN BASE_XZQH XZQH on B.XZQH_ID = XZQH.XZQH_ID
         WHERE B.DEL_FLAG = 0
         <include refid="commonList"></include>
         ORDER BY B.PRIORITY ASC
@@ -306,9 +306,9 @@
     <select id="getDtoById" resultMap="baseAppDtoMap">
         SELECT
         B.APP_ID, B.FTP_ID, B.DOMAIN_ID, B.ORGAN_ID, B.XZQH_ID, B.SERTYPE_ID, B.NAME, B.PATH, B.APP_TYPE, B.IS_SITE, B.IS_DISABLED, B.IS_MOBILE_APP, B.STATUS, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
-        , GX.NAME as xzqhName
+        , XZQH.NAME as xzqhName
         FROM BASE_APP B
-        LEFT JOIN BASE_XZQH GX on B.XZQH_ID = GX.XZQH_ID
+        LEFT JOIN BASE_XZQH XZQH on B.XZQH_ID = XZQH.XZQH_ID
         WHERE APP_ID = #{value}
     </select>
 
@@ -333,13 +333,13 @@
 
     <select id="getBaseAppInfoDto" resultMap="baseAppInfoDtoMap">
         SELECT B.APP_ID,B. FTP_ID,B. DOMAIN_ID,B. ORGAN_ID,B. XZQH_ID,B. SERTYPE_ID,B. NAME,B. PATH,B. APP_TYPE,B. IS_SITE,B. IS_DISABLED,B. IS_MOBILE_APP,B. STATUS,B. PRIORITY,B. DESCRIPTION
-        , GF.NAME as ftpName , GS.NAME as sertypeName , GX.NAME as xzqhName, GD.NAME as domainName , GO.NAME as organName
+        , FTP.NAME as ftpName , SERTYPE.NAME as sertypeName , XZQH.NAME as xzqhName, DOMA.NAME as domainName , ORG.NAME as organName
         FROM BASE_APP B
-        left join BASE_FTP GF on B.FTP_ID = GF.FTP_ID
-        left join BASE_SERTYPE GS on B.SERTYPE_ID = GS.SERTYPE_ID
-        left join BASE_XZQH GX  on B.XZQH_ID = GX.XZQH_ID
-        left join BASE_DOMAIN GD  on B.DOMAIN_ID = GD.DOMAIN_ID
-        left join BASE_ORGAN GO  on B.ORGAN_ID = GO.ORGAN_ID
+        left join BASE_FTP FTP on B.FTP_ID = FTP.FTP_ID
+        left join BASE_SERTYPE SERTYPE on B.SERTYPE_ID = SERTYPE.SERTYPE_ID
+        left join BASE_XZQH XZQH  on B.XZQH_ID = XZQH.XZQH_ID
+        left join BASE_DOMAIN DOMA  on B.DOMAIN_ID = DOMA.DOMAIN_ID
+        left join BASE_ORGAN ORG  on B.ORGAN_ID = ORG.ORGAN_ID
         WHERE B.APP_ID = #{id}
     </select>
 
