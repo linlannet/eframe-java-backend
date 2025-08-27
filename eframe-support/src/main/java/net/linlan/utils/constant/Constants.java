@@ -107,7 +107,7 @@ public class Constants {
     /**
      * 令牌前缀
      */
-    public static final String   TOKEN_PREFIX         = "Bearer ";
+    public static final String   TOKEN_PREFIX         = "Linlan ";
 
     /**
      * 令牌前缀
@@ -192,7 +192,7 @@ public class Constants {
     /**
      * 平台用户的ID，对平台信息（前台工程访问信息）进行缓存处理使用的KEY，缓存10分钟
      */
-    public static final String   ACCOUNT_KEY          = "ll-plat-id";
+    public static final String   ACCOUNT_KEY          = "ll-account-id";
 
     /**
      * 站点的ID，对站点信息进行缓存处理使用的KEY，缓存10分钟

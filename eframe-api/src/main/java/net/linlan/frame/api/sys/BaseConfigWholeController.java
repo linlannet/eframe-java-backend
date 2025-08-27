@@ -70,7 +70,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PlatLog(value = "获取参数配置列表")
     @PreAuthorize("@ss.hasPerms('system:configwhole:list')")
-    @GetMapping("config/list")
+    @GetMapping("configwhole/list")
     @Encrypt
     public ResponseResult<Pagination<BaseConfigWholeVo>> list(BaseConfigWholeVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
@@ -91,7 +91,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PlatLog(value = "参数配置导出", category = 52)
     @PreAuthorize("@ss.hasPerms('system:configwhole:export')")
-    @PostMapping("config/export")
+    @PostMapping("configwhole/export")
     @Encrypt
     public void export(HttpServletResponse response, BaseConfigWholeVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
@@ -113,7 +113,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PlatLog(value = "根据参数编号获取详细信息")
     @PreAuthorize("@ss.hasPerms('system:configwhole:detail')")
-    @GetMapping(value = "config/{configId}")
+    @GetMapping(value = "configwhole/{configId}")
     @Encrypt
     public ResponseResult<BaseConfigWholeVo> getInfo(@PathVariable String configId) {
         if (ObjectUtils.isEmpty(configId)) {
@@ -132,7 +132,7 @@ public class BaseConfigWholeController extends BaseController {
      * @return 配置对象
      */
     @PlatLog(value = "根据参数键名查询参数值")
-    @GetMapping(value = "config/configKey/{configKey}")
+    @GetMapping(value = "configwhole/configKey/{configKey}")
     @Encrypt
     public ResponseResult<BaseConfigWholeVo> getConfigKey(@PathVariable String configKey) {
         if (ObjectUtils.isEmpty(configKey)) {
@@ -152,7 +152,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('system:configwhole:save')")
     @PlatLog(value = "新增参数配置", category = 10)
-    @PostMapping("config/save")
+    @PostMapping("configwhole/save")
     @Encrypt
     @LimitScope(name = "baseConfigWholeSave", key = "baseConfigWholeSave")
     public ResponseResult<String> save(@Validated @RequestBody BaseConfigWholeVo input) {
@@ -170,7 +170,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('system:configwhole:update')")
     @PlatLog(value = "修改参数配置", category = 20)
-    @PostMapping("config/update")
+    @PostMapping("configwhole/update")
     @Encrypt
     @LimitScope(name = "baseConfigWholeUpdate", key = "baseConfigWholeUpdate")
     public ResponseResult<String> update(@Validated @RequestBody BaseConfigWholeVo input) {
@@ -189,7 +189,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('system:configwhole:delete')")
     @PlatLog(value = "删除参数配置", category = 40)
-    @PostMapping("config/delete/{configIds}")
+    @PostMapping("configwhole/delete/{configIds}")
     @Encrypt
     @LimitScope(name = "baseConfigWholeDelete", key = "baseConfigWholeDelete")
     public ResponseResult<String> delete(@PathVariable String[] configIds) {
@@ -203,7 +203,7 @@ public class BaseConfigWholeController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('system:configwhole:delete')")
     @PlatLog(value = "刷新参数缓存", category = 21)
-    @PostMapping("config/refreshCache")
+    @PostMapping("configwhole/refreshCache")
     @Encrypt
     @LimitScope(name = "baseConfigWholeRefresh", key = "baseConfigWholeRefresh")
     public ResponseResult<String> refreshCache() {

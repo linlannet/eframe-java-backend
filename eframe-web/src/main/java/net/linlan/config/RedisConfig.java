@@ -242,7 +242,7 @@ class StringRedisSerializer<T> implements RedisSerializer<T> {
     private StringRedisSerializer(Class<T> clazz, Charset charset, String prefix) {
         Assert.notNull(charset, "Charset must not be null!");
         this.charset = charset;
-        this.prefix = prefix + "::";
+        this.prefix = StringUtils.isNotBlank(prefix) ? prefix + ":" : "";
         this.clazz = clazz;
     }
 

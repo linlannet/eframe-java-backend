@@ -34,7 +34,9 @@ import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.script.json.JsonMapUtils;
 import net.linlan.frame.admin.dto.AdminDeptDto;
+import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.entity.AdminDept;
 import net.linlan.frame.admin.param.AdminDeptParam;
 import net.linlan.frame.admin.service.AdminDeptService;
@@ -67,6 +69,22 @@ public class AdminDeptEntryController extends BaseController {
     @GetMapping("dept/list")
     @Encrypt
     public ResponseResult<Page<AdminDeptVo>> list(AdminDeptParam param) {
+
+        List<AdminDept> result = adminDeptService.getList(JsonMapUtils.beanToMap(param));
+        return success(result);
+
+    }
+
+    /**
+     * 获取部门分页
+     * @param param  查询条件
+     * @return  返回对象
+     */
+    @PlatLog(value = "获取部门分页")
+    @PreAuthorize("@ss.hasPerms('admin:menu:list')")
+    @GetMapping("dept/page")
+    @Encrypt
+    public ResponseResult<Page<AdminMenuVo>> page(AdminDeptParam param) {
         Page<AdminDeptDto> result = adminDeptService.getPageDto(param);
         if (ObjectUtils.isEmpty(result)) {
             return empty();

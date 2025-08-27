@@ -25,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
+import net.linlan.utils.constant.CacheConstants;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.*;
@@ -175,7 +176,7 @@ public class RedisService {
      */
     public void setList(String key, Collection values, Long expire) {
         String uuid = RandomUtils.UUID32();
-        String lockKey = "LOCK_KEY:" + key;
+        String lockKey = CacheConstants.LOCK_KEY + key;
         boolean lock = getLock(lockKey, uuid);
         if (lock) {
             redisTemplate.delete(key);
@@ -338,15 +339,6 @@ public class RedisService {
         Boolean lockStatus = this.redisTemplate.opsForValue().setIfAbsent(key, value);
         return lockStatus;
     }
-    //    /**
-    //     *  释放锁
-    //     **/
-    //    public Long releaseLock(String key,Object value){
-    //        String luaScript = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
-    //        RedisScript<Long> redisScript = new DefaultRedisScript<>(luaScript,Long.class);
-    //        Long releaseStatus = (Long)this.redisTemplate.execute(redisScript, Collections.singletonList(key),value);
-    //        return releaseStatus;
-    //    }
 
     /**
      * 调整为支持redis集群

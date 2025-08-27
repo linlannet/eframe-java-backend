@@ -59,7 +59,7 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -124,35 +124,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:49",
-    "lastTime": "2025-08-25 18:01:49",
-    "id": 606,
-    "organId": "60",
-    "parentId": 397,
-    "appId": "60",
-    "depttypeId": 340,
-    "foreignId": "60",
-    "createType": 523,
-    "type": "epa517",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "areaCode": "60457",
-    "organLeader": "0j1iog",
-    "leaderId": "60",
-    "leaderMobile": "(330) 445-7747",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:23",
+    "lastTime": "2025-08-27 22:15:23",
+    "id": 230,
+    "organId": "89",
+    "parentId": 642,
+    "appId": "89",
+    "depttypeId": 523,
+    "foreignId": "89",
+    "createType": 833,
+    "type": "fabfyz",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "areaCode": "66235",
+    "organLeader": "mp3dff",
+    "leaderId": "89",
+    "leaderMobile": "803.740.8989",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "60457",
-    "imagePath": "5oloai",
-    "priority": 824,
-    "status": 849,
+    "searchCode": "66235",
+    "imagePath": "04q5fc",
+    "priority": 70,
+    "status": 100,
     "delFlag": 6,
-    "description": "kxcri8",
-    "spare1": "en7i8v",
-    "spare2": "3ab5xz",
+    "description": "jr9mez",
+    "spare1": "oxrw2k",
+    "spare2": "lzl1rg",
     "children": [
       {
         "$ref": ".."
@@ -177,8 +177,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d4eiar",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "vtxhbj",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -241,35 +241,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:49",
-    "lastTime": "2025-08-25 18:01:49",
-    "id": 380,
-    "organId": "60",
-    "parentId": 366,
-    "appId": "60",
-    "depttypeId": 29,
-    "foreignId": "60",
-    "createType": 943,
-    "type": "7b937n",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "areaCode": "60457",
-    "organLeader": "e0mbz2",
-    "leaderId": "60",
-    "leaderMobile": "(330) 445-7747",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:23",
+    "lastTime": "2025-08-27 22:15:23",
+    "id": 657,
+    "organId": "89",
+    "parentId": 103,
+    "appId": "89",
+    "depttypeId": 482,
+    "foreignId": "89",
+    "createType": 733,
+    "type": "kt8v5h",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "areaCode": "66235",
+    "organLeader": "u536o2",
+    "leaderId": "89",
+    "leaderMobile": "803.740.8989",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "60457",
-    "imagePath": "e8le60",
-    "priority": 195,
-    "status": 434,
+    "searchCode": "66235",
+    "imagePath": "stiv3f",
+    "priority": 22,
+    "status": 121,
     "delFlag": 6,
-    "description": "74fmzg",
-    "spare1": "34oxgx",
-    "spare2": "x6a9go",
+    "description": "o9fwvr",
+    "spare1": "8dn55p",
+    "spare2": "4upmu9",
     "children": [
       {
         "$ref": ".."
@@ -294,8 +294,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3gvxt8",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ygruc0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -344,8 +344,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lcwhis",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "hpcsg4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -408,35 +408,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:49",
-    "lastTime": "2025-08-25 18:01:49",
-    "id": 580,
-    "organId": "60",
-    "parentId": 56,
-    "appId": "60",
-    "depttypeId": 137,
-    "foreignId": "60",
-    "createType": 276,
-    "type": "9s3hso",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "areaCode": "60457",
-    "organLeader": "excw0f",
-    "leaderId": "60",
-    "leaderMobile": "(330) 445-7747",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:23",
+    "lastTime": "2025-08-27 22:15:23",
+    "id": 139,
+    "organId": "89",
+    "parentId": 926,
+    "appId": "89",
+    "depttypeId": 925,
+    "foreignId": "89",
+    "createType": 218,
+    "type": "oxyhfr",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "areaCode": "66235",
+    "organLeader": "3omuv3",
+    "leaderId": "89",
+    "leaderMobile": "803.740.8989",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "60457",
-    "imagePath": "3me96b",
-    "priority": 447,
-    "status": 910,
+    "searchCode": "66235",
+    "imagePath": "5pc2e3",
+    "priority": 902,
+    "status": 409,
     "delFlag": 6,
-    "description": "ai81km",
-    "spare1": "re0ox8",
-    "spare2": "hqmmow",
+    "description": "n3wh3v",
+    "spare1": "rjv139",
+    "spare2": "dl0qx0",
     "children": [
       {
         "$ref": ".."
@@ -461,8 +461,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "j8ttxq",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "v9wvwq",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -525,7 +525,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?description=lajckp&spare2=wimii5&creatorId=60&status=661&isOrganLevel=true&organLeader=fxeu2p&limit=10&startTime=2025-08-25 18:01:00&q=r26si8&type=2a71oq&depttypeId=124&organId=60&spare1=ww6k83&createType=93&imagePath=7ij0ej&orderBy=269&deptId=948&isLeaf=true&isDisabled=true&sname=jon.mosciski&searchCode=60457&appId=60&foreignId=60&name=jon.mosciski&leaderMobile=(330) 445-7747&areaCode=60457&endTime=2025-08-25 18:01:00&page=1&leaderId=60&parentId=177&isVirtual=true&delFlag=6
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?organId=89&limit=10&parentId=644&page=1&isOrganLevel=true&q=mavdja&type=4mkfpl&organLeader=uefvtv&isVirtual=true&spare2=hrli14&endTime=2025-08-27 22:14:23&name=tarra.erdman&leaderId=89&status=158&depttypeId=875&searchCode=66235&spare1=zncus0&deptId=863&orderBy=690&foreignId=89&sname=tarra.erdman&isDisabled=true&startTime=2025-08-27 22:14:23&appId=89&createType=205&imagePath=a9gf2s&delFlag=6&creatorId=89&areaCode=66235&isLeaf=true&description=z9zgyv&leaderMobile=803.740.8989
 ```
 **Response-fields:**
 
@@ -564,26 +564,146 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "936g2g",
-    "pageNum": 94,
+    "stackTrace": "hb3cbg",
+    "pageNum": 170,
     "pageSize": 10,
-    "startRow": 396,
-    "endRow": 885,
-    "total": 542,
-    "pages": 99,
+    "startRow": 251,
+    "endRow": 457,
+    "total": 747,
+    "pages": 532,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "tce77x",
-    "orderBy": "k0k8fh",
+    "countColumn": "3hyi29",
+    "orderBy": "wyutp4",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "rb1mfz",
+    "dialectClass": "ypcp69",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
+}
+```
+
+### 获取部门分页
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/page.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取部门分页
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+deptId|int64|单位ID|false|-
+organId|string|系统机构ID|false|-
+parentId|int64|父节点|false|-
+appId|string|应用ID|false|-
+depttypeId|int64|部门分类ID|false|-
+foreignId|string|外部业务ID|false|-
+createType|int32|创建方式0导入1录入2授权|false|-
+type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
+name|string|名称|false|-
+sname|string|名称简称|false|-
+areaCode|string|地域编码，所在城市|false|-
+organLeader|string|领导名称|false|-
+leaderId|string|负责人ID，用户接收相关信息|false|-
+leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+isLeaf|boolean|是否叶子节点|false|-
+isDisabled|boolean|是否禁用0否1是|false|-
+searchCode|string|机构分类组|false|-
+imagePath|string|图片路径|false|-
+status|int32|状态0未生效1正常2受限3锁定|false|-
+creatorId|string|创建用户ID|false|-
+delFlag|int32|是否删除1已删除0正常|false|-
+description|string|描述|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?leaderMobile=803.740.8989&isVirtual=true&status=27&delFlag=6&organId=89&createType=999&endTime=2025-08-27 22:14:23&spare2=7tdq5i&isDisabled=true&depttypeId=457&sname=tarra.erdman&description=djedie&deptId=210&creatorId=89&q=tn1rdl&spare1=o7b4ps&foreignId=89&searchCode=66235&leaderId=89&areaCode=66235&type=wz6d9j&isLeaf=true&page=1&limit=10&parentId=552&organLeader=a0b4u8&isOrganLevel=true&imagePath=g8ug9y&orderBy=868&name=tarra.erdman&appId=89&startTime=2025-08-27 22:14:23
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─size|int32|No comments found.|-
+└─stackTrace|string|No comments found.|-
+└─pageNum|int32|No comments found.|-
+└─pageSize|int32|No comments found.|-
+└─startRow|int64|No comments found.|-
+└─endRow|int64|No comments found.|-
+└─total|int64|No comments found.|-
+└─pages|int32|No comments found.|-
+└─count|boolean|No comments found.|-
+└─reasonable|boolean|No comments found.|-
+└─pageSizeZero|boolean|No comments found.|-
+└─countColumn|string|No comments found.|-
+└─orderBy|string|No comments found.|-
+└─orderByOnly|boolean|No comments found.|-
+└─boundSqlInterceptor|object|No comments found.|-
+└─dialectClass|string|No comments found.|-
+└─keepOrderBy|boolean|No comments found.|-
+└─keepSubSelectOrderBy|boolean|No comments found.|-
+└─asyncCount|boolean|No comments found.|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "size": 10,
+    "stackTrace": "11gueb",
+    "pageNum": 959,
+    "pageSize": 10,
+    "startRow": 799,
+    "endRow": 812,
+    "total": 131,
+    "pages": 316,
+    "count": true,
+    "reasonable": true,
+    "pageSizeZero": true,
+    "countColumn": "03jaul",
+    "orderBy": "09viq5",
+    "orderByOnly": true,
+    "boundSqlInterceptor": {},
+    "dialectClass": "rnmke8",
+    "keepOrderBy": true,
+    "keepSubSelectOrderBy": true,
+    "asyncCount": true
+  },
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -614,7 +734,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/319.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/414.do
 ```
 **Response-fields:**
 
@@ -666,41 +786,41 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 893,
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "parentId": 34,
-      "appId": "60",
-      "depttypeId": 114,
-      "foreignId": "60",
-      "createType": 303,
-      "type": "gg9cou",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "t08zi8",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "id": 683,
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "parentId": 332,
+      "appId": "89",
+      "depttypeId": 7,
+      "foreignId": "89",
+      "createType": 417,
+      "type": "munf4w",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "w6719l",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "eck4rf",
-      "priority": 698,
-      "status": 558,
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:48",
-      "lastTime": "2025-08-25 18:01:48",
+      "searchCode": "66235",
+      "imagePath": "d9mnmp",
+      "priority": 487,
+      "status": 846,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:23",
+      "lastTime": "2025-08-27 22:15:23",
       "delFlag": 6,
-      "description": "g07rir",
-      "spare1": "owo1jw",
-      "spare2": "bj1m2m",
-      "parentName": "jon.mosciski",
-      "childNum": "ph9cic"
+      "description": "m5n0c0",
+      "spare1": "yod7ig",
+      "spare2": "t0b3px",
+      "parentName": "tarra.erdman",
+      "childNum": "js1we6"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -731,7 +851,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/743.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/58.do
 ```
 **Response-fields:**
 
@@ -782,40 +902,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 331,
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "parentId": 891,
-    "appId": "60",
-    "depttypeId": 706,
-    "foreignId": "60",
-    "createType": 892,
-    "type": "tl9jh0",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "areaCode": "60457",
-    "organLeader": "ljkty5",
-    "leaderId": "60",
-    "leaderMobile": "(330) 445-7747",
+    "id": 993,
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "parentId": 121,
+    "appId": "89",
+    "depttypeId": 53,
+    "foreignId": "89",
+    "createType": 977,
+    "type": "5bwd76",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "areaCode": "66235",
+    "organLeader": "uzt646",
+    "leaderId": "89",
+    "leaderMobile": "803.740.8989",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "60457",
-    "imagePath": "lir25n",
-    "priority": 178,
-    "status": 594,
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:49",
-    "lastTime": "2025-08-25 18:01:49",
+    "searchCode": "66235",
+    "imagePath": "babf6q",
+    "priority": 685,
+    "status": 193,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:23",
+    "lastTime": "2025-08-27 22:15:23",
     "delFlag": 6,
-    "description": "gah71j",
-    "spare1": "6pu1gz",
-    "spare2": "31ip21",
-    "parentName": "jon.mosciski",
-    "childNum": "3lsebe"
+    "description": "5z516j",
+    "spare1": "yo3kcn",
+    "spare2": "ebkwcp",
+    "parentName": "tarra.erdman",
+    "childNum": "a91iyu"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -877,7 +997,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?isVirtual=true&isDisabled=true&type=2bbw1h&description=7ele8q&sname=jon.mosciski&foreignId=60&status=341&depttypeId=855&deptId=115&orderBy=446&searchCode=60457&isLeaf=true&imagePath=dj4t19&parentId=436&name=jon.mosciski&delFlag=6&limit=10&endTime=2025-08-25 18:01:00&organId=60&startTime=2025-08-25 18:01:00&q=v9ndj1&organLeader=tgwylu&spare2=e8lzs6&isOrganLevel=true&leaderId=60&appId=60&createType=549&creatorId=60&leaderMobile=(330) 445-7747&spare1=bm0edj&areaCode=60457&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?delFlag=6&endTime=2025-08-27 22:14:23&q=6bkdco&type=yq61cf&isOrganLevel=true&sname=tarra.erdman&description=f26a99&isLeaf=true&foreignId=89&parentId=368&createType=327&areaCode=66235&orderBy=449&limit=10&organLeader=uob6gg&page=1&status=627&spare2=iafdmv&leaderId=89&name=tarra.erdman&deptId=168&startTime=2025-08-27 22:14:23&isVirtual=true&spare1=ysaqss&organId=89&isDisabled=true&depttypeId=664&appId=89&creatorId=89&imagePath=9f7o9p&leaderMobile=803.740.8989&searchCode=66235
 ```
 **Response-fields:**
 
@@ -906,11 +1026,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "9kbdt8",
-      "id": "60",
-      "parentId": "60",
-      "extId": "60",
-      "href": "rfwkbh",
+      "title": "tueos6",
+      "id": "89",
+      "parentId": "89",
+      "extId": "89",
+      "href": "pnc1gk",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -921,7 +1041,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -966,7 +1086,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?page=1&limit=10&ipaddr=u09ocl&status=fsqk7p&startTime=2025-08-25 18:01:00&username=jon.mosciski&orderBy=481&msg=5gd3wa&loginTime=2025-08-25 18:01:54&os=zig1ef&browser=x2ergg&q=2xtf3h&endTime=2025-08-25 18:01:00&infoId=745
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?ipaddr=i0ssth&loginTime=2025-08-27 22:15:29&browser=f3q3yq&os=6zkkcs&msg=jk5gds&q=kji911&username=tarra.erdman&startTime=2025-08-27 22:14:23&orderBy=354&infoId=261&page=1&endTime=2025-08-27 22:14:23&limit=10&status=n2pm6p
 ```
 **Response-fields:**
 
@@ -1000,26 +1120,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 938,
+    "totalCount": 919,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 221,
-        "username": "jon.mosciski",
-        "status": "djguu5",
-        "ipaddr": "swjlyl",
-        "loginLocation": "37642j",
-        "browser": "rzdwq7",
-        "os": "vw676g",
-        "msg": "7t7ou7",
-        "loginTime": "2025-08-25 18:01:54",
-        "remark": "ax5lyz"
+        "infoId": 769,
+        "username": "tarra.erdman",
+        "status": "lqogp0",
+        "ipaddr": "3vcmg2",
+        "loginLocation": "r8fn0q",
+        "browser": "hjqyba",
+        "os": "4t5q4t",
+        "msg": "8wyxt4",
+        "loginTime": "2025-08-27 22:15:29",
+        "remark": "934b4i"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1063,7 +1183,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'q=yapxbw&os=tefdkq&startTime=2025-08-25 18:01:00&limit=10&username=jon.mosciski&infoId=122&browser=q74eo8&orderBy=657&endTime=2025-08-25 18:01:00&msg=35h5o3&ipaddr=ohburz&status=uhwh4l&page=1&loginTime=2025-08-25 18:01:54'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'loginTime=2025-08-27 22:15:29&username=tarra.erdman&endTime=2025-08-27 22:14:23&limit=10&orderBy=276&status=925asg&ipaddr=7cq8gv&page=1&infoId=683&browser=dylnd1&msg=jn2h00&q=aeujp7&os=0s49o3&startTime=2025-08-27 22:14:23'
 ```
 **Response-fields:**
 
@@ -1081,8 +1201,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xclni0",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ev8zsf",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1131,8 +1251,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "at45wm",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "qna3us",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1175,8 +1295,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1m59ec",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "53zqmv",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1207,7 +1327,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/jon.mosciski.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/tarra.erdman.do
 ```
 **Response-fields:**
 
@@ -1225,8 +1345,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qoz3ko",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "p1rr6l",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1345,60 +1465,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:49",
-    "lastTime": "2025-08-25 18:01:49",
-    "id": 791,
-    "userId": "60",
-    "deptId": 253,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "oblhmb",
-    "password": "02pynd",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:24",
+    "lastTime": "2025-08-27 22:15:24",
+    "id": 659,
+    "userId": "89",
+    "deptId": 90,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "4m0slb",
+    "password": "hro8qf",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 814,
+    "status": 514,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:49",
-    "description": "xbbzqc",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:24",
+    "description": "umvgau",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:49",
-      "lastTime": "2025-08-25 18:01:49",
-      "id": 106,
-      "organId": "60",
-      "parentId": 444,
-      "appId": "60",
-      "depttypeId": 995,
-      "foreignId": "60",
-      "createType": 904,
-      "type": "ctbnqg",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "lppg2z",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:24",
+      "lastTime": "2025-08-27 22:15:24",
+      "id": 164,
+      "organId": "89",
+      "parentId": 598,
+      "appId": "89",
+      "depttypeId": 622,
+      "foreignId": "89",
+      "createType": 26,
+      "type": "vfhu5p",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "xtfqfq",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "2jafui",
-      "priority": 294,
-      "status": 664,
+      "searchCode": "66235",
+      "imagePath": "7apa0s",
+      "priority": 933,
+      "status": 697,
       "delFlag": 6,
-      "description": "4doc38",
-      "spare1": "iwyme7",
-      "spare2": "dfdhmk",
+      "description": "bqnfvu",
+      "spare1": "n0x34q",
+      "spare2": "3kr4ny",
       "children": [
         {
           "$ref": ".."
@@ -1407,44 +1527,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:49",
-        "lastTime": "2025-08-25 18:01:49",
-        "id": 610,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 634,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "id": 256,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 693,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 866,
-        "description": "ahqng3",
-        "areaType": "f8yfjc"
+        "status": 151,
+        "description": "955ngv",
+        "areaType": "adep21"
       }
     ],
     "roleIds": [
-      568
+      644
     ],
     "positionIds": [
-      "lieuot"
+      "1jowje"
     ],
-    "roleId": 984,
+    "roleId": 825,
     "userRoleList": [
       {
-        "id": 166,
-        "deptId": 641,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 377,
-        "roleName": "jon.mosciski",
-        "adminId": 576
+        "id": 403,
+        "deptId": 895,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 914,
+        "roleName": "tarra.erdman",
+        "adminId": 200
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -1464,8 +1584,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "730agv",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "mulkfw",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1583,60 +1703,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 576,
-    "userId": "60",
-    "deptId": 973,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "gfbc0u",
-    "password": "kbi0as",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:24",
+    "lastTime": "2025-08-27 22:15:24",
+    "id": 542,
+    "userId": "89",
+    "deptId": 509,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "cwhfu5",
+    "password": "gm9kwe",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 735,
+    "status": 507,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "dwhf2n",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:24",
+    "description": "7bkic8",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 445,
-      "organId": "60",
-      "parentId": 199,
-      "appId": "60",
-      "depttypeId": 108,
-      "foreignId": "60",
-      "createType": 757,
-      "type": "k719wy",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "1rp0ay",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:24",
+      "lastTime": "2025-08-27 22:15:24",
+      "id": 437,
+      "organId": "89",
+      "parentId": 113,
+      "appId": "89",
+      "depttypeId": 822,
+      "foreignId": "89",
+      "createType": 234,
+      "type": "bb9x5b",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "e0b9jx",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "metz1n",
-      "priority": 968,
-      "status": 964,
+      "searchCode": "66235",
+      "imagePath": "ilo10a",
+      "priority": 837,
+      "status": 474,
       "delFlag": 6,
-      "description": "8s9vlf",
-      "spare1": "mmbzwy",
-      "spare2": "hshjrn",
+      "description": "d0e19m",
+      "spare1": "fzzgqi",
+      "spare2": "i61v1j",
       "children": [
         {
           "$ref": ".."
@@ -1645,44 +1765,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 600,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 340,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "id": 813,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 446,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 926,
-        "description": "p1lt8c",
-        "areaType": "wwbsit"
+        "status": 368,
+        "description": "5s8c5u",
+        "areaType": "nlxpb3"
       }
     ],
     "roleIds": [
-      318
+      497
     ],
     "positionIds": [
-      "7yk0or"
+      "kk3keq"
     ],
-    "roleId": 676,
+    "roleId": 786,
     "userRoleList": [
       {
-        "id": 97,
-        "deptId": 794,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 228,
-        "roleName": "jon.mosciski",
-        "adminId": 515
+        "id": 311,
+        "deptId": 66,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 587,
+        "roleName": "tarra.erdman",
+        "adminId": 300
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -1702,8 +1822,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "63dkhd",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "kspb5h",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1767,40 +1887,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 474,
-    "userId": "60",
-    "organId": "60",
-    "deptId": 696,
-    "createType": 69,
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "mobile": "(330) 445-7747",
-    "email": "esta.hermann@gmail.com",
-    "password": "372spf",
-    "salt": "ndn4lk",
-    "imagePath": "upmqso",
-    "adminType": "ztpgrq",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:24",
+    "lastTime": "2025-08-27 22:15:24",
+    "id": 844,
+    "userId": "89",
+    "organId": "89",
+    "deptId": 44,
+    "createType": 373,
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "mobile": "803.740.8989",
+    "email": "fletcher.hickle@hotmail.com",
+    "password": "ka7xsn",
+    "salt": "57ptw5",
+    "imagePath": "plllf0",
+    "adminType": "mc5zdp",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "9rpmva",
-    "adminPerms": "hlodwv",
-    "lastAppId": "60",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "lastLoginIp": "7.176.103.194",
-    "loginCount": 412,
-    "status": 441,
+    "adminRange": "49hcad",
+    "adminPerms": "0sskro",
+    "lastAppId": "89",
+    "lastLoginTime": "2025-08-27 22:15:24",
+    "lastLoginIp": "217.26.150.93",
+    "loginCount": 80,
+    "status": 205,
     "delFlag": 6,
-    "spare1": "n6tkj2",
-    "spare2": "hn7rim",
+    "spare1": "61gm3h",
+    "spare2": "vzzpyq",
     "roleIds": [
-      615
+      224
     ],
     "positionIds": [
-      "yo5yjp"
+      "ozr9n9"
     ]
   }
 }'
@@ -1821,8 +1941,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z7ho3n",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "wzi6j6",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -1946,60 +2066,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 975,
-    "userId": "60",
-    "deptId": 367,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "a9rq2n",
-    "password": "gbcg64",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:24",
+    "lastTime": "2025-08-27 22:15:24",
+    "id": 618,
+    "userId": "89",
+    "deptId": 355,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "obio9l",
+    "password": "k1hlhc",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 51,
+    "status": 537,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "qo05a7",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:24",
+    "description": "o3wchs",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 836,
-      "organId": "60",
-      "parentId": 571,
-      "appId": "60",
-      "depttypeId": 582,
-      "foreignId": "60",
-      "createType": 113,
-      "type": "g1g8lx",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "w754vp",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:24",
+      "lastTime": "2025-08-27 22:15:24",
+      "id": 61,
+      "organId": "89",
+      "parentId": 201,
+      "appId": "89",
+      "depttypeId": 378,
+      "foreignId": "89",
+      "createType": 720,
+      "type": "i8up8e",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "6lmusv",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "k6w8kr",
-      "priority": 378,
-      "status": 918,
+      "searchCode": "66235",
+      "imagePath": "wv18il",
+      "priority": 249,
+      "status": 554,
       "delFlag": 6,
-      "description": "jda85v",
-      "spare1": "59qwae",
-      "spare2": "g3iqkp",
+      "description": "djjmwp",
+      "spare1": "xxgvbo",
+      "spare2": "9evs8p",
       "children": [
         {
           "$ref": ".."
@@ -2008,44 +2128,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 341,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 217,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "id": 905,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 296,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 374,
-        "description": "97kihn",
-        "areaType": "6cxeo8"
+        "status": 160,
+        "description": "1y8ejl",
+        "areaType": "wwrzcd"
       }
     ],
     "roleIds": [
-      731
+      992
     ],
     "positionIds": [
-      "t4a14j"
+      "n6j8pc"
     ],
-    "roleId": 774,
+    "roleId": 135,
     "userRoleList": [
       {
-        "id": 771,
-        "deptId": 824,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 438,
-        "roleName": "jon.mosciski",
-        "adminId": 168
+        "id": 937,
+        "deptId": 86,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 442,
+        "roleName": "tarra.erdman",
+        "adminId": 665
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -2065,8 +2185,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9tml2h",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "z3d8x3",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2115,8 +2235,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "eilt7w",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "1vioz2",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2162,7 +2282,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'adminId=756&mobile=(330) 445-7747&userId=60&startTime=2025-08-25 18:01:00&nickName=randy.von&orderBy=992&email=esta.hermann@gmail.com&status=mf20c0&deptId=445&q=5aepy2&endTime=2025-08-25 18:01:00&organId=60&delFlag=6&page=1&username=jon.mosciski&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'adminId=645&nickName=reena.schmeler&email=fletcher.hickle@hotmail.com&endTime=2025-08-27 22:14:23&username=tarra.erdman&status=nkobd8&page=1&limit=10&organId=89&delFlag=6&deptId=688&q=qmzf7g&userId=89&mobile=803.740.8989&orderBy=294&startTime=2025-08-27 22:14:23'
 ```
 **Response-fields:**
 
@@ -2180,8 +2300,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "r9k9vp",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "rud2l4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2231,8 +2351,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dkif7k",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "5lls16",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2275,8 +2395,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4c2qyf",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "cqif5q",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2394,60 +2514,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 197,
-    "userId": "60",
-    "deptId": 82,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "yyisjz",
-    "password": "nuwnvm",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:25",
+    "lastTime": "2025-08-27 22:15:25",
+    "id": 864,
+    "userId": "89",
+    "deptId": 959,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "llx2re",
+    "password": "xaqw0c",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 798,
+    "status": 102,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "2ao1ul",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:25",
+    "description": "1hyyhb",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 199,
-      "organId": "60",
-      "parentId": 62,
-      "appId": "60",
-      "depttypeId": 414,
-      "foreignId": "60",
-      "createType": 783,
-      "type": "8471ql",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "7igmnt",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:25",
+      "lastTime": "2025-08-27 22:15:25",
+      "id": 391,
+      "organId": "89",
+      "parentId": 781,
+      "appId": "89",
+      "depttypeId": 251,
+      "foreignId": "89",
+      "createType": 782,
+      "type": "nivji4",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "grkdls",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "9c835e",
-      "priority": 281,
-      "status": 186,
+      "searchCode": "66235",
+      "imagePath": "msfxmy",
+      "priority": 332,
+      "status": 165,
       "delFlag": 6,
-      "description": "ytm5h2",
-      "spare1": "wrbzy2",
-      "spare2": "ent40l",
+      "description": "dwdtxw",
+      "spare1": "4do5af",
+      "spare2": "edzq9d",
       "children": [
         {
           "$ref": ".."
@@ -2456,44 +2576,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 568,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 621,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:25",
+        "lastTime": "2025-08-27 22:15:25",
+        "id": 856,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 873,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 754,
-        "description": "c6l5ig",
-        "areaType": "l3i11v"
+        "status": 266,
+        "description": "cxal4q",
+        "areaType": "90d00i"
       }
     ],
     "roleIds": [
-      887
+      641
     ],
     "positionIds": [
-      "acblti"
+      "j2bo19"
     ],
-    "roleId": 931,
+    "roleId": 794,
     "userRoleList": [
       {
-        "id": 3,
-        "deptId": 524,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 237,
-        "roleName": "jon.mosciski",
-        "adminId": 724
+        "id": 967,
+        "deptId": 477,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 71,
+        "roleName": "tarra.erdman",
+        "adminId": 326
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -2513,8 +2633,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9u5ufd",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "fst714",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2632,60 +2752,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 713,
-    "userId": "60",
-    "deptId": 767,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "vkalu8",
-    "password": "brekj6",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:25",
+    "lastTime": "2025-08-27 22:15:25",
+    "id": 943,
+    "userId": "89",
+    "deptId": 375,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "c2uwn9",
+    "password": "f46y1n",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 434,
+    "status": 770,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "rpig8c",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:25",
+    "description": "fwlxd1",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 638,
-      "organId": "60",
-      "parentId": 190,
-      "appId": "60",
-      "depttypeId": 649,
-      "foreignId": "60",
-      "createType": 178,
-      "type": "hpto5i",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "vh59hb",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:25",
+      "lastTime": "2025-08-27 22:15:25",
+      "id": 611,
+      "organId": "89",
+      "parentId": 867,
+      "appId": "89",
+      "depttypeId": 407,
+      "foreignId": "89",
+      "createType": 858,
+      "type": "msvgdg",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "rowzc5",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "tknz3h",
-      "priority": 443,
-      "status": 913,
+      "searchCode": "66235",
+      "imagePath": "1aym56",
+      "priority": 188,
+      "status": 601,
       "delFlag": 6,
-      "description": "x3h1mp",
-      "spare1": "yj0txw",
-      "spare2": "fu7aim",
+      "description": "x7pcjf",
+      "spare1": "y1amnn",
+      "spare2": "f5yu0k",
       "children": [
         {
           "$ref": ".."
@@ -2694,44 +2814,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 299,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 590,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:25",
+        "lastTime": "2025-08-27 22:15:25",
+        "id": 877,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 163,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 896,
-        "description": "73qf8l",
-        "areaType": "bsdtrs"
+        "status": 917,
+        "description": "degc1o",
+        "areaType": "hkum3i"
       }
     ],
     "roleIds": [
-      479
+      678
     ],
     "positionIds": [
-      "nvzdny"
+      "4v0x18"
     ],
-    "roleId": 364,
+    "roleId": 513,
     "userRoleList": [
       {
-        "id": 579,
-        "deptId": 413,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 952,
-        "roleName": "jon.mosciski",
-        "adminId": 460
+        "id": 280,
+        "deptId": 426,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 316,
+        "roleName": "tarra.erdman",
+        "adminId": 526
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -2751,8 +2871,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a79gnl",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "3ik7n3",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2783,7 +2903,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/83.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/92.do
 ```
 **Response-fields:**
 
@@ -2801,8 +2921,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m02423",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "2tprbu",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2834,7 +2954,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=637&roleIds=6bfslg&roleIds=6bfslg'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=4yxm1s&roleIds=4yxm1s&adminId=697'
 ```
 **Response-fields:**
 
@@ -2852,8 +2972,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u2e4ne",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "hbkigt",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -2900,7 +3020,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?deptId=148&page=1&endTime=2025-08-25 18:01:00&orderBy=354&status=qfh1j3&mobile=(330) 445-7747&startTime=2025-08-25 18:01:00&userId=60&q=mwok7z&nickName=randy.von&email=esta.hermann@gmail.com&organId=60&delFlag=6&username=jon.mosciski&adminId=81&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?email=fletcher.hickle@hotmail.com&organId=89&orderBy=35&endTime=2025-08-27 22:14:23&username=tarra.erdman&page=1&deptId=622&q=x2ea1m&userId=89&status=yv9a9h&mobile=803.740.8989&delFlag=6&limit=10&startTime=2025-08-27 22:14:23&adminId=746&nickName=reena.schmeler
 ```
 **Response-fields:**
 
@@ -3005,60 +3125,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:49",
-      "lastTime": "2025-08-25 18:01:49",
-      "id": 724,
-      "userId": "60",
-      "deptId": 816,
-      "deptName": "jon.mosciski",
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "name": "jon.mosciski",
-      "username": "jon.mosciski",
-      "nickName": "randy.von",
-      "email": "esta.hermann@gmail.com",
-      "mobile": "(330) 445-7747",
-      "imagePath": "ozapx3",
-      "password": "tdhs9z",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:24",
+      "lastTime": "2025-08-27 22:15:24",
+      "id": 5,
+      "userId": "89",
+      "deptId": 128,
+      "deptName": "tarra.erdman",
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "name": "tarra.erdman",
+      "username": "tarra.erdman",
+      "nickName": "reena.schmeler",
+      "email": "fletcher.hickle@hotmail.com",
+      "mobile": "803.740.8989",
+      "imagePath": "ky5gxw",
+      "password": "mulg5o",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 324,
+      "status": 857,
       "delFlag": 6,
-      "lastLoginIp": "7.176.103.194",
-      "lastLoginTime": "2025-08-25 18:01:49",
-      "description": "cx7ock",
+      "lastLoginIp": "217.26.150.93",
+      "lastLoginTime": "2025-08-27 22:15:24",
+      "description": "r6wmmv",
       "dept": {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:49",
-        "lastTime": "2025-08-25 18:01:49",
-        "id": 354,
-        "organId": "60",
-        "parentId": 864,
-        "appId": "60",
-        "depttypeId": 975,
-        "foreignId": "60",
-        "createType": 148,
-        "type": "j9ms0z",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "areaCode": "60457",
-        "organLeader": "y9v3iw",
-        "leaderId": "60",
-        "leaderMobile": "(330) 445-7747",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "id": 479,
+        "organId": "89",
+        "parentId": 790,
+        "appId": "89",
+        "depttypeId": 646,
+        "foreignId": "89",
+        "createType": 840,
+        "type": "3q6dsa",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "areaCode": "66235",
+        "organLeader": "zafm08",
+        "leaderId": "89",
+        "leaderMobile": "803.740.8989",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "60457",
-        "imagePath": "2oons5",
-        "priority": 389,
-        "status": 819,
+        "searchCode": "66235",
+        "imagePath": "dd2dp8",
+        "priority": 145,
+        "status": 472,
         "delFlag": 6,
-        "description": "v13pvt",
-        "spare1": "dr2k45",
-        "spare2": "py0j1g",
+        "description": "d3sint",
+        "spare1": "kd6a7c",
+        "spare2": "lhibi7",
         "children": [
           {
             "$ref": ".."
@@ -3067,47 +3187,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "60",
-          "createTime": "2025-08-25 18:01:49",
-          "lastTime": "2025-08-25 18:01:49",
-          "id": 277,
-          "roletypeId": "60",
-          "appId": "60",
-          "name": "jon.mosciski",
-          "code": "60457",
-          "priority": 153,
+          "creatorId": "89",
+          "createTime": "2025-08-27 22:15:24",
+          "lastTime": "2025-08-27 22:15:24",
+          "id": 392,
+          "roletypeId": "89",
+          "appId": "89",
+          "name": "tarra.erdman",
+          "code": "66235",
+          "priority": 961,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 682,
-          "description": "7u4jzq",
-          "areaType": "az0o4r"
+          "status": 199,
+          "description": "zo34f7",
+          "areaType": "q7furx"
         }
       ],
       "roleIds": [
-        628
+        656
       ],
       "positionIds": [
-        "wqxm16"
+        "5hxqfa"
       ],
-      "roleId": 269,
+      "roleId": 374,
       "userRoleList": [
         {
-          "id": 835,
-          "deptId": 484,
-          "deptName": "jon.mosciski",
-          "organId": "60",
-          "organName": "jon.mosciski",
-          "roleId": 295,
-          "roleName": "jon.mosciski",
-          "adminId": 640
+          "id": 335,
+          "deptId": 345,
+          "deptName": "tarra.erdman",
+          "organId": "89",
+          "organName": "tarra.erdman",
+          "roleId": 800,
+          "roleName": "tarra.erdman",
+          "adminId": 818
         }
       ],
-      "code": "60457",
-      "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+      "code": "66235",
+      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3285,60 +3405,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:49",
-      "lastTime": "2025-08-25 18:01:49",
-      "id": 709,
-      "userId": "60",
-      "deptId": 626,
-      "deptName": "jon.mosciski",
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "name": "jon.mosciski",
-      "username": "jon.mosciski",
-      "nickName": "randy.von",
-      "email": "esta.hermann@gmail.com",
-      "mobile": "(330) 445-7747",
-      "imagePath": "8t4qam",
-      "password": "mgh2gc",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:24",
+      "lastTime": "2025-08-27 22:15:24",
+      "id": 228,
+      "userId": "89",
+      "deptId": 752,
+      "deptName": "tarra.erdman",
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "name": "tarra.erdman",
+      "username": "tarra.erdman",
+      "nickName": "reena.schmeler",
+      "email": "fletcher.hickle@hotmail.com",
+      "mobile": "803.740.8989",
+      "imagePath": "mht459",
+      "password": "ekl5jf",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 199,
+      "status": 28,
       "delFlag": 6,
-      "lastLoginIp": "7.176.103.194",
-      "lastLoginTime": "2025-08-25 18:01:49",
-      "description": "xx49t8",
+      "lastLoginIp": "217.26.150.93",
+      "lastLoginTime": "2025-08-27 22:15:24",
+      "description": "y42bq9",
       "dept": {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:49",
-        "lastTime": "2025-08-25 18:01:49",
-        "id": 530,
-        "organId": "60",
-        "parentId": 274,
-        "appId": "60",
-        "depttypeId": 666,
-        "foreignId": "60",
-        "createType": 406,
-        "type": "nfxz00",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "areaCode": "60457",
-        "organLeader": "122ztb",
-        "leaderId": "60",
-        "leaderMobile": "(330) 445-7747",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "id": 20,
+        "organId": "89",
+        "parentId": 575,
+        "appId": "89",
+        "depttypeId": 781,
+        "foreignId": "89",
+        "createType": 559,
+        "type": "9scuti",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "areaCode": "66235",
+        "organLeader": "uatheh",
+        "leaderId": "89",
+        "leaderMobile": "803.740.8989",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "60457",
-        "imagePath": "a3au61",
-        "priority": 814,
-        "status": 981,
+        "searchCode": "66235",
+        "imagePath": "5ffea7",
+        "priority": 49,
+        "status": 138,
         "delFlag": 6,
-        "description": "x5o5qn",
-        "spare1": "gmgwxa",
-        "spare2": "nlq4up",
+        "description": "b1sp0b",
+        "spare1": "heigpy",
+        "spare2": "lz45uw",
         "children": [
           {
             "$ref": ".."
@@ -3347,115 +3467,115 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "60",
-          "createTime": "2025-08-25 18:01:49",
-          "lastTime": "2025-08-25 18:01:49",
-          "id": 25,
-          "roletypeId": "60",
-          "appId": "60",
-          "name": "jon.mosciski",
-          "code": "60457",
-          "priority": 807,
+          "creatorId": "89",
+          "createTime": "2025-08-27 22:15:24",
+          "lastTime": "2025-08-27 22:15:24",
+          "id": 944,
+          "roletypeId": "89",
+          "appId": "89",
+          "name": "tarra.erdman",
+          "code": "66235",
+          "priority": 456,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 996,
-          "description": "fp4sjk",
-          "areaType": "gqy40a"
+          "status": 953,
+          "description": "39ox2r",
+          "areaType": "mwj56v"
         }
       ],
       "roleIds": [
-        569
+        337
       ],
       "positionIds": [
-        "ys0lmi"
+        "erw7x4"
       ],
-      "roleId": 105,
+      "roleId": 505,
       "userRoleList": [
         {
-          "id": 68,
-          "deptId": 741,
-          "deptName": "jon.mosciski",
-          "organId": "60",
-          "organName": "jon.mosciski",
-          "roleId": 338,
-          "roleName": "jon.mosciski",
-          "adminId": 882
+          "id": 791,
+          "deptId": 65,
+          "deptName": "tarra.erdman",
+          "organId": "89",
+          "organName": "tarra.erdman",
+          "roleId": 455,
+          "roleName": "tarra.erdman",
+          "adminId": 161
         }
       ],
-      "code": "60457",
-      "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+      "code": "66235",
+      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:49",
-        "lastTime": "2025-08-25 18:01:49",
-        "roleId": 812,
-        "roleName": "jon.mosciski",
-        "roleKey": "1qk471",
-        "roleSort": 274,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
+        "roleId": 481,
+        "roleName": "tarra.erdman",
+        "roleKey": "5mxq1f",
+        "roleSort": 80,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 576,
+        "status": 752,
         "flag": true,
         "menuIds": [
-          355
+          277
         ],
         "deptIds": [
-          563
+          160
         ],
         "permissions": [
-          "e5er1s"
+          "v0b54j"
         ],
-        "remark": "knhxgi",
-        "parentName": "jon.mosciski",
-        "appName": "jon.mosciski",
-        "roletypeId": "60",
-        "roletypeName": "jon.mosciski",
-        "priority": 580,
+        "remark": "ivacne",
+        "parentName": "tarra.erdman",
+        "appName": "tarra.erdman",
+        "roletypeId": "89",
+        "roletypeName": "tarra.erdman",
+        "priority": 856,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 488,
-        "roleId": 64,
-        "adminId": 639,
-        "deptId": 143,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleName": "jon.mosciski"
+        "id": 328,
+        "roleId": 811,
+        "adminId": 637,
+        "deptId": 174,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleName": "tarra.erdman"
       }
     ],
     "positions": [
       {
-        "postId": "60",
-        "postCode": "60457",
-        "postName": "jon.mosciski",
-        "postSort": 773,
-        "status": 291,
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:49",
-        "lastTime": "2025-08-25 18:01:49",
+        "postId": "89",
+        "postCode": "66235",
+        "postName": "tarra.erdman",
+        "postSort": 63,
+        "status": 249,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:24",
+        "lastTime": "2025-08-27 22:15:24",
         "delFlag": 6,
-        "remark": "mi6nn5",
+        "remark": "h0jrdp",
         "ids": [
-          "r49bhi"
+          "bgcsne"
         ],
-        "positionId": "60",
+        "positionId": "89",
         "flag": true
       }
     ],
     "roleIds": [
-      37
+      549
     ],
     "positionIds": [
-      606
+      770
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3517,7 +3637,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?page=1&leaderId=60&isVirtual=true&endTime=2025-08-25 18:01:00&status=14&limit=10&parentId=923&appId=60&q=1de0io&deptId=648&spare1=ims0cy&isDisabled=true&createType=942&organLeader=giz8a3&delFlag=6&creatorId=60&organId=60&name=jon.mosciski&searchCode=60457&foreignId=60&areaCode=60457&isOrganLevel=true&startTime=2025-08-25 18:01:00&depttypeId=562&sname=jon.mosciski&orderBy=493&isLeaf=true&type=nh1l9h&imagePath=jslj2d&description=b0i8z7&leaderMobile=(330) 445-7747&spare2=9okp0q
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?areaCode=66235&createType=499&foreignId=89&leaderMobile=803.740.8989&isDisabled=true&name=tarra.erdman&endTime=2025-08-27 22:14:23&spare2=16q2mx&type=oa51xb&depttypeId=714&imagePath=evd4yn&creatorId=89&leaderId=89&q=wqmg6f&status=600&orderBy=309&appId=89&searchCode=66235&parentId=784&organLeader=pbl14k&startTime=2025-08-27 22:14:23&limit=10&spare1=bvka1z&page=1&delFlag=6&organId=89&sname=tarra.erdman&deptId=553&isOrganLevel=true&isLeaf=true&description=hoxe2n&isVirtual=true
 ```
 **Response-fields:**
 
@@ -3540,8 +3660,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 267,
-      "label": "gje7gk",
+      "id": 181,
+      "label": "293qde",
       "children": [
         {
           "$ref": ".."
@@ -3549,7 +3669,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3603,7 +3723,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?endTime=2025-08-25 18:01:00&existKey=yquu0n&description=yptm9u&name=jon.mosciski&isSite=true&xzqhId=693&delFlag=6&isMobileApp=true&sertypeId=60&isDisabled=true&limit=10&ids=thkj53&ids=thkj53&startTime=2025-08-25 18:01:00&domainId=60&orderBy=352&appType=jorgiw&status=425&path=lw1a9b&mode=385&q=9920g7&ftpId=60&page=1&organId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?isSite=true&existKey=dm6iao&q=pv0oqa&ftpId=89&isMobileApp=true&path=3xevx8&ids=at5m5s&ids=at5m5s&mode=278&delFlag=6&appType=ox8s6i&orderBy=453&endTime=2025-08-27 22:14:23&xzqhId=572&organId=89&name=tarra.erdman&sertypeId=89&description=gb5xth&isDisabled=true&limit=10&domainId=89&startTime=2025-08-27 22:14:23&status=234&page=1
 ```
 **Response-fields:**
 
@@ -3646,32 +3766,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:54",
-      "lastTime": "2025-08-25 18:01:54",
-      "id": "60",
-      "ftpId": "60",
-      "domainId": "60",
-      "organId": "60",
-      "xzqhId": 554,
-      "sertypeId": "60",
-      "name": "jon.mosciski",
-      "path": "fkj7ay",
-      "appType": "wlq7q3",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:30",
+      "lastTime": "2025-08-27 22:15:30",
+      "id": "89",
+      "ftpId": "89",
+      "domainId": "89",
+      "organId": "89",
+      "xzqhId": 912,
+      "sertypeId": "89",
+      "name": "tarra.erdman",
+      "path": "lk6aji",
+      "appType": "k9oc96",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 475,
-      "priority": 446,
+      "status": 4,
+      "priority": 622,
       "delFlag": 6,
-      "deleteTime": "2025-08-25 18:01:54",
-      "description": "14bzou",
-      "spare1": "p22ijs",
-      "spare2": "c415n9",
-      "xzqhName": "jon.mosciski"
+      "deleteTime": "2025-08-27 22:15:30",
+      "description": "o1987z",
+      "spare1": "7if8o6",
+      "spare2": "l8v6w2",
+      "xzqhName": "tarra.erdman"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3725,7 +3845,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?q=oarnic&delFlag=6&mode=153&status=689&isMobileApp=true&sertypeId=60&path=7zq2jp&startTime=2025-08-25 18:01:00&domainId=60&existKey=4dwef7&page=1&isSite=true&ids=y2hyzo&ids=y2hyzo&orderBy=121&name=jon.mosciski&endTime=2025-08-25 18:01:00&organId=60&xzqhId=682&description=4fre6i&appType=u6i9ay&limit=10&idArr=dojl69&isDisabled=true&ftpId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?startTime=2025-08-27 22:14:23&isMobileApp=true&q=xvnrh9&page=1&status=717&existKey=7a2cx2&sertypeId=89&path=mr5i8f&description=cf001g&endTime=2025-08-27 22:14:23&mode=391&limit=10&orderBy=893&isSite=true&isDisabled=true&delFlag=6&name=tarra.erdman&ids=b22410&ids=b22410&organId=89&domainId=89&idArr=f12k50&ftpId=89&xzqhId=817&appType=xs236z
 ```
 **Response-fields:**
 
@@ -3772,39 +3892,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 246,
+    "totalCount": 549,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:55",
-        "lastTime": "2025-08-25 18:01:55",
-        "id": "60",
-        "ftpId": "60",
-        "domainId": "60",
-        "organId": "60",
-        "xzqhId": 234,
-        "sertypeId": "60",
-        "name": "jon.mosciski",
-        "path": "v851v1",
-        "appType": "ewwhk2",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:30",
+        "lastTime": "2025-08-27 22:15:30",
+        "id": "89",
+        "ftpId": "89",
+        "domainId": "89",
+        "organId": "89",
+        "xzqhId": 710,
+        "sertypeId": "89",
+        "name": "tarra.erdman",
+        "path": "652rjv",
+        "appType": "we5jv0",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 744,
-        "priority": 943,
+        "status": 226,
+        "priority": 537,
         "delFlag": 6,
-        "deleteTime": "2025-08-25 18:01:55",
-        "description": "h91en1",
-        "spare1": "kud3rv",
-        "spare2": "r1cefj",
-        "xzqhName": "jon.mosciski"
+        "deleteTime": "2025-08-27 22:15:30",
+        "description": "za8zft",
+        "spare1": "o2xxnt",
+        "spare2": "mtgib5",
+        "xzqhName": "tarra.erdman"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3858,7 +3978,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'delFlag=6&ftpId=60&endTime=2025-08-25 18:01:00&mode=361&xzqhId=319&page=1&isMobileApp=true&existKey=803k11&q=rh9r77&name=jon.mosciski&limit=10&status=844&startTime=2025-08-25 18:01:00&orderBy=888&path=rday0l&sertypeId=60&appType=2bey06&ids=1v8ogh&ids=1v8ogh&organId=60&domainId=60&description=q89cd4&isDisabled=true&isSite=true&idArr=373wmn'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'appType=8eqzdp&idArr=fmja8b&q=f78u7v&domainId=89&sertypeId=89&endTime=2025-08-27 22:14:23&organId=89&name=tarra.erdman&status=534&isMobileApp=true&ids=xxvb3t&ids=xxvb3t&delFlag=6&ftpId=89&xzqhId=726&isDisabled=true&description=q0za8h&mode=509&existKey=z5i939&page=1&isSite=true&orderBy=920&startTime=2025-08-27 22:14:23&limit=10&path=cijp6w'
 ```
 **Response-fields:**
 
@@ -3876,8 +3996,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uaoo9t",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "b729f8",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -3908,7 +4028,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/60.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/89.do
 ```
 **Response-fields:**
 
@@ -3954,35 +4074,35 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:55",
-    "lastTime": "2025-08-25 18:01:55",
-    "id": "60",
-    "ftpId": "60",
-    "domainId": "60",
-    "organId": "60",
-    "xzqhId": 645,
-    "sertypeId": "60",
-    "name": "jon.mosciski",
-    "path": "rraaqz",
-    "appType": "49x5cd",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:30",
+    "lastTime": "2025-08-27 22:15:30",
+    "id": "89",
+    "ftpId": "89",
+    "domainId": "89",
+    "organId": "89",
+    "xzqhId": 24,
+    "sertypeId": "89",
+    "name": "tarra.erdman",
+    "path": "889xde",
+    "appType": "6o0ieu",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 736,
-    "priority": 824,
+    "status": 900,
+    "priority": 792,
     "delFlag": 6,
-    "deleteTime": "2025-08-25 18:01:55",
-    "description": "m0br2q",
-    "spare1": "rifxhk",
-    "spare2": "ocyih2",
-    "xzqhName": "jon.mosciski",
-    "ftpName": "jon.mosciski",
-    "sertypeName": "jon.mosciski",
-    "domainName": "jon.mosciski",
-    "organName": "jon.mosciski"
+    "deleteTime": "2025-08-27 22:15:30",
+    "description": "sohcj7",
+    "spare1": "8826sc",
+    "spare2": "kra8jh",
+    "xzqhName": "tarra.erdman",
+    "ftpName": "tarra.erdman",
+    "sertypeName": "tarra.erdman",
+    "domainName": "tarra.erdman",
+    "organName": "tarra.erdman"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4039,31 +4159,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "60",
-    "ftpId": "60",
-    "ftpName": "jon.mosciski",
-    "domainId": "60",
-    "domainName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "xzqhId": 501,
-    "xzqhName": "jon.mosciski",
-    "sertypeId": "60",
-    "sertypeName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "path": "9b9yzl",
-    "appType": "lm0752",
+    "id": "89",
+    "ftpId": "89",
+    "ftpName": "tarra.erdman",
+    "domainId": "89",
+    "domainName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "xzqhId": 104,
+    "xzqhName": "tarra.erdman",
+    "sertypeId": "89",
+    "sertypeName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "path": "byy5sv",
+    "appType": "0j6qa6",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 188,
-    "statusName": "jon.mosciski",
-    "priority": 795,
-    "createTime": "2025-08-25 18:01:55",
-    "description": "poqqn3",
-    "spare1": "z7sizx",
+    "status": 314,
+    "statusName": "tarra.erdman",
+    "priority": 391,
+    "createTime": "2025-08-27 22:15:30",
+    "description": "5sdvq8",
+    "spare1": "5p0dca",
     "statusMap": {
-      "mapKey": "njnwfm"
+      "mapKey": "kcx7ej"
     }
   }
 }'
@@ -4084,8 +4204,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b9so53",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "vybqa7",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4142,31 +4262,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "60",
-    "ftpId": "60",
-    "ftpName": "jon.mosciski",
-    "domainId": "60",
-    "domainName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "xzqhId": 795,
-    "xzqhName": "jon.mosciski",
-    "sertypeId": "60",
-    "sertypeName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "path": "gwf7wm",
-    "appType": "uubd26",
+    "id": "89",
+    "ftpId": "89",
+    "ftpName": "tarra.erdman",
+    "domainId": "89",
+    "domainName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "xzqhId": 231,
+    "xzqhName": "tarra.erdman",
+    "sertypeId": "89",
+    "sertypeName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "path": "e7y1fu",
+    "appType": "5l4161",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 669,
-    "statusName": "jon.mosciski",
-    "priority": 675,
-    "createTime": "2025-08-25 18:01:55",
-    "description": "374uww",
-    "spare1": "f0knqq",
+    "status": 84,
+    "statusName": "tarra.erdman",
+    "priority": 150,
+    "createTime": "2025-08-27 22:15:30",
+    "description": "d3rkot",
+    "spare1": "gjzwcq",
     "statusMap": {
-      "mapKey": "kxcdi2"
+      "mapKey": "h1slqm"
     }
   }
 }'
@@ -4187,8 +4307,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2efe1a",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "08zoy5",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4237,8 +4357,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qziqu9",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "h8ogfl",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4282,16 +4402,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/60.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/89.do --data '{
   "data": {
-    "id": "60",
+    "id": "89",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "jon.mosciski",
-    "password": "vl7e25",
-    "initPath": "iliwpg"
+    "username": "tarra.erdman",
+    "password": "z6q42n",
+    "initPath": "3522qd"
   }
 }'
 ```
@@ -4314,7 +4434,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4357,8 +4477,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x01lol",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "xdbc5i",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4414,7 +4534,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?deleteTime=2025-08-25 18:01:00&ids=a13mh3&ids=a13mh3&parentIds=gd4nfw&parentIds=gd4nfw&q=l7ro4g&lft=72&searchCode=60457&areatypeIds=emvm4y&areatypeIds=emvm4y&page=1&endTime=2025-08-25 18:01:00&areatypeId=60&delFlag=6&nameTotal=ntdcln&orderBy=816&rgt=301&limit=10&hasContent=true&description=q6owj3&isDisplay=true&countryId=60&parentId=593&startTime=2025-08-25 18:01:00&name=jon.mosciski&sname=jon.mosciski&nameEn=9f6uba&likeQuery=cujutx&code=60457
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?startTime=2025-08-27 22:14:23&nameTotal=dfw0w5&searchCode=66235&isDisplay=true&orderBy=501&name=tarra.erdman&rgt=829&sname=tarra.erdman&parentIds=yiphlg&parentIds=yiphlg&q=0daajb&endTime=2025-08-27 22:14:23&areatypeIds=8r7gje&areatypeIds=8r7gje&description=ul9fhd&countryId=89&lft=680&code=66235&areatypeId=89&delFlag=6&hasContent=true&page=1&nameEn=rc7t5c&ids=gm3c49&ids=gm3c49&deleteTime=2025-08-27 22:14:23&limit=10&parentId=597&likeQuery=cg5zns
 ```
 **Response-fields:**
 
@@ -4462,40 +4582,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 937,
+    "totalCount": 354,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:55",
-        "lastTime": "2025-08-25 18:01:55",
-        "id": 556,
-        "parentId": 606,
-        "countryId": "60",
-        "areatypeId": "60",
-        "lft": 518,
-        "rgt": 695,
-        "code": "60457",
-        "name": "jon.mosciski",
-        "nameTotal": "nuj1o1",
-        "sname": "jon.mosciski",
-        "nameEn": "az50bg",
-        "searchCode": "60457",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:31",
+        "lastTime": "2025-08-27 22:15:31",
+        "id": 516,
+        "parentId": 153,
+        "countryId": "89",
+        "areatypeId": "89",
+        "lft": 724,
+        "rgt": 279,
+        "code": "66235",
+        "name": "tarra.erdman",
+        "nameTotal": "majour",
+        "sname": "tarra.erdman",
+        "nameEn": "ddpwww",
+        "searchCode": "66235",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 382,
+        "priority": 64,
         "delFlag": 6,
-        "deleteTime": "2025-08-25 18:01:55",
-        "description": "5a04pt",
-        "countryName": "jon.mosciski",
-        "parentName": "jon.mosciski",
-        "areatypeName": "jon.mosciski"
+        "deleteTime": "2025-08-27 22:15:31",
+        "description": "fuvl2q",
+        "countryName": "tarra.erdman",
+        "parentName": "tarra.erdman",
+        "areatypeName": "tarra.erdman"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4546,7 +4666,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?spare2=tu9dxu&unionCode=60457&ids=24tis6&ids=24tis6&page=1&description=iz1zx6&orderBy=985&organCode=60457&endTime=2025-08-25 18:01:00&source=29&xzqhId=780&name=jon.mosciski&createType=144&q=f22bs0&startTime=2025-08-25 18:01:00&orgtypeId=60&delFlag=6&key=gi60s3&organName=jon.mosciski&isOrganWork=mmnise&limit=10&spare1=hbdgfp
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?q=41by4y&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&delFlag=6&organCode=66235&limit=10&createType=75&orderBy=415&name=tarra.erdman&spare1=n90t58&organName=tarra.erdman&ids=ebud1p&ids=ebud1p&xzqhId=848&isOrganWork=96gxhi&page=1&orgtypeId=89&source=145&unionCode=66235&description=3q47v6&spare2=d2idov&key=dp177s
 ```
 **Response-fields:**
 
@@ -4575,21 +4695,21 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 924,
+    "totalCount": 946,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:55",
-        "lastTime": "2025-08-25 18:01:55",
-        "cmsKey": "1rghv6",
-        "cmsValue": "0xd6p4"
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:31",
+        "lastTime": "2025-08-27 22:15:31",
+        "cmsKey": "k1k9jv",
+        "cmsValue": "7b3os0"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4646,7 +4766,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?ids=qm92tl&ids=qm92tl&lft=47&likeQuery=kici7n&q=9sourm&nameTotal=m7ivqd&endTime=2025-08-25 18:01:00&sname=jon.mosciski&searchCode=60457&limit=10&deleteTime=2025-08-25 18:01:00&code=60457&hasContent=true&rgt=821&areatypeIds=akg7tg&areatypeIds=akg7tg&areatypeId=60&orderBy=123&page=1&name=jon.mosciski&parentIds=3g3259&parentIds=3g3259&startTime=2025-08-25 18:01:00&parentId=304&description=74xuta&countryId=60&isDisplay=true&nameEn=o86v8b&delFlag=6
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?orderBy=466&likeQuery=nqb5yt&isDisplay=true&page=1&delFlag=6&code=66235&nameTotal=vw2uxg&startTime=2025-08-27 22:14:23&ids=5y0yiu&ids=5y0yiu&limit=10&countryId=89&lft=653&deleteTime=2025-08-27 22:14:23&parentId=636&nameEn=5vgbzk&rgt=742&name=tarra.erdman&q=svycfx&sname=tarra.erdman&description=r7rnu7&parentIds=at35gr&parentIds=at35gr&areatypeIds=hkkyf6&areatypeIds=hkkyf6&areatypeId=89&searchCode=66235&hasContent=true&endTime=2025-08-27 22:14:23
 ```
 **Response-fields:**
 
@@ -4687,30 +4807,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:55",
-      "lastTime": "2025-08-25 18:01:55",
-      "id": 105,
-      "parentId": 366,
-      "countryId": "60",
-      "areatypeId": "60",
-      "lft": 849,
-      "rgt": 193,
-      "code": "60457",
-      "name": "jon.mosciski",
-      "nameTotal": "r9nkv3",
-      "sname": "jon.mosciski",
-      "nameEn": "qzsubo",
-      "searchCode": "60457",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:31",
+      "lastTime": "2025-08-27 22:15:31",
+      "id": 936,
+      "parentId": 179,
+      "countryId": "89",
+      "areatypeId": "89",
+      "lft": 737,
+      "rgt": 629,
+      "code": "66235",
+      "name": "tarra.erdman",
+      "nameTotal": "0pry4j",
+      "sname": "tarra.erdman",
+      "nameEn": "w83gyk",
+      "searchCode": "66235",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 2,
+      "priority": 81,
       "delFlag": 6,
-      "deleteTime": "2025-08-25 18:01:55",
-      "description": "w7n55k"
+      "deleteTime": "2025-08-27 22:15:31",
+      "description": "a24foz"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4766,7 +4886,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'orderBy=892&parentIds=9lqp1z&parentIds=9lqp1z&searchCode=60457&name=jon.mosciski&isDisplay=true&countryId=60&code=60457&nameEn=v389w6&lft=544&areatypeIds=90jah8&areatypeIds=90jah8&delFlag=6&q=ml2sv9&endTime=2025-08-25 18:01:00&rgt=951&sname=jon.mosciski&startTime=2025-08-25 18:01:00&areatypeId=60&limit=10&page=1&parentId=185&nameTotal=l9qeu5&likeQuery=kcoov4&hasContent=true&deleteTime=2025-08-25 18:01:00&ids=do7moa&ids=do7moa&description=v1mrw3'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'isDisplay=true&sname=tarra.erdman&q=16lj8r&nameTotal=mzw6uy&areatypeId=89&areatypeIds=cw3jfb&areatypeIds=cw3jfb&likeQuery=immf6w&deleteTime=2025-08-27 22:14:23&orderBy=636&page=1&ids=gt5zfq&ids=gt5zfq&hasContent=true&endTime=2025-08-27 22:14:23&searchCode=66235&countryId=89&limit=10&parentId=550&description=itp7rw&parentIds=2rt6qu&parentIds=2rt6qu&rgt=964&delFlag=6&nameEn=cvtll7&code=66235&startTime=2025-08-27 22:14:23&lft=522&name=tarra.erdman'
 ```
 **Response-fields:**
 
@@ -4784,8 +4904,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l3ecvz",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "b7vcsw",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4856,29 +4976,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "id": 958,
-    "parentId": 25,
-    "countryId": "60",
-    "areatypeId": "60",
-    "lft": 623,
-    "rgt": 193,
-    "code": "60457",
-    "name": "jon.mosciski",
-    "nameTotal": "zsx9me",
-    "sname": "jon.mosciski",
-    "nameEn": "0ef0bo",
-    "searchCode": "60457",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:31",
+    "lastTime": "2025-08-27 22:15:31",
+    "id": 265,
+    "parentId": 271,
+    "countryId": "89",
+    "areatypeId": "89",
+    "lft": 880,
+    "rgt": 262,
+    "code": "66235",
+    "name": "tarra.erdman",
+    "nameTotal": "wunxyx",
+    "sname": "tarra.erdman",
+    "nameEn": "myym33",
+    "searchCode": "66235",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 445,
+    "priority": 672,
     "delFlag": 6,
-    "deleteTime": "2025-08-25 18:01:56",
-    "description": "dmrc8h"
+    "deleteTime": "2025-08-27 22:15:31",
+    "description": "y55920"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -4932,27 +5052,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "id": 628,
-    "parentId": 479,
-    "countryId": "60",
-    "areatypeId": "60",
-    "lft": 233,
-    "rgt": 189,
-    "code": "60457",
-    "name": "jon.mosciski",
-    "nameTotal": "j0uqhg",
-    "sname": "jon.mosciski",
-    "nameEn": "glw9fl",
-    "searchCode": "60457",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:31",
+    "lastTime": "2025-08-27 22:15:31",
+    "id": 708,
+    "parentId": 656,
+    "countryId": "89",
+    "areatypeId": "89",
+    "lft": 889,
+    "rgt": 259,
+    "code": "66235",
+    "name": "tarra.erdman",
+    "nameTotal": "48x09e",
+    "sname": "tarra.erdman",
+    "nameEn": "ydvk7r",
+    "searchCode": "66235",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 61,
+    "priority": 656,
     "delFlag": 6,
-    "deleteTime": "2025-08-25 18:01:56",
-    "description": "n5cnfj"
+    "deleteTime": "2025-08-27 22:15:31",
+    "description": "w6ptyh"
   }
 }'
 ```
@@ -4972,8 +5092,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5agfws",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "3oigm2",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5027,27 +5147,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "id": 820,
-    "parentId": 450,
-    "countryId": "60",
-    "areatypeId": "60",
-    "lft": 746,
-    "rgt": 379,
-    "code": "60457",
-    "name": "jon.mosciski",
-    "nameTotal": "6gprzq",
-    "sname": "jon.mosciski",
-    "nameEn": "7wjp7e",
-    "searchCode": "60457",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:31",
+    "lastTime": "2025-08-27 22:15:31",
+    "id": 868,
+    "parentId": 625,
+    "countryId": "89",
+    "areatypeId": "89",
+    "lft": 574,
+    "rgt": 375,
+    "code": "66235",
+    "name": "tarra.erdman",
+    "nameTotal": "nd4rrt",
+    "sname": "tarra.erdman",
+    "nameEn": "vop2d3",
+    "searchCode": "66235",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 565,
+    "priority": 774,
     "delFlag": 6,
-    "deleteTime": "2025-08-25 18:01:56",
-    "description": "6zzsx7"
+    "deleteTime": "2025-08-27 22:15:31",
+    "description": "lcjmdz"
   }
 }'
 ```
@@ -5067,8 +5187,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bxstat",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "pth806",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5117,8 +5237,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nppac9",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "wb8mvk",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5182,7 +5302,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?id=60&cname=jon.mosciski&serverConf1=8flp20&isAdmin=true&serverIp=7.176.103.194&serverConf2=0l7ukz&aesKey=w0ibew&description=wdc0eu&page=1&q=9awcg0&clientId=60&type=458&confLimit=10&serverType=n6et5q&clientSecret=3enoc5&limit=10&isSingle=true&orderBy=366&serverUrl=www.benedict-jenkins.net&serverConf3=bu3jvz&organName=jon.mosciski&status=963&isDisabled=true&spare2=naidjt&organId=60&name=jon.mosciski&appId=60&spare1=lj83no&endTime=2025-08-25 18:01:00&startTime=2025-08-25 18:01:00&aesIvKey=e3wj0o&currCount=743&inoutMode=195
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?organName=tarra.erdman&organId=89&endTime=2025-08-27 22:14:23&name=tarra.erdman&spare2=sje9v1&clientId=89&description=78fxq2&q=7aiv1b&clientSecret=uyggiv&aesKey=6wf6qr&serverIp=217.26.150.93&aesIvKey=nw7ypq&serverConf1=j6dduo&isSingle=true&serverUrl=www.felicitas-spencer.com&serverConf3=y86gse&spare1=80iufw&type=244&isDisabled=true&id=89&status=148&serverConf2=bjmpmk&confLimit=10&page=1&inoutMode=357&limit=10&cname=tarra.erdman&serverType=r03spp&appId=89&startTime=2025-08-27 22:14:23&orderBy=554&currCount=795&isAdmin=true
 ```
 **Response-fields:**
 
@@ -5237,44 +5357,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:57",
-      "lastTime": "2025-08-25 18:01:57",
-      "id": "60",
-      "organId": "60",
-      "appId": "60",
-      "organName": "jon.mosciski",
-      "inoutMode": 708,
-      "name": "jon.mosciski",
-      "cname": "jon.mosciski",
-      "type": 713,
-      "clientId": "60",
-      "clientSecret": "32otq4",
-      "aesKey": "0hmu1z",
-      "aesIvKey": "yl18hd",
-      "serverIp": "7.176.103.194",
-      "serverType": "qopz79",
-      "serverUrl": "www.benedict-jenkins.net",
-      "serverConf1": "ku09cx",
-      "serverConf2": "o1b2fs",
-      "serverConf3": "zrl759",
-      "currCount": 884,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:34",
+      "lastTime": "2025-08-27 22:15:34",
+      "id": "89",
+      "organId": "89",
+      "appId": "89",
+      "organName": "tarra.erdman",
+      "inoutMode": 822,
+      "name": "tarra.erdman",
+      "cname": "tarra.erdman",
+      "type": 70,
+      "clientId": "89",
+      "clientSecret": "46hlhs",
+      "aesKey": "p0rbhy",
+      "aesIvKey": "zfc5y6",
+      "serverIp": "217.26.150.93",
+      "serverType": "naxqkd",
+      "serverUrl": "www.felicitas-spencer.com",
+      "serverConf1": "4pka1n",
+      "serverConf2": "onkej0",
+      "serverConf3": "pljli1",
+      "currCount": 223,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 572,
-      "description": "zt7p0o",
-      "spare1": "ixc9ai",
-      "spare2": "qulj6b",
-      "inOrganName": "jon.mosciski",
-      "userName": "jon.mosciski",
-      "appName": "jon.mosciski",
-      "inoutModeName": "jon.mosciski",
-      "typeName": "jon.mosciski"
+      "status": 924,
+      "description": "c6m9th",
+      "spare1": "pqobvf",
+      "spare2": "ghq8uw",
+      "inOrganName": "tarra.erdman",
+      "userName": "tarra.erdman",
+      "appName": "tarra.erdman",
+      "inoutModeName": "tarra.erdman",
+      "typeName": "tarra.erdman"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5305,7 +5425,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=89
 ```
 **Response-fields:**
 
@@ -5360,44 +5480,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:57",
-      "lastTime": "2025-08-25 18:01:57",
-      "id": "60",
-      "organId": "60",
-      "appId": "60",
-      "organName": "jon.mosciski",
-      "inoutMode": 963,
-      "name": "jon.mosciski",
-      "cname": "jon.mosciski",
-      "type": 908,
-      "clientId": "60",
-      "clientSecret": "vd3mqn",
-      "aesKey": "e9cnyj",
-      "aesIvKey": "9frxqo",
-      "serverIp": "7.176.103.194",
-      "serverType": "2rbs6u",
-      "serverUrl": "www.benedict-jenkins.net",
-      "serverConf1": "aozual",
-      "serverConf2": "lo9nj2",
-      "serverConf3": "a5z8rg",
-      "currCount": 17,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:34",
+      "lastTime": "2025-08-27 22:15:34",
+      "id": "89",
+      "organId": "89",
+      "appId": "89",
+      "organName": "tarra.erdman",
+      "inoutMode": 743,
+      "name": "tarra.erdman",
+      "cname": "tarra.erdman",
+      "type": 18,
+      "clientId": "89",
+      "clientSecret": "bjo1sb",
+      "aesKey": "mmf4tg",
+      "aesIvKey": "y4hd2i",
+      "serverIp": "217.26.150.93",
+      "serverType": "qrkiac",
+      "serverUrl": "www.felicitas-spencer.com",
+      "serverConf1": "926m98",
+      "serverConf2": "dspf9c",
+      "serverConf3": "iuf1yc",
+      "currCount": 635,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 565,
-      "description": "onyh2w",
-      "spare1": "dwrdkf",
-      "spare2": "lvp7qo",
-      "inOrganName": "jon.mosciski",
-      "userName": "jon.mosciski",
-      "appName": "jon.mosciski",
-      "inoutModeName": "jon.mosciski",
-      "typeName": "jon.mosciski"
+      "status": 834,
+      "description": "q6n2p8",
+      "spare1": "ccxzj4",
+      "spare2": "scuy6w",
+      "inOrganName": "tarra.erdman",
+      "userName": "tarra.erdman",
+      "appName": "tarra.erdman",
+      "inoutModeName": "tarra.erdman",
+      "typeName": "tarra.erdman"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5428,7 +5548,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=89
 ```
 **Response-fields:**
 
@@ -5483,44 +5603,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:57",
-      "lastTime": "2025-08-25 18:01:57",
-      "id": "60",
-      "organId": "60",
-      "appId": "60",
-      "organName": "jon.mosciski",
-      "inoutMode": 352,
-      "name": "jon.mosciski",
-      "cname": "jon.mosciski",
-      "type": 702,
-      "clientId": "60",
-      "clientSecret": "109n9i",
-      "aesKey": "fs9j0z",
-      "aesIvKey": "2dw4jr",
-      "serverIp": "7.176.103.194",
-      "serverType": "93pwna",
-      "serverUrl": "www.benedict-jenkins.net",
-      "serverConf1": "zub8t8",
-      "serverConf2": "x0mrw3",
-      "serverConf3": "w3o5ni",
-      "currCount": 615,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:34",
+      "lastTime": "2025-08-27 22:15:34",
+      "id": "89",
+      "organId": "89",
+      "appId": "89",
+      "organName": "tarra.erdman",
+      "inoutMode": 351,
+      "name": "tarra.erdman",
+      "cname": "tarra.erdman",
+      "type": 19,
+      "clientId": "89",
+      "clientSecret": "w6xf6u",
+      "aesKey": "zff2mu",
+      "aesIvKey": "6t3bau",
+      "serverIp": "217.26.150.93",
+      "serverType": "pxa26w",
+      "serverUrl": "www.felicitas-spencer.com",
+      "serverConf1": "foieir",
+      "serverConf2": "uu80tj",
+      "serverConf3": "svin9i",
+      "currCount": 796,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 221,
-      "description": "fy63hk",
-      "spare1": "p3c6ir",
-      "spare2": "lon1sn",
-      "inOrganName": "jon.mosciski",
-      "userName": "jon.mosciski",
-      "appName": "jon.mosciski",
-      "inoutModeName": "jon.mosciski",
-      "typeName": "jon.mosciski"
+      "status": 670,
+      "description": "moyl61",
+      "spare1": "lrcve6",
+      "spare2": "casrgu",
+      "inOrganName": "tarra.erdman",
+      "userName": "tarra.erdman",
+      "appName": "tarra.erdman",
+      "inoutModeName": "tarra.erdman",
+      "typeName": "tarra.erdman"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5595,7 +5715,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"timestamp":"2025-08-25 18:01:00"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"timestamp":"2025-08-27 22:14:23"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5637,8 +5757,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ag1v7v",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "sqlasw",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5681,8 +5801,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "crlgdt",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "j1thl7",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5731,8 +5851,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6d5x21",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "5u3pps",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5773,7 +5893,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?limit=10&page=1&endTime=2025-08-25 18:01:00&organName=jon.mosciski&q=gtym8h&orderBy=992&delFlag=6&wlType=awzcn6&startTime=2025-08-25 18:01:00&organId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?q=d9h1ig&wlType=8tt5am&organName=tarra.erdman&limit=10&orderBy=740&organId=89&delFlag=6&page=1&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23
 ```
 **Response-fields:**
 
@@ -5811,27 +5931,27 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "v92kys"
+        "ojn7y5"
       ],
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "organSName": "jon.mosciski",
-      "organCode": "60457",
-      "address": "31634 Moshe Stravenue， Strosinfurt， MT 50674",
-      "wlType": "yrb6gs",
-      "wlTypeName": "jon.mosciski",
-      "priority": 971,
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "organSName": "tarra.erdman",
+      "organCode": "66235",
+      "address": "283 Abernathy Manor， East Wilma， HI 00346",
+      "wlType": "iin7l9",
+      "wlTypeName": "tarra.erdman",
+      "priority": 540,
       "delFlag": 6,
-      "createTime": "2025-08-25 18:01:56",
-      "lastTime": "2025-08-25 18:01:56",
-      "contactName": "jon.mosciski",
-      "contactEmail": "esta.hermann@gmail.com",
-      "contactMobile": "(330) 445-7747",
-      "description": "dii27d",
-      "tel": "kwyeq3"
+      "createTime": "2025-08-27 22:15:32",
+      "lastTime": "2025-08-27 22:15:32",
+      "contactName": "tarra.erdman",
+      "contactEmail": "fletcher.hickle@hotmail.com",
+      "contactMobile": "803.740.8989",
+      "description": "4igkmo",
+      "tel": "kyz0c4"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5899,26 +6019,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "9tgaji"
+      "1fmavb"
     ],
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "organSName": "jon.mosciski",
-    "organCode": "60457",
-    "address": "31634 Moshe Stravenue， Strosinfurt， MT 50674",
-    "wlType": "vqvmey",
-    "wlTypeName": "jon.mosciski",
-    "priority": 617,
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "organSName": "tarra.erdman",
+    "organCode": "66235",
+    "address": "283 Abernathy Manor， East Wilma， HI 00346",
+    "wlType": "7ae4iz",
+    "wlTypeName": "tarra.erdman",
+    "priority": 293,
     "delFlag": 6,
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "contactName": "jon.mosciski",
-    "contactEmail": "esta.hermann@gmail.com",
-    "contactMobile": "(330) 445-7747",
-    "description": "i91sgd",
-    "tel": "117m58"
+    "createTime": "2025-08-27 22:15:32",
+    "lastTime": "2025-08-27 22:15:32",
+    "contactName": "tarra.erdman",
+    "contactEmail": "fletcher.hickle@hotmail.com",
+    "contactMobile": "803.740.8989",
+    "description": "xubuw5",
+    "tel": "d5ja0n"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -5969,24 +6089,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "lc060c"
+      "mwt35u"
     ],
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "organSName": "jon.mosciski",
-    "organCode": "60457",
-    "address": "31634 Moshe Stravenue， Strosinfurt， MT 50674",
-    "wlType": "xr11pl",
-    "wlTypeName": "jon.mosciski",
-    "priority": 931,
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "organSName": "tarra.erdman",
+    "organCode": "66235",
+    "address": "283 Abernathy Manor， East Wilma， HI 00346",
+    "wlType": "kw8o9p",
+    "wlTypeName": "tarra.erdman",
+    "priority": 346,
     "delFlag": 6,
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "contactName": "jon.mosciski",
-    "contactEmail": "esta.hermann@gmail.com",
-    "contactMobile": "(330) 445-7747",
-    "description": "wrsknj",
-    "tel": "70pvyt"
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "contactName": "tarra.erdman",
+    "contactEmail": "fletcher.hickle@hotmail.com",
+    "contactMobile": "803.740.8989",
+    "description": "zwfb0f",
+    "tel": "chiuw6"
   }
 }'
 ```
@@ -6006,8 +6126,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d9nme1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "t8t8i7",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6058,24 +6178,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "2anaxh"
+      "molt40"
     ],
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "organSName": "jon.mosciski",
-    "organCode": "60457",
-    "address": "31634 Moshe Stravenue， Strosinfurt， MT 50674",
-    "wlType": "br7wj6",
-    "wlTypeName": "jon.mosciski",
-    "priority": 690,
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "organSName": "tarra.erdman",
+    "organCode": "66235",
+    "address": "283 Abernathy Manor， East Wilma， HI 00346",
+    "wlType": "szkqqe",
+    "wlTypeName": "tarra.erdman",
+    "priority": 729,
     "delFlag": 6,
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "contactName": "jon.mosciski",
-    "contactEmail": "esta.hermann@gmail.com",
-    "contactMobile": "(330) 445-7747",
-    "description": "r0975d",
-    "tel": "y5k4xq"
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "contactName": "tarra.erdman",
+    "contactEmail": "fletcher.hickle@hotmail.com",
+    "contactMobile": "803.740.8989",
+    "description": "b5tt1x",
+    "tel": "32stbd"
   }
 }'
 ```
@@ -6095,8 +6215,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "eup1tt",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "hbstt0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6145,8 +6265,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "azqv4n",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "dxsqga",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6197,24 +6317,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "vgf65p"
+      "z538qa"
     ],
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "organSName": "jon.mosciski",
-    "organCode": "60457",
-    "address": "31634 Moshe Stravenue， Strosinfurt， MT 50674",
-    "wlType": "9ddm2s",
-    "wlTypeName": "jon.mosciski",
-    "priority": 285,
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "organSName": "tarra.erdman",
+    "organCode": "66235",
+    "address": "283 Abernathy Manor， East Wilma， HI 00346",
+    "wlType": "ohfu6o",
+    "wlTypeName": "tarra.erdman",
+    "priority": 253,
     "delFlag": 6,
-    "createTime": "2025-08-25 18:01:56",
-    "lastTime": "2025-08-25 18:01:56",
-    "contactName": "jon.mosciski",
-    "contactEmail": "esta.hermann@gmail.com",
-    "contactMobile": "(330) 445-7747",
-    "description": "b0ldle",
-    "tel": "yt55q5"
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "contactName": "tarra.erdman",
+    "contactEmail": "fletcher.hickle@hotmail.com",
+    "contactMobile": "803.740.8989",
+    "description": "pow5ts",
+    "tel": "9ey5t6"
   }
 }'
 ```
@@ -6234,8 +6354,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hgool9",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "3jkxzp",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6276,7 +6396,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?name=jon.mosciski&description=zzlezz&orderBy=449&q=e7jp4q&limit=10&startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&page=1&delFlag=6&sname=jon.mosciski
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&orderBy=733&sname=tarra.erdman&endTime=2025-08-27 22:14:23&name=tarra.erdman&delFlag=6&q=4gbhis&startTime=2025-08-27 22:14:23&description=frdhz9&limit=10
 ```
 **Response-fields:**
 
@@ -6305,18 +6425,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:57",
-      "lastTime": "2025-08-25 18:01:57",
-      "id": "60",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "priority": 367,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:33",
+      "lastTime": "2025-08-27 22:15:33",
+      "id": "89",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "priority": 215,
       "delFlag": 6,
-      "description": "b7rs74"
+      "description": "kr6en0"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6356,7 +6476,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'limit=10&orderBy=967&q=bldvcx&sname=jon.mosciski&delFlag=6&endTime=2025-08-25 18:01:00&page=1&name=jon.mosciski&startTime=2025-08-25 18:01:00&description=vhwlf8'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'delFlag=6&name=tarra.erdman&startTime=2025-08-27 22:14:23&sname=tarra.erdman&q=0b22co&description=30cke0&endTime=2025-08-27 22:14:23&limit=10&page=1&orderBy=279'
 ```
 **Response-fields:**
 
@@ -6374,8 +6494,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2pxcjg",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "7a5fsj",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6434,17 +6554,17 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "priority": 680,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "priority": 214,
     "delFlag": 6,
-    "description": "t0696j"
+    "description": "yrunis"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6486,15 +6606,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "priority": 609,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "priority": 359,
     "delFlag": 6,
-    "description": "p6lbhq"
+    "description": "75yvjk"
   }
 }'
 ```
@@ -6514,8 +6634,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c48l7d",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "9qt5cv",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6557,15 +6677,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "priority": 98,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "priority": 49,
     "delFlag": 6,
-    "description": "1iut89"
+    "description": "g9tr45"
   }
 }'
 ```
@@ -6585,8 +6705,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q8rld7",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "74d55v",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6635,8 +6755,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nxj8a7",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "c7zmkc",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6679,7 +6799,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?name=jon.mosciski&description=24xlmb&page=1&orderBy=744&startTime=2025-08-25 18:01:00&code=60457&endTime=2025-08-25 18:01:00&type=aw7dwe&existKey=yvgw8z&limit=10&delFlag=6&q=ha91e0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?description=t9wr4d&q=2akzds&orderBy=485&page=1&limit=10&type=2y4fq4&code=66235&existKey=jigx8o&startTime=2025-08-27 22:14:23&delFlag=6&name=tarra.erdman&endTime=2025-08-27 22:14:23
 ```
 **Response-fields:**
 
@@ -6709,19 +6829,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:57",
-      "lastTime": "2025-08-25 18:01:57",
-      "id": "60",
-      "name": "jon.mosciski",
-      "type": "3ywle6",
-      "code": "60457",
-      "priority": 221,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:33",
+      "lastTime": "2025-08-27 22:15:33",
+      "id": "89",
+      "name": "tarra.erdman",
+      "type": "5y2gap",
+      "code": "66235",
+      "priority": 177,
       "delFlag": 6,
-      "description": "hcesbj"
+      "description": "odwui2"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6763,7 +6883,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'name=jon.mosciski&code=60457&endTime=2025-08-25 18:01:00&startTime=2025-08-25 18:01:00&limit=10&type=zdtvrq&page=1&orderBy=296&description=xct9qt&delFlag=6&q=sb03d4&existKey=0xawfa'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&orderBy=973&page=1&name=tarra.erdman&q=pntui6&code=66235&existKey=cqewpw&delFlag=6&type=vd193v&description=vjhx6h&limit=10'
 ```
 **Response-fields:**
 
@@ -6781,8 +6901,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fydfh7",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "4ug6qh",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6842,18 +6962,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "type": "48nihy",
-    "code": "60457",
-    "priority": 907,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "type": "zg5doj",
+    "code": "66235",
+    "priority": 830,
     "delFlag": 6,
-    "description": "40ih4s"
+    "description": "52n8q6"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6896,16 +7016,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "type": "i33fh2",
-    "code": "60457",
-    "priority": 646,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "type": "qn3er8",
+    "code": "66235",
+    "priority": 669,
     "delFlag": 6,
-    "description": "vx18p3"
+    "description": "0gurek"
   }
 }'
 ```
@@ -6925,8 +7045,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z6003j",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "6ze9nq",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -6969,16 +7089,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:57",
-    "lastTime": "2025-08-25 18:01:57",
-    "id": "60",
-    "name": "jon.mosciski",
-    "type": "vkr1lt",
-    "code": "60457",
-    "priority": 859,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:33",
+    "lastTime": "2025-08-27 22:15:33",
+    "id": "89",
+    "name": "tarra.erdman",
+    "type": "h4cb2g",
+    "code": "66235",
+    "priority": 940,
     "delFlag": 6,
-    "description": "ejwtqs"
+    "description": "hq8vaa"
   }
 }'
 ```
@@ -6998,8 +7118,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8ocriu",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "0crc4s",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7048,8 +7168,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gnc53d",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "jeozqx",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7095,7 +7215,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?refType=ce092l&q=nid5bl&fileIsvalid=true&startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&limit=10&key=fpzooq&refId=60&orderBy=155&page=1&fileExtension=byb82e&fileSize=415&resclassId=60&appId=60&fileName=jon.mosciski
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?refId=89&endTime=2025-08-27 22:14:23&appId=89&fileName=tarra.erdman&limit=10&fileSize=127&resclassId=89&refType=so4po2&page=1&q=l0ehbk&startTime=2025-08-27 22:14:23&key=s37slw&fileIsvalid=true&fileExtension=gt2ue4&orderBy=862
 ```
 **Response-fields:**
 
@@ -7126,25 +7246,25 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 835,
+    "totalCount": 966,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "60",
-        "resclassId": "60",
-        "fileName": "jon.mosciski",
+        "id": "89",
+        "resclassId": "89",
+        "fileName": "tarra.erdman",
         "fileIsvalid": true,
-        "createTime": "2025-08-25 18:01:56",
-        "fileExtension": "dxtja1",
+        "createTime": "2025-08-27 22:15:32",
+        "fileExtension": "gzozo3",
         "ids": [
-          "9bmhn8"
+          "i5815k"
         ]
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7189,7 +7309,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'limit=10&page=1&fileExtension=9qfmkm&resclassId=60&appId=60&refType=8y1ct5&fileSize=245&fileName=jon.mosciski&fileIsvalid=true&orderBy=589&startTime=2025-08-25 18:01:00&key=6gx63z&endTime=2025-08-25 18:01:00&q=vmbl1p&refId=60'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'orderBy=730&resclassId=89&fileIsvalid=true&appId=89&refId=89&fileExtension=sl6lx7&startTime=2025-08-27 22:14:23&key=vm8nsw&q=2coynv&refType=4r2ulh&fileSize=326&page=1&endTime=2025-08-27 22:14:23&limit=10&fileName=tarra.erdman'
 ```
 **Response-fields:**
 
@@ -7207,8 +7327,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "40vich",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "6wrdjg",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7239,7 +7359,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=89
 ```
 **Response-fields:**
 
@@ -7265,17 +7385,17 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "60",
-    "resclassId": "60",
-    "fileName": "jon.mosciski",
+    "id": "89",
+    "resclassId": "89",
+    "fileName": "tarra.erdman",
     "fileIsvalid": true,
-    "createTime": "2025-08-25 18:01:56",
-    "fileExtension": "0baotb",
+    "createTime": "2025-08-27 22:15:32",
+    "fileExtension": "tkjou1",
     "ids": [
-      "is1gtv"
+      "wzhqdy"
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7315,14 +7435,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "60",
-    "resclassId": "60",
-    "fileName": "jon.mosciski",
+    "id": "89",
+    "resclassId": "89",
+    "fileName": "tarra.erdman",
     "fileIsvalid": true,
-    "createTime": "2025-08-25 18:01:56",
-    "fileExtension": "lcdmij",
+    "createTime": "2025-08-27 22:15:32",
+    "fileExtension": "xxnrxv",
     "ids": [
-      "ckvp85"
+      "nvhpeq"
     ]
   }
 }'
@@ -7343,8 +7463,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rjx9t0",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "yno0og",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7384,14 +7504,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "60",
-    "resclassId": "60",
-    "fileName": "jon.mosciski",
+    "id": "89",
+    "resclassId": "89",
+    "fileName": "tarra.erdman",
     "fileIsvalid": true,
-    "createTime": "2025-08-25 18:01:56",
-    "fileExtension": "g0glx9",
+    "createTime": "2025-08-27 22:15:32",
+    "fileExtension": "6j40fb",
     "ids": [
-      "0tk3dk"
+      "9zi2hb"
     ]
   }
 }'
@@ -7412,8 +7532,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e979fu",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "1zy2rl",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7453,14 +7573,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "60",
-    "resclassId": "60",
-    "fileName": "jon.mosciski",
+    "id": "89",
+    "resclassId": "89",
+    "fileName": "tarra.erdman",
     "fileIsvalid": true,
-    "createTime": "2025-08-25 18:01:56",
-    "fileExtension": "0u5cob",
+    "createTime": "2025-08-27 22:15:32",
+    "fileExtension": "izu6w4",
     "ids": [
-      "2p7xt9"
+      "vz4axy"
     ]
   }
 }'
@@ -7481,8 +7601,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9dxmcp",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "44ijt4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7525,8 +7645,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "54ynzd",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "d07wvj",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7558,7 +7678,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?delete=true&fileName=jon.mosciski
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=tarra.erdman&delete=true
 ```
 **Response-fields:**
 
@@ -7576,8 +7696,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7tvpd3",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ivkni0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7627,14 +7747,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "jon.mosciski",
-    "filename": "jon.mosciski",
-    "fileType": "x3q478",
-    "fileUrl": "www.benedict-jenkins.net",
-    "fileHttpUrl": "www.benedict-jenkins.net",
-    "statusCode": "60457"
+    "originFilename": "tarra.erdman",
+    "filename": "tarra.erdman",
+    "fileType": "shjmh8",
+    "fileUrl": "www.felicitas-spencer.com",
+    "fileHttpUrl": "www.felicitas-spencer.com",
+    "statusCode": "66235"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7691,15 +7811,15 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "jon.mosciski",
-      "filename": "jon.mosciski",
-      "fileType": "q8vsxi",
-      "fileUrl": "www.benedict-jenkins.net",
-      "fileHttpUrl": "www.benedict-jenkins.net",
-      "statusCode": "60457"
+      "originFilename": "tarra.erdman",
+      "filename": "tarra.erdman",
+      "fileType": "kaotid",
+      "fileUrl": "www.felicitas-spencer.com",
+      "fileHttpUrl": "www.felicitas-spencer.com",
+      "statusCode": "66235"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7730,7 +7850,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=x6dfl1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=bt0m3c
 ```
 **Response-fields:**
 
@@ -7748,8 +7868,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nisv83",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "rb9fbh",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7796,7 +7916,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?keyWords=tf6jzq&batchId=60&organId=60&appId=60&status=856&page=1&limit=10&endTime=2025-08-25 18:01:00&areaId=185&startTime=2025-08-25 18:01:00&groupId=327&roleTypeId=60&positionId=60&type=52kq2s&orderBy=799&q=tyvlme
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?page=1&areaId=374&groupId=868&q=bgsbv9&roleTypeId=89&positionId=89&batchId=89&keyWords=5qpa9v&orderBy=906&startTime=2025-08-27 22:14:23&appId=89&organId=89&endTime=2025-08-27 22:14:23&type=jm30kt&limit=10&status=726
 ```
 **Response-fields:**
 
@@ -7869,65 +7989,65 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 359,
+    "totalCount": 700,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:53",
-        "lastTime": "2025-08-25 18:01:53",
-        "id": 865,
-        "appId": "60",
-        "saveSource": "7eybnl",
-        "unitName": "jon.mosciski",
-        "name": "jon.mosciski",
-        "idNum": "jtptqu",
-        "duty": "zcydtg",
-        "telephone": "251.719.9288",
-        "mobile": "(330) 445-7747",
-        "extInfo1": "o6bb8w",
-        "extInfo2": "fb0yxe",
-        "extInfo3": "nj0gwc",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:28",
+        "lastTime": "2025-08-27 22:15:28",
+        "id": 24,
+        "appId": "89",
+        "saveSource": "zm42rx",
+        "unitName": "tarra.erdman",
+        "name": "tarra.erdman",
+        "idNum": "tf2ko5",
+        "duty": "dn5d5y",
+        "telephone": "1-781-417-5663",
+        "mobile": "803.740.8989",
+        "extInfo1": "nk4ab6",
+        "extInfo2": "mm55ub",
+        "extInfo3": "ubu01t",
         "needInitUser": true,
-        "userId": "60",
+        "userId": "89",
         "needInitOrgan": true,
-        "organId": "60",
-        "type": "l2uags",
-        "foreignUrl": "www.benedict-jenkins.net",
-        "bizType": 62,
-        "bizOrganId": "60",
-        "bizAreaId": 467,
-        "bizGroupId": 374,
-        "bizPower": "6ez41v",
-        "bizMultiInfo": "2c4i6l",
+        "organId": "89",
+        "type": "q5kw2z",
+        "foreignUrl": "www.felicitas-spencer.com",
+        "bizType": 784,
+        "bizOrganId": "89",
+        "bizAreaId": 344,
+        "bizGroupId": 959,
+        "bizPower": "1qie2f",
+        "bizMultiInfo": "mp3nrn",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "60",
-        "opOrganId": "60",
-        "opTime": "2025-08-25 18:01:53",
-        "opInfo": "ibr88e",
-        "priority": 466,
-        "status": 1,
+        "opUserId": "89",
+        "opOrganId": "89",
+        "opTime": "2025-08-27 22:15:28",
+        "opInfo": "kj7rfw",
+        "priority": 920,
+        "status": 368,
         "delFlag": 6,
-        "dataBatch": "k8oq6n",
-        "dataVersion": 76,
-        "updateTime": "2025-08-25 18:01:53",
-        "syncMode": "7118cx",
-        "syncTime": "2025-08-25 18:01:53",
-        "description": "xskkck",
-        "groupName": "jon.mosciski",
-        "positionName": "jon.mosciski",
-        "bizPowerName": "jon.mosciski",
-        "subdistrictName": "jon.mosciski",
-        "communityName": "jon.mosciski"
+        "dataBatch": "212qji",
+        "dataVersion": 112,
+        "updateTime": "2025-08-27 22:15:28",
+        "syncMode": "61ohud",
+        "syncTime": "2025-08-27 22:15:28",
+        "description": "3hd707",
+        "groupName": "tarra.erdman",
+        "positionName": "tarra.erdman",
+        "bizPowerName": "tarra.erdman",
+        "subdistrictName": "tarra.erdman",
+        "communityName": "tarra.erdman"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -7973,7 +8093,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'orderBy=607&limit=10&roleTypeId=60&areaId=31&organId=60&startTime=2025-08-25 18:01:00&type=mydxl4&status=893&groupId=763&page=1&endTime=2025-08-25 18:01:00&positionId=60&q=4cqfb9&appId=60&keyWords=n6zoph&batchId=60'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'type=2xnomo&groupId=463&page=1&startTime=2025-08-27 22:14:23&batchId=89&orderBy=13&keyWords=iswsmg&endTime=2025-08-27 22:14:23&appId=89&areaId=862&status=170&positionId=89&q=getugd&limit=10&roleTypeId=89&organId=89'
 ```
 **Response-fields:**
 
@@ -7991,8 +8111,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7buvdb",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "0zb589",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8023,7 +8143,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/599.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/21.do
 ```
 **Response-fields:**
 
@@ -8091,57 +8211,57 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": 743,
-    "appId": "60",
-    "saveSource": "01bq6u",
-    "unitName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "idNum": "qt6abm",
-    "duty": "e476f4",
-    "telephone": "251.719.9288",
-    "mobile": "(330) 445-7747",
-    "extInfo1": "vh387f",
-    "extInfo2": "8ht6ds",
-    "extInfo3": "dnvbk1",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": 549,
+    "appId": "89",
+    "saveSource": "aonm5f",
+    "unitName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "idNum": "jfcmju",
+    "duty": "rp9o6v",
+    "telephone": "1-781-417-5663",
+    "mobile": "803.740.8989",
+    "extInfo1": "prs8y8",
+    "extInfo2": "1ee5n4",
+    "extInfo3": "1z2a15",
     "needInitUser": true,
-    "userId": "60",
+    "userId": "89",
     "needInitOrgan": true,
-    "organId": "60",
-    "type": "mq3z6i",
-    "foreignUrl": "www.benedict-jenkins.net",
-    "bizType": 656,
-    "bizOrganId": "60",
-    "bizAreaId": 232,
-    "bizGroupId": 871,
-    "bizPower": "m5eeyp",
-    "bizMultiInfo": "at9coe",
+    "organId": "89",
+    "type": "r6tg7d",
+    "foreignUrl": "www.felicitas-spencer.com",
+    "bizType": 477,
+    "bizOrganId": "89",
+    "bizAreaId": 920,
+    "bizGroupId": 130,
+    "bizPower": "ncy4p4",
+    "bizMultiInfo": "ttf0fy",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "60",
-    "opOrganId": "60",
-    "opTime": "2025-08-25 18:01:53",
-    "opInfo": "zkfwf3",
-    "priority": 74,
-    "status": 137,
+    "opUserId": "89",
+    "opOrganId": "89",
+    "opTime": "2025-08-27 22:15:28",
+    "opInfo": "hhpawi",
+    "priority": 578,
+    "status": 6,
     "delFlag": 6,
-    "dataBatch": "g5kh6m",
-    "dataVersion": 689,
-    "updateTime": "2025-08-25 18:01:53",
-    "syncMode": "r0j640",
-    "syncTime": "2025-08-25 18:01:53",
-    "description": "7jwnrz",
-    "groupName": "jon.mosciski",
-    "positionName": "jon.mosciski",
-    "bizPowerName": "jon.mosciski",
-    "subdistrictName": "jon.mosciski",
-    "communityName": "jon.mosciski"
+    "dataBatch": "62cybf",
+    "dataVersion": 712,
+    "updateTime": "2025-08-27 22:15:28",
+    "syncMode": "qrbnmx",
+    "syncTime": "2025-08-27 22:15:28",
+    "description": "tlrrku",
+    "groupName": "tarra.erdman",
+    "positionName": "tarra.erdman",
+    "bizPowerName": "tarra.erdman",
+    "subdistrictName": "tarra.erdman",
+    "communityName": "tarra.erdman"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8218,50 +8338,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": 591,
-    "appId": "60",
-    "saveSource": "6afuhs",
-    "unitName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "idNum": "ijwans",
-    "duty": "gn8rfc",
-    "telephone": "251.719.9288",
-    "mobile": "(330) 445-7747",
-    "extInfo1": "rtoy3t",
-    "extInfo2": "vrwijv",
-    "extInfo3": "08ur8m",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": 729,
+    "appId": "89",
+    "saveSource": "rn7kaw",
+    "unitName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "idNum": "mokjhz",
+    "duty": "wmhqox",
+    "telephone": "1-781-417-5663",
+    "mobile": "803.740.8989",
+    "extInfo1": "ry9bmp",
+    "extInfo2": "qvr9qy",
+    "extInfo3": "wbdk5h",
     "needInitUser": true,
-    "userId": "60",
+    "userId": "89",
     "needInitOrgan": true,
-    "organId": "60",
-    "type": "31uvnb",
-    "foreignUrl": "www.benedict-jenkins.net",
-    "bizType": 306,
-    "bizOrganId": "60",
-    "bizAreaId": 652,
-    "bizGroupId": 24,
-    "bizPower": "rex2oa",
-    "bizMultiInfo": "vb9xex",
+    "organId": "89",
+    "type": "ar913r",
+    "foreignUrl": "www.felicitas-spencer.com",
+    "bizType": 678,
+    "bizOrganId": "89",
+    "bizAreaId": 984,
+    "bizGroupId": 584,
+    "bizPower": "fbs4du",
+    "bizMultiInfo": "kmiayf",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "60",
-    "opOrganId": "60",
-    "opTime": "2025-08-25 18:01:53",
-    "opInfo": "ef9nfo",
-    "priority": 479,
-    "status": 807,
+    "opUserId": "89",
+    "opOrganId": "89",
+    "opTime": "2025-08-27 22:15:28",
+    "opInfo": "lzc5i8",
+    "priority": 666,
+    "status": 301,
     "delFlag": 6,
-    "dataBatch": "khb0iy",
-    "dataVersion": 944,
-    "updateTime": "2025-08-25 18:01:53",
-    "syncMode": "a6ans8",
-    "syncTime": "2025-08-25 18:01:53",
-    "description": "1rm0nc"
+    "dataBatch": "z1lonv",
+    "dataVersion": 148,
+    "updateTime": "2025-08-27 22:15:28",
+    "syncMode": "r36d6z",
+    "syncTime": "2025-08-27 22:15:28",
+    "description": "loyp43"
   }
 }'
 ```
@@ -8281,8 +8401,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "crg5yg",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "jorjw5",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8359,50 +8479,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": 536,
-    "appId": "60",
-    "saveSource": "7z5o4f",
-    "unitName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "idNum": "rk5dug",
-    "duty": "lvioaz",
-    "telephone": "251.719.9288",
-    "mobile": "(330) 445-7747",
-    "extInfo1": "ydlqmg",
-    "extInfo2": "qeizbs",
-    "extInfo3": "cjvquu",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": 600,
+    "appId": "89",
+    "saveSource": "76st81",
+    "unitName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "idNum": "ho4ig7",
+    "duty": "cypc1w",
+    "telephone": "1-781-417-5663",
+    "mobile": "803.740.8989",
+    "extInfo1": "sw3ccf",
+    "extInfo2": "2ud0f8",
+    "extInfo3": "xlzct2",
     "needInitUser": true,
-    "userId": "60",
+    "userId": "89",
     "needInitOrgan": true,
-    "organId": "60",
-    "type": "rhbz7v",
-    "foreignUrl": "www.benedict-jenkins.net",
-    "bizType": 582,
-    "bizOrganId": "60",
-    "bizAreaId": 971,
-    "bizGroupId": 510,
-    "bizPower": "kxwbfh",
-    "bizMultiInfo": "smcvde",
+    "organId": "89",
+    "type": "b9jdp9",
+    "foreignUrl": "www.felicitas-spencer.com",
+    "bizType": 769,
+    "bizOrganId": "89",
+    "bizAreaId": 213,
+    "bizGroupId": 189,
+    "bizPower": "16a0h7",
+    "bizMultiInfo": "a1ed1z",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "60",
-    "opOrganId": "60",
-    "opTime": "2025-08-25 18:01:53",
-    "opInfo": "em77fs",
-    "priority": 126,
-    "status": 363,
+    "opUserId": "89",
+    "opOrganId": "89",
+    "opTime": "2025-08-27 22:15:28",
+    "opInfo": "ibfj3i",
+    "priority": 937,
+    "status": 949,
     "delFlag": 6,
-    "dataBatch": "3lvl7m",
-    "dataVersion": 850,
-    "updateTime": "2025-08-25 18:01:53",
-    "syncMode": "picqyb",
-    "syncTime": "2025-08-25 18:01:53",
-    "description": "iw7i05"
+    "dataBatch": "heeamw",
+    "dataVersion": 480,
+    "updateTime": "2025-08-27 22:15:28",
+    "syncMode": "zco606",
+    "syncTime": "2025-08-27 22:15:28",
+    "description": "cx27vw"
   }
 }'
 ```
@@ -8422,8 +8542,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vvhl8b",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "7fac6x",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8472,8 +8592,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fekrok",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "bmzwk3",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8516,8 +8636,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b0xk8t",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "u1f0h1",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8575,7 +8695,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?endTime=2025-08-25 18:01:00&recvGroupId=60&recvOrganId=60&creatorId=60&iconStyle=ljt2ie&content=y28baa&type=255&page=1&imagePath=2vjkx2&updateTime=2025-08-25 18:01:59&description=tl895l&foreignId=60&limit=10&title=moiy1l&recvMemberId=60&q=ixir58&startTime=2025-08-25 18:01:00&recvTargetid=60&updatorId=60&readStatus=oskruy&orderBy=715&msgUrl=www.benedict-jenkins.net&bizType=cldf5v&id=364&siteId=605&status=767&organId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?orderBy=396&foreignId=89&limit=10&recvGroupId=89&recvMemberId=89&page=1&recvOrganId=89&type=73&siteId=572&iconStyle=gugms4&q=uhq3p9&endTime=2025-08-27 22:14:23&bizType=p4qt2v&content=klif2l&msgUrl=www.felicitas-spencer.com&updateTime=2025-08-27 22:15:36&startTime=2025-08-27 22:14:23&description=irddzq&status=376&title=o4grzg&updatorId=89&id=204&recvTargetid=89&imagePath=bxogkg&readStatus=lc6v92&organId=89&creatorId=89
 ```
 **Response-fields:**
 
@@ -8617,31 +8737,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:59",
-      "lastTime": "2025-08-25 18:01:59",
-      "id": 251,
-      "siteId": 914,
-      "organId": "60",
-      "bizType": "xf0y3p",
-      "type": 902,
-      "title": "lwlcyz",
-      "content": "3gp78i",
-      "msgUrl": "www.benedict-jenkins.net",
-      "foreignId": "60",
-      "imagePath": "a7ylvu",
-      "iconStyle": "e27si1",
-      "recvMemberId": "60",
-      "recvGroupId": "60",
-      "recvOrganId": "60",
-      "recvTargetid": "60",
-      "status": 244,
-      "updatorId": "60",
-      "updateTime": "2025-08-25 18:01:59",
-      "description": "z5o20k"
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:36",
+      "lastTime": "2025-08-27 22:15:36",
+      "id": 629,
+      "siteId": 77,
+      "organId": "89",
+      "bizType": "3gv2px",
+      "type": 365,
+      "title": "1gye7d",
+      "content": "xg5vv8",
+      "msgUrl": "www.felicitas-spencer.com",
+      "foreignId": "89",
+      "imagePath": "igqj23",
+      "iconStyle": "uduq30",
+      "recvMemberId": "89",
+      "recvGroupId": "89",
+      "recvOrganId": "89",
+      "recvTargetid": "89",
+      "status": 493,
+      "updatorId": "89",
+      "updateTime": "2025-08-27 22:15:36",
+      "description": "qfbkh8"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8698,7 +8818,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?endTime=2025-08-25 18:01:00&foreignId=60&iconStyle=87lun0&updatorId=60&readStatus=15bp43&type=337&limit=10&id=340&title=8bzibn&description=s0yojq&orderBy=296&startTime=2025-08-25 18:01:00&content=mu76kx&updateTime=2025-08-25 18:01:59&q=2isl3n&imagePath=orwctu&recvMemberId=60&siteId=152&recvTargetid=60&page=1&recvOrganId=60&bizType=qw7e3i&creatorId=60&status=312&recvGroupId=60&msgUrl=www.benedict-jenkins.net&organId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?type=472&content=5rvvc2&title=2wr84r&q=t8w002&foreignId=89&status=756&creatorId=89&updateTime=2025-08-27 22:15:36&limit=10&id=721&description=fj4ug7&iconStyle=whl9si&organId=89&orderBy=832&bizType=qlc24i&endTime=2025-08-27 22:14:23&recvGroupId=89&readStatus=jhtrga&page=1&recvMemberId=89&recvOrganId=89&updatorId=89&imagePath=h8gsbj&siteId=814&startTime=2025-08-27 22:14:23&msgUrl=www.felicitas-spencer.com&recvTargetid=89
 ```
 **Response-fields:**
 
@@ -8740,31 +8860,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:59",
-      "lastTime": "2025-08-25 18:01:59",
-      "id": 550,
-      "siteId": 96,
-      "organId": "60",
-      "bizType": "1m3qi8",
-      "type": 951,
-      "title": "82yn4f",
-      "content": "guo0rn",
-      "msgUrl": "www.benedict-jenkins.net",
-      "foreignId": "60",
-      "imagePath": "uktcag",
-      "iconStyle": "u99sq0",
-      "recvMemberId": "60",
-      "recvGroupId": "60",
-      "recvOrganId": "60",
-      "recvTargetid": "60",
-      "status": 331,
-      "updatorId": "60",
-      "updateTime": "2025-08-25 18:01:59",
-      "description": "rmv5yl"
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:36",
+      "lastTime": "2025-08-27 22:15:36",
+      "id": 683,
+      "siteId": 791,
+      "organId": "89",
+      "bizType": "1hdob1",
+      "type": 379,
+      "title": "pp2953",
+      "content": "wjacei",
+      "msgUrl": "www.felicitas-spencer.com",
+      "foreignId": "89",
+      "imagePath": "qx3ksl",
+      "iconStyle": "7qhcvq",
+      "recvMemberId": "89",
+      "recvGroupId": "89",
+      "recvOrganId": "89",
+      "recvTargetid": "89",
+      "status": 572,
+      "updatorId": "89",
+      "updateTime": "2025-08-27 22:15:36",
+      "description": "km9e8d"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8821,7 +8941,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'msgUrl=www.benedict-jenkins.net&iconStyle=gf0pzh&startTime=2025-08-25 18:01:00&orderBy=53&q=s4z3gg&imagePath=4ahwau&type=718&foreignId=60&recvOrganId=60&updateTime=2025-08-25 18:01:59&readStatus=ufec2z&creatorId=60&id=572&limit=10&content=u6fazt&recvTargetid=60&page=1&status=753&updatorId=60&bizType=o62b24&recvMemberId=60&description=3soiy7&organId=60&recvGroupId=60&siteId=548&title=2famgc&endTime=2025-08-25 18:01:00'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'updatorId=89&type=418&description=dpjuj4&startTime=2025-08-27 22:14:23&recvTargetid=89&page=1&title=x0lygx&imagePath=p8qim1&id=341&limit=10&siteId=914&content=qtkor1&readStatus=5bwi4o&msgUrl=www.felicitas-spencer.com&creatorId=89&recvOrganId=89&q=d00eay&status=673&updateTime=2025-08-27 22:15:36&orderBy=228&bizType=744pb1&recvMemberId=89&endTime=2025-08-27 22:14:23&iconStyle=99au0s&foreignId=89&recvGroupId=89&organId=89'
 ```
 **Response-fields:**
 
@@ -8839,8 +8959,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "03c1ma",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "zlh9nf",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8912,30 +9032,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:59",
-    "lastTime": "2025-08-25 18:01:59",
-    "id": 499,
-    "siteId": 517,
-    "organId": "60",
-    "bizType": "q3huvd",
-    "type": 828,
-    "title": "bet5wg",
-    "content": "6zfd7s",
-    "msgUrl": "www.benedict-jenkins.net",
-    "foreignId": "60",
-    "imagePath": "6laxcn",
-    "iconStyle": "b2zgp3",
-    "recvMemberId": "60",
-    "recvGroupId": "60",
-    "recvOrganId": "60",
-    "recvTargetid": "60",
-    "status": 35,
-    "updatorId": "60",
-    "updateTime": "2025-08-25 18:01:59",
-    "description": "2k442j"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": 901,
+    "siteId": 949,
+    "organId": "89",
+    "bizType": "e9eanx",
+    "type": 36,
+    "title": "szbrte",
+    "content": "w1pqgk",
+    "msgUrl": "www.felicitas-spencer.com",
+    "foreignId": "89",
+    "imagePath": "bkcics",
+    "iconStyle": "fg4kxv",
+    "recvMemberId": "89",
+    "recvGroupId": "89",
+    "recvOrganId": "89",
+    "recvTargetid": "89",
+    "status": 522,
+    "updatorId": "89",
+    "updateTime": "2025-08-27 22:15:36",
+    "description": "24ai1n"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -8990,28 +9110,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:59",
-    "lastTime": "2025-08-25 18:01:59",
-    "id": 743,
-    "siteId": 784,
-    "organId": "60",
-    "bizType": "xofbaj",
-    "type": 915,
-    "title": "fqhx7g",
-    "content": "a8x32k",
-    "msgUrl": "www.benedict-jenkins.net",
-    "foreignId": "60",
-    "imagePath": "smt8nl",
-    "iconStyle": "ti7312",
-    "recvMemberId": "60",
-    "recvGroupId": "60",
-    "recvOrganId": "60",
-    "recvTargetid": "60",
-    "status": 98,
-    "updatorId": "60",
-    "updateTime": "2025-08-25 18:01:59",
-    "description": "bel2xk"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": 725,
+    "siteId": 756,
+    "organId": "89",
+    "bizType": "8ql7fm",
+    "type": 424,
+    "title": "s14we1",
+    "content": "8dg905",
+    "msgUrl": "www.felicitas-spencer.com",
+    "foreignId": "89",
+    "imagePath": "vkbpq5",
+    "iconStyle": "osw3l0",
+    "recvMemberId": "89",
+    "recvGroupId": "89",
+    "recvOrganId": "89",
+    "recvTargetid": "89",
+    "status": 696,
+    "updatorId": "89",
+    "updateTime": "2025-08-27 22:15:36",
+    "description": "472glb"
   }
 }'
 ```
@@ -9031,8 +9151,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c3lxki",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "p4hajq",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9087,28 +9207,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:59",
-    "lastTime": "2025-08-25 18:01:59",
-    "id": 795,
-    "siteId": 496,
-    "organId": "60",
-    "bizType": "tiudh2",
-    "type": 290,
-    "title": "2zxp6u",
-    "content": "o9qf3y",
-    "msgUrl": "www.benedict-jenkins.net",
-    "foreignId": "60",
-    "imagePath": "tnrcum",
-    "iconStyle": "qbwu2h",
-    "recvMemberId": "60",
-    "recvGroupId": "60",
-    "recvOrganId": "60",
-    "recvTargetid": "60",
-    "status": 678,
-    "updatorId": "60",
-    "updateTime": "2025-08-25 18:01:59",
-    "description": "lrtgad"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": 230,
+    "siteId": 73,
+    "organId": "89",
+    "bizType": "ujujss",
+    "type": 160,
+    "title": "fbxd05",
+    "content": "931afn",
+    "msgUrl": "www.felicitas-spencer.com",
+    "foreignId": "89",
+    "imagePath": "4i21os",
+    "iconStyle": "tc8kwj",
+    "recvMemberId": "89",
+    "recvGroupId": "89",
+    "recvOrganId": "89",
+    "recvTargetid": "89",
+    "status": 697,
+    "updatorId": "89",
+    "updateTime": "2025-08-27 22:15:36",
+    "description": "p3zr9v"
   }
 }'
 ```
@@ -9128,8 +9248,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4oi5yy",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "s7ydgd",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9178,8 +9298,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0yauxo",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "0u9fzg",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9222,8 +9342,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ks07xk",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "p50qcp",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9272,8 +9392,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i5qmp1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "axc28o",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9322,8 +9442,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "obvs9v",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ysf83k",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9367,10 +9487,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "gd1mxc",
-    "mapKey2": "o70ogj"
+    "mapKey1": "9ijuvl",
+    "mapKey2": "m94d9p"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9437,7 +9557,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?msgOrganId=60&status=lxokh9&q=34c7mm&msgUserName=jon.mosciski&msgContent=fbfnul&creatorId=60&msgAccountId=60&msgCreateTime=2025-08-25 18:02:00&msgTitle=7kgx0o&msgUrl=www.benedict-jenkins.net&opOrganName=jon.mosciski&msgModuleName=jon.mosciski&msgModuleId=60&msgType=41&msgUserId=60&msgId=305&msgAbstract=l49kuv&startTime=2025-08-25 18:01:00&msgOrganName=jon.mosciski&opTime=2025-08-25 18:02:00&opOrganId=60&description=8fmp7u&page=1&type=gkwh9f&msgAccountName=jon.mosciski&spare2=n7e26r&siteId=449&msgLabels=fbd09j&id=60&opUserId=60&endTime=2025-08-25 18:01:00&limit=10&bizType=0i92ti&foreignId=60&orderBy=964&spare1=ydi0hg
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?status=6k447i&opTime=2025-08-27 22:15:36&creatorId=89&msgTitle=q6xvoy&page=1&id=89&q=cdpiwd&spare1=an8adj&endTime=2025-08-27 22:14:23&msgType=78&msgModuleName=tarra.erdman&msgAccountName=tarra.erdman&msgId=925&msgLabels=phr1qg&opUserId=89&startTime=2025-08-27 22:14:23&limit=10&msgOrganName=tarra.erdman&foreignId=89&msgContent=at9ib4&msgUserId=89&msgAbstract=lg3acg&msgModuleId=89&msgUrl=www.felicitas-spencer.com&spare2=ty71lg&opOrganId=89&msgUserName=tarra.erdman&type=qs5swz&msgAccountId=89&opOrganName=tarra.erdman&description=71hi4h&siteId=815&orderBy=688&msgCreateTime=2025-08-27 22:15:36&bizType=l9cpjx&msgOrganId=89
 ```
 **Response-fields:**
 
@@ -9489,41 +9609,41 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:02:00",
-      "lastTime": "2025-08-25 18:02:00",
-      "id": "60",
-      "siteId": 447,
-      "foreignId": "60",
-      "type": "kw7lr3",
-      "bizType": "h1thv8",
-      "msgCreateTime": "2025-08-25 18:02:00",
-      "msgId": 637,
-      "msgType": 478,
-      "msgTitle": "ck0dbw",
-      "msgAbstract": "r8d4qk",
-      "msgAccountId": "60",
-      "msgAccountName": "jon.mosciski",
-      "msgModuleId": "60",
-      "msgModuleName": "jon.mosciski",
-      "msgUserId": "60",
-      "msgUserName": "jon.mosciski",
-      "msgOrganId": "60",
-      "msgOrganName": "jon.mosciski",
-      "msgUrl": "www.benedict-jenkins.net",
-      "msgLabels": "xfhumr",
-      "msgContent": "5i7vki",
-      "status": "2m9skg",
-      "opUserId": "60",
-      "opTime": "2025-08-25 18:02:00",
-      "opOrganId": "60",
-      "opOrganName": "jon.mosciski",
-      "description": "rrurz2",
-      "spare1": "4orpa0",
-      "spare2": "9dcnoy"
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:36",
+      "lastTime": "2025-08-27 22:15:36",
+      "id": "89",
+      "siteId": 933,
+      "foreignId": "89",
+      "type": "tkz4sz",
+      "bizType": "ngz2q3",
+      "msgCreateTime": "2025-08-27 22:15:36",
+      "msgId": 229,
+      "msgType": 111,
+      "msgTitle": "4uibc7",
+      "msgAbstract": "12j3h9",
+      "msgAccountId": "89",
+      "msgAccountName": "tarra.erdman",
+      "msgModuleId": "89",
+      "msgModuleName": "tarra.erdman",
+      "msgUserId": "89",
+      "msgUserName": "tarra.erdman",
+      "msgOrganId": "89",
+      "msgOrganName": "tarra.erdman",
+      "msgUrl": "www.felicitas-spencer.com",
+      "msgLabels": "l2rjxc",
+      "msgContent": "y6wy02",
+      "status": "brs5q3",
+      "opUserId": "89",
+      "opTime": "2025-08-27 22:15:36",
+      "opOrganId": "89",
+      "opOrganName": "tarra.erdman",
+      "description": "jgpzs7",
+      "spare1": "ev6yig",
+      "spare2": "5ou5oi"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9589,7 +9709,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgAbstract=adl2j0&msgModuleId=60&endTime=2025-08-25 18:01:00&msgUrl=www.benedict-jenkins.net&limit=10&msgLabels=uvv3ts&msgTitle=4ngchj&opTime=2025-08-25 18:02:00&spare1=8jvkvz&startTime=2025-08-25 18:01:00&msgUserId=60&opOrganName=jon.mosciski&q=a2iig7&msgOrganName=jon.mosciski&creatorId=60&msgOrganId=60&msgUserName=jon.mosciski&msgCreateTime=2025-08-25 18:02:00&msgAccountName=jon.mosciski&msgAccountId=60&type=1yxk3n&id=60&siteId=79&msgId=239&msgType=668&msgModuleName=jon.mosciski&foreignId=60&orderBy=760&spare2=x371t5&description=ntc1l1&page=1&msgContent=9sfbxr&status=sovnw2&bizType=6ekr6g&opOrganId=60&opUserId=60'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'orderBy=841&msgUserName=tarra.erdman&opOrganName=tarra.erdman&msgTitle=npodj1&msgUserId=89&spare2=0kuan4&msgContent=rpuzm6&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&msgAccountName=tarra.erdman&msgUrl=www.felicitas-spencer.com&creatorId=89&id=89&description=t4i5gt&spare1=gfczpz&msgType=635&msgId=320&msgLabels=rfgz26&limit=10&page=1&siteId=874&status=3sl1tf&opOrganId=89&msgAccountId=89&q=qgg33i&type=ek1o6j&msgOrganName=tarra.erdman&msgAbstract=aykeg4&msgOrganId=89&msgModuleId=89&opTime=2025-08-27 22:15:36&foreignId=89&bizType=xt24o8&opUserId=89&msgCreateTime=2025-08-27 22:15:36&msgModuleName=tarra.erdman'
 ```
 **Response-fields:**
 
@@ -9607,8 +9727,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "te4hd4",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "yqsf5x",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9690,40 +9810,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 44,
-    "foreignId": "60",
-    "type": "r3j619",
-    "bizType": "1sxpxj",
-    "msgCreateTime": "2025-08-25 18:02:00",
-    "msgId": 920,
-    "msgType": 184,
-    "msgTitle": "0ogikd",
-    "msgAbstract": "64tigd",
-    "msgAccountId": "60",
-    "msgAccountName": "jon.mosciski",
-    "msgModuleId": "60",
-    "msgModuleName": "jon.mosciski",
-    "msgUserId": "60",
-    "msgUserName": "jon.mosciski",
-    "msgOrganId": "60",
-    "msgOrganName": "jon.mosciski",
-    "msgUrl": "www.benedict-jenkins.net",
-    "msgLabels": "a8sy7r",
-    "msgContent": "xyo0sl",
-    "status": "zopxyp",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "20x7rn",
-    "spare1": "ihcmwy",
-    "spare2": "0xpnsb"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": "89",
+    "siteId": 404,
+    "foreignId": "89",
+    "type": "ss4ysf",
+    "bizType": "y4sk87",
+    "msgCreateTime": "2025-08-27 22:15:36",
+    "msgId": 53,
+    "msgType": 954,
+    "msgTitle": "qwcaez",
+    "msgAbstract": "wcw6iq",
+    "msgAccountId": "89",
+    "msgAccountName": "tarra.erdman",
+    "msgModuleId": "89",
+    "msgModuleName": "tarra.erdman",
+    "msgUserId": "89",
+    "msgUserName": "tarra.erdman",
+    "msgOrganId": "89",
+    "msgOrganName": "tarra.erdman",
+    "msgUrl": "www.felicitas-spencer.com",
+    "msgLabels": "or9r1n",
+    "msgContent": "duvxgx",
+    "status": "0f86dd",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:36",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "hkcxp1",
+    "spare1": "qc8et0",
+    "spare2": "az3hw9"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9788,38 +9908,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 225,
-    "foreignId": "60",
-    "type": "9i7fie",
-    "bizType": "pnf5fu",
-    "msgCreateTime": "2025-08-25 18:02:00",
-    "msgId": 874,
-    "msgType": 793,
-    "msgTitle": "4t2mhj",
-    "msgAbstract": "13bfav",
-    "msgAccountId": "60",
-    "msgAccountName": "jon.mosciski",
-    "msgModuleId": "60",
-    "msgModuleName": "jon.mosciski",
-    "msgUserId": "60",
-    "msgUserName": "jon.mosciski",
-    "msgOrganId": "60",
-    "msgOrganName": "jon.mosciski",
-    "msgUrl": "www.benedict-jenkins.net",
-    "msgLabels": "su0jv2",
-    "msgContent": "9mu8fg",
-    "status": "3rh4vq",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "w8zcsp",
-    "spare1": "gkcmb7",
-    "spare2": "p63mgy"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": "89",
+    "siteId": 705,
+    "foreignId": "89",
+    "type": "m8w44m",
+    "bizType": "ge8pdd",
+    "msgCreateTime": "2025-08-27 22:15:36",
+    "msgId": 352,
+    "msgType": 487,
+    "msgTitle": "wn88no",
+    "msgAbstract": "kdusjq",
+    "msgAccountId": "89",
+    "msgAccountName": "tarra.erdman",
+    "msgModuleId": "89",
+    "msgModuleName": "tarra.erdman",
+    "msgUserId": "89",
+    "msgUserName": "tarra.erdman",
+    "msgOrganId": "89",
+    "msgOrganName": "tarra.erdman",
+    "msgUrl": "www.felicitas-spencer.com",
+    "msgLabels": "zb0jsi",
+    "msgContent": "cq1jo6",
+    "status": "2j4wn6",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:36",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "4ecwgt",
+    "spare1": "tf9ej8",
+    "spare2": "fc0fip"
   }
 }'
 ```
@@ -9839,8 +9959,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6yj89o",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ziqkdy",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -9905,38 +10025,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 173,
-    "foreignId": "60",
-    "type": "ztl6wb",
-    "bizType": "4ac56f",
-    "msgCreateTime": "2025-08-25 18:02:00",
-    "msgId": 331,
-    "msgType": 862,
-    "msgTitle": "jc87he",
-    "msgAbstract": "oedzwy",
-    "msgAccountId": "60",
-    "msgAccountName": "jon.mosciski",
-    "msgModuleId": "60",
-    "msgModuleName": "jon.mosciski",
-    "msgUserId": "60",
-    "msgUserName": "jon.mosciski",
-    "msgOrganId": "60",
-    "msgOrganName": "jon.mosciski",
-    "msgUrl": "www.benedict-jenkins.net",
-    "msgLabels": "n78hhu",
-    "msgContent": "n6b464",
-    "status": "qkpib8",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "oi57s0",
-    "spare1": "7uc4ld",
-    "spare2": "657rvw"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:36",
+    "lastTime": "2025-08-27 22:15:36",
+    "id": "89",
+    "siteId": 364,
+    "foreignId": "89",
+    "type": "czq1qh",
+    "bizType": "a4fefd",
+    "msgCreateTime": "2025-08-27 22:15:36",
+    "msgId": 890,
+    "msgType": 889,
+    "msgTitle": "8yaa6b",
+    "msgAbstract": "qbjzoy",
+    "msgAccountId": "89",
+    "msgAccountName": "tarra.erdman",
+    "msgModuleId": "89",
+    "msgModuleName": "tarra.erdman",
+    "msgUserId": "89",
+    "msgUserName": "tarra.erdman",
+    "msgOrganId": "89",
+    "msgOrganName": "tarra.erdman",
+    "msgUrl": "www.felicitas-spencer.com",
+    "msgLabels": "ils02k",
+    "msgContent": "ubufw1",
+    "status": "10ydyf",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:36",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "bu8vru",
+    "spare1": "prprdq",
+    "spare2": "8dupl7"
   }
 }'
 ```
@@ -9956,8 +10076,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4jbw3u",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "k2q7ct",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10006,8 +10126,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "88p8fu",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ummfts",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10039,7 +10159,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/4qohht.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/7eg2xc.do
 ```
 **Response-fields:**
 
@@ -10057,8 +10177,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g152pk",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "u631ig",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10130,7 +10250,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?limit=10&page=1&todoAccountId=60&opUserId=60&opOrganId=60&type=j538rm&todoNextInfo=r7zqhn&todoModuleId=60&todoUserId=60&status=yzneqe&todoType=5xl9r0&opOrganName=jon.mosciski&todoLabels=ci0lo3&bizType=wm0z41&todoCreateTime=2025-08-25 18:02:00&todoUrl=www.benedict-jenkins.net&todoAbstract=mwfjox&todoCurrInfo=mls8ga&foreignId=60&todoOrganId=60&todoOrganName=jon.mosciski&todoProcessInfo=5k5d77&todoProcessName=jon.mosciski&siteId=178&todoContent=vak3f5&opTime=2025-08-25 18:02:00&q=i83bxg&orderBy=44&description=8r7x7a&todoModuleName=jon.mosciski&endTime=2025-08-25 18:01:00&spare2=yqte1p&todoProcessStatus=2l3ff5&todoId=60&todoAccountName=jon.mosciski&todoUserName=jon.mosciski&spare1=53pp7t&id=60&startTime=2025-08-25 18:01:00&creatorId=60&todoName=jon.mosciski
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?siteId=73&todoModuleId=89&orderBy=475&type=fb3fsq&todoOrganId=89&opTime=2025-08-27 22:15:37&todoCreateTime=2025-08-27 22:15:37&todoAccountName=tarra.erdman&todoAccountId=89&opUserId=89&id=89&todoUserName=tarra.erdman&startTime=2025-08-27 22:14:23&limit=10&spare1=2bvv6r&opOrganName=tarra.erdman&q=f3ca45&bizType=ekz3k9&endTime=2025-08-27 22:14:23&todoModuleName=tarra.erdman&creatorId=89&foreignId=89&todoProcessInfo=fnpkcj&opOrganId=89&todoCurrInfo=szcojd&todoType=fd9r3d&todoNextInfo=vjkavc&status=83hno5&description=oszv44&todoUserId=89&todoUrl=www.felicitas-spencer.com&todoOrganName=tarra.erdman&todoProcessName=tarra.erdman&page=1&todoProcessStatus=4k9vbj&todoLabels=fonf5i&todoContent=okx70b&todoId=89&todoName=tarra.erdman&spare2=frq317&todoAbstract=lxgqj7
 ```
 **Response-fields:**
 
@@ -10187,46 +10307,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:02:00",
-      "lastTime": "2025-08-25 18:02:00",
-      "id": "60",
-      "siteId": 473,
-      "foreignId": "60",
-      "type": "7xdfad",
-      "bizType": "jud2aq",
-      "todoCreateTime": "2025-08-25 18:02:00",
-      "todoId": "60",
-      "todoType": "pt14lm",
-      "todoName": "jon.mosciski",
-      "todoAbstract": "2zc8y9",
-      "todoAccountId": "60",
-      "todoAccountName": "jon.mosciski",
-      "todoModuleId": "60",
-      "todoModuleName": "jon.mosciski",
-      "todoUserId": "60",
-      "todoUserName": "jon.mosciski",
-      "todoOrganId": "60",
-      "todoOrganName": "jon.mosciski",
-      "todoProcessName": "jon.mosciski",
-      "todoProcessStatus": "yyqm2u",
-      "todoProcessInfo": "03b1f6",
-      "todoCurrInfo": "r8yate",
-      "todoNextInfo": "99ruhm",
-      "todoUrl": "www.benedict-jenkins.net",
-      "todoLabels": "gfa8pb",
-      "todoContent": "s53qz6",
-      "status": "96twv9",
-      "opUserId": "60",
-      "opTime": "2025-08-25 18:02:00",
-      "opOrganId": "60",
-      "opOrganName": "jon.mosciski",
-      "description": "x06192",
-      "spare1": "475jg6",
-      "spare2": "b6bfcn"
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:37",
+      "lastTime": "2025-08-27 22:15:37",
+      "id": "89",
+      "siteId": 875,
+      "foreignId": "89",
+      "type": "aoxoyk",
+      "bizType": "g6p5jy",
+      "todoCreateTime": "2025-08-27 22:15:37",
+      "todoId": "89",
+      "todoType": "x6snzw",
+      "todoName": "tarra.erdman",
+      "todoAbstract": "siwgb9",
+      "todoAccountId": "89",
+      "todoAccountName": "tarra.erdman",
+      "todoModuleId": "89",
+      "todoModuleName": "tarra.erdman",
+      "todoUserId": "89",
+      "todoUserName": "tarra.erdman",
+      "todoOrganId": "89",
+      "todoOrganName": "tarra.erdman",
+      "todoProcessName": "tarra.erdman",
+      "todoProcessStatus": "p3icj2",
+      "todoProcessInfo": "n1lim4",
+      "todoCurrInfo": "p4uthr",
+      "todoNextInfo": "2hyc1a",
+      "todoUrl": "www.felicitas-spencer.com",
+      "todoLabels": "gj1wio",
+      "todoContent": "4aycqj",
+      "status": "cvo2qm",
+      "opUserId": "89",
+      "opTime": "2025-08-27 22:15:37",
+      "opOrganId": "89",
+      "opOrganName": "tarra.erdman",
+      "description": "lxf26u",
+      "spare1": "ms4pwc",
+      "spare2": "mvnank"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10297,7 +10417,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'page=1&endTime=2025-08-25 18:01:00&todoLabels=5xh03l&limit=10&todoId=60&todoName=jon.mosciski&todoAccountName=jon.mosciski&q=jwi1ow&todoProcessName=jon.mosciski&todoModuleId=60&todoUserName=jon.mosciski&todoUserId=60&opOrganName=jon.mosciski&todoNextInfo=jrhgez&creatorId=60&spare1=sxvssb&id=60&startTime=2025-08-25 18:01:00&bizType=7etpiq&todoOrganName=jon.mosciski&todoProcessStatus=19v5n9&todoContent=kydm9c&opTime=2025-08-25 18:02:00&spare2=5fesba&foreignId=60&type=2scakw&todoAccountId=60&opUserId=60&todoAbstract=rb4pej&todoModuleName=jon.mosciski&todoCreateTime=2025-08-25 18:02:00&todoOrganId=60&status=37qsd3&description=wszmik&opOrganId=60&todoUrl=www.benedict-jenkins.net&todoProcessInfo=qv5j7h&siteId=799&orderBy=648&todoCurrInfo=c5uro6&todoType=i9pgiv'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'status=ghva9f&siteId=976&creatorId=89&todoModuleName=tarra.erdman&todoProcessName=tarra.erdman&type=oszrur&id=89&todoContent=o1409i&todoAccountName=tarra.erdman&todoModuleId=89&todoLabels=ctgrd0&todoOrganName=tarra.erdman&todoProcessStatus=3xbdc4&todoId=89&spare2=nnstpv&orderBy=455&todoUrl=www.felicitas-spencer.com&limit=10&todoName=tarra.erdman&todoCreateTime=2025-08-27 22:15:37&q=7l7ozv&foreignId=89&todoNextInfo=lhm2yz&todoAbstract=l9l32u&page=1&todoType=27m68e&todoAccountId=89&todoUserName=tarra.erdman&opUserId=89&opTime=2025-08-27 22:15:37&todoOrganId=89&todoProcessInfo=ls67c1&bizType=anzrrs&todoCurrInfo=4fp17e&opOrganId=89&opOrganName=tarra.erdman&todoUserId=89&startTime=2025-08-27 22:14:23&description=1r23a1&spare1=umtfgu&endTime=2025-08-27 22:14:23'
 ```
 **Response-fields:**
 
@@ -10315,8 +10435,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "019jhs",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "vfcx7s",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10403,45 +10523,45 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 812,
-    "foreignId": "60",
-    "type": "dw3ylq",
-    "bizType": "sirp6t",
-    "todoCreateTime": "2025-08-25 18:02:00",
-    "todoId": "60",
-    "todoType": "977ygv",
-    "todoName": "jon.mosciski",
-    "todoAbstract": "r8zkg4",
-    "todoAccountId": "60",
-    "todoAccountName": "jon.mosciski",
-    "todoModuleId": "60",
-    "todoModuleName": "jon.mosciski",
-    "todoUserId": "60",
-    "todoUserName": "jon.mosciski",
-    "todoOrganId": "60",
-    "todoOrganName": "jon.mosciski",
-    "todoProcessName": "jon.mosciski",
-    "todoProcessStatus": "24plfc",
-    "todoProcessInfo": "131e4g",
-    "todoCurrInfo": "vfd4g6",
-    "todoNextInfo": "4fwvlp",
-    "todoUrl": "www.benedict-jenkins.net",
-    "todoLabels": "s1zh4t",
-    "todoContent": "az67ip",
-    "status": "imgh9o",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "4lgg1o",
-    "spare1": "p5uphk",
-    "spare2": "ri1lns"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:37",
+    "lastTime": "2025-08-27 22:15:37",
+    "id": "89",
+    "siteId": 293,
+    "foreignId": "89",
+    "type": "anrdcf",
+    "bizType": "e36n8k",
+    "todoCreateTime": "2025-08-27 22:15:37",
+    "todoId": "89",
+    "todoType": "js2dgp",
+    "todoName": "tarra.erdman",
+    "todoAbstract": "yjw7wk",
+    "todoAccountId": "89",
+    "todoAccountName": "tarra.erdman",
+    "todoModuleId": "89",
+    "todoModuleName": "tarra.erdman",
+    "todoUserId": "89",
+    "todoUserName": "tarra.erdman",
+    "todoOrganId": "89",
+    "todoOrganName": "tarra.erdman",
+    "todoProcessName": "tarra.erdman",
+    "todoProcessStatus": "flw4g8",
+    "todoProcessInfo": "8xlsor",
+    "todoCurrInfo": "jnt6y3",
+    "todoNextInfo": "g2iyqd",
+    "todoUrl": "www.felicitas-spencer.com",
+    "todoLabels": "ectn52",
+    "todoContent": "in7iza",
+    "status": "i81v28",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:37",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "eebtgq",
+    "spare1": "ymmlgs",
+    "spare2": "xuixv6"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10511,43 +10631,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 308,
-    "foreignId": "60",
-    "type": "5qpgw4",
-    "bizType": "90aghd",
-    "todoCreateTime": "2025-08-25 18:02:00",
-    "todoId": "60",
-    "todoType": "ew2jf3",
-    "todoName": "jon.mosciski",
-    "todoAbstract": "4vrq9w",
-    "todoAccountId": "60",
-    "todoAccountName": "jon.mosciski",
-    "todoModuleId": "60",
-    "todoModuleName": "jon.mosciski",
-    "todoUserId": "60",
-    "todoUserName": "jon.mosciski",
-    "todoOrganId": "60",
-    "todoOrganName": "jon.mosciski",
-    "todoProcessName": "jon.mosciski",
-    "todoProcessStatus": "sojrr6",
-    "todoProcessInfo": "1hrqar",
-    "todoCurrInfo": "8hmn25",
-    "todoNextInfo": "pmuomq",
-    "todoUrl": "www.benedict-jenkins.net",
-    "todoLabels": "zbdddv",
-    "todoContent": "91wxqb",
-    "status": "c2ammq",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "35mzq5",
-    "spare1": "36je5x",
-    "spare2": "22ykkj"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:37",
+    "lastTime": "2025-08-27 22:15:37",
+    "id": "89",
+    "siteId": 350,
+    "foreignId": "89",
+    "type": "8sq75i",
+    "bizType": "y42st3",
+    "todoCreateTime": "2025-08-27 22:15:37",
+    "todoId": "89",
+    "todoType": "fuan9d",
+    "todoName": "tarra.erdman",
+    "todoAbstract": "za3qsr",
+    "todoAccountId": "89",
+    "todoAccountName": "tarra.erdman",
+    "todoModuleId": "89",
+    "todoModuleName": "tarra.erdman",
+    "todoUserId": "89",
+    "todoUserName": "tarra.erdman",
+    "todoOrganId": "89",
+    "todoOrganName": "tarra.erdman",
+    "todoProcessName": "tarra.erdman",
+    "todoProcessStatus": "60nz8v",
+    "todoProcessInfo": "xbs4qz",
+    "todoCurrInfo": "gde1fh",
+    "todoNextInfo": "wmd9pq",
+    "todoUrl": "www.felicitas-spencer.com",
+    "todoLabels": "uay7cb",
+    "todoContent": "uvb4r0",
+    "status": "zlkafg",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:37",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "l7ombr",
+    "spare1": "4wuaib",
+    "spare2": "13kf6w"
   }
 }'
 ```
@@ -10567,8 +10687,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s8rxya",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "pk6orx",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10638,43 +10758,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:02:00",
-    "lastTime": "2025-08-25 18:02:00",
-    "id": "60",
-    "siteId": 377,
-    "foreignId": "60",
-    "type": "n305fo",
-    "bizType": "ads6gd",
-    "todoCreateTime": "2025-08-25 18:02:00",
-    "todoId": "60",
-    "todoType": "zo0p4s",
-    "todoName": "jon.mosciski",
-    "todoAbstract": "d6us1s",
-    "todoAccountId": "60",
-    "todoAccountName": "jon.mosciski",
-    "todoModuleId": "60",
-    "todoModuleName": "jon.mosciski",
-    "todoUserId": "60",
-    "todoUserName": "jon.mosciski",
-    "todoOrganId": "60",
-    "todoOrganName": "jon.mosciski",
-    "todoProcessName": "jon.mosciski",
-    "todoProcessStatus": "ydnl0e",
-    "todoProcessInfo": "cq2yir",
-    "todoCurrInfo": "lstw9f",
-    "todoNextInfo": "ev947r",
-    "todoUrl": "www.benedict-jenkins.net",
-    "todoLabels": "9b2mq0",
-    "todoContent": "lewm76",
-    "status": "ad9by2",
-    "opUserId": "60",
-    "opTime": "2025-08-25 18:02:00",
-    "opOrganId": "60",
-    "opOrganName": "jon.mosciski",
-    "description": "wrj3bj",
-    "spare1": "he9ko2",
-    "spare2": "00q1tu"
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:37",
+    "lastTime": "2025-08-27 22:15:37",
+    "id": "89",
+    "siteId": 295,
+    "foreignId": "89",
+    "type": "4bgh31",
+    "bizType": "tn79oq",
+    "todoCreateTime": "2025-08-27 22:15:37",
+    "todoId": "89",
+    "todoType": "yhhptj",
+    "todoName": "tarra.erdman",
+    "todoAbstract": "mxokap",
+    "todoAccountId": "89",
+    "todoAccountName": "tarra.erdman",
+    "todoModuleId": "89",
+    "todoModuleName": "tarra.erdman",
+    "todoUserId": "89",
+    "todoUserName": "tarra.erdman",
+    "todoOrganId": "89",
+    "todoOrganName": "tarra.erdman",
+    "todoProcessName": "tarra.erdman",
+    "todoProcessStatus": "kgtam9",
+    "todoProcessInfo": "airo5f",
+    "todoCurrInfo": "99smsl",
+    "todoNextInfo": "g3jtn8",
+    "todoUrl": "www.felicitas-spencer.com",
+    "todoLabels": "ejppnq",
+    "todoContent": "m34gu9",
+    "status": "7vykho",
+    "opUserId": "89",
+    "opTime": "2025-08-27 22:15:37",
+    "opOrganId": "89",
+    "opOrganName": "tarra.erdman",
+    "description": "3mkck3",
+    "spare1": "2urkb2",
+    "spare2": "26fwkg"
   }
 }'
 ```
@@ -10694,8 +10814,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e0j0oa",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "33wklq",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10744,8 +10864,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8odym7",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "bc2den",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10810,34 +10930,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "username": "jon.mosciski",
-      "password": "lvtl4a",
+      "username": "tarra.erdman",
+      "password": "6s5ds0",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "adminId": 63,
-      "userId": "60",
-      "appId": "60",
-      "deptId": 18,
-      "organId": "60",
-      "token": "p6dahh",
-      "imagePath": "gtq1ro",
+      "adminId": 523,
+      "userId": "89",
+      "appId": "89",
+      "deptId": 509,
+      "organId": "89",
+      "token": "pa5u57",
+      "imagePath": "pvex3s",
       "isSuperAdmin": true,
-      "loginIp": "7.176.103.194",
-      "loginTime": 1756116060434,
-      "loginBrowse": "2w2r3c",
-      "loginOs": "la9h6j",
-      "expireTime": 1756116060434,
+      "loginIp": "217.26.150.93",
+      "loginTime": 1756304063123,
+      "loginBrowse": "aaezaf",
+      "loginOs": "t8bvfr",
+      "expireTime": 1756304063123,
       "perms": [
-        "0602se"
+        "pahidl"
       ]
     },
-    "roleGroup": "92gld6",
-    "positionGroup": "y8469h"
+    "roleGroup": "ri5jo2",
+    "positionGroup": "sm8k8k"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -10965,60 +11085,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 996,
-    "userId": "60",
-    "deptId": 388,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "bv157z",
-    "password": "frafur",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:25",
+    "lastTime": "2025-08-27 22:15:25",
+    "id": 946,
+    "userId": "89",
+    "deptId": 542,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "ghryxc",
+    "password": "yqp102",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 537,
+    "status": 725,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "rb0psg",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:25",
+    "description": "z6a17l",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 5,
-      "organId": "60",
-      "parentId": 680,
-      "appId": "60",
-      "depttypeId": 141,
-      "foreignId": "60",
-      "createType": 569,
-      "type": "vyl9hn",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "yxmqkw",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:25",
+      "lastTime": "2025-08-27 22:15:25",
+      "id": 415,
+      "organId": "89",
+      "parentId": 916,
+      "appId": "89",
+      "depttypeId": 574,
+      "foreignId": "89",
+      "createType": 909,
+      "type": "u0a4t6",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "cbkngo",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "37gocb",
-      "priority": 435,
-      "status": 335,
+      "searchCode": "66235",
+      "imagePath": "y3qyr2",
+      "priority": 682,
+      "status": 403,
       "delFlag": 6,
-      "description": "pf1sx2",
-      "spare1": "ow0f7v",
-      "spare2": "spdp47",
+      "description": "eulme8",
+      "spare1": "kgv444",
+      "spare2": "6eqtdx",
       "children": [
         {
           "$ref": ".."
@@ -11027,46 +11147,46 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 447,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 351,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:25",
+        "lastTime": "2025-08-27 22:15:25",
+        "id": 905,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 947,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 76,
-        "description": "0t9vuo",
-        "areaType": "gmrcf9"
+        "status": 220,
+        "description": "apfiu9",
+        "areaType": "pihfkm"
       }
     ],
     "roleIds": [
-      4
+      349
     ],
     "positionIds": [
-      "2cwjjv"
+      "lbehdy"
     ],
-    "roleId": 522,
+    "roleId": 437,
     "userRoleList": [
       {
-        "id": 471,
-        "deptId": 657,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 274,
-        "roleName": "jon.mosciski",
-        "adminId": 353
+        "id": 691,
+        "deptId": 25,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 981,
+        "roleName": "tarra.erdman",
+        "adminId": 212
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -11183,60 +11303,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:50",
-    "lastTime": "2025-08-25 18:01:50",
-    "id": 34,
-    "userId": "60",
-    "deptId": 54,
-    "deptName": "jon.mosciski",
-    "organId": "60",
-    "organName": "jon.mosciski",
-    "name": "jon.mosciski",
-    "username": "jon.mosciski",
-    "nickName": "randy.von",
-    "email": "esta.hermann@gmail.com",
-    "mobile": "(330) 445-7747",
-    "imagePath": "ytcdqy",
-    "password": "h9jbbz",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:25",
+    "lastTime": "2025-08-27 22:15:25",
+    "id": 256,
+    "userId": "89",
+    "deptId": 391,
+    "deptName": "tarra.erdman",
+    "organId": "89",
+    "organName": "tarra.erdman",
+    "name": "tarra.erdman",
+    "username": "tarra.erdman",
+    "nickName": "reena.schmeler",
+    "email": "fletcher.hickle@hotmail.com",
+    "mobile": "803.740.8989",
+    "imagePath": "kf8a3v",
+    "password": "9lj4vl",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 459,
+    "status": 263,
     "delFlag": 6,
-    "lastLoginIp": "7.176.103.194",
-    "lastLoginTime": "2025-08-25 18:01:50",
-    "description": "b2w25s",
+    "lastLoginIp": "217.26.150.93",
+    "lastLoginTime": "2025-08-27 22:15:25",
+    "description": "g3ax5x",
     "dept": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 145,
-      "organId": "60",
-      "parentId": 469,
-      "appId": "60",
-      "depttypeId": 895,
-      "foreignId": "60",
-      "createType": 754,
-      "type": "i33ne0",
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "areaCode": "60457",
-      "organLeader": "3is3z6",
-      "leaderId": "60",
-      "leaderMobile": "(330) 445-7747",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:25",
+      "lastTime": "2025-08-27 22:15:25",
+      "id": 65,
+      "organId": "89",
+      "parentId": 801,
+      "appId": "89",
+      "depttypeId": 881,
+      "foreignId": "89",
+      "createType": 179,
+      "type": "qw0ivn",
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "areaCode": "66235",
+      "organLeader": "ueus5l",
+      "leaderId": "89",
+      "leaderMobile": "803.740.8989",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "60457",
-      "imagePath": "qoiwi3",
-      "priority": 139,
-      "status": 835,
+      "searchCode": "66235",
+      "imagePath": "djbzyi",
+      "priority": 512,
+      "status": 383,
       "delFlag": 6,
-      "description": "2h9nau",
-      "spare1": "2zjdf9",
-      "spare2": "c2qazg",
+      "description": "ysi47m",
+      "spare1": "xx44nc",
+      "spare2": "bdis0l",
       "children": [
         {
           "$ref": ".."
@@ -11245,44 +11365,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 535,
-        "roletypeId": "60",
-        "appId": "60",
-        "name": "jon.mosciski",
-        "code": "60457",
-        "priority": 467,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:25",
+        "lastTime": "2025-08-27 22:15:25",
+        "id": 593,
+        "roletypeId": "89",
+        "appId": "89",
+        "name": "tarra.erdman",
+        "code": "66235",
+        "priority": 739,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 983,
-        "description": "ejezty",
-        "areaType": "l2ximi"
+        "status": 808,
+        "description": "3z1qnt",
+        "areaType": "pgipr9"
       }
     ],
     "roleIds": [
-      923
+      459
     ],
     "positionIds": [
-      "12bxhk"
+      "yqi5h5"
     ],
-    "roleId": 175,
+    "roleId": 895,
     "userRoleList": [
       {
-        "id": 728,
-        "deptId": 132,
-        "deptName": "jon.mosciski",
-        "organId": "60",
-        "organName": "jon.mosciski",
-        "roleId": 525,
-        "roleName": "jon.mosciski",
-        "adminId": 244
+        "id": 714,
+        "deptId": 10,
+        "deptName": "tarra.erdman",
+        "organId": "89",
+        "organName": "tarra.erdman",
+        "roleId": 184,
+        "roleName": "tarra.erdman",
+        "adminId": 285
       }
     ],
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
   }
 }'
 ```
@@ -11303,7 +11423,7 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -11337,8 +11457,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "0mxhjg",
-    "newPassword": "t8dkc4"
+    "oldPassword": "2fc6ke",
+    "newPassword": "uk4mqo"
   }
 }'
 ```
@@ -11361,7 +11481,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -11411,15 +11531,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.benedict-jenkins.net"
+    "imageUrl": "www.felicitas-spencer.com"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ## 参数配置 信息操作处理
 ### 获取参数配置列表
-**URL:** https://linlan.net/eframe_backend/api/system/config/list.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/list.do
 
 **Type:** GET
 
@@ -11453,7 +11573,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/list.do?page=1&orderBy=314&startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&q=ad4ipd&isDisabled=true&configValue=j4tih0&configKey=bupth4&limit=10&remark=4luymu
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-08-27 22:14:23&remark=jitdj5&orderBy=981&page=1&limit=10&configKey=m7bscg&configValue=gjx7jy&endTime=2025-08-27 22:14:23&q=dgvs7n&isDisabled=true
 ```
 **Response-fields:**
 
@@ -11482,26 +11602,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 748,
+    "totalCount": 254,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "60",
-        "configKey": "zfvvgh",
-        "configValue": "0y5sde",
+        "configId": "89",
+        "configKey": "r3mf20",
+        "configValue": "4547rz",
         "isDisabled": true,
-        "remark": "xyys1r"
+        "remark": "yi80i0"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 参数配置导出
-**URL:** https://linlan.net/eframe_backend/api/system/config/export.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/export.do
 
 **Type:** POST
 
@@ -11535,7 +11655,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/export.do --data 'q=1ssmlb&isDisabled=true&configValue=6bgkno&remark=32t8pr&limit=10&endTime=2025-08-25 18:01:00&page=1&orderBy=877&startTime=2025-08-25 18:01:00&configKey=phw98q'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'orderBy=316&configValue=botauj&q=pjccgj&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&isDisabled=true&limit=10&configKey=vqqjpz&page=1&remark=9awbcy'
 ```
 **Response-fields:**
 
@@ -11553,13 +11673,13 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4t04h1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "47dviz",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 根据参数编号获取详细信息
-**URL:** https://linlan.net/eframe_backend/api/system/config/{configId}.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/{configId}.do
 
 **Type:** GET
 
@@ -11584,7 +11704,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/60.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/89.do
 ```
 **Response-fields:**
 
@@ -11608,18 +11728,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "60",
-    "configKey": "43qsuw",
-    "configValue": "ct4vww",
+    "configId": "89",
+    "configKey": "zzz0hn",
+    "configValue": "tl0hqg",
     "isDisabled": true,
-    "remark": "7td0z9"
+    "remark": "361t2p"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 根据参数键名查询参数值
-**URL:** https://linlan.net/eframe_backend/api/system/config/configKey/{configKey}.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/configKey/{configKey}.do
 
 **Type:** GET
 
@@ -11644,7 +11764,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/configKey/rf9ezd.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/saov64.do
 ```
 **Response-fields:**
 
@@ -11668,18 +11788,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "60",
-    "configKey": "bs6tfb",
-    "configValue": "8xva0b",
+    "configId": "89",
+    "configKey": "166qkl",
+    "configValue": "a3jvl6",
     "isDisabled": true,
-    "remark": "d1b5te"
+    "remark": "5ez8vo"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 新增参数配置
-**URL:** https://linlan.net/eframe_backend/api/system/config/save.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/save.do
 
 **Type:** POST
 
@@ -11709,13 +11829,13 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/save.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "60",
-    "configKey": "xvgtfd",
-    "configValue": "djvlzn",
+    "configId": "89",
+    "configKey": "5g14ia",
+    "configValue": "u56n59",
     "isDisabled": true,
-    "remark": "4r61qr"
+    "remark": "n7mdyi"
   }
 }'
 ```
@@ -11735,13 +11855,13 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b1mr2z",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "dcz3bg",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 修改参数配置
-**URL:** https://linlan.net/eframe_backend/api/system/config/update.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/update.do
 
 **Type:** POST
 
@@ -11771,13 +11891,13 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/update.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "60",
-    "configKey": "pxtldn",
-    "configValue": "kehe62",
+    "configId": "89",
+    "configKey": "2ppgrw",
+    "configValue": "dkvojz",
     "isDisabled": true,
-    "remark": "bs85g8"
+    "remark": "4sc2o0"
   }
 }'
 ```
@@ -11797,13 +11917,13 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gvknw1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "3r2hi9",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 删除参数配置
-**URL:** https://linlan.net/eframe_backend/api/system/config/delete/{configIds}.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/delete/{configIds}.do
 
 **Type:** POST
 
@@ -11828,7 +11948,7 @@ configIds|array|   配置Ids,[array of string]|true|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/delete/.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/delete/.do
 ```
 **Response-fields:**
 
@@ -11846,13 +11966,13 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4dv37y",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "77epr8",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
 ### 刷新参数缓存
-**URL:** https://linlan.net/eframe_backend/api/system/config/refreshCache.do
+**URL:** https://linlan.net/eframe_backend/api/system/configwhole/refreshCache.do
 
 **Type:** POST
 
@@ -11871,7 +11991,7 @@ token|string|令牌|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/config/refreshCache.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/refreshCache.do
 ```
 **Response-fields:**
 
@@ -11889,8 +12009,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6n1uk6",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "qehyj1",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -11922,7 +12042,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=jon.mosciski&ipaddr=nz9jyy
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=gn1473&username=tarra.erdman
 ```
 **Response-fields:**
 
@@ -11950,17 +12070,17 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "60",
-      "deptName": "jon.mosciski",
-      "username": "jon.mosciski",
-      "ipaddr": "n22hmp",
-      "loginLocation": "lsuera",
-      "browser": "ndzd5b",
-      "os": "iecfmc",
-      "loginTime": 1756116060434
+      "tokenId": "89",
+      "deptName": "tarra.erdman",
+      "username": "tarra.erdman",
+      "ipaddr": "gukke1",
+      "loginLocation": "skm1ds",
+      "browser": "vi8z89",
+      "os": "kvz54k",
+      "loginTime": 1756304063123
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -11990,7 +12110,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/60.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/89.do
 ```
 **Response-fields:**
 
@@ -12008,8 +12128,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iwt1p2",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "7bbqeu",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12052,7 +12172,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?limit=10&name=jon.mosciski&status=n1d9y7&page=1&typeClass=vr2lhz&q=hvmbqk&orderBy=358&typeMode=135&endTime=2025-08-25 18:01:00&remark=92iabp&startTime=2025-08-25 18:01:00&typeId=60&key=wxnrea
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2025-08-27 22:14:23&orderBy=815&remark=w1kmgv&name=tarra.erdman&startTime=2025-08-27 22:14:23&status=inxlap&key=m9ru50&limit=10&page=1&typeMode=23&typeClass=0sxv03&typeId=89&q=6ruam6
 ```
 **Response-fields:**
 
@@ -12086,26 +12206,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 476,
+    "totalCount": 445,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "60",
-        "name": "jon.mosciski",
-        "typeClass": "h5asl9",
-        "typeRef": "6zwzlx",
-        "typeMode": 795,
-        "searchCode": "60457",
-        "priority": 326,
-        "createTime": "2025-08-25 18:01:59",
-        "status": 994,
-        "remark": "szugsu"
+        "typeId": "89",
+        "name": "tarra.erdman",
+        "typeClass": "4zggzb",
+        "typeRef": "4ns0mn",
+        "typeMode": 821,
+        "searchCode": "66235",
+        "priority": 114,
+        "createTime": "2025-08-27 22:15:35",
+        "status": 619,
+        "remark": "p4mjmh"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12147,7 +12267,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'typeMode=214&key=3r1l9o&page=1&name=jon.mosciski&remark=tkoizt&status=cv3qz3&orderBy=761&q=rwhw9p&startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&limit=10&typeId=60&typeClass=jtulee'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'page=1&startTime=2025-08-27 22:14:23&remark=kfz24s&orderBy=62&typeId=89&status=gdmkhl&key=fuxjsp&endTime=2025-08-27 22:14:23&q=y0gcg4&limit=10&name=tarra.erdman&typeClass=ah30ch&typeMode=776'
 ```
 **Response-fields:**
 
@@ -12165,8 +12285,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a52ikl",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "gm9w9b",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12196,7 +12316,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/60.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/89.do
 ```
 **Response-fields:**
 
@@ -12225,18 +12345,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "60",
-    "name": "jon.mosciski",
-    "typeClass": "0omxea",
-    "typeRef": "n7pu8g",
-    "typeMode": 632,
-    "searchCode": "60457",
-    "priority": 20,
-    "createTime": "2025-08-25 18:01:59",
-    "status": 88,
-    "remark": "a42cft"
+    "typeId": "89",
+    "name": "tarra.erdman",
+    "typeClass": "c4dvp0",
+    "typeRef": "ojpudl",
+    "typeMode": 617,
+    "searchCode": "66235",
+    "priority": 871,
+    "createTime": "2025-08-27 22:15:35",
+    "status": 785,
+    "remark": "fv0v7y"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12278,16 +12398,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "60",
-    "name": "jon.mosciski",
-    "typeClass": "d6q7iw",
-    "typeRef": "r2ehbs",
-    "typeMode": 431,
-    "searchCode": "60457",
-    "priority": 232,
-    "createTime": "2025-08-25 18:01:59",
-    "status": 58,
-    "remark": "telhbz"
+    "typeId": "89",
+    "name": "tarra.erdman",
+    "typeClass": "k0lz3f",
+    "typeRef": "rl841d",
+    "typeMode": 398,
+    "searchCode": "66235",
+    "priority": 911,
+    "createTime": "2025-08-27 22:15:35",
+    "status": 874,
+    "remark": "8pnjks"
   }
 }'
 ```
@@ -12307,8 +12427,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v6jt03",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "phshyt",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12350,16 +12470,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "60",
-    "name": "jon.mosciski",
-    "typeClass": "jsai1y",
-    "typeRef": "w1fs0r",
-    "typeMode": 942,
-    "searchCode": "60457",
-    "priority": 761,
-    "createTime": "2025-08-25 18:01:59",
-    "status": 754,
-    "remark": "zxiojc"
+    "typeId": "89",
+    "name": "tarra.erdman",
+    "typeClass": "8d5oq6",
+    "typeRef": "bwl9ny",
+    "typeMode": 196,
+    "searchCode": "66235",
+    "priority": 654,
+    "createTime": "2025-08-27 22:15:35",
+    "status": 94,
+    "remark": "sb4xfb"
   }
 }'
 ```
@@ -12379,8 +12499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gnorg1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "mxl5fb",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12428,8 +12548,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sznw8t",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "frz6s0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12471,8 +12591,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qenhf3",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "v8br1d",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12526,19 +12646,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "60",
-      "name": "jon.mosciski",
-      "typeClass": "rdzb1u",
-      "typeRef": "yeeba1",
-      "typeMode": 645,
-      "searchCode": "60457",
-      "priority": 891,
-      "createTime": "2025-08-25 18:01:59",
-      "status": 120,
-      "remark": "gwkaet"
+      "typeId": "89",
+      "name": "tarra.erdman",
+      "typeClass": "psuwdp",
+      "typeRef": "y2caa1",
+      "typeMode": 102,
+      "searchCode": "66235",
+      "priority": 270,
+      "createTime": "2025-08-27 22:15:35",
+      "status": 841,
+      "remark": "91kccr"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12596,7 +12716,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?code=60457&delFlag=6&isPub=true&mobilePhone=251.719.9288&posType=oalc8d&orderBy=453&parentId=60&page=1&postypeId=60&positionId=60&groupId=60&id=60&oname=jon.mosciski&createTime=2025-08-25 18:01:00&roletypeId=60&startTime=2025-08-25 18:01:00&description=4bmumg&sname=jon.mosciski&officePhone=251.719.9288&status=426&name=jon.mosciski&roleTypeId=60&posFunction=3368p7&posRank=391&ids=35rfem&ids=35rfem&endTime=2025-08-25 18:01:00&q=e73xnp&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?page=1&delFlag=6&roleTypeId=89&name=tarra.erdman&roletypeId=89&startTime=2025-08-27 22:14:23&code=66235&posType=8fvwoj&officePhone=1-781-417-5663&ids=aqb64c&ids=aqb64c&endTime=2025-08-27 22:14:23&oname=tarra.erdman&posFunction=4qxz6e&mobilePhone=1-781-417-5663&positionId=89&q=zlfrzw&limit=10&posRank=790&groupId=89&description=zd767c&postypeId=89&isPub=true&parentId=89&sname=tarra.erdman&id=89&orderBy=285&status=473&createTime=2025-08-27 22:14:23
 ```
 **Response-fields:**
 
@@ -12633,31 +12753,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 603,
+    "totalCount": 590,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "60",
-        "postCode": "60457",
-        "postName": "jon.mosciski",
-        "postSort": 253,
-        "status": 382,
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:53",
-        "lastTime": "2025-08-25 18:01:53",
+        "postId": "89",
+        "postCode": "66235",
+        "postName": "tarra.erdman",
+        "postSort": 690,
+        "status": 334,
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:28",
+        "lastTime": "2025-08-27 22:15:28",
         "delFlag": 6,
-        "remark": "pqzx3u",
+        "remark": "by7dfl",
         "ids": [
-          "8h7cvl"
+          "hi31nh"
         ],
-        "positionId": "60",
+        "positionId": "89",
         "flag": true
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12696,7 +12816,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'page=1&q=pq6c8v&startTime=2025-08-25 18:01:00&postName=jon.mosciski&limit=10&endTime=2025-08-25 18:01:00&orderBy=991&delFlag=6&status=866&postCode=60457'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&postCode=66235&postName=tarra.erdman&page=1&q=x13od7&limit=10&orderBy=41&delFlag=6&status=462'
 ```
 **Response-fields:**
 
@@ -12714,8 +12834,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "naona1",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "vfnc24",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12745,7 +12865,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/60.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/89.do
 ```
 **Response-fields:**
 
@@ -12805,49 +12925,49 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": "60",
-    "parentId": "60",
-    "postypeId": "60",
-    "roletypeId": "60",
-    "userId": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "code": "60457",
-    "oname": "jon.mosciski",
-    "posFunction": "jd0pds",
-    "posRank": 157,
-    "posType": "qe4m6k",
-    "editorType": "7hqwur",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": "89",
+    "parentId": "89",
+    "postypeId": "89",
+    "roletypeId": "89",
+    "userId": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "code": "66235",
+    "oname": "tarra.erdman",
+    "posFunction": "wg4rq4",
+    "posRank": 579,
+    "posType": "p96v5o",
+    "editorType": "9hgij2",
     "isEditorCreate": true,
-    "status": 648,
+    "status": 783,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "60",
-    "manageDeptids": "yxu644",
+    "leaderId": "89",
+    "manageDeptids": "0yyzh7",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "251.719.9288",
-    "officePhone": "251.719.9288",
-    "buildingId": "60",
-    "roomNo": "qbmvyt",
-    "extQmType": "w2dttp",
-    "extQmTypePhoto": "bvynh2",
-    "extPosName": "jon.mosciski",
-    "extOrganName": "jon.mosciski",
-    "priority": 997,
-    "priorityInOrgan": 628,
-    "priorityInDomain": 809,
-    "updaterId": "60",
-    "updateTime": "2025-08-25 18:01:53",
+    "mobilePhone": "1-781-417-5663",
+    "officePhone": "1-781-417-5663",
+    "buildingId": "89",
+    "roomNo": "xs5kny",
+    "extQmType": "2vvba1",
+    "extQmTypePhoto": "o425um",
+    "extPosName": "tarra.erdman",
+    "extOrganName": "tarra.erdman",
+    "priority": 65,
+    "priorityInOrgan": 315,
+    "priorityInDomain": 615,
+    "updaterId": "89",
+    "updateTime": "2025-08-27 22:15:28",
     "delFlag": 6,
-    "description": "ji01k7",
-    "remark": "a15p8x"
+    "description": "okb6l8",
+    "remark": "pvrurs"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -12923,50 +13043,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": "60",
-    "parentId": "60",
-    "postypeId": "60",
-    "roletypeId": "60",
-    "userId": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "code": "60457",
-    "oname": "jon.mosciski",
-    "posFunction": "bske5k",
-    "posRank": 389,
-    "posType": "itf89a",
-    "editorType": "pdls1s",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": "89",
+    "parentId": "89",
+    "postypeId": "89",
+    "roletypeId": "89",
+    "userId": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "code": "66235",
+    "oname": "tarra.erdman",
+    "posFunction": "0rvzy7",
+    "posRank": 84,
+    "posType": "y3u54n",
+    "editorType": "sfbkt1",
     "isEditorCreate": true,
-    "status": 805,
+    "status": 482,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "60",
-    "manageDeptids": "qx18bk",
+    "leaderId": "89",
+    "manageDeptids": "glzx4d",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "251.719.9288",
-    "officePhone": "251.719.9288",
-    "buildingId": "60",
-    "roomNo": "m51czb",
-    "extQmType": "80c5sk",
-    "extQmTypePhoto": "ejm8yf",
-    "extPosName": "jon.mosciski",
-    "extOrganName": "jon.mosciski",
-    "priority": 98,
-    "priorityInOrgan": 993,
-    "priorityInDomain": 891,
-    "updaterId": "60",
-    "updateTime": "2025-08-25 18:01:53",
+    "mobilePhone": "1-781-417-5663",
+    "officePhone": "1-781-417-5663",
+    "buildingId": "89",
+    "roomNo": "xh2io4",
+    "extQmType": "t20l5o",
+    "extQmTypePhoto": "49mlo4",
+    "extPosName": "tarra.erdman",
+    "extOrganName": "tarra.erdman",
+    "priority": 421,
+    "priorityInOrgan": 15,
+    "priorityInDomain": 154,
+    "updaterId": "89",
+    "updateTime": "2025-08-27 22:15:28",
     "delFlag": 6,
-    "description": "jdt1nr",
-    "remark": "35sxws",
-    "parentName": "jon.mosciski",
-    "roletypeName": "jon.mosciski",
-    "postypeName": "jon.mosciski"
+    "description": "uozxtd",
+    "remark": "vxi6ig",
+    "parentName": "tarra.erdman",
+    "roletypeName": "tarra.erdman",
+    "postypeName": "tarra.erdman"
   }
 }'
 ```
@@ -12986,8 +13106,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2nagdz",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "c4mk3a",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13063,50 +13183,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
-    "id": "60",
-    "parentId": "60",
-    "postypeId": "60",
-    "roletypeId": "60",
-    "userId": "60",
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "code": "60457",
-    "oname": "jon.mosciski",
-    "posFunction": "dkllih",
-    "posRank": 867,
-    "posType": "3sawwj",
-    "editorType": "u3i3q6",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
+    "id": "89",
+    "parentId": "89",
+    "postypeId": "89",
+    "roletypeId": "89",
+    "userId": "89",
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "code": "66235",
+    "oname": "tarra.erdman",
+    "posFunction": "ypb2ds",
+    "posRank": 278,
+    "posType": "7cs8ak",
+    "editorType": "qxtlv2",
     "isEditorCreate": true,
-    "status": 498,
+    "status": 399,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "60",
-    "manageDeptids": "rptfdu",
+    "leaderId": "89",
+    "manageDeptids": "2d688w",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "251.719.9288",
-    "officePhone": "251.719.9288",
-    "buildingId": "60",
-    "roomNo": "92uc72",
-    "extQmType": "dplgnh",
-    "extQmTypePhoto": "6p1vbx",
-    "extPosName": "jon.mosciski",
-    "extOrganName": "jon.mosciski",
-    "priority": 391,
-    "priorityInOrgan": 78,
-    "priorityInDomain": 797,
-    "updaterId": "60",
-    "updateTime": "2025-08-25 18:01:53",
+    "mobilePhone": "1-781-417-5663",
+    "officePhone": "1-781-417-5663",
+    "buildingId": "89",
+    "roomNo": "1c6uya",
+    "extQmType": "ucflqm",
+    "extQmTypePhoto": "qnnu5f",
+    "extPosName": "tarra.erdman",
+    "extOrganName": "tarra.erdman",
+    "priority": 997,
+    "priorityInOrgan": 63,
+    "priorityInDomain": 682,
+    "updaterId": "89",
+    "updateTime": "2025-08-27 22:15:28",
     "delFlag": 6,
-    "description": "z8n95d",
-    "remark": "563clr",
-    "parentName": "jon.mosciski",
-    "roletypeName": "jon.mosciski",
-    "postypeName": "jon.mosciski"
+    "description": "8913lm",
+    "remark": "ub2vkz",
+    "parentName": "tarra.erdman",
+    "roletypeName": "tarra.erdman",
+    "postypeName": "tarra.erdman"
   }
 }'
 ```
@@ -13126,8 +13246,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7ijrak",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "z37qvv",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13175,8 +13295,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3wbbzj",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "pojyp9",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13221,20 +13341,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "60",
-    "postCode": "60457",
-    "postName": "jon.mosciski",
-    "postSort": 456,
-    "status": 91,
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:53",
-    "lastTime": "2025-08-25 18:01:53",
+    "postId": "89",
+    "postCode": "66235",
+    "postName": "tarra.erdman",
+    "postSort": 485,
+    "status": 15,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:28",
+    "lastTime": "2025-08-27 22:15:28",
     "delFlag": 6,
-    "remark": "n6kb3q",
+    "remark": "tgp6gd",
     "ids": [
-      "3g0vcz"
+      "vnyf23"
     ],
-    "positionId": "60",
+    "positionId": "89",
     "flag": true
   }
 }'
@@ -13255,8 +13375,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wl4lre",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "msblhl",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13294,12 +13414,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 208,
-    "roleId": 608,
-    "positionId": "60",
-    "status": 715,
-    "beginTime": "2025-08-25",
-    "endTime": "2025-08-25"
+    "id": 955,
+    "roleId": 454,
+    "positionId": "89",
+    "status": 631,
+    "beginTime": "2025-08-27",
+    "endTime": "2025-08-27"
   }
 }'
 ```
@@ -13319,8 +13439,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x2ts9l",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "bdwh6v",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13377,24 +13497,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "60",
-      "postCode": "60457",
-      "postName": "jon.mosciski",
-      "postSort": 448,
-      "status": 233,
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:53",
-      "lastTime": "2025-08-25 18:01:53",
+      "postId": "89",
+      "postCode": "66235",
+      "postName": "tarra.erdman",
+      "postSort": 654,
+      "status": 363,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:29",
+      "lastTime": "2025-08-27 22:15:29",
       "delFlag": 6,
-      "remark": "ji7p3i",
+      "remark": "6m9cfy",
       "ids": [
-        "h1petm"
+        "znmfzy"
       ],
-      "positionId": "60",
+      "positionId": "89",
       "flag": true
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13440,7 +13560,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?appId=60&userId=60&username=jon.mosciski&limit=10&createTime=2025-08-25 18:01:54&q=phzyxd&time=1756116060434&method=5lxqrj&endTime=2025-08-25 18:01:00&category=258&orderBy=600&operation=we8wku&srcCode=842&ip=7.176.103.194&page=1&startTime=2025-08-25 18:01:00
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?page=1&ip=217.26.150.93&operation=rdeo8d&username=tarra.erdman&limit=10&startTime=2025-08-27 22:14:23&appId=89&category=330&createTime=2025-08-27 22:15:29&srcCode=798&endTime=2025-08-27 22:14:23&time=1756304063123&orderBy=946&userId=89&q=orfztl&method=gqspli
 ```
 **Response-fields:**
 
@@ -13484,38 +13604,38 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 8,
+    "totalCount": 955,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 837,
-        "title": "4ja1n8",
-        "businessType": 876,
-        "businessTypeName": "jon.mosciski",
+        "operId": 412,
+        "title": "tsupex",
+        "businessType": 376,
+        "businessTypeName": "tarra.erdman",
         "businessTypes": [
-          525
+          123
         ],
-        "method": "44tiqr",
-        "requestMethod": "7api82",
-        "operatorType": 782,
-        "operName": "jon.mosciski",
-        "deptName": "jon.mosciski",
-        "operUrl": "www.benedict-jenkins.net",
-        "operIp": "7.176.103.194",
-        "operLocation": "0m2jge",
-        "operParam": "3a36gs",
-        "jsonResult": "te4qjx",
-        "status": 295,
-        "errorMsg": "a771l3",
-        "operTime": "2025-08-25 18:01:54",
-        "costTime": 1756116060434,
-        "remark": "d0iltk"
+        "method": "ftzviy",
+        "requestMethod": "ppn63x",
+        "operatorType": 229,
+        "operName": "tarra.erdman",
+        "deptName": "tarra.erdman",
+        "operUrl": "www.felicitas-spencer.com",
+        "operIp": "217.26.150.93",
+        "operLocation": "97ezx4",
+        "operParam": "xx3uma",
+        "jsonResult": "5bngyu",
+        "status": 0,
+        "errorMsg": "j9d2b6",
+        "operTime": "2025-08-27 22:15:29",
+        "costTime": 1756304063123,
+        "remark": "ftsvwt"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13560,7 +13680,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'page=1&operId=455&endTime=2025-08-25 18:01:00&businessType=746&operatorType=891&status=182&deptName=jon.mosciski&title=qplc5u&q=9ca1gs&limit=10&operIp=7.176.103.194&orderBy=881&operTime=2025-08-25 18:01:54&startTime=2025-08-25 18:01:00&operName=jon.mosciski&remark=p94h09'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'page=1&status=329&limit=10&orderBy=9&startTime=2025-08-27 22:14:23&remark=5lqd5h&businessType=193&operatorType=93&deptName=tarra.erdman&operTime=2025-08-27 22:15:29&title=2pc2s0&operIp=217.26.150.93&operName=tarra.erdman&q=xdaa75&endTime=2025-08-27 22:14:23&operId=860'
 ```
 **Response-fields:**
 
@@ -13578,8 +13698,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "luezk4",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "wn8wor",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13627,8 +13747,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mbbcdo",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "twm7pk",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13678,7 +13798,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?dictLabel=lz86q2&searchCode=60457&status=dmshac&key=s1wvy9&cssClass=2lurnu&cddValue=j2l06m&orderBy=367&endTime=2025-08-25 18:01:00&page=1&cddId=33&dictSort=25&listClass=vnfxz1&isDefault=w5ty6x&remark=jkgq7e&parentId=180&q=l2qvp3&startTime=2025-08-25 18:01:00&limit=10&name=jon.mosciski&typeCode=60457
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?dictSort=952&typeCode=66235&page=1&key=zs63nc&searchCode=66235&orderBy=748&q=qghl56&isDefault=ar51gt&status=55ggo1&limit=10&remark=wtm5xl&endTime=2025-08-27 22:14:23&cssClass=yo9zrn&cddId=661&name=tarra.erdman&dictLabel=j038mh&cddValue=xsr5pc&listClass=pbw3u0&startTime=2025-08-27 22:14:23&parentId=717
 ```
 **Response-fields:**
 
@@ -13715,29 +13835,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 597,
+    "totalCount": 651,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 769,
-        "typeCode": "60457",
-        "parentId": 692,
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "cddValue": "3c91wj",
-        "searchCode": "60457",
-        "priority": 175,
-        "createTime": "2025-08-25 18:01:58",
-        "remark": "x4bf0j",
-        "dictLabel": "63ozx2",
-        "typeCodeName": "jon.mosciski",
-        "parentName": "jon.mosciski"
+        "cddId": 845,
+        "typeCode": "66235",
+        "parentId": 191,
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "cddValue": "bz45w6",
+        "searchCode": "66235",
+        "priority": 470,
+        "createTime": "2025-08-27 22:15:35",
+        "remark": "dsp6h3",
+        "dictLabel": "3auq5r",
+        "typeCodeName": "tarra.erdman",
+        "parentName": "tarra.erdman"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13786,7 +13906,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'status=08dnnd&cddId=875&q=cur8dl&typeCode=60457&key=co7g2x&endTime=2025-08-25 18:01:00&isDefault=yru9ac&dictSort=977&name=jon.mosciski&startTime=2025-08-25 18:01:00&cddValue=0o91v5&parentId=558&listClass=ctpm1u&limit=10&searchCode=60457&page=1&dictLabel=asorwg&orderBy=574&cssClass=jqk696&remark=ji2y8i'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'cssClass=aqftcq&startTime=2025-08-27 22:14:23&status=10r9fu&remark=dm7ohv&parentId=87&listClass=ln9ms8&page=1&name=tarra.erdman&isDefault=pptyc4&limit=10&typeCode=66235&searchCode=66235&orderBy=221&endTime=2025-08-27 22:14:23&key=q2ukmn&dictLabel=tknlk0&q=qhma9x&cddId=89&dictSort=713&cddValue=d75ous'
 ```
 **Response-fields:**
 
@@ -13804,8 +13924,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "o2hjsh",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ds0izm",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13835,7 +13955,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/440.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/369.do
 ```
 **Response-fields:**
 
@@ -13867,21 +13987,21 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 331,
-    "typeCode": "60457",
-    "parentId": 436,
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "cddValue": "yyfwk9",
-    "searchCode": "60457",
-    "priority": 995,
-    "createTime": "2025-08-25 18:01:58",
-    "remark": "w8fs34",
-    "dictLabel": "aqnyyr",
-    "typeCodeName": "jon.mosciski",
-    "parentName": "jon.mosciski"
+    "cddId": 65,
+    "typeCode": "66235",
+    "parentId": 599,
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "cddValue": "9skzrf",
+    "searchCode": "66235",
+    "priority": 972,
+    "createTime": "2025-08-27 22:15:35",
+    "remark": "jnvsqp",
+    "dictLabel": "dia45w",
+    "typeCodeName": "tarra.erdman",
+    "parentName": "tarra.erdman"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13920,7 +14040,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/866zuc.do?parentId=60&zparentId=60&typeCode=60457&roletypeId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/j71l55.do?typeCode=66235&parentId=89&roletypeId=89&zparentId=89
 ```
 **Response-fields:**
 
@@ -13941,7 +14061,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -13986,19 +14106,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 448,
-    "typeCode": "60457",
-    "parentId": 703,
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "cddValue": "0d9f1b",
-    "searchCode": "60457",
-    "priority": 436,
-    "createTime": "2025-08-25 18:01:58",
-    "remark": "e5ybce",
-    "dictLabel": "xm0tcr",
-    "typeCodeName": "jon.mosciski",
-    "parentName": "jon.mosciski"
+    "cddId": 690,
+    "typeCode": "66235",
+    "parentId": 683,
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "cddValue": "36xx5y",
+    "searchCode": "66235",
+    "priority": 50,
+    "createTime": "2025-08-27 22:15:35",
+    "remark": "27640t",
+    "dictLabel": "9z41sg",
+    "typeCodeName": "tarra.erdman",
+    "parentName": "tarra.erdman"
   }
 }'
 ```
@@ -14018,8 +14138,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xxhfpy",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "rigq1o",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14064,19 +14184,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 148,
-    "typeCode": "60457",
-    "parentId": 119,
-    "name": "jon.mosciski",
-    "sname": "jon.mosciski",
-    "cddValue": "05wkx5",
-    "searchCode": "60457",
-    "priority": 561,
-    "createTime": "2025-08-25 18:01:58",
-    "remark": "j013yr",
-    "dictLabel": "btvzf6",
-    "typeCodeName": "jon.mosciski",
-    "parentName": "jon.mosciski"
+    "cddId": 164,
+    "typeCode": "66235",
+    "parentId": 779,
+    "name": "tarra.erdman",
+    "sname": "tarra.erdman",
+    "cddValue": "tfh9kp",
+    "searchCode": "66235",
+    "priority": 44,
+    "createTime": "2025-08-27 22:15:35",
+    "remark": "0ec9vh",
+    "dictLabel": "4qpx6f",
+    "typeCodeName": "tarra.erdman",
+    "parentName": "tarra.erdman"
   }
 }'
 ```
@@ -14096,8 +14216,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ylssin",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ime0y3",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14145,8 +14265,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zmju1h",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "nqw7e7",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14200,7 +14320,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?wlType=fdcolc&orderBy=820&endTime=2025-08-25 18:01:00&refresh=dyks6r&appId=60&type=9zgc7q&metaId=60&page=1&positionId=60&showButton=lvo7o4&status=pukmj1&q=36c3sp&organwId=60&roleId=60&roletypeId=60&subType=hlj9o8&gnType=37wwrt&refType=9m2isd&limit=10&startTime=2025-08-25 18:01:00&groupId=60&key=b9i01q&roleTypeId=60&parentId=60&positionType=62avs7
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?roleId=89&page=1&q=jjznay&positionType=qf1am7&roletypeId=89&metaId=89&refresh=n7lx74&roleTypeId=89&orderBy=289&groupId=89&status=pniy63&showButton=ozrqzs&limit=10&subType=40f7r9&wlType=zbueoe&endTime=2025-08-27 22:14:23&refType=n39luk&startTime=2025-08-27 22:14:23&key=jri02o&gnType=kw94jj&type=m27vja&parentId=89&organwId=89&appId=89&positionId=89
 ```
 **Response-fields:**
 
@@ -14233,18 +14353,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "60",
-      "label": "r9mqvr",
-      "shortName": "jon.mosciski",
-      "organId": "60",
-      "areaId": 340,
-      "searchCode": "60457",
-      "childNum": 628,
+      "id": "89",
+      "label": "jl4f3p",
+      "shortName": "tarra.erdman",
+      "organId": "89",
+      "areaId": 833,
+      "searchCode": "66235",
+      "childNum": 704,
       "checked": true,
-      "entity": 595,
+      "entity": 867,
       "show": true,
       "showIcon": true,
-      "parentId": "60",
+      "parentId": "89",
       "children": [
         {
           "$ref": ".."
@@ -14252,7 +14372,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14303,7 +14423,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?q=h6ydne&existKey=2lu0f2&description=3ctuz6&startTime=2025-08-25 18:01:00&cddLevel=68bfi9&searchCode=60457&dispFlag=d4v1hd&parentId=925&page=1&typeMode=eu7b5r&endTime=2025-08-25 18:01:00&ids=q6qbq0&ids=q6qbq0&typeCodes=ogjfpw&typeCodes=ogjfpw&sname=jon.mosciski&cddValue=d7ks1n&orderBy=239&limit=10&typeCode=60457&key=i819r0&delFlag=6&name=jon.mosciski&isAllChild=2gddss
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?endTime=2025-08-27 22:14:23&page=1&typeCodes=eqz8n0&typeCodes=eqz8n0&parentId=556&isAllChild=0w0ayl&ids=cwifz1&ids=cwifz1&startTime=2025-08-27 22:14:23&key=my9ncd&orderBy=626&dispFlag=1lwmnz&cddLevel=ngd83v&searchCode=66235&sname=tarra.erdman&delFlag=6&description=gcg8hv&existKey=w7d689&q=qgl6ty&limit=10&typeMode=ynb4u5&typeCode=66235&cddValue=9fm66t&name=tarra.erdman
 ```
 **Response-fields:**
 
@@ -14342,24 +14462,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:59",
-      "lastTime": "2025-08-25 18:01:59",
-      "id": 317,
-      "typeCode": "60457",
-      "parentId": 477,
-      "name": "jon.mosciski",
-      "sname": "jon.mosciski",
-      "cddValue": "buepd8",
-      "cddLevel": "a29waj",
-      "searchCode": "60457",
-      "dispFlag": "jmqsnu",
-      "priority": 912,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:35",
+      "lastTime": "2025-08-27 22:15:35",
+      "id": 222,
+      "typeCode": "66235",
+      "parentId": 496,
+      "name": "tarra.erdman",
+      "sname": "tarra.erdman",
+      "cddValue": "s422g6",
+      "cddLevel": "7txc2s",
+      "searchCode": "66235",
+      "dispFlag": "0juddt",
+      "priority": 975,
       "delFlag": 6,
-      "deleteTime": "2025-08-25 18:01:59",
-      "description": "7tkqh4",
-      "spare1": "x6i4kh",
-      "spare2": "jwl1tg",
+      "deleteTime": "2025-08-27 22:15:35",
+      "description": "wpv8d6",
+      "spare1": "cuu2j0",
+      "spare2": "lioz82",
       "children": [
         {
           "$ref": ".."
@@ -14367,7 +14487,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14443,45 +14563,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 607,
-      "total": 58.02,
-      "sys": 78.89,
-      "used": 99.85,
-      "wait": 94.40,
-      "free": 6.88
+      "cpuNum": 910,
+      "total": 8.40,
+      "sys": 25.16,
+      "used": 17.08,
+      "wait": 86.23,
+      "free": 56.86
     },
     "mem": {
-      "total": 80.34,
-      "used": 44.73,
-      "free": 99.12
+      "total": 99.05,
+      "used": 15.92,
+      "free": 2.06
     },
     "jvm": {
-      "total": 99.11,
-      "max": 16.27,
-      "free": 32.37,
-      "version": "9.8",
-      "home": "sti9la"
+      "total": 15.21,
+      "max": 59.82,
+      "free": 99.52,
+      "version": "3.76",
+      "home": "2azi3v"
     },
     "sys": {
-      "computerName": "jon.mosciski",
-      "computerIp": "7.176.103.194",
-      "userDir": "ernbt8",
-      "osName": "jon.mosciski",
-      "osArch": "xddpul"
+      "computerName": "tarra.erdman",
+      "computerIp": "217.26.150.93",
+      "userDir": "mw3ox2",
+      "osName": "tarra.erdman",
+      "osArch": "88xnw1"
     },
     "sysFiles": [
       {
-        "dirName": "jon.mosciski",
-        "sysTypeName": "jon.mosciski",
-        "typeName": "jon.mosciski",
-        "total": "92ncnl",
-        "free": "ojo0rs",
-        "used": "zf2iov",
-        "usage": 18.70
+        "dirName": "tarra.erdman",
+        "sysTypeName": "tarra.erdman",
+        "typeName": "tarra.erdman",
+        "total": "h3obfp",
+        "free": "ner4jw",
+        "used": "75q0s0",
+        "usage": 46.19
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14512,11 +14632,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "jon.mosciski",
-    "password": "asmyyq",
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8",
-    "appId": "60"
+    "username": "tarra.erdman",
+    "password": "yy3wkw",
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
+    "appId": "89"
   }
 }'
 ```
@@ -14536,8 +14656,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bom089",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "0zzzag",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14568,11 +14688,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "jon.mosciski",
-    "password": "6vu1j0",
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8",
-    "appId": "60"
+    "username": "tarra.erdman",
+    "password": "5xuofv",
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
+    "appId": "89"
   }
 }'
 ```
@@ -14597,12 +14717,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 158,
-    "token": "5lkzgr",
-    "updateTime": "2025-08-25 18:01:50",
-    "expireTime": "2025-08-25 18:01:50"
+    "adminId": 97,
+    "token": "ohkmq0",
+    "updateTime": "2025-08-27 22:15:25",
+    "expireTime": "2025-08-27 22:15:25"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14727,60 +14847,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:50",
-      "lastTime": "2025-08-25 18:01:50",
-      "id": 275,
-      "userId": "60",
-      "deptId": 773,
-      "deptName": "jon.mosciski",
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "name": "jon.mosciski",
-      "username": "jon.mosciski",
-      "nickName": "randy.von",
-      "email": "esta.hermann@gmail.com",
-      "mobile": "(330) 445-7747",
-      "imagePath": "gefedu",
-      "password": "czc12t",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:25",
+      "lastTime": "2025-08-27 22:15:25",
+      "id": 147,
+      "userId": "89",
+      "deptId": 441,
+      "deptName": "tarra.erdman",
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "name": "tarra.erdman",
+      "username": "tarra.erdman",
+      "nickName": "reena.schmeler",
+      "email": "fletcher.hickle@hotmail.com",
+      "mobile": "803.740.8989",
+      "imagePath": "sn7ely",
+      "password": "1u12p9",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 621,
+      "status": 446,
       "delFlag": 6,
-      "lastLoginIp": "7.176.103.194",
-      "lastLoginTime": "2025-08-25 18:01:50",
-      "description": "msqvq2",
+      "lastLoginIp": "217.26.150.93",
+      "lastLoginTime": "2025-08-27 22:15:25",
+      "description": "5vcho4",
       "dept": {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:50",
-        "lastTime": "2025-08-25 18:01:50",
-        "id": 713,
-        "organId": "60",
-        "parentId": 626,
-        "appId": "60",
-        "depttypeId": 283,
-        "foreignId": "60",
-        "createType": 632,
-        "type": "l4kht9",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "areaCode": "60457",
-        "organLeader": "4kguub",
-        "leaderId": "60",
-        "leaderMobile": "(330) 445-7747",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:25",
+        "lastTime": "2025-08-27 22:15:25",
+        "id": 182,
+        "organId": "89",
+        "parentId": 353,
+        "appId": "89",
+        "depttypeId": 943,
+        "foreignId": "89",
+        "createType": 969,
+        "type": "o85bfu",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "areaCode": "66235",
+        "organLeader": "ub7iao",
+        "leaderId": "89",
+        "leaderMobile": "803.740.8989",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "60457",
-        "imagePath": "riu7ce",
-        "priority": 987,
-        "status": 622,
+        "searchCode": "66235",
+        "imagePath": "esghx6",
+        "priority": 47,
+        "status": 449,
         "delFlag": 6,
-        "description": "lliyzv",
-        "spare1": "2mzfy1",
-        "spare2": "w7ek69",
+        "description": "7pafnt",
+        "spare1": "9gz2el",
+        "spare2": "4f1wzc",
         "children": [
           {
             "$ref": ".."
@@ -14789,53 +14909,53 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "60",
-          "createTime": "2025-08-25 18:01:50",
-          "lastTime": "2025-08-25 18:01:50",
-          "id": 441,
-          "roletypeId": "60",
-          "appId": "60",
-          "name": "jon.mosciski",
-          "code": "60457",
-          "priority": 600,
+          "creatorId": "89",
+          "createTime": "2025-08-27 22:15:25",
+          "lastTime": "2025-08-27 22:15:25",
+          "id": 263,
+          "roletypeId": "89",
+          "appId": "89",
+          "name": "tarra.erdman",
+          "code": "66235",
+          "priority": 292,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 564,
-          "description": "q5vcz4",
-          "areaType": "3m1p8e"
+          "status": 597,
+          "description": "9bbwcd",
+          "areaType": "7wtmno"
         }
       ],
       "roleIds": [
-        566
+        138
       ],
       "positionIds": [
-        "uavkyn"
+        "weggaw"
       ],
-      "roleId": 887,
+      "roleId": 647,
       "userRoleList": [
         {
-          "id": 61,
-          "deptId": 108,
-          "deptName": "jon.mosciski",
-          "organId": "60",
-          "organName": "jon.mosciski",
-          "roleId": 297,
-          "roleName": "jon.mosciski",
-          "adminId": 485
+          "id": 458,
+          "deptId": 558,
+          "deptName": "tarra.erdman",
+          "organId": "89",
+          "organName": "tarra.erdman",
+          "roleId": 374,
+          "roleName": "tarra.erdman",
+          "adminId": 769
         }
       ],
-      "code": "60457",
-      "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+      "code": "66235",
+      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
     },
     "roles": [
-      "3ptnjn"
+      "fc2j2r"
     ],
     "permissions": [
-      "wtpnfg"
+      "z5k1hz"
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14892,32 +15012,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "60",
-    "areaId": 660,
-    "groupId": 684,
-    "positionId": "60",
-    "tplSolution": "1r7bjy",
+    "accountId": "89",
+    "areaId": 915,
+    "groupId": 331,
+    "positionId": "89",
+    "tplSolution": "l0nxlc",
     "menuList": [
       {
-        "id": 549,
-        "parentId": 978,
-        "name": "jon.mosciski",
-        "ename": "jon.mosciski",
-        "type": "2ojqk1",
-        "perms": "f7ta1y",
-        "menuLevel": 922,
-        "urlType": "jw7u4m",
-        "url": "www.benedict-jenkins.net",
-        "menuSeq": "re7fql",
-        "icon": "6x1gvy",
-        "imagePath": "kh9dc7",
-        "css": "j97ruv",
-        "description": "44bfvm",
-        "todoTotalApi": "furrbg"
+        "id": 400,
+        "parentId": 384,
+        "name": "tarra.erdman",
+        "ename": "tarra.erdman",
+        "type": "pwbsyg",
+        "perms": "5tlz53",
+        "menuLevel": 192,
+        "urlType": "lgj4h4",
+        "url": "www.felicitas-spencer.com",
+        "menuSeq": "ncyjt0",
+        "icon": "pde3mm",
+        "imagePath": "7rlx7h",
+        "css": "43gp1z",
+        "description": "lqki3i",
+        "todoTotalApi": "3sz947"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -14979,39 +15099,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "60",
+    "id": "89",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "e2q9jz",
-    "aesKey": "0k5y39",
-    "clientId": "60",
-    "serverUrl": "www.benedict-jenkins.net",
-    "serverConf1": "1fvkeo",
+    "publicKey": "nzdo7f",
+    "aesKey": "wk2ise",
+    "clientId": "89",
+    "serverUrl": "www.felicitas-spencer.com",
+    "serverConf1": "5xh23v",
     "appConf": {
-      "siteId": 424,
-      "appId": "60",
-      "topXzqhId": "60",
+      "siteId": 822,
+      "appId": "89",
+      "topXzqhId": "89",
       "appConfJson": {
-        "mapKey": "uxryki"
+        "mapKey": "64titx"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "ycdwwe",
+      "layout": "a9wf25",
       "siteInfo": {
-        "id": 543,
-        "appId": "60",
-        "areaCode": "60457",
-        "path": "374kss",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "layout": "8yx778",
-        "logoUrl": "www.benedict-jenkins.net",
-        "cdnUrl": "www.benedict-jenkins.net"
+        "id": 817,
+        "appId": "89",
+        "areaCode": "66235",
+        "path": "42pj5d",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "layout": "s06xjn",
+        "logoUrl": "www.felicitas-spencer.com",
+        "cdnUrl": "www.felicitas-spencer.com"
       }
     }
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15041,11 +15161,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/thirdOrgan/login.do --data '{
   "data": {
-    "username": "jon.mosciski",
-    "password": "hjdtsk",
-    "code": "60457",
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8",
-    "appId": "60"
+    "username": "tarra.erdman",
+    "password": "hgnfrw",
+    "code": "66235",
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
+    "appId": "89"
   }
 }'
 ```
@@ -15070,12 +15190,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 521,
-    "token": "wzz1lj",
-    "updateTime": "2025-08-25 18:01:51",
-    "expireTime": "2025-08-25 18:01:51"
+    "adminId": 508,
+    "token": "vypoxm",
+    "updateTime": "2025-08-27 22:15:25",
+    "expireTime": "2025-08-27 22:15:25"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15099,7 +15219,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?code=60457&uuid=fd687464-838c-4a80-9e4c-8f797878eef8
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=1dbf6803-610f-434e-93b1-a54f044fc95c&code=66235
 ```
 **Response-fields:**
 
@@ -15117,8 +15237,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uf4ko0",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "plfqlq",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15167,7 +15287,7 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15215,13 +15335,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "jon.mosciski",
-      "cacheKey": "g6gozt",
-      "cacheValue": "qyjxz8",
-      "remark": "o75v3y"
+      "cacheName": "tarra.erdman",
+      "cacheKey": "uk5b0b",
+      "cacheValue": "rzdtm9",
+      "remark": "d5yu2u"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15251,7 +15371,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/jon.mosciski.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/tarra.erdman.do
 ```
 **Response-fields:**
 
@@ -15272,7 +15392,7 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15303,7 +15423,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/jon.mosciski/07vmlf.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/tarra.erdman/rhv0ut.do
 ```
 **Response-fields:**
 
@@ -15326,12 +15446,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "jon.mosciski",
-    "cacheKey": "bo5ka2",
-    "cacheValue": "t3lfqc",
-    "remark": "bfzmig"
+    "cacheName": "tarra.erdman",
+    "cacheKey": "2dmw47",
+    "cacheValue": "numx0t",
+    "remark": "ok5gjm"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15361,7 +15481,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/jon.mosciski.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/tarra.erdman.do
 ```
 **Response-fields:**
 
@@ -15379,8 +15499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vxy99x",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "sjsj5r",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15410,7 +15530,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/ueiguz.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/a61slh.do
 ```
 **Response-fields:**
 
@@ -15428,8 +15548,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f941m5",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "h5rdhp",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15471,8 +15591,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v1n7oj",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "mieggt",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15516,7 +15636,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?delFlag=gjk3dm&status=z5zqe0&q=nxzujx&endTime=2025-08-25 18:01:00&currAppId=60&startTime=2025-08-25 18:01:00&page=1&limit=10&menuType=ukmpej&menuId=772&parentId=191&menuName=jon.mosciski&orderBy=38&visible=vecv90
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?page=1&endTime=2025-08-27 22:14:23&q=hsgflv&parentId=672&menuId=323&menuName=tarra.erdman&delFlag=7o9fj7&currAppId=89&orderBy=61&limit=10&menuType=077p8v&startTime=2025-08-27 22:14:23&visible=1ry5d6&status=q6x6pq
 ```
 **Response-fields:**
 
@@ -15572,55 +15692,55 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 174,
-      "menuName": "jon.mosciski",
-      "type": "p9jl9w",
-      "typeName": "jon.mosciski",
-      "parentName": "jon.mosciski",
-      "parentId": 743,
-      "priority": 317,
-      "path": "ygr3bf",
-      "component": "ykrl98",
-      "query": "k1enaf",
-      "routeName": "jon.mosciski",
-      "isFrame": "h7i8y7",
-      "isCache": "reosj5",
-      "menuType": "6dofmq",
-      "menuTypeName": "jon.mosciski",
-      "visible": "91y9vs",
-      "status": "y21sle",
-      "perms": "7jc34p",
-      "icon": "d2n3m6",
-      "imagePath": "8bc9ps",
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:51",
-      "lastTime": "2025-08-25 18:01:51",
+      "menuId": 619,
+      "menuName": "tarra.erdman",
+      "type": "yt2fkr",
+      "typeName": "tarra.erdman",
+      "parentName": "tarra.erdman",
+      "parentId": 137,
+      "priority": 809,
+      "path": "4gja5o",
+      "component": "lkmtbz",
+      "query": "2jjm85",
+      "routeName": "tarra.erdman",
+      "isFrame": "ablk3h",
+      "isCache": "md9fvp",
+      "menuType": "7qzvqv",
+      "menuTypeName": "tarra.erdman",
+      "visible": "bguh8r",
+      "status": "h2wcwc",
+      "perms": "4bkgpk",
+      "icon": "pbr1f6",
+      "imagePath": "bcqoe1",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:26",
+      "lastTime": "2025-08-27 22:15:26",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 97,
-      "description": "lzj45k",
-      "listJson": "e2x6sc",
+      "childNum": 882,
+      "description": "qhw3qk",
+      "listJson": "e89vyq",
       "delFlag": 6,
       "permsList": [
         {
-          "permsName": "jon.mosciski",
-          "permsStr": "hpfnm3"
+          "permsName": "tarra.erdman",
+          "permsStr": "cngwqo"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "60",
-          "parentId": "60",
-          "code": "60457",
-          "name": "jon.mosciski"
+          "id": "89",
+          "parentId": "89",
+          "code": "66235",
+          "name": "tarra.erdman"
         }
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15663,7 +15783,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuId=597&delFlag=90glhr&menuType=07zoq9&status=nw0a5e&currAppId=60&startTime=2025-08-25 18:01:00&parentId=24&visible=7rlmsf&orderBy=888&endTime=2025-08-25 18:01:00&page=1&limit=10&q=4gxvet&menuName=jon.mosciski
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?visible=9iuf0i&endTime=2025-08-27 22:14:23&parentId=669&limit=10&page=1&delFlag=ksi8yw&q=vgdzyy&menuType=4weg5q&startTime=2025-08-27 22:14:23&menuName=tarra.erdman&currAppId=89&menuId=146&status=1gy4wz&orderBy=446
 ```
 **Response-fields:**
 
@@ -15702,26 +15822,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "0uxkkb",
-    "pageNum": 480,
+    "stackTrace": "ku6uae",
+    "pageNum": 752,
     "pageSize": 10,
-    "startRow": 822,
-    "endRow": 472,
-    "total": 296,
-    "pages": 39,
+    "startRow": 664,
+    "endRow": 442,
+    "total": 52,
+    "pages": 125,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "1v8pjx",
-    "orderBy": "3985w3",
+    "countColumn": "loehbr",
+    "orderBy": "z901pp",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "6k0956",
+    "dialectClass": "u3cbmp",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15751,7 +15871,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/191.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/420.do
 ```
 **Response-fields:**
 
@@ -15806,54 +15926,54 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 800,
-    "menuName": "jon.mosciski",
-    "type": "jdjd0y",
-    "typeName": "jon.mosciski",
-    "parentName": "jon.mosciski",
-    "parentId": 861,
-    "priority": 885,
-    "path": "8ipsxp",
-    "component": "6fyxo1",
-    "query": "iylhvd",
-    "routeName": "jon.mosciski",
-    "isFrame": "b28y9i",
-    "isCache": "qlowhr",
-    "menuType": "52bzu9",
-    "menuTypeName": "jon.mosciski",
-    "visible": "qw0p76",
-    "status": "j00pew",
-    "perms": "xtfin1",
-    "icon": "7vmjv9",
-    "imagePath": "592xdm",
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:51",
-    "lastTime": "2025-08-25 18:01:51",
+    "menuId": 715,
+    "menuName": "tarra.erdman",
+    "type": "ppnuci",
+    "typeName": "tarra.erdman",
+    "parentName": "tarra.erdman",
+    "parentId": 716,
+    "priority": 488,
+    "path": "6xhops",
+    "component": "w29a5d",
+    "query": "kl3exk",
+    "routeName": "tarra.erdman",
+    "isFrame": "kofnb5",
+    "isCache": "nhskh9",
+    "menuType": "vsm17r",
+    "menuTypeName": "tarra.erdman",
+    "visible": "cz378l",
+    "status": "0819um",
+    "perms": "n2dxye",
+    "icon": "knktp3",
+    "imagePath": "urx07e",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 477,
-    "description": "l3crhb",
-    "listJson": "244anl",
+    "childNum": 765,
+    "description": "o0nc4o",
+    "listJson": "bl00lc",
     "delFlag": 6,
     "permsList": [
       {
-        "permsName": "jon.mosciski",
-        "permsStr": "5opprz"
+        "permsName": "tarra.erdman",
+        "permsStr": "4sjmm8"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "60",
-        "parentId": "60",
-        "code": "60457",
-        "name": "jon.mosciski"
+        "id": "89",
+        "parentId": "89",
+        "code": "66235",
+        "name": "tarra.erdman"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15896,7 +16016,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?endTime=2025-08-25 18:01:00&delFlag=04ig6y&menuId=437&limit=10&page=1&menuType=gygmvn&orderBy=936&status=7ei2z9&parentId=691&visible=oh92lb&startTime=2025-08-25 18:01:00&q=c50bxg&menuName=jon.mosciski&currAppId=60
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?startTime=2025-08-27 22:14:23&menuId=865&currAppId=89&delFlag=idgegd&menuName=tarra.erdman&menuType=7ygbtr&visible=awbfdq&limit=10&status=rlmqmt&parentId=980&orderBy=841&page=1&endTime=2025-08-27 22:14:23&q=mznqrb
 ```
 **Response-fields:**
 
@@ -15921,12 +16041,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      21
+      374
     ],
     "menus": [
       {
-        "id": 965,
-        "label": "y1d929",
+        "id": 635,
+        "label": "pduotv",
         "children": [
           {
             "$ref": ".."
@@ -15935,7 +16055,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -15999,7 +16119,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?popPosition=969&appId=60&parentRoot=cb6gr1&urlType=req57l&spare1=8ka05x&endTime=2025-08-25 18:01:00&createTime=2025-08-25 18:01:00&subCount=809&menuLevel=196&type=hc5l8c&url=www.benedict-jenkins.net&typeNoButton=ps3miq&q=paxgjy&menuIds=7whzes&menuIds=7whzes&page=1&orderBy=51&limit=10&parentNull=jpy0ex&offset=1&isCheck=true&startTime=2025-08-25 18:01:00&parentId=815&name=jon.mosciski&code=60457&icon=88b9oh&appIds=lj3zli&appIds=lj3zli&isProtect=true&shortCut=ynhpeo&imagePath=5a4hkb&isDisplay=true&isDisabled=true&delFlag=6&description=u99t9u&spare2=6i9iel&isMenuAll=nlpn6s
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?name=tarra.erdman&imagePath=qpl2ub&parentRoot=ythl1x&urlType=l64edi&subCount=930&orderBy=985&icon=bw2ygo&appId=89&isDisplay=true&description=iofj4w&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&appIds=mep2yt&appIds=mep2yt&isProtect=true&q=r0o7k2&type=lu501k&code=66235&isMenuAll=kyso1q&menuIds=y32hy5&menuIds=y32hy5&spare2=0cf670&page=1&typeNoButton=ywuylc&menuLevel=199&parentId=243&spare1=5g4kbr&offset=1&isCheck=true&isDisabled=true&createTime=2025-08-27 22:14:23&url=www.felicitas-spencer.com&shortCut=393awi&delFlag=6&parentNull=767lhs&limit=10&popPosition=787
 ```
 **Response-fields:**
 
@@ -16028,11 +16148,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "0ozt9r",
-      "id": "60",
-      "parentId": "60",
-      "extId": "60",
-      "href": "m7c0wo",
+      "title": "ibgi1k",
+      "id": "89",
+      "parentId": "89",
+      "extId": "89",
+      "href": "snh4vy",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -16043,7 +16163,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16073,7 +16193,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/323.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/91.do
 ```
 **Response-fields:**
 
@@ -16098,12 +16218,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      407
+      29
     ],
     "menus": [
       {
-        "id": 97,
-        "label": "cfzyfz",
+        "id": 394,
+        "label": "dki9id",
         "children": [
           {
             "$ref": ".."
@@ -16112,7 +16232,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16180,50 +16300,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 875,
-    "menuName": "jon.mosciski",
-    "type": "musa96",
-    "typeName": "jon.mosciski",
-    "parentName": "jon.mosciski",
-    "parentId": 957,
-    "priority": 683,
-    "path": "qaw8wi",
-    "component": "xlo7vf",
-    "query": "eutx47",
-    "routeName": "jon.mosciski",
-    "isFrame": "1izr1h",
-    "isCache": "3ngoy8",
-    "menuType": "cthhji",
-    "menuTypeName": "jon.mosciski",
-    "visible": "u46ib6",
-    "status": "ygt0bg",
-    "perms": "hm0krs",
-    "icon": "8h9onk",
-    "imagePath": "bwkgt1",
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:51",
-    "lastTime": "2025-08-25 18:01:51",
+    "menuId": 304,
+    "menuName": "tarra.erdman",
+    "type": "jofdln",
+    "typeName": "tarra.erdman",
+    "parentName": "tarra.erdman",
+    "parentId": 641,
+    "priority": 325,
+    "path": "98iqwz",
+    "component": "16cwdq",
+    "query": "i70bua",
+    "routeName": "tarra.erdman",
+    "isFrame": "dzk6zo",
+    "isCache": "73muoq",
+    "menuType": "4nxwai",
+    "menuTypeName": "tarra.erdman",
+    "visible": "adr4xi",
+    "status": "n8uip2",
+    "perms": "fsrr3u",
+    "icon": "ife237",
+    "imagePath": "thiy0y",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 913,
-    "description": "ua5k5o",
-    "listJson": "emb1bv",
+    "childNum": 735,
+    "description": "rvc1ub",
+    "listJson": "kjgeqm",
     "delFlag": 6,
     "permsList": [
       {
-        "permsName": "jon.mosciski",
-        "permsStr": "5x0x7j"
+        "permsName": "tarra.erdman",
+        "permsStr": "p9zran"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "60",
-        "parentId": "60",
-        "code": "60457",
-        "name": "jon.mosciski"
+        "id": "89",
+        "parentId": "89",
+        "code": "66235",
+        "name": "tarra.erdman"
       }
     ]
   }
@@ -16245,8 +16365,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pc24om",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ntjmee",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16314,50 +16434,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 765,
-    "menuName": "jon.mosciski",
-    "type": "voglwl",
-    "typeName": "jon.mosciski",
-    "parentName": "jon.mosciski",
-    "parentId": 674,
-    "priority": 696,
-    "path": "gj93io",
-    "component": "8689tx",
-    "query": "rhpul7",
-    "routeName": "jon.mosciski",
-    "isFrame": "8is5vz",
-    "isCache": "lqee0c",
-    "menuType": "e78ave",
-    "menuTypeName": "jon.mosciski",
-    "visible": "fa56rv",
-    "status": "y743d4",
-    "perms": "y8jwop",
-    "icon": "qsz4ba",
-    "imagePath": "1qkkdv",
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:51",
-    "lastTime": "2025-08-25 18:01:51",
+    "menuId": 791,
+    "menuName": "tarra.erdman",
+    "type": "m31dgp",
+    "typeName": "tarra.erdman",
+    "parentName": "tarra.erdman",
+    "parentId": 53,
+    "priority": 720,
+    "path": "dizanq",
+    "component": "r3c3qj",
+    "query": "52covq",
+    "routeName": "tarra.erdman",
+    "isFrame": "02xhhf",
+    "isCache": "whz27k",
+    "menuType": "a7q5k2",
+    "menuTypeName": "tarra.erdman",
+    "visible": "t4bfnc",
+    "status": "arqrlu",
+    "perms": "26hl5s",
+    "icon": "6udav7",
+    "imagePath": "ad8bkv",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 981,
-    "description": "nzszgt",
-    "listJson": "npupeo",
+    "childNum": 494,
+    "description": "lg3m3n",
+    "listJson": "5newrm",
     "delFlag": 6,
     "permsList": [
       {
-        "permsName": "jon.mosciski",
-        "permsStr": "mkh9f5"
+        "permsName": "tarra.erdman",
+        "permsStr": "hzwm08"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "60",
-        "parentId": "60",
-        "code": "60457",
-        "name": "jon.mosciski"
+        "id": "89",
+        "parentId": "89",
+        "code": "66235",
+        "name": "tarra.erdman"
       }
     ]
   }
@@ -16379,8 +16499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9rbwf0",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "wk6hqh",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16448,50 +16568,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 372,
-    "menuName": "jon.mosciski",
-    "type": "aac7wz",
-    "typeName": "jon.mosciski",
-    "parentName": "jon.mosciski",
-    "parentId": 633,
-    "priority": 787,
-    "path": "9qss2z",
-    "component": "qo3xzs",
-    "query": "dfy829",
-    "routeName": "jon.mosciski",
-    "isFrame": "uysopl",
-    "isCache": "tq7b9k",
-    "menuType": "ue22eu",
-    "menuTypeName": "jon.mosciski",
-    "visible": "8r25p7",
-    "status": "tjg6c9",
-    "perms": "eptiev",
-    "icon": "deaujr",
-    "imagePath": "gungjo",
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:51",
-    "lastTime": "2025-08-25 18:01:51",
+    "menuId": 105,
+    "menuName": "tarra.erdman",
+    "type": "yzqeep",
+    "typeName": "tarra.erdman",
+    "parentName": "tarra.erdman",
+    "parentId": 800,
+    "priority": 834,
+    "path": "erxvui",
+    "component": "m14chu",
+    "query": "txqkl1",
+    "routeName": "tarra.erdman",
+    "isFrame": "et4otv",
+    "isCache": "c27oga",
+    "menuType": "95km3v",
+    "menuTypeName": "tarra.erdman",
+    "visible": "o4bi3l",
+    "status": "lr436o",
+    "perms": "wkgirq",
+    "icon": "kuq1v0",
+    "imagePath": "i2buay",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 801,
-    "description": "x74tmq",
-    "listJson": "grps35",
+    "childNum": 639,
+    "description": "ubihck",
+    "listJson": "java94",
     "delFlag": 6,
     "permsList": [
       {
-        "permsName": "jon.mosciski",
-        "permsStr": "yoegpy"
+        "permsName": "tarra.erdman",
+        "permsStr": "32yozn"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "60",
-        "parentId": "60",
-        "code": "60457",
-        "name": "jon.mosciski"
+        "id": "89",
+        "parentId": "89",
+        "code": "66235",
+        "name": "tarra.erdman"
       }
     ]
   }
@@ -16513,8 +16633,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6lzyei",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "itfdzh",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16582,50 +16702,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 147,
-    "menuName": "jon.mosciski",
-    "type": "rusbkr",
-    "typeName": "jon.mosciski",
-    "parentName": "jon.mosciski",
-    "parentId": 392,
-    "priority": 849,
-    "path": "6mbldh",
-    "component": "tmka06",
-    "query": "splpvf",
-    "routeName": "jon.mosciski",
-    "isFrame": "w15vg3",
-    "isCache": "qc4pwc",
-    "menuType": "rn402n",
-    "menuTypeName": "jon.mosciski",
-    "visible": "vve0jx",
-    "status": "5ez251",
-    "perms": "h1wes8",
-    "icon": "wblpf7",
-    "imagePath": "zifz2l",
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:51",
-    "lastTime": "2025-08-25 18:01:51",
+    "menuId": 78,
+    "menuName": "tarra.erdman",
+    "type": "ilibmi",
+    "typeName": "tarra.erdman",
+    "parentName": "tarra.erdman",
+    "parentId": 854,
+    "priority": 751,
+    "path": "ylfu4q",
+    "component": "oe20zv",
+    "query": "rkchz6",
+    "routeName": "tarra.erdman",
+    "isFrame": "gaqu7l",
+    "isCache": "hnundu",
+    "menuType": "l41aj8",
+    "menuTypeName": "tarra.erdman",
+    "visible": "q3vggd",
+    "status": "zscv0j",
+    "perms": "l5ccr0",
+    "icon": "wfid22",
+    "imagePath": "td8izs",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 833,
-    "description": "am4a2m",
-    "listJson": "le8sye",
+    "childNum": 358,
+    "description": "n4wjzk",
+    "listJson": "5d6132",
     "delFlag": 6,
     "permsList": [
       {
-        "permsName": "jon.mosciski",
-        "permsStr": "ddzo8k"
+        "permsName": "tarra.erdman",
+        "permsStr": "07svfd"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "60",
-        "parentId": "60",
-        "code": "60457",
-        "name": "jon.mosciski"
+        "id": "89",
+        "parentId": "89",
+        "code": "66235",
+        "name": "tarra.erdman"
       }
     ]
   }
@@ -16647,8 +16767,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ji8iuk",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "vjofsm",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16696,8 +16816,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n07hic",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "gr9wt0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16766,41 +16886,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "id": 67,
-    "parentId": 72,
-    "appId": "60",
-    "name": "jon.mosciski",
-    "ename": "jon.mosciski",
-    "sname": "jon.mosciski",
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:26",
+    "lastTime": "2025-08-27 22:15:26",
+    "id": 108,
+    "parentId": 997,
+    "appId": "89",
+    "name": "tarra.erdman",
+    "ename": "tarra.erdman",
+    "sname": "tarra.erdman",
     "isProtect": true,
-    "type": "3ov1qe",
-    "userId": "60",
-    "code": "60457",
-    "menuLevel": 766,
-    "subCount": 754,
-    "perms": "llbi15",
-    "urlType": "z6hjrs",
-    "url": "www.benedict-jenkins.net",
-    "icon": "0657m2",
-    "popPosition": 642,
-    "imagePath": "wpbel4",
-    "css": "8974em",
-    "jsEvent": "iclcsf",
-    "menuSeq": "9vpax5",
-    "shortCut": "yftjr8",
+    "type": "1dlo0p",
+    "userId": "89",
+    "code": "66235",
+    "menuLevel": 964,
+    "subCount": 749,
+    "perms": "2jt57u",
+    "urlType": "y5zsf1",
+    "url": "www.felicitas-spencer.com",
+    "icon": "4niuxj",
+    "popPosition": 446,
+    "imagePath": "6judho",
+    "css": "sshb9s",
+    "jsEvent": "obl510",
+    "menuSeq": "ncmbld",
+    "shortCut": "wrf3wc",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 197,
+    "priority": 440,
     "delFlag": 6,
-    "deleteTime": "2025-08-25 18:01:52",
-    "description": "97pxfo",
-    "spare1": "tyrpxr",
-    "spare2": "kpr822",
+    "deleteTime": "2025-08-27 22:15:26",
+    "description": "3vdpbd",
+    "spare1": "foi4o2",
+    "spare2": "o8u1c7",
     "open": true,
     "list": [
       {
@@ -16826,8 +16946,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "khs0jn",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "73mgss",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16867,7 +16987,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?endTime=2025-08-25 18:01:00&limit=10&roleName=jon.mosciski&startTime=2025-08-25 18:01:00&q=nerh8x&roleKey=i1d6dt&orderBy=478&page=1&roleId=115&status=397
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?endTime=2025-08-27 22:14:23&roleName=tarra.erdman&roleId=989&status=394&page=1&startTime=2025-08-27 22:14:23&q=pzwhk5&limit=10&roleKey=a4w22c&orderBy=144
 ```
 **Response-fields:**
 
@@ -16908,36 +17028,36 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:52",
-      "lastTime": "2025-08-25 18:01:52",
-      "roleId": 97,
-      "roleName": "jon.mosciski",
-      "roleKey": "pve7ww",
-      "roleSort": 301,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:26",
+      "lastTime": "2025-08-27 22:15:26",
+      "roleId": 583,
+      "roleName": "tarra.erdman",
+      "roleKey": "emrskf",
+      "roleSort": 124,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 556,
+      "status": 603,
       "flag": true,
       "menuIds": [
-        3
+        195
       ],
       "deptIds": [
-        432
+        307
       ],
       "permissions": [
-        "eg3dfs"
+        "d5pert"
       ],
-      "remark": "kipove",
-      "parentName": "jon.mosciski",
-      "appName": "jon.mosciski",
-      "roletypeId": "60",
-      "roletypeName": "jon.mosciski",
-      "priority": 785,
+      "remark": "dsltvk",
+      "parentName": "tarra.erdman",
+      "appName": "tarra.erdman",
+      "roletypeId": "89",
+      "roletypeName": "tarra.erdman",
+      "priority": 426,
       "isSuper": true
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -16976,7 +17096,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleKey=xbwtcx&status=172&page=1&roleId=662&orderBy=889&roleName=jon.mosciski&endTime=2025-08-25 18:01:00&limit=10&q=7vbyng&startTime=2025-08-25 18:01:00'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'status=335&orderBy=99&page=1&roleId=167&q=m73z18&roleKey=4oogqv&limit=10&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&roleName=tarra.erdman'
 ```
 **Response-fields:**
 
@@ -16994,8 +17114,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wjqrzx",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "z7o4m9",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17025,7 +17145,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/949.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/50.do
 ```
 **Response-fields:**
 
@@ -17065,35 +17185,35 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 229,
-    "roleName": "jon.mosciski",
-    "roleKey": "kyjf9n",
-    "roleSort": 870,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 42,
+    "roleName": "tarra.erdman",
+    "roleKey": "hzgjjn",
+    "roleSort": 374,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 144,
+    "status": 325,
     "flag": true,
     "menuIds": [
-      618
+      246
     ],
     "deptIds": [
-      36
+      109
     ],
     "permissions": [
-      "jepx8l"
+      "5veolm"
     ],
-    "remark": "751ptl",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 9,
+    "remark": "odihbq",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 210,
     "isSuper": true
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17146,32 +17266,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 698,
-    "roleName": "jon.mosciski",
-    "roleKey": "c636n1",
-    "roleSort": 156,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 131,
+    "roleName": "tarra.erdman",
+    "roleKey": "boygym",
+    "roleSort": 278,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 591,
+    "status": 93,
     "flag": true,
     "menuIds": [
-      554
+      270
     ],
     "deptIds": [
-      116
+      328
     ],
     "permissions": [
-      "gmzlz0"
+      "qv85qb"
     ],
-    "remark": "tz68cx",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 196,
+    "remark": "0zzmvd",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 379,
     "isSuper": true
   }
 }'
@@ -17192,8 +17312,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wzk342",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "ajdy2w",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17246,32 +17366,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 233,
-    "roleName": "jon.mosciski",
-    "roleKey": "86z8ro",
-    "roleSort": 772,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 32,
+    "roleName": "tarra.erdman",
+    "roleKey": "anqg0m",
+    "roleSort": 922,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 975,
+    "status": 332,
     "flag": true,
     "menuIds": [
-      301
+      245
     ],
     "deptIds": [
-      390
+      485
     ],
     "permissions": [
-      "amvdb6"
+      "91oifb"
     ],
-    "remark": "xqqao2",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 503,
+    "remark": "1po1j1",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 490,
     "isSuper": true
   }
 }'
@@ -17292,8 +17412,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b9mfwi",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "1huceu",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17346,32 +17466,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 287,
-    "roleName": "jon.mosciski",
-    "roleKey": "7pshwc",
-    "roleSort": 766,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 97,
+    "roleName": "tarra.erdman",
+    "roleKey": "u9rtjf",
+    "roleSort": 709,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 191,
+    "status": 596,
     "flag": true,
     "menuIds": [
-      394
+      966
     ],
     "deptIds": [
-      880
+      50
     ],
     "permissions": [
-      "18s4dg"
+      "cw26lw"
     ],
-    "remark": "ujtznp",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 278,
+    "remark": "zjpdc2",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 933,
     "isSuper": true
   }
 }'
@@ -17392,8 +17512,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oq2j9t",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "v6s5fr",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17446,32 +17566,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 786,
-    "roleName": "jon.mosciski",
-    "roleKey": "2thm5u",
-    "roleSort": 97,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 423,
+    "roleName": "tarra.erdman",
+    "roleKey": "wv8os9",
+    "roleSort": 444,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 596,
+    "status": 307,
     "flag": true,
     "menuIds": [
-      990
+      970
     ],
     "deptIds": [
-      309
+      966
     ],
     "permissions": [
-      "a5gghh"
+      "ptyofk"
     ],
-    "remark": "gvkuz4",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 635,
+    "remark": "p2pg3s",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 601,
     "isSuper": true
   }
 }'
@@ -17492,8 +17612,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5ke20b",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "0ylndr",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17541,8 +17661,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g72j0m",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "wevkl4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17589,21 +17709,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "id": 814,
-    "roletypeId": "60",
-    "appId": "60",
-    "name": "jon.mosciski",
-    "code": "60457",
-    "priority": 601,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "id": 94,
+    "roletypeId": "89",
+    "appId": "89",
+    "name": "tarra.erdman",
+    "code": "66235",
+    "priority": 210,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 241,
-    "description": "42at5d",
-    "areaType": "tc6vt4"
+    "status": 755,
+    "description": "n5zdse",
+    "areaType": "8zo85o"
   }
 }'
 ```
@@ -17623,8 +17743,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wh66vc",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "kch1wh",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17677,32 +17797,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 553,
-    "roleName": "jon.mosciski",
-    "roleKey": "4q264p",
-    "roleSort": 852,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 502,
+    "roleName": "tarra.erdman",
+    "roleKey": "lg8esd",
+    "roleSort": 322,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 964,
+    "status": 906,
     "flag": true,
     "menuIds": [
-      241
+      546
     ],
     "deptIds": [
-      765
+      520
     ],
     "permissions": [
-      "0hz5lt"
+      "h2k5nh"
     ],
-    "remark": "suj79t",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 129,
+    "remark": "xkvikk",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 831,
     "isSuper": true
   }
 }'
@@ -17723,8 +17843,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4g30mt",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "2p2af9",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17777,32 +17897,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "60",
-    "createTime": "2025-08-25 18:01:52",
-    "lastTime": "2025-08-25 18:01:52",
-    "roleId": 37,
-    "roleName": "jon.mosciski",
-    "roleKey": "84e7vj",
-    "roleSort": 387,
+    "creatorId": "89",
+    "createTime": "2025-08-27 22:15:27",
+    "lastTime": "2025-08-27 22:15:27",
+    "roleId": 217,
+    "roleName": "tarra.erdman",
+    "roleKey": "srgdxk",
+    "roleSort": 97,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 131,
+    "status": 511,
     "flag": true,
     "menuIds": [
-      768
+      595
     ],
     "deptIds": [
-      832
+      650
     ],
     "permissions": [
-      "s2rnh4"
+      "8d0epi"
     ],
-    "remark": "i641qg",
-    "parentName": "jon.mosciski",
-    "appName": "jon.mosciski",
-    "roletypeId": "60",
-    "roletypeName": "jon.mosciski",
-    "priority": 742,
+    "remark": "ru47f9",
+    "parentName": "tarra.erdman",
+    "appName": "tarra.erdman",
+    "roletypeId": "89",
+    "roletypeName": "tarra.erdman",
+    "priority": 360,
     "isSuper": true
   }
 }'
@@ -17823,8 +17943,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4mu3vf",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "4kcaon",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17889,36 +18009,36 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:52",
-      "lastTime": "2025-08-25 18:01:52",
-      "roleId": 104,
-      "roleName": "jon.mosciski",
-      "roleKey": "7ughft",
-      "roleSort": 640,
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:27",
+      "lastTime": "2025-08-27 22:15:27",
+      "roleId": 829,
+      "roleName": "tarra.erdman",
+      "roleKey": "wpc28w",
+      "roleSort": 103,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 328,
+      "status": 318,
       "flag": true,
       "menuIds": [
-        629
+        363
       ],
       "deptIds": [
-        164
+        826
       ],
       "permissions": [
-        "tb69gx"
+        "mau58f"
       ],
-      "remark": "f6wlss",
-      "parentName": "jon.mosciski",
-      "appName": "jon.mosciski",
-      "roletypeId": "60",
-      "roletypeName": "jon.mosciski",
-      "priority": 810,
+      "remark": "w9auqk",
+      "parentName": "tarra.erdman",
+      "appName": "tarra.erdman",
+      "roletypeId": "89",
+      "roletypeName": "tarra.erdman",
+      "priority": 270,
       "isSuper": true
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -17963,7 +18083,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?limit=10&startTime=2025-08-25 18:01:00&status=oreqqg&username=jon.mosciski&nickName=randy.von&userId=60&mobile=(330) 445-7747&page=1&orderBy=320&delFlag=6&organId=60&q=y9aesp&deptId=952&endTime=2025-08-25 18:01:00&adminId=440&email=esta.hermann@gmail.com
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?email=fletcher.hickle@hotmail.com&orderBy=623&limit=10&username=tarra.erdman&mobile=803.740.8989&q=nsdqk8&deptId=741&page=1&userId=89&delFlag=6&endTime=2025-08-27 22:14:23&nickName=reena.schmeler&organId=89&startTime=2025-08-27 22:14:23&adminId=145&status=vt6qbs
 ```
 **Response-fields:**
 
@@ -18068,60 +18188,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:52",
-      "lastTime": "2025-08-25 18:01:52",
-      "id": 567,
-      "userId": "60",
-      "deptId": 895,
-      "deptName": "jon.mosciski",
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "name": "jon.mosciski",
-      "username": "jon.mosciski",
-      "nickName": "randy.von",
-      "email": "esta.hermann@gmail.com",
-      "mobile": "(330) 445-7747",
-      "imagePath": "fgt9wn",
-      "password": "bzyj43",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:27",
+      "lastTime": "2025-08-27 22:15:27",
+      "id": 722,
+      "userId": "89",
+      "deptId": 616,
+      "deptName": "tarra.erdman",
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "name": "tarra.erdman",
+      "username": "tarra.erdman",
+      "nickName": "reena.schmeler",
+      "email": "fletcher.hickle@hotmail.com",
+      "mobile": "803.740.8989",
+      "imagePath": "2tzq9g",
+      "password": "9f03fy",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 743,
+      "status": 977,
       "delFlag": 6,
-      "lastLoginIp": "7.176.103.194",
-      "lastLoginTime": "2025-08-25 18:01:52",
-      "description": "hr0wx3",
+      "lastLoginIp": "217.26.150.93",
+      "lastLoginTime": "2025-08-27 22:15:27",
+      "description": "k1kgv5",
       "dept": {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:52",
-        "lastTime": "2025-08-25 18:01:52",
-        "id": 577,
-        "organId": "60",
-        "parentId": 483,
-        "appId": "60",
-        "depttypeId": 431,
-        "foreignId": "60",
-        "createType": 792,
-        "type": "9tjk09",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "areaCode": "60457",
-        "organLeader": "5furu3",
-        "leaderId": "60",
-        "leaderMobile": "(330) 445-7747",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:27",
+        "lastTime": "2025-08-27 22:15:27",
+        "id": 291,
+        "organId": "89",
+        "parentId": 772,
+        "appId": "89",
+        "depttypeId": 4,
+        "foreignId": "89",
+        "createType": 751,
+        "type": "vpeccz",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "areaCode": "66235",
+        "organLeader": "4sz1c7",
+        "leaderId": "89",
+        "leaderMobile": "803.740.8989",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "60457",
-        "imagePath": "hrud7n",
-        "priority": 76,
-        "status": 880,
+        "searchCode": "66235",
+        "imagePath": "nwzl1z",
+        "priority": 927,
+        "status": 592,
         "delFlag": 6,
-        "description": "qtuehw",
-        "spare1": "42hthv",
-        "spare2": "6xwxao",
+        "description": "jf9576",
+        "spare1": "ewjtgn",
+        "spare2": "89o0ux",
         "children": [
           {
             "$ref": ".."
@@ -18130,47 +18250,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "60",
-          "createTime": "2025-08-25 18:01:52",
-          "lastTime": "2025-08-25 18:01:52",
-          "id": 173,
-          "roletypeId": "60",
-          "appId": "60",
-          "name": "jon.mosciski",
-          "code": "60457",
-          "priority": 706,
+          "creatorId": "89",
+          "createTime": "2025-08-27 22:15:27",
+          "lastTime": "2025-08-27 22:15:27",
+          "id": 811,
+          "roletypeId": "89",
+          "appId": "89",
+          "name": "tarra.erdman",
+          "code": "66235",
+          "priority": 944,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 362,
-          "description": "tb77ls",
-          "areaType": "fu6piw"
+          "status": 32,
+          "description": "fbnjwm",
+          "areaType": "aym42h"
         }
       ],
       "roleIds": [
-        747
+        179
       ],
       "positionIds": [
-        "yxx4bs"
+        "ccjqih"
       ],
-      "roleId": 109,
+      "roleId": 356,
       "userRoleList": [
         {
-          "id": 876,
-          "deptId": 92,
-          "deptName": "jon.mosciski",
-          "organId": "60",
-          "organName": "jon.mosciski",
-          "roleId": 120,
-          "roleName": "jon.mosciski",
-          "adminId": 209
+          "id": 514,
+          "deptId": 531,
+          "deptName": "tarra.erdman",
+          "organId": "89",
+          "organName": "tarra.erdman",
+          "roleId": 79,
+          "roleName": "tarra.erdman",
+          "adminId": 673
         }
       ],
-      "code": "60457",
-      "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+      "code": "66235",
+      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18215,7 +18335,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?userId=60&startTime=2025-08-25 18:01:00&username=jon.mosciski&endTime=2025-08-25 18:01:00&adminId=5&orderBy=424&status=wdf1ym&limit=10&delFlag=6&email=esta.hermann@gmail.com&mobile=(330) 445-7747&deptId=44&organId=60&q=ryrdtq&page=1&nickName=randy.von
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?delFlag=6&endTime=2025-08-27 22:14:23&email=fletcher.hickle@hotmail.com&page=1&q=kc010v&startTime=2025-08-27 22:14:23&limit=10&userId=89&mobile=803.740.8989&organId=89&nickName=reena.schmeler&deptId=796&username=tarra.erdman&status=9fc1xk&orderBy=988&adminId=110
 ```
 **Response-fields:**
 
@@ -18320,60 +18440,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "60",
-      "createTime": "2025-08-25 18:01:52",
-      "lastTime": "2025-08-25 18:01:52",
-      "id": 649,
-      "userId": "60",
-      "deptId": 986,
-      "deptName": "jon.mosciski",
-      "organId": "60",
-      "organName": "jon.mosciski",
-      "name": "jon.mosciski",
-      "username": "jon.mosciski",
-      "nickName": "randy.von",
-      "email": "esta.hermann@gmail.com",
-      "mobile": "(330) 445-7747",
-      "imagePath": "daoq3n",
-      "password": "72qpcb",
+      "creatorId": "89",
+      "createTime": "2025-08-27 22:15:27",
+      "lastTime": "2025-08-27 22:15:27",
+      "id": 220,
+      "userId": "89",
+      "deptId": 667,
+      "deptName": "tarra.erdman",
+      "organId": "89",
+      "organName": "tarra.erdman",
+      "name": "tarra.erdman",
+      "username": "tarra.erdman",
+      "nickName": "reena.schmeler",
+      "email": "fletcher.hickle@hotmail.com",
+      "mobile": "803.740.8989",
+      "imagePath": "gle0c5",
+      "password": "dakwsm",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 960,
+      "status": 818,
       "delFlag": 6,
-      "lastLoginIp": "7.176.103.194",
-      "lastLoginTime": "2025-08-25 18:01:52",
-      "description": "pradlr",
+      "lastLoginIp": "217.26.150.93",
+      "lastLoginTime": "2025-08-27 22:15:27",
+      "description": "cdv4fn",
       "dept": {
-        "creatorId": "60",
-        "createTime": "2025-08-25 18:01:52",
-        "lastTime": "2025-08-25 18:01:52",
-        "id": 186,
-        "organId": "60",
-        "parentId": 787,
-        "appId": "60",
-        "depttypeId": 145,
-        "foreignId": "60",
-        "createType": 275,
-        "type": "350qkk",
-        "name": "jon.mosciski",
-        "sname": "jon.mosciski",
-        "areaCode": "60457",
-        "organLeader": "hyvril",
-        "leaderId": "60",
-        "leaderMobile": "(330) 445-7747",
+        "creatorId": "89",
+        "createTime": "2025-08-27 22:15:27",
+        "lastTime": "2025-08-27 22:15:27",
+        "id": 68,
+        "organId": "89",
+        "parentId": 131,
+        "appId": "89",
+        "depttypeId": 340,
+        "foreignId": "89",
+        "createType": 101,
+        "type": "d2558n",
+        "name": "tarra.erdman",
+        "sname": "tarra.erdman",
+        "areaCode": "66235",
+        "organLeader": "5pz0u1",
+        "leaderId": "89",
+        "leaderMobile": "803.740.8989",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "60457",
-        "imagePath": "mgw8fn",
-        "priority": 747,
-        "status": 43,
+        "searchCode": "66235",
+        "imagePath": "ogv374",
+        "priority": 494,
+        "status": 271,
         "delFlag": 6,
-        "description": "m2xdk9",
-        "spare1": "wee7zx",
-        "spare2": "1dte7c",
+        "description": "kvahs9",
+        "spare1": "x8o43r",
+        "spare2": "2zx0qq",
         "children": [
           {
             "$ref": ".."
@@ -18382,47 +18502,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "60",
-          "createTime": "2025-08-25 18:01:52",
-          "lastTime": "2025-08-25 18:01:52",
-          "id": 646,
-          "roletypeId": "60",
-          "appId": "60",
-          "name": "jon.mosciski",
-          "code": "60457",
-          "priority": 909,
+          "creatorId": "89",
+          "createTime": "2025-08-27 22:15:27",
+          "lastTime": "2025-08-27 22:15:27",
+          "id": 690,
+          "roletypeId": "89",
+          "appId": "89",
+          "name": "tarra.erdman",
+          "code": "66235",
+          "priority": 5,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 258,
-          "description": "3g3wr0",
-          "areaType": "0suzpr"
+          "status": 665,
+          "description": "r20cv4",
+          "areaType": "6uswv6"
         }
       ],
       "roleIds": [
-        313
+        473
       ],
       "positionIds": [
-        "i1yw15"
+        "fm3rsj"
       ],
-      "roleId": 282,
+      "roleId": 976,
       "userRoleList": [
         {
-          "id": 570,
-          "deptId": 478,
-          "deptName": "jon.mosciski",
-          "organId": "60",
-          "organName": "jon.mosciski",
-          "roleId": 595,
-          "roleName": "jon.mosciski",
-          "adminId": 780
+          "id": 362,
+          "deptId": 258,
+          "deptName": "tarra.erdman",
+          "organId": "89",
+          "organName": "tarra.erdman",
+          "roleId": 531,
+          "roleName": "tarra.erdman",
+          "adminId": 518
         }
       ],
-      "code": "60457",
-      "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8"
+      "code": "66235",
+      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18457,9 +18577,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 185,
-    "roleId": 201,
-    "adminId": 718
+    "id": 866,
+    "roleId": 893,
+    "adminId": 265
   }
 }'
 ```
@@ -18479,8 +18599,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cvz45j",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "de86e8",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18511,7 +18631,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=sfpgnd&adminIds=sfpgnd&roleId=231'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=4uqly7&adminIds=4uqly7&roleId=963'
 ```
 **Response-fields:**
 
@@ -18529,8 +18649,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l5si4t",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "b7y17a",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18561,7 +18681,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=306&adminIds=wb6v4o&adminIds=wb6v4o'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=0n2rsm&adminIds=0n2rsm&roleId=523'
 ```
 **Response-fields:**
 
@@ -18579,8 +18699,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "umlyoh",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "cbqb9w",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18610,7 +18730,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/741.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/546.do
 ```
 **Response-fields:**
 
@@ -18635,12 +18755,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      414
+      54
     ],
     "depts": [
       {
-        "id": 684,
-        "label": "o3y3mu",
+        "id": 188,
+        "label": "b7e40l",
         "children": [
           {
             "$ref": ".."
@@ -18649,7 +18769,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18688,7 +18808,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?orderBy=970&page=1&q=1mufj8&endTime=2025-08-25 18:01:00&startTime=2025-08-25 18:01:00&cfgValue=f8mqp0&limit=10&ids=iaoois&ids=iaoois&cfgKey=p0968y
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?ids=zn9fim&ids=zn9fim&page=1&cfgKey=a93xjl&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&orderBy=207&q=4ni0ut&limit=10&cfgValue=694z5r
 ```
 **Response-fields:**
 
@@ -18714,18 +18834,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 953,
+    "totalCount": 611,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "ltldq1",
-        "cfgValue": "g0otbq"
+        "cfgKey": "xo1svi",
+        "cfgValue": "fv0skj"
       }
     ]
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18763,7 +18883,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'q=jsm32e&ids=mj98wp&ids=mj98wp&page=1&cfgKey=gbq8hv&cfgValue=5ablmq&endTime=2025-08-25 18:01:00&limit=10&orderBy=163&startTime=2025-08-25 18:01:00'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'cfgKey=3z5mg7&q=ai9roy&endTime=2025-08-27 22:14:23&orderBy=21&cfgValue=lyl5gg&ids=5i68lx&ids=5i68lx&page=1&limit=10&startTime=2025-08-27 22:14:23'
 ```
 **Response-fields:**
 
@@ -18781,8 +18901,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ih4jfk",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "h2mapp",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18812,7 +18932,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/0qndrm.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/cdgltz.do
 ```
 **Response-fields:**
 
@@ -18833,10 +18953,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "jyrske",
-    "cfgValue": "dpmutb"
+    "cfgKey": "wsdokk",
+    "cfgValue": "bsk3td"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18870,8 +18990,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "b4x101",
-    "cfgValue": "zv70tt"
+    "cfgKey": "h6gyog",
+    "cfgValue": "fxdt7e"
   }
 }'
 ```
@@ -18891,8 +19011,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bqwii9",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "lueuf4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18926,8 +19046,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "5ux2bj",
-    "cfgValue": "tedhe4"
+    "cfgKey": "8573kk",
+    "cfgValue": "zd373v"
   }
 }'
 ```
@@ -18947,8 +19067,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2fifkz",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "4kyxw0",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -18996,8 +19116,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "noxgl8",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "lz5eop",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19039,8 +19159,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bq5b4x",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "oxu0ok",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19076,8 +19196,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uc1302",
-  "timestamp": "2025-08-25 18:01:00"
+  "data": "pvgcj4",
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19112,7 +19232,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?page=1&orderBy=67&limit=10&endTime=2025-08-25 18:01:00&q=z5n6e0&startTime=2025-08-25 18:01:00
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?limit=10&page=1&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&q=060j2a&orderBy=55
 ```
 **Response-fields:**
 
@@ -19140,17 +19260,17 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "8ybei6",
-      "deptNum": "ektozs",
-      "peopleNum": "fmklpk",
-      "roleNum": "qt9ehb",
-      "dicTypeNum": "g0vjl1",
-      "appNum": "3zc5u6",
-      "fileNum": "qekbem",
-      "paramNum": "1rd0cy"
+      "organNum": "kji226",
+      "deptNum": "9jrrxl",
+      "peopleNum": "f628sf",
+      "roleNum": "fg4pc1",
+      "dicTypeNum": "l5uqjw",
+      "appNum": "67km9k",
+      "fileNum": "vg1nv9",
+      "paramNum": "s1vhpi"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19185,7 +19305,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?orderBy=991&limit=10&startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&q=fwxwny&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?orderBy=542&q=tepy2v&limit=10&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&page=1
 ```
 **Response-fields:**
 
@@ -19207,11 +19327,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "2bexla",
-      "modelNum": "aj86tj"
+      "objectNum": "fgmif6",
+      "modelNum": "n8xt99"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19246,7 +19366,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?startTime=2025-08-25 18:01:00&endTime=2025-08-25 18:01:00&page=1&orderBy=978&q=heykv6&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=b5mrra&startTime=2025-08-27 22:14:23&orderBy=218&page=1&endTime=2025-08-27 22:14:23&limit=10
 ```
 **Response-fields:**
 
@@ -19269,12 +19389,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "girgol",
-      "accountNum": "o5zquv",
-      "serviceOrganNum": "6bjevz"
+      "siteNum": "hxndpf",
+      "accountNum": "kcz83j",
+      "serviceOrganNum": "yn6i3r"
     }
   ],
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19316,11 +19436,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8",
-    "img": "6qf1sw",
-    "code": "60457"
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
+    "img": "9kabq7",
+    "code": "66235"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 
@@ -19361,11 +19481,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "fd687464-838c-4a80-9e4c-8f797878eef8",
-    "img": "jrwi5p",
-    "code": "60457"
+    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
+    "img": "39mhac",
+    "code": "66235"
   },
-  "timestamp": "2025-08-25 18:01:00"
+  "timestamp": "2025-08-27 22:14:23"
 }
 ```
 

@@ -54,6 +54,8 @@ import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.constant.Constants;
 
+import static net.linlan.utils.constant.CacheConstants.BASE_DICTIONARY_KEY;
+
 /**
  *
  * Filename DictionaryInitDto,字典统一数据服务类
@@ -87,11 +89,6 @@ public class FrameDictionaryService {
     public SysMenuService                    sysMenuService;
     @Resource
     public AdminDeptService                  adminDeptService;
-
-    /**
-     * redis 字典缓存前缀
-     */
-    public static final String               DIC_PREFIX = "DIC:";
 
     /**
      * 避免循环走redis，内存直接读，1小时清空重新拿
@@ -183,7 +180,7 @@ public class FrameDictionaryService {
     }
 
     public List<DictionaryInitDto> getDicList(String typeCode) {
-        List<DictionaryInitDto> dist = redisService.getList(DIC_PREFIX + typeCode);
+        List<DictionaryInitDto> dist = redisService.getList(BASE_DICTIONARY_KEY + typeCode);
         if (dist != null && dist.size() > 0) {
             return dist;
         } else {
@@ -205,7 +202,7 @@ public class FrameDictionaryService {
             }
 
             if (dicResult != null && dicResult.size() > 0) {
-                redisService.setList(DIC_PREFIX + typeCode, dicResult,
+                redisService.setList(BASE_DICTIONARY_KEY + typeCode, dicResult,
                     KernelConstant.ONE_HOUR_EXPIRE * 2);
             }
             return dicResult;

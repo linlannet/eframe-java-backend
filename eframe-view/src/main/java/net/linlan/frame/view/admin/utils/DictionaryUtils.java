@@ -209,7 +209,7 @@ public class DictionaryUtils {
      */
     public static void clearDictCache() {
         Collection<String> keys = SpringContextUtils.getBean(RedisService.class)
-            .keys(CacheConstants.SYS_DICT_KEY + "*");
+            .keys(CacheConstants.BASE_DICTIONARY_KEY + "*");
         SpringContextUtils.getBean(RedisService.class).delete(keys);
     }
 
@@ -220,6 +220,6 @@ public class DictionaryUtils {
      * @return 缓存键key
      */
     public static String getCacheKey(String configKey) {
-        return CacheConstants.SYS_DICT_KEY + configKey;
+        return CacheConstants.BASE_DICTIONARY_KEY + configKey;
     }
 }

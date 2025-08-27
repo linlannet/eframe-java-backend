@@ -37,6 +37,8 @@ import net.linlan.sys.base.param.BaseDictionaryParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 
+import static net.linlan.utils.constant.CacheConstants.BASE_DICTIONARY_KEY;
+
 /**
  *
  * BaseDictionary数据域:公共字典明细服务类
@@ -54,15 +56,6 @@ public class BaseDictionaryService {
     @Resource
     private RedisService                     redisService;
 
-    /**
-     * redis 字典缓存前缀
-     */
-    public static final String               DIC_PREFIX = "DIC:";
-
-    /**
-     * 避免循环走redis，内存直接读，1小时清空重新拿
-     */
-    private Map<String, Map<String, String>> dics       = new HashMap<>();
     /**
      * 过期时间
      */
@@ -186,7 +179,7 @@ public class BaseDictionaryService {
     public void refreshByTypeCode(String typeCode) {
         List<DictionaryInitDto> dicResult = dao.getInitByTypeCode(typeCode);
         if (dicResult != null && dicResult.size() > 0) {
-            redisService.setList(DIC_PREFIX + typeCode, dicResult,
+            redisService.setList(BASE_DICTIONARY_KEY + typeCode, dicResult,
                 KernelConstant.ONE_HOUR_EXPIRE * 2);
         }
     }
@@ -199,7 +192,7 @@ public class BaseDictionaryService {
     public void refreshByParent(String parentId, String typeCode) {
         List<DictionaryInitDto> dicResult = dao.getChildren(parentId, typeCode);
         if (dicResult != null && dicResult.size() > 0) {
-            redisService.setList(DIC_PREFIX + parentId, dicResult,
+            redisService.setList(BASE_DICTIONARY_KEY + parentId, dicResult,
                 KernelConstant.ONE_HOUR_EXPIRE * 2);
         }
     }
@@ -209,7 +202,7 @@ public class BaseDictionaryService {
      * @param typeCode  字典code
      */
     public void refreshCache(String typeCode) {
-        redisService.delete(DIC_PREFIX + typeCode);
+        redisService.delete(BASE_DICTIONARY_KEY + typeCode);
     }
 
     /**
@@ -220,13 +213,13 @@ public class BaseDictionaryService {
      * @return    查询结果Map
      */
     public LinkedHashMap<String, String> getChildrenMap(String parentId, String typeCode) {
-        List<DictionaryInitDto> dist = redisService.getList(DIC_PREFIX + parentId);
+        List<DictionaryInitDto> dist = redisService.getList(BASE_DICTIONARY_KEY + parentId);
         if (dist.size() > 0) {
             return dis2Map(dist);
         } else {
             List<DictionaryInitDto> dicResult = dao.getChildren(parentId, typeCode);
             if (dicResult != null && dicResult.size() > 0) {
-                redisService.setList(DIC_PREFIX + parentId, dicResult,
+                redisService.setList(BASE_DICTIONARY_KEY + parentId, dicResult,
                     KernelConstant.ONE_HOUR_EXPIRE * 2);
             }
             return dis2Map(dicResult);
@@ -288,9 +281,9 @@ public class BaseDictionaryService {
      */
     public LinkedHashMap<String, String> getInitByTypeCodes(List<String> typeCodes) {
         // 构造Redis缓存的键
-        String cacheKey = DIC_PREFIX + StringUtils.join(typeCodes, "_");
+        String cacheKey = BASE_DICTIONARY_KEY + StringUtils.join(typeCodes, "_");
         // 从Redis缓存中获取数据
-        List<DictionaryInitDto> res = redisService.getList(DIC_PREFIX + cacheKey);
+        List<DictionaryInitDto> res = redisService.getList(BASE_DICTIONARY_KEY + cacheKey);
         if (res != null && res.size() > 0) {
             // 如果缓存中有数据，直接返回
             return dis2Map(res);
@@ -299,8 +292,8 @@ public class BaseDictionaryService {
             List<DictionaryInitDto> dicResult = dao.getInitByTypeCodes(typeCodes);
             if (dicResult != null && dicResult.size() > 0) {
                 // 将查询结果存入Redis缓存，设置过期时间为2小时
-                redisService.setList(DIC_PREFIX + cacheKey, dicResult,
-                    KernelConstant.ONE_HOUR_EXPIRE * 2);
+                redisService.setList(BASE_DICTIONARY_KEY + cacheKey, dicResult,
+                    KernelConstant.TEN_MINUTE_EXPIRE);
             }
             // 返回数据库查询结果
             return dis2Map(dicResult);

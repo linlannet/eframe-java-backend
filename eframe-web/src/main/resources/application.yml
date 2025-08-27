@@ -55,7 +55,7 @@ pagehelper:
 # 平台相关配置
 platform:
     name: eframe-web     # 名称
-    version: 1.1.1     # 版本
+    version: 1.1.2     # 版本
     copyrightYear: 2023     # 版权年份
     profile: ${platform.file.dir}      # 文件路径
     addressEnabled: false       # 获取ip地址开关
@@ -104,7 +104,7 @@ platform:
     # token配置
     token:
         # 令牌自定义标识
-        header: LlToken
+        header: Authorization
         # 令牌密钥
         secret: Labcdefghijklmnopqrstuvwxyzl
         # 令牌有效期（默认30分钟）

@@ -81,7 +81,7 @@ public class InitialRedisService {
      * 清空参数缓存数据
      */
     public void clearConfigCache() {
-        Collection<String> keys = redisService.keys(CacheConstants.SYS_CONFIG_KEY + "*");
+        Collection<String> keys = redisService.keys(CacheConstants.BASE_CONFIGWHOLE_KEY + "*");
         redisService.delete(keys);
     }
 
@@ -100,7 +100,7 @@ public class InitialRedisService {
      * @return 缓存键key
      */
     private String getCacheKey(String configKey) {
-        return CacheConstants.SYS_CONFIG_KEY + configKey;
+        return CacheConstants.BASE_CONFIGWHOLE_KEY + configKey;
     }
 
     /**

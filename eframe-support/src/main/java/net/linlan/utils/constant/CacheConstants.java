@@ -44,16 +44,6 @@ public class CacheConstants {
     public static final String CAPTCHA_CODE_KEY   = "captcha_codes:";
 
     /**
-     * 参数管理 cache key
-     */
-    public static final String SYS_CONFIG_KEY     = "base_config:";
-
-    /**
-     * 字典管理 cache key
-     */
-    public static final String SYS_DICT_KEY       = "base_dictionary:";
-
-    /**
      * 防重提交 redis key
      */
     public static final String REPEAT_SUBMIT_KEY  = "repeat_submit:";
@@ -67,8 +57,24 @@ public class CacheConstants {
      * 登录账户密码错误次数 redis key
      */
     public static final String PWD_ERR_CNT_KEY    = "pwd_err_count:";
+
     /**
      * 平台用户的ID，对平台信息（前台工程访问信息）进行缓存处理使用的KEY，缓存10分钟
      */
-    public static final String PLAT_ACCOUNT_KEY   = "ll-plat-id:";
+    public static final String PLAT_ACCOUNT_KEY   = "ll_account_id:";
+
+    /**
+     * 锁定缓存前缀
+     */
+    public static final String LOCK_KEY   = "lock_key:";
+
+    /**
+     * 参数管理 cache key
+     */
+    public static final String BASE_CONFIGWHOLE_KEY = "base_config:";
+
+    /**
+     * 字典管理 cache key
+     */
+    public static final String BASE_DICTIONARY_KEY = "base_dictionary:";
 }

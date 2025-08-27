@@ -39,6 +39,8 @@ import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.crypt.AESUtil;
 
+import static net.linlan.utils.constant.CacheConstants.BASE_CONFIGWHOLE_KEY;
+
 /**
  *
  * BaseConfigParts数据域:通用配置分子项服务类
@@ -129,11 +131,11 @@ public class BaseConfigPartsService {
      * @return {@link BaseConfigParts}
      */
     public BaseConfigParts findById(String id) {
-        BaseConfigParts configParts = (BaseConfigParts) redisService.get("CONFIG_PARRTS:" + id,
+        BaseConfigParts configParts = (BaseConfigParts) redisService.get(BASE_CONFIGWHOLE_KEY + id,
             BaseConfigParts.class);
         if (configParts == null) {
             configParts = dao.findById(id);
-            redisService.set("CONFIG_PARRTS:" + id, configParts, KernelConstant.TEN_MINUTE_EXPIRE);
+            redisService.set(BASE_CONFIGWHOLE_KEY + id, configParts, KernelConstant.TEN_MINUTE_EXPIRE);
         }
         return configParts;
     }

@@ -34,6 +34,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.extern.slf4j.Slf4j;
 
+import net.linlan.utils.constant.Constants;
 import net.linlan.utils.crypt.ShaUtils;
 import static net.linlan.utils.constant.Constants.TOKEN_KEY;
 
@@ -57,7 +58,7 @@ public class HttpClientInvokeService {
             httppost.addHeader("x-ll-timestamp", timeStamp);
             httppost.addHeader("x-ll-signature", sign);
             httppost.addHeader("x-ll-nonce", nonce);
-            httppost.addHeader("core-account-id", token);
+            httppost.addHeader(Constants.ACCOUNT_KEY, token);
             //            FileBody fileBody = new FileBody(file);
             httppost.addHeader(TOKEN_KEY, token);
 

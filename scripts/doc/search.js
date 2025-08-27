@@ -75,17 +75,23 @@ api[2].list[1].list.push({
 api[2].list[1].list.push({
     order: '2',
     deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/admin/dept/page.do',
+    desc: '获取部门分页',
+});
+api[2].list[1].list.push({
+    order: '3',
+    deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/admin/dept/list/exclude/{deptId}.do',
     desc: '查询部门列表（排除节点）',
 });
 api[2].list[1].list.push({
-    order: '3',
+    order: '4',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/admin/dept/{deptId}.do',
     desc: '根据部门编号获取详细信息',
 });
 api[2].list[1].list.push({
-    order: '4',
+    order: '5',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/admin/dept/tree.do',
     desc: '获取部门树',
@@ -859,49 +865,49 @@ api[2].list.push({
 api[2].list[17].list.push({
     order: '1',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/list.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/list.do',
     desc: '获取参数配置列表',
 });
 api[2].list[17].list.push({
     order: '2',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/export.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/export.do',
     desc: '参数配置导出',
 });
 api[2].list[17].list.push({
     order: '3',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/{configId}.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/{configId}.do',
     desc: '根据参数编号获取详细信息',
 });
 api[2].list[17].list.push({
     order: '4',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/configKey/{configKey}.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/configKey/{configKey}.do',
     desc: '根据参数键名查询参数值',
 });
 api[2].list[17].list.push({
     order: '5',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/save.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/save.do',
     desc: '新增参数配置',
 });
 api[2].list[17].list.push({
     order: '6',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/update.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/update.do',
     desc: '修改参数配置',
 });
 api[2].list[17].list.push({
     order: '7',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/delete/{configIds}.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/delete/{configIds}.do',
     desc: '删除参数配置',
 });
 api[2].list[17].list.push({
     order: '8',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/api/system/config/refreshCache.do',
+    url: 'https://linlan.net/eframe_backend/api/system/configwhole/refreshCache.do',
     desc: '刷新参数缓存',
 });
 api[2].list.push({

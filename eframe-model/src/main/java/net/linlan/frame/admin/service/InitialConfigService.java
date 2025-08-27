@@ -81,7 +81,7 @@ public class InitialConfigService {
      * @return 缓存键key
      */
     private String getCacheKey(String configKey) {
-        return CacheConstants.SYS_CONFIG_KEY + configKey;
+        return CacheConstants.BASE_CONFIGWHOLE_KEY + configKey;
     }
 
 }

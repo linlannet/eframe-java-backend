@@ -161,21 +161,21 @@ public class SysLoginController {
         if (coreAccount == null) {
             //用户信息未在Session中
             coreAccount = coreAccountService.findById(accountId);
+            if (coreAccount == null) {
+                BaseAppParam param = new BaseAppParam();
+                Page<BaseAppDto> baseApps = baseAppService.getPageDto(param);
+                if (baseApps != null && baseApps.size() > 0) {
+                    return ResponseResult.error(HttpStatusEnum.TOKEN_ERROR.getCode(),
+                        HttpStatusEnum.TOKEN_ERROR.getMsg());
+                } else {
+                    return ResponseResult.error("1202", "未初始化数据。");
+                }
+            }
             redisService.set(CacheConstants.PLAT_ACCOUNT_KEY + accountId, coreAccount,
                 KernelConstant.TEN_MINUTE_EXPIRE);
         }
-        if (coreAccount == null) {
-            BaseAppParam param = new BaseAppParam();
-            Page<BaseAppDto> baseApps = baseAppService.getPageDto(param);
-            if (baseApps != null && baseApps.size() > 0) {
-                return ResponseResult.error(HttpStatusEnum.TOKEN_ERROR.getCode(),
-                    HttpStatusEnum.TOKEN_ERROR.getMsg());
-            } else {
-                return ResponseResult.error("1202", "未初始化数据。");
-            }
-        }
-        WebLayoutDto platConfInfoDto = platAdminEntService.getPlatConfInfoDto(coreAccount);
 
+        WebLayoutDto platConfInfoDto = platAdminEntService.getPlatConfInfoDto(coreAccount);
         return ResponseResult.ok().setResultData(platConfInfoDto);
     }
 
