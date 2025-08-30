@@ -23,6 +23,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
+import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -305,7 +306,7 @@ public class BaseAppController extends BaseController {
             if (StringUtils.isBlank(password)) { //默认一个初始化密码
                 password = initialConfigService.selectConfigByKey("sys.user.initPassword");
             }
-            adminUser.setPassword(SecurityUtils.encryptPassword(password));
+            adminUser.setPassword(ShaUtils.encryptPassword(password));
             adminUser.setIsAuditAdmin(false);
             adminUser.setIsSelfAdmin(false);
             adminUser.setIsSuperAdmin(true);

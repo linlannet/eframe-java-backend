@@ -79,14 +79,13 @@ public class ShaUtils {
         return stringBuffer.toString();
     }
 
-    // shuxiaobo add 20250205 保存BCryptPasswordEncoder的密码
     /**
      * 生成BCryptPasswordEncoder密码
      *
      * @param password 密码
      * @return 加密字符串
      */
-    public static String encryptBcryptPassword(String password) {
+    public static String encryptPassword(String password) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.encode(password);
     }
@@ -98,20 +97,9 @@ public class ShaUtils {
      * @param encodedPassword 加密后字符
      * @return 结果
      */
-    public static boolean matchesBcryptPassword(String rawPassword, String encodedPassword) {
+    public static boolean matchesPassword(String rawPassword, String encodedPassword) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.matches(rawPassword, encodedPassword);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(ShaUtils.getSHA256(SALT));
-        //0bc78708b2d0e8541cf1ff618e2c5e330c1475ef7c336e22276bc82685725003
-        System.out.println(AESUtil.encryptAes(SALT, SALT));
-        System.out.println(AESUtil.encryptAes("Linlan_Prod_2024!", SALT));
-        //2d62c81540d116040e610777b7186d45836e3f6a8b369be2e7dc4c92d527cc50
-
-        System.out.println(ShaUtils.getSHA256("Z123456"));
-
     }
 
 }

@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
+import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -99,7 +100,7 @@ public class AdminUserOpController extends BaseController {
         if (StringUtils.isBlank(password)) { //默认一个初始化密码
             password = initialConfigService.selectConfigByKey("sys.user.initPassword");
         }
-        input.setPassword(SecurityUtils.encryptPassword(password));
+        input.setPassword(ShaUtils.encryptPassword(password));
         if (adminUserOpManager.doAdminUserOp(ApiIntfConfig.VALUE_AT_ADD, null, input)) {
             return success();
         }
@@ -172,7 +173,7 @@ public class AdminUserOpController extends BaseController {
             if (StringUtils.isBlank(password)) { //默认一个初始化密码
                 password = initialConfigService.selectConfigByKey("sys.user.initPassword");
             }
-            adminUser.setPassword(SecurityUtils.encryptPassword(password));
+            adminUser.setPassword(ShaUtils.encryptPassword(password));
             adminUserService.update(adminUser);
         }
         return success();
@@ -259,7 +260,7 @@ public class AdminUserOpController extends BaseController {
     public ResponseResult<String> resetPwd(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
         adminUserService.checkUserDataScope(input.getId());
-        String newPassword = SecurityUtils.encryptPassword(input.getPassword());
+        String newPassword = ShaUtils.encryptPassword(input.getPassword());
         return returnRow(adminUserService.resetUserPwd(input.getUsername(), newPassword));
     }
 

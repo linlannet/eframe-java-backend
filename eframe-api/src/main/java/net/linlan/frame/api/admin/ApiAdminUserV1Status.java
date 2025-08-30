@@ -20,6 +20,7 @@ package net.linlan.frame.api.admin;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -151,14 +152,14 @@ public class ApiAdminUserV1Status extends BaseController {
         String oldPassword = vo.getOldPassword();
         String newPassword = vo.getNewPassword();
 
-        if (!SecurityUtils.matchesPassword(oldPassword, currentUser.getPassword())) {
+        if (!ShaUtils.matchesPassword(oldPassword, currentUser.getPassword())) {
             return error("修改密码失败，旧密码错误");
         }
-        if (SecurityUtils.matchesPassword(newPassword, currentUser.getPassword())) {
+        if (ShaUtils.matchesPassword(newPassword, currentUser.getPassword())) {
             return error("新密码不能与旧密码相同");
         }
 
-        newPassword = SecurityUtils.encryptPassword(newPassword);
+        newPassword = ShaUtils.encryptPassword(newPassword);
         if (adminUserService.resetUserPwd(username, newPassword) > 0) {
             // 更新缓存用户密码
             loginUser.setPassword(newPassword);

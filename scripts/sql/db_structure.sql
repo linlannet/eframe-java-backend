@@ -248,31 +248,6 @@ CREATE TABLE `BASE_CONFIG_WHOLE`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '通用配置合项' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for BASE_COUNTRY
--- ----------------------------
-DROP TABLE IF EXISTS `BASE_COUNTRY`;
-CREATE TABLE `BASE_COUNTRY`  (
-                                 `COUNTRY_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '国家或地区编号',
-                                 `NAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区名称中文',
-                                 `NAMES` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区完整名称',
-                                 `NAME_EN` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区名称英文',
-                                 `SNAME` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区简写',
-                                 `REGION` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区所属区域，七大洲',
-                                 `SHORTCALL` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区简称',
-                                 `DISP_FLAG` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '显示标记，用|分隔，第1位全部第2位重点第3位特殊分类；如1|1|0',
-                                 `PRIORITY` int(0) NULL DEFAULT NULL COMMENT '排序',
-                                 `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-                                 `LAST_TIME` timestamp(0) NULL DEFAULT NULL COMMENT '最后时间',
-                                 `DEL_FLAG` int(0) NULL DEFAULT 0 COMMENT '删除标记0正常1已删除2应用内受限3回收站',
-                                 `DELETE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '删除时间',
-                                 `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '国家或地区名称介绍',
-                                 PRIMARY KEY (`COUNTRY_ID`) USING BTREE,
-                                 INDEX `IDX_BASE_COUNTRY_SCALL`(`SHORTCALL`) USING BTREE,
-                                 INDEX `IDX_BASE_COUNTRY_PRI`(`PRIORITY`) USING BTREE,
-                                 INDEX `IDX_BASE_COUNTRY_CTIME`(`CREATE_TIME`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '国家或地区字典' ROW_FORMAT = Dynamic;
-
--- ----------------------------
 -- Table structure for BASE_DICTIONARY
 -- ----------------------------
 DROP TABLE IF EXISTS `BASE_DICTIONARY`;
@@ -324,58 +299,6 @@ CREATE TABLE `BASE_DIC_TYPE`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '字典类型' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for BASE_DOMAIN
--- ----------------------------
-DROP TABLE IF EXISTS `BASE_DOMAIN`;
-CREATE TABLE `BASE_DOMAIN`  (
-                                `DOMAIN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '域平台编号',
-                                `CODE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '域平台路径代码，用于存放文件和路径转向',
-                                `NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '域平台名称',
-                                `PRIORITY` int(0) NOT NULL DEFAULT 10 COMMENT '排序',
-                                `IS_DISABLED` tinyint(1) NULL DEFAULT 0 COMMENT '是否禁用0否1是',
-                                `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-                                `LAST_TIME` timestamp(0) NULL DEFAULT NULL COMMENT '最后时间',
-                                `DEL_FLAG` int(0) NULL DEFAULT 0 COMMENT '删除标记0正常1已删除2应用内受限3回收站',
-                                `DELETE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '删除时间',
-                                `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '域平台描述',
-                                `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
-                                `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
-                                PRIMARY KEY (`DOMAIN_ID`) USING BTREE,
-                                INDEX `IDX_BASE_DOMAIN_CODE`(`CODE`) USING BTREE,
-                                INDEX `IDX_BASE_DOMAIN_PRI`(`PRIORITY`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '域平台信息' ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Table structure for BASE_FTP
--- ----------------------------
-DROP TABLE IF EXISTS `BASE_FTP`;
-CREATE TABLE `BASE_FTP`  (
-                             `FTP_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '文件上传ID',
-                             `SERVER_TYPE` int(0) NULL DEFAULT 1 COMMENT '文件服务器类型1FTP2FILESERVER',
-                             `NAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '文件上传服务器名称',
-                             `IP` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '文件上传服务器IP',
-                             `PORT` int(0) NULL DEFAULT NULL COMMENT '文件上传端口号',
-                             `FTP_PATH` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '文件服务器路径，上传路径或上传方法路径',
-                             `USERNAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '登录名',
-                             `PASSWORD` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '登陆密码',
-                             `ENCODING` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '编码',
-                             `TIMEOUT` bigint(0) NULL DEFAULT NULL COMMENT '超时时间',
-                             `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '文件上传服务器访问URL',
-                             `HTTP_URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外部访问URL路径，HTTP或者HTTPS路径',
-                             `IS_DISABLED` tinyint(1) NULL DEFAULT 0 COMMENT '是否禁用0否1是',
-                             `PRIORITY` int(0) NULL DEFAULT 10 COMMENT '排序',
-                             `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-                             `LAST_TIME` timestamp(0) NULL DEFAULT NULL COMMENT '最后时间',
-                             `DEL_FLAG` int(0) NULL DEFAULT 0 COMMENT '删除标记0正常1已删除2应用内受限3回收站',
-                             `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '描述',
-                             `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
-                             `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
-                             PRIMARY KEY (`FTP_ID`) USING BTREE,
-                             INDEX `IDX_BASE_FTP_IP`(`IP`) USING BTREE,
-                             INDEX `IDX_BASE_FTP_PRI`(`PRIORITY`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '文件上传服务器' ROW_FORMAT = Dynamic;
-
--- ----------------------------
 -- Table structure for BASE_LABEL
 -- ----------------------------
 DROP TABLE IF EXISTS `BASE_LABEL`;
@@ -394,26 +317,6 @@ CREATE TABLE `BASE_LABEL`  (
                                INDEX `IDX_BASE_LABEL_RCOUNT`(`REF_COUNT`) USING BTREE,
                                INDEX `IDX_BASE_LABEL_ACOUNT`(`ACCESS_COUNT`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '全局标签字词' ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Table structure for BASE_LANGS
--- ----------------------------
-DROP TABLE IF EXISTS `BASE_LANGS`;
-CREATE TABLE `BASE_LANGS`  (
-                               `LANGS_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '语种编号',
-                               `CODE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '语种代码',
-                               `NAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '语种名称',
-                               `IS_DISABLED` tinyint(1) NULL DEFAULT 0 COMMENT '是否禁用0否1是',
-                               `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-                               `PRIORITY` int(0) NULL DEFAULT NULL COMMENT '排序码',
-                               `LAST_TIME` timestamp(0) NULL DEFAULT NULL COMMENT '最后时间',
-                               `DEL_FLAG` int(0) NULL DEFAULT 0 COMMENT '删除标记0正常1已删除2应用内受限3回收站',
-                               `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '描述',
-                               `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
-                               `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
-                               PRIMARY KEY (`LANGS_ID`) USING BTREE,
-                               INDEX `IDX_BASE_LANGS_PRI`(`PRIORITY`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '语种信息' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for BASE_ORGAN
@@ -471,28 +374,6 @@ CREATE TABLE `BASE_ORGAN_EXT`  (
                                    INDEX `IDX_BASE_ORGAN_EXT_SEARCH`(`SEARCH_CODE`) USING BTREE,
                                    INDEX `IDX_BASE_ORGAN_EXT_ADDR`(`ADDRESS`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '基础单位扩展信息' ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Table structure for BASE_SERTYPE
--- ----------------------------
-DROP TABLE IF EXISTS `BASE_SERTYPE`;
-CREATE TABLE `BASE_SERTYPE`  (
-                                 `SERTYPE_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '服务类型ID',
-                                 `NAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '服务名称',
-                                 `CODE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '服务代码',
-                                 `PRIORITY` int(0) NOT NULL DEFAULT 10 COMMENT '排序',
-                                 `STATUS` int(0) NOT NULL DEFAULT 1 COMMENT '状态0异常关闭1正常2升级3锁定',
-                                 `IS_DISABLED` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否禁用0否1是',
-                                 `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-                                 `LAST_TIME` timestamp(0) NULL DEFAULT NULL COMMENT '最后时间',
-                                 `DEL_FLAG` int(0) NULL DEFAULT 0 COMMENT '删除标记0正常1已删除2应用内受限3回收站',
-                                 `DELETE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '删除时间',
-                                 `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '描述',
-                                 `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
-                                 `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
-                                 PRIMARY KEY (`SERTYPE_ID`) USING BTREE,
-                                 INDEX `IDX_BASE_SERTYPE_PRI`(`PRIORITY`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '服务类型' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for BASE_XZQH

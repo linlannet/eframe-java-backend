@@ -1,3 +1,9 @@
+### 版本号：1.1.3
+- 更新日期：2025-08-30
+- 更新内容：
+1. encryptPassword、matchesPassword方法统一到ShaUtils内
+2. 增加BaseEnumInteger、BaseEnumString接口
+
 ### 版本号：1.1.2
 - 更新日期：2025-08-26
 - 更新内容：

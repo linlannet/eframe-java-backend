@@ -23,6 +23,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.validation.Validator;
 
+import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
@@ -228,7 +229,7 @@ public class AdminUserOpManager {
             msg = "保存用户'" + username + "'失败，注册账号已存在";
         } else {
             adminUser.setName(username);
-            adminUser.setPassword(SecurityUtils.encryptPassword(password));
+            adminUser.setPassword(ShaUtils.encryptPassword(password));
             boolean regFlag = adminUserService.registerUser(adminUser);
             if (!regFlag) {
                 msg = "注册失败,请联系系统管理人员";
@@ -284,7 +285,7 @@ public class AdminUserOpManager {
                     adminDeptService.checkDeptDataScope(user.getDeptId());
                     String password = initialConfigService
                         .selectConfigByKey("sys.user.initPassword");
-                    user.setPassword(SecurityUtils.encryptPassword(password));
+                    user.setPassword(ShaUtils.encryptPassword(password));
                     user.setCreatorId(operName);
                     adminUserService.save(AdminUserVo.transTo(user));
                     successNum++;

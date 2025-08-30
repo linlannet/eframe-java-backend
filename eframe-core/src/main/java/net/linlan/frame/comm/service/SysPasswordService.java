@@ -19,6 +19,7 @@ package net.linlan.frame.comm.service;
 
 import javax.annotation.Resource;
 
+import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -120,7 +121,7 @@ public class SysPasswordService {
     }
 
     public boolean matches(AdminUserDto user, String rawPassword) {
-        return SecurityUtils.matchesPassword(rawPassword, user.getPassword());
+        return ShaUtils.matchesPassword(rawPassword, user.getPassword());
     }
 
     public void clearLoginRecordCache(String loginName) {
