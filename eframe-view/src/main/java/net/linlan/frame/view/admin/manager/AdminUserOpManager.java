@@ -23,7 +23,6 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.validation.Validator;
 
-import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +40,6 @@ import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
 import net.linlan.frame.mbiz.ApiIntfConfig;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
-import net.linlan.frame.web.SecurityUtils;
 import net.linlan.frame.web.model.RegisterBody;
 import net.linlan.sys.base.constant.CreateTypeEnum;
 import net.linlan.sys.web.RedisService;
@@ -50,6 +48,7 @@ import net.linlan.utils.bean.BeanValidators;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.constant.Constants;
 import net.linlan.utils.constant.UserConstants;
+import net.linlan.utils.crypt.ShaUtils;
 import net.linlan.utils.exception.CommonException;
 import net.linlan.utils.exception.user.CaptchaException;
 import net.linlan.utils.exception.user.CaptchaExpireException;

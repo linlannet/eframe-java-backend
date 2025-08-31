@@ -64,11 +64,11 @@ public class AdminDeptParam extends BaseParam {
      */
     private String  type;
     /**
-     * 名称
+     * 名称，多级累加名称
      */
     private String  name;
     /**
-     * 名称简称
+     * 名称简称，本单位显示名称
      */
     private String  sname;
     /**
@@ -104,7 +104,7 @@ public class AdminDeptParam extends BaseParam {
      */
     private Boolean isDisabled;
     /**
-     * 机构分类组
+     * 多级累加路径
      */
     private String  searchCode;
     /**

@@ -29,6 +29,19 @@ JAVA开发的企业级后端框架（EFRAME），基于Springboot，采用支持
 
 **企业框架（EFRAME）使用指南及效果：** <a target="_blank">https://gitee.com/linlannet/eframe-docs
 
+## 子包简介
+1. eframe-support: frame支撑模块，各类工具类、数据工具包.
+2. eframe-model: model模型数据模块，数据库读取的service和dao资源工具包.
+3. eframe-core: core核心共性模块，通用的业务逻辑核心工具.
+4. eframe-view: view视图逻辑模块，采用读写分离方式，对部分业务进行视图逻辑拆分.
+5. eframe-api: api接口网关模块，框架层的通用api资源包.
+6. module-generator: generator代码生成模块，代码生成支持简单控制和读写分离控制，一体化服务网关.
+7. module-quartz: quartz定时任务模块，对任务进行配置、启动、停止和监控.
+8. eframe-web: web应用服务模块，服务应用API配置注入，提供接口.
+9. module-extend: module扩展模块，后端服务扩展，后续增加sms、social等通用配置和jar引用，实现扩展.
+10. scripts: 数据库脚本、API接口文档、服务器端运行的sh脚本等.
+
+
 ## 技术路径
 ### 软件架构
 ```

@@ -38,7 +38,6 @@ import net.linlan.sys.base.param.BaseConfigPartsParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.crypt.AESUtil;
-
 import static net.linlan.utils.constant.CacheConstants.BASE_CONFIGWHOLE_KEY;
 
 /**
@@ -135,7 +134,8 @@ public class BaseConfigPartsService {
             BaseConfigParts.class);
         if (configParts == null) {
             configParts = dao.findById(id);
-            redisService.set(BASE_CONFIGWHOLE_KEY + id, configParts, KernelConstant.TEN_MINUTE_EXPIRE);
+            redisService.set(BASE_CONFIGWHOLE_KEY + id, configParts,
+                KernelConstant.TEN_MINUTE_EXPIRE);
         }
         return configParts;
     }

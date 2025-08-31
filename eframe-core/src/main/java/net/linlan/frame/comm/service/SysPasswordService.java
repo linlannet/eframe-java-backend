@@ -19,7 +19,6 @@ package net.linlan.frame.comm.service;
 
 import javax.annotation.Resource;
 
-import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -28,12 +27,12 @@ import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
 import net.linlan.frame.comm.security.context.AuthenticationContextHolder;
-import net.linlan.frame.web.SecurityUtils;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.MessageUtils;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.constant.Constants;
+import net.linlan.utils.crypt.ShaUtils;
 import net.linlan.utils.exception.user.UserPasswordNotMatchException;
 import net.linlan.utils.exception.user.UserPasswordRetryLimitExceedException;
 

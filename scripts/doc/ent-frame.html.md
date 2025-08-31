@@ -59,7 +59,7 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -100,8 +100,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─foreignId|string|外部业务ID|false|-
 └─createType|int32|创建方式0导入1录入2授权|false|-
 └─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-└─name|string|名称|false|-
-└─sname|string|名称简称|false|-
+└─name|string|名称，多级累加名称|false|-
+└─sname|string|名称简称，本单位显示名称|false|-
 └─areaCode|string|地域编码，所在城市|false|-
 └─organLeader|string|领导名称|false|-
 └─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -110,7 +110,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 └─isLeaf|boolean|是否叶子节点|false|-
 └─isDisabled|boolean|是否禁用0否1是|false|-
-└─searchCode|string|机构分类组|false|-
+└─searchCode|string|多级累加路径|false|-
 └─imagePath|string|图片路径|false|-
 └─priority|int32|排序|false|-
 └─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -124,35 +124,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:23",
-    "lastTime": "2025-08-27 22:15:23",
-    "id": 230,
-    "organId": "89",
-    "parentId": 642,
-    "appId": "89",
-    "depttypeId": 523,
-    "foreignId": "89",
-    "createType": 833,
-    "type": "fabfyz",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "areaCode": "66235",
-    "organLeader": "mp3dff",
-    "leaderId": "89",
-    "leaderMobile": "803.740.8989",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:10",
+    "lastTime": "2025-08-31 18:08:10",
+    "id": 615,
+    "organId": "158",
+    "parentId": 728,
+    "appId": "158",
+    "depttypeId": 263,
+    "foreignId": "158",
+    "createType": 383,
+    "type": "ejg77c",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "areaCode": "63710",
+    "organLeader": "cgxc9h",
+    "leaderId": "158",
+    "leaderMobile": "1-715-323-3760",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "66235",
-    "imagePath": "04q5fc",
-    "priority": 70,
-    "status": 100,
-    "delFlag": 6,
-    "description": "jr9mez",
-    "spare1": "oxrw2k",
-    "spare2": "lzl1rg",
+    "searchCode": "63710",
+    "imagePath": "sytyp4",
+    "priority": 26,
+    "status": 704,
+    "delFlag": 2,
+    "description": "h1wm4u",
+    "spare1": "3h6kl7",
+    "spare2": "tsquhv",
     "children": [
       {
         "$ref": ".."
@@ -177,8 +177,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vtxhbj",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "eezkf9",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -217,8 +217,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─foreignId|string|外部业务ID|false|-
 └─createType|int32|创建方式0导入1录入2授权|false|-
 └─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-└─name|string|名称|false|-
-└─sname|string|名称简称|false|-
+└─name|string|名称，多级累加名称|false|-
+└─sname|string|名称简称，本单位显示名称|false|-
 └─areaCode|string|地域编码，所在城市|false|-
 └─organLeader|string|领导名称|false|-
 └─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -227,7 +227,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 └─isLeaf|boolean|是否叶子节点|false|-
 └─isDisabled|boolean|是否禁用0否1是|false|-
-└─searchCode|string|机构分类组|false|-
+└─searchCode|string|多级累加路径|false|-
 └─imagePath|string|图片路径|false|-
 └─priority|int32|排序|false|-
 └─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -241,35 +241,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:23",
-    "lastTime": "2025-08-27 22:15:23",
-    "id": 657,
-    "organId": "89",
-    "parentId": 103,
-    "appId": "89",
-    "depttypeId": 482,
-    "foreignId": "89",
-    "createType": 733,
-    "type": "kt8v5h",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "areaCode": "66235",
-    "organLeader": "u536o2",
-    "leaderId": "89",
-    "leaderMobile": "803.740.8989",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 37,
+    "organId": "158",
+    "parentId": 784,
+    "appId": "158",
+    "depttypeId": 149,
+    "foreignId": "158",
+    "createType": 446,
+    "type": "co7f56",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "areaCode": "63710",
+    "organLeader": "2gug7l",
+    "leaderId": "158",
+    "leaderMobile": "1-715-323-3760",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "66235",
-    "imagePath": "stiv3f",
-    "priority": 22,
-    "status": 121,
-    "delFlag": 6,
-    "description": "o9fwvr",
-    "spare1": "8dn55p",
-    "spare2": "4upmu9",
+    "searchCode": "63710",
+    "imagePath": "edu7xk",
+    "priority": 370,
+    "status": 580,
+    "delFlag": 2,
+    "description": "or3r94",
+    "spare1": "88flpk",
+    "spare2": "r2iw4b",
     "children": [
       {
         "$ref": ".."
@@ -294,8 +294,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ygruc0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "l5th20",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -344,8 +344,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hpcsg4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "92gx27",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -384,8 +384,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─foreignId|string|外部业务ID|false|-
 └─createType|int32|创建方式0导入1录入2授权|false|-
 └─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-└─name|string|名称|false|-
-└─sname|string|名称简称|false|-
+└─name|string|名称，多级累加名称|false|-
+└─sname|string|名称简称，本单位显示名称|false|-
 └─areaCode|string|地域编码，所在城市|false|-
 └─organLeader|string|领导名称|false|-
 └─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -394,7 +394,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 └─isLeaf|boolean|是否叶子节点|false|-
 └─isDisabled|boolean|是否禁用0否1是|false|-
-└─searchCode|string|机构分类组|false|-
+└─searchCode|string|多级累加路径|false|-
 └─imagePath|string|图片路径|false|-
 └─priority|int32|排序|false|-
 └─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -408,35 +408,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:23",
-    "lastTime": "2025-08-27 22:15:23",
-    "id": 139,
-    "organId": "89",
-    "parentId": 926,
-    "appId": "89",
-    "depttypeId": 925,
-    "foreignId": "89",
-    "createType": 218,
-    "type": "oxyhfr",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "areaCode": "66235",
-    "organLeader": "3omuv3",
-    "leaderId": "89",
-    "leaderMobile": "803.740.8989",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 570,
+    "organId": "158",
+    "parentId": 497,
+    "appId": "158",
+    "depttypeId": 195,
+    "foreignId": "158",
+    "createType": 837,
+    "type": "s1ad3b",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "areaCode": "63710",
+    "organLeader": "zbdp4b",
+    "leaderId": "158",
+    "leaderMobile": "1-715-323-3760",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "66235",
-    "imagePath": "5pc2e3",
-    "priority": 902,
-    "status": 409,
-    "delFlag": 6,
-    "description": "n3wh3v",
-    "spare1": "rjv139",
-    "spare2": "dl0qx0",
+    "searchCode": "63710",
+    "imagePath": "6418p9",
+    "priority": 684,
+    "status": 561,
+    "delFlag": 2,
+    "description": "tmay50",
+    "spare1": "p8yjar",
+    "spare2": "gxhci9",
     "children": [
       {
         "$ref": ".."
@@ -461,8 +461,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v9wvwq",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "lskq39",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -504,8 +504,8 @@ depttypeId|int64|部门分类ID|false|-
 foreignId|string|外部业务ID|false|-
 createType|int32|创建方式0导入1录入2授权|false|-
 type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称|false|-
-sname|string|名称简称|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
 areaCode|string|地域编码，所在城市|false|-
 organLeader|string|领导名称|false|-
 leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -514,7 +514,7 @@ isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
 isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 isLeaf|boolean|是否叶子节点|false|-
 isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|机构分类组|false|-
+searchCode|string|多级累加路径|false|-
 imagePath|string|图片路径|false|-
 status|int32|状态0未生效1正常2受限3锁定|false|-
 creatorId|string|创建用户ID|false|-
@@ -525,7 +525,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?organId=89&limit=10&parentId=644&page=1&isOrganLevel=true&q=mavdja&type=4mkfpl&organLeader=uefvtv&isVirtual=true&spare2=hrli14&endTime=2025-08-27 22:14:23&name=tarra.erdman&leaderId=89&status=158&depttypeId=875&searchCode=66235&spare1=zncus0&deptId=863&orderBy=690&foreignId=89&sname=tarra.erdman&isDisabled=true&startTime=2025-08-27 22:14:23&appId=89&createType=205&imagePath=a9gf2s&delFlag=6&creatorId=89&areaCode=66235&isLeaf=true&description=z9zgyv&leaderMobile=803.740.8989
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?organLeader=4h7lw5&q=ts4nmh&orderBy=564&leaderMobile=1-715-323-3760&parentId=455&appId=158&foreignId=158&spare2=c45dpi&isDisabled=true&organId=158&depttypeId=12&status=801&isLeaf=true&limit=10&imagePath=fka13r&startTime=2025-08-31 18:07:21&createType=821&type=9arr7e&isVirtual=true&searchCode=63710&deptId=138&name=drew.kub&delFlag=2&endTime=2025-08-31 18:07:21&areaCode=63710&leaderId=158&creatorId=158&description=5qxn2s&isOrganLevel=true&sname=drew.kub&spare1=8a0qxf&page=1
 ```
 **Response-fields:**
 
@@ -564,26 +564,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "hb3cbg",
-    "pageNum": 170,
+    "stackTrace": "emog5u",
+    "pageNum": 775,
     "pageSize": 10,
-    "startRow": 251,
-    "endRow": 457,
-    "total": 747,
-    "pages": 532,
+    "startRow": 246,
+    "endRow": 116,
+    "total": 563,
+    "pages": 203,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "3hyi29",
-    "orderBy": "wyutp4",
+    "countColumn": "p7ltqw",
+    "orderBy": "iy8hww",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "ypcp69",
+    "dialectClass": "zfp1ux",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -624,8 +624,8 @@ depttypeId|int64|部门分类ID|false|-
 foreignId|string|外部业务ID|false|-
 createType|int32|创建方式0导入1录入2授权|false|-
 type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称|false|-
-sname|string|名称简称|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
 areaCode|string|地域编码，所在城市|false|-
 organLeader|string|领导名称|false|-
 leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -634,7 +634,7 @@ isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
 isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 isLeaf|boolean|是否叶子节点|false|-
 isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|机构分类组|false|-
+searchCode|string|多级累加路径|false|-
 imagePath|string|图片路径|false|-
 status|int32|状态0未生效1正常2受限3锁定|false|-
 creatorId|string|创建用户ID|false|-
@@ -645,7 +645,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?leaderMobile=803.740.8989&isVirtual=true&status=27&delFlag=6&organId=89&createType=999&endTime=2025-08-27 22:14:23&spare2=7tdq5i&isDisabled=true&depttypeId=457&sname=tarra.erdman&description=djedie&deptId=210&creatorId=89&q=tn1rdl&spare1=o7b4ps&foreignId=89&searchCode=66235&leaderId=89&areaCode=66235&type=wz6d9j&isLeaf=true&page=1&limit=10&parentId=552&organLeader=a0b4u8&isOrganLevel=true&imagePath=g8ug9y&orderBy=868&name=tarra.erdman&appId=89&startTime=2025-08-27 22:14:23
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?spare1=r19t49&spare2=y2133h&status=134&creatorId=158&createType=217&type=u7tlth&organLeader=n6e3z2&depttypeId=31&leaderId=158&parentId=431&searchCode=63710&description=hpurmo&appId=158&imagePath=73txkj&isDisabled=true&delFlag=2&name=drew.kub&limit=10&q=0eybk5&page=1&leaderMobile=1-715-323-3760&endTime=2025-08-31 18:07:21&sname=drew.kub&foreignId=158&organId=158&isLeaf=true&areaCode=63710&orderBy=742&startTime=2025-08-31 18:07:21&isOrganLevel=true&deptId=218&isVirtual=true
 ```
 **Response-fields:**
 
@@ -684,26 +684,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "11gueb",
-    "pageNum": 959,
+    "stackTrace": "s7t1py",
+    "pageNum": 703,
     "pageSize": 10,
-    "startRow": 799,
-    "endRow": 812,
-    "total": 131,
-    "pages": 316,
+    "startRow": 293,
+    "endRow": 986,
+    "total": 996,
+    "pages": 295,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "03jaul",
-    "orderBy": "09viq5",
+    "countColumn": "c8gl0l",
+    "orderBy": "125oa9",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "rnmke8",
+    "dialectClass": "ktx5ir",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -734,7 +734,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/414.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/573.do
 ```
 **Response-fields:**
 
@@ -754,7 +754,7 @@ data|array|返回数据对象|-
 └─createType|int32|创建方式0导入1录入2授权|-
 └─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
 └─name|string|名称|-
-└─sname|string|名称简称|-
+└─sname|string|名称简称，本单位显示名称|-
 └─areaCode|string|地域编码，所在城市|-
 └─organLeader|string|领导名称|-
 └─leaderId|string|负责人ID，用户接收相关信息|-
@@ -763,7 +763,7 @@ data|array|返回数据对象|-
 └─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 └─isLeaf|boolean|是否叶子节点|-
 └─isDisabled|boolean|是否禁用0否1是|-
-└─searchCode|string|机构分类组|-
+└─searchCode|string|多级累加路径|-
 └─imagePath|string|图片路径|-
 └─priority|int32|排序|-
 └─status|int32|状态0未生效1正常2受限3锁定|-
@@ -786,41 +786,41 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 683,
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "parentId": 332,
-      "appId": "89",
-      "depttypeId": 7,
-      "foreignId": "89",
-      "createType": 417,
-      "type": "munf4w",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "w6719l",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "id": 259,
+      "organId": "158",
+      "organName": "drew.kub",
+      "parentId": 491,
+      "appId": "158",
+      "depttypeId": 792,
+      "foreignId": "158",
+      "createType": 792,
+      "type": "xse5zg",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "f5sfx4",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "d9mnmp",
-      "priority": 487,
-      "status": 846,
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:23",
-      "lastTime": "2025-08-27 22:15:23",
-      "delFlag": 6,
-      "description": "m5n0c0",
-      "spare1": "yod7ig",
-      "spare2": "t0b3px",
-      "parentName": "tarra.erdman",
-      "childNum": "js1we6"
+      "searchCode": "63710",
+      "imagePath": "fpn2un",
+      "priority": 971,
+      "status": 189,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:10",
+      "lastTime": "2025-08-31 18:08:10",
+      "delFlag": 2,
+      "description": "le2epb",
+      "spare1": "ky3dew",
+      "spare2": "hmrjik",
+      "parentName": "drew.kub",
+      "childNum": "li33ak"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -851,7 +851,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/58.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/286.do
 ```
 **Response-fields:**
 
@@ -871,7 +871,7 @@ data|object|返回数据对象|-
 └─createType|int32|创建方式0导入1录入2授权|-
 └─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
 └─name|string|名称|-
-└─sname|string|名称简称|-
+└─sname|string|名称简称，本单位显示名称|-
 └─areaCode|string|地域编码，所在城市|-
 └─organLeader|string|领导名称|-
 └─leaderId|string|负责人ID，用户接收相关信息|-
@@ -880,7 +880,7 @@ data|object|返回数据对象|-
 └─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 └─isLeaf|boolean|是否叶子节点|-
 └─isDisabled|boolean|是否禁用0否1是|-
-└─searchCode|string|机构分类组|-
+└─searchCode|string|多级累加路径|-
 └─imagePath|string|图片路径|-
 └─priority|int32|排序|-
 └─status|int32|状态0未生效1正常2受限3锁定|-
@@ -902,40 +902,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 993,
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "parentId": 121,
-    "appId": "89",
-    "depttypeId": 53,
-    "foreignId": "89",
-    "createType": 977,
-    "type": "5bwd76",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "areaCode": "66235",
-    "organLeader": "uzt646",
-    "leaderId": "89",
-    "leaderMobile": "803.740.8989",
+    "id": 994,
+    "organId": "158",
+    "organName": "drew.kub",
+    "parentId": 240,
+    "appId": "158",
+    "depttypeId": 453,
+    "foreignId": "158",
+    "createType": 360,
+    "type": "t3xd6z",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "areaCode": "63710",
+    "organLeader": "8jsgom",
+    "leaderId": "158",
+    "leaderMobile": "1-715-323-3760",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "66235",
-    "imagePath": "babf6q",
-    "priority": 685,
-    "status": 193,
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:23",
-    "lastTime": "2025-08-27 22:15:23",
-    "delFlag": 6,
-    "description": "5z516j",
-    "spare1": "yo3kcn",
-    "spare2": "ebkwcp",
-    "parentName": "tarra.erdman",
-    "childNum": "a91iyu"
+    "searchCode": "63710",
+    "imagePath": "zqqndl",
+    "priority": 694,
+    "status": 419,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:10",
+    "lastTime": "2025-08-31 18:08:10",
+    "delFlag": 2,
+    "description": "sc19o8",
+    "spare1": "xcb582",
+    "spare2": "xynvxr",
+    "parentName": "drew.kub",
+    "childNum": "bptzuj"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -976,8 +976,8 @@ depttypeId|int64|部门分类ID|false|-
 foreignId|string|外部业务ID|false|-
 createType|int32|创建方式0导入1录入2授权|false|-
 type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称|false|-
-sname|string|名称简称|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
 areaCode|string|地域编码，所在城市|false|-
 organLeader|string|领导名称|false|-
 leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -986,7 +986,7 @@ isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
 isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 isLeaf|boolean|是否叶子节点|false|-
 isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|机构分类组|false|-
+searchCode|string|多级累加路径|false|-
 imagePath|string|图片路径|false|-
 status|int32|状态0未生效1正常2受限3锁定|false|-
 creatorId|string|创建用户ID|false|-
@@ -997,7 +997,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?delFlag=6&endTime=2025-08-27 22:14:23&q=6bkdco&type=yq61cf&isOrganLevel=true&sname=tarra.erdman&description=f26a99&isLeaf=true&foreignId=89&parentId=368&createType=327&areaCode=66235&orderBy=449&limit=10&organLeader=uob6gg&page=1&status=627&spare2=iafdmv&leaderId=89&name=tarra.erdman&deptId=168&startTime=2025-08-27 22:14:23&isVirtual=true&spare1=ysaqss&organId=89&isDisabled=true&depttypeId=664&appId=89&creatorId=89&imagePath=9f7o9p&leaderMobile=803.740.8989&searchCode=66235
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?name=drew.kub&appId=158&spare1=ambstr&creatorId=158&endTime=2025-08-31 18:07:21&foreignId=158&description=4lfo3p&limit=10&createType=182&q=7kl099&isLeaf=true&parentId=526&deptId=481&startTime=2025-08-31 18:07:21&spare2=l0z3mv&organId=158&page=1&imagePath=pbkszh&isDisabled=true&delFlag=2&type=ucfsy0&depttypeId=140&isOrganLevel=true&searchCode=63710&sname=drew.kub&leaderId=158&areaCode=63710&status=804&orderBy=496&organLeader=0q93h1&isVirtual=true&leaderMobile=1-715-323-3760
 ```
 **Response-fields:**
 
@@ -1026,11 +1026,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "tueos6",
-      "id": "89",
-      "parentId": "89",
-      "extId": "89",
-      "href": "pnc1gk",
+      "title": "i35c1x",
+      "id": "158",
+      "parentId": "158",
+      "extId": "158",
+      "href": "02nq7f",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -1041,7 +1041,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1086,7 +1086,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?ipaddr=i0ssth&loginTime=2025-08-27 22:15:29&browser=f3q3yq&os=6zkkcs&msg=jk5gds&q=kji911&username=tarra.erdman&startTime=2025-08-27 22:14:23&orderBy=354&infoId=261&page=1&endTime=2025-08-27 22:14:23&limit=10&status=n2pm6p
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?orderBy=739&page=1&limit=10&username=drew.kub&status=lfcjqa&os=d5t4eg&q=fsjzvw&startTime=2025-08-31 18:07:21&loginTime=2025-08-31 18:08:16&ipaddr=fot62a&endTime=2025-08-31 18:07:21&infoId=953&browser=b08jch&msg=6djd4z
 ```
 **Response-fields:**
 
@@ -1120,26 +1120,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 919,
+    "totalCount": 973,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 769,
-        "username": "tarra.erdman",
-        "status": "lqogp0",
-        "ipaddr": "3vcmg2",
-        "loginLocation": "r8fn0q",
-        "browser": "hjqyba",
-        "os": "4t5q4t",
-        "msg": "8wyxt4",
-        "loginTime": "2025-08-27 22:15:29",
-        "remark": "934b4i"
+        "infoId": 947,
+        "username": "drew.kub",
+        "status": "l5u2n0",
+        "ipaddr": "d453ds",
+        "loginLocation": "c4u51u",
+        "browser": "r22ktp",
+        "os": "kn41ry",
+        "msg": "mpmkow",
+        "loginTime": "2025-08-31 18:08:16",
+        "remark": "atyuvi"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1183,7 +1183,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'loginTime=2025-08-27 22:15:29&username=tarra.erdman&endTime=2025-08-27 22:14:23&limit=10&orderBy=276&status=925asg&ipaddr=7cq8gv&page=1&infoId=683&browser=dylnd1&msg=jn2h00&q=aeujp7&os=0s49o3&startTime=2025-08-27 22:14:23'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'page=1&msg=hxu710&limit=10&username=drew.kub&status=lhzv0l&orderBy=46&browser=n7vrfx&infoId=932&loginTime=2025-08-31 18:08:16&q=90pmx3&startTime=2025-08-31 18:07:21&ipaddr=hm6dyz&os=26quny&endTime=2025-08-31 18:07:21'
 ```
 **Response-fields:**
 
@@ -1201,8 +1201,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ev8zsf",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "km2i1k",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1251,8 +1251,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qna3us",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "1xasu1",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1295,8 +1295,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "53zqmv",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "geif2r",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1327,7 +1327,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/tarra.erdman.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/drew.kub.do
 ```
 **Response-fields:**
 
@@ -1345,8 +1345,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p1rr6l",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ry98we",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1411,8 +1411,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -1421,7 +1421,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -1465,60 +1465,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:24",
-    "lastTime": "2025-08-27 22:15:24",
-    "id": 659,
-    "userId": "89",
-    "deptId": 90,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "4m0slb",
-    "password": "hro8qf",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 249,
+    "userId": "158",
+    "deptId": 926,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "ude6mg",
+    "password": "e83t5u",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 514,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:24",
-    "description": "umvgau",
+    "status": 840,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:11",
+    "description": "ctyhkp",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:24",
-      "lastTime": "2025-08-27 22:15:24",
-      "id": 164,
-      "organId": "89",
-      "parentId": 598,
-      "appId": "89",
-      "depttypeId": 622,
-      "foreignId": "89",
-      "createType": 26,
-      "type": "vfhu5p",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "xtfqfq",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:11",
+      "lastTime": "2025-08-31 18:08:11",
+      "id": 957,
+      "organId": "158",
+      "parentId": 903,
+      "appId": "158",
+      "depttypeId": 260,
+      "foreignId": "158",
+      "createType": 575,
+      "type": "ca1j10",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "84xg4h",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "7apa0s",
-      "priority": 933,
-      "status": 697,
-      "delFlag": 6,
-      "description": "bqnfvu",
-      "spare1": "n0x34q",
-      "spare2": "3kr4ny",
+      "searchCode": "63710",
+      "imagePath": "rt7nv1",
+      "priority": 32,
+      "status": 809,
+      "delFlag": 2,
+      "description": "t42s17",
+      "spare1": "kq9jqr",
+      "spare2": "opz24j",
       "children": [
         {
           "$ref": ".."
@@ -1527,44 +1527,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "id": 256,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 693,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "id": 332,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 447,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 151,
-        "description": "955ngv",
-        "areaType": "adep21"
+        "status": 530,
+        "description": "oex48v",
+        "areaType": "wp3spc"
       }
     ],
     "roleIds": [
-      644
+      301
     ],
     "positionIds": [
-      "1jowje"
+      "7jnetx"
     ],
-    "roleId": 825,
+    "roleId": 539,
     "userRoleList": [
       {
-        "id": 403,
-        "deptId": 895,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 914,
-        "roleName": "tarra.erdman",
-        "adminId": 200
+        "id": 605,
+        "deptId": 729,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 610,
+        "roleName": "drew.kub",
+        "adminId": 566
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -1584,8 +1584,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mulkfw",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "xrbggg",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1649,8 +1649,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -1659,7 +1659,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -1703,60 +1703,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:24",
-    "lastTime": "2025-08-27 22:15:24",
-    "id": 542,
-    "userId": "89",
-    "deptId": 509,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "cwhfu5",
-    "password": "gm9kwe",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 974,
+    "userId": "158",
+    "deptId": 375,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "zyigtd",
+    "password": "4u66aa",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 507,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:24",
-    "description": "7bkic8",
+    "status": 951,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:11",
+    "description": "ii94bu",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:24",
-      "lastTime": "2025-08-27 22:15:24",
-      "id": 437,
-      "organId": "89",
-      "parentId": 113,
-      "appId": "89",
-      "depttypeId": 822,
-      "foreignId": "89",
-      "createType": 234,
-      "type": "bb9x5b",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "e0b9jx",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:11",
+      "lastTime": "2025-08-31 18:08:11",
+      "id": 5,
+      "organId": "158",
+      "parentId": 143,
+      "appId": "158",
+      "depttypeId": 701,
+      "foreignId": "158",
+      "createType": 477,
+      "type": "xtvwbd",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "th5iz9",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "ilo10a",
-      "priority": 837,
-      "status": 474,
-      "delFlag": 6,
-      "description": "d0e19m",
-      "spare1": "fzzgqi",
-      "spare2": "i61v1j",
+      "searchCode": "63710",
+      "imagePath": "7rtqeq",
+      "priority": 319,
+      "status": 467,
+      "delFlag": 2,
+      "description": "j8zc70",
+      "spare1": "dtxaf6",
+      "spare2": "m1zprl",
       "children": [
         {
           "$ref": ".."
@@ -1765,44 +1765,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "id": 813,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 446,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "id": 161,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 345,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 368,
-        "description": "5s8c5u",
-        "areaType": "nlxpb3"
+        "status": 68,
+        "description": "33ksdm",
+        "areaType": "33yt9j"
       }
     ],
     "roleIds": [
-      497
+      102
     ],
     "positionIds": [
-      "kk3keq"
+      "bbb7p1"
     ],
-    "roleId": 786,
+    "roleId": 423,
     "userRoleList": [
       {
-        "id": 311,
-        "deptId": 66,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 587,
-        "roleName": "tarra.erdman",
-        "adminId": 300
+        "id": 759,
+        "deptId": 175,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 411,
+        "roleName": "drew.kub",
+        "adminId": 626
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -1822,8 +1822,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kspb5h",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "7ymvvx",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -1887,40 +1887,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:24",
-    "lastTime": "2025-08-27 22:15:24",
-    "id": 844,
-    "userId": "89",
-    "organId": "89",
-    "deptId": 44,
-    "createType": 373,
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "mobile": "803.740.8989",
-    "email": "fletcher.hickle@hotmail.com",
-    "password": "ka7xsn",
-    "salt": "57ptw5",
-    "imagePath": "plllf0",
-    "adminType": "mc5zdp",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 177,
+    "userId": "158",
+    "organId": "158",
+    "deptId": 37,
+    "createType": 187,
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "mobile": "1-715-323-3760",
+    "email": "latasha.buckridge@hotmail.com",
+    "password": "stwwoq",
+    "salt": "9m806d",
+    "imagePath": "r51fdm",
+    "adminType": "3o4wfa",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "49hcad",
-    "adminPerms": "0sskro",
-    "lastAppId": "89",
-    "lastLoginTime": "2025-08-27 22:15:24",
-    "lastLoginIp": "217.26.150.93",
-    "loginCount": 80,
-    "status": 205,
-    "delFlag": 6,
-    "spare1": "61gm3h",
-    "spare2": "vzzpyq",
+    "adminRange": "lckyka",
+    "adminPerms": "ek5cas",
+    "lastAppId": "158",
+    "lastLoginTime": "2025-08-31 18:08:11",
+    "lastLoginIp": "62.26.219.195",
+    "loginCount": 55,
+    "status": 298,
+    "delFlag": 2,
+    "spare1": "91tpnl",
+    "spare2": "1odqme",
     "roleIds": [
-      224
+      494
     ],
     "positionIds": [
-      "ozr9n9"
+      "ey7plx"
     ]
   }
 }'
@@ -1941,8 +1941,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wzi6j6",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "kzlhui",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2012,8 +2012,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -2022,7 +2022,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -2066,60 +2066,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:24",
-    "lastTime": "2025-08-27 22:15:24",
-    "id": 618,
-    "userId": "89",
-    "deptId": 355,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "obio9l",
-    "password": "k1hlhc",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:11",
+    "lastTime": "2025-08-31 18:08:11",
+    "id": 48,
+    "userId": "158",
+    "deptId": 733,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "h4k4tb",
+    "password": "p9yiss",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 537,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:24",
-    "description": "o3wchs",
+    "status": 366,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:11",
+    "description": "nzq2nn",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:24",
-      "lastTime": "2025-08-27 22:15:24",
-      "id": 61,
-      "organId": "89",
-      "parentId": 201,
-      "appId": "89",
-      "depttypeId": 378,
-      "foreignId": "89",
-      "createType": 720,
-      "type": "i8up8e",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "6lmusv",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:11",
+      "lastTime": "2025-08-31 18:08:11",
+      "id": 798,
+      "organId": "158",
+      "parentId": 371,
+      "appId": "158",
+      "depttypeId": 944,
+      "foreignId": "158",
+      "createType": 104,
+      "type": "23j9xl",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "zlj117",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "wv18il",
-      "priority": 249,
-      "status": 554,
-      "delFlag": 6,
-      "description": "djjmwp",
-      "spare1": "xxgvbo",
-      "spare2": "9evs8p",
+      "searchCode": "63710",
+      "imagePath": "eywdxy",
+      "priority": 515,
+      "status": 221,
+      "delFlag": 2,
+      "description": "ver12k",
+      "spare1": "la7136",
+      "spare2": "2b1pwm",
       "children": [
         {
           "$ref": ".."
@@ -2128,44 +2128,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "id": 905,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 296,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "id": 396,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 157,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 160,
-        "description": "1y8ejl",
-        "areaType": "wwrzcd"
+        "status": 91,
+        "description": "c80wb2",
+        "areaType": "19y3tn"
       }
     ],
     "roleIds": [
-      992
+      50
     ],
     "positionIds": [
-      "n6j8pc"
+      "dbf431"
     ],
-    "roleId": 135,
+    "roleId": 23,
     "userRoleList": [
       {
-        "id": 937,
-        "deptId": 86,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 442,
-        "roleName": "tarra.erdman",
-        "adminId": 665
+        "id": 741,
+        "deptId": 225,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 136,
+        "roleName": "drew.kub",
+        "adminId": 192
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -2185,8 +2185,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z3d8x3",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "qmiyvb",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2235,8 +2235,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1vioz2",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "9ytwod",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2282,7 +2282,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'adminId=645&nickName=reena.schmeler&email=fletcher.hickle@hotmail.com&endTime=2025-08-27 22:14:23&username=tarra.erdman&status=nkobd8&page=1&limit=10&organId=89&delFlag=6&deptId=688&q=qmzf7g&userId=89&mobile=803.740.8989&orderBy=294&startTime=2025-08-27 22:14:23'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'startTime=2025-08-31 18:07:21&adminId=952&userId=158&delFlag=2&nickName=javier.terry&endTime=2025-08-31 18:07:21&page=1&orderBy=706&limit=10&deptId=405&organId=158&q=izhqfw&mobile=1-715-323-3760&username=drew.kub&email=latasha.buckridge@hotmail.com&status=2nxibe'
 ```
 **Response-fields:**
 
@@ -2300,8 +2300,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rud2l4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "35segg",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2351,8 +2351,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5lls16",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "lsyqp8",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2395,8 +2395,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cqif5q",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "nvy10m",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2460,8 +2460,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -2470,7 +2470,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -2514,60 +2514,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:25",
-    "lastTime": "2025-08-27 22:15:25",
-    "id": 864,
-    "userId": "89",
-    "deptId": 959,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "llx2re",
-    "password": "xaqw0c",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:12",
+    "lastTime": "2025-08-31 18:08:12",
+    "id": 449,
+    "userId": "158",
+    "deptId": 880,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "1wp3sv",
+    "password": "7yf44l",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 102,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:25",
-    "description": "1hyyhb",
+    "status": 256,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:12",
+    "description": "oaor8k",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:25",
-      "lastTime": "2025-08-27 22:15:25",
-      "id": 391,
-      "organId": "89",
-      "parentId": 781,
-      "appId": "89",
-      "depttypeId": 251,
-      "foreignId": "89",
-      "createType": 782,
-      "type": "nivji4",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "grkdls",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:12",
+      "lastTime": "2025-08-31 18:08:12",
+      "id": 612,
+      "organId": "158",
+      "parentId": 458,
+      "appId": "158",
+      "depttypeId": 18,
+      "foreignId": "158",
+      "createType": 656,
+      "type": "x9c7ye",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "hgizpd",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "msfxmy",
-      "priority": 332,
-      "status": 165,
-      "delFlag": 6,
-      "description": "dwdtxw",
-      "spare1": "4do5af",
-      "spare2": "edzq9d",
+      "searchCode": "63710",
+      "imagePath": "83w4za",
+      "priority": 834,
+      "status": 441,
+      "delFlag": 2,
+      "description": "jtwv1x",
+      "spare1": "94o45g",
+      "spare2": "fty73k",
       "children": [
         {
           "$ref": ".."
@@ -2576,44 +2576,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:25",
-        "lastTime": "2025-08-27 22:15:25",
-        "id": 856,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 873,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:12",
+        "lastTime": "2025-08-31 18:08:12",
+        "id": 646,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 540,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 266,
-        "description": "cxal4q",
-        "areaType": "90d00i"
+        "status": 71,
+        "description": "9nrr68",
+        "areaType": "pxo1xt"
       }
     ],
     "roleIds": [
-      641
+      853
     ],
     "positionIds": [
-      "j2bo19"
+      "gwuxtx"
     ],
-    "roleId": 794,
+    "roleId": 351,
     "userRoleList": [
       {
-        "id": 967,
-        "deptId": 477,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 71,
-        "roleName": "tarra.erdman",
-        "adminId": 326
+        "id": 922,
+        "deptId": 775,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 393,
+        "roleName": "drew.kub",
+        "adminId": 712
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -2633,8 +2633,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fst714",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "lrhyr3",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2698,8 +2698,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -2708,7 +2708,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -2752,60 +2752,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:25",
-    "lastTime": "2025-08-27 22:15:25",
-    "id": 943,
-    "userId": "89",
-    "deptId": 375,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "c2uwn9",
-    "password": "f46y1n",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:12",
+    "lastTime": "2025-08-31 18:08:12",
+    "id": 338,
+    "userId": "158",
+    "deptId": 101,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "0jpj1z",
+    "password": "igfrdy",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 770,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:25",
-    "description": "fwlxd1",
+    "status": 436,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:12",
+    "description": "nugyim",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:25",
-      "lastTime": "2025-08-27 22:15:25",
-      "id": 611,
-      "organId": "89",
-      "parentId": 867,
-      "appId": "89",
-      "depttypeId": 407,
-      "foreignId": "89",
-      "createType": 858,
-      "type": "msvgdg",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "rowzc5",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:12",
+      "lastTime": "2025-08-31 18:08:12",
+      "id": 564,
+      "organId": "158",
+      "parentId": 503,
+      "appId": "158",
+      "depttypeId": 107,
+      "foreignId": "158",
+      "createType": 477,
+      "type": "b3mj6y",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "niv16t",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "1aym56",
-      "priority": 188,
-      "status": 601,
-      "delFlag": 6,
-      "description": "x7pcjf",
-      "spare1": "y1amnn",
-      "spare2": "f5yu0k",
+      "searchCode": "63710",
+      "imagePath": "0n0pzi",
+      "priority": 567,
+      "status": 151,
+      "delFlag": 2,
+      "description": "bovy5z",
+      "spare1": "h5l5pa",
+      "spare2": "n4p8g9",
       "children": [
         {
           "$ref": ".."
@@ -2814,44 +2814,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:25",
-        "lastTime": "2025-08-27 22:15:25",
-        "id": 877,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 163,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:12",
+        "lastTime": "2025-08-31 18:08:12",
+        "id": 180,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 702,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 917,
-        "description": "degc1o",
-        "areaType": "hkum3i"
+        "status": 913,
+        "description": "mug023",
+        "areaType": "t4pvss"
       }
     ],
     "roleIds": [
-      678
+      208
     ],
     "positionIds": [
-      "4v0x18"
+      "vz0xgg"
     ],
-    "roleId": 513,
+    "roleId": 766,
     "userRoleList": [
       {
-        "id": 280,
-        "deptId": 426,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 316,
-        "roleName": "tarra.erdman",
-        "adminId": 526
+        "id": 563,
+        "deptId": 330,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 794,
+        "roleName": "drew.kub",
+        "adminId": 614
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -2871,8 +2871,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3ik7n3",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "l1n48z",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2903,7 +2903,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/92.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/23.do
 ```
 **Response-fields:**
 
@@ -2921,8 +2921,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2tprbu",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "edmiee",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -2954,7 +2954,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=4yxm1s&roleIds=4yxm1s&adminId=697'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=9g21y5&roleIds=9g21y5&adminId=536'
 ```
 **Response-fields:**
 
@@ -2972,8 +2972,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hbkigt",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "vrap8f",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3020,7 +3020,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?email=fletcher.hickle@hotmail.com&organId=89&orderBy=35&endTime=2025-08-27 22:14:23&username=tarra.erdman&page=1&deptId=622&q=x2ea1m&userId=89&status=yv9a9h&mobile=803.740.8989&delFlag=6&limit=10&startTime=2025-08-27 22:14:23&adminId=746&nickName=reena.schmeler
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?userId=158&email=latasha.buckridge@hotmail.com&endTime=2025-08-31 18:07:21&nickName=javier.terry&delFlag=2&page=1&q=yu326y&username=drew.kub&organId=158&orderBy=351&status=lejydt&startTime=2025-08-31 18:07:21&limit=10&deptId=152&adminId=469&mobile=1-715-323-3760
 ```
 **Response-fields:**
 
@@ -3066,8 +3066,8 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -3076,7 +3076,7 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -3125,60 +3125,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:24",
-      "lastTime": "2025-08-27 22:15:24",
-      "id": 5,
-      "userId": "89",
-      "deptId": 128,
-      "deptName": "tarra.erdman",
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "name": "tarra.erdman",
-      "username": "tarra.erdman",
-      "nickName": "reena.schmeler",
-      "email": "fletcher.hickle@hotmail.com",
-      "mobile": "803.740.8989",
-      "imagePath": "ky5gxw",
-      "password": "mulg5o",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:11",
+      "lastTime": "2025-08-31 18:08:11",
+      "id": 201,
+      "userId": "158",
+      "deptId": 532,
+      "deptName": "drew.kub",
+      "organId": "158",
+      "organName": "drew.kub",
+      "name": "drew.kub",
+      "username": "drew.kub",
+      "nickName": "javier.terry",
+      "email": "latasha.buckridge@hotmail.com",
+      "mobile": "1-715-323-3760",
+      "imagePath": "kkrq7d",
+      "password": "sa7p3g",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 857,
-      "delFlag": 6,
-      "lastLoginIp": "217.26.150.93",
-      "lastLoginTime": "2025-08-27 22:15:24",
-      "description": "r6wmmv",
+      "status": 546,
+      "delFlag": 2,
+      "lastLoginIp": "62.26.219.195",
+      "lastLoginTime": "2025-08-31 18:08:11",
+      "description": "441o2j",
       "dept": {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "id": 479,
-        "organId": "89",
-        "parentId": 790,
-        "appId": "89",
-        "depttypeId": 646,
-        "foreignId": "89",
-        "createType": 840,
-        "type": "3q6dsa",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "areaCode": "66235",
-        "organLeader": "zafm08",
-        "leaderId": "89",
-        "leaderMobile": "803.740.8989",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "id": 610,
+        "organId": "158",
+        "parentId": 953,
+        "appId": "158",
+        "depttypeId": 397,
+        "foreignId": "158",
+        "createType": 434,
+        "type": "3y4bb8",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "areaCode": "63710",
+        "organLeader": "jhku5t",
+        "leaderId": "158",
+        "leaderMobile": "1-715-323-3760",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "66235",
-        "imagePath": "dd2dp8",
-        "priority": 145,
-        "status": 472,
-        "delFlag": 6,
-        "description": "d3sint",
-        "spare1": "kd6a7c",
-        "spare2": "lhibi7",
+        "searchCode": "63710",
+        "imagePath": "g5bybb",
+        "priority": 468,
+        "status": 392,
+        "delFlag": 2,
+        "description": "teg73d",
+        "spare1": "1pgp0y",
+        "spare2": "zvnyul",
         "children": [
           {
             "$ref": ".."
@@ -3187,47 +3187,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "89",
-          "createTime": "2025-08-27 22:15:24",
-          "lastTime": "2025-08-27 22:15:24",
-          "id": 392,
-          "roletypeId": "89",
-          "appId": "89",
-          "name": "tarra.erdman",
-          "code": "66235",
-          "priority": 961,
+          "creatorId": "158",
+          "createTime": "2025-08-31 18:08:11",
+          "lastTime": "2025-08-31 18:08:11",
+          "id": 920,
+          "roletypeId": "158",
+          "appId": "158",
+          "name": "drew.kub",
+          "code": "63710",
+          "priority": 725,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 199,
-          "description": "zo34f7",
-          "areaType": "q7furx"
+          "status": 593,
+          "description": "6u0vwn",
+          "areaType": "5nl08f"
         }
       ],
       "roleIds": [
-        656
+        288
       ],
       "positionIds": [
-        "5hxqfa"
+        "rw75y0"
       ],
-      "roleId": 374,
+      "roleId": 519,
       "userRoleList": [
         {
-          "id": 335,
-          "deptId": 345,
-          "deptName": "tarra.erdman",
-          "organId": "89",
-          "organName": "tarra.erdman",
-          "roleId": 800,
-          "roleName": "tarra.erdman",
-          "adminId": 818
+          "id": 187,
+          "deptId": 789,
+          "deptName": "drew.kub",
+          "organId": "158",
+          "organName": "drew.kub",
+          "roleId": 436,
+          "roleName": "drew.kub",
+          "adminId": 195
         }
       ],
-      "code": "66235",
-      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+      "code": "63710",
+      "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3299,8 +3299,8 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -3309,7 +3309,7 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -3405,60 +3405,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:24",
-      "lastTime": "2025-08-27 22:15:24",
-      "id": 228,
-      "userId": "89",
-      "deptId": 752,
-      "deptName": "tarra.erdman",
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "name": "tarra.erdman",
-      "username": "tarra.erdman",
-      "nickName": "reena.schmeler",
-      "email": "fletcher.hickle@hotmail.com",
-      "mobile": "803.740.8989",
-      "imagePath": "mht459",
-      "password": "ekl5jf",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:11",
+      "lastTime": "2025-08-31 18:08:11",
+      "id": 487,
+      "userId": "158",
+      "deptId": 972,
+      "deptName": "drew.kub",
+      "organId": "158",
+      "organName": "drew.kub",
+      "name": "drew.kub",
+      "username": "drew.kub",
+      "nickName": "javier.terry",
+      "email": "latasha.buckridge@hotmail.com",
+      "mobile": "1-715-323-3760",
+      "imagePath": "uwnu0t",
+      "password": "gbqhl0",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 28,
-      "delFlag": 6,
-      "lastLoginIp": "217.26.150.93",
-      "lastLoginTime": "2025-08-27 22:15:24",
-      "description": "y42bq9",
+      "status": 187,
+      "delFlag": 2,
+      "lastLoginIp": "62.26.219.195",
+      "lastLoginTime": "2025-08-31 18:08:11",
+      "description": "9sb2rs",
       "dept": {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "id": 20,
-        "organId": "89",
-        "parentId": 575,
-        "appId": "89",
-        "depttypeId": 781,
-        "foreignId": "89",
-        "createType": 559,
-        "type": "9scuti",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "areaCode": "66235",
-        "organLeader": "uatheh",
-        "leaderId": "89",
-        "leaderMobile": "803.740.8989",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "id": 324,
+        "organId": "158",
+        "parentId": 811,
+        "appId": "158",
+        "depttypeId": 677,
+        "foreignId": "158",
+        "createType": 897,
+        "type": "bfw81e",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "areaCode": "63710",
+        "organLeader": "p5g7vs",
+        "leaderId": "158",
+        "leaderMobile": "1-715-323-3760",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "66235",
-        "imagePath": "5ffea7",
-        "priority": 49,
-        "status": 138,
-        "delFlag": 6,
-        "description": "b1sp0b",
-        "spare1": "heigpy",
-        "spare2": "lz45uw",
+        "searchCode": "63710",
+        "imagePath": "rucy0g",
+        "priority": 592,
+        "status": 471,
+        "delFlag": 2,
+        "description": "8iwiph",
+        "spare1": "ynmqbr",
+        "spare2": "r2rbn4",
         "children": [
           {
             "$ref": ".."
@@ -3467,115 +3467,115 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "89",
-          "createTime": "2025-08-27 22:15:24",
-          "lastTime": "2025-08-27 22:15:24",
-          "id": 944,
-          "roletypeId": "89",
-          "appId": "89",
-          "name": "tarra.erdman",
-          "code": "66235",
-          "priority": 456,
+          "creatorId": "158",
+          "createTime": "2025-08-31 18:08:11",
+          "lastTime": "2025-08-31 18:08:11",
+          "id": 513,
+          "roletypeId": "158",
+          "appId": "158",
+          "name": "drew.kub",
+          "code": "63710",
+          "priority": 220,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 953,
-          "description": "39ox2r",
-          "areaType": "mwj56v"
+          "status": 605,
+          "description": "gfd0da",
+          "areaType": "1wvtc5"
         }
       ],
       "roleIds": [
-        337
+        903
       ],
       "positionIds": [
-        "erw7x4"
+        "emb5jc"
       ],
-      "roleId": 505,
+      "roleId": 315,
       "userRoleList": [
         {
-          "id": 791,
-          "deptId": 65,
-          "deptName": "tarra.erdman",
-          "organId": "89",
-          "organName": "tarra.erdman",
-          "roleId": 455,
-          "roleName": "tarra.erdman",
-          "adminId": 161
+          "id": 928,
+          "deptId": 278,
+          "deptName": "drew.kub",
+          "organId": "158",
+          "organName": "drew.kub",
+          "roleId": 984,
+          "roleName": "drew.kub",
+          "adminId": 854
         }
       ],
-      "code": "66235",
-      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+      "code": "63710",
+      "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "roleId": 481,
-        "roleName": "tarra.erdman",
-        "roleKey": "5mxq1f",
-        "roleSort": 80,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "roleId": 451,
+        "roleName": "drew.kub",
+        "roleKey": "u7g9qr",
+        "roleSort": 966,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 752,
+        "status": 199,
         "flag": true,
         "menuIds": [
-          277
+          540
         ],
         "deptIds": [
-          160
+          566
         ],
         "permissions": [
-          "v0b54j"
+          "dnfy6m"
         ],
-        "remark": "ivacne",
-        "parentName": "tarra.erdman",
-        "appName": "tarra.erdman",
-        "roletypeId": "89",
-        "roletypeName": "tarra.erdman",
-        "priority": 856,
+        "remark": "9czt7l",
+        "parentName": "drew.kub",
+        "appName": "drew.kub",
+        "roletypeId": "158",
+        "roletypeName": "drew.kub",
+        "priority": 150,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 328,
-        "roleId": 811,
-        "adminId": 637,
-        "deptId": 174,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleName": "tarra.erdman"
+        "id": 553,
+        "roleId": 837,
+        "adminId": 707,
+        "deptId": 804,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleName": "drew.kub"
       }
     ],
     "positions": [
       {
-        "postId": "89",
-        "postCode": "66235",
-        "postName": "tarra.erdman",
-        "postSort": 63,
-        "status": 249,
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:24",
-        "lastTime": "2025-08-27 22:15:24",
-        "delFlag": 6,
-        "remark": "h0jrdp",
+        "postId": "158",
+        "postCode": "63710",
+        "postName": "drew.kub",
+        "postSort": 430,
+        "status": 580,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:11",
+        "lastTime": "2025-08-31 18:08:11",
+        "delFlag": 2,
+        "remark": "ypu4qd",
         "ids": [
-          "bgcsne"
+          "av1nl6"
         ],
-        "positionId": "89",
+        "positionId": "158",
         "flag": true
       }
     ],
     "roleIds": [
-      549
+      66
     ],
     "positionIds": [
-      770
+      444
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3616,8 +3616,8 @@ depttypeId|int64|部门分类ID|false|-
 foreignId|string|外部业务ID|false|-
 createType|int32|创建方式0导入1录入2授权|false|-
 type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称|false|-
-sname|string|名称简称|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
 areaCode|string|地域编码，所在城市|false|-
 organLeader|string|领导名称|false|-
 leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -3626,7 +3626,7 @@ isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
 isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 isLeaf|boolean|是否叶子节点|false|-
 isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|机构分类组|false|-
+searchCode|string|多级累加路径|false|-
 imagePath|string|图片路径|false|-
 status|int32|状态0未生效1正常2受限3锁定|false|-
 creatorId|string|创建用户ID|false|-
@@ -3637,7 +3637,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?areaCode=66235&createType=499&foreignId=89&leaderMobile=803.740.8989&isDisabled=true&name=tarra.erdman&endTime=2025-08-27 22:14:23&spare2=16q2mx&type=oa51xb&depttypeId=714&imagePath=evd4yn&creatorId=89&leaderId=89&q=wqmg6f&status=600&orderBy=309&appId=89&searchCode=66235&parentId=784&organLeader=pbl14k&startTime=2025-08-27 22:14:23&limit=10&spare1=bvka1z&page=1&delFlag=6&organId=89&sname=tarra.erdman&deptId=553&isOrganLevel=true&isLeaf=true&description=hoxe2n&isVirtual=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?isDisabled=true&page=1&sname=drew.kub&isOrganLevel=true&name=drew.kub&description=h5q0wk&isVirtual=true&isLeaf=true&areaCode=63710&creatorId=158&orderBy=876&delFlag=2&type=whzdve&leaderMobile=1-715-323-3760&leaderId=158&status=741&searchCode=63710&appId=158&limit=10&foreignId=158&startTime=2025-08-31 18:07:21&depttypeId=930&deptId=395&spare1=buzo5k&q=afsgcv&createType=927&parentId=100&imagePath=15iiyk&organLeader=v92ihw&endTime=2025-08-31 18:07:21&organId=158&spare2=tzzh7u
 ```
 **Response-fields:**
 
@@ -3660,8 +3660,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 181,
-      "label": "293qde",
+      "id": 507,
+      "label": "j75x9r",
       "children": [
         {
           "$ref": ".."
@@ -3669,7 +3669,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3723,7 +3723,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?isSite=true&existKey=dm6iao&q=pv0oqa&ftpId=89&isMobileApp=true&path=3xevx8&ids=at5m5s&ids=at5m5s&mode=278&delFlag=6&appType=ox8s6i&orderBy=453&endTime=2025-08-27 22:14:23&xzqhId=572&organId=89&name=tarra.erdman&sertypeId=89&description=gb5xth&isDisabled=true&limit=10&domainId=89&startTime=2025-08-27 22:14:23&status=234&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?status=233&description=ioblas&name=drew.kub&isDisabled=true&appType=8z29sx&limit=10&mode=343&organId=158&endTime=2025-08-31 18:07:21&isSite=true&startTime=2025-08-31 18:07:21&page=1&xzqhId=707&isMobileApp=true&q=bcamfs&delFlag=2&path=7sg82n&ftpId=158&sertypeId=158&domainId=158&ids=yugomk&ids=yugomk&orderBy=0&existKey=78o2r6
 ```
 **Response-fields:**
 
@@ -3766,32 +3766,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:30",
-      "lastTime": "2025-08-27 22:15:30",
-      "id": "89",
-      "ftpId": "89",
-      "domainId": "89",
-      "organId": "89",
-      "xzqhId": 912,
-      "sertypeId": "89",
-      "name": "tarra.erdman",
-      "path": "lk6aji",
-      "appType": "k9oc96",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:16",
+      "lastTime": "2025-08-31 18:08:16",
+      "id": "158",
+      "ftpId": "158",
+      "domainId": "158",
+      "organId": "158",
+      "xzqhId": 17,
+      "sertypeId": "158",
+      "name": "drew.kub",
+      "path": "mknrm3",
+      "appType": "rprsvy",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 4,
-      "priority": 622,
-      "delFlag": 6,
-      "deleteTime": "2025-08-27 22:15:30",
-      "description": "o1987z",
-      "spare1": "7if8o6",
-      "spare2": "l8v6w2",
-      "xzqhName": "tarra.erdman"
+      "status": 111,
+      "priority": 25,
+      "delFlag": 2,
+      "deleteTime": "2025-08-31 18:08:16",
+      "description": "f5uk1k",
+      "spare1": "lwfhrp",
+      "spare2": "2a15u1",
+      "xzqhName": "drew.kub"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3845,7 +3845,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?startTime=2025-08-27 22:14:23&isMobileApp=true&q=xvnrh9&page=1&status=717&existKey=7a2cx2&sertypeId=89&path=mr5i8f&description=cf001g&endTime=2025-08-27 22:14:23&mode=391&limit=10&orderBy=893&isSite=true&isDisabled=true&delFlag=6&name=tarra.erdman&ids=b22410&ids=b22410&organId=89&domainId=89&idArr=f12k50&ftpId=89&xzqhId=817&appType=xs236z
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?ids=qkpjbq&ids=qkpjbq&appType=ck9201&ftpId=158&startTime=2025-08-31 18:07:21&domainId=158&isDisabled=true&path=vxurlv&status=600&delFlag=2&description=z0e36x&limit=10&idArr=v6yaxj&q=6l72f9&page=1&organId=158&isSite=true&orderBy=703&name=drew.kub&isMobileApp=true&endTime=2025-08-31 18:07:21&existKey=0kv7ly&sertypeId=158&xzqhId=337&mode=435
 ```
 **Response-fields:**
 
@@ -3892,39 +3892,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 549,
+    "totalCount": 390,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:30",
-        "lastTime": "2025-08-27 22:15:30",
-        "id": "89",
-        "ftpId": "89",
-        "domainId": "89",
-        "organId": "89",
-        "xzqhId": 710,
-        "sertypeId": "89",
-        "name": "tarra.erdman",
-        "path": "652rjv",
-        "appType": "we5jv0",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:16",
+        "lastTime": "2025-08-31 18:08:16",
+        "id": "158",
+        "ftpId": "158",
+        "domainId": "158",
+        "organId": "158",
+        "xzqhId": 308,
+        "sertypeId": "158",
+        "name": "drew.kub",
+        "path": "e60kw5",
+        "appType": "unijtg",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 226,
-        "priority": 537,
-        "delFlag": 6,
-        "deleteTime": "2025-08-27 22:15:30",
-        "description": "za8zft",
-        "spare1": "o2xxnt",
-        "spare2": "mtgib5",
-        "xzqhName": "tarra.erdman"
+        "status": 527,
+        "priority": 553,
+        "delFlag": 2,
+        "deleteTime": "2025-08-31 18:08:16",
+        "description": "h57ciy",
+        "spare1": "42igk8",
+        "spare2": "s458wh",
+        "xzqhName": "drew.kub"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -3978,7 +3978,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'appType=8eqzdp&idArr=fmja8b&q=f78u7v&domainId=89&sertypeId=89&endTime=2025-08-27 22:14:23&organId=89&name=tarra.erdman&status=534&isMobileApp=true&ids=xxvb3t&ids=xxvb3t&delFlag=6&ftpId=89&xzqhId=726&isDisabled=true&description=q0za8h&mode=509&existKey=z5i939&page=1&isSite=true&orderBy=920&startTime=2025-08-27 22:14:23&limit=10&path=cijp6w'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'orderBy=565&endTime=2025-08-31 18:07:21&organId=158&status=618&sertypeId=158&domainId=158&existKey=0la23k&ids=3mnyf5&ids=3mnyf5&idArr=73dfk8&ftpId=158&mode=608&isMobileApp=true&delFlag=2&startTime=2025-08-31 18:07:21&path=d9z6sa&appType=lp1fk2&q=pljrhx&isSite=true&description=notn7v&limit=10&isDisabled=true&page=1&name=drew.kub&xzqhId=920'
 ```
 **Response-fields:**
 
@@ -3996,8 +3996,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b729f8",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "r5p4tm",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4028,7 +4028,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/89.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/158.do
 ```
 **Response-fields:**
 
@@ -4074,35 +4074,35 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:30",
-    "lastTime": "2025-08-27 22:15:30",
-    "id": "89",
-    "ftpId": "89",
-    "domainId": "89",
-    "organId": "89",
-    "xzqhId": 24,
-    "sertypeId": "89",
-    "name": "tarra.erdman",
-    "path": "889xde",
-    "appType": "6o0ieu",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:16",
+    "lastTime": "2025-08-31 18:08:16",
+    "id": "158",
+    "ftpId": "158",
+    "domainId": "158",
+    "organId": "158",
+    "xzqhId": 610,
+    "sertypeId": "158",
+    "name": "drew.kub",
+    "path": "pk973v",
+    "appType": "b24wuh",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 900,
-    "priority": 792,
-    "delFlag": 6,
-    "deleteTime": "2025-08-27 22:15:30",
-    "description": "sohcj7",
-    "spare1": "8826sc",
-    "spare2": "kra8jh",
-    "xzqhName": "tarra.erdman",
-    "ftpName": "tarra.erdman",
-    "sertypeName": "tarra.erdman",
-    "domainName": "tarra.erdman",
-    "organName": "tarra.erdman"
+    "status": 828,
+    "priority": 322,
+    "delFlag": 2,
+    "deleteTime": "2025-08-31 18:08:16",
+    "description": "bh3it0",
+    "spare1": "2tub2q",
+    "spare2": "34kz64",
+    "xzqhName": "drew.kub",
+    "ftpName": "drew.kub",
+    "sertypeName": "drew.kub",
+    "domainName": "drew.kub",
+    "organName": "drew.kub"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4159,31 +4159,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "89",
-    "ftpId": "89",
-    "ftpName": "tarra.erdman",
-    "domainId": "89",
-    "domainName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "xzqhId": 104,
-    "xzqhName": "tarra.erdman",
-    "sertypeId": "89",
-    "sertypeName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "path": "byy5sv",
-    "appType": "0j6qa6",
+    "id": "158",
+    "ftpId": "158",
+    "ftpName": "drew.kub",
+    "domainId": "158",
+    "domainName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "xzqhId": 378,
+    "xzqhName": "drew.kub",
+    "sertypeId": "158",
+    "sertypeName": "drew.kub",
+    "name": "drew.kub",
+    "path": "t7ies6",
+    "appType": "fmylig",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 314,
-    "statusName": "tarra.erdman",
-    "priority": 391,
-    "createTime": "2025-08-27 22:15:30",
-    "description": "5sdvq8",
-    "spare1": "5p0dca",
+    "status": 372,
+    "statusName": "drew.kub",
+    "priority": 376,
+    "createTime": "2025-08-31 18:08:17",
+    "description": "tapp95",
+    "spare1": "q1uw27",
     "statusMap": {
-      "mapKey": "kcx7ej"
+      "mapKey": "lzy5wf"
     }
   }
 }'
@@ -4204,8 +4204,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vybqa7",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "357e48",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4262,31 +4262,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "89",
-    "ftpId": "89",
-    "ftpName": "tarra.erdman",
-    "domainId": "89",
-    "domainName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "xzqhId": 231,
-    "xzqhName": "tarra.erdman",
-    "sertypeId": "89",
-    "sertypeName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "path": "e7y1fu",
-    "appType": "5l4161",
+    "id": "158",
+    "ftpId": "158",
+    "ftpName": "drew.kub",
+    "domainId": "158",
+    "domainName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "xzqhId": 870,
+    "xzqhName": "drew.kub",
+    "sertypeId": "158",
+    "sertypeName": "drew.kub",
+    "name": "drew.kub",
+    "path": "wlfrvv",
+    "appType": "tg48v8",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 84,
-    "statusName": "tarra.erdman",
-    "priority": 150,
-    "createTime": "2025-08-27 22:15:30",
-    "description": "d3rkot",
-    "spare1": "gjzwcq",
+    "status": 656,
+    "statusName": "drew.kub",
+    "priority": 283,
+    "createTime": "2025-08-31 18:08:17",
+    "description": "8cfu92",
+    "spare1": "1kwvuh",
     "statusMap": {
-      "mapKey": "h1slqm"
+      "mapKey": "exylx4"
     }
   }
 }'
@@ -4307,8 +4307,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "08zoy5",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "b72937",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4357,8 +4357,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h8ogfl",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ghhx59",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4402,16 +4402,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/89.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/158.do --data '{
   "data": {
-    "id": "89",
+    "id": "158",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "tarra.erdman",
-    "password": "z6q42n",
-    "initPath": "3522qd"
+    "username": "drew.kub",
+    "password": "bip6r9",
+    "initPath": "skeizf"
   }
 }'
 ```
@@ -4434,7 +4434,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4477,8 +4477,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xdbc5i",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "67twcl",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4534,7 +4534,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?startTime=2025-08-27 22:14:23&nameTotal=dfw0w5&searchCode=66235&isDisplay=true&orderBy=501&name=tarra.erdman&rgt=829&sname=tarra.erdman&parentIds=yiphlg&parentIds=yiphlg&q=0daajb&endTime=2025-08-27 22:14:23&areatypeIds=8r7gje&areatypeIds=8r7gje&description=ul9fhd&countryId=89&lft=680&code=66235&areatypeId=89&delFlag=6&hasContent=true&page=1&nameEn=rc7t5c&ids=gm3c49&ids=gm3c49&deleteTime=2025-08-27 22:14:23&limit=10&parentId=597&likeQuery=cg5zns
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?parentId=630&nameTotal=jq0lxr&hasContent=true&rgt=941&page=1&limit=10&sname=drew.kub&delFlag=2&areatypeIds=f68ngn&areatypeIds=f68ngn&lft=131&parentIds=y3tx9v&parentIds=y3tx9v&description=h1pksm&nameEn=th60hs&orderBy=538&countryId=158&q=q1e1cf&code=63710&searchCode=63710&endTime=2025-08-31 18:07:21&areatypeId=158&ids=cdkg2t&ids=cdkg2t&name=drew.kub&likeQuery=ry03mm&isDisplay=true&deleteTime=2025-08-31 18:07:21&startTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -4582,40 +4582,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 354,
+    "totalCount": 3,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:31",
-        "lastTime": "2025-08-27 22:15:31",
-        "id": 516,
-        "parentId": 153,
-        "countryId": "89",
-        "areatypeId": "89",
-        "lft": 724,
-        "rgt": 279,
-        "code": "66235",
-        "name": "tarra.erdman",
-        "nameTotal": "majour",
-        "sname": "tarra.erdman",
-        "nameEn": "ddpwww",
-        "searchCode": "66235",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:17",
+        "lastTime": "2025-08-31 18:08:17",
+        "id": 395,
+        "parentId": 770,
+        "countryId": "158",
+        "areatypeId": "158",
+        "lft": 547,
+        "rgt": 953,
+        "code": "63710",
+        "name": "drew.kub",
+        "nameTotal": "xmp0vo",
+        "sname": "drew.kub",
+        "nameEn": "foh1e2",
+        "searchCode": "63710",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 64,
-        "delFlag": 6,
-        "deleteTime": "2025-08-27 22:15:31",
-        "description": "fuvl2q",
-        "countryName": "tarra.erdman",
-        "parentName": "tarra.erdman",
-        "areatypeName": "tarra.erdman"
+        "priority": 211,
+        "delFlag": 2,
+        "deleteTime": "2025-08-31 18:08:17",
+        "description": "830nju",
+        "countryName": "drew.kub",
+        "parentName": "drew.kub",
+        "areatypeName": "drew.kub"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4666,7 +4666,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?q=41by4y&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&delFlag=6&organCode=66235&limit=10&createType=75&orderBy=415&name=tarra.erdman&spare1=n90t58&organName=tarra.erdman&ids=ebud1p&ids=ebud1p&xzqhId=848&isOrganWork=96gxhi&page=1&orgtypeId=89&source=145&unionCode=66235&description=3q47v6&spare2=d2idov&key=dp177s
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?description=fhwis2&limit=10&endTime=2025-08-31 18:07:21&ids=w3xrqm&ids=w3xrqm&source=790&orderBy=233&startTime=2025-08-31 18:07:21&page=1&organName=drew.kub&createType=862&delFlag=2&xzqhId=503&key=ofrv1v&organCode=63710&isOrganWork=d8vk88&unionCode=63710&spare1=t0kc3p&q=6a2jfy&orgtypeId=158&name=drew.kub&spare2=rurmpw
 ```
 **Response-fields:**
 
@@ -4695,21 +4695,21 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 946,
+    "totalCount": 749,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:31",
-        "lastTime": "2025-08-27 22:15:31",
-        "cmsKey": "k1k9jv",
-        "cmsValue": "7b3os0"
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:17",
+        "lastTime": "2025-08-31 18:08:17",
+        "cmsKey": "o3fdvo",
+        "cmsValue": "1ihyg6"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4766,7 +4766,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?orderBy=466&likeQuery=nqb5yt&isDisplay=true&page=1&delFlag=6&code=66235&nameTotal=vw2uxg&startTime=2025-08-27 22:14:23&ids=5y0yiu&ids=5y0yiu&limit=10&countryId=89&lft=653&deleteTime=2025-08-27 22:14:23&parentId=636&nameEn=5vgbzk&rgt=742&name=tarra.erdman&q=svycfx&sname=tarra.erdman&description=r7rnu7&parentIds=at35gr&parentIds=at35gr&areatypeIds=hkkyf6&areatypeIds=hkkyf6&areatypeId=89&searchCode=66235&hasContent=true&endTime=2025-08-27 22:14:23
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?description=cdms3u&searchCode=63710&delFlag=2&orderBy=495&nameEn=ympowv&areatypeIds=muzvnf&areatypeIds=muzvnf&endTime=2025-08-31 18:07:21&countryId=158&likeQuery=f46wj1&parentIds=0io3an&parentIds=0io3an&deleteTime=2025-08-31 18:07:21&startTime=2025-08-31 18:07:21&sname=drew.kub&page=1&nameTotal=7psxv1&isDisplay=true&q=4m2l4i&areatypeId=158&hasContent=true&lft=962&ids=8ukjey&ids=8ukjey&parentId=447&limit=10&rgt=582&code=63710&name=drew.kub
 ```
 **Response-fields:**
 
@@ -4807,30 +4807,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:31",
-      "lastTime": "2025-08-27 22:15:31",
-      "id": 936,
-      "parentId": 179,
-      "countryId": "89",
-      "areatypeId": "89",
-      "lft": 737,
-      "rgt": 629,
-      "code": "66235",
-      "name": "tarra.erdman",
-      "nameTotal": "0pry4j",
-      "sname": "tarra.erdman",
-      "nameEn": "w83gyk",
-      "searchCode": "66235",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:17",
+      "lastTime": "2025-08-31 18:08:17",
+      "id": 657,
+      "parentId": 70,
+      "countryId": "158",
+      "areatypeId": "158",
+      "lft": 760,
+      "rgt": 559,
+      "code": "63710",
+      "name": "drew.kub",
+      "nameTotal": "mqs9wt",
+      "sname": "drew.kub",
+      "nameEn": "ymn1hd",
+      "searchCode": "63710",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 81,
-      "delFlag": 6,
-      "deleteTime": "2025-08-27 22:15:31",
-      "description": "a24foz"
+      "priority": 106,
+      "delFlag": 2,
+      "deleteTime": "2025-08-31 18:08:17",
+      "description": "5d0g8g"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4886,7 +4886,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'isDisplay=true&sname=tarra.erdman&q=16lj8r&nameTotal=mzw6uy&areatypeId=89&areatypeIds=cw3jfb&areatypeIds=cw3jfb&likeQuery=immf6w&deleteTime=2025-08-27 22:14:23&orderBy=636&page=1&ids=gt5zfq&ids=gt5zfq&hasContent=true&endTime=2025-08-27 22:14:23&searchCode=66235&countryId=89&limit=10&parentId=550&description=itp7rw&parentIds=2rt6qu&parentIds=2rt6qu&rgt=964&delFlag=6&nameEn=cvtll7&code=66235&startTime=2025-08-27 22:14:23&lft=522&name=tarra.erdman'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'code=63710&page=1&endTime=2025-08-31 18:07:21&areatypeId=158&limit=10&q=qt3zd3&description=r9kron&parentIds=bsnvaq&parentIds=bsnvaq&parentId=763&lft=275&searchCode=63710&orderBy=403&areatypeIds=fe7jp2&areatypeIds=fe7jp2&hasContent=true&startTime=2025-08-31 18:07:21&sname=drew.kub&countryId=158&delFlag=2&deleteTime=2025-08-31 18:07:21&nameTotal=135ait&ids=u7n1gi&ids=u7n1gi&name=drew.kub&nameEn=deuuck&likeQuery=gbt6gc&rgt=283&isDisplay=true'
 ```
 **Response-fields:**
 
@@ -4904,8 +4904,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b7vcsw",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ma1bx4",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -4976,29 +4976,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:31",
-    "lastTime": "2025-08-27 22:15:31",
-    "id": 265,
-    "parentId": 271,
-    "countryId": "89",
-    "areatypeId": "89",
-    "lft": 880,
-    "rgt": 262,
-    "code": "66235",
-    "name": "tarra.erdman",
-    "nameTotal": "wunxyx",
-    "sname": "tarra.erdman",
-    "nameEn": "myym33",
-    "searchCode": "66235",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:17",
+    "lastTime": "2025-08-31 18:08:17",
+    "id": 944,
+    "parentId": 211,
+    "countryId": "158",
+    "areatypeId": "158",
+    "lft": 829,
+    "rgt": 252,
+    "code": "63710",
+    "name": "drew.kub",
+    "nameTotal": "6pn40l",
+    "sname": "drew.kub",
+    "nameEn": "htgwr9",
+    "searchCode": "63710",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 672,
-    "delFlag": 6,
-    "deleteTime": "2025-08-27 22:15:31",
-    "description": "y55920"
+    "priority": 20,
+    "delFlag": 2,
+    "deleteTime": "2025-08-31 18:08:17",
+    "description": "gv58ru"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5052,27 +5052,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:31",
-    "lastTime": "2025-08-27 22:15:31",
-    "id": 708,
-    "parentId": 656,
-    "countryId": "89",
-    "areatypeId": "89",
-    "lft": 889,
-    "rgt": 259,
-    "code": "66235",
-    "name": "tarra.erdman",
-    "nameTotal": "48x09e",
-    "sname": "tarra.erdman",
-    "nameEn": "ydvk7r",
-    "searchCode": "66235",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:17",
+    "lastTime": "2025-08-31 18:08:17",
+    "id": 571,
+    "parentId": 357,
+    "countryId": "158",
+    "areatypeId": "158",
+    "lft": 67,
+    "rgt": 430,
+    "code": "63710",
+    "name": "drew.kub",
+    "nameTotal": "wxgm8u",
+    "sname": "drew.kub",
+    "nameEn": "ovbtsv",
+    "searchCode": "63710",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 656,
-    "delFlag": 6,
-    "deleteTime": "2025-08-27 22:15:31",
-    "description": "w6ptyh"
+    "priority": 31,
+    "delFlag": 2,
+    "deleteTime": "2025-08-31 18:08:17",
+    "description": "ry6uip"
   }
 }'
 ```
@@ -5092,8 +5092,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3oigm2",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "r3g63h",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5147,27 +5147,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:31",
-    "lastTime": "2025-08-27 22:15:31",
-    "id": 868,
-    "parentId": 625,
-    "countryId": "89",
-    "areatypeId": "89",
-    "lft": 574,
-    "rgt": 375,
-    "code": "66235",
-    "name": "tarra.erdman",
-    "nameTotal": "nd4rrt",
-    "sname": "tarra.erdman",
-    "nameEn": "vop2d3",
-    "searchCode": "66235",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:17",
+    "lastTime": "2025-08-31 18:08:17",
+    "id": 67,
+    "parentId": 674,
+    "countryId": "158",
+    "areatypeId": "158",
+    "lft": 186,
+    "rgt": 71,
+    "code": "63710",
+    "name": "drew.kub",
+    "nameTotal": "i1nf4i",
+    "sname": "drew.kub",
+    "nameEn": "4bg4xj",
+    "searchCode": "63710",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 774,
-    "delFlag": 6,
-    "deleteTime": "2025-08-27 22:15:31",
-    "description": "lcjmdz"
+    "priority": 828,
+    "delFlag": 2,
+    "deleteTime": "2025-08-31 18:08:17",
+    "description": "2dmkfo"
   }
 }'
 ```
@@ -5187,8 +5187,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pth806",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "r0lbcs",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5237,8 +5237,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wb8mvk",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "om5ne0",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5302,7 +5302,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?organName=tarra.erdman&organId=89&endTime=2025-08-27 22:14:23&name=tarra.erdman&spare2=sje9v1&clientId=89&description=78fxq2&q=7aiv1b&clientSecret=uyggiv&aesKey=6wf6qr&serverIp=217.26.150.93&aesIvKey=nw7ypq&serverConf1=j6dduo&isSingle=true&serverUrl=www.felicitas-spencer.com&serverConf3=y86gse&spare1=80iufw&type=244&isDisabled=true&id=89&status=148&serverConf2=bjmpmk&confLimit=10&page=1&inoutMode=357&limit=10&cname=tarra.erdman&serverType=r03spp&appId=89&startTime=2025-08-27 22:14:23&orderBy=554&currCount=795&isAdmin=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?type=852&serverUrl=www.leigha-wyman.biz&q=mu32kc&name=drew.kub&aesIvKey=tpo023&status=207&startTime=2025-08-31 18:07:21&description=zw86cj&organId=158&page=1&cname=drew.kub&clientId=158&aesKey=abqiei&limit=10&spare1=1izha0&serverConf2=apwj3o&confLimit=10&isSingle=true&isDisabled=true&clientSecret=xta7kh&orderBy=691&spare2=qjr3ex&id=158&endTime=2025-08-31 18:07:21&organName=drew.kub&serverType=ggumcz&serverConf3=izxvbo&isAdmin=true&appId=158&serverConf1=ob2ql3&inoutMode=910&serverIp=62.26.219.195&currCount=266
 ```
 **Response-fields:**
 
@@ -5357,44 +5357,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:34",
-      "lastTime": "2025-08-27 22:15:34",
-      "id": "89",
-      "organId": "89",
-      "appId": "89",
-      "organName": "tarra.erdman",
-      "inoutMode": 822,
-      "name": "tarra.erdman",
-      "cname": "tarra.erdman",
-      "type": 70,
-      "clientId": "89",
-      "clientSecret": "46hlhs",
-      "aesKey": "p0rbhy",
-      "aesIvKey": "zfc5y6",
-      "serverIp": "217.26.150.93",
-      "serverType": "naxqkd",
-      "serverUrl": "www.felicitas-spencer.com",
-      "serverConf1": "4pka1n",
-      "serverConf2": "onkej0",
-      "serverConf3": "pljli1",
-      "currCount": 223,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:19",
+      "lastTime": "2025-08-31 18:08:19",
+      "id": "158",
+      "organId": "158",
+      "appId": "158",
+      "organName": "drew.kub",
+      "inoutMode": 414,
+      "name": "drew.kub",
+      "cname": "drew.kub",
+      "type": 223,
+      "clientId": "158",
+      "clientSecret": "sknj51",
+      "aesKey": "z2lthp",
+      "aesIvKey": "my30ba",
+      "serverIp": "62.26.219.195",
+      "serverType": "875r5v",
+      "serverUrl": "www.leigha-wyman.biz",
+      "serverConf1": "a91c5s",
+      "serverConf2": "qh71l8",
+      "serverConf3": "t6rtoq",
+      "currCount": 837,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 924,
-      "description": "c6m9th",
-      "spare1": "pqobvf",
-      "spare2": "ghq8uw",
-      "inOrganName": "tarra.erdman",
-      "userName": "tarra.erdman",
-      "appName": "tarra.erdman",
-      "inoutModeName": "tarra.erdman",
-      "typeName": "tarra.erdman"
+      "status": 804,
+      "description": "ukdtaq",
+      "spare1": "0m8ioh",
+      "spare2": "rl9gvk",
+      "inOrganName": "drew.kub",
+      "userName": "drew.kub",
+      "appName": "drew.kub",
+      "inoutModeName": "drew.kub",
+      "typeName": "drew.kub"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5425,7 +5425,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=158
 ```
 **Response-fields:**
 
@@ -5480,44 +5480,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:34",
-      "lastTime": "2025-08-27 22:15:34",
-      "id": "89",
-      "organId": "89",
-      "appId": "89",
-      "organName": "tarra.erdman",
-      "inoutMode": 743,
-      "name": "tarra.erdman",
-      "cname": "tarra.erdman",
-      "type": 18,
-      "clientId": "89",
-      "clientSecret": "bjo1sb",
-      "aesKey": "mmf4tg",
-      "aesIvKey": "y4hd2i",
-      "serverIp": "217.26.150.93",
-      "serverType": "qrkiac",
-      "serverUrl": "www.felicitas-spencer.com",
-      "serverConf1": "926m98",
-      "serverConf2": "dspf9c",
-      "serverConf3": "iuf1yc",
-      "currCount": 635,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:19",
+      "lastTime": "2025-08-31 18:08:19",
+      "id": "158",
+      "organId": "158",
+      "appId": "158",
+      "organName": "drew.kub",
+      "inoutMode": 384,
+      "name": "drew.kub",
+      "cname": "drew.kub",
+      "type": 531,
+      "clientId": "158",
+      "clientSecret": "co48l0",
+      "aesKey": "cbcx6i",
+      "aesIvKey": "21qraw",
+      "serverIp": "62.26.219.195",
+      "serverType": "aghq5v",
+      "serverUrl": "www.leigha-wyman.biz",
+      "serverConf1": "66t0y6",
+      "serverConf2": "ap5c1d",
+      "serverConf3": "9rg8ev",
+      "currCount": 661,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 834,
-      "description": "q6n2p8",
-      "spare1": "ccxzj4",
-      "spare2": "scuy6w",
-      "inOrganName": "tarra.erdman",
-      "userName": "tarra.erdman",
-      "appName": "tarra.erdman",
-      "inoutModeName": "tarra.erdman",
-      "typeName": "tarra.erdman"
+      "status": 434,
+      "description": "gqsdm6",
+      "spare1": "k1pg32",
+      "spare2": "1zauun",
+      "inOrganName": "drew.kub",
+      "userName": "drew.kub",
+      "appName": "drew.kub",
+      "inoutModeName": "drew.kub",
+      "typeName": "drew.kub"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5548,7 +5548,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=158
 ```
 **Response-fields:**
 
@@ -5603,44 +5603,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:34",
-      "lastTime": "2025-08-27 22:15:34",
-      "id": "89",
-      "organId": "89",
-      "appId": "89",
-      "organName": "tarra.erdman",
-      "inoutMode": 351,
-      "name": "tarra.erdman",
-      "cname": "tarra.erdman",
-      "type": 19,
-      "clientId": "89",
-      "clientSecret": "w6xf6u",
-      "aesKey": "zff2mu",
-      "aesIvKey": "6t3bau",
-      "serverIp": "217.26.150.93",
-      "serverType": "pxa26w",
-      "serverUrl": "www.felicitas-spencer.com",
-      "serverConf1": "foieir",
-      "serverConf2": "uu80tj",
-      "serverConf3": "svin9i",
-      "currCount": 796,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:19",
+      "lastTime": "2025-08-31 18:08:19",
+      "id": "158",
+      "organId": "158",
+      "appId": "158",
+      "organName": "drew.kub",
+      "inoutMode": 356,
+      "name": "drew.kub",
+      "cname": "drew.kub",
+      "type": 385,
+      "clientId": "158",
+      "clientSecret": "p9jqkj",
+      "aesKey": "ebpfuw",
+      "aesIvKey": "w7dw0u",
+      "serverIp": "62.26.219.195",
+      "serverType": "v8hnpe",
+      "serverUrl": "www.leigha-wyman.biz",
+      "serverConf1": "tx1bc1",
+      "serverConf2": "l019qw",
+      "serverConf3": "6y2mr4",
+      "currCount": 584,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 670,
-      "description": "moyl61",
-      "spare1": "lrcve6",
-      "spare2": "casrgu",
-      "inOrganName": "tarra.erdman",
-      "userName": "tarra.erdman",
-      "appName": "tarra.erdman",
-      "inoutModeName": "tarra.erdman",
-      "typeName": "tarra.erdman"
+      "status": 141,
+      "description": "keu451",
+      "spare1": "rkgz8w",
+      "spare2": "z1k9jq",
+      "inOrganName": "drew.kub",
+      "userName": "drew.kub",
+      "appName": "drew.kub",
+      "inoutModeName": "drew.kub",
+      "typeName": "drew.kub"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5715,7 +5715,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"timestamp":"2025-08-27 22:14:23"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"timestamp":"2025-08-31 18:07:21"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5757,8 +5757,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sqlasw",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "tfsfpr",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5801,8 +5801,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "j1thl7",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "woxroo",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5851,8 +5851,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5u3pps",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "3kk185",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -5893,7 +5893,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?q=d9h1ig&wlType=8tt5am&organName=tarra.erdman&limit=10&orderBy=740&organId=89&delFlag=6&page=1&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?limit=10&page=1&organName=drew.kub&orderBy=435&endTime=2025-08-31 18:07:21&organId=158&delFlag=2&q=s4st10&wlType=zr8k80&startTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -5931,27 +5931,27 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "ojn7y5"
+        "ffe2fk"
       ],
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "organSName": "tarra.erdman",
-      "organCode": "66235",
-      "address": "283 Abernathy Manor， East Wilma， HI 00346",
-      "wlType": "iin7l9",
-      "wlTypeName": "tarra.erdman",
-      "priority": 540,
-      "delFlag": 6,
-      "createTime": "2025-08-27 22:15:32",
-      "lastTime": "2025-08-27 22:15:32",
-      "contactName": "tarra.erdman",
-      "contactEmail": "fletcher.hickle@hotmail.com",
-      "contactMobile": "803.740.8989",
-      "description": "4igkmo",
-      "tel": "kyz0c4"
+      "organId": "158",
+      "organName": "drew.kub",
+      "organSName": "drew.kub",
+      "organCode": "63710",
+      "address": "290 Myrtle Overpass， East Chana， IN 24525-6896",
+      "wlType": "1q0p1q",
+      "wlTypeName": "drew.kub",
+      "priority": 244,
+      "delFlag": 2,
+      "createTime": "2025-08-31 18:08:18",
+      "lastTime": "2025-08-31 18:08:18",
+      "contactName": "drew.kub",
+      "contactEmail": "latasha.buckridge@hotmail.com",
+      "contactMobile": "1-715-323-3760",
+      "description": "u0qty4",
+      "tel": "ioq3kc"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6019,26 +6019,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "1fmavb"
+      "tujr2z"
     ],
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "organSName": "tarra.erdman",
-    "organCode": "66235",
-    "address": "283 Abernathy Manor， East Wilma， HI 00346",
-    "wlType": "7ae4iz",
-    "wlTypeName": "tarra.erdman",
-    "priority": 293,
-    "delFlag": 6,
-    "createTime": "2025-08-27 22:15:32",
-    "lastTime": "2025-08-27 22:15:32",
-    "contactName": "tarra.erdman",
-    "contactEmail": "fletcher.hickle@hotmail.com",
-    "contactMobile": "803.740.8989",
-    "description": "xubuw5",
-    "tel": "d5ja0n"
+    "organId": "158",
+    "organName": "drew.kub",
+    "organSName": "drew.kub",
+    "organCode": "63710",
+    "address": "290 Myrtle Overpass， East Chana， IN 24525-6896",
+    "wlType": "bo9sqj",
+    "wlTypeName": "drew.kub",
+    "priority": 377,
+    "delFlag": 2,
+    "createTime": "2025-08-31 18:08:18",
+    "lastTime": "2025-08-31 18:08:18",
+    "contactName": "drew.kub",
+    "contactEmail": "latasha.buckridge@hotmail.com",
+    "contactMobile": "1-715-323-3760",
+    "description": "z9qhvb",
+    "tel": "wmj5os"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6089,24 +6089,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "mwt35u"
+      "7739lt"
     ],
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "organSName": "tarra.erdman",
-    "organCode": "66235",
-    "address": "283 Abernathy Manor， East Wilma， HI 00346",
-    "wlType": "kw8o9p",
-    "wlTypeName": "tarra.erdman",
-    "priority": 346,
-    "delFlag": 6,
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "contactName": "tarra.erdman",
-    "contactEmail": "fletcher.hickle@hotmail.com",
-    "contactMobile": "803.740.8989",
-    "description": "zwfb0f",
-    "tel": "chiuw6"
+    "organId": "158",
+    "organName": "drew.kub",
+    "organSName": "drew.kub",
+    "organCode": "63710",
+    "address": "290 Myrtle Overpass， East Chana， IN 24525-6896",
+    "wlType": "wthz22",
+    "wlTypeName": "drew.kub",
+    "priority": 257,
+    "delFlag": 2,
+    "createTime": "2025-08-31 18:08:18",
+    "lastTime": "2025-08-31 18:08:18",
+    "contactName": "drew.kub",
+    "contactEmail": "latasha.buckridge@hotmail.com",
+    "contactMobile": "1-715-323-3760",
+    "description": "u56bz1",
+    "tel": "iicc9i"
   }
 }'
 ```
@@ -6126,8 +6126,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t8t8i7",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "vx6fc4",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6178,24 +6178,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "molt40"
+      "e6hsoi"
     ],
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "organSName": "tarra.erdman",
-    "organCode": "66235",
-    "address": "283 Abernathy Manor， East Wilma， HI 00346",
-    "wlType": "szkqqe",
-    "wlTypeName": "tarra.erdman",
-    "priority": 729,
-    "delFlag": 6,
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "contactName": "tarra.erdman",
-    "contactEmail": "fletcher.hickle@hotmail.com",
-    "contactMobile": "803.740.8989",
-    "description": "b5tt1x",
-    "tel": "32stbd"
+    "organId": "158",
+    "organName": "drew.kub",
+    "organSName": "drew.kub",
+    "organCode": "63710",
+    "address": "290 Myrtle Overpass， East Chana， IN 24525-6896",
+    "wlType": "rzwp4n",
+    "wlTypeName": "drew.kub",
+    "priority": 472,
+    "delFlag": 2,
+    "createTime": "2025-08-31 18:08:18",
+    "lastTime": "2025-08-31 18:08:18",
+    "contactName": "drew.kub",
+    "contactEmail": "latasha.buckridge@hotmail.com",
+    "contactMobile": "1-715-323-3760",
+    "description": "b9n4vd",
+    "tel": "r67uhr"
   }
 }'
 ```
@@ -6215,8 +6215,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hbstt0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "sks4at",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6265,8 +6265,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dxsqga",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "v1m8u7",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6317,24 +6317,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "z538qa"
+      "0ac7gx"
     ],
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "organSName": "tarra.erdman",
-    "organCode": "66235",
-    "address": "283 Abernathy Manor， East Wilma， HI 00346",
-    "wlType": "ohfu6o",
-    "wlTypeName": "tarra.erdman",
-    "priority": 253,
-    "delFlag": 6,
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "contactName": "tarra.erdman",
-    "contactEmail": "fletcher.hickle@hotmail.com",
-    "contactMobile": "803.740.8989",
-    "description": "pow5ts",
-    "tel": "9ey5t6"
+    "organId": "158",
+    "organName": "drew.kub",
+    "organSName": "drew.kub",
+    "organCode": "63710",
+    "address": "290 Myrtle Overpass， East Chana， IN 24525-6896",
+    "wlType": "7qkffr",
+    "wlTypeName": "drew.kub",
+    "priority": 939,
+    "delFlag": 2,
+    "createTime": "2025-08-31 18:08:18",
+    "lastTime": "2025-08-31 18:08:18",
+    "contactName": "drew.kub",
+    "contactEmail": "latasha.buckridge@hotmail.com",
+    "contactMobile": "1-715-323-3760",
+    "description": "v0k5j8",
+    "tel": "mq5cgb"
   }
 }'
 ```
@@ -6354,8 +6354,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3jkxzp",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "63ryey",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6396,7 +6396,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&orderBy=733&sname=tarra.erdman&endTime=2025-08-27 22:14:23&name=tarra.erdman&delFlag=6&q=4gbhis&startTime=2025-08-27 22:14:23&description=frdhz9&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&delFlag=2&q=lu208c&sname=drew.kub&limit=10&description=bm8kz1&orderBy=776&startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&name=drew.kub
 ```
 **Response-fields:**
 
@@ -6425,18 +6425,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:33",
-      "lastTime": "2025-08-27 22:15:33",
-      "id": "89",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "priority": 215,
-      "delFlag": 6,
-      "description": "kr6en0"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:19",
+      "lastTime": "2025-08-31 18:08:19",
+      "id": "158",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "priority": 31,
+      "delFlag": 2,
+      "description": "wu9gft"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6476,7 +6476,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'delFlag=6&name=tarra.erdman&startTime=2025-08-27 22:14:23&sname=tarra.erdman&q=0b22co&description=30cke0&endTime=2025-08-27 22:14:23&limit=10&page=1&orderBy=279'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'limit=10&page=1&description=esjnk3&startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&sname=drew.kub&orderBy=781&name=drew.kub&delFlag=2&q=hiu7r8'
 ```
 **Response-fields:**
 
@@ -6494,8 +6494,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7a5fsj",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "sfjjwv",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6554,17 +6554,17 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "priority": 214,
-    "delFlag": 6,
-    "description": "yrunis"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "priority": 836,
+    "delFlag": 2,
+    "description": "4tkx21"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6606,15 +6606,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "priority": 359,
-    "delFlag": 6,
-    "description": "75yvjk"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "priority": 900,
+    "delFlag": 2,
+    "description": "3i57za"
   }
 }'
 ```
@@ -6634,8 +6634,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9qt5cv",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "chrf8m",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6677,15 +6677,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "priority": 49,
-    "delFlag": 6,
-    "description": "g9tr45"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "priority": 486,
+    "delFlag": 2,
+    "description": "i6m6pe"
   }
 }'
 ```
@@ -6705,8 +6705,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "74d55v",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "c0g5cm",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6755,8 +6755,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c7zmkc",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "8lvhda",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6799,7 +6799,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?description=t9wr4d&q=2akzds&orderBy=485&page=1&limit=10&type=2y4fq4&code=66235&existKey=jigx8o&startTime=2025-08-27 22:14:23&delFlag=6&name=tarra.erdman&endTime=2025-08-27 22:14:23
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?orderBy=616&endTime=2025-08-31 18:07:21&existKey=bp21dx&delFlag=2&startTime=2025-08-31 18:07:21&type=io0aii&q=h6n5c7&name=drew.kub&code=63710&page=1&limit=10&description=j8h1iq
 ```
 **Response-fields:**
 
@@ -6829,19 +6829,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:33",
-      "lastTime": "2025-08-27 22:15:33",
-      "id": "89",
-      "name": "tarra.erdman",
-      "type": "5y2gap",
-      "code": "66235",
-      "priority": 177,
-      "delFlag": 6,
-      "description": "odwui2"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:19",
+      "lastTime": "2025-08-31 18:08:19",
+      "id": "158",
+      "name": "drew.kub",
+      "type": "mkcdxz",
+      "code": "63710",
+      "priority": 436,
+      "delFlag": 2,
+      "description": "mkz8px"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6883,7 +6883,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&orderBy=973&page=1&name=tarra.erdman&q=pntui6&code=66235&existKey=cqewpw&delFlag=6&type=vd193v&description=vjhx6h&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'delFlag=2&endTime=2025-08-31 18:07:21&orderBy=122&code=63710&page=1&description=3t0ol5&startTime=2025-08-31 18:07:21&name=drew.kub&limit=10&existKey=9lcg6r&q=6w5xwd&type=ieohrm'
 ```
 **Response-fields:**
 
@@ -6901,8 +6901,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4ug6qh",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "6p196k",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -6962,18 +6962,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "type": "zg5doj",
-    "code": "66235",
-    "priority": 830,
-    "delFlag": 6,
-    "description": "52n8q6"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "type": "kq0gb2",
+    "code": "63710",
+    "priority": 489,
+    "delFlag": 2,
+    "description": "518zqr"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7016,16 +7016,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "type": "qn3er8",
-    "code": "66235",
-    "priority": 669,
-    "delFlag": 6,
-    "description": "0gurek"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "type": "o3bog4",
+    "code": "63710",
+    "priority": 411,
+    "delFlag": 2,
+    "description": "bdnkvq"
   }
 }'
 ```
@@ -7045,8 +7045,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6ze9nq",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ehmltp",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7089,16 +7089,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:33",
-    "lastTime": "2025-08-27 22:15:33",
-    "id": "89",
-    "name": "tarra.erdman",
-    "type": "h4cb2g",
-    "code": "66235",
-    "priority": 940,
-    "delFlag": 6,
-    "description": "hq8vaa"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:19",
+    "lastTime": "2025-08-31 18:08:19",
+    "id": "158",
+    "name": "drew.kub",
+    "type": "t403ir",
+    "code": "63710",
+    "priority": 267,
+    "delFlag": 2,
+    "description": "cznw6m"
   }
 }'
 ```
@@ -7118,8 +7118,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0crc4s",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ibrion",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7168,8 +7168,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jeozqx",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "5hleth",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7215,7 +7215,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?refId=89&endTime=2025-08-27 22:14:23&appId=89&fileName=tarra.erdman&limit=10&fileSize=127&resclassId=89&refType=so4po2&page=1&q=l0ehbk&startTime=2025-08-27 22:14:23&key=s37slw&fileIsvalid=true&fileExtension=gt2ue4&orderBy=862
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?q=7h4b01&fileExtension=7aw51c&fileIsvalid=true&key=qpcdr6&fileSize=233&appId=158&fileName=drew.kub&startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&limit=10&page=1&refType=cuq4qp&refId=158&orderBy=465&resclassId=158
 ```
 **Response-fields:**
 
@@ -7246,25 +7246,25 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 966,
+    "totalCount": 354,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "89",
-        "resclassId": "89",
-        "fileName": "tarra.erdman",
+        "id": "158",
+        "resclassId": "158",
+        "fileName": "drew.kub",
         "fileIsvalid": true,
-        "createTime": "2025-08-27 22:15:32",
-        "fileExtension": "gzozo3",
+        "createTime": "2025-08-31 18:08:18",
+        "fileExtension": "lwproq",
         "ids": [
-          "i5815k"
+          "aft357"
         ]
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7309,7 +7309,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'orderBy=730&resclassId=89&fileIsvalid=true&appId=89&refId=89&fileExtension=sl6lx7&startTime=2025-08-27 22:14:23&key=vm8nsw&q=2coynv&refType=4r2ulh&fileSize=326&page=1&endTime=2025-08-27 22:14:23&limit=10&fileName=tarra.erdman'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileSize=849&refId=158&orderBy=763&fileName=drew.kub&q=xfnxfl&fileIsvalid=true&startTime=2025-08-31 18:07:21&appId=158&endTime=2025-08-31 18:07:21&limit=10&resclassId=158&page=1&fileExtension=8o12et&key=95tfln&refType=r8kfi1'
 ```
 **Response-fields:**
 
@@ -7327,8 +7327,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6wrdjg",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "u277ei",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7359,7 +7359,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=158
 ```
 **Response-fields:**
 
@@ -7385,17 +7385,17 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "89",
-    "resclassId": "89",
-    "fileName": "tarra.erdman",
+    "id": "158",
+    "resclassId": "158",
+    "fileName": "drew.kub",
     "fileIsvalid": true,
-    "createTime": "2025-08-27 22:15:32",
-    "fileExtension": "tkjou1",
+    "createTime": "2025-08-31 18:08:18",
+    "fileExtension": "8ho0b6",
     "ids": [
-      "wzhqdy"
+      "3se2hi"
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7435,14 +7435,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "89",
-    "resclassId": "89",
-    "fileName": "tarra.erdman",
+    "id": "158",
+    "resclassId": "158",
+    "fileName": "drew.kub",
     "fileIsvalid": true,
-    "createTime": "2025-08-27 22:15:32",
-    "fileExtension": "xxnrxv",
+    "createTime": "2025-08-31 18:08:18",
+    "fileExtension": "44sebg",
     "ids": [
-      "nvhpeq"
+      "roodh5"
     ]
   }
 }'
@@ -7463,8 +7463,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yno0og",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "12dyha",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7504,14 +7504,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "89",
-    "resclassId": "89",
-    "fileName": "tarra.erdman",
+    "id": "158",
+    "resclassId": "158",
+    "fileName": "drew.kub",
     "fileIsvalid": true,
-    "createTime": "2025-08-27 22:15:32",
-    "fileExtension": "6j40fb",
+    "createTime": "2025-08-31 18:08:18",
+    "fileExtension": "whc9qg",
     "ids": [
-      "9zi2hb"
+      "ib1nxe"
     ]
   }
 }'
@@ -7532,8 +7532,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1zy2rl",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "eemzpp",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7573,14 +7573,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "89",
-    "resclassId": "89",
-    "fileName": "tarra.erdman",
+    "id": "158",
+    "resclassId": "158",
+    "fileName": "drew.kub",
     "fileIsvalid": true,
-    "createTime": "2025-08-27 22:15:32",
-    "fileExtension": "izu6w4",
+    "createTime": "2025-08-31 18:08:18",
+    "fileExtension": "wm1ugf",
     "ids": [
-      "vz4axy"
+      "4u2nzh"
     ]
   }
 }'
@@ -7601,8 +7601,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "44ijt4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "vxlbod",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7645,8 +7645,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d07wvj",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "pc8hy1",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7678,7 +7678,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=tarra.erdman&delete=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?delete=true&fileName=drew.kub
 ```
 **Response-fields:**
 
@@ -7696,8 +7696,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ivkni0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "wacru9",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7747,14 +7747,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "tarra.erdman",
-    "filename": "tarra.erdman",
-    "fileType": "shjmh8",
-    "fileUrl": "www.felicitas-spencer.com",
-    "fileHttpUrl": "www.felicitas-spencer.com",
-    "statusCode": "66235"
+    "originFilename": "drew.kub",
+    "filename": "drew.kub",
+    "fileType": "k4opvc",
+    "fileUrl": "www.leigha-wyman.biz",
+    "fileHttpUrl": "www.leigha-wyman.biz",
+    "statusCode": "63710"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7811,15 +7811,15 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "tarra.erdman",
-      "filename": "tarra.erdman",
-      "fileType": "kaotid",
-      "fileUrl": "www.felicitas-spencer.com",
-      "fileHttpUrl": "www.felicitas-spencer.com",
-      "statusCode": "66235"
+      "originFilename": "drew.kub",
+      "filename": "drew.kub",
+      "fileType": "sxxfet",
+      "fileUrl": "www.leigha-wyman.biz",
+      "fileHttpUrl": "www.leigha-wyman.biz",
+      "statusCode": "63710"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7850,7 +7850,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=bt0m3c
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=hjxfwn
 ```
 **Response-fields:**
 
@@ -7868,8 +7868,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rb9fbh",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "z7hydy",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -7916,7 +7916,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?page=1&areaId=374&groupId=868&q=bgsbv9&roleTypeId=89&positionId=89&batchId=89&keyWords=5qpa9v&orderBy=906&startTime=2025-08-27 22:14:23&appId=89&organId=89&endTime=2025-08-27 22:14:23&type=jm30kt&limit=10&status=726
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?endTime=2025-08-31 18:07:21&batchId=158&keyWords=2pod81&q=bv1h5k&positionId=158&groupId=904&limit=10&appId=158&areaId=699&page=1&status=790&organId=158&startTime=2025-08-31 18:07:21&orderBy=893&type=g2ncz3&roleTypeId=158
 ```
 **Response-fields:**
 
@@ -7989,65 +7989,65 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 700,
+    "totalCount": 800,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:28",
-        "lastTime": "2025-08-27 22:15:28",
-        "id": 24,
-        "appId": "89",
-        "saveSource": "zm42rx",
-        "unitName": "tarra.erdman",
-        "name": "tarra.erdman",
-        "idNum": "tf2ko5",
-        "duty": "dn5d5y",
-        "telephone": "1-781-417-5663",
-        "mobile": "803.740.8989",
-        "extInfo1": "nk4ab6",
-        "extInfo2": "mm55ub",
-        "extInfo3": "ubu01t",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:14",
+        "lastTime": "2025-08-31 18:08:14",
+        "id": 435,
+        "appId": "158",
+        "saveSource": "wua4a5",
+        "unitName": "drew.kub",
+        "name": "drew.kub",
+        "idNum": "grlbv4",
+        "duty": "60azvm",
+        "telephone": "1-775-667-5234",
+        "mobile": "1-715-323-3760",
+        "extInfo1": "2nqosu",
+        "extInfo2": "3rk94k",
+        "extInfo3": "qdifps",
         "needInitUser": true,
-        "userId": "89",
+        "userId": "158",
         "needInitOrgan": true,
-        "organId": "89",
-        "type": "q5kw2z",
-        "foreignUrl": "www.felicitas-spencer.com",
-        "bizType": 784,
-        "bizOrganId": "89",
-        "bizAreaId": 344,
-        "bizGroupId": 959,
-        "bizPower": "1qie2f",
-        "bizMultiInfo": "mp3nrn",
+        "organId": "158",
+        "type": "6ll0lq",
+        "foreignUrl": "www.leigha-wyman.biz",
+        "bizType": 309,
+        "bizOrganId": "158",
+        "bizAreaId": 205,
+        "bizGroupId": 922,
+        "bizPower": "mo08yy",
+        "bizMultiInfo": "e11r8j",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "89",
-        "opOrganId": "89",
-        "opTime": "2025-08-27 22:15:28",
-        "opInfo": "kj7rfw",
-        "priority": 920,
-        "status": 368,
-        "delFlag": 6,
-        "dataBatch": "212qji",
-        "dataVersion": 112,
-        "updateTime": "2025-08-27 22:15:28",
-        "syncMode": "61ohud",
-        "syncTime": "2025-08-27 22:15:28",
-        "description": "3hd707",
-        "groupName": "tarra.erdman",
-        "positionName": "tarra.erdman",
-        "bizPowerName": "tarra.erdman",
-        "subdistrictName": "tarra.erdman",
-        "communityName": "tarra.erdman"
+        "opUserId": "158",
+        "opOrganId": "158",
+        "opTime": "2025-08-31 18:08:14",
+        "opInfo": "2gli6v",
+        "priority": 347,
+        "status": 277,
+        "delFlag": 2,
+        "dataBatch": "3q08wz",
+        "dataVersion": 297,
+        "updateTime": "2025-08-31 18:08:14",
+        "syncMode": "papyyt",
+        "syncTime": "2025-08-31 18:08:14",
+        "description": "ol5dd0",
+        "groupName": "drew.kub",
+        "positionName": "drew.kub",
+        "bizPowerName": "drew.kub",
+        "subdistrictName": "drew.kub",
+        "communityName": "drew.kub"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8093,7 +8093,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'type=2xnomo&groupId=463&page=1&startTime=2025-08-27 22:14:23&batchId=89&orderBy=13&keyWords=iswsmg&endTime=2025-08-27 22:14:23&appId=89&areaId=862&status=170&positionId=89&q=getugd&limit=10&roleTypeId=89&organId=89'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'batchId=158&positionId=158&endTime=2025-08-31 18:07:21&startTime=2025-08-31 18:07:21&page=1&type=92c7tg&status=167&organId=158&roleTypeId=158&areaId=506&keyWords=dgj1y4&appId=158&limit=10&q=i5zs7i&orderBy=472&groupId=584'
 ```
 **Response-fields:**
 
@@ -8111,8 +8111,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0zb589",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "4elicf",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8143,7 +8143,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/21.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/709.do
 ```
 **Response-fields:**
 
@@ -8211,57 +8211,57 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": 549,
-    "appId": "89",
-    "saveSource": "aonm5f",
-    "unitName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "idNum": "jfcmju",
-    "duty": "rp9o6v",
-    "telephone": "1-781-417-5663",
-    "mobile": "803.740.8989",
-    "extInfo1": "prs8y8",
-    "extInfo2": "1ee5n4",
-    "extInfo3": "1z2a15",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "id": 158,
+    "appId": "158",
+    "saveSource": "nvoccn",
+    "unitName": "drew.kub",
+    "name": "drew.kub",
+    "idNum": "omf4kg",
+    "duty": "c7n86i",
+    "telephone": "1-775-667-5234",
+    "mobile": "1-715-323-3760",
+    "extInfo1": "1nu1iz",
+    "extInfo2": "h70zfr",
+    "extInfo3": "k4a6ol",
     "needInitUser": true,
-    "userId": "89",
+    "userId": "158",
     "needInitOrgan": true,
-    "organId": "89",
-    "type": "r6tg7d",
-    "foreignUrl": "www.felicitas-spencer.com",
-    "bizType": 477,
-    "bizOrganId": "89",
-    "bizAreaId": 920,
-    "bizGroupId": 130,
-    "bizPower": "ncy4p4",
-    "bizMultiInfo": "ttf0fy",
+    "organId": "158",
+    "type": "kwcpee",
+    "foreignUrl": "www.leigha-wyman.biz",
+    "bizType": 169,
+    "bizOrganId": "158",
+    "bizAreaId": 728,
+    "bizGroupId": 309,
+    "bizPower": "mdqpyb",
+    "bizMultiInfo": "pi4rpa",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "89",
-    "opOrganId": "89",
-    "opTime": "2025-08-27 22:15:28",
-    "opInfo": "hhpawi",
-    "priority": 578,
-    "status": 6,
-    "delFlag": 6,
-    "dataBatch": "62cybf",
-    "dataVersion": 712,
-    "updateTime": "2025-08-27 22:15:28",
-    "syncMode": "qrbnmx",
-    "syncTime": "2025-08-27 22:15:28",
-    "description": "tlrrku",
-    "groupName": "tarra.erdman",
-    "positionName": "tarra.erdman",
-    "bizPowerName": "tarra.erdman",
-    "subdistrictName": "tarra.erdman",
-    "communityName": "tarra.erdman"
+    "opUserId": "158",
+    "opOrganId": "158",
+    "opTime": "2025-08-31 18:08:14",
+    "opInfo": "fbylc9",
+    "priority": 620,
+    "status": 335,
+    "delFlag": 2,
+    "dataBatch": "w55bp7",
+    "dataVersion": 165,
+    "updateTime": "2025-08-31 18:08:14",
+    "syncMode": "nx7ndy",
+    "syncTime": "2025-08-31 18:08:14",
+    "description": "rw6khw",
+    "groupName": "drew.kub",
+    "positionName": "drew.kub",
+    "bizPowerName": "drew.kub",
+    "subdistrictName": "drew.kub",
+    "communityName": "drew.kub"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8338,50 +8338,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": 729,
-    "appId": "89",
-    "saveSource": "rn7kaw",
-    "unitName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "idNum": "mokjhz",
-    "duty": "wmhqox",
-    "telephone": "1-781-417-5663",
-    "mobile": "803.740.8989",
-    "extInfo1": "ry9bmp",
-    "extInfo2": "qvr9qy",
-    "extInfo3": "wbdk5h",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "id": 958,
+    "appId": "158",
+    "saveSource": "x1szb7",
+    "unitName": "drew.kub",
+    "name": "drew.kub",
+    "idNum": "qlw3pi",
+    "duty": "ehn853",
+    "telephone": "1-775-667-5234",
+    "mobile": "1-715-323-3760",
+    "extInfo1": "qw5c8h",
+    "extInfo2": "6gr1ol",
+    "extInfo3": "n2b57i",
     "needInitUser": true,
-    "userId": "89",
+    "userId": "158",
     "needInitOrgan": true,
-    "organId": "89",
-    "type": "ar913r",
-    "foreignUrl": "www.felicitas-spencer.com",
-    "bizType": 678,
-    "bizOrganId": "89",
-    "bizAreaId": 984,
-    "bizGroupId": 584,
-    "bizPower": "fbs4du",
-    "bizMultiInfo": "kmiayf",
+    "organId": "158",
+    "type": "fbj8hw",
+    "foreignUrl": "www.leigha-wyman.biz",
+    "bizType": 734,
+    "bizOrganId": "158",
+    "bizAreaId": 226,
+    "bizGroupId": 308,
+    "bizPower": "1el6vq",
+    "bizMultiInfo": "lhufl2",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "89",
-    "opOrganId": "89",
-    "opTime": "2025-08-27 22:15:28",
-    "opInfo": "lzc5i8",
-    "priority": 666,
-    "status": 301,
-    "delFlag": 6,
-    "dataBatch": "z1lonv",
-    "dataVersion": 148,
-    "updateTime": "2025-08-27 22:15:28",
-    "syncMode": "r36d6z",
-    "syncTime": "2025-08-27 22:15:28",
-    "description": "loyp43"
+    "opUserId": "158",
+    "opOrganId": "158",
+    "opTime": "2025-08-31 18:08:14",
+    "opInfo": "3r4hto",
+    "priority": 437,
+    "status": 493,
+    "delFlag": 2,
+    "dataBatch": "amfpw5",
+    "dataVersion": 624,
+    "updateTime": "2025-08-31 18:08:14",
+    "syncMode": "6mnnd5",
+    "syncTime": "2025-08-31 18:08:14",
+    "description": "yujas5"
   }
 }'
 ```
@@ -8401,8 +8401,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jorjw5",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "qmoy1y",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8479,50 +8479,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": 600,
-    "appId": "89",
-    "saveSource": "76st81",
-    "unitName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "idNum": "ho4ig7",
-    "duty": "cypc1w",
-    "telephone": "1-781-417-5663",
-    "mobile": "803.740.8989",
-    "extInfo1": "sw3ccf",
-    "extInfo2": "2ud0f8",
-    "extInfo3": "xlzct2",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:15",
+    "lastTime": "2025-08-31 18:08:15",
+    "id": 720,
+    "appId": "158",
+    "saveSource": "0ccze8",
+    "unitName": "drew.kub",
+    "name": "drew.kub",
+    "idNum": "r8styc",
+    "duty": "09mgk2",
+    "telephone": "1-775-667-5234",
+    "mobile": "1-715-323-3760",
+    "extInfo1": "4vkphv",
+    "extInfo2": "es9nrk",
+    "extInfo3": "ri1bng",
     "needInitUser": true,
-    "userId": "89",
+    "userId": "158",
     "needInitOrgan": true,
-    "organId": "89",
-    "type": "b9jdp9",
-    "foreignUrl": "www.felicitas-spencer.com",
-    "bizType": 769,
-    "bizOrganId": "89",
-    "bizAreaId": 213,
-    "bizGroupId": 189,
-    "bizPower": "16a0h7",
-    "bizMultiInfo": "a1ed1z",
+    "organId": "158",
+    "type": "vltmg6",
+    "foreignUrl": "www.leigha-wyman.biz",
+    "bizType": 8,
+    "bizOrganId": "158",
+    "bizAreaId": 642,
+    "bizGroupId": 314,
+    "bizPower": "iqw5h1",
+    "bizMultiInfo": "e2qcwn",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "89",
-    "opOrganId": "89",
-    "opTime": "2025-08-27 22:15:28",
-    "opInfo": "ibfj3i",
-    "priority": 937,
-    "status": 949,
-    "delFlag": 6,
-    "dataBatch": "heeamw",
-    "dataVersion": 480,
-    "updateTime": "2025-08-27 22:15:28",
-    "syncMode": "zco606",
-    "syncTime": "2025-08-27 22:15:28",
-    "description": "cx27vw"
+    "opUserId": "158",
+    "opOrganId": "158",
+    "opTime": "2025-08-31 18:08:15",
+    "opInfo": "rrzk6s",
+    "priority": 429,
+    "status": 974,
+    "delFlag": 2,
+    "dataBatch": "8n0ib9",
+    "dataVersion": 445,
+    "updateTime": "2025-08-31 18:08:15",
+    "syncMode": "r9s944",
+    "syncTime": "2025-08-31 18:08:15",
+    "description": "drf4x6"
   }
 }'
 ```
@@ -8542,8 +8542,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7fac6x",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "x6nwxd",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8592,8 +8592,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bmzwk3",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "t6z0nz",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8636,8 +8636,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u1f0h1",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "4z7kqt",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8695,7 +8695,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?orderBy=396&foreignId=89&limit=10&recvGroupId=89&recvMemberId=89&page=1&recvOrganId=89&type=73&siteId=572&iconStyle=gugms4&q=uhq3p9&endTime=2025-08-27 22:14:23&bizType=p4qt2v&content=klif2l&msgUrl=www.felicitas-spencer.com&updateTime=2025-08-27 22:15:36&startTime=2025-08-27 22:14:23&description=irddzq&status=376&title=o4grzg&updatorId=89&id=204&recvTargetid=89&imagePath=bxogkg&readStatus=lc6v92&organId=89&creatorId=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?foreignId=158&content=trli4b&updatorId=158&creatorId=158&siteId=696&readStatus=bk951d&recvOrganId=158&orderBy=702&updateTime=2025-08-31 18:08:21&startTime=2025-08-31 18:07:21&iconStyle=8itcok&type=60&description=7jh5ly&msgUrl=www.leigha-wyman.biz&recvGroupId=158&endTime=2025-08-31 18:07:21&imagePath=wc02ro&recvTargetid=158&title=2vdsoc&limit=10&status=197&id=296&page=1&organId=158&bizType=0ktz3o&recvMemberId=158&q=wtt5et
 ```
 **Response-fields:**
 
@@ -8737,31 +8737,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:36",
-      "lastTime": "2025-08-27 22:15:36",
-      "id": 629,
-      "siteId": 77,
-      "organId": "89",
-      "bizType": "3gv2px",
-      "type": 365,
-      "title": "1gye7d",
-      "content": "xg5vv8",
-      "msgUrl": "www.felicitas-spencer.com",
-      "foreignId": "89",
-      "imagePath": "igqj23",
-      "iconStyle": "uduq30",
-      "recvMemberId": "89",
-      "recvGroupId": "89",
-      "recvOrganId": "89",
-      "recvTargetid": "89",
-      "status": 493,
-      "updatorId": "89",
-      "updateTime": "2025-08-27 22:15:36",
-      "description": "qfbkh8"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:21",
+      "lastTime": "2025-08-31 18:08:21",
+      "id": 157,
+      "siteId": 920,
+      "organId": "158",
+      "bizType": "cwbszz",
+      "type": 374,
+      "title": "pg8c8q",
+      "content": "kf808j",
+      "msgUrl": "www.leigha-wyman.biz",
+      "foreignId": "158",
+      "imagePath": "dtje9s",
+      "iconStyle": "8v3lfg",
+      "recvMemberId": "158",
+      "recvGroupId": "158",
+      "recvOrganId": "158",
+      "recvTargetid": "158",
+      "status": 773,
+      "updatorId": "158",
+      "updateTime": "2025-08-31 18:08:21",
+      "description": "rpt2t6"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8818,7 +8818,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?type=472&content=5rvvc2&title=2wr84r&q=t8w002&foreignId=89&status=756&creatorId=89&updateTime=2025-08-27 22:15:36&limit=10&id=721&description=fj4ug7&iconStyle=whl9si&organId=89&orderBy=832&bizType=qlc24i&endTime=2025-08-27 22:14:23&recvGroupId=89&readStatus=jhtrga&page=1&recvMemberId=89&recvOrganId=89&updatorId=89&imagePath=h8gsbj&siteId=814&startTime=2025-08-27 22:14:23&msgUrl=www.felicitas-spencer.com&recvTargetid=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?startTime=2025-08-31 18:07:21&id=738&limit=10&description=67o93s&organId=158&iconStyle=burhjz&content=q9tujq&updateTime=2025-08-31 18:08:21&recvMemberId=158&title=hwbdv4&type=959&msgUrl=www.leigha-wyman.biz&orderBy=160&q=e3439h&page=1&updatorId=158&siteId=296&recvOrganId=158&creatorId=158&readStatus=dmpk4b&foreignId=158&recvTargetid=158&status=331&bizType=jgjj6g&endTime=2025-08-31 18:07:21&recvGroupId=158&imagePath=yluf4l
 ```
 **Response-fields:**
 
@@ -8860,31 +8860,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:36",
-      "lastTime": "2025-08-27 22:15:36",
-      "id": 683,
-      "siteId": 791,
-      "organId": "89",
-      "bizType": "1hdob1",
-      "type": 379,
-      "title": "pp2953",
-      "content": "wjacei",
-      "msgUrl": "www.felicitas-spencer.com",
-      "foreignId": "89",
-      "imagePath": "qx3ksl",
-      "iconStyle": "7qhcvq",
-      "recvMemberId": "89",
-      "recvGroupId": "89",
-      "recvOrganId": "89",
-      "recvTargetid": "89",
-      "status": 572,
-      "updatorId": "89",
-      "updateTime": "2025-08-27 22:15:36",
-      "description": "km9e8d"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:21",
+      "lastTime": "2025-08-31 18:08:21",
+      "id": 969,
+      "siteId": 67,
+      "organId": "158",
+      "bizType": "xw44jb",
+      "type": 905,
+      "title": "x7esr6",
+      "content": "raxec4",
+      "msgUrl": "www.leigha-wyman.biz",
+      "foreignId": "158",
+      "imagePath": "abbyxr",
+      "iconStyle": "1ni7o4",
+      "recvMemberId": "158",
+      "recvGroupId": "158",
+      "recvOrganId": "158",
+      "recvTargetid": "158",
+      "status": 449,
+      "updatorId": "158",
+      "updateTime": "2025-08-31 18:08:21",
+      "description": "wv9bk7"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -8941,7 +8941,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'updatorId=89&type=418&description=dpjuj4&startTime=2025-08-27 22:14:23&recvTargetid=89&page=1&title=x0lygx&imagePath=p8qim1&id=341&limit=10&siteId=914&content=qtkor1&readStatus=5bwi4o&msgUrl=www.felicitas-spencer.com&creatorId=89&recvOrganId=89&q=d00eay&status=673&updateTime=2025-08-27 22:15:36&orderBy=228&bizType=744pb1&recvMemberId=89&endTime=2025-08-27 22:14:23&iconStyle=99au0s&foreignId=89&recvGroupId=89&organId=89'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'orderBy=482&imagePath=8x8w22&limit=10&msgUrl=www.leigha-wyman.biz&updatorId=158&content=jxi283&updateTime=2025-08-31 18:08:21&recvGroupId=158&title=c1fqp9&status=570&foreignId=158&bizType=i2z9q0&siteId=393&organId=158&recvTargetid=158&recvMemberId=158&endTime=2025-08-31 18:07:21&id=667&description=6g3k0i&iconStyle=103dwp&q=oywqzq&page=1&type=573&readStatus=e8wlwb&recvOrganId=158&startTime=2025-08-31 18:07:21&creatorId=158'
 ```
 **Response-fields:**
 
@@ -8959,8 +8959,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zlh9nf",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "0rsjwm",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9032,30 +9032,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": 901,
-    "siteId": 949,
-    "organId": "89",
-    "bizType": "e9eanx",
-    "type": 36,
-    "title": "szbrte",
-    "content": "w1pqgk",
-    "msgUrl": "www.felicitas-spencer.com",
-    "foreignId": "89",
-    "imagePath": "bkcics",
-    "iconStyle": "fg4kxv",
-    "recvMemberId": "89",
-    "recvGroupId": "89",
-    "recvOrganId": "89",
-    "recvTargetid": "89",
-    "status": 522,
-    "updatorId": "89",
-    "updateTime": "2025-08-27 22:15:36",
-    "description": "24ai1n"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:21",
+    "lastTime": "2025-08-31 18:08:21",
+    "id": 261,
+    "siteId": 769,
+    "organId": "158",
+    "bizType": "z7isij",
+    "type": 814,
+    "title": "9udgko",
+    "content": "6aptvp",
+    "msgUrl": "www.leigha-wyman.biz",
+    "foreignId": "158",
+    "imagePath": "1r44zq",
+    "iconStyle": "i61vhe",
+    "recvMemberId": "158",
+    "recvGroupId": "158",
+    "recvOrganId": "158",
+    "recvTargetid": "158",
+    "status": 131,
+    "updatorId": "158",
+    "updateTime": "2025-08-31 18:08:21",
+    "description": "kvmhm9"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9110,28 +9110,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": 725,
-    "siteId": 756,
-    "organId": "89",
-    "bizType": "8ql7fm",
-    "type": 424,
-    "title": "s14we1",
-    "content": "8dg905",
-    "msgUrl": "www.felicitas-spencer.com",
-    "foreignId": "89",
-    "imagePath": "vkbpq5",
-    "iconStyle": "osw3l0",
-    "recvMemberId": "89",
-    "recvGroupId": "89",
-    "recvOrganId": "89",
-    "recvTargetid": "89",
-    "status": 696,
-    "updatorId": "89",
-    "updateTime": "2025-08-27 22:15:36",
-    "description": "472glb"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:21",
+    "lastTime": "2025-08-31 18:08:21",
+    "id": 923,
+    "siteId": 221,
+    "organId": "158",
+    "bizType": "p2fjui",
+    "type": 931,
+    "title": "5ha8ix",
+    "content": "zgoegd",
+    "msgUrl": "www.leigha-wyman.biz",
+    "foreignId": "158",
+    "imagePath": "y9kxvn",
+    "iconStyle": "u1cetr",
+    "recvMemberId": "158",
+    "recvGroupId": "158",
+    "recvOrganId": "158",
+    "recvTargetid": "158",
+    "status": 83,
+    "updatorId": "158",
+    "updateTime": "2025-08-31 18:08:21",
+    "description": "sjrmeu"
   }
 }'
 ```
@@ -9151,8 +9151,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p4hajq",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ufrk8r",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9207,28 +9207,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": 230,
-    "siteId": 73,
-    "organId": "89",
-    "bizType": "ujujss",
-    "type": 160,
-    "title": "fbxd05",
-    "content": "931afn",
-    "msgUrl": "www.felicitas-spencer.com",
-    "foreignId": "89",
-    "imagePath": "4i21os",
-    "iconStyle": "tc8kwj",
-    "recvMemberId": "89",
-    "recvGroupId": "89",
-    "recvOrganId": "89",
-    "recvTargetid": "89",
-    "status": 697,
-    "updatorId": "89",
-    "updateTime": "2025-08-27 22:15:36",
-    "description": "p3zr9v"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:21",
+    "lastTime": "2025-08-31 18:08:21",
+    "id": 465,
+    "siteId": 400,
+    "organId": "158",
+    "bizType": "w16ppj",
+    "type": 679,
+    "title": "pcq6vx",
+    "content": "w8vwaf",
+    "msgUrl": "www.leigha-wyman.biz",
+    "foreignId": "158",
+    "imagePath": "rew179",
+    "iconStyle": "rwilm9",
+    "recvMemberId": "158",
+    "recvGroupId": "158",
+    "recvOrganId": "158",
+    "recvTargetid": "158",
+    "status": 786,
+    "updatorId": "158",
+    "updateTime": "2025-08-31 18:08:21",
+    "description": "uyq4kl"
   }
 }'
 ```
@@ -9248,8 +9248,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s7ydgd",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "8weep1",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9298,8 +9298,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0u9fzg",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "8gchkm",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9342,8 +9342,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p50qcp",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "bkm65v",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9392,8 +9392,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "axc28o",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "dxv12l",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9442,8 +9442,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ysf83k",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "i7o8r4",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9487,10 +9487,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "9ijuvl",
-    "mapKey2": "m94d9p"
+    "mapKey1": "bx861m",
+    "mapKey2": "6g0vb1"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9557,7 +9557,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?status=6k447i&opTime=2025-08-27 22:15:36&creatorId=89&msgTitle=q6xvoy&page=1&id=89&q=cdpiwd&spare1=an8adj&endTime=2025-08-27 22:14:23&msgType=78&msgModuleName=tarra.erdman&msgAccountName=tarra.erdman&msgId=925&msgLabels=phr1qg&opUserId=89&startTime=2025-08-27 22:14:23&limit=10&msgOrganName=tarra.erdman&foreignId=89&msgContent=at9ib4&msgUserId=89&msgAbstract=lg3acg&msgModuleId=89&msgUrl=www.felicitas-spencer.com&spare2=ty71lg&opOrganId=89&msgUserName=tarra.erdman&type=qs5swz&msgAccountId=89&opOrganName=tarra.erdman&description=71hi4h&siteId=815&orderBy=688&msgCreateTime=2025-08-27 22:15:36&bizType=l9cpjx&msgOrganId=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?limit=10&msgContent=o2i9vg&msgModuleId=158&status=eit1c1&opTime=2025-08-31 18:08:22&msgModuleName=drew.kub&msgType=559&msgOrganId=158&spare1=krnwc5&orderBy=329&msgAccountId=158&msgId=916&msgOrganName=drew.kub&msgUserName=drew.kub&q=9ntjyf&bizType=a7yews&opUserId=158&page=1&msgUserId=158&msgUrl=www.leigha-wyman.biz&msgAccountName=drew.kub&msgCreateTime=2025-08-31 18:08:22&opOrganName=drew.kub&foreignId=158&startTime=2025-08-31 18:07:21&opOrganId=158&id=158&type=h5jzj8&msgTitle=t7tbl4&spare2=cmmdlf&msgLabels=o497dh&siteId=982&msgAbstract=n3p3f0&creatorId=158&endTime=2025-08-31 18:07:21&description=f2cm4e
 ```
 **Response-fields:**
 
@@ -9609,41 +9609,41 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:36",
-      "lastTime": "2025-08-27 22:15:36",
-      "id": "89",
-      "siteId": 933,
-      "foreignId": "89",
-      "type": "tkz4sz",
-      "bizType": "ngz2q3",
-      "msgCreateTime": "2025-08-27 22:15:36",
-      "msgId": 229,
-      "msgType": 111,
-      "msgTitle": "4uibc7",
-      "msgAbstract": "12j3h9",
-      "msgAccountId": "89",
-      "msgAccountName": "tarra.erdman",
-      "msgModuleId": "89",
-      "msgModuleName": "tarra.erdman",
-      "msgUserId": "89",
-      "msgUserName": "tarra.erdman",
-      "msgOrganId": "89",
-      "msgOrganName": "tarra.erdman",
-      "msgUrl": "www.felicitas-spencer.com",
-      "msgLabels": "l2rjxc",
-      "msgContent": "y6wy02",
-      "status": "brs5q3",
-      "opUserId": "89",
-      "opTime": "2025-08-27 22:15:36",
-      "opOrganId": "89",
-      "opOrganName": "tarra.erdman",
-      "description": "jgpzs7",
-      "spare1": "ev6yig",
-      "spare2": "5ou5oi"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:22",
+      "lastTime": "2025-08-31 18:08:22",
+      "id": "158",
+      "siteId": 508,
+      "foreignId": "158",
+      "type": "s57yi5",
+      "bizType": "y4h729",
+      "msgCreateTime": "2025-08-31 18:08:22",
+      "msgId": 566,
+      "msgType": 842,
+      "msgTitle": "fp5vto",
+      "msgAbstract": "7f1jrv",
+      "msgAccountId": "158",
+      "msgAccountName": "drew.kub",
+      "msgModuleId": "158",
+      "msgModuleName": "drew.kub",
+      "msgUserId": "158",
+      "msgUserName": "drew.kub",
+      "msgOrganId": "158",
+      "msgOrganName": "drew.kub",
+      "msgUrl": "www.leigha-wyman.biz",
+      "msgLabels": "vzrs0b",
+      "msgContent": "m2gvhb",
+      "status": "5gg58n",
+      "opUserId": "158",
+      "opTime": "2025-08-31 18:08:22",
+      "opOrganId": "158",
+      "opOrganName": "drew.kub",
+      "description": "uve3ds",
+      "spare1": "0oggca",
+      "spare2": "gjzq78"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9709,7 +9709,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'orderBy=841&msgUserName=tarra.erdman&opOrganName=tarra.erdman&msgTitle=npodj1&msgUserId=89&spare2=0kuan4&msgContent=rpuzm6&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&msgAccountName=tarra.erdman&msgUrl=www.felicitas-spencer.com&creatorId=89&id=89&description=t4i5gt&spare1=gfczpz&msgType=635&msgId=320&msgLabels=rfgz26&limit=10&page=1&siteId=874&status=3sl1tf&opOrganId=89&msgAccountId=89&q=qgg33i&type=ek1o6j&msgOrganName=tarra.erdman&msgAbstract=aykeg4&msgOrganId=89&msgModuleId=89&opTime=2025-08-27 22:15:36&foreignId=89&bizType=xt24o8&opUserId=89&msgCreateTime=2025-08-27 22:15:36&msgModuleName=tarra.erdman'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'spare2=lygzga&startTime=2025-08-31 18:07:21&opUserId=158&limit=10&spare1=7rk54u&msgUrl=www.leigha-wyman.biz&endTime=2025-08-31 18:07:21&orderBy=287&q=behoc5&siteId=3&msgUserId=158&opTime=2025-08-31 18:08:22&msgAccountId=158&status=rp364k&opOrganName=drew.kub&type=6g64k5&msgModuleName=drew.kub&msgCreateTime=2025-08-31 18:08:22&bizType=xt1gn1&msgTitle=021n42&foreignId=158&msgContent=a4skzm&msgUserName=drew.kub&page=1&msgAccountName=drew.kub&msgId=199&msgModuleId=158&msgOrganName=drew.kub&msgLabels=4zaqjl&opOrganId=158&msgAbstract=00eb8t&creatorId=158&msgType=811&id=158&msgOrganId=158&description=6lk562'
 ```
 **Response-fields:**
 
@@ -9727,8 +9727,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yqsf5x",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "54qvlz",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9810,40 +9810,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": "89",
-    "siteId": 404,
-    "foreignId": "89",
-    "type": "ss4ysf",
-    "bizType": "y4sk87",
-    "msgCreateTime": "2025-08-27 22:15:36",
-    "msgId": 53,
-    "msgType": 954,
-    "msgTitle": "qwcaez",
-    "msgAbstract": "wcw6iq",
-    "msgAccountId": "89",
-    "msgAccountName": "tarra.erdman",
-    "msgModuleId": "89",
-    "msgModuleName": "tarra.erdman",
-    "msgUserId": "89",
-    "msgUserName": "tarra.erdman",
-    "msgOrganId": "89",
-    "msgOrganName": "tarra.erdman",
-    "msgUrl": "www.felicitas-spencer.com",
-    "msgLabels": "or9r1n",
-    "msgContent": "duvxgx",
-    "status": "0f86dd",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:36",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "hkcxp1",
-    "spare1": "qc8et0",
-    "spare2": "az3hw9"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:22",
+    "lastTime": "2025-08-31 18:08:22",
+    "id": "158",
+    "siteId": 196,
+    "foreignId": "158",
+    "type": "td5qfh",
+    "bizType": "2c6yg9",
+    "msgCreateTime": "2025-08-31 18:08:22",
+    "msgId": 567,
+    "msgType": 569,
+    "msgTitle": "k4nio5",
+    "msgAbstract": "c2p1xg",
+    "msgAccountId": "158",
+    "msgAccountName": "drew.kub",
+    "msgModuleId": "158",
+    "msgModuleName": "drew.kub",
+    "msgUserId": "158",
+    "msgUserName": "drew.kub",
+    "msgOrganId": "158",
+    "msgOrganName": "drew.kub",
+    "msgUrl": "www.leigha-wyman.biz",
+    "msgLabels": "4ardq7",
+    "msgContent": "xorcn9",
+    "status": "20vdzi",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:22",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "q9a2vi",
+    "spare1": "wx1nhh",
+    "spare2": "ng1llm"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -9908,38 +9908,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": "89",
-    "siteId": 705,
-    "foreignId": "89",
-    "type": "m8w44m",
-    "bizType": "ge8pdd",
-    "msgCreateTime": "2025-08-27 22:15:36",
-    "msgId": 352,
-    "msgType": 487,
-    "msgTitle": "wn88no",
-    "msgAbstract": "kdusjq",
-    "msgAccountId": "89",
-    "msgAccountName": "tarra.erdman",
-    "msgModuleId": "89",
-    "msgModuleName": "tarra.erdman",
-    "msgUserId": "89",
-    "msgUserName": "tarra.erdman",
-    "msgOrganId": "89",
-    "msgOrganName": "tarra.erdman",
-    "msgUrl": "www.felicitas-spencer.com",
-    "msgLabels": "zb0jsi",
-    "msgContent": "cq1jo6",
-    "status": "2j4wn6",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:36",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "4ecwgt",
-    "spare1": "tf9ej8",
-    "spare2": "fc0fip"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:22",
+    "lastTime": "2025-08-31 18:08:22",
+    "id": "158",
+    "siteId": 323,
+    "foreignId": "158",
+    "type": "ygcyt8",
+    "bizType": "iq4rkn",
+    "msgCreateTime": "2025-08-31 18:08:22",
+    "msgId": 692,
+    "msgType": 449,
+    "msgTitle": "r8439z",
+    "msgAbstract": "q007lr",
+    "msgAccountId": "158",
+    "msgAccountName": "drew.kub",
+    "msgModuleId": "158",
+    "msgModuleName": "drew.kub",
+    "msgUserId": "158",
+    "msgUserName": "drew.kub",
+    "msgOrganId": "158",
+    "msgOrganName": "drew.kub",
+    "msgUrl": "www.leigha-wyman.biz",
+    "msgLabels": "gsgae9",
+    "msgContent": "omipac",
+    "status": "zb9nn5",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:22",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "uh2pxk",
+    "spare1": "5pt588",
+    "spare2": "r4nec6"
   }
 }'
 ```
@@ -9959,8 +9959,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ziqkdy",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ocfmad",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10025,38 +10025,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:36",
-    "lastTime": "2025-08-27 22:15:36",
-    "id": "89",
-    "siteId": 364,
-    "foreignId": "89",
-    "type": "czq1qh",
-    "bizType": "a4fefd",
-    "msgCreateTime": "2025-08-27 22:15:36",
-    "msgId": 890,
-    "msgType": 889,
-    "msgTitle": "8yaa6b",
-    "msgAbstract": "qbjzoy",
-    "msgAccountId": "89",
-    "msgAccountName": "tarra.erdman",
-    "msgModuleId": "89",
-    "msgModuleName": "tarra.erdman",
-    "msgUserId": "89",
-    "msgUserName": "tarra.erdman",
-    "msgOrganId": "89",
-    "msgOrganName": "tarra.erdman",
-    "msgUrl": "www.felicitas-spencer.com",
-    "msgLabels": "ils02k",
-    "msgContent": "ubufw1",
-    "status": "10ydyf",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:36",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "bu8vru",
-    "spare1": "prprdq",
-    "spare2": "8dupl7"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:22",
+    "lastTime": "2025-08-31 18:08:22",
+    "id": "158",
+    "siteId": 25,
+    "foreignId": "158",
+    "type": "m5941c",
+    "bizType": "4hn7x7",
+    "msgCreateTime": "2025-08-31 18:08:22",
+    "msgId": 870,
+    "msgType": 688,
+    "msgTitle": "8f6obr",
+    "msgAbstract": "h471al",
+    "msgAccountId": "158",
+    "msgAccountName": "drew.kub",
+    "msgModuleId": "158",
+    "msgModuleName": "drew.kub",
+    "msgUserId": "158",
+    "msgUserName": "drew.kub",
+    "msgOrganId": "158",
+    "msgOrganName": "drew.kub",
+    "msgUrl": "www.leigha-wyman.biz",
+    "msgLabels": "o5rbob",
+    "msgContent": "qbq7b7",
+    "status": "ptzilx",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:22",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "v5uz2q",
+    "spare1": "htkkvx",
+    "spare2": "spr2y4"
   }
 }'
 ```
@@ -10076,8 +10076,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "k2q7ct",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "0gmqx7",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10126,8 +10126,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ummfts",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "917ubn",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10159,7 +10159,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/7eg2xc.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/domomz.do
 ```
 **Response-fields:**
 
@@ -10177,8 +10177,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u631ig",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "jj9923",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10250,7 +10250,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?siteId=73&todoModuleId=89&orderBy=475&type=fb3fsq&todoOrganId=89&opTime=2025-08-27 22:15:37&todoCreateTime=2025-08-27 22:15:37&todoAccountName=tarra.erdman&todoAccountId=89&opUserId=89&id=89&todoUserName=tarra.erdman&startTime=2025-08-27 22:14:23&limit=10&spare1=2bvv6r&opOrganName=tarra.erdman&q=f3ca45&bizType=ekz3k9&endTime=2025-08-27 22:14:23&todoModuleName=tarra.erdman&creatorId=89&foreignId=89&todoProcessInfo=fnpkcj&opOrganId=89&todoCurrInfo=szcojd&todoType=fd9r3d&todoNextInfo=vjkavc&status=83hno5&description=oszv44&todoUserId=89&todoUrl=www.felicitas-spencer.com&todoOrganName=tarra.erdman&todoProcessName=tarra.erdman&page=1&todoProcessStatus=4k9vbj&todoLabels=fonf5i&todoContent=okx70b&todoId=89&todoName=tarra.erdman&spare2=frq317&todoAbstract=lxgqj7
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoContent=8ky4hr&todoModuleId=158&foreignId=158&todoAccountId=158&todoAbstract=9vhvhx&todoAccountName=drew.kub&startTime=2025-08-31 18:07:21&todoName=drew.kub&todoProcessInfo=1twxu2&todoCurrInfo=nbdish&todoLabels=x4jtuf&opOrganId=158&opOrganName=drew.kub&id=158&todoUrl=www.leigha-wyman.biz&page=1&q=1b3fbf&todoOrganName=drew.kub&todoUserId=158&creatorId=158&description=ysvpk8&todoCreateTime=2025-08-31 18:08:22&todoOrganId=158&spare1=wnzsu2&todoType=0bt501&opUserId=158&limit=10&todoUserName=drew.kub&opTime=2025-08-31 18:08:22&todoModuleName=drew.kub&siteId=521&spare2=01y2bv&bizType=6q01bh&todoProcessStatus=daeg0y&todoProcessName=drew.kub&endTime=2025-08-31 18:07:21&type=rneyva&todoNextInfo=u52l89&orderBy=100&todoId=158&status=79a50f
 ```
 **Response-fields:**
 
@@ -10307,46 +10307,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:37",
-      "lastTime": "2025-08-27 22:15:37",
-      "id": "89",
-      "siteId": 875,
-      "foreignId": "89",
-      "type": "aoxoyk",
-      "bizType": "g6p5jy",
-      "todoCreateTime": "2025-08-27 22:15:37",
-      "todoId": "89",
-      "todoType": "x6snzw",
-      "todoName": "tarra.erdman",
-      "todoAbstract": "siwgb9",
-      "todoAccountId": "89",
-      "todoAccountName": "tarra.erdman",
-      "todoModuleId": "89",
-      "todoModuleName": "tarra.erdman",
-      "todoUserId": "89",
-      "todoUserName": "tarra.erdman",
-      "todoOrganId": "89",
-      "todoOrganName": "tarra.erdman",
-      "todoProcessName": "tarra.erdman",
-      "todoProcessStatus": "p3icj2",
-      "todoProcessInfo": "n1lim4",
-      "todoCurrInfo": "p4uthr",
-      "todoNextInfo": "2hyc1a",
-      "todoUrl": "www.felicitas-spencer.com",
-      "todoLabels": "gj1wio",
-      "todoContent": "4aycqj",
-      "status": "cvo2qm",
-      "opUserId": "89",
-      "opTime": "2025-08-27 22:15:37",
-      "opOrganId": "89",
-      "opOrganName": "tarra.erdman",
-      "description": "lxf26u",
-      "spare1": "ms4pwc",
-      "spare2": "mvnank"
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:22",
+      "lastTime": "2025-08-31 18:08:22",
+      "id": "158",
+      "siteId": 151,
+      "foreignId": "158",
+      "type": "nx4yqr",
+      "bizType": "6gkhva",
+      "todoCreateTime": "2025-08-31 18:08:22",
+      "todoId": "158",
+      "todoType": "psjqmk",
+      "todoName": "drew.kub",
+      "todoAbstract": "1dgovr",
+      "todoAccountId": "158",
+      "todoAccountName": "drew.kub",
+      "todoModuleId": "158",
+      "todoModuleName": "drew.kub",
+      "todoUserId": "158",
+      "todoUserName": "drew.kub",
+      "todoOrganId": "158",
+      "todoOrganName": "drew.kub",
+      "todoProcessName": "drew.kub",
+      "todoProcessStatus": "6zaqjb",
+      "todoProcessInfo": "1dkgkg",
+      "todoCurrInfo": "8d6bp8",
+      "todoNextInfo": "sdh4tb",
+      "todoUrl": "www.leigha-wyman.biz",
+      "todoLabels": "v1qybr",
+      "todoContent": "vmsflx",
+      "status": "ninhuo",
+      "opUserId": "158",
+      "opTime": "2025-08-31 18:08:22",
+      "opOrganId": "158",
+      "opOrganName": "drew.kub",
+      "description": "05xurn",
+      "spare1": "pt13r4",
+      "spare2": "w33o9k"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10417,7 +10417,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'status=ghva9f&siteId=976&creatorId=89&todoModuleName=tarra.erdman&todoProcessName=tarra.erdman&type=oszrur&id=89&todoContent=o1409i&todoAccountName=tarra.erdman&todoModuleId=89&todoLabels=ctgrd0&todoOrganName=tarra.erdman&todoProcessStatus=3xbdc4&todoId=89&spare2=nnstpv&orderBy=455&todoUrl=www.felicitas-spencer.com&limit=10&todoName=tarra.erdman&todoCreateTime=2025-08-27 22:15:37&q=7l7ozv&foreignId=89&todoNextInfo=lhm2yz&todoAbstract=l9l32u&page=1&todoType=27m68e&todoAccountId=89&todoUserName=tarra.erdman&opUserId=89&opTime=2025-08-27 22:15:37&todoOrganId=89&todoProcessInfo=ls67c1&bizType=anzrrs&todoCurrInfo=4fp17e&opOrganId=89&opOrganName=tarra.erdman&todoUserId=89&startTime=2025-08-27 22:14:23&description=1r23a1&spare1=umtfgu&endTime=2025-08-27 22:14:23'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoModuleId=158&todoNextInfo=sc9i6q&todoLabels=6g6zqc&todoModuleName=drew.kub&todoProcessName=drew.kub&orderBy=73&siteId=639&todoProcessStatus=2ts1xw&bizType=x6dvk1&todoName=drew.kub&description=x4w7js&foreignId=158&id=158&status=131zbo&todoProcessInfo=ux8q8s&todoContent=ydbwlt&type=hftrmm&opOrganId=158&todoType=rx5p3c&spare1=byric1&todoCurrInfo=6d413h&opOrganName=drew.kub&creatorId=158&todoId=158&startTime=2025-08-31 18:07:21&todoAccountName=drew.kub&todoUserId=158&q=9rwbbt&todoOrganId=158&endTime=2025-08-31 18:07:21&opUserId=158&todoAbstract=1tcyb1&spare2=8jysbu&todoOrganName=drew.kub&limit=10&todoUrl=www.leigha-wyman.biz&opTime=2025-08-31 18:08:22&todoAccountId=158&page=1&todoCreateTime=2025-08-31 18:08:22&todoUserName=drew.kub'
 ```
 **Response-fields:**
 
@@ -10435,8 +10435,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vfcx7s",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ggnwws",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10523,45 +10523,45 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:37",
-    "lastTime": "2025-08-27 22:15:37",
-    "id": "89",
-    "siteId": 293,
-    "foreignId": "89",
-    "type": "anrdcf",
-    "bizType": "e36n8k",
-    "todoCreateTime": "2025-08-27 22:15:37",
-    "todoId": "89",
-    "todoType": "js2dgp",
-    "todoName": "tarra.erdman",
-    "todoAbstract": "yjw7wk",
-    "todoAccountId": "89",
-    "todoAccountName": "tarra.erdman",
-    "todoModuleId": "89",
-    "todoModuleName": "tarra.erdman",
-    "todoUserId": "89",
-    "todoUserName": "tarra.erdman",
-    "todoOrganId": "89",
-    "todoOrganName": "tarra.erdman",
-    "todoProcessName": "tarra.erdman",
-    "todoProcessStatus": "flw4g8",
-    "todoProcessInfo": "8xlsor",
-    "todoCurrInfo": "jnt6y3",
-    "todoNextInfo": "g2iyqd",
-    "todoUrl": "www.felicitas-spencer.com",
-    "todoLabels": "ectn52",
-    "todoContent": "in7iza",
-    "status": "i81v28",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:37",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "eebtgq",
-    "spare1": "ymmlgs",
-    "spare2": "xuixv6"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:22",
+    "lastTime": "2025-08-31 18:08:22",
+    "id": "158",
+    "siteId": 949,
+    "foreignId": "158",
+    "type": "6jdut5",
+    "bizType": "5s5psh",
+    "todoCreateTime": "2025-08-31 18:08:22",
+    "todoId": "158",
+    "todoType": "3t1ue0",
+    "todoName": "drew.kub",
+    "todoAbstract": "ow01nb",
+    "todoAccountId": "158",
+    "todoAccountName": "drew.kub",
+    "todoModuleId": "158",
+    "todoModuleName": "drew.kub",
+    "todoUserId": "158",
+    "todoUserName": "drew.kub",
+    "todoOrganId": "158",
+    "todoOrganName": "drew.kub",
+    "todoProcessName": "drew.kub",
+    "todoProcessStatus": "ctdlyk",
+    "todoProcessInfo": "pwo4g8",
+    "todoCurrInfo": "8u3ar9",
+    "todoNextInfo": "nacpw1",
+    "todoUrl": "www.leigha-wyman.biz",
+    "todoLabels": "nx1wyu",
+    "todoContent": "2le040",
+    "status": "biadxp",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:22",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "hlj211",
+    "spare1": "6v7oap",
+    "spare2": "na2sba"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10631,43 +10631,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:37",
-    "lastTime": "2025-08-27 22:15:37",
-    "id": "89",
-    "siteId": 350,
-    "foreignId": "89",
-    "type": "8sq75i",
-    "bizType": "y42st3",
-    "todoCreateTime": "2025-08-27 22:15:37",
-    "todoId": "89",
-    "todoType": "fuan9d",
-    "todoName": "tarra.erdman",
-    "todoAbstract": "za3qsr",
-    "todoAccountId": "89",
-    "todoAccountName": "tarra.erdman",
-    "todoModuleId": "89",
-    "todoModuleName": "tarra.erdman",
-    "todoUserId": "89",
-    "todoUserName": "tarra.erdman",
-    "todoOrganId": "89",
-    "todoOrganName": "tarra.erdman",
-    "todoProcessName": "tarra.erdman",
-    "todoProcessStatus": "60nz8v",
-    "todoProcessInfo": "xbs4qz",
-    "todoCurrInfo": "gde1fh",
-    "todoNextInfo": "wmd9pq",
-    "todoUrl": "www.felicitas-spencer.com",
-    "todoLabels": "uay7cb",
-    "todoContent": "uvb4r0",
-    "status": "zlkafg",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:37",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "l7ombr",
-    "spare1": "4wuaib",
-    "spare2": "13kf6w"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:22",
+    "lastTime": "2025-08-31 18:08:22",
+    "id": "158",
+    "siteId": 983,
+    "foreignId": "158",
+    "type": "drs6ss",
+    "bizType": "k4l91j",
+    "todoCreateTime": "2025-08-31 18:08:22",
+    "todoId": "158",
+    "todoType": "qqwowt",
+    "todoName": "drew.kub",
+    "todoAbstract": "cnbym7",
+    "todoAccountId": "158",
+    "todoAccountName": "drew.kub",
+    "todoModuleId": "158",
+    "todoModuleName": "drew.kub",
+    "todoUserId": "158",
+    "todoUserName": "drew.kub",
+    "todoOrganId": "158",
+    "todoOrganName": "drew.kub",
+    "todoProcessName": "drew.kub",
+    "todoProcessStatus": "qzcrnh",
+    "todoProcessInfo": "5dvh4i",
+    "todoCurrInfo": "vj5tso",
+    "todoNextInfo": "4ll4f1",
+    "todoUrl": "www.leigha-wyman.biz",
+    "todoLabels": "7qx31p",
+    "todoContent": "ep11es",
+    "status": "nra82q",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:22",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "ha9l4x",
+    "spare1": "57m24q",
+    "spare2": "7z5h4b"
   }
 }'
 ```
@@ -10687,8 +10687,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pk6orx",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "4ru3dt",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10758,43 +10758,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:37",
-    "lastTime": "2025-08-27 22:15:37",
-    "id": "89",
-    "siteId": 295,
-    "foreignId": "89",
-    "type": "4bgh31",
-    "bizType": "tn79oq",
-    "todoCreateTime": "2025-08-27 22:15:37",
-    "todoId": "89",
-    "todoType": "yhhptj",
-    "todoName": "tarra.erdman",
-    "todoAbstract": "mxokap",
-    "todoAccountId": "89",
-    "todoAccountName": "tarra.erdman",
-    "todoModuleId": "89",
-    "todoModuleName": "tarra.erdman",
-    "todoUserId": "89",
-    "todoUserName": "tarra.erdman",
-    "todoOrganId": "89",
-    "todoOrganName": "tarra.erdman",
-    "todoProcessName": "tarra.erdman",
-    "todoProcessStatus": "kgtam9",
-    "todoProcessInfo": "airo5f",
-    "todoCurrInfo": "99smsl",
-    "todoNextInfo": "g3jtn8",
-    "todoUrl": "www.felicitas-spencer.com",
-    "todoLabels": "ejppnq",
-    "todoContent": "m34gu9",
-    "status": "7vykho",
-    "opUserId": "89",
-    "opTime": "2025-08-27 22:15:37",
-    "opOrganId": "89",
-    "opOrganName": "tarra.erdman",
-    "description": "3mkck3",
-    "spare1": "2urkb2",
-    "spare2": "26fwkg"
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:23",
+    "lastTime": "2025-08-31 18:08:23",
+    "id": "158",
+    "siteId": 173,
+    "foreignId": "158",
+    "type": "lpfvxv",
+    "bizType": "7fmaqo",
+    "todoCreateTime": "2025-08-31 18:08:23",
+    "todoId": "158",
+    "todoType": "abaip2",
+    "todoName": "drew.kub",
+    "todoAbstract": "cojbif",
+    "todoAccountId": "158",
+    "todoAccountName": "drew.kub",
+    "todoModuleId": "158",
+    "todoModuleName": "drew.kub",
+    "todoUserId": "158",
+    "todoUserName": "drew.kub",
+    "todoOrganId": "158",
+    "todoOrganName": "drew.kub",
+    "todoProcessName": "drew.kub",
+    "todoProcessStatus": "lnp3tc",
+    "todoProcessInfo": "s8wy5u",
+    "todoCurrInfo": "jxuca0",
+    "todoNextInfo": "478gf1",
+    "todoUrl": "www.leigha-wyman.biz",
+    "todoLabels": "5yde2j",
+    "todoContent": "efzuwa",
+    "status": "7gdi8n",
+    "opUserId": "158",
+    "opTime": "2025-08-31 18:08:23",
+    "opOrganId": "158",
+    "opOrganName": "drew.kub",
+    "description": "mw4t0o",
+    "spare1": "qxapn0",
+    "spare2": "9wxeg8"
   }
 }'
 ```
@@ -10814,8 +10814,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "33wklq",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "3mrtwv",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10864,8 +10864,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bc2den",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "6jxn5t",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -10901,8 +10901,8 @@ code|string|返回状态码:正常状态为0|-
 msg|string|返回消息|-
 data|object|返回数据对象|-
 └─user|object|当前用户|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─authorities|array|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|用户LID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
@@ -10930,34 +10930,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "username": "tarra.erdman",
-      "password": "6s5ds0",
+      "password": "ral4ca",
+      "username": "drew.kub",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "adminId": 523,
-      "userId": "89",
-      "appId": "89",
-      "deptId": 509,
-      "organId": "89",
-      "token": "pa5u57",
-      "imagePath": "pvex3s",
+      "adminId": 83,
+      "userId": "158",
+      "appId": "158",
+      "deptId": 585,
+      "organId": "158",
+      "token": "h72ecm",
+      "imagePath": "7zff85",
       "isSuperAdmin": true,
-      "loginIp": "217.26.150.93",
-      "loginTime": 1756304063123,
-      "loginBrowse": "aaezaf",
-      "loginOs": "t8bvfr",
-      "expireTime": 1756304063123,
+      "loginIp": "62.26.219.195",
+      "loginTime": 1756634841398,
+      "loginBrowse": "9gr7y9",
+      "loginOs": "ys75x2",
+      "expireTime": 1756634841398,
       "perms": [
-        "pahidl"
+        "os5pia"
       ]
     },
-    "roleGroup": "ri5jo2",
-    "positionGroup": "sm8k8k"
+    "roleGroup": "0xh9ny",
+    "positionGroup": "vn1b84"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11027,8 +11027,8 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -11037,7 +11037,7 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -11085,60 +11085,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:25",
-    "lastTime": "2025-08-27 22:15:25",
-    "id": 946,
-    "userId": "89",
-    "deptId": 542,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "ghryxc",
-    "password": "yqp102",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:12",
+    "lastTime": "2025-08-31 18:08:12",
+    "id": 238,
+    "userId": "158",
+    "deptId": 26,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "kjck96",
+    "password": "uuk8st",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 725,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:25",
-    "description": "z6a17l",
+    "status": 326,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:12",
+    "description": "dwhfqq",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:25",
-      "lastTime": "2025-08-27 22:15:25",
-      "id": 415,
-      "organId": "89",
-      "parentId": 916,
-      "appId": "89",
-      "depttypeId": 574,
-      "foreignId": "89",
-      "createType": 909,
-      "type": "u0a4t6",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "cbkngo",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:12",
+      "lastTime": "2025-08-31 18:08:12",
+      "id": 195,
+      "organId": "158",
+      "parentId": 75,
+      "appId": "158",
+      "depttypeId": 538,
+      "foreignId": "158",
+      "createType": 607,
+      "type": "y9ojbo",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "yc7pc8",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "y3qyr2",
-      "priority": 682,
-      "status": 403,
-      "delFlag": 6,
-      "description": "eulme8",
-      "spare1": "kgv444",
-      "spare2": "6eqtdx",
+      "searchCode": "63710",
+      "imagePath": "92vlfq",
+      "priority": 436,
+      "status": 623,
+      "delFlag": 2,
+      "description": "ng6m9h",
+      "spare1": "ujqz3r",
+      "spare2": "2knkuy",
       "children": [
         {
           "$ref": ".."
@@ -11147,46 +11147,46 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:25",
-        "lastTime": "2025-08-27 22:15:25",
-        "id": 905,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 947,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:12",
+        "lastTime": "2025-08-31 18:08:12",
+        "id": 675,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 508,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 220,
-        "description": "apfiu9",
-        "areaType": "pihfkm"
+        "status": 536,
+        "description": "lhn1zi",
+        "areaType": "6w4osb"
       }
     ],
     "roleIds": [
-      349
+      43
     ],
     "positionIds": [
-      "lbehdy"
+      "j8cwo0"
     ],
-    "roleId": 437,
+    "roleId": 800,
     "userRoleList": [
       {
-        "id": 691,
-        "deptId": 25,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 981,
-        "roleName": "tarra.erdman",
-        "adminId": 212
+        "id": 884,
+        "deptId": 284,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 931,
+        "roleName": "drew.kub",
+        "adminId": 295
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11249,8 +11249,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
@@ -11259,7 +11259,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|false|-
@@ -11303,60 +11303,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:25",
-    "lastTime": "2025-08-27 22:15:25",
-    "id": 256,
-    "userId": "89",
-    "deptId": 391,
-    "deptName": "tarra.erdman",
-    "organId": "89",
-    "organName": "tarra.erdman",
-    "name": "tarra.erdman",
-    "username": "tarra.erdman",
-    "nickName": "reena.schmeler",
-    "email": "fletcher.hickle@hotmail.com",
-    "mobile": "803.740.8989",
-    "imagePath": "kf8a3v",
-    "password": "9lj4vl",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:12",
+    "lastTime": "2025-08-31 18:08:12",
+    "id": 875,
+    "userId": "158",
+    "deptId": 824,
+    "deptName": "drew.kub",
+    "organId": "158",
+    "organName": "drew.kub",
+    "name": "drew.kub",
+    "username": "drew.kub",
+    "nickName": "javier.terry",
+    "email": "latasha.buckridge@hotmail.com",
+    "mobile": "1-715-323-3760",
+    "imagePath": "v5wi9x",
+    "password": "tnvdku",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 263,
-    "delFlag": 6,
-    "lastLoginIp": "217.26.150.93",
-    "lastLoginTime": "2025-08-27 22:15:25",
-    "description": "g3ax5x",
+    "status": 606,
+    "delFlag": 2,
+    "lastLoginIp": "62.26.219.195",
+    "lastLoginTime": "2025-08-31 18:08:12",
+    "description": "wai43q",
     "dept": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:25",
-      "lastTime": "2025-08-27 22:15:25",
-      "id": 65,
-      "organId": "89",
-      "parentId": 801,
-      "appId": "89",
-      "depttypeId": 881,
-      "foreignId": "89",
-      "createType": 179,
-      "type": "qw0ivn",
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "areaCode": "66235",
-      "organLeader": "ueus5l",
-      "leaderId": "89",
-      "leaderMobile": "803.740.8989",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:12",
+      "lastTime": "2025-08-31 18:08:12",
+      "id": 313,
+      "organId": "158",
+      "parentId": 193,
+      "appId": "158",
+      "depttypeId": 20,
+      "foreignId": "158",
+      "createType": 341,
+      "type": "4gf3og",
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "areaCode": "63710",
+      "organLeader": "dh6u2v",
+      "leaderId": "158",
+      "leaderMobile": "1-715-323-3760",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "66235",
-      "imagePath": "djbzyi",
-      "priority": 512,
-      "status": 383,
-      "delFlag": 6,
-      "description": "ysi47m",
-      "spare1": "xx44nc",
-      "spare2": "bdis0l",
+      "searchCode": "63710",
+      "imagePath": "z0h24n",
+      "priority": 801,
+      "status": 954,
+      "delFlag": 2,
+      "description": "cetwgp",
+      "spare1": "eijpcm",
+      "spare2": "6zu7py",
       "children": [
         {
           "$ref": ".."
@@ -11365,44 +11365,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:25",
-        "lastTime": "2025-08-27 22:15:25",
-        "id": 593,
-        "roletypeId": "89",
-        "appId": "89",
-        "name": "tarra.erdman",
-        "code": "66235",
-        "priority": 739,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:12",
+        "lastTime": "2025-08-31 18:08:12",
+        "id": 837,
+        "roletypeId": "158",
+        "appId": "158",
+        "name": "drew.kub",
+        "code": "63710",
+        "priority": 199,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 808,
-        "description": "3z1qnt",
-        "areaType": "pgipr9"
+        "status": 496,
+        "description": "mh06f5",
+        "areaType": "kff42f"
       }
     ],
     "roleIds": [
-      459
+      642
     ],
     "positionIds": [
-      "yqi5h5"
+      "g1ciup"
     ],
-    "roleId": 895,
+    "roleId": 486,
     "userRoleList": [
       {
-        "id": 714,
-        "deptId": 10,
-        "deptName": "tarra.erdman",
-        "organId": "89",
-        "organName": "tarra.erdman",
-        "roleId": 184,
-        "roleName": "tarra.erdman",
-        "adminId": 285
+        "id": 711,
+        "deptId": 849,
+        "deptName": "drew.kub",
+        "organId": "158",
+        "organName": "drew.kub",
+        "roleId": 715,
+        "roleName": "drew.kub",
+        "adminId": 5
       }
     ],
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
   }
 }'
 ```
@@ -11423,7 +11423,7 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11457,8 +11457,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "2fc6ke",
-    "newPassword": "uk4mqo"
+    "oldPassword": "azls8g",
+    "newPassword": "7s03wc"
   }
 }'
 ```
@@ -11481,7 +11481,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11531,9 +11531,9 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.felicitas-spencer.com"
+    "imageUrl": "www.leigha-wyman.biz"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11573,7 +11573,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-08-27 22:14:23&remark=jitdj5&orderBy=981&page=1&limit=10&configKey=m7bscg&configValue=gjx7jy&endTime=2025-08-27 22:14:23&q=dgvs7n&isDisabled=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?isDisabled=true&configValue=urr5yk&configKey=gubfky&endTime=2025-08-31 18:07:21&orderBy=154&page=1&limit=10&remark=mj9drj&q=ctl0yv&startTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -11602,21 +11602,21 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 254,
+    "totalCount": 145,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "89",
-        "configKey": "r3mf20",
-        "configValue": "4547rz",
+        "configId": "158",
+        "configKey": "enikbu",
+        "configValue": "97v61d",
         "isDisabled": true,
-        "remark": "yi80i0"
+        "remark": "p07h5o"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11655,7 +11655,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'orderBy=316&configValue=botauj&q=pjccgj&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&isDisabled=true&limit=10&configKey=vqqjpz&page=1&remark=9awbcy'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'page=1&configValue=9d9wrj&isDisabled=true&limit=10&configKey=ma41pt&remark=vuhaff&q=io24f7&orderBy=295&endTime=2025-08-31 18:07:21&startTime=2025-08-31 18:07:21'
 ```
 **Response-fields:**
 
@@ -11673,8 +11673,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "47dviz",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "mgbwbw",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11704,7 +11704,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/89.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/158.do
 ```
 **Response-fields:**
 
@@ -11728,13 +11728,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "89",
-    "configKey": "zzz0hn",
-    "configValue": "tl0hqg",
+    "configId": "158",
+    "configKey": "lvg0zq",
+    "configValue": "w1wxbg",
     "isDisabled": true,
-    "remark": "361t2p"
+    "remark": "oy0rxx"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11764,7 +11764,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/saov64.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/mxqcmy.do
 ```
 **Response-fields:**
 
@@ -11788,13 +11788,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "89",
-    "configKey": "166qkl",
-    "configValue": "a3jvl6",
+    "configId": "158",
+    "configKey": "eqzb61",
+    "configValue": "nvhngr",
     "isDisabled": true,
-    "remark": "5ez8vo"
+    "remark": "2guurl"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11831,11 +11831,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "89",
-    "configKey": "5g14ia",
-    "configValue": "u56n59",
+    "configId": "158",
+    "configKey": "p92wos",
+    "configValue": "l0w2wt",
     "isDisabled": true,
-    "remark": "n7mdyi"
+    "remark": "co4a07"
   }
 }'
 ```
@@ -11855,8 +11855,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dcz3bg",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "exbubf",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11893,11 +11893,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "89",
-    "configKey": "2ppgrw",
-    "configValue": "dkvojz",
+    "configId": "158",
+    "configKey": "eedbv0",
+    "configValue": "4l7rui",
     "isDisabled": true,
-    "remark": "4sc2o0"
+    "remark": "01tsvl"
   }
 }'
 ```
@@ -11917,8 +11917,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3r2hi9",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "c7kfnt",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -11966,8 +11966,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "77epr8",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "8u4efb",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12009,8 +12009,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qehyj1",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "gltboc",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12042,7 +12042,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=gn1473&username=tarra.erdman
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=drew.kub&ipaddr=jedjy4
 ```
 **Response-fields:**
 
@@ -12070,17 +12070,17 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "89",
-      "deptName": "tarra.erdman",
-      "username": "tarra.erdman",
-      "ipaddr": "gukke1",
-      "loginLocation": "skm1ds",
-      "browser": "vi8z89",
-      "os": "kvz54k",
-      "loginTime": 1756304063123
+      "tokenId": "158",
+      "deptName": "drew.kub",
+      "username": "drew.kub",
+      "ipaddr": "5xl0hw",
+      "loginLocation": "3nquz8",
+      "browser": "fvvl3e",
+      "os": "r3wre6",
+      "loginTime": 1756634841398
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12110,7 +12110,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/89.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/158.do
 ```
 **Response-fields:**
 
@@ -12128,8 +12128,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7bbqeu",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "lfsb2x",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12172,7 +12172,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2025-08-27 22:14:23&orderBy=815&remark=w1kmgv&name=tarra.erdman&startTime=2025-08-27 22:14:23&status=inxlap&key=m9ru50&limit=10&page=1&typeMode=23&typeClass=0sxv03&typeId=89&q=6ruam6
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?remark=52wsnm&page=1&orderBy=853&q=dje5a2&name=drew.kub&limit=10&typeMode=489&status=l3yvod&startTime=2025-08-31 18:07:21&typeId=158&endTime=2025-08-31 18:07:21&typeClass=unrlda&key=31gwvg
 ```
 **Response-fields:**
 
@@ -12206,26 +12206,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 445,
+    "totalCount": 824,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "89",
-        "name": "tarra.erdman",
-        "typeClass": "4zggzb",
-        "typeRef": "4ns0mn",
-        "typeMode": 821,
-        "searchCode": "66235",
-        "priority": 114,
-        "createTime": "2025-08-27 22:15:35",
-        "status": 619,
-        "remark": "p4mjmh"
+        "typeId": "158",
+        "name": "drew.kub",
+        "typeClass": "29pzcq",
+        "typeRef": "16tpjx",
+        "typeMode": 125,
+        "searchCode": "63710",
+        "priority": 516,
+        "createTime": "2025-08-31 18:08:21",
+        "status": 518,
+        "remark": "b8v0x1"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12267,7 +12267,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'page=1&startTime=2025-08-27 22:14:23&remark=kfz24s&orderBy=62&typeId=89&status=gdmkhl&key=fuxjsp&endTime=2025-08-27 22:14:23&q=y0gcg4&limit=10&name=tarra.erdman&typeClass=ah30ch&typeMode=776'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'limit=10&typeClass=kro0zm&status=mxc29v&remark=m0gz6j&typeId=158&q=it26jp&page=1&orderBy=641&endTime=2025-08-31 18:07:21&name=drew.kub&key=a4hofk&startTime=2025-08-31 18:07:21&typeMode=545'
 ```
 **Response-fields:**
 
@@ -12285,8 +12285,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gm9w9b",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "78vk34",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12316,7 +12316,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/89.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/158.do
 ```
 **Response-fields:**
 
@@ -12345,18 +12345,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "89",
-    "name": "tarra.erdman",
-    "typeClass": "c4dvp0",
-    "typeRef": "ojpudl",
-    "typeMode": 617,
-    "searchCode": "66235",
-    "priority": 871,
-    "createTime": "2025-08-27 22:15:35",
-    "status": 785,
-    "remark": "fv0v7y"
+    "typeId": "158",
+    "name": "drew.kub",
+    "typeClass": "7zx1o3",
+    "typeRef": "b5d2a7",
+    "typeMode": 280,
+    "searchCode": "63710",
+    "priority": 459,
+    "createTime": "2025-08-31 18:08:21",
+    "status": 329,
+    "remark": "2woxqv"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12398,16 +12398,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "89",
-    "name": "tarra.erdman",
-    "typeClass": "k0lz3f",
-    "typeRef": "rl841d",
-    "typeMode": 398,
-    "searchCode": "66235",
-    "priority": 911,
-    "createTime": "2025-08-27 22:15:35",
-    "status": 874,
-    "remark": "8pnjks"
+    "typeId": "158",
+    "name": "drew.kub",
+    "typeClass": "4l1cxx",
+    "typeRef": "e1z8bg",
+    "typeMode": 449,
+    "searchCode": "63710",
+    "priority": 939,
+    "createTime": "2025-08-31 18:08:21",
+    "status": 673,
+    "remark": "uto97p"
   }
 }'
 ```
@@ -12427,8 +12427,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "phshyt",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "34jx09",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12470,16 +12470,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "89",
-    "name": "tarra.erdman",
-    "typeClass": "8d5oq6",
-    "typeRef": "bwl9ny",
-    "typeMode": 196,
-    "searchCode": "66235",
-    "priority": 654,
-    "createTime": "2025-08-27 22:15:35",
-    "status": 94,
-    "remark": "sb4xfb"
+    "typeId": "158",
+    "name": "drew.kub",
+    "typeClass": "kcyber",
+    "typeRef": "euy560",
+    "typeMode": 680,
+    "searchCode": "63710",
+    "priority": 801,
+    "createTime": "2025-08-31 18:08:21",
+    "status": 47,
+    "remark": "zclcsm"
   }
 }'
 ```
@@ -12499,8 +12499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mxl5fb",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ib3o9l",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12548,8 +12548,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "frz6s0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "u8dysk",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12591,8 +12591,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v8br1d",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "w7y0k8",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12646,19 +12646,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "89",
-      "name": "tarra.erdman",
-      "typeClass": "psuwdp",
-      "typeRef": "y2caa1",
-      "typeMode": 102,
-      "searchCode": "66235",
-      "priority": 270,
-      "createTime": "2025-08-27 22:15:35",
-      "status": 841,
-      "remark": "91kccr"
+      "typeId": "158",
+      "name": "drew.kub",
+      "typeClass": "buvqlv",
+      "typeRef": "u71vxe",
+      "typeMode": 227,
+      "searchCode": "63710",
+      "priority": 413,
+      "createTime": "2025-08-31 18:08:21",
+      "status": 73,
+      "remark": "aq1zjc"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12716,7 +12716,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?page=1&delFlag=6&roleTypeId=89&name=tarra.erdman&roletypeId=89&startTime=2025-08-27 22:14:23&code=66235&posType=8fvwoj&officePhone=1-781-417-5663&ids=aqb64c&ids=aqb64c&endTime=2025-08-27 22:14:23&oname=tarra.erdman&posFunction=4qxz6e&mobilePhone=1-781-417-5663&positionId=89&q=zlfrzw&limit=10&posRank=790&groupId=89&description=zd767c&postypeId=89&isPub=true&parentId=89&sname=tarra.erdman&id=89&orderBy=285&status=473&createTime=2025-08-27 22:14:23
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?description=xmfv2y&page=1&postypeId=158&orderBy=109&oname=drew.kub&mobilePhone=1-775-667-5234&name=drew.kub&endTime=2025-08-31 18:07:21&posFunction=yizhl4&positionId=158&roleTypeId=158&sname=drew.kub&code=63710&ids=tcd3w8&ids=tcd3w8&status=0&parentId=158&q=me6dk8&isPub=true&limit=10&officePhone=1-775-667-5234&groupId=158&posType=b635b5&posRank=178&createTime=2025-08-31 18:07:21&startTime=2025-08-31 18:07:21&delFlag=2&roletypeId=158&id=158
 ```
 **Response-fields:**
 
@@ -12753,31 +12753,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 590,
+    "totalCount": 268,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "89",
-        "postCode": "66235",
-        "postName": "tarra.erdman",
-        "postSort": 690,
-        "status": 334,
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:28",
-        "lastTime": "2025-08-27 22:15:28",
-        "delFlag": 6,
-        "remark": "by7dfl",
+        "postId": "158",
+        "postCode": "63710",
+        "postName": "drew.kub",
+        "postSort": 581,
+        "status": 591,
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:15",
+        "lastTime": "2025-08-31 18:08:15",
+        "delFlag": 2,
+        "remark": "ef6c8u",
         "ids": [
-          "hi31nh"
+          "epmz3l"
         ],
-        "positionId": "89",
+        "positionId": "158",
         "flag": true
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12816,7 +12816,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&postCode=66235&postName=tarra.erdman&page=1&q=x13od7&limit=10&orderBy=41&delFlag=6&status=462'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postCode=63710&q=30ieg5&startTime=2025-08-31 18:07:21&status=372&orderBy=950&page=1&endTime=2025-08-31 18:07:21&postName=drew.kub&limit=10&delFlag=2'
 ```
 **Response-fields:**
 
@@ -12834,8 +12834,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vfnc24",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "txe1vt",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -12865,7 +12865,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/89.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/158.do
 ```
 **Response-fields:**
 
@@ -12925,49 +12925,49 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": "89",
-    "parentId": "89",
-    "postypeId": "89",
-    "roletypeId": "89",
-    "userId": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "code": "66235",
-    "oname": "tarra.erdman",
-    "posFunction": "wg4rq4",
-    "posRank": 579,
-    "posType": "p96v5o",
-    "editorType": "9hgij2",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:15",
+    "lastTime": "2025-08-31 18:08:15",
+    "id": "158",
+    "parentId": "158",
+    "postypeId": "158",
+    "roletypeId": "158",
+    "userId": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "code": "63710",
+    "oname": "drew.kub",
+    "posFunction": "d4re4e",
+    "posRank": 759,
+    "posType": "lkeypi",
+    "editorType": "6pig5e",
     "isEditorCreate": true,
-    "status": 783,
+    "status": 254,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "89",
-    "manageDeptids": "0yyzh7",
+    "leaderId": "158",
+    "manageDeptids": "f6cu8i",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-781-417-5663",
-    "officePhone": "1-781-417-5663",
-    "buildingId": "89",
-    "roomNo": "xs5kny",
-    "extQmType": "2vvba1",
-    "extQmTypePhoto": "o425um",
-    "extPosName": "tarra.erdman",
-    "extOrganName": "tarra.erdman",
-    "priority": 65,
-    "priorityInOrgan": 315,
-    "priorityInDomain": 615,
-    "updaterId": "89",
-    "updateTime": "2025-08-27 22:15:28",
-    "delFlag": 6,
-    "description": "okb6l8",
-    "remark": "pvrurs"
+    "mobilePhone": "1-775-667-5234",
+    "officePhone": "1-775-667-5234",
+    "buildingId": "158",
+    "roomNo": "e8mo1d",
+    "extQmType": "5j4wz9",
+    "extQmTypePhoto": "lvxno3",
+    "extPosName": "drew.kub",
+    "extOrganName": "drew.kub",
+    "priority": 147,
+    "priorityInOrgan": 96,
+    "priorityInDomain": 580,
+    "updaterId": "158",
+    "updateTime": "2025-08-31 18:08:15",
+    "delFlag": 2,
+    "description": "ny0c7z",
+    "remark": "c62tkj"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13043,50 +13043,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": "89",
-    "parentId": "89",
-    "postypeId": "89",
-    "roletypeId": "89",
-    "userId": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "code": "66235",
-    "oname": "tarra.erdman",
-    "posFunction": "0rvzy7",
-    "posRank": 84,
-    "posType": "y3u54n",
-    "editorType": "sfbkt1",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:15",
+    "lastTime": "2025-08-31 18:08:15",
+    "id": "158",
+    "parentId": "158",
+    "postypeId": "158",
+    "roletypeId": "158",
+    "userId": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "code": "63710",
+    "oname": "drew.kub",
+    "posFunction": "x160pz",
+    "posRank": 104,
+    "posType": "ou3ceg",
+    "editorType": "qxgs9b",
     "isEditorCreate": true,
-    "status": 482,
+    "status": 93,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "89",
-    "manageDeptids": "glzx4d",
+    "leaderId": "158",
+    "manageDeptids": "dw10nl",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-781-417-5663",
-    "officePhone": "1-781-417-5663",
-    "buildingId": "89",
-    "roomNo": "xh2io4",
-    "extQmType": "t20l5o",
-    "extQmTypePhoto": "49mlo4",
-    "extPosName": "tarra.erdman",
-    "extOrganName": "tarra.erdman",
-    "priority": 421,
-    "priorityInOrgan": 15,
-    "priorityInDomain": 154,
-    "updaterId": "89",
-    "updateTime": "2025-08-27 22:15:28",
-    "delFlag": 6,
-    "description": "uozxtd",
-    "remark": "vxi6ig",
-    "parentName": "tarra.erdman",
-    "roletypeName": "tarra.erdman",
-    "postypeName": "tarra.erdman"
+    "mobilePhone": "1-775-667-5234",
+    "officePhone": "1-775-667-5234",
+    "buildingId": "158",
+    "roomNo": "uklc74",
+    "extQmType": "k1fja7",
+    "extQmTypePhoto": "38lgbc",
+    "extPosName": "drew.kub",
+    "extOrganName": "drew.kub",
+    "priority": 41,
+    "priorityInOrgan": 481,
+    "priorityInDomain": 716,
+    "updaterId": "158",
+    "updateTime": "2025-08-31 18:08:15",
+    "delFlag": 2,
+    "description": "1jptmn",
+    "remark": "u3gng2",
+    "parentName": "drew.kub",
+    "roletypeName": "drew.kub",
+    "postypeName": "drew.kub"
   }
 }'
 ```
@@ -13106,8 +13106,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c4mk3a",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "yffzf6",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13183,50 +13183,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "id": "89",
-    "parentId": "89",
-    "postypeId": "89",
-    "roletypeId": "89",
-    "userId": "89",
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "code": "66235",
-    "oname": "tarra.erdman",
-    "posFunction": "ypb2ds",
-    "posRank": 278,
-    "posType": "7cs8ak",
-    "editorType": "qxtlv2",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:15",
+    "lastTime": "2025-08-31 18:08:15",
+    "id": "158",
+    "parentId": "158",
+    "postypeId": "158",
+    "roletypeId": "158",
+    "userId": "158",
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "code": "63710",
+    "oname": "drew.kub",
+    "posFunction": "lcfij1",
+    "posRank": 994,
+    "posType": "2h1znd",
+    "editorType": "395nkf",
     "isEditorCreate": true,
-    "status": 399,
+    "status": 999,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "89",
-    "manageDeptids": "2d688w",
+    "leaderId": "158",
+    "manageDeptids": "tr3yoa",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-781-417-5663",
-    "officePhone": "1-781-417-5663",
-    "buildingId": "89",
-    "roomNo": "1c6uya",
-    "extQmType": "ucflqm",
-    "extQmTypePhoto": "qnnu5f",
-    "extPosName": "tarra.erdman",
-    "extOrganName": "tarra.erdman",
-    "priority": 997,
-    "priorityInOrgan": 63,
-    "priorityInDomain": 682,
-    "updaterId": "89",
-    "updateTime": "2025-08-27 22:15:28",
-    "delFlag": 6,
-    "description": "8913lm",
-    "remark": "ub2vkz",
-    "parentName": "tarra.erdman",
-    "roletypeName": "tarra.erdman",
-    "postypeName": "tarra.erdman"
+    "mobilePhone": "1-775-667-5234",
+    "officePhone": "1-775-667-5234",
+    "buildingId": "158",
+    "roomNo": "71gvso",
+    "extQmType": "298hux",
+    "extQmTypePhoto": "63w9g7",
+    "extPosName": "drew.kub",
+    "extOrganName": "drew.kub",
+    "priority": 686,
+    "priorityInOrgan": 374,
+    "priorityInDomain": 421,
+    "updaterId": "158",
+    "updateTime": "2025-08-31 18:08:15",
+    "delFlag": 2,
+    "description": "1utf9d",
+    "remark": "eqtg52",
+    "parentName": "drew.kub",
+    "roletypeName": "drew.kub",
+    "postypeName": "drew.kub"
   }
 }'
 ```
@@ -13246,8 +13246,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z37qvv",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "vvgr5m",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13295,8 +13295,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pojyp9",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "3hk85p",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13341,20 +13341,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "89",
-    "postCode": "66235",
-    "postName": "tarra.erdman",
-    "postSort": 485,
-    "status": 15,
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:28",
-    "lastTime": "2025-08-27 22:15:28",
-    "delFlag": 6,
-    "remark": "tgp6gd",
+    "postId": "158",
+    "postCode": "63710",
+    "postName": "drew.kub",
+    "postSort": 72,
+    "status": 950,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:15",
+    "lastTime": "2025-08-31 18:08:15",
+    "delFlag": 2,
+    "remark": "su8cvl",
     "ids": [
-      "vnyf23"
+      "z61j4e"
     ],
-    "positionId": "89",
+    "positionId": "158",
     "flag": true
   }
 }'
@@ -13375,8 +13375,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "msblhl",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "vt0h9f",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13414,12 +13414,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 955,
-    "roleId": 454,
-    "positionId": "89",
-    "status": 631,
-    "beginTime": "2025-08-27",
-    "endTime": "2025-08-27"
+    "id": 349,
+    "roleId": 565,
+    "positionId": "158",
+    "status": 495,
+    "beginTime": "2025-08-31",
+    "endTime": "2025-08-31"
   }
 }'
 ```
@@ -13439,8 +13439,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bdwh6v",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "geoc9y",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13497,24 +13497,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "89",
-      "postCode": "66235",
-      "postName": "tarra.erdman",
-      "postSort": 654,
-      "status": 363,
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:29",
-      "lastTime": "2025-08-27 22:15:29",
-      "delFlag": 6,
-      "remark": "6m9cfy",
+      "postId": "158",
+      "postCode": "63710",
+      "postName": "drew.kub",
+      "postSort": 604,
+      "status": 636,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:15",
+      "lastTime": "2025-08-31 18:08:15",
+      "delFlag": 2,
+      "remark": "p85xcx",
       "ids": [
-        "znmfzy"
+        "ludlez"
       ],
-      "positionId": "89",
+      "positionId": "158",
       "flag": true
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13560,7 +13560,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?page=1&ip=217.26.150.93&operation=rdeo8d&username=tarra.erdman&limit=10&startTime=2025-08-27 22:14:23&appId=89&category=330&createTime=2025-08-27 22:15:29&srcCode=798&endTime=2025-08-27 22:14:23&time=1756304063123&orderBy=946&userId=89&q=orfztl&method=gqspli
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?appId=158&createTime=2025-08-31 18:08:16&srcCode=242&limit=10&method=plrg4n&orderBy=81&category=211&userId=158&ip=62.26.219.195&time=1756634841398&endTime=2025-08-31 18:07:21&username=drew.kub&page=1&operation=hd9b0p&startTime=2025-08-31 18:07:21&q=d3f0m0
 ```
 **Response-fields:**
 
@@ -13604,38 +13604,38 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 955,
+    "totalCount": 965,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 412,
-        "title": "tsupex",
-        "businessType": 376,
-        "businessTypeName": "tarra.erdman",
+        "operId": 952,
+        "title": "z4cmky",
+        "businessType": 834,
+        "businessTypeName": "drew.kub",
         "businessTypes": [
-          123
+          927
         ],
-        "method": "ftzviy",
-        "requestMethod": "ppn63x",
-        "operatorType": 229,
-        "operName": "tarra.erdman",
-        "deptName": "tarra.erdman",
-        "operUrl": "www.felicitas-spencer.com",
-        "operIp": "217.26.150.93",
-        "operLocation": "97ezx4",
-        "operParam": "xx3uma",
-        "jsonResult": "5bngyu",
-        "status": 0,
-        "errorMsg": "j9d2b6",
-        "operTime": "2025-08-27 22:15:29",
-        "costTime": 1756304063123,
-        "remark": "ftsvwt"
+        "method": "qyu959",
+        "requestMethod": "abgjkh",
+        "operatorType": 75,
+        "operName": "drew.kub",
+        "deptName": "drew.kub",
+        "operUrl": "www.leigha-wyman.biz",
+        "operIp": "62.26.219.195",
+        "operLocation": "76q1rw",
+        "operParam": "gk6bw6",
+        "jsonResult": "zvufau",
+        "status": 478,
+        "errorMsg": "czj03n",
+        "operTime": "2025-08-31 18:08:16",
+        "costTime": 1756634841398,
+        "remark": "nu0bk9"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13680,7 +13680,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'page=1&status=329&limit=10&orderBy=9&startTime=2025-08-27 22:14:23&remark=5lqd5h&businessType=193&operatorType=93&deptName=tarra.erdman&operTime=2025-08-27 22:15:29&title=2pc2s0&operIp=217.26.150.93&operName=tarra.erdman&q=xdaa75&endTime=2025-08-27 22:14:23&operId=860'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operIp=62.26.219.195&operTime=2025-08-31 18:08:16&q=5jppoo&businessType=630&status=372&orderBy=222&limit=10&page=1&operId=384&startTime=2025-08-31 18:07:21&operName=drew.kub&deptName=drew.kub&operatorType=286&endTime=2025-08-31 18:07:21&title=tlid62&remark=rb476x'
 ```
 **Response-fields:**
 
@@ -13698,8 +13698,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wn8wor",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "3im682",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13747,8 +13747,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "twm7pk",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "3oz0hp",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13798,7 +13798,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?dictSort=952&typeCode=66235&page=1&key=zs63nc&searchCode=66235&orderBy=748&q=qghl56&isDefault=ar51gt&status=55ggo1&limit=10&remark=wtm5xl&endTime=2025-08-27 22:14:23&cssClass=yo9zrn&cddId=661&name=tarra.erdman&dictLabel=j038mh&cddValue=xsr5pc&listClass=pbw3u0&startTime=2025-08-27 22:14:23&parentId=717
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?isDefault=mr715q&key=x74d3z&cssClass=405mcn&dictSort=664&searchCode=63710&parentId=963&q=i7w3sh&limit=10&status=jdv3jq&page=1&remark=0ggjti&cddValue=tvixpl&endTime=2025-08-31 18:07:21&cddId=641&startTime=2025-08-31 18:07:21&name=drew.kub&orderBy=168&dictLabel=yyc4pz&listClass=aiffoy&typeCode=63710
 ```
 **Response-fields:**
 
@@ -13835,29 +13835,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 651,
+    "totalCount": 57,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 845,
-        "typeCode": "66235",
-        "parentId": 191,
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "cddValue": "bz45w6",
-        "searchCode": "66235",
-        "priority": 470,
-        "createTime": "2025-08-27 22:15:35",
-        "remark": "dsp6h3",
-        "dictLabel": "3auq5r",
-        "typeCodeName": "tarra.erdman",
-        "parentName": "tarra.erdman"
+        "cddId": 593,
+        "typeCode": "63710",
+        "parentId": 405,
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "cddValue": "nqltbd",
+        "searchCode": "63710",
+        "priority": 987,
+        "createTime": "2025-08-31 18:08:20",
+        "remark": "zfphbw",
+        "dictLabel": "yjbh7z",
+        "typeCodeName": "drew.kub",
+        "parentName": "drew.kub"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13906,7 +13906,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'cssClass=aqftcq&startTime=2025-08-27 22:14:23&status=10r9fu&remark=dm7ohv&parentId=87&listClass=ln9ms8&page=1&name=tarra.erdman&isDefault=pptyc4&limit=10&typeCode=66235&searchCode=66235&orderBy=221&endTime=2025-08-27 22:14:23&key=q2ukmn&dictLabel=tknlk0&q=qhma9x&cddId=89&dictSort=713&cddValue=d75ous'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'limit=10&page=1&listClass=dxi6rg&key=u2ebrs&orderBy=794&searchCode=63710&cddId=174&typeCode=63710&startTime=2025-08-31 18:07:21&cssClass=hi8u5t&endTime=2025-08-31 18:07:21&remark=7qlyp2&q=3m0c58&name=drew.kub&dictLabel=vbl9v1&isDefault=vr8t7o&parentId=824&cddValue=61gmsz&dictSort=406&status=phch9i'
 ```
 **Response-fields:**
 
@@ -13924,8 +13924,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ds0izm",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "a9pywb",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -13955,7 +13955,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/369.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/718.do
 ```
 **Response-fields:**
 
@@ -13987,21 +13987,21 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 65,
-    "typeCode": "66235",
-    "parentId": 599,
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "cddValue": "9skzrf",
-    "searchCode": "66235",
-    "priority": 972,
-    "createTime": "2025-08-27 22:15:35",
-    "remark": "jnvsqp",
-    "dictLabel": "dia45w",
-    "typeCodeName": "tarra.erdman",
-    "parentName": "tarra.erdman"
+    "cddId": 979,
+    "typeCode": "63710",
+    "parentId": 617,
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "cddValue": "587sh6",
+    "searchCode": "63710",
+    "priority": 346,
+    "createTime": "2025-08-31 18:08:20",
+    "remark": "nurmcb",
+    "dictLabel": "n1lcfm",
+    "typeCodeName": "drew.kub",
+    "parentName": "drew.kub"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14040,7 +14040,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/j71l55.do?typeCode=66235&parentId=89&roletypeId=89&zparentId=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/uxq19u.do?parentId=158&typeCode=63710&zparentId=158&roletypeId=158
 ```
 **Response-fields:**
 
@@ -14061,7 +14061,7 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14106,19 +14106,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 690,
-    "typeCode": "66235",
-    "parentId": 683,
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "cddValue": "36xx5y",
-    "searchCode": "66235",
-    "priority": 50,
-    "createTime": "2025-08-27 22:15:35",
-    "remark": "27640t",
-    "dictLabel": "9z41sg",
-    "typeCodeName": "tarra.erdman",
-    "parentName": "tarra.erdman"
+    "cddId": 440,
+    "typeCode": "63710",
+    "parentId": 187,
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "cddValue": "4rk5g5",
+    "searchCode": "63710",
+    "priority": 375,
+    "createTime": "2025-08-31 18:08:20",
+    "remark": "16fv3d",
+    "dictLabel": "6nmcmj",
+    "typeCodeName": "drew.kub",
+    "parentName": "drew.kub"
   }
 }'
 ```
@@ -14138,8 +14138,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rigq1o",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "1eyges",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14184,19 +14184,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 164,
-    "typeCode": "66235",
-    "parentId": 779,
-    "name": "tarra.erdman",
-    "sname": "tarra.erdman",
-    "cddValue": "tfh9kp",
-    "searchCode": "66235",
-    "priority": 44,
-    "createTime": "2025-08-27 22:15:35",
-    "remark": "0ec9vh",
-    "dictLabel": "4qpx6f",
-    "typeCodeName": "tarra.erdman",
-    "parentName": "tarra.erdman"
+    "cddId": 371,
+    "typeCode": "63710",
+    "parentId": 932,
+    "name": "drew.kub",
+    "sname": "drew.kub",
+    "cddValue": "9lpv7a",
+    "searchCode": "63710",
+    "priority": 863,
+    "createTime": "2025-08-31 18:08:20",
+    "remark": "47ktzm",
+    "dictLabel": "53gdxe",
+    "typeCodeName": "drew.kub",
+    "parentName": "drew.kub"
   }
 }'
 ```
@@ -14216,8 +14216,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ime0y3",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "bblfpv",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14265,8 +14265,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nqw7e7",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "ejw0xi",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14320,7 +14320,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?roleId=89&page=1&q=jjznay&positionType=qf1am7&roletypeId=89&metaId=89&refresh=n7lx74&roleTypeId=89&orderBy=289&groupId=89&status=pniy63&showButton=ozrqzs&limit=10&subType=40f7r9&wlType=zbueoe&endTime=2025-08-27 22:14:23&refType=n39luk&startTime=2025-08-27 22:14:23&key=jri02o&gnType=kw94jj&type=m27vja&parentId=89&organwId=89&appId=89&positionId=89
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?refType=afx0iw&status=s957ao&parentId=158&gnType=turhp4&roletypeId=158&appId=158&q=2c5gu5&startTime=2025-08-31 18:07:21&type=j6179a&groupId=158&positionId=158&orderBy=25&organwId=158&page=1&wlType=bz9fnq&endTime=2025-08-31 18:07:21&refresh=bbwwvm&key=3b3lbg&showButton=0qe1tr&metaId=158&positionType=y5azut&subType=xjrvgn&roleTypeId=158&roleId=158&limit=10
 ```
 **Response-fields:**
 
@@ -14353,18 +14353,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "89",
-      "label": "jl4f3p",
-      "shortName": "tarra.erdman",
-      "organId": "89",
-      "areaId": 833,
-      "searchCode": "66235",
-      "childNum": 704,
+      "id": "158",
+      "label": "2sykqz",
+      "shortName": "drew.kub",
+      "organId": "158",
+      "areaId": 524,
+      "searchCode": "63710",
+      "childNum": 558,
       "checked": true,
-      "entity": 867,
+      "entity": 481,
       "show": true,
       "showIcon": true,
-      "parentId": "89",
+      "parentId": "158",
       "children": [
         {
           "$ref": ".."
@@ -14372,7 +14372,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14423,7 +14423,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?endTime=2025-08-27 22:14:23&page=1&typeCodes=eqz8n0&typeCodes=eqz8n0&parentId=556&isAllChild=0w0ayl&ids=cwifz1&ids=cwifz1&startTime=2025-08-27 22:14:23&key=my9ncd&orderBy=626&dispFlag=1lwmnz&cddLevel=ngd83v&searchCode=66235&sname=tarra.erdman&delFlag=6&description=gcg8hv&existKey=w7d689&q=qgl6ty&limit=10&typeMode=ynb4u5&typeCode=66235&cddValue=9fm66t&name=tarra.erdman
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?limit=10&q=nw202k&delFlag=2&dispFlag=y5faxp&startTime=2025-08-31 18:07:21&searchCode=63710&orderBy=316&cddLevel=mwvr3k&isAllChild=a5an4r&cddValue=9wrowu&name=drew.kub&page=1&existKey=zzk92q&typeCode=63710&typeMode=u0dmer&key=phyy29&sname=drew.kub&endTime=2025-08-31 18:07:21&parentId=342&description=qdq547&ids=4sz78o&ids=4sz78o&typeCodes=ofs4wy&typeCodes=ofs4wy
 ```
 **Response-fields:**
 
@@ -14462,24 +14462,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:35",
-      "lastTime": "2025-08-27 22:15:35",
-      "id": 222,
-      "typeCode": "66235",
-      "parentId": 496,
-      "name": "tarra.erdman",
-      "sname": "tarra.erdman",
-      "cddValue": "s422g6",
-      "cddLevel": "7txc2s",
-      "searchCode": "66235",
-      "dispFlag": "0juddt",
-      "priority": 975,
-      "delFlag": 6,
-      "deleteTime": "2025-08-27 22:15:35",
-      "description": "wpv8d6",
-      "spare1": "cuu2j0",
-      "spare2": "lioz82",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:21",
+      "lastTime": "2025-08-31 18:08:21",
+      "id": 53,
+      "typeCode": "63710",
+      "parentId": 385,
+      "name": "drew.kub",
+      "sname": "drew.kub",
+      "cddValue": "u4qtu7",
+      "cddLevel": "kw0fdv",
+      "searchCode": "63710",
+      "dispFlag": "zc6cai",
+      "priority": 511,
+      "delFlag": 2,
+      "deleteTime": "2025-08-31 18:08:21",
+      "description": "uzpnq8",
+      "spare1": "abqsjj",
+      "spare2": "vdmyk2",
       "children": [
         {
           "$ref": ".."
@@ -14487,7 +14487,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14563,45 +14563,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 910,
-      "total": 8.40,
-      "sys": 25.16,
-      "used": 17.08,
-      "wait": 86.23,
-      "free": 56.86
+      "cpuNum": 943,
+      "total": 36.40,
+      "sys": 77.89,
+      "used": 79.53,
+      "wait": 43.70,
+      "free": 52.99
     },
     "mem": {
-      "total": 99.05,
-      "used": 15.92,
-      "free": 2.06
+      "total": 20.69,
+      "used": 12.82,
+      "free": 78.47
     },
     "jvm": {
-      "total": 15.21,
-      "max": 59.82,
-      "free": 99.52,
-      "version": "3.76",
-      "home": "2azi3v"
+      "total": 39.33,
+      "max": 28.10,
+      "free": 42.47,
+      "version": "0.41",
+      "home": "io4htj"
     },
     "sys": {
-      "computerName": "tarra.erdman",
-      "computerIp": "217.26.150.93",
-      "userDir": "mw3ox2",
-      "osName": "tarra.erdman",
-      "osArch": "88xnw1"
+      "computerName": "drew.kub",
+      "computerIp": "62.26.219.195",
+      "userDir": "awkzd8",
+      "osName": "drew.kub",
+      "osArch": "fxlvjg"
     },
     "sysFiles": [
       {
-        "dirName": "tarra.erdman",
-        "sysTypeName": "tarra.erdman",
-        "typeName": "tarra.erdman",
-        "total": "h3obfp",
-        "free": "ner4jw",
-        "used": "75q0s0",
-        "usage": 46.19
+        "dirName": "drew.kub",
+        "sysTypeName": "drew.kub",
+        "typeName": "drew.kub",
+        "total": "4cjx4s",
+        "free": "oulm8r",
+        "used": "0iydcw",
+        "usage": 2.30
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14632,11 +14632,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "tarra.erdman",
-    "password": "yy3wkw",
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
-    "appId": "89"
+    "username": "drew.kub",
+    "password": "1z66yg",
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5",
+    "appId": "158"
   }
 }'
 ```
@@ -14656,8 +14656,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0zzzag",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "c5j57b",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14688,11 +14688,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "tarra.erdman",
-    "password": "5xuofv",
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
-    "appId": "89"
+    "username": "drew.kub",
+    "password": "pmexds",
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5",
+    "appId": "158"
   }
 }'
 ```
@@ -14717,12 +14717,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 97,
-    "token": "ohkmq0",
-    "updateTime": "2025-08-27 22:15:25",
-    "expireTime": "2025-08-27 22:15:25"
+    "adminId": 655,
+    "token": "wt5j1u",
+    "updateTime": "2025-08-31 18:08:12",
+    "expireTime": "2025-08-31 18:08:12"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -14786,8 +14786,8 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -14796,7 +14796,7 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -14847,60 +14847,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:25",
-      "lastTime": "2025-08-27 22:15:25",
-      "id": 147,
-      "userId": "89",
-      "deptId": 441,
-      "deptName": "tarra.erdman",
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "name": "tarra.erdman",
-      "username": "tarra.erdman",
-      "nickName": "reena.schmeler",
-      "email": "fletcher.hickle@hotmail.com",
-      "mobile": "803.740.8989",
-      "imagePath": "sn7ely",
-      "password": "1u12p9",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:12",
+      "lastTime": "2025-08-31 18:08:12",
+      "id": 200,
+      "userId": "158",
+      "deptId": 811,
+      "deptName": "drew.kub",
+      "organId": "158",
+      "organName": "drew.kub",
+      "name": "drew.kub",
+      "username": "drew.kub",
+      "nickName": "javier.terry",
+      "email": "latasha.buckridge@hotmail.com",
+      "mobile": "1-715-323-3760",
+      "imagePath": "iir6tw",
+      "password": "9uhtcs",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 446,
-      "delFlag": 6,
-      "lastLoginIp": "217.26.150.93",
-      "lastLoginTime": "2025-08-27 22:15:25",
-      "description": "5vcho4",
+      "status": 807,
+      "delFlag": 2,
+      "lastLoginIp": "62.26.219.195",
+      "lastLoginTime": "2025-08-31 18:08:12",
+      "description": "y66nqf",
       "dept": {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:25",
-        "lastTime": "2025-08-27 22:15:25",
-        "id": 182,
-        "organId": "89",
-        "parentId": 353,
-        "appId": "89",
-        "depttypeId": 943,
-        "foreignId": "89",
-        "createType": 969,
-        "type": "o85bfu",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "areaCode": "66235",
-        "organLeader": "ub7iao",
-        "leaderId": "89",
-        "leaderMobile": "803.740.8989",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:12",
+        "lastTime": "2025-08-31 18:08:12",
+        "id": 226,
+        "organId": "158",
+        "parentId": 885,
+        "appId": "158",
+        "depttypeId": 678,
+        "foreignId": "158",
+        "createType": 90,
+        "type": "3sw0dx",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "areaCode": "63710",
+        "organLeader": "o3q5hg",
+        "leaderId": "158",
+        "leaderMobile": "1-715-323-3760",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "66235",
-        "imagePath": "esghx6",
-        "priority": 47,
-        "status": 449,
-        "delFlag": 6,
-        "description": "7pafnt",
-        "spare1": "9gz2el",
-        "spare2": "4f1wzc",
+        "searchCode": "63710",
+        "imagePath": "m0kuv1",
+        "priority": 446,
+        "status": 770,
+        "delFlag": 2,
+        "description": "f4ilnt",
+        "spare1": "tkg00p",
+        "spare2": "dsh02f",
         "children": [
           {
             "$ref": ".."
@@ -14909,53 +14909,53 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "89",
-          "createTime": "2025-08-27 22:15:25",
-          "lastTime": "2025-08-27 22:15:25",
-          "id": 263,
-          "roletypeId": "89",
-          "appId": "89",
-          "name": "tarra.erdman",
-          "code": "66235",
-          "priority": 292,
+          "creatorId": "158",
+          "createTime": "2025-08-31 18:08:12",
+          "lastTime": "2025-08-31 18:08:12",
+          "id": 157,
+          "roletypeId": "158",
+          "appId": "158",
+          "name": "drew.kub",
+          "code": "63710",
+          "priority": 369,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 597,
-          "description": "9bbwcd",
-          "areaType": "7wtmno"
+          "status": 946,
+          "description": "nwyejh",
+          "areaType": "40uo13"
         }
       ],
       "roleIds": [
-        138
+        562
       ],
       "positionIds": [
-        "weggaw"
+        "1brodb"
       ],
-      "roleId": 647,
+      "roleId": 375,
       "userRoleList": [
         {
-          "id": 458,
-          "deptId": 558,
-          "deptName": "tarra.erdman",
-          "organId": "89",
-          "organName": "tarra.erdman",
-          "roleId": 374,
-          "roleName": "tarra.erdman",
-          "adminId": 769
+          "id": 563,
+          "deptId": 613,
+          "deptName": "drew.kub",
+          "organId": "158",
+          "organName": "drew.kub",
+          "roleId": 14,
+          "roleName": "drew.kub",
+          "adminId": 625
         }
       ],
-      "code": "66235",
-      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+      "code": "63710",
+      "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
     },
     "roles": [
-      "fc2j2r"
+      "yw7iev"
     ],
     "permissions": [
-      "z5k1hz"
+      "mu4qnu"
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15012,32 +15012,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "89",
-    "areaId": 915,
-    "groupId": 331,
-    "positionId": "89",
-    "tplSolution": "l0nxlc",
+    "accountId": "158",
+    "areaId": 908,
+    "groupId": 894,
+    "positionId": "158",
+    "tplSolution": "0vnro6",
     "menuList": [
       {
-        "id": 400,
-        "parentId": 384,
-        "name": "tarra.erdman",
-        "ename": "tarra.erdman",
-        "type": "pwbsyg",
-        "perms": "5tlz53",
-        "menuLevel": 192,
-        "urlType": "lgj4h4",
-        "url": "www.felicitas-spencer.com",
-        "menuSeq": "ncyjt0",
-        "icon": "pde3mm",
-        "imagePath": "7rlx7h",
-        "css": "43gp1z",
-        "description": "lqki3i",
-        "todoTotalApi": "3sz947"
+        "id": 716,
+        "parentId": 938,
+        "name": "drew.kub",
+        "ename": "drew.kub",
+        "type": "ugotdo",
+        "perms": "dx82ew",
+        "menuLevel": 758,
+        "urlType": "c9eexo",
+        "url": "www.leigha-wyman.biz",
+        "menuSeq": "pe7r63",
+        "icon": "gwa4ld",
+        "imagePath": "ityxdb",
+        "css": "7neptc",
+        "description": "10ub3u",
+        "todoTotalApi": "dwyfpv"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15099,39 +15099,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "89",
+    "id": "158",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "nzdo7f",
-    "aesKey": "wk2ise",
-    "clientId": "89",
-    "serverUrl": "www.felicitas-spencer.com",
-    "serverConf1": "5xh23v",
+    "publicKey": "n8hzeo",
+    "aesKey": "6poan7",
+    "clientId": "158",
+    "serverUrl": "www.leigha-wyman.biz",
+    "serverConf1": "lc9csh",
     "appConf": {
-      "siteId": 822,
-      "appId": "89",
-      "topXzqhId": "89",
+      "siteId": 78,
+      "appId": "158",
+      "topXzqhId": "158",
       "appConfJson": {
-        "mapKey": "64titx"
+        "mapKey": "1urgej"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "a9wf25",
+      "layout": "gwstjg",
       "siteInfo": {
-        "id": 817,
-        "appId": "89",
-        "areaCode": "66235",
-        "path": "42pj5d",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "layout": "s06xjn",
-        "logoUrl": "www.felicitas-spencer.com",
-        "cdnUrl": "www.felicitas-spencer.com"
+        "id": 139,
+        "appId": "158",
+        "areaCode": "63710",
+        "path": "rju466",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "layout": "x88kg4",
+        "logoUrl": "www.leigha-wyman.biz",
+        "cdnUrl": "www.leigha-wyman.biz"
       }
     }
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15161,11 +15161,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/thirdOrgan/login.do --data '{
   "data": {
-    "username": "tarra.erdman",
-    "password": "hgnfrw",
-    "code": "66235",
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
-    "appId": "89"
+    "username": "drew.kub",
+    "password": "q4tv5z",
+    "code": "63710",
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5",
+    "appId": "158"
   }
 }'
 ```
@@ -15190,12 +15190,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 508,
-    "token": "vypoxm",
-    "updateTime": "2025-08-27 22:15:25",
-    "expireTime": "2025-08-27 22:15:25"
+    "adminId": 478,
+    "token": "6b1r1f",
+    "updateTime": "2025-08-31 18:08:12",
+    "expireTime": "2025-08-31 18:08:12"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15219,7 +15219,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=1dbf6803-610f-434e-93b1-a54f044fc95c&code=66235
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5&code=63710
 ```
 **Response-fields:**
 
@@ -15237,8 +15237,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "plfqlq",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "iifkwk",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15287,7 +15287,7 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15335,13 +15335,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "tarra.erdman",
-      "cacheKey": "uk5b0b",
-      "cacheValue": "rzdtm9",
-      "remark": "d5yu2u"
+      "cacheName": "drew.kub",
+      "cacheKey": "osaw01",
+      "cacheValue": "q2s21h",
+      "remark": "jsfc5u"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15371,7 +15371,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/tarra.erdman.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/drew.kub.do
 ```
 **Response-fields:**
 
@@ -15392,7 +15392,7 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15423,7 +15423,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/tarra.erdman/rhv0ut.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/drew.kub/x1g0zn.do
 ```
 **Response-fields:**
 
@@ -15446,12 +15446,12 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "tarra.erdman",
-    "cacheKey": "2dmw47",
-    "cacheValue": "numx0t",
-    "remark": "ok5gjm"
+    "cacheName": "drew.kub",
+    "cacheKey": "klyblz",
+    "cacheValue": "e51hpc",
+    "remark": "fnb7tw"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15481,7 +15481,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/tarra.erdman.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/drew.kub.do
 ```
 **Response-fields:**
 
@@ -15499,8 +15499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sjsj5r",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "xmtb5b",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15530,7 +15530,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/a61slh.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/6anzs1.do
 ```
 **Response-fields:**
 
@@ -15548,8 +15548,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h5rdhp",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "rnq9im",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15591,8 +15591,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mieggt",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "mlxi0n",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15636,7 +15636,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?page=1&endTime=2025-08-27 22:14:23&q=hsgflv&parentId=672&menuId=323&menuName=tarra.erdman&delFlag=7o9fj7&currAppId=89&orderBy=61&limit=10&menuType=077p8v&startTime=2025-08-27 22:14:23&visible=1ry5d6&status=q6x6pq
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?menuName=drew.kub&startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&page=1&limit=10&parentId=820&currAppId=158&delFlag=ie7q8i&menuType=frk4v7&q=1gtmtu&visible=y1wsd6&status=9du3xu&menuId=888&orderBy=103
 ```
 **Response-fields:**
 
@@ -15692,55 +15692,55 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 619,
-      "menuName": "tarra.erdman",
-      "type": "yt2fkr",
-      "typeName": "tarra.erdman",
-      "parentName": "tarra.erdman",
-      "parentId": 137,
-      "priority": 809,
-      "path": "4gja5o",
-      "component": "lkmtbz",
-      "query": "2jjm85",
-      "routeName": "tarra.erdman",
-      "isFrame": "ablk3h",
-      "isCache": "md9fvp",
-      "menuType": "7qzvqv",
-      "menuTypeName": "tarra.erdman",
-      "visible": "bguh8r",
-      "status": "h2wcwc",
-      "perms": "4bkgpk",
-      "icon": "pbr1f6",
-      "imagePath": "bcqoe1",
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:26",
-      "lastTime": "2025-08-27 22:15:26",
+      "menuId": 945,
+      "menuName": "drew.kub",
+      "type": "zi8nh0",
+      "typeName": "drew.kub",
+      "parentName": "drew.kub",
+      "parentId": 757,
+      "priority": 68,
+      "path": "mwdfbt",
+      "component": "jvl89u",
+      "query": "4vbij8",
+      "routeName": "drew.kub",
+      "isFrame": "567rqx",
+      "isCache": "j6qh5l",
+      "menuType": "tja61x",
+      "menuTypeName": "drew.kub",
+      "visible": "ru8gre",
+      "status": "z7fa7c",
+      "perms": "6byi6c",
+      "icon": "ydkn1r",
+      "imagePath": "ry53gz",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:13",
+      "lastTime": "2025-08-31 18:08:13",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 882,
-      "description": "qhw3qk",
-      "listJson": "e89vyq",
-      "delFlag": 6,
+      "childNum": 426,
+      "description": "0iwwnh",
+      "listJson": "noeiqz",
+      "delFlag": 2,
       "permsList": [
         {
-          "permsName": "tarra.erdman",
-          "permsStr": "cngwqo"
+          "permsName": "drew.kub",
+          "permsStr": "rprr8z"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "89",
-          "parentId": "89",
-          "code": "66235",
-          "name": "tarra.erdman"
+          "id": "158",
+          "parentId": "158",
+          "code": "63710",
+          "name": "drew.kub"
         }
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15783,7 +15783,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?visible=9iuf0i&endTime=2025-08-27 22:14:23&parentId=669&limit=10&page=1&delFlag=ksi8yw&q=vgdzyy&menuType=4weg5q&startTime=2025-08-27 22:14:23&menuName=tarra.erdman&currAppId=89&menuId=146&status=1gy4wz&orderBy=446
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?endTime=2025-08-31 18:07:21&status=2dqh0d&visible=n1fy8c&menuType=dv7b7m&page=1&menuName=drew.kub&q=a4urme&menuId=836&currAppId=158&delFlag=xregxq&parentId=166&limit=10&orderBy=535&startTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -15822,26 +15822,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "ku6uae",
-    "pageNum": 752,
+    "stackTrace": "py5tbw",
+    "pageNum": 152,
     "pageSize": 10,
-    "startRow": 664,
-    "endRow": 442,
-    "total": 52,
-    "pages": 125,
+    "startRow": 488,
+    "endRow": 216,
+    "total": 300,
+    "pages": 424,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "loehbr",
-    "orderBy": "z901pp",
+    "countColumn": "q22of7",
+    "orderBy": "z4owpc",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "u3cbmp",
+    "dialectClass": "7kkwod",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -15871,7 +15871,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/420.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/125.do
 ```
 **Response-fields:**
 
@@ -15926,54 +15926,54 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 715,
-    "menuName": "tarra.erdman",
-    "type": "ppnuci",
-    "typeName": "tarra.erdman",
-    "parentName": "tarra.erdman",
-    "parentId": 716,
-    "priority": 488,
-    "path": "6xhops",
-    "component": "w29a5d",
-    "query": "kl3exk",
-    "routeName": "tarra.erdman",
-    "isFrame": "kofnb5",
-    "isCache": "nhskh9",
-    "menuType": "vsm17r",
-    "menuTypeName": "tarra.erdman",
-    "visible": "cz378l",
-    "status": "0819um",
-    "perms": "n2dxye",
-    "icon": "knktp3",
-    "imagePath": "urx07e",
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
+    "menuId": 251,
+    "menuName": "drew.kub",
+    "type": "0jff1x",
+    "typeName": "drew.kub",
+    "parentName": "drew.kub",
+    "parentId": 260,
+    "priority": 566,
+    "path": "g0v6f6",
+    "component": "1thr4h",
+    "query": "909ny7",
+    "routeName": "drew.kub",
+    "isFrame": "599ue9",
+    "isCache": "w29ic2",
+    "menuType": "da9kdy",
+    "menuTypeName": "drew.kub",
+    "visible": "akx64n",
+    "status": "x89f0a",
+    "perms": "ei3huo",
+    "icon": "p99s2u",
+    "imagePath": "130lcn",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 765,
-    "description": "o0nc4o",
-    "listJson": "bl00lc",
-    "delFlag": 6,
+    "childNum": 670,
+    "description": "9cb21e",
+    "listJson": "v3f00w",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "tarra.erdman",
-        "permsStr": "4sjmm8"
+        "permsName": "drew.kub",
+        "permsStr": "22a7xf"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "89",
-        "parentId": "89",
-        "code": "66235",
-        "name": "tarra.erdman"
+        "id": "158",
+        "parentId": "158",
+        "code": "63710",
+        "name": "drew.kub"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16016,7 +16016,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?startTime=2025-08-27 22:14:23&menuId=865&currAppId=89&delFlag=idgegd&menuName=tarra.erdman&menuType=7ygbtr&visible=awbfdq&limit=10&status=rlmqmt&parentId=980&orderBy=841&page=1&endTime=2025-08-27 22:14:23&q=mznqrb
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?menuId=76&currAppId=158&delFlag=n9k12m&menuType=7cdt24&status=1ojktj&visible=yxu0nl&limit=10&orderBy=798&endTime=2025-08-31 18:07:21&page=1&parentId=271&q=2b1v0f&menuName=drew.kub&startTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -16041,12 +16041,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      374
+      104
     ],
     "menus": [
       {
-        "id": 635,
-        "label": "pduotv",
+        "id": 734,
+        "label": "wk650u",
         "children": [
           {
             "$ref": ".."
@@ -16055,7 +16055,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16119,7 +16119,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?name=tarra.erdman&imagePath=qpl2ub&parentRoot=ythl1x&urlType=l64edi&subCount=930&orderBy=985&icon=bw2ygo&appId=89&isDisplay=true&description=iofj4w&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&appIds=mep2yt&appIds=mep2yt&isProtect=true&q=r0o7k2&type=lu501k&code=66235&isMenuAll=kyso1q&menuIds=y32hy5&menuIds=y32hy5&spare2=0cf670&page=1&typeNoButton=ywuylc&menuLevel=199&parentId=243&spare1=5g4kbr&offset=1&isCheck=true&isDisabled=true&createTime=2025-08-27 22:14:23&url=www.felicitas-spencer.com&shortCut=393awi&delFlag=6&parentNull=767lhs&limit=10&popPosition=787
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?parentId=296&shortCut=v7569e&popPosition=913&typeNoButton=yrleqj&appIds=umehxf&appIds=umehxf&description=0295we&spare2=bhf4p0&spare1=c8hyd5&orderBy=773&isProtect=true&page=1&type=c13c0a&appId=158&code=63710&menuLevel=525&urlType=035rn5&url=www.leigha-wyman.biz&parentRoot=49apwc&icon=w4yjwq&name=drew.kub&isDisabled=true&offset=1&isCheck=true&endTime=2025-08-31 18:07:21&imagePath=b5m51w&delFlag=2&parentNull=u5towa&startTime=2025-08-31 18:07:21&isMenuAll=qt5lp4&isDisplay=true&q=2m2zjt&subCount=536&menuIds=8utajl&menuIds=8utajl&createTime=2025-08-31 18:07:21&limit=10
 ```
 **Response-fields:**
 
@@ -16148,11 +16148,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "ibgi1k",
-      "id": "89",
-      "parentId": "89",
-      "extId": "89",
-      "href": "snh4vy",
+      "title": "ss5mjf",
+      "id": "158",
+      "parentId": "158",
+      "extId": "158",
+      "href": "xmqs0n",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -16163,7 +16163,7 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16193,7 +16193,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/91.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/856.do
 ```
 **Response-fields:**
 
@@ -16218,12 +16218,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      29
+      492
     ],
     "menus": [
       {
-        "id": 394,
-        "label": "dki9id",
+        "id": 689,
+        "label": "fsqq8x",
         "children": [
           {
             "$ref": ".."
@@ -16232,7 +16232,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16300,50 +16300,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 304,
-    "menuName": "tarra.erdman",
-    "type": "jofdln",
-    "typeName": "tarra.erdman",
-    "parentName": "tarra.erdman",
-    "parentId": 641,
-    "priority": 325,
-    "path": "98iqwz",
-    "component": "16cwdq",
-    "query": "i70bua",
-    "routeName": "tarra.erdman",
-    "isFrame": "dzk6zo",
-    "isCache": "73muoq",
-    "menuType": "4nxwai",
-    "menuTypeName": "tarra.erdman",
-    "visible": "adr4xi",
-    "status": "n8uip2",
-    "perms": "fsrr3u",
-    "icon": "ife237",
-    "imagePath": "thiy0y",
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
+    "menuId": 140,
+    "menuName": "drew.kub",
+    "type": "sij9hu",
+    "typeName": "drew.kub",
+    "parentName": "drew.kub",
+    "parentId": 805,
+    "priority": 680,
+    "path": "2xktpb",
+    "component": "4hgp1y",
+    "query": "vrox9k",
+    "routeName": "drew.kub",
+    "isFrame": "4awqri",
+    "isCache": "nf4jnc",
+    "menuType": "59nw1m",
+    "menuTypeName": "drew.kub",
+    "visible": "4o3qoz",
+    "status": "9ufpn3",
+    "perms": "0q0oqe",
+    "icon": "kpav16",
+    "imagePath": "6b3rkj",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 735,
-    "description": "rvc1ub",
-    "listJson": "kjgeqm",
-    "delFlag": 6,
+    "childNum": 920,
+    "description": "mlpqwe",
+    "listJson": "aj1d7l",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "tarra.erdman",
-        "permsStr": "p9zran"
+        "permsName": "drew.kub",
+        "permsStr": "g537ab"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "89",
-        "parentId": "89",
-        "code": "66235",
-        "name": "tarra.erdman"
+        "id": "158",
+        "parentId": "158",
+        "code": "63710",
+        "name": "drew.kub"
       }
     ]
   }
@@ -16365,8 +16365,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ntjmee",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "6px5vn",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16434,50 +16434,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 791,
-    "menuName": "tarra.erdman",
-    "type": "m31dgp",
-    "typeName": "tarra.erdman",
-    "parentName": "tarra.erdman",
-    "parentId": 53,
-    "priority": 720,
-    "path": "dizanq",
-    "component": "r3c3qj",
-    "query": "52covq",
-    "routeName": "tarra.erdman",
-    "isFrame": "02xhhf",
-    "isCache": "whz27k",
-    "menuType": "a7q5k2",
-    "menuTypeName": "tarra.erdman",
-    "visible": "t4bfnc",
-    "status": "arqrlu",
-    "perms": "26hl5s",
-    "icon": "6udav7",
-    "imagePath": "ad8bkv",
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
+    "menuId": 367,
+    "menuName": "drew.kub",
+    "type": "lsm7qu",
+    "typeName": "drew.kub",
+    "parentName": "drew.kub",
+    "parentId": 886,
+    "priority": 330,
+    "path": "h2fbzn",
+    "component": "0nmj57",
+    "query": "lo8v1b",
+    "routeName": "drew.kub",
+    "isFrame": "hee6p4",
+    "isCache": "ctwwb9",
+    "menuType": "b41cn9",
+    "menuTypeName": "drew.kub",
+    "visible": "2gaqjo",
+    "status": "f0s6y9",
+    "perms": "4gqfkd",
+    "icon": "a0477j",
+    "imagePath": "hnch4o",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 494,
-    "description": "lg3m3n",
-    "listJson": "5newrm",
-    "delFlag": 6,
+    "childNum": 215,
+    "description": "ikxicf",
+    "listJson": "nk7bhy",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "tarra.erdman",
-        "permsStr": "hzwm08"
+        "permsName": "drew.kub",
+        "permsStr": "uks1de"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "89",
-        "parentId": "89",
-        "code": "66235",
-        "name": "tarra.erdman"
+        "id": "158",
+        "parentId": "158",
+        "code": "63710",
+        "name": "drew.kub"
       }
     ]
   }
@@ -16499,8 +16499,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wk6hqh",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "l1zkbs",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16568,50 +16568,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 105,
-    "menuName": "tarra.erdman",
-    "type": "yzqeep",
-    "typeName": "tarra.erdman",
-    "parentName": "tarra.erdman",
-    "parentId": 800,
-    "priority": 834,
-    "path": "erxvui",
-    "component": "m14chu",
-    "query": "txqkl1",
-    "routeName": "tarra.erdman",
-    "isFrame": "et4otv",
-    "isCache": "c27oga",
-    "menuType": "95km3v",
-    "menuTypeName": "tarra.erdman",
-    "visible": "o4bi3l",
-    "status": "lr436o",
-    "perms": "wkgirq",
-    "icon": "kuq1v0",
-    "imagePath": "i2buay",
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
+    "menuId": 466,
+    "menuName": "drew.kub",
+    "type": "zqooje",
+    "typeName": "drew.kub",
+    "parentName": "drew.kub",
+    "parentId": 110,
+    "priority": 973,
+    "path": "kltbps",
+    "component": "iedmxx",
+    "query": "045au5",
+    "routeName": "drew.kub",
+    "isFrame": "9doa4j",
+    "isCache": "whw81j",
+    "menuType": "0n38cg",
+    "menuTypeName": "drew.kub",
+    "visible": "9vwrkb",
+    "status": "tvl3tj",
+    "perms": "k1yoc1",
+    "icon": "9jq51j",
+    "imagePath": "tsn2p2",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 639,
-    "description": "ubihck",
-    "listJson": "java94",
-    "delFlag": 6,
+    "childNum": 649,
+    "description": "bhbsr7",
+    "listJson": "0csmro",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "tarra.erdman",
-        "permsStr": "32yozn"
+        "permsName": "drew.kub",
+        "permsStr": "ffpbu9"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "89",
-        "parentId": "89",
-        "code": "66235",
-        "name": "tarra.erdman"
+        "id": "158",
+        "parentId": "158",
+        "code": "63710",
+        "name": "drew.kub"
       }
     ]
   }
@@ -16633,8 +16633,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "itfdzh",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "qttgy6",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16702,50 +16702,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 78,
-    "menuName": "tarra.erdman",
-    "type": "ilibmi",
-    "typeName": "tarra.erdman",
-    "parentName": "tarra.erdman",
-    "parentId": 854,
-    "priority": 751,
-    "path": "ylfu4q",
-    "component": "oe20zv",
-    "query": "rkchz6",
-    "routeName": "tarra.erdman",
-    "isFrame": "gaqu7l",
-    "isCache": "hnundu",
-    "menuType": "l41aj8",
-    "menuTypeName": "tarra.erdman",
-    "visible": "q3vggd",
-    "status": "zscv0j",
-    "perms": "l5ccr0",
-    "icon": "wfid22",
-    "imagePath": "td8izs",
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
+    "menuId": 411,
+    "menuName": "drew.kub",
+    "type": "vhye0o",
+    "typeName": "drew.kub",
+    "parentName": "drew.kub",
+    "parentId": 209,
+    "priority": 984,
+    "path": "tgbztn",
+    "component": "qtpb59",
+    "query": "x0dcnk",
+    "routeName": "drew.kub",
+    "isFrame": "eu3jzu",
+    "isCache": "4bwod1",
+    "menuType": "mici6c",
+    "menuTypeName": "drew.kub",
+    "visible": "xtcmp6",
+    "status": "f5m8ez",
+    "perms": "qcbj6o",
+    "icon": "cdw7vi",
+    "imagePath": "yy318b",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 358,
-    "description": "n4wjzk",
-    "listJson": "5d6132",
-    "delFlag": 6,
+    "childNum": 595,
+    "description": "mehucy",
+    "listJson": "hdvw4d",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "tarra.erdman",
-        "permsStr": "07svfd"
+        "permsName": "drew.kub",
+        "permsStr": "7bj505"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "89",
-        "parentId": "89",
-        "code": "66235",
-        "name": "tarra.erdman"
+        "id": "158",
+        "parentId": "158",
+        "code": "63710",
+        "name": "drew.kub"
       }
     ]
   }
@@ -16767,8 +16767,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vjofsm",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "hnovv8",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16816,8 +16816,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gr9wt0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "5wg70a",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16886,41 +16886,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:26",
-    "lastTime": "2025-08-27 22:15:26",
-    "id": 108,
-    "parentId": 997,
-    "appId": "89",
-    "name": "tarra.erdman",
-    "ename": "tarra.erdman",
-    "sname": "tarra.erdman",
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:13",
+    "lastTime": "2025-08-31 18:08:13",
+    "id": 244,
+    "parentId": 35,
+    "appId": "158",
+    "name": "drew.kub",
+    "ename": "drew.kub",
+    "sname": "drew.kub",
     "isProtect": true,
-    "type": "1dlo0p",
-    "userId": "89",
-    "code": "66235",
-    "menuLevel": 964,
-    "subCount": 749,
-    "perms": "2jt57u",
-    "urlType": "y5zsf1",
-    "url": "www.felicitas-spencer.com",
-    "icon": "4niuxj",
-    "popPosition": 446,
-    "imagePath": "6judho",
-    "css": "sshb9s",
-    "jsEvent": "obl510",
-    "menuSeq": "ncmbld",
-    "shortCut": "wrf3wc",
+    "type": "xcm0yd",
+    "userId": "158",
+    "code": "63710",
+    "menuLevel": 600,
+    "subCount": 389,
+    "perms": "6p9pit",
+    "urlType": "tiif0d",
+    "url": "www.leigha-wyman.biz",
+    "icon": "fozwe2",
+    "popPosition": 969,
+    "imagePath": "89f17k",
+    "css": "zyquwl",
+    "jsEvent": "8f0g22",
+    "menuSeq": "92kkcv",
+    "shortCut": "m4jegi",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 440,
-    "delFlag": 6,
-    "deleteTime": "2025-08-27 22:15:26",
-    "description": "3vdpbd",
-    "spare1": "foi4o2",
-    "spare2": "o8u1c7",
+    "priority": 944,
+    "delFlag": 2,
+    "deleteTime": "2025-08-31 18:08:13",
+    "description": "dj65ba",
+    "spare1": "etmkxw",
+    "spare2": "d4bn3f",
     "open": true,
     "list": [
       {
@@ -16946,8 +16946,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "73mgss",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "gxe2ov",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -16987,7 +16987,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?endTime=2025-08-27 22:14:23&roleName=tarra.erdman&roleId=989&status=394&page=1&startTime=2025-08-27 22:14:23&q=pzwhk5&limit=10&roleKey=a4w22c&orderBy=144
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleName=drew.kub&startTime=2025-08-31 18:07:21&limit=10&q=hsyftb&orderBy=677&roleKey=5ncj1x&page=1&status=522&roleId=669&endTime=2025-08-31 18:07:21
 ```
 **Response-fields:**
 
@@ -17028,36 +17028,36 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:26",
-      "lastTime": "2025-08-27 22:15:26",
-      "roleId": 583,
-      "roleName": "tarra.erdman",
-      "roleKey": "emrskf",
-      "roleSort": 124,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:14",
+      "lastTime": "2025-08-31 18:08:14",
+      "roleId": 806,
+      "roleName": "drew.kub",
+      "roleKey": "ruy7ah",
+      "roleSort": 391,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 603,
+      "status": 762,
       "flag": true,
       "menuIds": [
-        195
+        840
       ],
       "deptIds": [
-        307
+        328
       ],
       "permissions": [
-        "d5pert"
+        "cch93k"
       ],
-      "remark": "dsltvk",
-      "parentName": "tarra.erdman",
-      "appName": "tarra.erdman",
-      "roletypeId": "89",
-      "roletypeName": "tarra.erdman",
-      "priority": 426,
+      "remark": "jur75p",
+      "parentName": "drew.kub",
+      "appName": "drew.kub",
+      "roletypeId": "158",
+      "roletypeName": "drew.kub",
+      "priority": 572,
       "isSuper": true
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17096,7 +17096,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'status=335&orderBy=99&page=1&roleId=167&q=m73z18&roleKey=4oogqv&limit=10&endTime=2025-08-27 22:14:23&startTime=2025-08-27 22:14:23&roleName=tarra.erdman'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleKey=lyd7tv&orderBy=974&startTime=2025-08-31 18:07:21&page=1&status=137&q=rcmhgr&limit=10&endTime=2025-08-31 18:07:21&roleId=397&roleName=drew.kub'
 ```
 **Response-fields:**
 
@@ -17114,8 +17114,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z7o4m9",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "psi84e",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17145,7 +17145,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/50.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/824.do
 ```
 **Response-fields:**
 
@@ -17185,35 +17185,35 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 42,
-    "roleName": "tarra.erdman",
-    "roleKey": "hzgjjn",
-    "roleSort": 374,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 537,
+    "roleName": "drew.kub",
+    "roleKey": "4unv47",
+    "roleSort": 770,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 325,
+    "status": 985,
     "flag": true,
     "menuIds": [
-      246
+      251
     ],
     "deptIds": [
-      109
+      880
     ],
     "permissions": [
-      "5veolm"
+      "o5fi61"
     ],
-    "remark": "odihbq",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 210,
+    "remark": "8o1flc",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 38,
     "isSuper": true
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17266,32 +17266,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 131,
-    "roleName": "tarra.erdman",
-    "roleKey": "boygym",
-    "roleSort": 278,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 162,
+    "roleName": "drew.kub",
+    "roleKey": "tvqp1t",
+    "roleSort": 125,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 93,
+    "status": 128,
     "flag": true,
     "menuIds": [
-      270
+      800
     ],
     "deptIds": [
-      328
+      981
     ],
     "permissions": [
-      "qv85qb"
+      "zfp229"
     ],
-    "remark": "0zzmvd",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 379,
+    "remark": "ozlrk7",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 14,
     "isSuper": true
   }
 }'
@@ -17312,8 +17312,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ajdy2w",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "famomc",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17366,32 +17366,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 32,
-    "roleName": "tarra.erdman",
-    "roleKey": "anqg0m",
-    "roleSort": 922,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 451,
+    "roleName": "drew.kub",
+    "roleKey": "twof10",
+    "roleSort": 166,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 332,
+    "status": 431,
     "flag": true,
     "menuIds": [
-      245
+      393
     ],
     "deptIds": [
-      485
+      918
     ],
     "permissions": [
-      "91oifb"
+      "dldcpg"
     ],
-    "remark": "1po1j1",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 490,
+    "remark": "kjj2nc",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 229,
     "isSuper": true
   }
 }'
@@ -17412,8 +17412,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1huceu",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "52p076",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17466,32 +17466,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 97,
-    "roleName": "tarra.erdman",
-    "roleKey": "u9rtjf",
-    "roleSort": 709,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 757,
+    "roleName": "drew.kub",
+    "roleKey": "rztczq",
+    "roleSort": 24,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 596,
+    "status": 586,
     "flag": true,
     "menuIds": [
-      966
+      972
     ],
     "deptIds": [
-      50
+      818
     ],
     "permissions": [
-      "cw26lw"
+      "9tiokc"
     ],
-    "remark": "zjpdc2",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 933,
+    "remark": "0c1vd2",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 791,
     "isSuper": true
   }
 }'
@@ -17512,8 +17512,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v6s5fr",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "rtu7du",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17566,32 +17566,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 423,
-    "roleName": "tarra.erdman",
-    "roleKey": "wv8os9",
-    "roleSort": 444,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 176,
+    "roleName": "drew.kub",
+    "roleKey": "5i9cmf",
+    "roleSort": 785,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 307,
+    "status": 157,
     "flag": true,
     "menuIds": [
-      970
+      595
     ],
     "deptIds": [
-      966
+      12
     ],
     "permissions": [
-      "ptyofk"
+      "sztkw4"
     ],
-    "remark": "p2pg3s",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 601,
+    "remark": "g74cdr",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 990,
     "isSuper": true
   }
 }'
@@ -17612,8 +17612,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0ylndr",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "4o18bn",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17661,8 +17661,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wevkl4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "emfxjz",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17709,21 +17709,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "id": 94,
-    "roletypeId": "89",
-    "appId": "89",
-    "name": "tarra.erdman",
-    "code": "66235",
-    "priority": 210,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "id": 959,
+    "roletypeId": "158",
+    "appId": "158",
+    "name": "drew.kub",
+    "code": "63710",
+    "priority": 626,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 755,
-    "description": "n5zdse",
-    "areaType": "8zo85o"
+    "status": 849,
+    "description": "8vdp04",
+    "areaType": "2ajtpf"
   }
 }'
 ```
@@ -17743,8 +17743,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kch1wh",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "5fo6k9",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17797,32 +17797,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 502,
-    "roleName": "tarra.erdman",
-    "roleKey": "lg8esd",
-    "roleSort": 322,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 781,
+    "roleName": "drew.kub",
+    "roleKey": "vwm84d",
+    "roleSort": 512,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 906,
+    "status": 443,
     "flag": true,
     "menuIds": [
-      546
+      957
     ],
     "deptIds": [
-      520
+      971
     ],
     "permissions": [
-      "h2k5nh"
+      "2bagid"
     ],
-    "remark": "xkvikk",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 831,
+    "remark": "stp8xz",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 115,
     "isSuper": true
   }
 }'
@@ -17843,8 +17843,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2p2af9",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "poztfi",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -17897,32 +17897,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "89",
-    "createTime": "2025-08-27 22:15:27",
-    "lastTime": "2025-08-27 22:15:27",
-    "roleId": 217,
-    "roleName": "tarra.erdman",
-    "roleKey": "srgdxk",
-    "roleSort": 97,
+    "creatorId": "158",
+    "createTime": "2025-08-31 18:08:14",
+    "lastTime": "2025-08-31 18:08:14",
+    "roleId": 242,
+    "roleName": "drew.kub",
+    "roleKey": "7ctoy8",
+    "roleSort": 241,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 511,
+    "status": 432,
     "flag": true,
     "menuIds": [
-      595
+      985
     ],
     "deptIds": [
-      650
+      842
     ],
     "permissions": [
-      "8d0epi"
+      "8dax6p"
     ],
-    "remark": "ru47f9",
-    "parentName": "tarra.erdman",
-    "appName": "tarra.erdman",
-    "roletypeId": "89",
-    "roletypeName": "tarra.erdman",
-    "priority": 360,
+    "remark": "2fu6yb",
+    "parentName": "drew.kub",
+    "appName": "drew.kub",
+    "roletypeId": "158",
+    "roletypeName": "drew.kub",
+    "priority": 959,
     "isSuper": true
   }
 }'
@@ -17943,8 +17943,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4kcaon",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "4yi01b",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18009,36 +18009,36 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:27",
-      "lastTime": "2025-08-27 22:15:27",
-      "roleId": 829,
-      "roleName": "tarra.erdman",
-      "roleKey": "wpc28w",
-      "roleSort": 103,
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:14",
+      "lastTime": "2025-08-31 18:08:14",
+      "roleId": 798,
+      "roleName": "drew.kub",
+      "roleKey": "p5tr59",
+      "roleSort": 73,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 318,
+      "status": 92,
       "flag": true,
       "menuIds": [
-        363
+        271
       ],
       "deptIds": [
-        826
+        105
       ],
       "permissions": [
-        "mau58f"
+        "i28x4g"
       ],
-      "remark": "w9auqk",
-      "parentName": "tarra.erdman",
-      "appName": "tarra.erdman",
-      "roletypeId": "89",
-      "roletypeName": "tarra.erdman",
-      "priority": 270,
+      "remark": "7hipt0",
+      "parentName": "drew.kub",
+      "appName": "drew.kub",
+      "roletypeId": "158",
+      "roletypeName": "drew.kub",
+      "priority": 708,
       "isSuper": true
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18083,7 +18083,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?email=fletcher.hickle@hotmail.com&orderBy=623&limit=10&username=tarra.erdman&mobile=803.740.8989&q=nsdqk8&deptId=741&page=1&userId=89&delFlag=6&endTime=2025-08-27 22:14:23&nickName=reena.schmeler&organId=89&startTime=2025-08-27 22:14:23&adminId=145&status=vt6qbs
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?status=zzcuhw&username=drew.kub&q=7x0u06&delFlag=2&nickName=javier.terry&endTime=2025-08-31 18:07:21&userId=158&email=latasha.buckridge@hotmail.com&adminId=415&startTime=2025-08-31 18:07:21&organId=158&page=1&deptId=295&orderBy=577&mobile=1-715-323-3760&limit=10
 ```
 **Response-fields:**
 
@@ -18129,8 +18129,8 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -18139,7 +18139,7 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -18188,60 +18188,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:27",
-      "lastTime": "2025-08-27 22:15:27",
-      "id": 722,
-      "userId": "89",
-      "deptId": 616,
-      "deptName": "tarra.erdman",
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "name": "tarra.erdman",
-      "username": "tarra.erdman",
-      "nickName": "reena.schmeler",
-      "email": "fletcher.hickle@hotmail.com",
-      "mobile": "803.740.8989",
-      "imagePath": "2tzq9g",
-      "password": "9f03fy",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:14",
+      "lastTime": "2025-08-31 18:08:14",
+      "id": 291,
+      "userId": "158",
+      "deptId": 435,
+      "deptName": "drew.kub",
+      "organId": "158",
+      "organName": "drew.kub",
+      "name": "drew.kub",
+      "username": "drew.kub",
+      "nickName": "javier.terry",
+      "email": "latasha.buckridge@hotmail.com",
+      "mobile": "1-715-323-3760",
+      "imagePath": "2zdnhs",
+      "password": "rell76",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 977,
-      "delFlag": 6,
-      "lastLoginIp": "217.26.150.93",
-      "lastLoginTime": "2025-08-27 22:15:27",
-      "description": "k1kgv5",
+      "status": 354,
+      "delFlag": 2,
+      "lastLoginIp": "62.26.219.195",
+      "lastLoginTime": "2025-08-31 18:08:14",
+      "description": "v43etd",
       "dept": {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:27",
-        "lastTime": "2025-08-27 22:15:27",
-        "id": 291,
-        "organId": "89",
-        "parentId": 772,
-        "appId": "89",
-        "depttypeId": 4,
-        "foreignId": "89",
-        "createType": 751,
-        "type": "vpeccz",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "areaCode": "66235",
-        "organLeader": "4sz1c7",
-        "leaderId": "89",
-        "leaderMobile": "803.740.8989",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:14",
+        "lastTime": "2025-08-31 18:08:14",
+        "id": 309,
+        "organId": "158",
+        "parentId": 780,
+        "appId": "158",
+        "depttypeId": 81,
+        "foreignId": "158",
+        "createType": 418,
+        "type": "v8ylms",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "areaCode": "63710",
+        "organLeader": "kegmvn",
+        "leaderId": "158",
+        "leaderMobile": "1-715-323-3760",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "66235",
-        "imagePath": "nwzl1z",
-        "priority": 927,
-        "status": 592,
-        "delFlag": 6,
-        "description": "jf9576",
-        "spare1": "ewjtgn",
-        "spare2": "89o0ux",
+        "searchCode": "63710",
+        "imagePath": "17ph0x",
+        "priority": 244,
+        "status": 147,
+        "delFlag": 2,
+        "description": "bwpy1q",
+        "spare1": "2rrp5w",
+        "spare2": "ibo1mf",
         "children": [
           {
             "$ref": ".."
@@ -18250,47 +18250,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "89",
-          "createTime": "2025-08-27 22:15:27",
-          "lastTime": "2025-08-27 22:15:27",
-          "id": 811,
-          "roletypeId": "89",
-          "appId": "89",
-          "name": "tarra.erdman",
-          "code": "66235",
-          "priority": 944,
+          "creatorId": "158",
+          "createTime": "2025-08-31 18:08:14",
+          "lastTime": "2025-08-31 18:08:14",
+          "id": 653,
+          "roletypeId": "158",
+          "appId": "158",
+          "name": "drew.kub",
+          "code": "63710",
+          "priority": 516,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 32,
-          "description": "fbnjwm",
-          "areaType": "aym42h"
+          "status": 465,
+          "description": "ndag5g",
+          "areaType": "iwoq8q"
         }
       ],
       "roleIds": [
-        179
+        5
       ],
       "positionIds": [
-        "ccjqih"
+        "yxmlyh"
       ],
-      "roleId": 356,
+      "roleId": 549,
       "userRoleList": [
         {
-          "id": 514,
-          "deptId": 531,
-          "deptName": "tarra.erdman",
-          "organId": "89",
-          "organName": "tarra.erdman",
-          "roleId": 79,
-          "roleName": "tarra.erdman",
-          "adminId": 673
+          "id": 796,
+          "deptId": 225,
+          "deptName": "drew.kub",
+          "organId": "158",
+          "organName": "drew.kub",
+          "roleId": 145,
+          "roleName": "drew.kub",
+          "adminId": 386
         }
       ],
-      "code": "66235",
-      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+      "code": "63710",
+      "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18335,7 +18335,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?delFlag=6&endTime=2025-08-27 22:14:23&email=fletcher.hickle@hotmail.com&page=1&q=kc010v&startTime=2025-08-27 22:14:23&limit=10&userId=89&mobile=803.740.8989&organId=89&nickName=reena.schmeler&deptId=796&username=tarra.erdman&status=9fc1xk&orderBy=988&adminId=110
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?mobile=1-715-323-3760&status=5wlcd1&page=1&nickName=javier.terry&startTime=2025-08-31 18:07:21&adminId=669&deptId=543&q=7tj6is&organId=158&delFlag=2&userId=158&orderBy=566&limit=10&endTime=2025-08-31 18:07:21&username=drew.kub&email=latasha.buckridge@hotmail.com
 ```
 **Response-fields:**
 
@@ -18381,8 +18381,8 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
@@ -18391,7 +18391,7 @@ data|array|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|机构分类组|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定|-
@@ -18440,60 +18440,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "89",
-      "createTime": "2025-08-27 22:15:27",
-      "lastTime": "2025-08-27 22:15:27",
-      "id": 220,
-      "userId": "89",
-      "deptId": 667,
-      "deptName": "tarra.erdman",
-      "organId": "89",
-      "organName": "tarra.erdman",
-      "name": "tarra.erdman",
-      "username": "tarra.erdman",
-      "nickName": "reena.schmeler",
-      "email": "fletcher.hickle@hotmail.com",
-      "mobile": "803.740.8989",
-      "imagePath": "gle0c5",
-      "password": "dakwsm",
+      "creatorId": "158",
+      "createTime": "2025-08-31 18:08:14",
+      "lastTime": "2025-08-31 18:08:14",
+      "id": 41,
+      "userId": "158",
+      "deptId": 390,
+      "deptName": "drew.kub",
+      "organId": "158",
+      "organName": "drew.kub",
+      "name": "drew.kub",
+      "username": "drew.kub",
+      "nickName": "javier.terry",
+      "email": "latasha.buckridge@hotmail.com",
+      "mobile": "1-715-323-3760",
+      "imagePath": "vtqbzx",
+      "password": "zeo44r",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 818,
-      "delFlag": 6,
-      "lastLoginIp": "217.26.150.93",
-      "lastLoginTime": "2025-08-27 22:15:27",
-      "description": "cdv4fn",
+      "status": 866,
+      "delFlag": 2,
+      "lastLoginIp": "62.26.219.195",
+      "lastLoginTime": "2025-08-31 18:08:14",
+      "description": "tzk6wi",
       "dept": {
-        "creatorId": "89",
-        "createTime": "2025-08-27 22:15:27",
-        "lastTime": "2025-08-27 22:15:27",
-        "id": 68,
-        "organId": "89",
-        "parentId": 131,
-        "appId": "89",
-        "depttypeId": 340,
-        "foreignId": "89",
-        "createType": 101,
-        "type": "d2558n",
-        "name": "tarra.erdman",
-        "sname": "tarra.erdman",
-        "areaCode": "66235",
-        "organLeader": "5pz0u1",
-        "leaderId": "89",
-        "leaderMobile": "803.740.8989",
+        "creatorId": "158",
+        "createTime": "2025-08-31 18:08:14",
+        "lastTime": "2025-08-31 18:08:14",
+        "id": 245,
+        "organId": "158",
+        "parentId": 855,
+        "appId": "158",
+        "depttypeId": 151,
+        "foreignId": "158",
+        "createType": 231,
+        "type": "ht7n1l",
+        "name": "drew.kub",
+        "sname": "drew.kub",
+        "areaCode": "63710",
+        "organLeader": "lj6rpk",
+        "leaderId": "158",
+        "leaderMobile": "1-715-323-3760",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "66235",
-        "imagePath": "ogv374",
-        "priority": 494,
-        "status": 271,
-        "delFlag": 6,
-        "description": "kvahs9",
-        "spare1": "x8o43r",
-        "spare2": "2zx0qq",
+        "searchCode": "63710",
+        "imagePath": "qqdh3i",
+        "priority": 782,
+        "status": 221,
+        "delFlag": 2,
+        "description": "x1heho",
+        "spare1": "uu8c4b",
+        "spare2": "7j38s2",
         "children": [
           {
             "$ref": ".."
@@ -18502,47 +18502,47 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "89",
-          "createTime": "2025-08-27 22:15:27",
-          "lastTime": "2025-08-27 22:15:27",
-          "id": 690,
-          "roletypeId": "89",
-          "appId": "89",
-          "name": "tarra.erdman",
-          "code": "66235",
-          "priority": 5,
+          "creatorId": "158",
+          "createTime": "2025-08-31 18:08:14",
+          "lastTime": "2025-08-31 18:08:14",
+          "id": 188,
+          "roletypeId": "158",
+          "appId": "158",
+          "name": "drew.kub",
+          "code": "63710",
+          "priority": 751,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 665,
-          "description": "r20cv4",
-          "areaType": "6uswv6"
+          "status": 197,
+          "description": "8y8ruk",
+          "areaType": "y43dot"
         }
       ],
       "roleIds": [
-        473
+        102
       ],
       "positionIds": [
-        "fm3rsj"
+        "x8akwf"
       ],
-      "roleId": 976,
+      "roleId": 436,
       "userRoleList": [
         {
-          "id": 362,
-          "deptId": 258,
-          "deptName": "tarra.erdman",
-          "organId": "89",
-          "organName": "tarra.erdman",
-          "roleId": 531,
-          "roleName": "tarra.erdman",
-          "adminId": 518
+          "id": 504,
+          "deptId": 131,
+          "deptName": "drew.kub",
+          "organId": "158",
+          "organName": "drew.kub",
+          "roleId": 794,
+          "roleName": "drew.kub",
+          "adminId": 453
         }
       ],
-      "code": "66235",
-      "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c"
+      "code": "63710",
+      "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18577,9 +18577,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 866,
-    "roleId": 893,
-    "adminId": 265
+    "id": 269,
+    "roleId": 94,
+    "adminId": 351
   }
 }'
 ```
@@ -18599,8 +18599,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "de86e8",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "zs9f1w",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18631,7 +18631,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=4uqly7&adminIds=4uqly7&roleId=963'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=779&adminIds=56fkr0&adminIds=56fkr0'
 ```
 **Response-fields:**
 
@@ -18649,8 +18649,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b7y17a",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "n42j2e",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18681,7 +18681,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=0n2rsm&adminIds=0n2rsm&roleId=523'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=622&adminIds=5ucdt1&adminIds=5ucdt1'
 ```
 **Response-fields:**
 
@@ -18699,8 +18699,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cbqb9w",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "oy147z",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18730,7 +18730,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/546.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/132.do
 ```
 **Response-fields:**
 
@@ -18755,12 +18755,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      54
+      42
     ],
     "depts": [
       {
-        "id": 188,
-        "label": "b7e40l",
+        "id": 904,
+        "label": "s1d1b6",
         "children": [
           {
             "$ref": ".."
@@ -18769,7 +18769,7 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18808,7 +18808,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?ids=zn9fim&ids=zn9fim&page=1&cfgKey=a93xjl&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&orderBy=207&q=4ni0ut&limit=10&cfgValue=694z5r
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?q=c6iham&startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&ids=hkxdoj&ids=hkxdoj&page=1&cfgKey=pbn5ad&orderBy=722&limit=10&cfgValue=dee7dg
 ```
 **Response-fields:**
 
@@ -18834,18 +18834,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 611,
+    "totalCount": 89,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "xo1svi",
-        "cfgValue": "fv0skj"
+        "cfgKey": "ph6inf",
+        "cfgValue": "xwtvgw"
       }
     ]
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18883,7 +18883,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'cfgKey=3z5mg7&q=ai9roy&endTime=2025-08-27 22:14:23&orderBy=21&cfgValue=lyl5gg&ids=5i68lx&ids=5i68lx&page=1&limit=10&startTime=2025-08-27 22:14:23'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'orderBy=666&endTime=2025-08-31 18:07:21&cfgValue=tbtpmr&q=wpayeq&page=1&startTime=2025-08-31 18:07:21&cfgKey=spxstz&limit=10&ids=va9f56&ids=va9f56'
 ```
 **Response-fields:**
 
@@ -18901,8 +18901,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h2mapp",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "fk50m6",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18932,7 +18932,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/cdgltz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/njznts.do
 ```
 **Response-fields:**
 
@@ -18953,10 +18953,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "wsdokk",
-    "cfgValue": "bsk3td"
+    "cfgKey": "89lb52",
+    "cfgValue": "d0i2du"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -18990,8 +18990,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "h6gyog",
-    "cfgValue": "fxdt7e"
+    "cfgKey": "wd41c3",
+    "cfgValue": "abpx80"
   }
 }'
 ```
@@ -19011,8 +19011,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lueuf4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "mbxy5a",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19046,8 +19046,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "8573kk",
-    "cfgValue": "zd373v"
+    "cfgKey": "oewgg9",
+    "cfgValue": "4bza3u"
   }
 }'
 ```
@@ -19067,8 +19067,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4kyxw0",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "9akkzo",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19116,8 +19116,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lz5eop",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "jwzh6m",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19159,8 +19159,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oxu0ok",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "z573is",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19196,8 +19196,8 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pvgcj4",
-  "timestamp": "2025-08-27 22:14:23"
+  "data": "8k8zxo",
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19232,7 +19232,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?limit=10&page=1&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&q=060j2a&orderBy=55
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?endTime=2025-08-31 18:07:21&orderBy=179&q=3i7x96&startTime=2025-08-31 18:07:21&page=1&limit=10
 ```
 **Response-fields:**
 
@@ -19260,17 +19260,17 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "kji226",
-      "deptNum": "9jrrxl",
-      "peopleNum": "f628sf",
-      "roleNum": "fg4pc1",
-      "dicTypeNum": "l5uqjw",
-      "appNum": "67km9k",
-      "fileNum": "vg1nv9",
-      "paramNum": "s1vhpi"
+      "organNum": "rs9b6y",
+      "deptNum": "l4pkym",
+      "peopleNum": "7qp4ae",
+      "roleNum": "9vglw5",
+      "dicTypeNum": "fwq3zl",
+      "appNum": "tklzae",
+      "fileNum": "4xgq4y",
+      "paramNum": "ho6j7l"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19305,7 +19305,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?orderBy=542&q=tepy2v&limit=10&startTime=2025-08-27 22:14:23&endTime=2025-08-27 22:14:23&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?startTime=2025-08-31 18:07:21&endTime=2025-08-31 18:07:21&page=1&orderBy=825&limit=10&q=adjbsy
 ```
 **Response-fields:**
 
@@ -19327,11 +19327,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "fgmif6",
-      "modelNum": "n8xt99"
+      "objectNum": "d56hhk",
+      "modelNum": "axf832"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19366,7 +19366,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=b5mrra&startTime=2025-08-27 22:14:23&orderBy=218&page=1&endTime=2025-08-27 22:14:23&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?orderBy=872&endTime=2025-08-31 18:07:21&q=emsaj3&startTime=2025-08-31 18:07:21&limit=10&page=1
 ```
 **Response-fields:**
 
@@ -19389,12 +19389,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "hxndpf",
-      "accountNum": "kcz83j",
-      "serviceOrganNum": "yn6i3r"
+      "siteNum": "uuxiwe",
+      "accountNum": "av7jw7",
+      "serviceOrganNum": "1sg6ki"
     }
   ],
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19436,11 +19436,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
-    "img": "9kabq7",
-    "code": "66235"
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5",
+    "img": "j7xjjn",
+    "code": "63710"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 
@@ -19481,11 +19481,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "1dbf6803-610f-434e-93b1-a54f044fc95c",
-    "img": "39mhac",
-    "code": "66235"
+    "uuid": "0f444ad9-db49-41e7-9da2-b5a6ffe4b4e5",
+    "img": "ccx6ns",
+    "code": "63710"
   },
-  "timestamp": "2025-08-27 22:14:23"
+  "timestamp": "2025-08-31 18:07:21"
 }
 ```
 

@@ -29,7 +29,8 @@ public interface BaseEnumString {
     /**
      * 名称
      */
-    String    getKey();
+    String getKey();
+
     /**
      * 值
      */

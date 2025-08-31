@@ -26,47 +26,47 @@ public class CacheConstants {
     /**
      * 登录用户TOKEN
      */
-    public static final String LOGIN_TOKEN_KEY    = "login_tokens:";
+    public static final String LOGIN_TOKEN_KEY      = "login_tokens:";
 
     /**
      * 登录用户ADMIN_ID
      */
-    public static final String LOGIN_ADMIN_ID_KEY = "login_admin_id:";
+    public static final String LOGIN_ADMIN_ID_KEY   = "login_admin_id:";
 
     /**
      * 登录用户USER_ID
      */
-    public static final String LOGIN_USER_ID_KEY  = "login_user_id:";
+    public static final String LOGIN_USER_ID_KEY    = "login_user_id:";
 
     /**
      * 验证码 redis key
      */
-    public static final String CAPTCHA_CODE_KEY   = "captcha_codes:";
+    public static final String CAPTCHA_CODE_KEY     = "captcha_codes:";
 
     /**
      * 防重提交 redis key
      */
-    public static final String REPEAT_SUBMIT_KEY  = "repeat_submit:";
+    public static final String REPEAT_SUBMIT_KEY    = "repeat_submit:";
 
     /**
      * 限流 redis key
      */
-    public static final String RATE_LIMIT_KEY     = "limit:";
+    public static final String RATE_LIMIT_KEY       = "limit:";
 
     /**
      * 登录账户密码错误次数 redis key
      */
-    public static final String PWD_ERR_CNT_KEY    = "pwd_err_count:";
+    public static final String PWD_ERR_CNT_KEY      = "pwd_err_count:";
 
     /**
      * 平台用户的ID，对平台信息（前台工程访问信息）进行缓存处理使用的KEY，缓存10分钟
      */
-    public static final String PLAT_ACCOUNT_KEY   = "ll_account_id:";
+    public static final String PLAT_ACCOUNT_KEY     = "ll_account_id:";
 
     /**
      * 锁定缓存前缀
      */
-    public static final String LOCK_KEY   = "lock_key:";
+    public static final String LOCK_KEY             = "lock_key:";
 
     /**
      * 参数管理 cache key
@@ -76,5 +76,5 @@ public class CacheConstants {
     /**
      * 字典管理 cache key
      */
-    public static final String BASE_DICTIONARY_KEY = "base_dictionary:";
+    public static final String BASE_DICTIONARY_KEY  = "base_dictionary:";
 }

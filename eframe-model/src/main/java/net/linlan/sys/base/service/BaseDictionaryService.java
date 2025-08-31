@@ -36,7 +36,6 @@ import net.linlan.sys.base.entity.BaseDictionary;
 import net.linlan.sys.base.param.BaseDictionaryParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
-
 import static net.linlan.utils.constant.CacheConstants.BASE_DICTIONARY_KEY;
 
 /**
@@ -51,15 +50,15 @@ import static net.linlan.utils.constant.CacheConstants.BASE_DICTIONARY_KEY;
 public class BaseDictionaryService {
 
     @Resource
-    private BaseDictionaryDao                dao;
+    private BaseDictionaryDao dao;
 
     @Resource
-    private RedisService                     redisService;
+    private RedisService      redisService;
 
     /**
      * 过期时间
      */
-    private Date                             expireTime;
+    private Date              expireTime;
 
     /** get the list of entity DictionaryInitDto
      * 列表方法，返回列表的全局配置数据 {@link List} 对象，包含 {@link BaseDictionary} 列表

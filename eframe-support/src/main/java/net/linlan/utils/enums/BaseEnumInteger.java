@@ -29,7 +29,8 @@ public interface BaseEnumInteger {
     /**
      * 名称
      */
-    int    getKey();
+    int getKey();
+
     /**
      * 值
      */

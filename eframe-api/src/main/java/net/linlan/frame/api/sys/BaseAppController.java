@@ -23,7 +23,6 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
-import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -48,7 +47,6 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.frame.view.admin.vo.AppInitialVo;
 import net.linlan.frame.view.sys.param.BaseAppVoParam;
 import net.linlan.frame.view.sys.vo.BaseAppVo;
-import net.linlan.frame.web.SecurityUtils;
 import net.linlan.sys.base.dto.*;
 import net.linlan.sys.base.entity.BaseApp;
 import net.linlan.sys.base.entity.BaseConfigWhole;
@@ -56,6 +54,7 @@ import net.linlan.sys.base.param.*;
 import net.linlan.sys.base.service.*;
 import net.linlan.sys.role.entity.SysMenu;
 import net.linlan.sys.role.service.SysMenuService;
+import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *

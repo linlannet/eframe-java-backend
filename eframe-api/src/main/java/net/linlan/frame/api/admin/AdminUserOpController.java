@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
-import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -49,7 +48,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
 import net.linlan.frame.view.admin.vo.LoginUserRolesVo;
 import net.linlan.frame.view.admin.vo.SysRoleVo;
-import net.linlan.frame.web.SecurityUtils;
+import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *

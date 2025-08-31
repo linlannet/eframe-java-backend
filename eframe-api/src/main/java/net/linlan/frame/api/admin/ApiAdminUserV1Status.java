@@ -20,7 +20,6 @@ package net.linlan.frame.api.admin;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import net.linlan.utils.crypt.ShaUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,10 +41,10 @@ import net.linlan.frame.view.admin.vo.AdminUserVo;
 import net.linlan.frame.view.admin.vo.LoginUserProfileVo;
 import net.linlan.frame.view.admin.vo.PasswordVo;
 import net.linlan.frame.view.admin.vo.UserImagePathVo;
-import net.linlan.frame.web.SecurityUtils;
 import net.linlan.sys.comm.dto.FileInfo;
 import net.linlan.sys.comm.service.UploadFileService;
 import net.linlan.utils.constant.Constants;
+import net.linlan.utils.crypt.ShaUtils;
 
 /**
  * 个人信息 业务处理

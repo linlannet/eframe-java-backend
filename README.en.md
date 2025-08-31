@@ -30,6 +30,19 @@ Front-end engineering path:
 
 **Guide to the use of EFRAME ：** <a target="_blank">https://gitee.com/linlannet/eframe-docs
 
+## Sub Package
+1. eframe-support: frame support module, various tools and data toolkits. 
+2. eframe-model: model data module, service and dao resource toolkit for database reading. 
+3. eframe-core: Core common module, universal business logic core tool.
+4. eframe-view: view logical data module, which uses read-write separation to logically split some services.
+5. eframe-api: API interface gateway module, a common API resource package at the framework layer.
+6. module-generator: generator code generation module, which supports simple control and read-write separation control and integrates service gateway.
+7. module-quartz: quartz timing task module, which configures, starts, stops and monitors tasks. 
+8. eframe-Web: Web application service module, service application API configuration injection, providing interface.
+9. module-extend: module extension module, back-end service extension, followed by sms, social and other general configurations and jar references to achieve extension.
+10. scripts: database scripts, API interface documents, sh scripts running on the server side, etc.
+
+
 ## Technical Guidelines
 ### Software Architecture
 ```

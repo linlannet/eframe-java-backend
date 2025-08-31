@@ -53,7 +53,6 @@ import net.linlan.sys.role.service.SysRoleService;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.constant.Constants;
-
 import static net.linlan.utils.constant.CacheConstants.BASE_DICTIONARY_KEY;
 
 /**
@@ -93,7 +92,7 @@ public class FrameDictionaryService {
     /**
      * 避免循环走redis，内存直接读，1小时清空重新拿
      */
-    private Map<String, Map<String, String>> dics       = new HashMap<>();
+    private Map<String, Map<String, String>> dics = new HashMap<>();
     /**
      * 过期时间
      */
