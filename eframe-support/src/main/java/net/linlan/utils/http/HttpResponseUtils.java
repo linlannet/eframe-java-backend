@@ -17,17 +17,20 @@
  */
 package net.linlan.utils.http;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.StringUtils;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Optional;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import net.linlan.commons.core.ObjectUtils;
+import net.linlan.commons.core.StringUtils;
 
 /**
  * HttpResponseUtils

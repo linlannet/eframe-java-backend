@@ -60,8 +60,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -126,35 +126,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:49",
-    "lastTime": "2025-09-05 15:45:49",
-    "id": 809,
-    "organId": "12",
-    "parentId": 834,
-    "appId": "12",
-    "depttypeId": 313,
-    "foreignId": "12",
-    "createType": 306,
-    "type": "hhp401",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "areaCode": "17639",
-    "organLeader": "jzkc8a",
-    "leaderId": "12",
-    "leaderMobile": "(682) 505-7451",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:13",
+    "lastTime": "2025-09-06 00:01:13",
+    "id": 608,
+    "organId": "74",
+    "parentId": 228,
+    "appId": "74",
+    "depttypeId": 679,
+    "foreignId": "74",
+    "createType": 377,
+    "type": "hlmlle",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "areaCode": "17084",
+    "organLeader": "1h9b09",
+    "leaderId": "74",
+    "leaderMobile": "1-484-863-9255",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "17639",
-    "imagePath": "ln8blx",
-    "priority": 671,
-    "status": 851,
-    "delFlag": 3,
-    "description": "ivmcbz",
-    "spare1": "9otkmq",
-    "spare2": "6x5vyf",
+    "searchCode": "17084",
+    "imagePath": "8y2fn2",
+    "priority": 801,
+    "status": 513,
+    "delFlag": 4,
+    "description": "phs6x7",
+    "spare1": "dpaefg",
+    "spare2": "3dwje7",
     "children": [
       {
         "$ref": ".."
@@ -180,9 +180,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ov2skz",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "296alk",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -245,35 +245,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:49",
-    "lastTime": "2025-09-05 15:45:49",
-    "id": 326,
-    "organId": "12",
-    "parentId": 833,
-    "appId": "12",
-    "depttypeId": 356,
-    "foreignId": "12",
-    "createType": 401,
-    "type": "17wpab",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "areaCode": "17639",
-    "organLeader": "5869gv",
-    "leaderId": "12",
-    "leaderMobile": "(682) 505-7451",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:13",
+    "lastTime": "2025-09-06 00:01:13",
+    "id": 995,
+    "organId": "74",
+    "parentId": 448,
+    "appId": "74",
+    "depttypeId": 19,
+    "foreignId": "74",
+    "createType": 934,
+    "type": "vuuape",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "areaCode": "17084",
+    "organLeader": "2uqlxy",
+    "leaderId": "74",
+    "leaderMobile": "1-484-863-9255",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "17639",
-    "imagePath": "vu044s",
-    "priority": 599,
-    "status": 372,
-    "delFlag": 3,
-    "description": "j9qf9o",
-    "spare1": "wdz7m1",
-    "spare2": "gze89w",
+    "searchCode": "17084",
+    "imagePath": "y7jc7e",
+    "priority": 923,
+    "status": 48,
+    "delFlag": 4,
+    "description": "bpcwyc",
+    "spare1": "9lrm95",
+    "spare2": "54izoy",
     "children": [
       {
         "$ref": ".."
@@ -299,9 +299,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0s4wr7",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "hfju7i",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -351,9 +351,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qxy7tc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "vppvnb",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -416,35 +416,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:49",
-    "lastTime": "2025-09-05 15:45:49",
-    "id": 228,
-    "organId": "12",
-    "parentId": 629,
-    "appId": "12",
-    "depttypeId": 107,
-    "foreignId": "12",
-    "createType": 379,
-    "type": "vsudj9",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "areaCode": "17639",
-    "organLeader": "ame3m9",
-    "leaderId": "12",
-    "leaderMobile": "(682) 505-7451",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:13",
+    "lastTime": "2025-09-06 00:01:13",
+    "id": 691,
+    "organId": "74",
+    "parentId": 859,
+    "appId": "74",
+    "depttypeId": 850,
+    "foreignId": "74",
+    "createType": 376,
+    "type": "0ds5qf",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "areaCode": "17084",
+    "organLeader": "ueaedt",
+    "leaderId": "74",
+    "leaderMobile": "1-484-863-9255",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "17639",
-    "imagePath": "j127qj",
-    "priority": 845,
-    "status": 915,
-    "delFlag": 3,
-    "description": "f513jt",
-    "spare1": "d78cnh",
-    "spare2": "su5gvk",
+    "searchCode": "17084",
+    "imagePath": "ic3olp",
+    "priority": 277,
+    "status": 400,
+    "delFlag": 4,
+    "description": "t0rekx",
+    "spare1": "q7qi2l",
+    "spare2": "6tcnie",
     "children": [
       {
         "$ref": ".."
@@ -470,9 +470,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xk0k8h",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "1g415t",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -535,7 +535,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?createType=501&organLeader=raaxny&leaderId=12&searchCode=17639&organId=12&depttypeId=79&isVirtual=true&delFlag=3&isDisabled=true&deptId=949&name=deloris.schneider&endTime=2025-09-05 15:44:42&sname=deloris.schneider&isOrganLevel=true&q=ok26sc&foreignId=12&spare1=wur63f&limit=10&startTime=2025-09-05 15:44:42&imagePath=aninyr&leaderMobile=(682) 505-7451&description=d5e7pu&status=559&creatorId=12&page=1&parentId=824&appId=12&isLeaf=true&areaCode=17639&orderBy=862&type=udq8gy&spare2=cqmvof
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?limit=10&delFlag=4&appId=74&status=721&type=4oxeq3&areaCode=17084&imagePath=hyzbkg&creatorId=74&name=jacquelynn.veum&isVirtual=true&q=jblkn4&page=1&parentId=208&sname=jacquelynn.veum&createType=739&isOrganLevel=true&description=jrjmzi&organId=74&organLeader=ad2kcc&spare2=e11v8l&isDisabled=true&spare1=fbvyne&startTime=2025-09-06 00:00:25&leaderMobile=1-484-863-9255&searchCode=17084&depttypeId=622&deptId=678&isLeaf=true&leaderId=74&orderBy=431&foreignId=74&endTime=2025-09-06 00:00:25
 ```
 **Response-fields:**
 
@@ -575,27 +575,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "gdgeyh",
-    "pageNum": 683,
+    "stackTrace": "dmdqbv",
+    "pageNum": 26,
     "pageSize": 10,
-    "startRow": 289,
-    "endRow": 77,
-    "total": 775,
-    "pages": 325,
+    "startRow": 354,
+    "endRow": 579,
+    "total": 510,
+    "pages": 393,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "j084p4",
-    "orderBy": "64w3ln",
+    "countColumn": "1t845o",
+    "orderBy": "08cm4v",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "h5vpem",
+    "dialectClass": "hx8op6",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -657,7 +657,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?parentId=363&isLeaf=true&delFlag=3&foreignId=12&depttypeId=774&areaCode=17639&organLeader=m7972p&sname=deloris.schneider&creatorId=12&spare2=39h74x&endTime=2025-09-05 15:44:42&appId=12&leaderMobile=(682) 505-7451&searchCode=17639&description=8nf34o&spare1=ahxpws&deptId=290&type=r9lunj&organId=12&limit=10&leaderId=12&q=h7uyz9&orderBy=906&isVirtual=true&page=1&startTime=2025-09-05 15:44:42&createType=481&isOrganLevel=true&isDisabled=true&imagePath=md269g&status=708&name=deloris.schneider
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?organLeader=d489j7&spare2=vda43p&description=b2o49r&createType=430&sname=jacquelynn.veum&leaderId=74&organId=74&parentId=371&delFlag=4&startTime=2025-09-06 00:00:25&spare1=bgb3ud&endTime=2025-09-06 00:00:25&deptId=620&appId=74&status=936&foreignId=74&isLeaf=true&searchCode=17084&depttypeId=612&type=p7sg68&name=jacquelynn.veum&imagePath=62fz43&q=pczqpr&orderBy=551&limit=10&areaCode=17084&creatorId=74&page=1&isOrganLevel=true&isVirtual=true&leaderMobile=1-484-863-9255&isDisabled=true
 ```
 **Response-fields:**
 
@@ -697,27 +697,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "6ldwbt",
-    "pageNum": 627,
+    "stackTrace": "607n7k",
+    "pageNum": 890,
     "pageSize": 10,
-    "startRow": 94,
-    "endRow": 20,
-    "total": 259,
-    "pages": 966,
+    "startRow": 878,
+    "endRow": 105,
+    "total": 215,
+    "pages": 301,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "guc1cr",
-    "orderBy": "riq52b",
+    "countColumn": "ohr63j",
+    "orderBy": "jbutfu",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "fcwq9p",
+    "dialectClass": "4t8260",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -748,7 +748,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/466.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/130.do
 ```
 **Response-fields:**
 
@@ -801,42 +801,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 922,
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "parentId": 878,
-      "appId": "12",
-      "depttypeId": 501,
-      "foreignId": "12",
-      "createType": 84,
-      "type": "uejz82",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "cpq7y8",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "id": 238,
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "parentId": 780,
+      "appId": "74",
+      "depttypeId": 105,
+      "foreignId": "74",
+      "createType": 350,
+      "type": "8k9vj4",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "3mnh7k",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "dzi64x",
-      "priority": 415,
-      "status": 777,
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:49",
-      "lastTime": "2025-09-05 15:45:49",
-      "delFlag": 3,
-      "description": "b74mcm",
-      "spare1": "yx34io",
-      "spare2": "3i5bnw",
-      "parentName": "deloris.schneider",
-      "childNum": "02sjnv"
+      "searchCode": "17084",
+      "imagePath": "wy2bij",
+      "priority": 202,
+      "status": 236,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:13",
+      "lastTime": "2025-09-06 00:01:13",
+      "delFlag": 4,
+      "description": "4gpamh",
+      "spare1": "6gtv7f",
+      "spare2": "ffz4xx",
+      "parentName": "jacquelynn.veum",
+      "childNum": "msnxk5"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -867,7 +867,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/426.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/40.do
 ```
 **Response-fields:**
 
@@ -919,41 +919,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 373,
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "parentId": 215,
-    "appId": "12",
-    "depttypeId": 844,
-    "foreignId": "12",
-    "createType": 81,
-    "type": "c7cfo3",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "areaCode": "17639",
-    "organLeader": "uc6hhh",
-    "leaderId": "12",
-    "leaderMobile": "(682) 505-7451",
+    "id": 319,
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "parentId": 612,
+    "appId": "74",
+    "depttypeId": 396,
+    "foreignId": "74",
+    "createType": 390,
+    "type": "en535k",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "areaCode": "17084",
+    "organLeader": "rhufg5",
+    "leaderId": "74",
+    "leaderMobile": "1-484-863-9255",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "17639",
-    "imagePath": "ndbh71",
-    "priority": 328,
-    "status": 804,
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:49",
-    "lastTime": "2025-09-05 15:45:49",
-    "delFlag": 3,
-    "description": "lie0zl",
-    "spare1": "wocwfe",
-    "spare2": "6bgfod",
-    "parentName": "deloris.schneider",
-    "childNum": "6380lo"
+    "searchCode": "17084",
+    "imagePath": "h5u4rx",
+    "priority": 425,
+    "status": 574,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:13",
+    "lastTime": "2025-09-06 00:01:13",
+    "delFlag": 4,
+    "description": "3s3kzp",
+    "spare1": "3sif8v",
+    "spare2": "qqywbz",
+    "parentName": "jacquelynn.veum",
+    "childNum": "s4elx4"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1015,7 +1015,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?imagePath=w9p6bh&page=1&orderBy=787&isOrganLevel=true&appId=12&parentId=817&searchCode=17639&depttypeId=133&sname=deloris.schneider&limit=10&areaCode=17639&organId=12&deptId=139&status=815&spare1=79vmwd&creatorId=12&organLeader=wuyu2e&q=7vnflp&name=deloris.schneider&leaderId=12&leaderMobile=(682) 505-7451&isVirtual=true&isLeaf=true&createType=475&isDisabled=true&delFlag=3&type=w4lq3p&description=1kkz8q&spare2=ctfnt2&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&foreignId=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?leaderMobile=1-484-863-9255&deptId=349&isLeaf=true&spare2=g88kvy&areaCode=17084&leaderId=74&limit=10&appId=74&startTime=2025-09-06 00:00:25&spare1=1kenua&searchCode=17084&page=1&description=asd1vl&isOrganLevel=true&organLeader=16gdxt&depttypeId=90&endTime=2025-09-06 00:00:25&createType=234&type=uf45e1&sname=jacquelynn.veum&status=828&imagePath=syv73i&organId=74&foreignId=74&name=jacquelynn.veum&delFlag=4&isVirtual=true&orderBy=883&parentId=329&isDisabled=true&q=nsvp8d&creatorId=74
 ```
 **Response-fields:**
 
@@ -1045,11 +1045,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "8yipll",
-      "id": "12",
-      "parentId": "12",
-      "extId": "12",
-      "href": "f13nbn",
+      "title": "io40n8",
+      "id": "74",
+      "parentId": "74",
+      "extId": "74",
+      "href": "8a4awk",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -1060,8 +1060,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1106,7 +1106,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?msg=m5jf5o&ipaddr=lwhgwe&limit=10&infoId=150&page=1&status=wvxtg7&browser=o0pmji&username=deloris.schneider&os=qqlhb5&loginTime=2025-09-05 15:45:54&q=1z3ojx&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&orderBy=772
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?orderBy=425&msg=j0fb44&browser=6eooii&username=jacquelynn.veum&endTime=2025-09-06 00:00:25&os=gqjhiq&ipaddr=io3foh&infoId=364&loginTime=2025-09-06 00:01:19&startTime=2025-09-06 00:00:25&q=y9zbqq&page=1&status=1041w6&limit=10
 ```
 **Response-fields:**
 
@@ -1141,27 +1141,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 585,
+    "totalCount": 664,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 132,
-        "username": "deloris.schneider",
-        "status": "120cc4",
-        "ipaddr": "rbyweg",
-        "loginLocation": "u50hvw",
-        "browser": "olhdxt",
-        "os": "1wcw50",
-        "msg": "ic7a4k",
-        "loginTime": "2025-09-05 15:45:54",
-        "remark": "gbhrpr"
+        "infoId": 184,
+        "username": "jacquelynn.veum",
+        "status": "7sgbag",
+        "ipaddr": "0o48cq",
+        "loginLocation": "1ajdku",
+        "browser": "esnfn2",
+        "os": "s0x8oj",
+        "msg": "x240a2",
+        "loginTime": "2025-09-06 00:01:19",
+        "remark": "axhup3"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1205,7 +1205,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'ipaddr=x6q4lj&username=deloris.schneider&browser=urch5m&msg=ix7i8o&startTime=2025-09-05 15:44:42&page=1&limit=10&endTime=2025-09-05 15:44:42&orderBy=980&infoId=132&status=al8bwh&loginTime=2025-09-05 15:45:54&q=mprvbr&os=po6uve'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'status=z0u28e&endTime=2025-09-06 00:00:25&q=29jwsc&loginTime=2025-09-06 00:01:19&username=jacquelynn.veum&startTime=2025-09-06 00:00:25&browser=sqpars&limit=10&ipaddr=gqnwus&orderBy=903&os=pzg8y1&infoId=504&msg=voaqa1&page=1'
 ```
 **Response-fields:**
 
@@ -1224,9 +1224,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u274cd",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "uhwo7l",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1276,9 +1276,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vyktej",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "tpisp5",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1322,9 +1322,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q1ogkq",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "r4vfbq",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1355,7 +1355,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/deloris.schneider.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/jacquelynn.veum.do
 ```
 **Response-fields:**
 
@@ -1374,9 +1374,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wdpokp",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "p9a0rp",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1495,60 +1495,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 152,
-    "userId": "12",
-    "deptId": 119,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "ucjo75",
-    "password": "gkkc5h",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:14",
+    "lastTime": "2025-09-06 00:01:14",
+    "id": 139,
+    "userId": "74",
+    "deptId": 658,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "g91sx5",
+    "password": "9ywndh",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 718,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "fs6nfv",
+    "status": 403,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:14",
+    "description": "fi6l7y",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 349,
-      "organId": "12",
-      "parentId": 442,
-      "appId": "12",
-      "depttypeId": 310,
-      "foreignId": "12",
-      "createType": 988,
-      "type": "sy3irq",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "n9unga",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 239,
+      "organId": "74",
+      "parentId": 339,
+      "appId": "74",
+      "depttypeId": 998,
+      "foreignId": "74",
+      "createType": 136,
+      "type": "zqud2j",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "9a9ya5",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "vl9mw4",
-      "priority": 858,
-      "status": 319,
-      "delFlag": 3,
-      "description": "vtonbr",
-      "spare1": "i2uo6k",
-      "spare2": "7f9vcm",
+      "searchCode": "17084",
+      "imagePath": "yxm7jt",
+      "priority": 495,
+      "status": 508,
+      "delFlag": 4,
+      "description": "52r301",
+      "spare1": "lab9za",
+      "spare2": "j5n8kd",
       "children": [
         {
           "$ref": ".."
@@ -1557,44 +1557,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 794,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 871,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 504,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 31,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 855,
-        "description": "kw0q4c",
-        "areaType": "icua94"
+        "status": 2,
+        "description": "tavlj8",
+        "areaType": "wa03ru"
       }
     ],
     "roleIds": [
-      702
+      487
     ],
     "positionIds": [
-      "uihipm"
+      "79sko7"
     ],
-    "roleId": 402,
+    "roleId": 185,
     "userRoleList": [
       {
-        "id": 25,
-        "deptId": 530,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 630,
-        "roleName": "deloris.schneider",
-        "adminId": 635
+        "id": 384,
+        "deptId": 505,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 988,
+        "roleName": "jacquelynn.veum",
+        "adminId": 432
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -1615,9 +1615,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3ue2fk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "mcums3",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1735,60 +1735,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 73,
-    "userId": "12",
-    "deptId": 155,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "29w45k",
-    "password": "us637t",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:14",
+    "lastTime": "2025-09-06 00:01:14",
+    "id": 359,
+    "userId": "74",
+    "deptId": 696,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "avb0d9",
+    "password": "8vhmzk",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 356,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "6cit0g",
+    "status": 932,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:14",
+    "description": "huchbm",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 767,
-      "organId": "12",
-      "parentId": 247,
-      "appId": "12",
-      "depttypeId": 314,
-      "foreignId": "12",
-      "createType": 781,
-      "type": "nvr586",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "wxvi4w",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 236,
+      "organId": "74",
+      "parentId": 922,
+      "appId": "74",
+      "depttypeId": 776,
+      "foreignId": "74",
+      "createType": 80,
+      "type": "at8ech",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "nraplg",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "3pbjok",
-      "priority": 811,
-      "status": 72,
-      "delFlag": 3,
-      "description": "9hyros",
-      "spare1": "fn945s",
-      "spare2": "cc1xxj",
+      "searchCode": "17084",
+      "imagePath": "u3e4oz",
+      "priority": 87,
+      "status": 577,
+      "delFlag": 4,
+      "description": "0s8atr",
+      "spare1": "k05b0n",
+      "spare2": "xwa0xb",
       "children": [
         {
           "$ref": ".."
@@ -1797,44 +1797,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 169,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 860,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 382,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 845,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 16,
-        "description": "557wk4",
-        "areaType": "g0c14p"
+        "status": 836,
+        "description": "uq34hu",
+        "areaType": "emg4oc"
       }
     ],
     "roleIds": [
-      665
+      237
     ],
     "positionIds": [
-      "1gih3f"
+      "7fg99w"
     ],
-    "roleId": 627,
+    "roleId": 608,
     "userRoleList": [
       {
-        "id": 665,
-        "deptId": 237,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 245,
-        "roleName": "deloris.schneider",
-        "adminId": 694
+        "id": 771,
+        "deptId": 905,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 306,
+        "roleName": "jacquelynn.veum",
+        "adminId": 749
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -1855,9 +1855,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z04s51",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "dc25dp",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -1921,40 +1921,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 995,
-    "userId": "12",
-    "organId": "12",
-    "deptId": 609,
-    "createType": 83,
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "mobile": "(682) 505-7451",
-    "email": "ralph.kerluke@hotmail.com",
-    "password": "4l3m4d",
-    "salt": "2b3xox",
-    "imagePath": "p621r3",
-    "adminType": "a80ihn",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:14",
+    "lastTime": "2025-09-06 00:01:14",
+    "id": 945,
+    "userId": "74",
+    "organId": "74",
+    "deptId": 58,
+    "createType": 854,
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "mobile": "1-484-863-9255",
+    "email": "jake.kunze@gmail.com",
+    "password": "n49vl1",
+    "salt": "ezsm5v",
+    "imagePath": "ca66dk",
+    "adminType": "epj9wc",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "d82m1v",
-    "adminPerms": "ipilj2",
-    "lastAppId": "12",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "lastLoginIp": "188.87.89.33",
-    "loginCount": 881,
-    "status": 231,
-    "delFlag": 3,
-    "spare1": "36ryx4",
-    "spare2": "r4lfkn",
+    "adminRange": "u9i4j5",
+    "adminPerms": "v8zmki",
+    "lastAppId": "74",
+    "lastLoginTime": "2025-09-06 00:01:14",
+    "lastLoginIp": "97.63.215.106",
+    "loginCount": 0,
+    "status": 737,
+    "delFlag": 4,
+    "spare1": "uhe97x",
+    "spare2": "mvc762",
     "roleIds": [
-      263
+      345
     ],
     "positionIds": [
-      "5w2odb"
+      "ui754f"
     ]
   }
 }'
@@ -1976,9 +1976,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7zdumo",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "wgl5sn",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2102,60 +2102,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 503,
-    "userId": "12",
-    "deptId": 783,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "apm1cy",
-    "password": "jlpgob",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:14",
+    "lastTime": "2025-09-06 00:01:14",
+    "id": 760,
+    "userId": "74",
+    "deptId": 33,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "o386h6",
+    "password": "5wcl36",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 547,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "buci4z",
+    "status": 901,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:14",
+    "description": "37st5h",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 53,
-      "organId": "12",
-      "parentId": 936,
-      "appId": "12",
-      "depttypeId": 77,
-      "foreignId": "12",
-      "createType": 172,
-      "type": "t1y5po",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "lvukcm",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 732,
+      "organId": "74",
+      "parentId": 108,
+      "appId": "74",
+      "depttypeId": 886,
+      "foreignId": "74",
+      "createType": 464,
+      "type": "w2h55j",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "vmn7j6",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "w1o1o7",
-      "priority": 744,
-      "status": 298,
-      "delFlag": 3,
-      "description": "t6p54y",
-      "spare1": "zfr1bi",
-      "spare2": "6ha1ao",
+      "searchCode": "17084",
+      "imagePath": "u0z8nn",
+      "priority": 748,
+      "status": 863,
+      "delFlag": 4,
+      "description": "bpxupm",
+      "spare1": "ckkojd",
+      "spare2": "er7m7v",
       "children": [
         {
           "$ref": ".."
@@ -2164,44 +2164,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 707,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 366,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 475,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 552,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 805,
-        "description": "vbuifg",
-        "areaType": "856e1z"
+        "status": 968,
+        "description": "vyojy6",
+        "areaType": "15cbhy"
       }
     ],
     "roleIds": [
-      587
+      944
     ],
     "positionIds": [
-      "n1jxw5"
+      "xcabo3"
     ],
-    "roleId": 278,
+    "roleId": 363,
     "userRoleList": [
       {
-        "id": 214,
-        "deptId": 211,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 298,
-        "roleName": "deloris.schneider",
-        "adminId": 948
+        "id": 208,
+        "deptId": 744,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 850,
+        "roleName": "jacquelynn.veum",
+        "adminId": 992
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -2222,9 +2222,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l5vj36",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "m39041",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2274,9 +2274,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gb1bcn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "g9vc4n",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2322,7 +2322,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'endTime=2025-09-05 15:44:42&deptId=538&organId=12&limit=10&q=8v4mxa&delFlag=3&page=1&status=x7lk7g&email=ralph.kerluke@hotmail.com&mobile=(682) 505-7451&startTime=2025-09-05 15:44:42&nickName=lon.nicolas&username=deloris.schneider&adminId=927&orderBy=102&userId=12'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'userId=74&mobile=1-484-863-9255&delFlag=4&endTime=2025-09-06 00:00:25&limit=10&adminId=563&organId=74&startTime=2025-09-06 00:00:25&q=spsc3n&email=jake.kunze@gmail.com&nickName=darrin.langosh&status=9b4gwz&page=1&orderBy=633&username=jacquelynn.veum&deptId=660'
 ```
 **Response-fields:**
 
@@ -2341,9 +2341,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ue5ywo",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "dky3ag",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2394,9 +2394,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cxvcf1",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "pc5im4",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2440,9 +2440,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t5sf69",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "bjiiau",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2560,60 +2560,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 405,
-    "userId": "12",
-    "deptId": 346,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "ev4loq",
-    "password": "55a0kz",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:14",
+    "lastTime": "2025-09-06 00:01:14",
+    "id": 44,
+    "userId": "74",
+    "deptId": 71,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "3z0em4",
+    "password": "0gjygy",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 455,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "hg9pnp",
+    "status": 657,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:14",
+    "description": "n5uz4f",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 533,
-      "organId": "12",
-      "parentId": 462,
-      "appId": "12",
-      "depttypeId": 203,
-      "foreignId": "12",
-      "createType": 467,
-      "type": "476hvz",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "zi0pus",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 577,
+      "organId": "74",
+      "parentId": 75,
+      "appId": "74",
+      "depttypeId": 9,
+      "foreignId": "74",
+      "createType": 77,
+      "type": "j1u1uh",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "ptsdy6",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "dzo1wx",
-      "priority": 372,
-      "status": 145,
-      "delFlag": 3,
-      "description": "6coqwq",
-      "spare1": "h9mgrl",
-      "spare2": "eqy9wj",
+      "searchCode": "17084",
+      "imagePath": "cu8lth",
+      "priority": 676,
+      "status": 890,
+      "delFlag": 4,
+      "description": "cw9f8a",
+      "spare1": "k9kskr",
+      "spare2": "3p9yeu",
       "children": [
         {
           "$ref": ".."
@@ -2622,44 +2622,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 107,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 251,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 494,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 985,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 406,
-        "description": "tnh0og",
-        "areaType": "d9o9r5"
+        "status": 79,
+        "description": "2r0kg7",
+        "areaType": "j7spyi"
       }
     ],
     "roleIds": [
-      96
+      28
     ],
     "positionIds": [
-      "yv34r7"
+      "t6r3z5"
     ],
-    "roleId": 384,
+    "roleId": 430,
     "userRoleList": [
       {
-        "id": 386,
-        "deptId": 72,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 613,
-        "roleName": "deloris.schneider",
-        "adminId": 165
+        "id": 674,
+        "deptId": 941,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 97,
+        "roleName": "jacquelynn.veum",
+        "adminId": 262
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -2680,9 +2680,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oixwpn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "hn7abi",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2800,60 +2800,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 856,
-    "userId": "12",
-    "deptId": 526,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "03xith",
-    "password": "jryamf",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:15",
+    "lastTime": "2025-09-06 00:01:15",
+    "id": 920,
+    "userId": "74",
+    "deptId": 566,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "q5l2gv",
+    "password": "62plsa",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 384,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "s1lky7",
+    "status": 334,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:15",
+    "description": "3gpezw",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 247,
-      "organId": "12",
-      "parentId": 532,
-      "appId": "12",
-      "depttypeId": 281,
-      "foreignId": "12",
-      "createType": 794,
-      "type": "tl7vnz",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "hu0i1w",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:15",
+      "lastTime": "2025-09-06 00:01:15",
+      "id": 401,
+      "organId": "74",
+      "parentId": 742,
+      "appId": "74",
+      "depttypeId": 960,
+      "foreignId": "74",
+      "createType": 545,
+      "type": "6matcj",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "w2je5x",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "j296b3",
-      "priority": 198,
-      "status": 896,
-      "delFlag": 3,
-      "description": "klnhw9",
-      "spare1": "osvtxq",
-      "spare2": "dv1r4q",
+      "searchCode": "17084",
+      "imagePath": "sgtrnv",
+      "priority": 374,
+      "status": 236,
+      "delFlag": 4,
+      "description": "r3oawg",
+      "spare1": "dz1xgh",
+      "spare2": "hgb392",
       "children": [
         {
           "$ref": ".."
@@ -2862,44 +2862,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 276,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 198,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:15",
+        "lastTime": "2025-09-06 00:01:15",
+        "id": 187,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 400,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 941,
-        "description": "rbwl8a",
-        "areaType": "kdv7om"
+        "status": 461,
+        "description": "jifjyb",
+        "areaType": "2jrsvu"
       }
     ],
     "roleIds": [
-      356
+      849
     ],
     "positionIds": [
-      "nuyiff"
+      "jdq05a"
     ],
-    "roleId": 45,
+    "roleId": 312,
     "userRoleList": [
       {
-        "id": 340,
-        "deptId": 723,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 954,
-        "roleName": "deloris.schneider",
-        "adminId": 683
+        "id": 705,
+        "deptId": 222,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 923,
+        "roleName": "jacquelynn.veum",
+        "adminId": 561
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -2920,9 +2920,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8k9dzl",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "a9vekr",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -2953,7 +2953,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/785.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/524.do
 ```
 **Response-fields:**
 
@@ -2972,9 +2972,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0duefw",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "mkfby3",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3006,7 +3006,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=8boqci&roleIds=8boqci&adminId=820'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=315&roleIds=apy7uq&roleIds=apy7uq'
 ```
 **Response-fields:**
 
@@ -3025,9 +3025,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yb5k4r",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "n42hii",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3074,7 +3074,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?email=ralph.kerluke@hotmail.com&page=1&organId=12&nickName=lon.nicolas&adminId=997&delFlag=3&limit=10&userId=12&q=p8u7n0&mobile=(682) 505-7451&endTime=2025-09-05 15:44:42&status=oq8l70&deptId=88&username=deloris.schneider&startTime=2025-09-05 15:44:42&orderBy=495
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?username=jacquelynn.veum&limit=10&email=jake.kunze@gmail.com&mobile=1-484-863-9255&delFlag=4&organId=74&orderBy=480&startTime=2025-09-06 00:00:25&nickName=darrin.langosh&adminId=659&status=76q1wo&endTime=2025-09-06 00:00:25&deptId=879&q=awscqd&userId=74&page=1
 ```
 **Response-fields:**
 
@@ -3180,60 +3180,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:49",
-      "lastTime": "2025-09-05 15:45:49",
-      "id": 110,
-      "userId": "12",
-      "deptId": 457,
-      "deptName": "deloris.schneider",
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "name": "deloris.schneider",
-      "username": "deloris.schneider",
-      "nickName": "lon.nicolas",
-      "email": "ralph.kerluke@hotmail.com",
-      "mobile": "(682) 505-7451",
-      "imagePath": "uuuojm",
-      "password": "20rvgy",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 190,
+      "userId": "74",
+      "deptId": 576,
+      "deptName": "jacquelynn.veum",
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "name": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "nickName": "darrin.langosh",
+      "email": "jake.kunze@gmail.com",
+      "mobile": "1-484-863-9255",
+      "imagePath": "s361ui",
+      "password": "7j2vv1",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 332,
-      "delFlag": 3,
-      "lastLoginIp": "188.87.89.33",
-      "lastLoginTime": "2025-09-05 15:45:49",
-      "description": "qc6yxn",
+      "status": 418,
+      "delFlag": 4,
+      "lastLoginIp": "97.63.215.106",
+      "lastLoginTime": "2025-09-06 00:01:14",
+      "description": "i4o8wp",
       "dept": {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:49",
-        "lastTime": "2025-09-05 15:45:49",
-        "id": 606,
-        "organId": "12",
-        "parentId": 361,
-        "appId": "12",
-        "depttypeId": 208,
-        "foreignId": "12",
-        "createType": 328,
-        "type": "ixanhq",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "areaCode": "17639",
-        "organLeader": "ercewo",
-        "leaderId": "12",
-        "leaderMobile": "(682) 505-7451",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 285,
+        "organId": "74",
+        "parentId": 433,
+        "appId": "74",
+        "depttypeId": 386,
+        "foreignId": "74",
+        "createType": 165,
+        "type": "bqg9ra",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "areaCode": "17084",
+        "organLeader": "o1fpyp",
+        "leaderId": "74",
+        "leaderMobile": "1-484-863-9255",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "17639",
-        "imagePath": "1nzbb5",
-        "priority": 890,
-        "status": 423,
-        "delFlag": 3,
-        "description": "6g1oar",
-        "spare1": "kx96t6",
-        "spare2": "nrpyd5",
+        "searchCode": "17084",
+        "imagePath": "gth725",
+        "priority": 633,
+        "status": 263,
+        "delFlag": 4,
+        "description": "4a3kx4",
+        "spare1": "x8sedp",
+        "spare2": "jae5yu",
         "children": [
           {
             "$ref": ".."
@@ -3242,48 +3242,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "12",
-          "createTime": "2025-09-05 15:45:49",
-          "lastTime": "2025-09-05 15:45:49",
-          "id": 669,
-          "roletypeId": "12",
-          "appId": "12",
-          "name": "deloris.schneider",
-          "code": "17639",
-          "priority": 434,
+          "creatorId": "74",
+          "createTime": "2025-09-06 00:01:14",
+          "lastTime": "2025-09-06 00:01:14",
+          "id": 913,
+          "roletypeId": "74",
+          "appId": "74",
+          "name": "jacquelynn.veum",
+          "code": "17084",
+          "priority": 924,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 722,
-          "description": "p5xk28",
-          "areaType": "qck53k"
+          "status": 236,
+          "description": "8p31x0",
+          "areaType": "rwjsv3"
         }
       ],
       "roleIds": [
-        392
+        887
       ],
       "positionIds": [
-        "cfxy3k"
+        "wyysu7"
       ],
-      "roleId": 5,
+      "roleId": 872,
       "userRoleList": [
         {
-          "id": 907,
-          "deptId": 603,
-          "deptName": "deloris.schneider",
-          "organId": "12",
-          "organName": "deloris.schneider",
-          "roleId": 252,
-          "roleName": "deloris.schneider",
-          "adminId": 243
+          "id": 349,
+          "deptId": 969,
+          "deptName": "jacquelynn.veum",
+          "organId": "74",
+          "organName": "jacquelynn.veum",
+          "roleId": 91,
+          "roleName": "jacquelynn.veum",
+          "adminId": 990
         }
       ],
-      "code": "17639",
-      "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+      "code": "17084",
+      "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3462,60 +3462,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:49",
-      "lastTime": "2025-09-05 15:45:49",
-      "id": 75,
-      "userId": "12",
-      "deptId": 246,
-      "deptName": "deloris.schneider",
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "name": "deloris.schneider",
-      "username": "deloris.schneider",
-      "nickName": "lon.nicolas",
-      "email": "ralph.kerluke@hotmail.com",
-      "mobile": "(682) 505-7451",
-      "imagePath": "m2pjfr",
-      "password": "1ow6w1",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:14",
+      "lastTime": "2025-09-06 00:01:14",
+      "id": 818,
+      "userId": "74",
+      "deptId": 862,
+      "deptName": "jacquelynn.veum",
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "name": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "nickName": "darrin.langosh",
+      "email": "jake.kunze@gmail.com",
+      "mobile": "1-484-863-9255",
+      "imagePath": "frunbj",
+      "password": "n8cefy",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 661,
-      "delFlag": 3,
-      "lastLoginIp": "188.87.89.33",
-      "lastLoginTime": "2025-09-05 15:45:49",
-      "description": "v3h2g6",
+      "status": 347,
+      "delFlag": 4,
+      "lastLoginIp": "97.63.215.106",
+      "lastLoginTime": "2025-09-06 00:01:14",
+      "description": "uam2ku",
       "dept": {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:49",
-        "lastTime": "2025-09-05 15:45:49",
-        "id": 0,
-        "organId": "12",
-        "parentId": 972,
-        "appId": "12",
-        "depttypeId": 988,
-        "foreignId": "12",
-        "createType": 408,
-        "type": "52qct6",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "areaCode": "17639",
-        "organLeader": "7bu6cd",
-        "leaderId": "12",
-        "leaderMobile": "(682) 505-7451",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "id": 659,
+        "organId": "74",
+        "parentId": 145,
+        "appId": "74",
+        "depttypeId": 125,
+        "foreignId": "74",
+        "createType": 962,
+        "type": "kr0e4r",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "areaCode": "17084",
+        "organLeader": "66m3un",
+        "leaderId": "74",
+        "leaderMobile": "1-484-863-9255",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "17639",
-        "imagePath": "7v17jk",
-        "priority": 282,
-        "status": 686,
-        "delFlag": 3,
-        "description": "9zqhaf",
-        "spare1": "0e8uou",
-        "spare2": "lj0obd",
+        "searchCode": "17084",
+        "imagePath": "hvp834",
+        "priority": 831,
+        "status": 481,
+        "delFlag": 4,
+        "description": "99etqd",
+        "spare1": "3c4vim",
+        "spare2": "ka530s",
         "children": [
           {
             "$ref": ".."
@@ -3524,116 +3524,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "12",
-          "createTime": "2025-09-05 15:45:49",
-          "lastTime": "2025-09-05 15:45:49",
-          "id": 134,
-          "roletypeId": "12",
-          "appId": "12",
-          "name": "deloris.schneider",
-          "code": "17639",
-          "priority": 929,
+          "creatorId": "74",
+          "createTime": "2025-09-06 00:01:14",
+          "lastTime": "2025-09-06 00:01:14",
+          "id": 460,
+          "roletypeId": "74",
+          "appId": "74",
+          "name": "jacquelynn.veum",
+          "code": "17084",
+          "priority": 640,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 829,
-          "description": "k3bwmo",
-          "areaType": "aerwzd"
+          "status": 500,
+          "description": "mmzfdm",
+          "areaType": "l9y23n"
         }
       ],
       "roleIds": [
-        524
+        895
       ],
       "positionIds": [
-        "ugs780"
+        "vs885r"
       ],
-      "roleId": 96,
+      "roleId": 765,
       "userRoleList": [
         {
-          "id": 587,
-          "deptId": 127,
-          "deptName": "deloris.schneider",
-          "organId": "12",
-          "organName": "deloris.schneider",
-          "roleId": 901,
-          "roleName": "deloris.schneider",
-          "adminId": 427
+          "id": 951,
+          "deptId": 348,
+          "deptName": "jacquelynn.veum",
+          "organId": "74",
+          "organName": "jacquelynn.veum",
+          "roleId": 781,
+          "roleName": "jacquelynn.veum",
+          "adminId": 772
         }
       ],
-      "code": "17639",
-      "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+      "code": "17084",
+      "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:49",
-        "lastTime": "2025-09-05 15:45:49",
-        "roleId": 375,
-        "roleName": "deloris.schneider",
-        "roleKey": "onxhg1",
-        "roleSort": 322,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "roleId": 332,
+        "roleName": "jacquelynn.veum",
+        "roleKey": "r74g42",
+        "roleSort": 527,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 194,
+        "status": 148,
         "flag": true,
         "menuIds": [
-          899
+          28
         ],
         "deptIds": [
-          323
+          364
         ],
         "permissions": [
-          "4z8n3x"
+          "unmy3o"
         ],
-        "remark": "zmw40v",
-        "parentName": "deloris.schneider",
-        "appName": "deloris.schneider",
-        "roletypeId": "12",
-        "roletypeName": "deloris.schneider",
-        "priority": 39,
+        "remark": "tkud45",
+        "parentName": "jacquelynn.veum",
+        "appName": "jacquelynn.veum",
+        "roletypeId": "74",
+        "roletypeName": "jacquelynn.veum",
+        "priority": 659,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 281,
-        "roleId": 686,
-        "adminId": 1,
-        "deptId": 223,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleName": "deloris.schneider"
+        "id": 866,
+        "roleId": 251,
+        "adminId": 270,
+        "deptId": 446,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleName": "jacquelynn.veum"
       }
     ],
     "positions": [
       {
-        "postId": "12",
-        "postCode": "17639",
-        "postName": "deloris.schneider",
-        "postSort": 407,
-        "status": 178,
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "delFlag": 3,
-        "remark": "qrjc46",
+        "postId": "74",
+        "postCode": "17084",
+        "postName": "jacquelynn.veum",
+        "postSort": 585,
+        "status": 793,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:14",
+        "lastTime": "2025-09-06 00:01:14",
+        "delFlag": 4,
+        "remark": "dgnwyw",
         "ids": [
-          "3tulxd"
+          "xpx7xb"
         ],
-        "positionId": "12",
+        "positionId": "74",
         "flag": true
       }
     ],
     "roleIds": [
-      288
+      907
     ],
     "positionIds": [
-      541
+      212
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3695,7 +3695,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?type=gp4zcs&areaCode=17639&createType=380&endTime=2025-09-05 15:44:42&sname=deloris.schneider&leaderMobile=(682) 505-7451&q=j0x2nu&status=670&organLeader=9olpde&parentId=74&isOrganLevel=true&creatorId=12&organId=12&depttypeId=880&leaderId=12&imagePath=q85l4k&startTime=2025-09-05 15:44:42&isLeaf=true&orderBy=511&searchCode=17639&isDisabled=true&foreignId=12&spare2=dkb5f4&name=deloris.schneider&appId=12&deptId=0&isVirtual=true&page=1&delFlag=3&spare1=8umfeb&limit=10&description=oionzc
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?foreignId=74&areaCode=17084&spare1=juie7k&imagePath=6y4vim&depttypeId=571&endTime=2025-09-06 00:00:25&createType=423&leaderId=74&leaderMobile=1-484-863-9255&isOrganLevel=true&isVirtual=true&isDisabled=true&deptId=313&parentId=51&startTime=2025-09-06 00:00:25&type=ye4jzx&page=1&appId=74&delFlag=4&spare2=wt4rkw&limit=10&q=54xl8j&orderBy=250&name=jacquelynn.veum&sname=jacquelynn.veum&isLeaf=true&status=649&description=1xntl9&organId=74&organLeader=90axjv&searchCode=17084&creatorId=74
 ```
 **Response-fields:**
 
@@ -3719,8 +3719,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 233,
-      "label": "c84rk4",
+      "id": 49,
+      "label": "u4df89",
       "children": [
         {
           "$ref": ".."
@@ -3728,8 +3728,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3783,7 +3783,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?path=r26eno&organId=12&orderBy=714&sertypeId=12&isDisabled=true&appType=o8j25w&description=54m18h&domainId=12&status=899&name=deloris.schneider&isSite=true&isMobileApp=true&ids=34vvy5&ids=34vvy5&endTime=2025-09-05 15:44:42&limit=10&ftpId=12&delFlag=3&mode=941&xzqhId=238&q=zb177d&page=1&existKey=a2o4y3&startTime=2025-09-05 15:44:42
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?mode=767&isMobileApp=true&path=9ufcf4&ids=4vaycl&ids=4vaycl&ftpId=74&domainId=74&orderBy=450&description=dla59q&name=jacquelynn.veum&endTime=2025-09-06 00:00:25&q=1kiu9a&organId=74&sertypeId=74&isDisabled=true&appType=f6371m&delFlag=4&status=524&existKey=huu722&startTime=2025-09-06 00:00:25&page=1&limit=10&isSite=true&xzqhId=724
 ```
 **Response-fields:**
 
@@ -3827,33 +3827,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:55",
-      "lastTime": "2025-09-05 15:45:55",
-      "id": "12",
-      "ftpId": "12",
-      "domainId": "12",
-      "organId": "12",
-      "xzqhId": 838,
-      "sertypeId": "12",
-      "name": "deloris.schneider",
-      "path": "h8fp56",
-      "appType": "ytrvc7",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:19",
+      "lastTime": "2025-09-06 00:01:19",
+      "id": "74",
+      "ftpId": "74",
+      "domainId": "74",
+      "organId": "74",
+      "xzqhId": 625,
+      "sertypeId": "74",
+      "name": "jacquelynn.veum",
+      "path": "sqgeg5",
+      "appType": "kfrqpe",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 316,
-      "priority": 632,
-      "delFlag": 3,
-      "deleteTime": "2025-09-05 15:45:55",
-      "description": "10z7pp",
-      "spare1": "qvmo0j",
-      "spare2": "00yk4p",
-      "xzqhName": "deloris.schneider"
+      "status": 145,
+      "priority": 202,
+      "delFlag": 4,
+      "deleteTime": "2025-09-06 00:01:19",
+      "description": "ypl0u9",
+      "spare1": "g4dags",
+      "spare2": "nbscy4",
+      "xzqhName": "jacquelynn.veum"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -3907,7 +3907,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?isSite=true&domainId=12&name=deloris.schneider&isDisabled=true&orderBy=299&limit=10&startTime=2025-09-05 15:44:42&ftpId=12&organId=12&status=334&delFlag=3&xzqhId=600&ids=k8yjyx&ids=k8yjyx&q=pfpij7&isMobileApp=true&idArr=wt10kv&endTime=2025-09-05 15:44:42&appType=dblmu8&page=1&sertypeId=12&path=t3nwa0&description=3mks9s&mode=666&existKey=f8f362
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?idArr=3aa92n&endTime=2025-09-06 00:00:25&mode=905&q=ddyery&limit=10&description=tpaggy&startTime=2025-09-06 00:00:25&xzqhId=390&page=1&isSite=true&organId=74&domainId=74&name=jacquelynn.veum&appType=uwye4p&isDisabled=true&status=361&ids=imswux&ids=imswux&delFlag=4&ftpId=74&path=0jmpwy&sertypeId=74&existKey=82cgrq&isMobileApp=true&orderBy=190
 ```
 **Response-fields:**
 
@@ -3955,40 +3955,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 97,
+    "totalCount": 479,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:55",
-        "lastTime": "2025-09-05 15:45:55",
-        "id": "12",
-        "ftpId": "12",
-        "domainId": "12",
-        "organId": "12",
-        "xzqhId": 554,
-        "sertypeId": "12",
-        "name": "deloris.schneider",
-        "path": "ecogkg",
-        "appType": "3bgdvo",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:19",
+        "lastTime": "2025-09-06 00:01:19",
+        "id": "74",
+        "ftpId": "74",
+        "domainId": "74",
+        "organId": "74",
+        "xzqhId": 888,
+        "sertypeId": "74",
+        "name": "jacquelynn.veum",
+        "path": "lnpqmj",
+        "appType": "174os9",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 246,
-        "priority": 147,
-        "delFlag": 3,
-        "deleteTime": "2025-09-05 15:45:55",
-        "description": "2mfm55",
-        "spare1": "pjt3vx",
-        "spare2": "8saim2",
-        "xzqhName": "deloris.schneider"
+        "status": 134,
+        "priority": 310,
+        "delFlag": 4,
+        "deleteTime": "2025-09-06 00:01:19",
+        "description": "nah914",
+        "spare1": "s8z62o",
+        "spare2": "j7ohmr",
+        "xzqhName": "jacquelynn.veum"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4042,7 +4042,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'sertypeId=12&endTime=2025-09-05 15:44:42&limit=10&name=deloris.schneider&path=zaoub8&isSite=true&startTime=2025-09-05 15:44:42&mode=588&idArr=wnjpng&ftpId=12&domainId=12&isDisabled=true&page=1&description=atevrl&existKey=0iabaw&ids=qj09qf&ids=qj09qf&q=pa1pwn&orderBy=296&organId=12&isMobileApp=true&xzqhId=357&appType=h17jts&delFlag=3&status=396'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'limit=10&name=jacquelynn.veum&status=506&sertypeId=74&appType=fqgww8&existKey=es26lq&q=1phva6&page=1&isSite=true&idArr=0w6i3a&ftpId=74&orderBy=648&path=75l00i&organId=74&isMobileApp=true&ids=d4sj8u&ids=d4sj8u&isDisabled=true&description=1cxjuu&xzqhId=332&startTime=2025-09-06 00:00:25&endTime=2025-09-06 00:00:25&domainId=74&mode=548&delFlag=4'
 ```
 **Response-fields:**
 
@@ -4061,9 +4061,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5liovd",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "6t548g",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4094,7 +4094,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/12.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/74.do
 ```
 **Response-fields:**
 
@@ -4141,36 +4141,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:55",
-    "lastTime": "2025-09-05 15:45:55",
-    "id": "12",
-    "ftpId": "12",
-    "domainId": "12",
-    "organId": "12",
-    "xzqhId": 491,
-    "sertypeId": "12",
-    "name": "deloris.schneider",
-    "path": "1dsat5",
-    "appType": "8lmgkr",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:19",
+    "lastTime": "2025-09-06 00:01:19",
+    "id": "74",
+    "ftpId": "74",
+    "domainId": "74",
+    "organId": "74",
+    "xzqhId": 724,
+    "sertypeId": "74",
+    "name": "jacquelynn.veum",
+    "path": "tnt6gx",
+    "appType": "h2x9uv",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 345,
-    "priority": 176,
-    "delFlag": 3,
-    "deleteTime": "2025-09-05 15:45:55",
-    "description": "aq7kno",
-    "spare1": "s3hpt0",
-    "spare2": "ub9v15",
-    "xzqhName": "deloris.schneider",
-    "ftpName": "deloris.schneider",
-    "sertypeName": "deloris.schneider",
-    "domainName": "deloris.schneider",
-    "organName": "deloris.schneider"
+    "status": 269,
+    "priority": 971,
+    "delFlag": 4,
+    "deleteTime": "2025-09-06 00:01:19",
+    "description": "al7ikq",
+    "spare1": "pz5jfj",
+    "spare2": "3k61ml",
+    "xzqhName": "jacquelynn.veum",
+    "ftpName": "jacquelynn.veum",
+    "sertypeName": "jacquelynn.veum",
+    "domainName": "jacquelynn.veum",
+    "organName": "jacquelynn.veum"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4227,31 +4227,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "12",
-    "ftpId": "12",
-    "ftpName": "deloris.schneider",
-    "domainId": "12",
-    "domainName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "xzqhId": 424,
-    "xzqhName": "deloris.schneider",
-    "sertypeId": "12",
-    "sertypeName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "path": "hzcnac",
-    "appType": "ggbe33",
+    "id": "74",
+    "ftpId": "74",
+    "ftpName": "jacquelynn.veum",
+    "domainId": "74",
+    "domainName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "xzqhId": 536,
+    "xzqhName": "jacquelynn.veum",
+    "sertypeId": "74",
+    "sertypeName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "path": "0wdcw2",
+    "appType": "ytxirz",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 478,
-    "statusName": "deloris.schneider",
-    "priority": 168,
-    "createTime": "2025-09-05 15:45:55",
-    "description": "egddf3",
-    "spare1": "6q9b9m",
+    "status": 666,
+    "statusName": "jacquelynn.veum",
+    "priority": 501,
+    "createTime": "2025-09-06 00:01:19",
+    "description": "d3e87b",
+    "spare1": "ugxctg",
     "statusMap": {
-      "mapKey": "b8jsre"
+      "mapKey": "wgirr7"
     }
   }
 }'
@@ -4273,9 +4273,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "imyuh9",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "26da9a",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4332,31 +4332,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "12",
-    "ftpId": "12",
-    "ftpName": "deloris.schneider",
-    "domainId": "12",
-    "domainName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "xzqhId": 865,
-    "xzqhName": "deloris.schneider",
-    "sertypeId": "12",
-    "sertypeName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "path": "06n0g0",
-    "appType": "296u0q",
+    "id": "74",
+    "ftpId": "74",
+    "ftpName": "jacquelynn.veum",
+    "domainId": "74",
+    "domainName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "xzqhId": 206,
+    "xzqhName": "jacquelynn.veum",
+    "sertypeId": "74",
+    "sertypeName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "path": "s5ulxh",
+    "appType": "5w7pry",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 729,
-    "statusName": "deloris.schneider",
-    "priority": 969,
-    "createTime": "2025-09-05 15:45:55",
-    "description": "x5u8o7",
-    "spare1": "jy076v",
+    "status": 941,
+    "statusName": "jacquelynn.veum",
+    "priority": 253,
+    "createTime": "2025-09-06 00:01:19",
+    "description": "e0gct7",
+    "spare1": "fc937e",
     "statusMap": {
-      "mapKey": "9suz5h"
+      "mapKey": "zuiw12"
     }
   }
 }'
@@ -4378,9 +4378,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e82rto",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "0dluy2",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4430,9 +4430,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cuo65j",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "b2s6gm",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4476,16 +4476,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/12.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/74.do --data '{
   "data": {
-    "id": "12",
+    "id": "74",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "deloris.schneider",
-    "password": "e47g6c",
-    "initPath": "wbb554"
+    "username": "jacquelynn.veum",
+    "password": "b7d8oc",
+    "initPath": "izm7yg"
   }
 }'
 ```
@@ -4509,8 +4509,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4554,9 +4554,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zmyuj2",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "4e4w3o",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4612,7 +4612,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?q=8e9k2v&nameEn=hw3wtv&areatypeId=12&nameTotal=kyj7e0&parentIds=ku8o0h&parentIds=ku8o0h&limit=10&likeQuery=ggg02o&deleteTime=2025-09-05 15:44:42&page=1&parentId=324&ids=1vx0a5&ids=1vx0a5&isDisplay=true&orderBy=160&lft=830&searchCode=17639&delFlag=3&hasContent=true&name=deloris.schneider&countryId=12&sname=deloris.schneider&code=17639&endTime=2025-09-05 15:44:42&rgt=528&startTime=2025-09-05 15:44:42&description=v0d8ac&areatypeIds=e9omsk&areatypeIds=e9omsk
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?parentIds=g8wsxg&parentIds=g8wsxg&q=zkix5v&deleteTime=2025-09-06 00:00:25&hasContent=true&areatypeIds=me1lxh&areatypeIds=me1lxh&name=jacquelynn.veum&code=17084&likeQuery=aj45ct&startTime=2025-09-06 00:00:25&countryId=74&limit=10&page=1&isDisplay=true&nameEn=k8426r&endTime=2025-09-06 00:00:25&rgt=271&sname=jacquelynn.veum&orderBy=308&description=skm9yb&lft=46&areatypeId=74&delFlag=4&searchCode=17084&nameTotal=7055aq&ids=f1bm2h&ids=f1bm2h&parentId=254
 ```
 **Response-fields:**
 
@@ -4661,41 +4661,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 472,
+    "totalCount": 225,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:56",
-        "lastTime": "2025-09-05 15:45:56",
-        "id": 566,
-        "parentId": 255,
-        "countryId": "12",
-        "areatypeId": "12",
-        "lft": 265,
-        "rgt": 45,
-        "code": "17639",
-        "name": "deloris.schneider",
-        "nameTotal": "0cvgm3",
-        "sname": "deloris.schneider",
-        "nameEn": "qcgleo",
-        "searchCode": "17639",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:20",
+        "lastTime": "2025-09-06 00:01:20",
+        "id": 643,
+        "parentId": 418,
+        "countryId": "74",
+        "areatypeId": "74",
+        "lft": 553,
+        "rgt": 322,
+        "code": "17084",
+        "name": "jacquelynn.veum",
+        "nameTotal": "krpr8p",
+        "sname": "jacquelynn.veum",
+        "nameEn": "02a6eh",
+        "searchCode": "17084",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 369,
-        "delFlag": 3,
-        "deleteTime": "2025-09-05 15:45:56",
-        "description": "2jc0z8",
-        "countryName": "deloris.schneider",
-        "parentName": "deloris.schneider",
-        "areatypeName": "deloris.schneider"
+        "priority": 207,
+        "delFlag": 4,
+        "deleteTime": "2025-09-06 00:01:20",
+        "description": "6n7yu3",
+        "countryName": "jacquelynn.veum",
+        "parentName": "jacquelynn.veum",
+        "areatypeName": "jacquelynn.veum"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4746,7 +4746,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?organName=deloris.schneider&endTime=2025-09-05 15:44:42&unionCode=17639&key=yyv5o6&startTime=2025-09-05 15:44:42&createType=282&isOrganWork=35epj3&spare1=jivi20&ids=ld90qv&ids=ld90qv&source=941&description=swyhj0&organCode=17639&q=hsz0pc&delFlag=3&orderBy=558&xzqhId=876&page=1&limit=10&orgtypeId=12&name=deloris.schneider&spare2=kss16b
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?name=jacquelynn.veum&xzqhId=123&page=1&unionCode=17084&key=navgw9&description=umlvhj&delFlag=4&source=435&createType=615&startTime=2025-09-06 00:00:25&spare2=xm5090&q=yjrj8o&orgtypeId=74&spare1=av9pq4&organCode=17084&orderBy=346&ids=9thsui&ids=9thsui&limit=10&organName=jacquelynn.veum&isOrganWork=lld661&endTime=2025-09-06 00:00:25
 ```
 **Response-fields:**
 
@@ -4776,22 +4776,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 345,
+    "totalCount": 438,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:56",
-        "lastTime": "2025-09-05 15:45:56",
-        "cmsKey": "tm1gmq",
-        "cmsValue": "g10rfs"
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:20",
+        "lastTime": "2025-09-06 00:01:20",
+        "cmsKey": "hxw14c",
+        "cmsValue": "a5u9f4"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4848,7 +4848,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?rgt=658&code=17639&endTime=2025-09-05 15:44:42&countryId=12&parentIds=9vvp4f&parentIds=9vvp4f&areatypeId=12&page=1&searchCode=17639&likeQuery=m2maid&q=29do0d&areatypeIds=2r37n3&areatypeIds=2r37n3&deleteTime=2025-09-05 15:44:42&sname=deloris.schneider&description=n8gqhk&orderBy=861&limit=10&nameTotal=nvza4m&ids=r6x7v8&ids=r6x7v8&startTime=2025-09-05 15:44:42&nameEn=gdjd0j&hasContent=true&isDisplay=true&parentId=658&name=deloris.schneider&delFlag=3&lft=277
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?q=7mbir0&endTime=2025-09-06 00:00:25&areatypeId=74&orderBy=906&limit=10&parentId=758&code=17084&description=y8nva4&countryId=74&searchCode=17084&sname=jacquelynn.veum&rgt=709&parentIds=wbiadh&parentIds=wbiadh&deleteTime=2025-09-06 00:00:25&nameEn=j76zyb&ids=oei6jj&ids=oei6jj&name=jacquelynn.veum&isDisplay=true&startTime=2025-09-06 00:00:25&areatypeIds=lczfsd&areatypeIds=lczfsd&lft=795&likeQuery=rzhavn&hasContent=true&page=1&delFlag=4&nameTotal=x325yx
 ```
 **Response-fields:**
 
@@ -4890,31 +4890,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:56",
-      "lastTime": "2025-09-05 15:45:56",
-      "id": 566,
-      "parentId": 950,
-      "countryId": "12",
-      "areatypeId": "12",
-      "lft": 543,
-      "rgt": 103,
-      "code": "17639",
-      "name": "deloris.schneider",
-      "nameTotal": "ai49mu",
-      "sname": "deloris.schneider",
-      "nameEn": "0roo1h",
-      "searchCode": "17639",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:20",
+      "lastTime": "2025-09-06 00:01:20",
+      "id": 485,
+      "parentId": 409,
+      "countryId": "74",
+      "areatypeId": "74",
+      "lft": 615,
+      "rgt": 208,
+      "code": "17084",
+      "name": "jacquelynn.veum",
+      "nameTotal": "w0ayvf",
+      "sname": "jacquelynn.veum",
+      "nameEn": "q76z2e",
+      "searchCode": "17084",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 505,
-      "delFlag": 3,
-      "deleteTime": "2025-09-05 15:45:56",
-      "description": "x9vjkb"
+      "priority": 445,
+      "delFlag": 4,
+      "deleteTime": "2025-09-06 00:01:20",
+      "description": "rte8lf"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -4970,7 +4970,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'startTime=2025-09-05 15:44:42&q=l2f919&sname=deloris.schneider&nameEn=wpsgc2&rgt=93&hasContent=true&ids=tdo3ot&ids=tdo3ot&endTime=2025-09-05 15:44:42&areatypeId=12&limit=10&nameTotal=8wszct&page=1&deleteTime=2025-09-05 15:44:42&parentIds=f8t1d8&parentIds=f8t1d8&description=gv6dpt&searchCode=17639&isDisplay=true&likeQuery=08j69w&countryId=12&lft=48&areatypeIds=nmm6jm&areatypeIds=nmm6jm&name=deloris.schneider&orderBy=891&parentId=627&delFlag=3&code=17639'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'endTime=2025-09-06 00:00:25&description=mfgh60&code=17084&nameEn=ufdu1q&areatypeIds=rf5gts&areatypeIds=rf5gts&searchCode=17084&startTime=2025-09-06 00:00:25&name=jacquelynn.veum&q=b7z3zv&nameTotal=u330ru&likeQuery=a3xyb7&ids=atwu5l&ids=atwu5l&sname=jacquelynn.veum&lft=414&delFlag=4&deleteTime=2025-09-06 00:00:25&hasContent=true&limit=10&parentId=685&areatypeId=74&countryId=74&page=1&parentIds=6gbj3h&parentIds=6gbj3h&orderBy=326&rgt=124&isDisplay=true'
 ```
 **Response-fields:**
 
@@ -4989,9 +4989,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9i3o07",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "2tiwvw",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5063,30 +5063,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:56",
-    "lastTime": "2025-09-05 15:45:56",
-    "id": 354,
-    "parentId": 873,
-    "countryId": "12",
-    "areatypeId": "12",
-    "lft": 365,
-    "rgt": 448,
-    "code": "17639",
-    "name": "deloris.schneider",
-    "nameTotal": "pit1ua",
-    "sname": "deloris.schneider",
-    "nameEn": "q1tdd1",
-    "searchCode": "17639",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:20",
+    "lastTime": "2025-09-06 00:01:20",
+    "id": 235,
+    "parentId": 113,
+    "countryId": "74",
+    "areatypeId": "74",
+    "lft": 807,
+    "rgt": 235,
+    "code": "17084",
+    "name": "jacquelynn.veum",
+    "nameTotal": "vxhp0s",
+    "sname": "jacquelynn.veum",
+    "nameEn": "uryi1y",
+    "searchCode": "17084",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 112,
-    "delFlag": 3,
-    "deleteTime": "2025-09-05 15:45:56",
-    "description": "2ycbf3"
+    "priority": 577,
+    "delFlag": 4,
+    "deleteTime": "2025-09-06 00:01:20",
+    "description": "zr2sxw"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5140,27 +5140,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:56",
-    "lastTime": "2025-09-05 15:45:56",
-    "id": 760,
-    "parentId": 625,
-    "countryId": "12",
-    "areatypeId": "12",
-    "lft": 543,
-    "rgt": 488,
-    "code": "17639",
-    "name": "deloris.schneider",
-    "nameTotal": "3shuke",
-    "sname": "deloris.schneider",
-    "nameEn": "rm4q7k",
-    "searchCode": "17639",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:20",
+    "lastTime": "2025-09-06 00:01:20",
+    "id": 466,
+    "parentId": 885,
+    "countryId": "74",
+    "areatypeId": "74",
+    "lft": 325,
+    "rgt": 39,
+    "code": "17084",
+    "name": "jacquelynn.veum",
+    "nameTotal": "w33ijs",
+    "sname": "jacquelynn.veum",
+    "nameEn": "eggg9g",
+    "searchCode": "17084",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 356,
-    "delFlag": 3,
-    "deleteTime": "2025-09-05 15:45:56",
-    "description": "5pwvdp"
+    "priority": 267,
+    "delFlag": 4,
+    "deleteTime": "2025-09-06 00:01:20",
+    "description": "5jbmp3"
   }
 }'
 ```
@@ -5181,9 +5181,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x4qye4",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "1zkjqf",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5237,27 +5237,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:56",
-    "lastTime": "2025-09-05 15:45:56",
-    "id": 275,
-    "parentId": 37,
-    "countryId": "12",
-    "areatypeId": "12",
-    "lft": 437,
-    "rgt": 550,
-    "code": "17639",
-    "name": "deloris.schneider",
-    "nameTotal": "bson08",
-    "sname": "deloris.schneider",
-    "nameEn": "shask5",
-    "searchCode": "17639",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:20",
+    "lastTime": "2025-09-06 00:01:20",
+    "id": 857,
+    "parentId": 313,
+    "countryId": "74",
+    "areatypeId": "74",
+    "lft": 390,
+    "rgt": 460,
+    "code": "17084",
+    "name": "jacquelynn.veum",
+    "nameTotal": "b4i79e",
+    "sname": "jacquelynn.veum",
+    "nameEn": "md1rei",
+    "searchCode": "17084",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 674,
-    "delFlag": 3,
-    "deleteTime": "2025-09-05 15:45:56",
-    "description": "8zwnmj"
+    "priority": 921,
+    "delFlag": 4,
+    "deleteTime": "2025-09-06 00:01:20",
+    "description": "hi3rud"
   }
 }'
 ```
@@ -5278,9 +5278,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "un4wkn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "akoq6b",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5330,9 +5330,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uuf9lz",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "i363p7",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5396,7 +5396,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?isDisabled=true&startTime=2025-09-05 15:44:42&confLimit=10&aesIvKey=yknnee&inoutMode=584&appId=12&serverType=917r6r&isAdmin=true&endTime=2025-09-05 15:44:42&spare2=tb2i0z&serverUrl=www.lynn-stehr.co&clientId=12&cname=deloris.schneider&organName=deloris.schneider&q=685m68&limit=10&serverConf3=hexst4&status=968&serverConf1=erpw94&page=1&currCount=888&organId=12&aesKey=olt1nc&id=12&orderBy=140&type=971&name=deloris.schneider&description=k2rfwi&spare1=1tddbg&serverIp=188.87.89.33&serverConf2=672yja&clientSecret=92qbhd&isSingle=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?clientSecret=8p3e43&status=306&name=jacquelynn.veum&endTime=2025-09-06 00:00:25&spare1=s5fi8f&id=74&isAdmin=true&organName=jacquelynn.veum&aesKey=gfpflo&q=wuhp7r&limit=10&aesIvKey=an45vs&startTime=2025-09-06 00:00:25&serverConf2=rz5szg&organId=74&serverUrl=www.gonzalo-smith.com&isSingle=true&cname=jacquelynn.veum&serverConf3=cwzhsb&orderBy=826&serverIp=97.63.215.106&appId=74&type=422&page=1&spare2=chcc2x&clientId=74&serverType=pfbg4l&description=50r4yo&confLimit=10&serverConf1=tw7thp&currCount=726&inoutMode=666&isDisabled=true
 ```
 **Response-fields:**
 
@@ -5452,45 +5452,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:59",
-      "lastTime": "2025-09-05 15:45:59",
-      "id": "12",
-      "organId": "12",
-      "appId": "12",
-      "organName": "deloris.schneider",
-      "inoutMode": 941,
-      "name": "deloris.schneider",
-      "cname": "deloris.schneider",
-      "type": 868,
-      "clientId": "12",
-      "clientSecret": "pp2mzm",
-      "aesKey": "183u4z",
-      "aesIvKey": "vhss76",
-      "serverIp": "188.87.89.33",
-      "serverType": "cl7dch",
-      "serverUrl": "www.lynn-stehr.co",
-      "serverConf1": "ffz8ci",
-      "serverConf2": "j8rlbs",
-      "serverConf3": "t5p661",
-      "currCount": 31,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:22",
+      "lastTime": "2025-09-06 00:01:22",
+      "id": "74",
+      "organId": "74",
+      "appId": "74",
+      "organName": "jacquelynn.veum",
+      "inoutMode": 132,
+      "name": "jacquelynn.veum",
+      "cname": "jacquelynn.veum",
+      "type": 82,
+      "clientId": "74",
+      "clientSecret": "u9hrej",
+      "aesKey": "2rw0uw",
+      "aesIvKey": "vmax8a",
+      "serverIp": "97.63.215.106",
+      "serverType": "5t9snj",
+      "serverUrl": "www.gonzalo-smith.com",
+      "serverConf1": "iz567w",
+      "serverConf2": "szbrmr",
+      "serverConf3": "sexqf3",
+      "currCount": 624,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 454,
-      "description": "f43gog",
-      "spare1": "x4nxd1",
-      "spare2": "nlf3c7",
-      "inOrganName": "deloris.schneider",
-      "userName": "deloris.schneider",
-      "appName": "deloris.schneider",
-      "inoutModeName": "deloris.schneider",
-      "typeName": "deloris.schneider"
+      "status": 628,
+      "description": "zowy6y",
+      "spare1": "7y82cc",
+      "spare2": "x3hhau",
+      "inOrganName": "jacquelynn.veum",
+      "userName": "jacquelynn.veum",
+      "appName": "jacquelynn.veum",
+      "inoutModeName": "jacquelynn.veum",
+      "typeName": "jacquelynn.veum"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5521,7 +5521,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=74
 ```
 **Response-fields:**
 
@@ -5577,45 +5577,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:59",
-      "lastTime": "2025-09-05 15:45:59",
-      "id": "12",
-      "organId": "12",
-      "appId": "12",
-      "organName": "deloris.schneider",
-      "inoutMode": 933,
-      "name": "deloris.schneider",
-      "cname": "deloris.schneider",
-      "type": 217,
-      "clientId": "12",
-      "clientSecret": "kx09gz",
-      "aesKey": "29d92s",
-      "aesIvKey": "9uy608",
-      "serverIp": "188.87.89.33",
-      "serverType": "0uxbpc",
-      "serverUrl": "www.lynn-stehr.co",
-      "serverConf1": "vuh1ju",
-      "serverConf2": "gl9b44",
-      "serverConf3": "t2afxh",
-      "currCount": 563,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:22",
+      "lastTime": "2025-09-06 00:01:22",
+      "id": "74",
+      "organId": "74",
+      "appId": "74",
+      "organName": "jacquelynn.veum",
+      "inoutMode": 324,
+      "name": "jacquelynn.veum",
+      "cname": "jacquelynn.veum",
+      "type": 395,
+      "clientId": "74",
+      "clientSecret": "aqizex",
+      "aesKey": "dn6hqp",
+      "aesIvKey": "gv6qc1",
+      "serverIp": "97.63.215.106",
+      "serverType": "24c27g",
+      "serverUrl": "www.gonzalo-smith.com",
+      "serverConf1": "vw1ylb",
+      "serverConf2": "9cbb0h",
+      "serverConf3": "ue2anw",
+      "currCount": 690,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 90,
-      "description": "ovy1mk",
-      "spare1": "2xz0xc",
-      "spare2": "e07s45",
-      "inOrganName": "deloris.schneider",
-      "userName": "deloris.schneider",
-      "appName": "deloris.schneider",
-      "inoutModeName": "deloris.schneider",
-      "typeName": "deloris.schneider"
+      "status": 22,
+      "description": "a0m944",
+      "spare1": "0nk28j",
+      "spare2": "k1uf23",
+      "inOrganName": "jacquelynn.veum",
+      "userName": "jacquelynn.veum",
+      "appName": "jacquelynn.veum",
+      "inoutModeName": "jacquelynn.veum",
+      "typeName": "jacquelynn.veum"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5646,7 +5646,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=74
 ```
 **Response-fields:**
 
@@ -5702,45 +5702,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:59",
-      "lastTime": "2025-09-05 15:45:59",
-      "id": "12",
-      "organId": "12",
-      "appId": "12",
-      "organName": "deloris.schneider",
-      "inoutMode": 773,
-      "name": "deloris.schneider",
-      "cname": "deloris.schneider",
-      "type": 673,
-      "clientId": "12",
-      "clientSecret": "g6s7jv",
-      "aesKey": "4fonev",
-      "aesIvKey": "0ttng2",
-      "serverIp": "188.87.89.33",
-      "serverType": "ws9el4",
-      "serverUrl": "www.lynn-stehr.co",
-      "serverConf1": "up3thd",
-      "serverConf2": "y5zjpb",
-      "serverConf3": "jzyqnl",
-      "currCount": 670,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:22",
+      "lastTime": "2025-09-06 00:01:22",
+      "id": "74",
+      "organId": "74",
+      "appId": "74",
+      "organName": "jacquelynn.veum",
+      "inoutMode": 510,
+      "name": "jacquelynn.veum",
+      "cname": "jacquelynn.veum",
+      "type": 600,
+      "clientId": "74",
+      "clientSecret": "tpcujx",
+      "aesKey": "dxlo70",
+      "aesIvKey": "0hg3mo",
+      "serverIp": "97.63.215.106",
+      "serverType": "wqaern",
+      "serverUrl": "www.gonzalo-smith.com",
+      "serverConf1": "p7jhp4",
+      "serverConf2": "tz4tn7",
+      "serverConf3": "8rcbjg",
+      "currCount": 767,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 229,
-      "description": "45268l",
-      "spare1": "w6dz5i",
-      "spare2": "bdwvnh",
-      "inOrganName": "deloris.schneider",
-      "userName": "deloris.schneider",
-      "appName": "deloris.schneider",
-      "inoutModeName": "deloris.schneider",
-      "typeName": "deloris.schneider"
+      "status": 495,
+      "description": "iot3x0",
+      "spare1": "49qess",
+      "spare2": "uvd0s9",
+      "inOrganName": "jacquelynn.veum",
+      "userName": "jacquelynn.veum",
+      "appName": "jacquelynn.veum",
+      "inoutModeName": "jacquelynn.veum",
+      "typeName": "jacquelynn.veum"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5816,7 +5816,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"12","timestamp":"2025-09-05 15:44:42"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"74","timestamp":"2025-09-06 00:00:25"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5859,9 +5859,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2py17g",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "qf10oz",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5905,9 +5905,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b2izyk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "5hf44v",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -5957,9 +5957,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xurlux",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "i6qsvp",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6000,7 +6000,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?orderBy=816&wlType=n25y04&organId=12&organName=deloris.schneider&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&delFlag=3&q=ybo56d&limit=10&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?page=1&q=x78ymu&startTime=2025-09-06 00:00:25&endTime=2025-09-06 00:00:25&organId=74&organName=jacquelynn.veum&limit=10&orderBy=907&delFlag=4&wlType=ss7j5u
 ```
 **Response-fields:**
 
@@ -6039,28 +6039,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "sc5whw"
+        "gptw2c"
       ],
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "organSName": "deloris.schneider",
-      "organCode": "17639",
-      "address": "57393 Madeleine Manor， Lake Dottie， MN 33706",
-      "wlType": "shs90b",
-      "wlTypeName": "deloris.schneider",
-      "priority": 685,
-      "delFlag": 3,
-      "createTime": "2025-09-05 15:45:57",
-      "lastTime": "2025-09-05 15:45:57",
-      "contactName": "deloris.schneider",
-      "contactEmail": "ralph.kerluke@hotmail.com",
-      "contactMobile": "(682) 505-7451",
-      "description": "zf8xrn",
-      "tel": "cp2ifp"
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "organSName": "jacquelynn.veum",
+      "organCode": "17084",
+      "address": "1749 Franecki Village， Lemkemouth， ME 48113-0694",
+      "wlType": "85qr7t",
+      "wlTypeName": "jacquelynn.veum",
+      "priority": 295,
+      "delFlag": 4,
+      "createTime": "2025-09-06 00:01:21",
+      "lastTime": "2025-09-06 00:01:21",
+      "contactName": "jacquelynn.veum",
+      "contactEmail": "jake.kunze@gmail.com",
+      "contactMobile": "1-484-863-9255",
+      "description": "hkq18i",
+      "tel": "u2ne31"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6129,27 +6129,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "i845k0"
+      "lsop2o"
     ],
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "organSName": "deloris.schneider",
-    "organCode": "17639",
-    "address": "57393 Madeleine Manor， Lake Dottie， MN 33706",
-    "wlType": "vgze5b",
-    "wlTypeName": "deloris.schneider",
-    "priority": 178,
-    "delFlag": 3,
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "contactName": "deloris.schneider",
-    "contactEmail": "ralph.kerluke@hotmail.com",
-    "contactMobile": "(682) 505-7451",
-    "description": "bcx76u",
-    "tel": "nm72zc"
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "organSName": "jacquelynn.veum",
+    "organCode": "17084",
+    "address": "1749 Franecki Village， Lemkemouth， ME 48113-0694",
+    "wlType": "lqtt8t",
+    "wlTypeName": "jacquelynn.veum",
+    "priority": 2,
+    "delFlag": 4,
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "contactName": "jacquelynn.veum",
+    "contactEmail": "jake.kunze@gmail.com",
+    "contactMobile": "1-484-863-9255",
+    "description": "ig8550",
+    "tel": "dauz9l"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6200,24 +6200,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "otdylg"
+      "h00plb"
     ],
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "organSName": "deloris.schneider",
-    "organCode": "17639",
-    "address": "57393 Madeleine Manor， Lake Dottie， MN 33706",
-    "wlType": "935hmo",
-    "wlTypeName": "deloris.schneider",
-    "priority": 555,
-    "delFlag": 3,
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "contactName": "deloris.schneider",
-    "contactEmail": "ralph.kerluke@hotmail.com",
-    "contactMobile": "(682) 505-7451",
-    "description": "0qck76",
-    "tel": "2tmfye"
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "organSName": "jacquelynn.veum",
+    "organCode": "17084",
+    "address": "1749 Franecki Village， Lemkemouth， ME 48113-0694",
+    "wlType": "ty0epr",
+    "wlTypeName": "jacquelynn.veum",
+    "priority": 608,
+    "delFlag": 4,
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "contactName": "jacquelynn.veum",
+    "contactEmail": "jake.kunze@gmail.com",
+    "contactMobile": "1-484-863-9255",
+    "description": "5w4wz4",
+    "tel": "k38y68"
   }
 }'
 ```
@@ -6238,9 +6238,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fi0g99",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "d4po6o",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6291,24 +6291,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "zpa11g"
+      "pgesdd"
     ],
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "organSName": "deloris.schneider",
-    "organCode": "17639",
-    "address": "57393 Madeleine Manor， Lake Dottie， MN 33706",
-    "wlType": "bxf243",
-    "wlTypeName": "deloris.schneider",
-    "priority": 597,
-    "delFlag": 3,
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "contactName": "deloris.schneider",
-    "contactEmail": "ralph.kerluke@hotmail.com",
-    "contactMobile": "(682) 505-7451",
-    "description": "6uy2q2",
-    "tel": "qopu7z"
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "organSName": "jacquelynn.veum",
+    "organCode": "17084",
+    "address": "1749 Franecki Village， Lemkemouth， ME 48113-0694",
+    "wlType": "b4dmrm",
+    "wlTypeName": "jacquelynn.veum",
+    "priority": 755,
+    "delFlag": 4,
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "contactName": "jacquelynn.veum",
+    "contactEmail": "jake.kunze@gmail.com",
+    "contactMobile": "1-484-863-9255",
+    "description": "xn6h8o",
+    "tel": "98403v"
   }
 }'
 ```
@@ -6329,9 +6329,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qfpgny",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "o7eqto",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6381,9 +6381,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g0gi9s",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "bnj0tc",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6434,24 +6434,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "i7rycx"
+      "rkyoci"
     ],
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "organSName": "deloris.schneider",
-    "organCode": "17639",
-    "address": "57393 Madeleine Manor， Lake Dottie， MN 33706",
-    "wlType": "tsf2fb",
-    "wlTypeName": "deloris.schneider",
-    "priority": 285,
-    "delFlag": 3,
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "contactName": "deloris.schneider",
-    "contactEmail": "ralph.kerluke@hotmail.com",
-    "contactMobile": "(682) 505-7451",
-    "description": "gq04r0",
-    "tel": "ht5t6s"
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "organSName": "jacquelynn.veum",
+    "organCode": "17084",
+    "address": "1749 Franecki Village， Lemkemouth， ME 48113-0694",
+    "wlType": "5x82jk",
+    "wlTypeName": "jacquelynn.veum",
+    "priority": 152,
+    "delFlag": 4,
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "contactName": "jacquelynn.veum",
+    "contactEmail": "jake.kunze@gmail.com",
+    "contactMobile": "1-484-863-9255",
+    "description": "tg83g7",
+    "tel": "25j598"
   }
 }'
 ```
@@ -6472,9 +6472,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wj7xzn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "s7kj0s",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6515,7 +6515,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&orderBy=47&name=deloris.schneider&delFlag=3&startTime=2025-09-05 15:44:42&limit=10&q=1zeoua&endTime=2025-09-05 15:44:42&description=qwqbb2&sname=deloris.schneider
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?limit=10&endTime=2025-09-06 00:00:25&name=jacquelynn.veum&orderBy=888&sname=jacquelynn.veum&q=6xlwus&startTime=2025-09-06 00:00:25&delFlag=4&page=1&description=imklqh
 ```
 **Response-fields:**
 
@@ -6545,19 +6545,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:57",
-      "lastTime": "2025-09-05 15:45:57",
-      "id": "12",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "priority": 487,
-      "delFlag": 3,
-      "description": "8ustxd"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:21",
+      "lastTime": "2025-09-06 00:01:21",
+      "id": "74",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "priority": 536,
+      "delFlag": 4,
+      "description": "mg9cqn"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6597,7 +6597,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'limit=10&name=deloris.schneider&delFlag=3&page=1&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&orderBy=27&description=shyp0y&q=zx85m9&sname=deloris.schneider'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'page=1&limit=10&delFlag=4&orderBy=73&startTime=2025-09-06 00:00:25&sname=jacquelynn.veum&q=56wtq8&description=urmzld&name=jacquelynn.veum&endTime=2025-09-06 00:00:25'
 ```
 **Response-fields:**
 
@@ -6616,9 +6616,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jmt5zo",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "zox9te",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6678,18 +6678,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "id": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "priority": 787,
-    "delFlag": 3,
-    "description": "avkgxt"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "priority": 231,
+    "delFlag": 4,
+    "description": "sj4mfd"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6731,15 +6731,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "id": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "priority": 166,
-    "delFlag": 3,
-    "description": "fgr38s"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "priority": 717,
+    "delFlag": 4,
+    "description": "xga4ks"
   }
 }'
 ```
@@ -6760,9 +6760,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mh90uv",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "89ng4a",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6804,15 +6804,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "id": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "priority": 135,
-    "delFlag": 3,
-    "description": "jqerzh"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "priority": 586,
+    "delFlag": 4,
+    "description": "kligjo"
   }
 }'
 ```
@@ -6833,9 +6833,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1vvhxh",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "uint7l",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6885,9 +6885,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1fqwng",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "9357tq",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -6930,7 +6930,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?orderBy=182&existKey=ki96pb&page=1&q=5m6f0g&delFlag=3&name=deloris.schneider&limit=10&code=17639&description=1pnqyx&type=zny9hh&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?existKey=lt1ite&type=w0cel8&page=1&code=17084&orderBy=901&description=6zie75&endTime=2025-09-06 00:00:25&q=cf0lme&startTime=2025-09-06 00:00:25&limit=10&delFlag=4&name=jacquelynn.veum
 ```
 **Response-fields:**
 
@@ -6961,20 +6961,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:57",
-      "lastTime": "2025-09-05 15:45:57",
-      "id": "12",
-      "name": "deloris.schneider",
-      "type": "kf5r5t",
-      "code": "17639",
-      "priority": 102,
-      "delFlag": 3,
-      "description": "eo01by"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:21",
+      "lastTime": "2025-09-06 00:01:21",
+      "id": "74",
+      "name": "jacquelynn.veum",
+      "type": "390kdg",
+      "code": "17084",
+      "priority": 352,
+      "delFlag": 4,
+      "description": "80kyrr"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7016,7 +7016,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'q=svwr8h&type=nnbp2n&name=deloris.schneider&orderBy=333&code=17639&delFlag=3&startTime=2025-09-05 15:44:42&endTime=2025-09-05 15:44:42&existKey=oqn9c9&limit=10&description=k188t7&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'name=jacquelynn.veum&q=bm0teb&delFlag=4&orderBy=653&endTime=2025-09-06 00:00:25&existKey=3hs7k0&page=1&startTime=2025-09-06 00:00:25&code=17084&type=pi5oa2&limit=10&description=kjd3iw'
 ```
 **Response-fields:**
 
@@ -7035,9 +7035,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u6kukc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "b8qu7l",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7098,19 +7098,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "id": "12",
-    "name": "deloris.schneider",
-    "type": "x3a9yv",
-    "code": "17639",
-    "priority": 985,
-    "delFlag": 3,
-    "description": "wwfc0l"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "type": "kn1whn",
+    "code": "17084",
+    "priority": 904,
+    "delFlag": 4,
+    "description": "ngebal"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7153,16 +7153,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:57",
-    "lastTime": "2025-09-05 15:45:57",
-    "id": "12",
-    "name": "deloris.schneider",
-    "type": "7jciwg",
-    "code": "17639",
-    "priority": 661,
-    "delFlag": 3,
-    "description": "wpjxie"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "type": "nci5bd",
+    "code": "17084",
+    "priority": 444,
+    "delFlag": 4,
+    "description": "lvcxlq"
   }
 }'
 ```
@@ -7183,9 +7183,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h7fanv",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "ohbr1i",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7228,16 +7228,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:58",
-    "lastTime": "2025-09-05 15:45:58",
-    "id": "12",
-    "name": "deloris.schneider",
-    "type": "lacn6t",
-    "code": "17639",
-    "priority": 284,
-    "delFlag": 3,
-    "description": "joo79v"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:21",
+    "lastTime": "2025-09-06 00:01:21",
+    "id": "74",
+    "name": "jacquelynn.veum",
+    "type": "dj2zgf",
+    "code": "17084",
+    "priority": 104,
+    "delFlag": 4,
+    "description": "fsw07t"
   }
 }'
 ```
@@ -7258,9 +7258,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lj7qqp",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "6z1do0",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7310,9 +7310,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dws6jy",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "o9jkrd",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7358,7 +7358,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?refId=12&limit=10&orderBy=133&startTime=2025-09-05 15:44:42&fileIsvalid=true&refType=gli30y&key=5si1cf&endTime=2025-09-05 15:44:42&page=1&resclassId=12&fileSize=817&fileExtension=lno14t&fileName=deloris.schneider&q=4tr569&appId=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?startTime=2025-09-06 00:00:25&fileName=jacquelynn.veum&fileIsvalid=true&fileExtension=hjwfrz&endTime=2025-09-06 00:00:25&resclassId=74&q=1tybyr&refType=nemwq9&fileSize=483&key=rm9559&page=1&orderBy=799&appId=74&refId=74&limit=10
 ```
 **Response-fields:**
 
@@ -7390,26 +7390,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 78,
+    "totalCount": 822,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "12",
-        "resclassId": "12",
-        "fileName": "deloris.schneider",
+        "id": "74",
+        "resclassId": "74",
+        "fileName": "jacquelynn.veum",
         "fileIsvalid": true,
-        "createTime": "2025-09-05 15:45:56",
-        "fileExtension": "k7uui7",
+        "createTime": "2025-09-06 00:01:20",
+        "fileExtension": "pe7xsf",
         "ids": [
-          "fpfwky"
+          "5to3jh"
         ]
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7454,7 +7454,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'resclassId=12&appId=12&fileSize=573&fileExtension=url8vf&key=6wplpq&startTime=2025-09-05 15:44:42&fileName=deloris.schneider&orderBy=531&limit=10&refId=12&endTime=2025-09-05 15:44:42&q=0m75t7&page=1&fileIsvalid=true&refType=0vo018'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'startTime=2025-09-06 00:00:25&appId=74&key=gdoyja&orderBy=302&fileSize=803&q=sw5d7v&endTime=2025-09-06 00:00:25&resclassId=74&refId=74&refType=clyrwx&fileIsvalid=true&fileExtension=057oew&fileName=jacquelynn.veum&page=1&limit=10'
 ```
 **Response-fields:**
 
@@ -7473,9 +7473,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h2bb57",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "sa2b0y",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7506,7 +7506,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=74
 ```
 **Response-fields:**
 
@@ -7533,18 +7533,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "12",
-    "resclassId": "12",
-    "fileName": "deloris.schneider",
+    "id": "74",
+    "resclassId": "74",
+    "fileName": "jacquelynn.veum",
     "fileIsvalid": true,
-    "createTime": "2025-09-05 15:45:56",
-    "fileExtension": "1nnzqs",
+    "createTime": "2025-09-06 00:01:20",
+    "fileExtension": "ru0su9",
     "ids": [
-      "kagbj7"
+      "vp9c8a"
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7584,14 +7584,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "12",
-    "resclassId": "12",
-    "fileName": "deloris.schneider",
+    "id": "74",
+    "resclassId": "74",
+    "fileName": "jacquelynn.veum",
     "fileIsvalid": true,
-    "createTime": "2025-09-05 15:45:56",
-    "fileExtension": "uadjkg",
+    "createTime": "2025-09-06 00:01:20",
+    "fileExtension": "m91w78",
     "ids": [
-      "vzil3h"
+      "74hvtm"
     ]
   }
 }'
@@ -7613,9 +7613,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oegy09",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "1i202y",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7655,14 +7655,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "12",
-    "resclassId": "12",
-    "fileName": "deloris.schneider",
+    "id": "74",
+    "resclassId": "74",
+    "fileName": "jacquelynn.veum",
     "fileIsvalid": true,
-    "createTime": "2025-09-05 15:45:56",
-    "fileExtension": "cjyk5s",
+    "createTime": "2025-09-06 00:01:20",
+    "fileExtension": "c6mug9",
     "ids": [
-      "agkpmt"
+      "dk6y5t"
     ]
   }
 }'
@@ -7684,9 +7684,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c0rvfn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "idu7z3",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7726,14 +7726,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "12",
-    "resclassId": "12",
-    "fileName": "deloris.schneider",
+    "id": "74",
+    "resclassId": "74",
+    "fileName": "jacquelynn.veum",
     "fileIsvalid": true,
-    "createTime": "2025-09-05 15:45:56",
-    "fileExtension": "jdhy8b",
+    "createTime": "2025-09-06 00:01:20",
+    "fileExtension": "p8kicx",
     "ids": [
-      "pg9k60"
+      "jxjt4q"
     ]
   }
 }'
@@ -7755,9 +7755,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uudvg2",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "1hos50",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7801,9 +7801,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kfxtl6",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "u6xxcf",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7835,7 +7835,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=deloris.schneider&delete=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?delete=true&fileName=jacquelynn.veum
 ```
 **Response-fields:**
 
@@ -7854,9 +7854,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3u36jx",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "7yhllu",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7907,15 +7907,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "deloris.schneider",
-    "filename": "deloris.schneider",
-    "fileType": "s9tfvh",
-    "fileUrl": "www.lynn-stehr.co",
-    "fileHttpUrl": "www.lynn-stehr.co",
-    "statusCode": "17639"
+    "originFilename": "jacquelynn.veum",
+    "filename": "jacquelynn.veum",
+    "fileType": "u6cpuw",
+    "fileUrl": "www.gonzalo-smith.com",
+    "fileHttpUrl": "www.gonzalo-smith.com",
+    "statusCode": "17084"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -7973,16 +7973,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "deloris.schneider",
-      "filename": "deloris.schneider",
-      "fileType": "m0kdem",
-      "fileUrl": "www.lynn-stehr.co",
-      "fileHttpUrl": "www.lynn-stehr.co",
-      "statusCode": "17639"
+      "originFilename": "jacquelynn.veum",
+      "filename": "jacquelynn.veum",
+      "fileType": "vpdvts",
+      "fileUrl": "www.gonzalo-smith.com",
+      "fileHttpUrl": "www.gonzalo-smith.com",
+      "statusCode": "17084"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8013,7 +8013,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=d7f144
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=7jvcno
 ```
 **Response-fields:**
 
@@ -8032,9 +8032,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8vmm0q",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "l7v833",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8081,7 +8081,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?keyWords=c61g60&limit=10&type=wtb6b0&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&status=810&page=1&appId=12&q=n82ef3&organId=12&orderBy=651&positionId=12&roleTypeId=12&areaId=547&batchId=12&groupId=4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?q=ewo2h1&limit=10&page=1&roleTypeId=74&orderBy=371&positionId=74&areaId=653&endTime=2025-09-06 00:00:25&batchId=74&keyWords=357vfj&appId=74&type=1tcs9p&status=720&groupId=92&startTime=2025-09-06 00:00:25&organId=74
 ```
 **Response-fields:**
 
@@ -8155,66 +8155,66 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 75,
+    "totalCount": 784,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:53",
-        "lastTime": "2025-09-05 15:45:53",
-        "id": 622,
-        "appId": "12",
-        "saveSource": "ds9byz",
-        "unitName": "deloris.schneider",
-        "name": "deloris.schneider",
-        "idNum": "59j8ag",
-        "duty": "qn2jn3",
-        "telephone": "(947) 586-4732",
-        "mobile": "(682) 505-7451",
-        "extInfo1": "bt1noj",
-        "extInfo2": "tw2nnc",
-        "extInfo3": "bvmizr",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:17",
+        "lastTime": "2025-09-06 00:01:17",
+        "id": 903,
+        "appId": "74",
+        "saveSource": "28we40",
+        "unitName": "jacquelynn.veum",
+        "name": "jacquelynn.veum",
+        "idNum": "qvbrzg",
+        "duty": "jiwejl",
+        "telephone": "1-814-818-6088",
+        "mobile": "1-484-863-9255",
+        "extInfo1": "55z7i0",
+        "extInfo2": "u62gvo",
+        "extInfo3": "gioii1",
         "needInitUser": true,
-        "userId": "12",
+        "userId": "74",
         "needInitOrgan": true,
-        "organId": "12",
-        "type": "murrak",
-        "foreignUrl": "www.lynn-stehr.co",
-        "bizType": 325,
-        "bizOrganId": "12",
-        "bizAreaId": 951,
-        "bizGroupId": 602,
-        "bizPower": "ldbenw",
-        "bizMultiInfo": "c3vo12",
+        "organId": "74",
+        "type": "wnv8fs",
+        "foreignUrl": "www.gonzalo-smith.com",
+        "bizType": 12,
+        "bizOrganId": "74",
+        "bizAreaId": 322,
+        "bizGroupId": 345,
+        "bizPower": "s597zo",
+        "bizMultiInfo": "4hq26c",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "12",
-        "opOrganId": "12",
-        "opTime": "2025-09-05 15:45:53",
-        "opInfo": "sb0nl8",
-        "priority": 771,
-        "status": 693,
-        "delFlag": 3,
-        "dataBatch": "vsuffm",
-        "dataVersion": 851,
-        "updateTime": "2025-09-05 15:45:53",
-        "syncMode": "ypxv4n",
-        "syncTime": "2025-09-05 15:45:53",
-        "description": "xoirq7",
-        "groupName": "deloris.schneider",
-        "positionName": "deloris.schneider",
-        "bizPowerName": "deloris.schneider",
-        "subdistrictName": "deloris.schneider",
-        "communityName": "deloris.schneider"
+        "opUserId": "74",
+        "opOrganId": "74",
+        "opTime": "2025-09-06 00:01:17",
+        "opInfo": "mn3xko",
+        "priority": 755,
+        "status": 636,
+        "delFlag": 4,
+        "dataBatch": "10wyq0",
+        "dataVersion": 185,
+        "updateTime": "2025-09-06 00:01:17",
+        "syncMode": "cxtauj",
+        "syncTime": "2025-09-06 00:01:17",
+        "description": "vpd1y8",
+        "groupName": "jacquelynn.veum",
+        "positionName": "jacquelynn.veum",
+        "bizPowerName": "jacquelynn.veum",
+        "subdistrictName": "jacquelynn.veum",
+        "communityName": "jacquelynn.veum"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8260,7 +8260,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'endTime=2025-09-05 15:44:42&keyWords=9soma6&batchId=12&areaId=811&appId=12&startTime=2025-09-05 15:44:42&type=fny1hh&roleTypeId=12&q=gj1vjd&groupId=394&status=211&orderBy=754&page=1&positionId=12&limit=10&organId=12'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'q=tj5p2f&endTime=2025-09-06 00:00:25&type=cgufy4&limit=10&appId=74&orderBy=589&areaId=85&keyWords=gx88je&roleTypeId=74&page=1&groupId=949&organId=74&startTime=2025-09-06 00:00:25&batchId=74&positionId=74&status=985'
 ```
 **Response-fields:**
 
@@ -8279,9 +8279,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lia8hy",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "9kl1fo",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8312,7 +8312,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/144.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/599.do
 ```
 **Response-fields:**
 
@@ -8381,58 +8381,58 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": 598,
-    "appId": "12",
-    "saveSource": "1w1rks",
-    "unitName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "idNum": "c4uz18",
-    "duty": "wvdrgv",
-    "telephone": "(947) 586-4732",
-    "mobile": "(682) 505-7451",
-    "extInfo1": "pst3ob",
-    "extInfo2": "i28qp6",
-    "extInfo3": "wbo18s",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "id": 388,
+    "appId": "74",
+    "saveSource": "m8ajs7",
+    "unitName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "idNum": "2zv4nh",
+    "duty": "yey4jw",
+    "telephone": "1-814-818-6088",
+    "mobile": "1-484-863-9255",
+    "extInfo1": "56iwrj",
+    "extInfo2": "ldi9dz",
+    "extInfo3": "ri3jx9",
     "needInitUser": true,
-    "userId": "12",
+    "userId": "74",
     "needInitOrgan": true,
-    "organId": "12",
-    "type": "09p6rv",
-    "foreignUrl": "www.lynn-stehr.co",
-    "bizType": 525,
-    "bizOrganId": "12",
-    "bizAreaId": 646,
-    "bizGroupId": 862,
-    "bizPower": "h1kdwx",
-    "bizMultiInfo": "g9gt6k",
+    "organId": "74",
+    "type": "isszss",
+    "foreignUrl": "www.gonzalo-smith.com",
+    "bizType": 656,
+    "bizOrganId": "74",
+    "bizAreaId": 760,
+    "bizGroupId": 718,
+    "bizPower": "xdckb1",
+    "bizMultiInfo": "hpabzx",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "12",
-    "opOrganId": "12",
-    "opTime": "2025-09-05 15:45:53",
-    "opInfo": "fee09r",
-    "priority": 856,
-    "status": 816,
-    "delFlag": 3,
-    "dataBatch": "batq8j",
-    "dataVersion": 135,
-    "updateTime": "2025-09-05 15:45:53",
-    "syncMode": "fl2mvm",
-    "syncTime": "2025-09-05 15:45:53",
-    "description": "wfssyr",
-    "groupName": "deloris.schneider",
-    "positionName": "deloris.schneider",
-    "bizPowerName": "deloris.schneider",
-    "subdistrictName": "deloris.schneider",
-    "communityName": "deloris.schneider"
+    "opUserId": "74",
+    "opOrganId": "74",
+    "opTime": "2025-09-06 00:01:17",
+    "opInfo": "akornz",
+    "priority": 125,
+    "status": 395,
+    "delFlag": 4,
+    "dataBatch": "c78zwd",
+    "dataVersion": 66,
+    "updateTime": "2025-09-06 00:01:17",
+    "syncMode": "sngw77",
+    "syncTime": "2025-09-06 00:01:17",
+    "description": "s7h6t4",
+    "groupName": "jacquelynn.veum",
+    "positionName": "jacquelynn.veum",
+    "bizPowerName": "jacquelynn.veum",
+    "subdistrictName": "jacquelynn.veum",
+    "communityName": "jacquelynn.veum"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8509,50 +8509,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": 533,
-    "appId": "12",
-    "saveSource": "0ysdcn",
-    "unitName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "idNum": "w0upo4",
-    "duty": "ve8hlb",
-    "telephone": "(947) 586-4732",
-    "mobile": "(682) 505-7451",
-    "extInfo1": "xtc0f6",
-    "extInfo2": "209qtr",
-    "extInfo3": "su6qxg",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "id": 377,
+    "appId": "74",
+    "saveSource": "pf7gjd",
+    "unitName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "idNum": "93wb31",
+    "duty": "drb0z8",
+    "telephone": "1-814-818-6088",
+    "mobile": "1-484-863-9255",
+    "extInfo1": "a5rqtn",
+    "extInfo2": "nxw1ic",
+    "extInfo3": "iskldj",
     "needInitUser": true,
-    "userId": "12",
+    "userId": "74",
     "needInitOrgan": true,
-    "organId": "12",
-    "type": "fwic6v",
-    "foreignUrl": "www.lynn-stehr.co",
-    "bizType": 506,
-    "bizOrganId": "12",
-    "bizAreaId": 144,
-    "bizGroupId": 480,
-    "bizPower": "zmd8a6",
-    "bizMultiInfo": "46tle4",
+    "organId": "74",
+    "type": "vgngr1",
+    "foreignUrl": "www.gonzalo-smith.com",
+    "bizType": 961,
+    "bizOrganId": "74",
+    "bizAreaId": 426,
+    "bizGroupId": 542,
+    "bizPower": "j6q1zt",
+    "bizMultiInfo": "0pmzfq",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "12",
-    "opOrganId": "12",
-    "opTime": "2025-09-05 15:45:53",
-    "opInfo": "f9woo3",
-    "priority": 914,
-    "status": 197,
-    "delFlag": 3,
-    "dataBatch": "xctivl",
-    "dataVersion": 696,
-    "updateTime": "2025-09-05 15:45:53",
-    "syncMode": "0pyvu4",
-    "syncTime": "2025-09-05 15:45:53",
-    "description": "fb9hvk"
+    "opUserId": "74",
+    "opOrganId": "74",
+    "opTime": "2025-09-06 00:01:17",
+    "opInfo": "mhnz8m",
+    "priority": 578,
+    "status": 609,
+    "delFlag": 4,
+    "dataBatch": "8izo6b",
+    "dataVersion": 770,
+    "updateTime": "2025-09-06 00:01:17",
+    "syncMode": "fiattj",
+    "syncTime": "2025-09-06 00:01:17",
+    "description": "c0ewx3"
   }
 }'
 ```
@@ -8573,9 +8573,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rbe5jj",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "rc12cm",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8652,50 +8652,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": 517,
-    "appId": "12",
-    "saveSource": "sj1w9s",
-    "unitName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "idNum": "5seeda",
-    "duty": "husxej",
-    "telephone": "(947) 586-4732",
-    "mobile": "(682) 505-7451",
-    "extInfo1": "y7h25h",
-    "extInfo2": "bopy9x",
-    "extInfo3": "td9o8z",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "id": 352,
+    "appId": "74",
+    "saveSource": "eb2h84",
+    "unitName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "idNum": "f82w3i",
+    "duty": "2opztm",
+    "telephone": "1-814-818-6088",
+    "mobile": "1-484-863-9255",
+    "extInfo1": "07l9vi",
+    "extInfo2": "94eq78",
+    "extInfo3": "kibtgb",
     "needInitUser": true,
-    "userId": "12",
+    "userId": "74",
     "needInitOrgan": true,
-    "organId": "12",
-    "type": "1jzdj3",
-    "foreignUrl": "www.lynn-stehr.co",
-    "bizType": 322,
-    "bizOrganId": "12",
-    "bizAreaId": 676,
-    "bizGroupId": 301,
-    "bizPower": "l35j45",
-    "bizMultiInfo": "34b68j",
+    "organId": "74",
+    "type": "ure9me",
+    "foreignUrl": "www.gonzalo-smith.com",
+    "bizType": 37,
+    "bizOrganId": "74",
+    "bizAreaId": 85,
+    "bizGroupId": 91,
+    "bizPower": "710i2p",
+    "bizMultiInfo": "7nisyh",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "12",
-    "opOrganId": "12",
-    "opTime": "2025-09-05 15:45:53",
-    "opInfo": "yhdvl8",
-    "priority": 979,
-    "status": 657,
-    "delFlag": 3,
-    "dataBatch": "tuotow",
-    "dataVersion": 712,
-    "updateTime": "2025-09-05 15:45:53",
-    "syncMode": "wozl3k",
-    "syncTime": "2025-09-05 15:45:53",
-    "description": "vb2yuu"
+    "opUserId": "74",
+    "opOrganId": "74",
+    "opTime": "2025-09-06 00:01:17",
+    "opInfo": "0djbot",
+    "priority": 374,
+    "status": 307,
+    "delFlag": 4,
+    "dataBatch": "cpt9vt",
+    "dataVersion": 970,
+    "updateTime": "2025-09-06 00:01:17",
+    "syncMode": "3f6pz0",
+    "syncTime": "2025-09-06 00:01:17",
+    "description": "68d6op"
   }
 }'
 ```
@@ -8716,9 +8716,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c0d7ux",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "bvaner",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8768,9 +8768,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kf9uac",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "y2f7tm",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8814,9 +8814,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l6mykl",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "4xnzf0",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8874,7 +8874,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?creatorId=12&endTime=2025-09-05 15:44:42&readStatus=xzzme3&imagePath=hehhne&msgUrl=www.lynn-stehr.co&recvMemberId=12&limit=10&orderBy=68&type=912&recvTargetid=12&content=twmzvy&siteId=916&organId=12&status=509&description=qtswpk&recvOrganId=12&q=ei0xk8&updatorId=12&iconStyle=yfcwno&title=5dmxao&startTime=2025-09-05 15:44:42&updateTime=2025-09-05 15:46:04&recvGroupId=12&foreignId=12&page=1&bizType=78v8z0&id=513
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?content=ns5vd6&limit=10&page=1&bizType=wqhzwf&recvTargetid=74&recvMemberId=74&updatorId=74&description=ar1oxz&msgUrl=www.gonzalo-smith.com&recvGroupId=74&siteId=187&updateTime=2025-09-06 00:01:24&endTime=2025-09-06 00:00:25&title=z8evko&iconStyle=bq6tm7&organId=74&id=566&creatorId=74&status=805&foreignId=74&imagePath=2b4ats&q=ylp7uy&startTime=2025-09-06 00:00:25&type=30&recvOrganId=74&readStatus=zj4204&orderBy=686
 ```
 **Response-fields:**
 
@@ -8917,32 +8917,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:46:04",
-      "lastTime": "2025-09-05 15:46:04",
-      "id": 772,
-      "siteId": 850,
-      "organId": "12",
-      "bizType": "52043v",
-      "type": 922,
-      "title": "7ql0x0",
-      "content": "e0om3h",
-      "msgUrl": "www.lynn-stehr.co",
-      "foreignId": "12",
-      "imagePath": "40t9wt",
-      "iconStyle": "d9jn18",
-      "recvMemberId": "12",
-      "recvGroupId": "12",
-      "recvOrganId": "12",
-      "recvTargetid": "12",
-      "status": 315,
-      "updatorId": "12",
-      "updateTime": "2025-09-05 15:46:04",
-      "description": "1udl3m"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:24",
+      "lastTime": "2025-09-06 00:01:24",
+      "id": 305,
+      "siteId": 704,
+      "organId": "74",
+      "bizType": "8dlf26",
+      "type": 546,
+      "title": "z27xi7",
+      "content": "qjbfg7",
+      "msgUrl": "www.gonzalo-smith.com",
+      "foreignId": "74",
+      "imagePath": "vdpwmc",
+      "iconStyle": "au6eze",
+      "recvMemberId": "74",
+      "recvGroupId": "74",
+      "recvOrganId": "74",
+      "recvTargetid": "74",
+      "status": 920,
+      "updatorId": "74",
+      "updateTime": "2025-09-06 00:01:24",
+      "description": "vpzred"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -8999,7 +8999,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?recvOrganId=12&recvTargetid=12&iconStyle=8sy6k2&imagePath=avstbp&endTime=2025-09-05 15:44:42&recvGroupId=12&bizType=ewr8ss&creatorId=12&readStatus=cue9s2&page=1&limit=10&title=4yhsve&startTime=2025-09-05 15:44:42&content=f6gt31&msgUrl=www.lynn-stehr.co&id=94&q=jrlkz1&foreignId=12&organId=12&orderBy=141&updatorId=12&updateTime=2025-09-05 15:46:04&recvMemberId=12&status=471&description=hocd5u&siteId=628&type=403
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?msgUrl=www.gonzalo-smith.com&id=517&organId=74&type=599&limit=10&creatorId=74&page=1&orderBy=450&foreignId=74&recvOrganId=74&updatorId=74&status=299&startTime=2025-09-06 00:00:25&recvGroupId=74&title=0t90vw&readStatus=7zvtvk&recvMemberId=74&siteId=551&updateTime=2025-09-06 00:01:24&recvTargetid=74&iconStyle=pm1i5a&description=x16wgj&q=5o7jvf&imagePath=vx2aj5&endTime=2025-09-06 00:00:25&bizType=fqqjbq&content=0afz18
 ```
 **Response-fields:**
 
@@ -9042,32 +9042,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:46:04",
-      "lastTime": "2025-09-05 15:46:04",
-      "id": 811,
-      "siteId": 292,
-      "organId": "12",
-      "bizType": "e7jsua",
-      "type": 733,
-      "title": "b6e78b",
-      "content": "cp12em",
-      "msgUrl": "www.lynn-stehr.co",
-      "foreignId": "12",
-      "imagePath": "mrawy7",
-      "iconStyle": "rugqns",
-      "recvMemberId": "12",
-      "recvGroupId": "12",
-      "recvOrganId": "12",
-      "recvTargetid": "12",
-      "status": 409,
-      "updatorId": "12",
-      "updateTime": "2025-09-05 15:46:04",
-      "description": "2anwnu"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:24",
+      "lastTime": "2025-09-06 00:01:24",
+      "id": 262,
+      "siteId": 572,
+      "organId": "74",
+      "bizType": "ppnroj",
+      "type": 459,
+      "title": "zoi8nd",
+      "content": "iv6owp",
+      "msgUrl": "www.gonzalo-smith.com",
+      "foreignId": "74",
+      "imagePath": "d1bn45",
+      "iconStyle": "d0hhsu",
+      "recvMemberId": "74",
+      "recvGroupId": "74",
+      "recvOrganId": "74",
+      "recvTargetid": "74",
+      "status": 199,
+      "updatorId": "74",
+      "updateTime": "2025-09-06 00:01:24",
+      "description": "697pya"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9124,7 +9124,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'id=18&foreignId=12&recvGroupId=12&recvMemberId=12&msgUrl=www.lynn-stehr.co&creatorId=12&organId=12&title=l3xc6b&endTime=2025-09-05 15:44:42&bizType=0it3ib&readStatus=hufi20&type=97&startTime=2025-09-05 15:44:42&siteId=429&updatorId=12&orderBy=478&recvTargetid=12&page=1&imagePath=2zw3kl&description=sxasnr&q=4sbog7&iconStyle=cqtupf&recvOrganId=12&status=601&limit=10&content=osrq1q&updateTime=2025-09-05 15:46:04'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'iconStyle=mesouq&updatorId=74&bizType=5ej8fj&recvOrganId=74&recvTargetid=74&siteId=366&q=3tglpc&imagePath=53qfbj&organId=74&startTime=2025-09-06 00:00:25&recvGroupId=74&description=272kqx&content=uxvdtd&creatorId=74&id=173&page=1&status=818&title=s83ka0&orderBy=896&msgUrl=www.gonzalo-smith.com&type=102&limit=10&readStatus=z9nnkt&updateTime=2025-09-06 00:01:24&foreignId=74&recvMemberId=74&endTime=2025-09-06 00:00:25'
 ```
 **Response-fields:**
 
@@ -9143,9 +9143,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "azlohc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "gjmauh",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9218,31 +9218,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:04",
-    "lastTime": "2025-09-05 15:46:04",
-    "id": 232,
-    "siteId": 866,
-    "organId": "12",
-    "bizType": "z37sol",
-    "type": 229,
-    "title": "tujpb2",
-    "content": "xyihzh",
-    "msgUrl": "www.lynn-stehr.co",
-    "foreignId": "12",
-    "imagePath": "05lk41",
-    "iconStyle": "7prnxg",
-    "recvMemberId": "12",
-    "recvGroupId": "12",
-    "recvOrganId": "12",
-    "recvTargetid": "12",
-    "status": 484,
-    "updatorId": "12",
-    "updateTime": "2025-09-05 15:46:04",
-    "description": "dxcw4t"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": 971,
+    "siteId": 761,
+    "organId": "74",
+    "bizType": "i5eehn",
+    "type": 86,
+    "title": "ufl1q3",
+    "content": "272in6",
+    "msgUrl": "www.gonzalo-smith.com",
+    "foreignId": "74",
+    "imagePath": "yubpa4",
+    "iconStyle": "zm8s0v",
+    "recvMemberId": "74",
+    "recvGroupId": "74",
+    "recvOrganId": "74",
+    "recvTargetid": "74",
+    "status": 784,
+    "updatorId": "74",
+    "updateTime": "2025-09-06 00:01:24",
+    "description": "52qmgl"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9297,28 +9297,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:04",
-    "lastTime": "2025-09-05 15:46:04",
-    "id": 453,
-    "siteId": 524,
-    "organId": "12",
-    "bizType": "9v9os4",
-    "type": 525,
-    "title": "lux7on",
-    "content": "apd5vy",
-    "msgUrl": "www.lynn-stehr.co",
-    "foreignId": "12",
-    "imagePath": "s1hdfg",
-    "iconStyle": "xn58n1",
-    "recvMemberId": "12",
-    "recvGroupId": "12",
-    "recvOrganId": "12",
-    "recvTargetid": "12",
-    "status": 712,
-    "updatorId": "12",
-    "updateTime": "2025-09-05 15:46:04",
-    "description": "dpmg9t"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": 848,
+    "siteId": 781,
+    "organId": "74",
+    "bizType": "0lrntu",
+    "type": 238,
+    "title": "6kpmdr",
+    "content": "to3hdf",
+    "msgUrl": "www.gonzalo-smith.com",
+    "foreignId": "74",
+    "imagePath": "qpehmd",
+    "iconStyle": "cavtod",
+    "recvMemberId": "74",
+    "recvGroupId": "74",
+    "recvOrganId": "74",
+    "recvTargetid": "74",
+    "status": 168,
+    "updatorId": "74",
+    "updateTime": "2025-09-06 00:01:24",
+    "description": "cul3a5"
   }
 }'
 ```
@@ -9339,9 +9339,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0gdq3h",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "d092ms",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9396,28 +9396,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:04",
-    "lastTime": "2025-09-05 15:46:04",
-    "id": 293,
-    "siteId": 678,
-    "organId": "12",
-    "bizType": "us10i2",
-    "type": 534,
-    "title": "35xr0p",
-    "content": "dznku0",
-    "msgUrl": "www.lynn-stehr.co",
-    "foreignId": "12",
-    "imagePath": "i6h0ru",
-    "iconStyle": "68j6o3",
-    "recvMemberId": "12",
-    "recvGroupId": "12",
-    "recvOrganId": "12",
-    "recvTargetid": "12",
-    "status": 333,
-    "updatorId": "12",
-    "updateTime": "2025-09-05 15:46:04",
-    "description": "uqufbz"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": 619,
+    "siteId": 549,
+    "organId": "74",
+    "bizType": "2zjiks",
+    "type": 889,
+    "title": "i3cdh4",
+    "content": "7n9oak",
+    "msgUrl": "www.gonzalo-smith.com",
+    "foreignId": "74",
+    "imagePath": "ytjbra",
+    "iconStyle": "ouxmxw",
+    "recvMemberId": "74",
+    "recvGroupId": "74",
+    "recvOrganId": "74",
+    "recvTargetid": "74",
+    "status": 31,
+    "updatorId": "74",
+    "updateTime": "2025-09-06 00:01:24",
+    "description": "2w34bs"
   }
 }'
 ```
@@ -9438,9 +9438,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "610fn1",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "ebrvhp",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9490,9 +9490,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1s6gti",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "dn4k8m",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9536,9 +9536,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9nbazc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "gglooz",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9588,9 +9588,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2t1bfj",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "a355x4",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9640,9 +9640,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m8wp9u",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "si4rex",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9687,11 +9687,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "kt13o2",
-    "mapKey2": "19rmq4"
+    "mapKey1": "n1oxb3",
+    "mapKey2": "9dsgut"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9758,7 +9758,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?msgContent=ghqaft&spare1=3sdlv5&spare2=a6zjxc&msgOrganName=deloris.schneider&msgTitle=twk1fc&msgUserId=12&q=cm6tek&msgId=560&msgLabels=uhelkn&status=pwx584&foreignId=12&description=78vcbu&opOrganName=deloris.schneider&opUserId=12&msgAbstract=3r4ymf&opOrganId=12&id=12&msgUserName=deloris.schneider&msgAccountId=12&limit=10&creatorId=12&type=zh4d4d&msgAccountName=deloris.schneider&msgOrganId=12&msgUrl=www.lynn-stehr.co&page=1&msgModuleName=deloris.schneider&msgCreateTime=2025-09-05 15:46:05&opTime=2025-09-05 15:46:05&startTime=2025-09-05 15:44:42&siteId=137&msgType=384&msgModuleId=12&bizType=7yy7o6&orderBy=871&endTime=2025-09-05 15:44:42
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?limit=10&msgAccountName=jacquelynn.veum&description=9ex584&opTime=2025-09-06 00:01:24&msgUserId=74&creatorId=74&msgModuleId=74&msgUserName=jacquelynn.veum&spare2=u2nqhh&orderBy=594&msgType=433&page=1&msgContent=cpuc27&opOrganName=jacquelynn.veum&foreignId=74&endTime=2025-09-06 00:00:25&type=8syuiw&msgLabels=1te8dr&status=e7mfuk&siteId=584&msgAbstract=q0k0u5&msgOrganName=jacquelynn.veum&opOrganId=74&q=h7c1se&startTime=2025-09-06 00:00:25&id=74&msgCreateTime=2025-09-06 00:01:24&opUserId=74&spare1=ef7x4t&msgAccountId=74&msgModuleName=jacquelynn.veum&msgOrganId=74&msgId=355&msgUrl=www.gonzalo-smith.com&bizType=vc0gm0&msgTitle=elhh0k
 ```
 **Response-fields:**
 
@@ -9811,42 +9811,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:46:05",
-      "lastTime": "2025-09-05 15:46:05",
-      "id": "12",
-      "siteId": 477,
-      "foreignId": "12",
-      "type": "0jlbew",
-      "bizType": "u223ov",
-      "msgCreateTime": "2025-09-05 15:46:05",
-      "msgId": 222,
-      "msgType": 302,
-      "msgTitle": "8znewf",
-      "msgAbstract": "jiy9q1",
-      "msgAccountId": "12",
-      "msgAccountName": "deloris.schneider",
-      "msgModuleId": "12",
-      "msgModuleName": "deloris.schneider",
-      "msgUserId": "12",
-      "msgUserName": "deloris.schneider",
-      "msgOrganId": "12",
-      "msgOrganName": "deloris.schneider",
-      "msgUrl": "www.lynn-stehr.co",
-      "msgLabels": "ktfkvn",
-      "msgContent": "j6og4j",
-      "status": "37s98r",
-      "opUserId": "12",
-      "opTime": "2025-09-05 15:46:05",
-      "opOrganId": "12",
-      "opOrganName": "deloris.schneider",
-      "description": "wxd7cb",
-      "spare1": "c5mamf",
-      "spare2": "mzhkkh"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:24",
+      "lastTime": "2025-09-06 00:01:24",
+      "id": "74",
+      "siteId": 466,
+      "foreignId": "74",
+      "type": "ekcenh",
+      "bizType": "k96ddu",
+      "msgCreateTime": "2025-09-06 00:01:24",
+      "msgId": 583,
+      "msgType": 873,
+      "msgTitle": "2ps1ga",
+      "msgAbstract": "eohs50",
+      "msgAccountId": "74",
+      "msgAccountName": "jacquelynn.veum",
+      "msgModuleId": "74",
+      "msgModuleName": "jacquelynn.veum",
+      "msgUserId": "74",
+      "msgUserName": "jacquelynn.veum",
+      "msgOrganId": "74",
+      "msgOrganName": "jacquelynn.veum",
+      "msgUrl": "www.gonzalo-smith.com",
+      "msgLabels": "ol0hoe",
+      "msgContent": "lmhjf5",
+      "status": "nmng5v",
+      "opUserId": "74",
+      "opTime": "2025-09-06 00:01:24",
+      "opOrganId": "74",
+      "opOrganName": "jacquelynn.veum",
+      "description": "7k2bok",
+      "spare1": "kq8tq4",
+      "spare2": "c48rco"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -9912,7 +9912,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'creatorId=12&msgAccountName=deloris.schneider&msgTitle=9x2bcz&msgType=664&msgOrganId=12&spare1=3kfw0m&id=12&msgId=299&spare2=bzvath&opUserId=12&msgAccountId=12&orderBy=752&msgUserId=12&q=8o9hul&opTime=2025-09-05 15:46:05&msgCreateTime=2025-09-05 15:46:05&foreignId=12&msgModuleId=12&msgContent=dc71ja&page=1&msgAbstract=ywursa&opOrganId=12&msgUrl=www.lynn-stehr.co&msgModuleName=deloris.schneider&limit=10&msgUserName=deloris.schneider&endTime=2025-09-05 15:44:42&msgOrganName=deloris.schneider&description=5pqtar&status=pnpboe&opOrganName=deloris.schneider&siteId=321&bizType=em07g2&msgLabels=4qtb0e&type=wfv7z4&startTime=2025-09-05 15:44:42'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'bizType=czz8k5&msgTitle=1yxbx5&msgUserName=jacquelynn.veum&startTime=2025-09-06 00:00:25&spare1=asqh9y&id=74&msgOrganId=74&status=vu4ldt&creatorId=74&opOrganId=74&msgAccountName=jacquelynn.veum&endTime=2025-09-06 00:00:25&siteId=417&opTime=2025-09-06 00:01:24&limit=10&q=2txigf&msgUrl=www.gonzalo-smith.com&opUserId=74&msgId=727&page=1&type=348yjv&orderBy=103&foreignId=74&msgLabels=5gtunx&msgContent=wgpvwc&opOrganName=jacquelynn.veum&msgModuleId=74&msgOrganName=jacquelynn.veum&msgCreateTime=2025-09-06 00:01:24&msgAccountId=74&msgUserId=74&spare2=24jinu&msgType=418&msgModuleName=jacquelynn.veum&msgAbstract=b233x0&description=eh23ag'
 ```
 **Response-fields:**
 
@@ -9931,9 +9931,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t5ycrw",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "v7k7xt",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10016,41 +10016,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:05",
-    "lastTime": "2025-09-05 15:46:05",
-    "id": "12",
-    "siteId": 31,
-    "foreignId": "12",
-    "type": "9c8dj3",
-    "bizType": "nhltmj",
-    "msgCreateTime": "2025-09-05 15:46:05",
-    "msgId": 974,
-    "msgType": 818,
-    "msgTitle": "ivu3jj",
-    "msgAbstract": "ajzrnm",
-    "msgAccountId": "12",
-    "msgAccountName": "deloris.schneider",
-    "msgModuleId": "12",
-    "msgModuleName": "deloris.schneider",
-    "msgUserId": "12",
-    "msgUserName": "deloris.schneider",
-    "msgOrganId": "12",
-    "msgOrganName": "deloris.schneider",
-    "msgUrl": "www.lynn-stehr.co",
-    "msgLabels": "i2gp2d",
-    "msgContent": "ukfrau",
-    "status": "gzbvc2",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:05",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "nfgpuf",
-    "spare1": "yn42uf",
-    "spare2": "lihejj"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": "74",
+    "siteId": 130,
+    "foreignId": "74",
+    "type": "17p51m",
+    "bizType": "p11mbx",
+    "msgCreateTime": "2025-09-06 00:01:24",
+    "msgId": 757,
+    "msgType": 382,
+    "msgTitle": "9dvtrz",
+    "msgAbstract": "oa56gd",
+    "msgAccountId": "74",
+    "msgAccountName": "jacquelynn.veum",
+    "msgModuleId": "74",
+    "msgModuleName": "jacquelynn.veum",
+    "msgUserId": "74",
+    "msgUserName": "jacquelynn.veum",
+    "msgOrganId": "74",
+    "msgOrganName": "jacquelynn.veum",
+    "msgUrl": "www.gonzalo-smith.com",
+    "msgLabels": "ljc1df",
+    "msgContent": "umd4ku",
+    "status": "0tech3",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:24",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "1cwmrr",
+    "spare1": "69v957",
+    "spare2": "ch6bbq"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10115,38 +10115,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:05",
-    "lastTime": "2025-09-05 15:46:05",
-    "id": "12",
-    "siteId": 651,
-    "foreignId": "12",
-    "type": "fuxvot",
-    "bizType": "jli819",
-    "msgCreateTime": "2025-09-05 15:46:05",
-    "msgId": 928,
-    "msgType": 768,
-    "msgTitle": "84e55o",
-    "msgAbstract": "412h0f",
-    "msgAccountId": "12",
-    "msgAccountName": "deloris.schneider",
-    "msgModuleId": "12",
-    "msgModuleName": "deloris.schneider",
-    "msgUserId": "12",
-    "msgUserName": "deloris.schneider",
-    "msgOrganId": "12",
-    "msgOrganName": "deloris.schneider",
-    "msgUrl": "www.lynn-stehr.co",
-    "msgLabels": "r6gn7l",
-    "msgContent": "ss37mp",
-    "status": "xh7hhv",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:05",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "8kxj8i",
-    "spare1": "c3vu6x",
-    "spare2": "xvebt7"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": "74",
+    "siteId": 632,
+    "foreignId": "74",
+    "type": "y6vyv8",
+    "bizType": "d3zty3",
+    "msgCreateTime": "2025-09-06 00:01:24",
+    "msgId": 583,
+    "msgType": 731,
+    "msgTitle": "vwue19",
+    "msgAbstract": "6t8lgt",
+    "msgAccountId": "74",
+    "msgAccountName": "jacquelynn.veum",
+    "msgModuleId": "74",
+    "msgModuleName": "jacquelynn.veum",
+    "msgUserId": "74",
+    "msgUserName": "jacquelynn.veum",
+    "msgOrganId": "74",
+    "msgOrganName": "jacquelynn.veum",
+    "msgUrl": "www.gonzalo-smith.com",
+    "msgLabels": "4ndapv",
+    "msgContent": "7aubbl",
+    "status": "ejk39c",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:24",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "mpi80z",
+    "spare1": "e6atw8",
+    "spare2": "oprbwx"
   }
 }'
 ```
@@ -10167,9 +10167,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zrk0hl",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "rgrusk",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10234,38 +10234,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:05",
-    "lastTime": "2025-09-05 15:46:05",
-    "id": "12",
-    "siteId": 39,
-    "foreignId": "12",
-    "type": "p1mnzq",
-    "bizType": "nmbpnd",
-    "msgCreateTime": "2025-09-05 15:46:05",
-    "msgId": 408,
-    "msgType": 606,
-    "msgTitle": "lgvgtx",
-    "msgAbstract": "gdjqn7",
-    "msgAccountId": "12",
-    "msgAccountName": "deloris.schneider",
-    "msgModuleId": "12",
-    "msgModuleName": "deloris.schneider",
-    "msgUserId": "12",
-    "msgUserName": "deloris.schneider",
-    "msgOrganId": "12",
-    "msgOrganName": "deloris.schneider",
-    "msgUrl": "www.lynn-stehr.co",
-    "msgLabels": "j0k0k5",
-    "msgContent": "aj2mju",
-    "status": "ppig7z",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:05",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "4d67zm",
-    "spare1": "058djt",
-    "spare2": "zqm8xa"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:24",
+    "lastTime": "2025-09-06 00:01:24",
+    "id": "74",
+    "siteId": 954,
+    "foreignId": "74",
+    "type": "h4lh0s",
+    "bizType": "oaoqr1",
+    "msgCreateTime": "2025-09-06 00:01:24",
+    "msgId": 665,
+    "msgType": 272,
+    "msgTitle": "1ywear",
+    "msgAbstract": "87k88a",
+    "msgAccountId": "74",
+    "msgAccountName": "jacquelynn.veum",
+    "msgModuleId": "74",
+    "msgModuleName": "jacquelynn.veum",
+    "msgUserId": "74",
+    "msgUserName": "jacquelynn.veum",
+    "msgOrganId": "74",
+    "msgOrganName": "jacquelynn.veum",
+    "msgUrl": "www.gonzalo-smith.com",
+    "msgLabels": "jkqm97",
+    "msgContent": "6q2w0s",
+    "status": "7jnxur",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:24",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "k2q6t0",
+    "spare1": "y91g5j",
+    "spare2": "qdvrve"
   }
 }'
 ```
@@ -10286,9 +10286,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9jh51k",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "72zxx6",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10338,9 +10338,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wqi0ex",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "09tc0l",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10372,7 +10372,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/soe0p0.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/lk2o5u.do
 ```
 **Response-fields:**
 
@@ -10391,9 +10391,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g6skfx",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "6eydsr",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10465,7 +10465,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?foreignId=12&todoProcessStatus=w0n3ek&spare2=oor89w&endTime=2025-09-05 15:44:42&todoLabels=nzgujl&todoName=deloris.schneider&startTime=2025-09-05 15:44:42&todoType=o83ui6&opTime=2025-09-05 15:46:06&id=12&spare1=eqa7v8&todoAccountId=12&todoUserId=12&status=90pde0&todoProcessName=deloris.schneider&bizType=6tpaae&siteId=905&opOrganName=deloris.schneider&creatorId=12&todoAccountName=deloris.schneider&todoModuleId=12&todoOrganName=deloris.schneider&todoCurrInfo=j2pqc4&page=1&type=7xyozc&todoModuleName=deloris.schneider&todoNextInfo=a0v0g2&opOrganId=12&description=r92wn7&todoProcessInfo=biq1lr&orderBy=188&todoId=12&todoOrganId=12&q=cyii5j&todoCreateTime=2025-09-05 15:46:06&todoAbstract=oqn3zh&todoUrl=www.lynn-stehr.co&limit=10&todoUserName=deloris.schneider&opUserId=12&todoContent=5j4fnn
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoType=3l5h6v&opUserId=74&spare2=0im2pt&todoModuleName=jacquelynn.veum&creatorId=74&orderBy=757&foreignId=74&todoProcessInfo=22pl5q&type=z3twm7&spare1=9y5uir&opTime=2025-09-06 00:01:25&todoModuleId=74&todoNextInfo=cbn6ii&todoCurrInfo=chtp6a&q=iuzsmn&todoContent=ugour0&opOrganName=jacquelynn.veum&endTime=2025-09-06 00:00:25&todoOrganName=jacquelynn.veum&limit=10&page=1&description=7dcja1&bizType=od0ja1&todoAbstract=wz3z6q&todoAccountName=jacquelynn.veum&id=74&todoUserName=jacquelynn.veum&todoCreateTime=2025-09-06 00:01:25&todoUserId=74&todoProcessStatus=abd4gy&todoUrl=www.gonzalo-smith.com&startTime=2025-09-06 00:00:25&opOrganId=74&status=3o5yf3&siteId=284&todoProcessName=jacquelynn.veum&todoId=74&todoOrganId=74&todoLabels=t8ryla&todoName=jacquelynn.veum&todoAccountId=74
 ```
 **Response-fields:**
 
@@ -10523,47 +10523,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:46:06",
-      "lastTime": "2025-09-05 15:46:06",
-      "id": "12",
-      "siteId": 230,
-      "foreignId": "12",
-      "type": "2fesji",
-      "bizType": "9kfohi",
-      "todoCreateTime": "2025-09-05 15:46:06",
-      "todoId": "12",
-      "todoType": "khcj3n",
-      "todoName": "deloris.schneider",
-      "todoAbstract": "cf7y6f",
-      "todoAccountId": "12",
-      "todoAccountName": "deloris.schneider",
-      "todoModuleId": "12",
-      "todoModuleName": "deloris.schneider",
-      "todoUserId": "12",
-      "todoUserName": "deloris.schneider",
-      "todoOrganId": "12",
-      "todoOrganName": "deloris.schneider",
-      "todoProcessName": "deloris.schneider",
-      "todoProcessStatus": "w13rbb",
-      "todoProcessInfo": "c4o7mr",
-      "todoCurrInfo": "0g9xey",
-      "todoNextInfo": "9mmaxz",
-      "todoUrl": "www.lynn-stehr.co",
-      "todoLabels": "cs9o34",
-      "todoContent": "hbiqdk",
-      "status": "df8ull",
-      "opUserId": "12",
-      "opTime": "2025-09-05 15:46:06",
-      "opOrganId": "12",
-      "opOrganName": "deloris.schneider",
-      "description": "gnlvgk",
-      "spare1": "wn4wlt",
-      "spare2": "acm1ej"
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:25",
+      "lastTime": "2025-09-06 00:01:25",
+      "id": "74",
+      "siteId": 17,
+      "foreignId": "74",
+      "type": "wahfaw",
+      "bizType": "7jciob",
+      "todoCreateTime": "2025-09-06 00:01:25",
+      "todoId": "74",
+      "todoType": "z46obv",
+      "todoName": "jacquelynn.veum",
+      "todoAbstract": "5n84un",
+      "todoAccountId": "74",
+      "todoAccountName": "jacquelynn.veum",
+      "todoModuleId": "74",
+      "todoModuleName": "jacquelynn.veum",
+      "todoUserId": "74",
+      "todoUserName": "jacquelynn.veum",
+      "todoOrganId": "74",
+      "todoOrganName": "jacquelynn.veum",
+      "todoProcessName": "jacquelynn.veum",
+      "todoProcessStatus": "imeplr",
+      "todoProcessInfo": "j7rzph",
+      "todoCurrInfo": "mx3sgq",
+      "todoNextInfo": "l824va",
+      "todoUrl": "www.gonzalo-smith.com",
+      "todoLabels": "lk33rk",
+      "todoContent": "b0dcvg",
+      "status": "0sxzyw",
+      "opUserId": "74",
+      "opTime": "2025-09-06 00:01:25",
+      "opOrganId": "74",
+      "opOrganName": "jacquelynn.veum",
+      "description": "opv9jz",
+      "spare1": "ckmd6n",
+      "spare2": "7y17r5"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10634,7 +10634,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'id=12&todoCurrInfo=go40x1&todoAccountName=deloris.schneider&todoNextInfo=prk6ny&todoId=12&todoType=0e9cx4&todoContent=28srvh&todoUserId=12&todoModuleName=deloris.schneider&orderBy=614&status=buykx4&foreignId=12&opTime=2025-09-05 15:46:06&opOrganId=12&spare1=9ffr2v&q=hvd4dy&todoProcessInfo=21z0cu&todoUrl=www.lynn-stehr.co&todoModuleId=12&todoCreateTime=2025-09-05 15:46:06&todoUserName=deloris.schneider&startTime=2025-09-05 15:44:42&page=1&opOrganName=deloris.schneider&todoAbstract=wx2whn&todoProcessName=deloris.schneider&endTime=2025-09-05 15:44:42&type=z9q00u&todoAccountId=12&limit=10&todoOrganId=12&todoProcessStatus=226ryw&bizType=qodooc&creatorId=12&description=mk5glr&todoLabels=nr0v7c&todoName=deloris.schneider&spare2=xbechr&siteId=317&opUserId=12&todoOrganName=deloris.schneider'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoOrganId=74&todoCurrInfo=bxfis6&endTime=2025-09-06 00:00:25&q=n7z5ir&id=74&todoModuleId=74&todoOrganName=jacquelynn.veum&todoNextInfo=pgjfzr&todoContent=2e6z6d&spare2=tqju72&todoUrl=www.gonzalo-smith.com&todoType=msb48f&todoId=74&todoName=jacquelynn.veum&todoModuleName=jacquelynn.veum&todoProcessInfo=3au0cw&status=6ame5f&creatorId=74&foreignId=74&type=319ac8&todoUserName=jacquelynn.veum&bizType=225zi9&todoUserId=74&page=1&todoCreateTime=2025-09-06 00:01:25&todoAccountName=jacquelynn.veum&opOrganId=74&opOrganName=jacquelynn.veum&siteId=337&todoAbstract=u8rcw5&opUserId=74&limit=10&todoAccountId=74&todoProcessStatus=ft2d1b&todoLabels=880fk5&startTime=2025-09-06 00:00:25&description=6t2f6w&opTime=2025-09-06 00:01:25&spare1=0joz1k&todoProcessName=jacquelynn.veum&orderBy=995'
 ```
 **Response-fields:**
 
@@ -10653,9 +10653,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7onvbv",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "kml5wn",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10743,46 +10743,46 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:06",
-    "lastTime": "2025-09-05 15:46:06",
-    "id": "12",
-    "siteId": 651,
-    "foreignId": "12",
-    "type": "7sqilh",
-    "bizType": "x2q9q4",
-    "todoCreateTime": "2025-09-05 15:46:06",
-    "todoId": "12",
-    "todoType": "ya46p7",
-    "todoName": "deloris.schneider",
-    "todoAbstract": "5mnmc5",
-    "todoAccountId": "12",
-    "todoAccountName": "deloris.schneider",
-    "todoModuleId": "12",
-    "todoModuleName": "deloris.schneider",
-    "todoUserId": "12",
-    "todoUserName": "deloris.schneider",
-    "todoOrganId": "12",
-    "todoOrganName": "deloris.schneider",
-    "todoProcessName": "deloris.schneider",
-    "todoProcessStatus": "77qu8r",
-    "todoProcessInfo": "n7le9i",
-    "todoCurrInfo": "1h0f3n",
-    "todoNextInfo": "vuljod",
-    "todoUrl": "www.lynn-stehr.co",
-    "todoLabels": "x3zpmw",
-    "todoContent": "n6frlg",
-    "status": "5o3ggu",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:06",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "e4kz54",
-    "spare1": "v612aq",
-    "spare2": "h1dxry"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:25",
+    "lastTime": "2025-09-06 00:01:25",
+    "id": "74",
+    "siteId": 552,
+    "foreignId": "74",
+    "type": "oqdawe",
+    "bizType": "69zkv6",
+    "todoCreateTime": "2025-09-06 00:01:25",
+    "todoId": "74",
+    "todoType": "s8v37f",
+    "todoName": "jacquelynn.veum",
+    "todoAbstract": "vv464b",
+    "todoAccountId": "74",
+    "todoAccountName": "jacquelynn.veum",
+    "todoModuleId": "74",
+    "todoModuleName": "jacquelynn.veum",
+    "todoUserId": "74",
+    "todoUserName": "jacquelynn.veum",
+    "todoOrganId": "74",
+    "todoOrganName": "jacquelynn.veum",
+    "todoProcessName": "jacquelynn.veum",
+    "todoProcessStatus": "10eheo",
+    "todoProcessInfo": "97ydkk",
+    "todoCurrInfo": "b32wjw",
+    "todoNextInfo": "uatr8a",
+    "todoUrl": "www.gonzalo-smith.com",
+    "todoLabels": "bkn16c",
+    "todoContent": "mqchxv",
+    "status": "jndhi6",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:25",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "4plgst",
+    "spare1": "uakuy7",
+    "spare2": "0wkh13"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10852,43 +10852,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:06",
-    "lastTime": "2025-09-05 15:46:06",
-    "id": "12",
-    "siteId": 919,
-    "foreignId": "12",
-    "type": "1nigh8",
-    "bizType": "j09p63",
-    "todoCreateTime": "2025-09-05 15:46:06",
-    "todoId": "12",
-    "todoType": "ab4n6j",
-    "todoName": "deloris.schneider",
-    "todoAbstract": "lramig",
-    "todoAccountId": "12",
-    "todoAccountName": "deloris.schneider",
-    "todoModuleId": "12",
-    "todoModuleName": "deloris.schneider",
-    "todoUserId": "12",
-    "todoUserName": "deloris.schneider",
-    "todoOrganId": "12",
-    "todoOrganName": "deloris.schneider",
-    "todoProcessName": "deloris.schneider",
-    "todoProcessStatus": "n14e4k",
-    "todoProcessInfo": "v3tcb2",
-    "todoCurrInfo": "6pryw3",
-    "todoNextInfo": "gatx0l",
-    "todoUrl": "www.lynn-stehr.co",
-    "todoLabels": "2z1qxt",
-    "todoContent": "ky5xbz",
-    "status": "si813w",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:06",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "7ptkwd",
-    "spare1": "ibhunj",
-    "spare2": "j1f7pl"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:25",
+    "lastTime": "2025-09-06 00:01:25",
+    "id": "74",
+    "siteId": 516,
+    "foreignId": "74",
+    "type": "3x3i7l",
+    "bizType": "5dd54w",
+    "todoCreateTime": "2025-09-06 00:01:25",
+    "todoId": "74",
+    "todoType": "r7oqsc",
+    "todoName": "jacquelynn.veum",
+    "todoAbstract": "davbxa",
+    "todoAccountId": "74",
+    "todoAccountName": "jacquelynn.veum",
+    "todoModuleId": "74",
+    "todoModuleName": "jacquelynn.veum",
+    "todoUserId": "74",
+    "todoUserName": "jacquelynn.veum",
+    "todoOrganId": "74",
+    "todoOrganName": "jacquelynn.veum",
+    "todoProcessName": "jacquelynn.veum",
+    "todoProcessStatus": "0c20x8",
+    "todoProcessInfo": "4z98xr",
+    "todoCurrInfo": "udej9m",
+    "todoNextInfo": "fl9pqi",
+    "todoUrl": "www.gonzalo-smith.com",
+    "todoLabels": "kd2r6m",
+    "todoContent": "buo36u",
+    "status": "opieww",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:25",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "xexzu7",
+    "spare1": "j55t2j",
+    "spare2": "mkwui0"
   }
 }'
 ```
@@ -10909,9 +10909,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0405tk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "q06nvl",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -10981,43 +10981,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:46:06",
-    "lastTime": "2025-09-05 15:46:06",
-    "id": "12",
-    "siteId": 64,
-    "foreignId": "12",
-    "type": "lmgd75",
-    "bizType": "s3rte1",
-    "todoCreateTime": "2025-09-05 15:46:06",
-    "todoId": "12",
-    "todoType": "7f7eq9",
-    "todoName": "deloris.schneider",
-    "todoAbstract": "6aj21s",
-    "todoAccountId": "12",
-    "todoAccountName": "deloris.schneider",
-    "todoModuleId": "12",
-    "todoModuleName": "deloris.schneider",
-    "todoUserId": "12",
-    "todoUserName": "deloris.schneider",
-    "todoOrganId": "12",
-    "todoOrganName": "deloris.schneider",
-    "todoProcessName": "deloris.schneider",
-    "todoProcessStatus": "xfaxln",
-    "todoProcessInfo": "vhcgqw",
-    "todoCurrInfo": "k5siyp",
-    "todoNextInfo": "mgy5kb",
-    "todoUrl": "www.lynn-stehr.co",
-    "todoLabels": "uvej0j",
-    "todoContent": "sxgmay",
-    "status": "brtc2m",
-    "opUserId": "12",
-    "opTime": "2025-09-05 15:46:06",
-    "opOrganId": "12",
-    "opOrganName": "deloris.schneider",
-    "description": "2kmt0y",
-    "spare1": "hd0wv1",
-    "spare2": "myo5mn"
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:25",
+    "lastTime": "2025-09-06 00:01:25",
+    "id": "74",
+    "siteId": 754,
+    "foreignId": "74",
+    "type": "lb3r8d",
+    "bizType": "aodzyu",
+    "todoCreateTime": "2025-09-06 00:01:25",
+    "todoId": "74",
+    "todoType": "mq85ju",
+    "todoName": "jacquelynn.veum",
+    "todoAbstract": "ctyjwn",
+    "todoAccountId": "74",
+    "todoAccountName": "jacquelynn.veum",
+    "todoModuleId": "74",
+    "todoModuleName": "jacquelynn.veum",
+    "todoUserId": "74",
+    "todoUserName": "jacquelynn.veum",
+    "todoOrganId": "74",
+    "todoOrganName": "jacquelynn.veum",
+    "todoProcessName": "jacquelynn.veum",
+    "todoProcessStatus": "lp9hcp",
+    "todoProcessInfo": "fthrkg",
+    "todoCurrInfo": "q8zhqd",
+    "todoNextInfo": "jgx3db",
+    "todoUrl": "www.gonzalo-smith.com",
+    "todoLabels": "j7h0j6",
+    "todoContent": "pa1hla",
+    "status": "9yjruq",
+    "opUserId": "74",
+    "opTime": "2025-09-06 00:01:25",
+    "opOrganId": "74",
+    "opOrganName": "jacquelynn.veum",
+    "description": "dmosy8",
+    "spare1": "6gthpd",
+    "spare2": "2dmqbl"
   }
 }'
 ```
@@ -11038,9 +11038,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nn9urg",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "bvl691",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11090,9 +11090,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zxsnbd",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "jtitie",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11158,35 +11158,35 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "password": "nacjb3",
-      "username": "deloris.schneider",
+      "password": "30bbcu",
+      "username": "jacquelynn.veum",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "adminId": 711,
-      "userId": "12",
-      "appId": "12",
-      "deptId": 686,
-      "organId": "12",
-      "token": "cfzje0",
-      "imagePath": "aihx2n",
+      "adminId": 22,
+      "userId": "74",
+      "appId": "74",
+      "deptId": 791,
+      "organId": "74",
+      "token": "kj4gpi",
+      "imagePath": "5vpk6m",
       "isSuperAdmin": true,
-      "loginIp": "188.87.89.33",
-      "loginTime": 1757058282703,
-      "loginBrowse": "77uv5x",
-      "loginOs": "6tawwo",
-      "expireTime": 1757058282703,
+      "loginIp": "97.63.215.106",
+      "loginTime": 1757088025562,
+      "loginBrowse": "pjqgq4",
+      "loginOs": "vmkxnp",
+      "expireTime": 1757088025562,
       "perms": [
-        "gxpwbl"
+        "zmzvu0"
       ]
     },
-    "roleGroup": "yc44hk",
-    "positionGroup": "zp33nq"
+    "roleGroup": "g11tz8",
+    "positionGroup": "7ocyet"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11315,60 +11315,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 472,
-    "userId": "12",
-    "deptId": 290,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "1hx8ha",
-    "password": "0epkmi",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:15",
+    "lastTime": "2025-09-06 00:01:15",
+    "id": 560,
+    "userId": "74",
+    "deptId": 605,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "5d2224",
+    "password": "5o2ubn",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 519,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "c4tspo",
+    "status": 577,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:15",
+    "description": "6nuejl",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 972,
-      "organId": "12",
-      "parentId": 783,
-      "appId": "12",
-      "depttypeId": 582,
-      "foreignId": "12",
-      "createType": 969,
-      "type": "habu0a",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "76qobu",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:15",
+      "lastTime": "2025-09-06 00:01:15",
+      "id": 389,
+      "organId": "74",
+      "parentId": 667,
+      "appId": "74",
+      "depttypeId": 166,
+      "foreignId": "74",
+      "createType": 536,
+      "type": "27kpyq",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "2z0pgo",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "oum6e6",
-      "priority": 527,
-      "status": 503,
-      "delFlag": 3,
-      "description": "cmbdjb",
-      "spare1": "9oduaf",
-      "spare2": "ka8pab",
+      "searchCode": "17084",
+      "imagePath": "j4j0bc",
+      "priority": 329,
+      "status": 10,
+      "delFlag": 4,
+      "description": "ikl6t1",
+      "spare1": "31z30e",
+      "spare2": "9tiwq8",
       "children": [
         {
           "$ref": ".."
@@ -11377,47 +11377,47 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 620,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 979,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:15",
+        "lastTime": "2025-09-06 00:01:15",
+        "id": 70,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 280,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 987,
-        "description": "cfm15v",
-        "areaType": "99nk2v"
+        "status": 952,
+        "description": "lwf2jt",
+        "areaType": "tv82i9"
       }
     ],
     "roleIds": [
-      298
+      165
     ],
     "positionIds": [
-      "r4xo9d"
+      "4ou8vz"
     ],
-    "roleId": 771,
+    "roleId": 74,
     "userRoleList": [
       {
-        "id": 269,
-        "deptId": 901,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 31,
-        "roleName": "deloris.schneider",
-        "adminId": 110
+        "id": 363,
+        "deptId": 511,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 986,
+        "roleName": "jacquelynn.veum",
+        "adminId": 889
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11534,60 +11534,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:50",
-    "lastTime": "2025-09-05 15:45:50",
-    "id": 352,
-    "userId": "12",
-    "deptId": 909,
-    "deptName": "deloris.schneider",
-    "organId": "12",
-    "organName": "deloris.schneider",
-    "name": "deloris.schneider",
-    "username": "deloris.schneider",
-    "nickName": "lon.nicolas",
-    "email": "ralph.kerluke@hotmail.com",
-    "mobile": "(682) 505-7451",
-    "imagePath": "6hpnv6",
-    "password": "tfzs98",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:15",
+    "lastTime": "2025-09-06 00:01:15",
+    "id": 348,
+    "userId": "74",
+    "deptId": 375,
+    "deptName": "jacquelynn.veum",
+    "organId": "74",
+    "organName": "jacquelynn.veum",
+    "name": "jacquelynn.veum",
+    "username": "jacquelynn.veum",
+    "nickName": "darrin.langosh",
+    "email": "jake.kunze@gmail.com",
+    "mobile": "1-484-863-9255",
+    "imagePath": "z6rss4",
+    "password": "1n79id",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 900,
-    "delFlag": 3,
-    "lastLoginIp": "188.87.89.33",
-    "lastLoginTime": "2025-09-05 15:45:50",
-    "description": "kdwqq9",
+    "status": 132,
+    "delFlag": 4,
+    "lastLoginIp": "97.63.215.106",
+    "lastLoginTime": "2025-09-06 00:01:15",
+    "description": "9qoiaq",
     "dept": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:50",
-      "lastTime": "2025-09-05 15:45:50",
-      "id": 354,
-      "organId": "12",
-      "parentId": 705,
-      "appId": "12",
-      "depttypeId": 218,
-      "foreignId": "12",
-      "createType": 192,
-      "type": "4vej5t",
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "areaCode": "17639",
-      "organLeader": "fkmrbv",
-      "leaderId": "12",
-      "leaderMobile": "(682) 505-7451",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:15",
+      "lastTime": "2025-09-06 00:01:15",
+      "id": 112,
+      "organId": "74",
+      "parentId": 119,
+      "appId": "74",
+      "depttypeId": 643,
+      "foreignId": "74",
+      "createType": 573,
+      "type": "9kding",
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "areaCode": "17084",
+      "organLeader": "t0vcs9",
+      "leaderId": "74",
+      "leaderMobile": "1-484-863-9255",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "17639",
-      "imagePath": "474rdm",
-      "priority": 314,
-      "status": 20,
-      "delFlag": 3,
-      "description": "sgbs89",
-      "spare1": "9qj9ft",
-      "spare2": "5857y5",
+      "searchCode": "17084",
+      "imagePath": "r0j2by",
+      "priority": 600,
+      "status": 650,
+      "delFlag": 4,
+      "description": "i2n7gy",
+      "spare1": "sakfvr",
+      "spare2": "rytb6v",
       "children": [
         {
           "$ref": ".."
@@ -11596,44 +11596,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:50",
-        "lastTime": "2025-09-05 15:45:50",
-        "id": 263,
-        "roletypeId": "12",
-        "appId": "12",
-        "name": "deloris.schneider",
-        "code": "17639",
-        "priority": 503,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:15",
+        "lastTime": "2025-09-06 00:01:15",
+        "id": 887,
+        "roletypeId": "74",
+        "appId": "74",
+        "name": "jacquelynn.veum",
+        "code": "17084",
+        "priority": 286,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 802,
-        "description": "wcgmzt",
-        "areaType": "hjq4nf"
+        "status": 108,
+        "description": "j0j2qi",
+        "areaType": "fb3e8o"
       }
     ],
     "roleIds": [
-      462
+      315
     ],
     "positionIds": [
-      "kvhemw"
+      "utzw6f"
     ],
-    "roleId": 907,
+    "roleId": 410,
     "userRoleList": [
       {
-        "id": 132,
-        "deptId": 688,
-        "deptName": "deloris.schneider",
-        "organId": "12",
-        "organName": "deloris.schneider",
-        "roleId": 333,
-        "roleName": "deloris.schneider",
-        "adminId": 591
+        "id": 507,
+        "deptId": 390,
+        "deptName": "jacquelynn.veum",
+        "organId": "74",
+        "organName": "jacquelynn.veum",
+        "roleId": 184,
+        "roleName": "jacquelynn.veum",
+        "adminId": 188
       }
     ],
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
   }
 }'
 ```
@@ -11655,8 +11655,8 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11690,8 +11690,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "llpcow",
-    "newPassword": "okgf91"
+    "oldPassword": "kb5jga",
+    "newPassword": "9gavu8"
   }
 }'
 ```
@@ -11715,8 +11715,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11767,10 +11767,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.lynn-stehr.co"
+    "imageUrl": "www.gonzalo-smith.com"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11810,7 +11810,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?endTime=2025-09-05 15:44:42&isDisabled=true&limit=10&configValue=8t1e31&q=jolaai&configKey=52i6tr&startTime=2025-09-05 15:44:42&remark=efnlu1&page=1&orderBy=587
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?q=h5x1j0&endTime=2025-09-06 00:00:25&page=1&limit=10&configKey=q8dluw&isDisabled=true&configValue=6i0drg&startTime=2025-09-06 00:00:25&orderBy=763&remark=fihpig
 ```
 **Response-fields:**
 
@@ -11840,22 +11840,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 497,
+    "totalCount": 255,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "12",
-        "configKey": "hhsw3f",
-        "configValue": "8zttit",
+        "configId": "74",
+        "configKey": "ow8wwz",
+        "configValue": "dkthz6",
         "isDisabled": true,
-        "remark": "umfk8u"
+        "remark": "gs33u4"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11894,7 +11894,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'configValue=8l2tzd&remark=rew8d0&q=179yw7&orderBy=827&configKey=o35bf0&limit=10&endTime=2025-09-05 15:44:42&isDisabled=true&startTime=2025-09-05 15:44:42&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'endTime=2025-09-06 00:00:25&remark=lmyfwt&startTime=2025-09-06 00:00:25&limit=10&configKey=eukc3t&isDisabled=true&orderBy=351&q=dx5zzz&page=1&configValue=6oab5f'
 ```
 **Response-fields:**
 
@@ -11913,9 +11913,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sr6wya",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "lamfqa",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -11945,7 +11945,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/12.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/74.do
 ```
 **Response-fields:**
 
@@ -11970,14 +11970,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "12",
-    "configKey": "dqpemz",
-    "configValue": "qifw3v",
+    "configId": "74",
+    "configKey": "1qy7i5",
+    "configValue": "00ncu3",
     "isDisabled": true,
-    "remark": "g7ez7j"
+    "remark": "k8n6qx"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12007,7 +12007,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/gszuyz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/mahcma.do
 ```
 **Response-fields:**
 
@@ -12032,14 +12032,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "12",
-    "configKey": "umqgu4",
-    "configValue": "qr9x7j",
+    "configId": "74",
+    "configKey": "659m64",
+    "configValue": "mgcdq7",
     "isDisabled": true,
-    "remark": "u9m0a1"
+    "remark": "rpqe6n"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12076,11 +12076,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "12",
-    "configKey": "hg97mz",
-    "configValue": "w22kb9",
+    "configId": "74",
+    "configKey": "gwd7fc",
+    "configValue": "y8hz9y",
     "isDisabled": true,
-    "remark": "zrgh8m"
+    "remark": "1wsarf"
   }
 }'
 ```
@@ -12101,9 +12101,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xcek3g",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "8gygbd",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12140,11 +12140,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "12",
-    "configKey": "5jei9g",
-    "configValue": "v1i82u",
+    "configId": "74",
+    "configKey": "4t3if6",
+    "configValue": "q4ev2p",
     "isDisabled": true,
-    "remark": "ycm7j0"
+    "remark": "scgzc5"
   }
 }'
 ```
@@ -12165,9 +12165,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sc5n9z",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "hz3owx",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12216,9 +12216,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3a98c0",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "tjgbe0",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12261,9 +12261,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hmusj7",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "wwd0sb",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12295,7 +12295,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=hti50w&username=deloris.schneider
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=jacquelynn.veum&ipaddr=w7m4vi
 ```
 **Response-fields:**
 
@@ -12324,18 +12324,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "12",
-      "deptName": "deloris.schneider",
-      "username": "deloris.schneider",
-      "ipaddr": "p9s9q6",
-      "loginLocation": "gnd7zr",
-      "browser": "kw6e6r",
-      "os": "oig3bb",
-      "loginTime": 1757058282703
+      "tokenId": "74",
+      "deptName": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "ipaddr": "5qvzwp",
+      "loginLocation": "9f2nbz",
+      "browser": "nzjxow",
+      "os": "qg7wlz",
+      "loginTime": 1757088025562
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12365,7 +12365,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/12.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/74.do
 ```
 **Response-fields:**
 
@@ -12384,9 +12384,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ke70ot",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "iujd82",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12429,7 +12429,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?typeMode=989&name=deloris.schneider&page=1&endTime=2025-09-05 15:44:42&key=y5yssg&orderBy=387&status=080spl&remark=6oy19i&limit=10&typeClass=azlnyy&startTime=2025-09-05 15:44:42&q=3r0m1t&typeId=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?startTime=2025-09-06 00:00:25&remark=3nzvq1&limit=10&q=8zzluh&key=5fib3s&endTime=2025-09-06 00:00:25&orderBy=16&page=1&name=jacquelynn.veum&typeId=74&typeClass=3yrmu7&status=1d8r6r&typeMode=776
 ```
 **Response-fields:**
 
@@ -12464,27 +12464,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 554,
+    "totalCount": 912,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "12",
-        "name": "deloris.schneider",
-        "typeClass": "1y8dot",
-        "typeRef": "aaleg1",
-        "typeMode": 953,
-        "searchCode": "17639",
-        "priority": 702,
-        "createTime": "2025-09-05 15:46:03",
-        "status": 506,
-        "remark": "t911fj"
+        "typeId": "74",
+        "name": "jacquelynn.veum",
+        "typeClass": "4l4cge",
+        "typeRef": "hxbcyh",
+        "typeMode": 594,
+        "searchCode": "17084",
+        "priority": 994,
+        "createTime": "2025-09-06 00:01:23",
+        "status": 827,
+        "remark": "fxg6pi"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12526,7 +12526,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'typeMode=647&status=18pqf4&typeClass=dhw6fb&page=1&q=f3muwt&limit=10&name=deloris.schneider&key=8lkyxh&orderBy=0&remark=tbrypm&startTime=2025-09-05 15:44:42&endTime=2025-09-05 15:44:42&typeId=12'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'limit=10&typeClass=7wla0q&startTime=2025-09-06 00:00:25&page=1&remark=c4xf1b&q=ghxm1p&status=xhusqn&orderBy=184&typeId=74&key=6yj3i1&endTime=2025-09-06 00:00:25&typeMode=710&name=jacquelynn.veum'
 ```
 **Response-fields:**
 
@@ -12545,9 +12545,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c5yqnc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "r4kqzx",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12577,7 +12577,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/12.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/74.do
 ```
 **Response-fields:**
 
@@ -12607,19 +12607,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "12",
-    "name": "deloris.schneider",
-    "typeClass": "w8k5r0",
-    "typeRef": "ye2wkj",
-    "typeMode": 774,
-    "searchCode": "17639",
-    "priority": 212,
-    "createTime": "2025-09-05 15:46:03",
-    "status": 200,
-    "remark": "hinb60"
+    "typeId": "74",
+    "name": "jacquelynn.veum",
+    "typeClass": "o4x9gt",
+    "typeRef": "tu36sw",
+    "typeMode": 379,
+    "searchCode": "17084",
+    "priority": 822,
+    "createTime": "2025-09-06 00:01:23",
+    "status": 493,
+    "remark": "z2h832"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12661,16 +12661,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "12",
-    "name": "deloris.schneider",
-    "typeClass": "siviqk",
-    "typeRef": "e67j5s",
-    "typeMode": 573,
-    "searchCode": "17639",
-    "priority": 299,
-    "createTime": "2025-09-05 15:46:03",
-    "status": 675,
-    "remark": "2ajo9r"
+    "typeId": "74",
+    "name": "jacquelynn.veum",
+    "typeClass": "9h81j9",
+    "typeRef": "7hfkfo",
+    "typeMode": 376,
+    "searchCode": "17084",
+    "priority": 392,
+    "createTime": "2025-09-06 00:01:23",
+    "status": 524,
+    "remark": "cmv9f4"
   }
 }'
 ```
@@ -12691,9 +12691,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t8no6l",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "kj7ym5",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12735,16 +12735,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "12",
-    "name": "deloris.schneider",
-    "typeClass": "madhza",
-    "typeRef": "2zuwmd",
-    "typeMode": 348,
-    "searchCode": "17639",
-    "priority": 909,
-    "createTime": "2025-09-05 15:46:03",
-    "status": 294,
-    "remark": "oa7e6p"
+    "typeId": "74",
+    "name": "jacquelynn.veum",
+    "typeClass": "e1rgy6",
+    "typeRef": "5oggst",
+    "typeMode": 659,
+    "searchCode": "17084",
+    "priority": 979,
+    "createTime": "2025-09-06 00:01:23",
+    "status": 554,
+    "remark": "g979wt"
   }
 }'
 ```
@@ -12765,9 +12765,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jgaxrh",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "5zwsdr",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12816,9 +12816,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cyhusn",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "b9a16d",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12861,9 +12861,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6nkfgk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "qtl25v",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12918,20 +12918,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "12",
-      "name": "deloris.schneider",
-      "typeClass": "60cx76",
-      "typeRef": "z0s7t4",
-      "typeMode": 523,
-      "searchCode": "17639",
-      "priority": 423,
-      "createTime": "2025-09-05 15:46:03",
-      "status": 94,
-      "remark": "pppr1l"
+      "typeId": "74",
+      "name": "jacquelynn.veum",
+      "typeClass": "gn9ovs",
+      "typeRef": "hs74p3",
+      "typeMode": 551,
+      "searchCode": "17084",
+      "priority": 422,
+      "createTime": "2025-09-06 00:01:23",
+      "status": 407,
+      "remark": "eybryc"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -12989,7 +12989,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?page=1&postypeId=12&roleTypeId=12&posFunction=wsfp5t&endTime=2025-09-05 15:44:42&createTime=2025-09-05 15:44:42&isPub=true&name=deloris.schneider&mobilePhone=(947) 586-4732&officePhone=(947) 586-4732&status=17&oname=deloris.schneider&posRank=636&q=d1rhke&posType=6o1lvz&id=12&orderBy=285&ids=73h2kf&ids=73h2kf&parentId=12&sname=deloris.schneider&delFlag=3&code=17639&roletypeId=12&description=ic41vv&startTime=2025-09-05 15:44:42&positionId=12&limit=10&groupId=12
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?description=4t50sh&mobilePhone=1-814-818-6088&name=jacquelynn.veum&orderBy=102&status=339&page=1&id=74&parentId=74&code=17084&posFunction=nna7un&roletypeId=74&postypeId=74&posType=22wrla&createTime=2025-09-06 00:00:25&groupId=74&ids=6ls7ni&ids=6ls7ni&roleTypeId=74&officePhone=1-814-818-6088&startTime=2025-09-06 00:00:25&sname=jacquelynn.veum&isPub=true&q=xrwh19&positionId=74&oname=jacquelynn.veum&delFlag=4&endTime=2025-09-06 00:00:25&limit=10&posRank=685
 ```
 **Response-fields:**
 
@@ -13027,32 +13027,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 808,
+    "totalCount": 834,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "12",
-        "postCode": "17639",
-        "postName": "deloris.schneider",
-        "postSort": 755,
-        "status": 178,
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:53",
-        "lastTime": "2025-09-05 15:45:53",
-        "delFlag": 3,
-        "remark": "zup2s5",
+        "postId": "74",
+        "postCode": "17084",
+        "postName": "jacquelynn.veum",
+        "postSort": 386,
+        "status": 763,
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:17",
+        "lastTime": "2025-09-06 00:01:17",
+        "delFlag": 4,
+        "remark": "i6zuxh",
         "ids": [
-          "oh7k29"
+          "gdldsj"
         ],
-        "positionId": "12",
+        "positionId": "74",
         "flag": true
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13091,7 +13091,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postCode=17639&status=187&delFlag=3&orderBy=500&q=aouqfe&endTime=2025-09-05 15:44:42&limit=10&page=1&postName=deloris.schneider&startTime=2025-09-05 15:44:42'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'page=1&delFlag=4&status=387&orderBy=312&endTime=2025-09-06 00:00:25&q=2o3e1g&postCode=17084&postName=jacquelynn.veum&limit=10&startTime=2025-09-06 00:00:25'
 ```
 **Response-fields:**
 
@@ -13110,9 +13110,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b2pbdd",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "ms6iup",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13142,7 +13142,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/12.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/74.do
 ```
 **Response-fields:**
 
@@ -13203,50 +13203,50 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": "12",
-    "parentId": "12",
-    "postypeId": "12",
-    "roletypeId": "12",
-    "userId": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "code": "17639",
-    "oname": "deloris.schneider",
-    "posFunction": "7l5dl7",
-    "posRank": 429,
-    "posType": "pa8tn5",
-    "editorType": "amfy99",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:18",
+    "lastTime": "2025-09-06 00:01:18",
+    "id": "74",
+    "parentId": "74",
+    "postypeId": "74",
+    "roletypeId": "74",
+    "userId": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "code": "17084",
+    "oname": "jacquelynn.veum",
+    "posFunction": "jtmrkm",
+    "posRank": 894,
+    "posType": "ogzlts",
+    "editorType": "c8hpsv",
     "isEditorCreate": true,
-    "status": 931,
+    "status": 537,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "12",
-    "manageDeptids": "gfa3gh",
+    "leaderId": "74",
+    "manageDeptids": "f85th2",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(947) 586-4732",
-    "officePhone": "(947) 586-4732",
-    "buildingId": "12",
-    "roomNo": "dsma1r",
-    "extQmType": "eifr15",
-    "extQmTypePhoto": "ohfo5g",
-    "extPosName": "deloris.schneider",
-    "extOrganName": "deloris.schneider",
-    "priority": 665,
-    "priorityInOrgan": 95,
-    "priorityInDomain": 253,
-    "updaterId": "12",
-    "updateTime": "2025-09-05 15:45:53",
-    "delFlag": 3,
-    "description": "aa2rvc",
-    "remark": "bw70xn"
+    "mobilePhone": "1-814-818-6088",
+    "officePhone": "1-814-818-6088",
+    "buildingId": "74",
+    "roomNo": "awtfyf",
+    "extQmType": "qzk00l",
+    "extQmTypePhoto": "hadde9",
+    "extPosName": "jacquelynn.veum",
+    "extOrganName": "jacquelynn.veum",
+    "priority": 168,
+    "priorityInOrgan": 247,
+    "priorityInDomain": 341,
+    "updaterId": "74",
+    "updateTime": "2025-09-06 00:01:18",
+    "delFlag": 4,
+    "description": "ccga12",
+    "remark": "ww4cc3"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13322,50 +13322,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": "12",
-    "parentId": "12",
-    "postypeId": "12",
-    "roletypeId": "12",
-    "userId": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "code": "17639",
-    "oname": "deloris.schneider",
-    "posFunction": "42gj0u",
-    "posRank": 375,
-    "posType": "3ykzvw",
-    "editorType": "na0yg5",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:18",
+    "lastTime": "2025-09-06 00:01:18",
+    "id": "74",
+    "parentId": "74",
+    "postypeId": "74",
+    "roletypeId": "74",
+    "userId": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "code": "17084",
+    "oname": "jacquelynn.veum",
+    "posFunction": "w3e0g8",
+    "posRank": 970,
+    "posType": "cw8w42",
+    "editorType": "fux2zf",
     "isEditorCreate": true,
-    "status": 869,
+    "status": 681,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "12",
-    "manageDeptids": "ion1ni",
+    "leaderId": "74",
+    "manageDeptids": "vmgqxk",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(947) 586-4732",
-    "officePhone": "(947) 586-4732",
-    "buildingId": "12",
-    "roomNo": "dbi5wi",
-    "extQmType": "33i4lt",
-    "extQmTypePhoto": "gdsnq6",
-    "extPosName": "deloris.schneider",
-    "extOrganName": "deloris.schneider",
-    "priority": 65,
-    "priorityInOrgan": 446,
-    "priorityInDomain": 735,
-    "updaterId": "12",
-    "updateTime": "2025-09-05 15:45:53",
-    "delFlag": 3,
-    "description": "so5vf0",
-    "remark": "zu1hzk",
-    "parentName": "deloris.schneider",
-    "roletypeName": "deloris.schneider",
-    "postypeName": "deloris.schneider"
+    "mobilePhone": "1-814-818-6088",
+    "officePhone": "1-814-818-6088",
+    "buildingId": "74",
+    "roomNo": "4cpr07",
+    "extQmType": "5y3oek",
+    "extQmTypePhoto": "l96uhj",
+    "extPosName": "jacquelynn.veum",
+    "extOrganName": "jacquelynn.veum",
+    "priority": 62,
+    "priorityInOrgan": 295,
+    "priorityInDomain": 144,
+    "updaterId": "74",
+    "updateTime": "2025-09-06 00:01:18",
+    "delFlag": 4,
+    "description": "xg7get",
+    "remark": "4spt8m",
+    "parentName": "jacquelynn.veum",
+    "roletypeName": "jacquelynn.veum",
+    "postypeName": "jacquelynn.veum"
   }
 }'
 ```
@@ -13386,9 +13386,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sg98dj",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "f8b4oz",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13464,50 +13464,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "id": "12",
-    "parentId": "12",
-    "postypeId": "12",
-    "roletypeId": "12",
-    "userId": "12",
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "code": "17639",
-    "oname": "deloris.schneider",
-    "posFunction": "9levnp",
-    "posRank": 17,
-    "posType": "q07ist",
-    "editorType": "e8y9tt",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:18",
+    "lastTime": "2025-09-06 00:01:18",
+    "id": "74",
+    "parentId": "74",
+    "postypeId": "74",
+    "roletypeId": "74",
+    "userId": "74",
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "code": "17084",
+    "oname": "jacquelynn.veum",
+    "posFunction": "ft0xpu",
+    "posRank": 790,
+    "posType": "vuyzs1",
+    "editorType": "30o8qd",
     "isEditorCreate": true,
-    "status": 768,
+    "status": 552,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "12",
-    "manageDeptids": "tdu3jx",
+    "leaderId": "74",
+    "manageDeptids": "1g8agl",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(947) 586-4732",
-    "officePhone": "(947) 586-4732",
-    "buildingId": "12",
-    "roomNo": "6ko4s1",
-    "extQmType": "78ossa",
-    "extQmTypePhoto": "dr3fqn",
-    "extPosName": "deloris.schneider",
-    "extOrganName": "deloris.schneider",
-    "priority": 829,
-    "priorityInOrgan": 24,
-    "priorityInDomain": 911,
-    "updaterId": "12",
-    "updateTime": "2025-09-05 15:45:53",
-    "delFlag": 3,
-    "description": "nqff3h",
-    "remark": "sc8mv7",
-    "parentName": "deloris.schneider",
-    "roletypeName": "deloris.schneider",
-    "postypeName": "deloris.schneider"
+    "mobilePhone": "1-814-818-6088",
+    "officePhone": "1-814-818-6088",
+    "buildingId": "74",
+    "roomNo": "hkgtv4",
+    "extQmType": "6teue9",
+    "extQmTypePhoto": "4sd482",
+    "extPosName": "jacquelynn.veum",
+    "extOrganName": "jacquelynn.veum",
+    "priority": 162,
+    "priorityInOrgan": 586,
+    "priorityInDomain": 268,
+    "updaterId": "74",
+    "updateTime": "2025-09-06 00:01:18",
+    "delFlag": 4,
+    "description": "e6o6wp",
+    "remark": "4tmjx6",
+    "parentName": "jacquelynn.veum",
+    "roletypeName": "jacquelynn.veum",
+    "postypeName": "jacquelynn.veum"
   }
 }'
 ```
@@ -13528,9 +13528,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iwnm1b",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "f7v8gg",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13579,9 +13579,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h187cs",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "9pb56z",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13626,20 +13626,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "12",
-    "postCode": "17639",
-    "postName": "deloris.schneider",
-    "postSort": 656,
-    "status": 632,
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:53",
-    "lastTime": "2025-09-05 15:45:53",
-    "delFlag": 3,
-    "remark": "5gg5x6",
+    "postId": "74",
+    "postCode": "17084",
+    "postName": "jacquelynn.veum",
+    "postSort": 216,
+    "status": 157,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:18",
+    "lastTime": "2025-09-06 00:01:18",
+    "delFlag": 4,
+    "remark": "27liko",
     "ids": [
-      "jjal5q"
+      "0bixzl"
     ],
-    "positionId": "12",
+    "positionId": "74",
     "flag": true
   }
 }'
@@ -13661,9 +13661,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5sm695",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "8dm2z5",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13701,12 +13701,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 222,
-    "roleId": 797,
-    "positionId": "12",
-    "status": 915,
-    "beginTime": "2025-09-05",
-    "endTime": "2025-09-05"
+    "id": 550,
+    "roleId": 985,
+    "positionId": "74",
+    "status": 389,
+    "beginTime": "2025-09-06",
+    "endTime": "2025-09-06"
   }
 }'
 ```
@@ -13727,9 +13727,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e3zqit",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "9e73w0",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13787,25 +13787,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "12",
-      "postCode": "17639",
-      "postName": "deloris.schneider",
-      "postSort": 383,
-      "status": 23,
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:54",
-      "lastTime": "2025-09-05 15:45:54",
-      "delFlag": 3,
-      "remark": "dn5day",
+      "postId": "74",
+      "postCode": "17084",
+      "postName": "jacquelynn.veum",
+      "postSort": 75,
+      "status": 848,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:18",
+      "lastTime": "2025-09-06 00:01:18",
+      "delFlag": 4,
+      "remark": "82z33q",
       "ids": [
-        "5i2ldl"
+        "0acc63"
       ],
-      "positionId": "12",
+      "positionId": "74",
       "flag": true
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13851,7 +13851,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?srcCode=444&userId=12&username=deloris.schneider&createTime=2025-09-05 15:45:54&startTime=2025-09-05 15:44:42&orderBy=345&limit=10&appId=12&method=v0epmy&operation=3wozg4&q=d51a4a&time=1757058282703&endTime=2025-09-05 15:44:42&ip=188.87.89.33&page=1&category=760
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?appId=74&username=jacquelynn.veum&orderBy=440&createTime=2025-09-06 00:01:18&srcCode=549&ip=97.63.215.106&page=1&userId=74&q=jxb9me&endTime=2025-09-06 00:00:25&category=180&operation=puib9t&method=iube5d&time=1757088025562&startTime=2025-09-06 00:00:25&limit=10
 ```
 **Response-fields:**
 
@@ -13896,39 +13896,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 290,
+    "totalCount": 231,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 126,
-        "title": "pbw72b",
-        "businessType": 215,
-        "businessTypeName": "deloris.schneider",
+        "operId": 788,
+        "title": "nn6b0d",
+        "businessType": 864,
+        "businessTypeName": "jacquelynn.veum",
         "businessTypes": [
-          942
+          31
         ],
-        "method": "cnj71f",
-        "requestMethod": "yztum4",
-        "operatorType": 99,
-        "operName": "deloris.schneider",
-        "deptName": "deloris.schneider",
-        "operUrl": "www.lynn-stehr.co",
-        "operIp": "188.87.89.33",
-        "operLocation": "nppdgg",
-        "operParam": "il2f6k",
-        "jsonResult": "t0aihf",
-        "status": 327,
-        "errorMsg": "4rn1ep",
-        "operTime": "2025-09-05 15:45:54",
-        "costTime": 1757058282703,
-        "remark": "dd912x"
+        "method": "j33ogv",
+        "requestMethod": "z319s9",
+        "operatorType": 843,
+        "operName": "jacquelynn.veum",
+        "deptName": "jacquelynn.veum",
+        "operUrl": "www.gonzalo-smith.com",
+        "operIp": "97.63.215.106",
+        "operLocation": "q6w9k1",
+        "operParam": "c379to",
+        "jsonResult": "qn04m9",
+        "status": 337,
+        "errorMsg": "1vdh47",
+        "operTime": "2025-09-06 00:01:18",
+        "costTime": 1757088025562,
+        "remark": "msf5x3"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -13973,7 +13973,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'title=e29qon&operIp=188.87.89.33&remark=9carct&limit=10&operId=666&operName=deloris.schneider&startTime=2025-09-05 15:44:42&deptName=deloris.schneider&orderBy=684&endTime=2025-09-05 15:44:42&businessType=33&operatorType=876&operTime=2025-09-05 15:45:54&status=499&q=roo71h&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'page=1&startTime=2025-09-06 00:00:25&operTime=2025-09-06 00:01:18&remark=0w6fwo&operIp=97.63.215.106&operName=jacquelynn.veum&orderBy=20&title=tvli58&operId=890&endTime=2025-09-06 00:00:25&operatorType=997&q=p3cssn&limit=10&status=943&businessType=678&deptName=jacquelynn.veum'
 ```
 **Response-fields:**
 
@@ -13992,9 +13992,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9fn5ci",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "i836wm",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14043,9 +14043,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5y7cch",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "22new5",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14095,7 +14095,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?page=1&dictSort=454&typeCode=17639&remark=37dh5i&orderBy=986&key=12kiej&startTime=2025-09-05 15:44:42&name=deloris.schneider&status=wz8kt2&parentId=907&dictLabel=57hn4n&cddValue=uzncyd&isDefault=304mto&endTime=2025-09-05 15:44:42&listClass=am5rz3&limit=10&cssClass=c5pmf1&searchCode=17639&cddId=705&q=8s3f5s
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?limit=10&page=1&endTime=2025-09-06 00:00:25&startTime=2025-09-06 00:00:25&listClass=idzeud&isDefault=naqxw5&status=etocs1&dictSort=795&cddValue=nkl4sa&key=gvc1rk&searchCode=17084&orderBy=148&name=jacquelynn.veum&cssClass=j519y1&cddId=784&parentId=404&q=8cj5ee&dictLabel=j19eng&typeCode=17084&remark=7lhu30
 ```
 **Response-fields:**
 
@@ -14133,30 +14133,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 499,
+    "totalCount": 94,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 687,
-        "typeCode": "17639",
-        "parentId": 419,
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "cddValue": "i816qj",
-        "searchCode": "17639",
-        "priority": 285,
-        "createTime": "2025-09-05 15:46:02",
-        "remark": "6vl22n",
-        "dictLabel": "1su3nh",
-        "typeCodeName": "deloris.schneider",
-        "parentName": "deloris.schneider"
+        "cddId": 215,
+        "typeCode": "17084",
+        "parentId": 266,
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "cddValue": "sikq0w",
+        "searchCode": "17084",
+        "priority": 595,
+        "createTime": "2025-09-06 00:01:23",
+        "remark": "e92fs4",
+        "dictLabel": "0p8xfq",
+        "typeCodeName": "jacquelynn.veum",
+        "parentName": "jacquelynn.veum"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14205,7 +14205,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'isDefault=gwa6s5&remark=c6w9cb&limit=10&typeCode=17639&status=kxjhv6&name=deloris.schneider&dictSort=194&q=lk69dj&page=1&listClass=9f0x4d&parentId=439&cddValue=yaig3b&orderBy=84&startTime=2025-09-05 15:44:42&cssClass=l5ktvk&searchCode=17639&cddId=795&key=a6s95f&endTime=2025-09-05 15:44:42&dictLabel=oveay0'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'page=1&startTime=2025-09-06 00:00:25&limit=10&typeCode=17084&isDefault=co6otx&searchCode=17084&parentId=903&endTime=2025-09-06 00:00:25&name=jacquelynn.veum&listClass=2ht6yl&status=x775zc&key=kybn5d&orderBy=608&cddId=337&remark=1nli5c&dictSort=870&dictLabel=qz4bnc&cddValue=l0r399&cssClass=hexmaw&q=53o10i'
 ```
 **Response-fields:**
 
@@ -14224,9 +14224,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jqr78k",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "egb3n3",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14256,7 +14256,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/558.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/642.do
 ```
 **Response-fields:**
 
@@ -14289,22 +14289,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 230,
-    "typeCode": "17639",
-    "parentId": 948,
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "cddValue": "ofbq4z",
-    "searchCode": "17639",
-    "priority": 89,
-    "createTime": "2025-09-05 15:46:02",
-    "remark": "4r85oz",
-    "dictLabel": "1u9cvq",
-    "typeCodeName": "deloris.schneider",
-    "parentName": "deloris.schneider"
+    "cddId": 810,
+    "typeCode": "17084",
+    "parentId": 664,
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "cddValue": "r8u5oy",
+    "searchCode": "17084",
+    "priority": 638,
+    "createTime": "2025-09-06 00:01:23",
+    "remark": "kkuebe",
+    "dictLabel": "furgmh",
+    "typeCodeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14343,7 +14343,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/7y0l7y.do?roletypeId=12&parentId=12&zparentId=12&typeCode=17639
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/rcfcqy.do?typeCode=17084&zparentId=74&roletypeId=74&parentId=74
 ```
 **Response-fields:**
 
@@ -14365,8 +14365,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14411,19 +14411,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 681,
-    "typeCode": "17639",
-    "parentId": 412,
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "cddValue": "uvmxmh",
-    "searchCode": "17639",
-    "priority": 145,
-    "createTime": "2025-09-05 15:46:02",
-    "remark": "7gwas8",
-    "dictLabel": "b305hy",
-    "typeCodeName": "deloris.schneider",
-    "parentName": "deloris.schneider"
+    "cddId": 915,
+    "typeCode": "17084",
+    "parentId": 493,
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "cddValue": "ky45lv",
+    "searchCode": "17084",
+    "priority": 762,
+    "createTime": "2025-09-06 00:01:23",
+    "remark": "kzlhjh",
+    "dictLabel": "1w81bw",
+    "typeCodeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum"
   }
 }'
 ```
@@ -14444,9 +14444,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ty72t2",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "oh09it",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14491,19 +14491,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 685,
-    "typeCode": "17639",
-    "parentId": 921,
-    "name": "deloris.schneider",
-    "sname": "deloris.schneider",
-    "cddValue": "tzb0lb",
-    "searchCode": "17639",
-    "priority": 784,
-    "createTime": "2025-09-05 15:46:02",
-    "remark": "ikhnz3",
-    "dictLabel": "631imi",
-    "typeCodeName": "deloris.schneider",
-    "parentName": "deloris.schneider"
+    "cddId": 722,
+    "typeCode": "17084",
+    "parentId": 816,
+    "name": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
+    "cddValue": "jualdp",
+    "searchCode": "17084",
+    "priority": 980,
+    "createTime": "2025-09-06 00:01:23",
+    "remark": "th9xga",
+    "dictLabel": "yrgrin",
+    "typeCodeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum"
   }
 }'
 ```
@@ -14524,9 +14524,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "np7o76",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "06x7wl",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14575,9 +14575,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ogmqja",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "epxs2i",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14631,7 +14631,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?status=4pp8at&startTime=2025-09-05 15:44:42&roletypeId=12&appId=12&groupId=12&roleId=12&gnType=971y9g&q=22rams&endTime=2025-09-05 15:44:42&refresh=4jwu3m&parentId=12&key=oel2e8&subType=2x2dk0&organwId=12&positionType=vh9aul&metaId=12&orderBy=96&type=de59zo&positionId=12&limit=10&wlType=cn82iu&refType=ehppkw&roleTypeId=12&page=1&showButton=fmvuh4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?page=1&roleTypeId=74&subType=bb0zio&roleId=74&gnType=byabcp&orderBy=744&positionId=74&refType=dbblar&limit=10&wlType=5x6ic0&metaId=74&parentId=74&refresh=1ps65w&endTime=2025-09-06 00:00:25&q=5afn40&positionType=dla524&appId=74&startTime=2025-09-06 00:00:25&groupId=74&roletypeId=74&status=1z0gpc&key=t2gyjh&organwId=74&type=uvikvn&showButton=aakmmo
 ```
 **Response-fields:**
 
@@ -14665,18 +14665,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "12",
-      "label": "54mokf",
-      "shortName": "deloris.schneider",
-      "organId": "12",
-      "areaId": 663,
-      "searchCode": "17639",
-      "childNum": 316,
+      "id": "74",
+      "label": "39rll4",
+      "shortName": "jacquelynn.veum",
+      "organId": "74",
+      "areaId": 519,
+      "searchCode": "17084",
+      "childNum": 148,
       "checked": true,
-      "entity": 617,
+      "entity": 627,
       "show": true,
       "showIcon": true,
-      "parentId": "12",
+      "parentId": "74",
       "children": [
         {
           "$ref": ".."
@@ -14684,8 +14684,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14736,7 +14736,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?startTime=2025-09-05 15:44:42&cddValue=mjthew&endTime=2025-09-05 15:44:42&name=deloris.schneider&q=9giqrb&isAllChild=ko8mfy&delFlag=3&existKey=490h1w&cddLevel=ug21yd&sname=deloris.schneider&key=vh953c&description=tcuuvs&parentId=106&orderBy=463&typeMode=ksezwz&searchCode=17639&page=1&dispFlag=vcu0bl&limit=10&typeCode=17639&typeCodes=9axs63&typeCodes=9axs63&ids=qco1z4&ids=qco1z4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?name=jacquelynn.veum&parentId=191&isAllChild=bhgoxe&cddLevel=eqh508&typeMode=e6xgdr&q=ied6wy&page=1&typeCode=17084&key=skab23&sname=jacquelynn.veum&existKey=ioi6u2&dispFlag=j254hp&description=0hjjaa&delFlag=4&endTime=2025-09-06 00:00:25&orderBy=884&cddValue=w9wl8j&searchCode=17084&startTime=2025-09-06 00:00:25&limit=10&ids=ofx4jv&ids=ofx4jv&typeCodes=033m98&typeCodes=033m98
 ```
 **Response-fields:**
 
@@ -14776,24 +14776,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:46:03",
-      "lastTime": "2025-09-05 15:46:03",
-      "id": 992,
-      "typeCode": "17639",
-      "parentId": 819,
-      "name": "deloris.schneider",
-      "sname": "deloris.schneider",
-      "cddValue": "rvvne9",
-      "cddLevel": "irlmc6",
-      "searchCode": "17639",
-      "dispFlag": "a9qyct",
-      "priority": 676,
-      "delFlag": 3,
-      "deleteTime": "2025-09-05 15:46:03",
-      "description": "7lu9xu",
-      "spare1": "y4i1w1",
-      "spare2": "4o82v2",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:23",
+      "lastTime": "2025-09-06 00:01:23",
+      "id": 730,
+      "typeCode": "17084",
+      "parentId": 808,
+      "name": "jacquelynn.veum",
+      "sname": "jacquelynn.veum",
+      "cddValue": "hzgej4",
+      "cddLevel": "lyq4j5",
+      "searchCode": "17084",
+      "dispFlag": "6zpel0",
+      "priority": 140,
+      "delFlag": 4,
+      "deleteTime": "2025-09-06 00:01:23",
+      "description": "qy9bai",
+      "spare1": "je50fc",
+      "spare2": "qissm6",
       "children": [
         {
           "$ref": ".."
@@ -14801,8 +14801,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14879,46 +14879,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 495,
-      "total": 83.08,
-      "sys": 76.20,
-      "used": 1.36,
-      "wait": 39.11,
-      "free": 86.20
+      "cpuNum": 532,
+      "total": 81.87,
+      "sys": 75.88,
+      "used": 98.28,
+      "wait": 23.22,
+      "free": 77.14
     },
     "mem": {
-      "total": 25.87,
-      "used": 56.89,
-      "free": 48.57
+      "total": 89.85,
+      "used": 86.96,
+      "free": 8.01
     },
     "jvm": {
-      "total": 80.81,
-      "max": 32.44,
-      "free": 13.54,
-      "version": "3.90",
-      "home": "2ki92m"
+      "total": 85.89,
+      "max": 73.95,
+      "free": 45.63,
+      "version": "0.0.8",
+      "home": "0bl5jn"
     },
     "sys": {
-      "computerName": "deloris.schneider",
-      "computerIp": "188.87.89.33",
-      "userDir": "l2za33",
-      "osName": "deloris.schneider",
-      "osArch": "w2lq23"
+      "computerName": "jacquelynn.veum",
+      "computerIp": "97.63.215.106",
+      "userDir": "shh7id",
+      "osName": "jacquelynn.veum",
+      "osArch": "3ypysd"
     },
     "sysFiles": [
       {
-        "dirName": "deloris.schneider",
-        "sysTypeName": "deloris.schneider",
-        "typeName": "deloris.schneider",
-        "total": "85nizl",
-        "free": "g8svqg",
-        "used": "41oxxj",
-        "usage": 4.06
+        "dirName": "jacquelynn.veum",
+        "sysTypeName": "jacquelynn.veum",
+        "typeName": "jacquelynn.veum",
+        "total": "mtuc21",
+        "free": "6w4djw",
+        "used": "u0884u",
+        "usage": 27.99
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -14949,11 +14949,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "deloris.schneider",
-    "password": "nqjrh3",
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47",
-    "appId": "12"
+    "username": "jacquelynn.veum",
+    "password": "jr7hh0",
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5",
+    "appId": "74"
   }
 }'
 ```
@@ -14974,9 +14974,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q7txvf",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "l9v84u",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15007,11 +15007,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "deloris.schneider",
-    "password": "4j0lf7",
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47",
-    "appId": "12"
+    "username": "jacquelynn.veum",
+    "password": "a4vaqg",
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5",
+    "appId": "74"
   }
 }'
 ```
@@ -15037,13 +15037,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 573,
-    "token": "vd41pq",
-    "updateTime": "2025-09-05 15:45:51",
-    "expireTime": "2025-09-05 15:45:51"
+    "adminId": 182,
+    "token": "9u2634",
+    "updateTime": "2025-09-06 00:01:15",
+    "expireTime": "2025-09-06 00:01:15"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15169,60 +15169,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:51",
-      "lastTime": "2025-09-05 15:45:51",
-      "id": 481,
-      "userId": "12",
-      "deptId": 528,
-      "deptName": "deloris.schneider",
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "name": "deloris.schneider",
-      "username": "deloris.schneider",
-      "nickName": "lon.nicolas",
-      "email": "ralph.kerluke@hotmail.com",
-      "mobile": "(682) 505-7451",
-      "imagePath": "4ykyoc",
-      "password": "uu81dx",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:15",
+      "lastTime": "2025-09-06 00:01:15",
+      "id": 967,
+      "userId": "74",
+      "deptId": 52,
+      "deptName": "jacquelynn.veum",
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "name": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "nickName": "darrin.langosh",
+      "email": "jake.kunze@gmail.com",
+      "mobile": "1-484-863-9255",
+      "imagePath": "quuhy4",
+      "password": "8q7y97",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 280,
-      "delFlag": 3,
-      "lastLoginIp": "188.87.89.33",
-      "lastLoginTime": "2025-09-05 15:45:51",
-      "description": "0ot5x7",
+      "status": 831,
+      "delFlag": 4,
+      "lastLoginIp": "97.63.215.106",
+      "lastLoginTime": "2025-09-06 00:01:15",
+      "description": "fdctd1",
       "dept": {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:51",
-        "lastTime": "2025-09-05 15:45:51",
-        "id": 711,
-        "organId": "12",
-        "parentId": 361,
-        "appId": "12",
-        "depttypeId": 635,
-        "foreignId": "12",
-        "createType": 565,
-        "type": "wy1wcd",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "areaCode": "17639",
-        "organLeader": "yrj44n",
-        "leaderId": "12",
-        "leaderMobile": "(682) 505-7451",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:15",
+        "lastTime": "2025-09-06 00:01:15",
+        "id": 71,
+        "organId": "74",
+        "parentId": 280,
+        "appId": "74",
+        "depttypeId": 726,
+        "foreignId": "74",
+        "createType": 929,
+        "type": "oyuuk9",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "areaCode": "17084",
+        "organLeader": "reheak",
+        "leaderId": "74",
+        "leaderMobile": "1-484-863-9255",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "17639",
-        "imagePath": "ek7qsl",
-        "priority": 678,
-        "status": 924,
-        "delFlag": 3,
-        "description": "evpbpo",
-        "spare1": "hhgbjq",
-        "spare2": "sqxgmq",
+        "searchCode": "17084",
+        "imagePath": "az0bhn",
+        "priority": 669,
+        "status": 611,
+        "delFlag": 4,
+        "description": "ez4k19",
+        "spare1": "kyftd1",
+        "spare2": "0jh2ba",
         "children": [
           {
             "$ref": ".."
@@ -15231,54 +15231,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "12",
-          "createTime": "2025-09-05 15:45:51",
-          "lastTime": "2025-09-05 15:45:51",
-          "id": 602,
-          "roletypeId": "12",
-          "appId": "12",
-          "name": "deloris.schneider",
-          "code": "17639",
-          "priority": 783,
+          "creatorId": "74",
+          "createTime": "2025-09-06 00:01:15",
+          "lastTime": "2025-09-06 00:01:15",
+          "id": 841,
+          "roletypeId": "74",
+          "appId": "74",
+          "name": "jacquelynn.veum",
+          "code": "17084",
+          "priority": 519,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 598,
-          "description": "djc05m",
-          "areaType": "1eo6zh"
+          "status": 891,
+          "description": "zl4rpm",
+          "areaType": "w3du1e"
         }
       ],
       "roleIds": [
-        835
+        130
       ],
       "positionIds": [
-        "up2tt7"
+        "ko64c7"
       ],
-      "roleId": 15,
+      "roleId": 421,
       "userRoleList": [
         {
-          "id": 341,
-          "deptId": 189,
-          "deptName": "deloris.schneider",
-          "organId": "12",
-          "organName": "deloris.schneider",
-          "roleId": 203,
-          "roleName": "deloris.schneider",
-          "adminId": 671
+          "id": 334,
+          "deptId": 152,
+          "deptName": "jacquelynn.veum",
+          "organId": "74",
+          "organName": "jacquelynn.veum",
+          "roleId": 606,
+          "roleName": "jacquelynn.veum",
+          "adminId": 298
         }
       ],
-      "code": "17639",
-      "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+      "code": "17084",
+      "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
     },
     "roles": [
-      "hxyj7i"
+      "ov3d8s"
     ],
     "permissions": [
-      "w3bs0v"
+      "mbp0oj"
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15336,33 +15336,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "12",
-    "areaId": 111,
-    "groupId": 678,
-    "positionId": "12",
-    "tplSolution": "d5nlup",
+    "accountId": "74",
+    "areaId": 80,
+    "groupId": 811,
+    "positionId": "74",
+    "tplSolution": "r8cyjd",
     "menuList": [
       {
-        "id": 622,
-        "parentId": 445,
-        "name": "deloris.schneider",
-        "ename": "deloris.schneider",
-        "type": "gt63wn",
-        "perms": "5ybvyq",
-        "menuLevel": 586,
-        "urlType": "fm5gcu",
-        "url": "www.lynn-stehr.co",
-        "menuSeq": "87qvti",
-        "icon": "7lr58q",
-        "imagePath": "np4p9m",
-        "css": "hcpcmj",
-        "description": "subqry",
-        "todoTotalApi": "dri61i"
+        "id": 510,
+        "parentId": 519,
+        "name": "jacquelynn.veum",
+        "ename": "jacquelynn.veum",
+        "type": "wtw2ou",
+        "perms": "qcdbxw",
+        "menuLevel": 992,
+        "urlType": "4aojtg",
+        "url": "www.gonzalo-smith.com",
+        "menuSeq": "x1h2vq",
+        "icon": "k86p25",
+        "imagePath": "qflo1e",
+        "css": "jlu7w0",
+        "description": "awedm3",
+        "todoTotalApi": "2yfqs2"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15425,40 +15425,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "12",
+    "id": "74",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "9dujmb",
-    "aesKey": "8m3zsy",
-    "clientId": "12",
-    "serverUrl": "www.lynn-stehr.co",
-    "serverConf1": "x9ajp5",
+    "publicKey": "n33bc2",
+    "aesKey": "c4ce6i",
+    "clientId": "74",
+    "serverUrl": "www.gonzalo-smith.com",
+    "serverConf1": "jnmq9a",
     "appConf": {
-      "siteId": 243,
-      "appId": "12",
-      "topXzqhId": "12",
+      "siteId": 184,
+      "appId": "74",
+      "topXzqhId": "74",
       "appConfJson": {
-        "mapKey": "g2zjbl"
+        "mapKey": "h52ia2"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "bw1qfp",
+      "layout": "693549",
       "siteInfo": {
-        "id": 482,
-        "appId": "12",
-        "areaCode": "17639",
-        "path": "kzutor",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "layout": "fwir83",
-        "logoUrl": "www.lynn-stehr.co",
-        "cdnUrl": "www.lynn-stehr.co"
+        "id": 896,
+        "appId": "74",
+        "areaCode": "17084",
+        "path": "gwifey",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "layout": "x3czwf",
+        "logoUrl": "www.gonzalo-smith.com",
+        "cdnUrl": "www.gonzalo-smith.com"
       }
     }
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15488,11 +15488,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/thirdOrgan/login.do --data '{
   "data": {
-    "username": "deloris.schneider",
-    "password": "gz95ky",
-    "code": "17639",
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47",
-    "appId": "12"
+    "username": "jacquelynn.veum",
+    "password": "y4n9w5",
+    "code": "17084",
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5",
+    "appId": "74"
   }
 }'
 ```
@@ -15518,13 +15518,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 798,
-    "token": "la4kaq",
-    "updateTime": "2025-09-05 15:45:51",
-    "expireTime": "2025-09-05 15:45:51"
+    "adminId": 184,
+    "token": "ww2c4y",
+    "updateTime": "2025-09-06 00:01:15",
+    "expireTime": "2025-09-06 00:01:15"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15548,7 +15548,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=d0e3bf3f-0921-41cf-a446-2ab6e687fc47&code=17639
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?code=17084&uuid=6b47448a-2653-41ef-a90e-476a37f266d5
 ```
 **Response-fields:**
 
@@ -15567,9 +15567,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "89vpdk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "iah6ld",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15619,8 +15619,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15669,14 +15669,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "deloris.schneider",
-      "cacheKey": "r56nxe",
-      "cacheValue": "yutbg6",
-      "remark": "5agetb"
+      "cacheName": "jacquelynn.veum",
+      "cacheKey": "r7f6m7",
+      "cacheValue": "79n59s",
+      "remark": "ahykdd"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15706,7 +15706,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/deloris.schneider.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/jacquelynn.veum.do
 ```
 **Response-fields:**
 
@@ -15728,8 +15728,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15760,7 +15760,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/deloris.schneider/ro1wci.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/jacquelynn.veum/se7y7d.do
 ```
 **Response-fields:**
 
@@ -15784,13 +15784,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "deloris.schneider",
-    "cacheKey": "saki84",
-    "cacheValue": "hdz36s",
-    "remark": "bb1nn1"
+    "cacheName": "jacquelynn.veum",
+    "cacheKey": "do8aq3",
+    "cacheValue": "xw97xm",
+    "remark": "34ap89"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15820,7 +15820,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/deloris.schneider.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/jacquelynn.veum.do
 ```
 **Response-fields:**
 
@@ -15839,9 +15839,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "37tl1f",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "abwp5b",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15871,7 +15871,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/1pb7f4.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/1li6n6.do
 ```
 **Response-fields:**
 
@@ -15890,9 +15890,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qc4ytk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "t1vwd8",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15935,9 +15935,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mxqq4d",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "1d25oe",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -15981,7 +15981,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?page=1&menuId=292&currAppId=12&endTime=2025-09-05 15:44:42&menuName=deloris.schneider&visible=g7isgc&parentId=22&status=5by4kh&startTime=2025-09-05 15:44:42&menuType=4q2kgo&limit=10&delFlag=e4vahe&orderBy=628&q=8461un
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?parentId=133&menuName=jacquelynn.veum&delFlag=oyakfr&menuId=668&limit=10&currAppId=74&menuType=00w2qg&page=1&visible=c0pxtr&status=a34qpf&q=md2om7&startTime=2025-09-06 00:00:25&orderBy=398&endTime=2025-09-06 00:00:25
 ```
 **Response-fields:**
 
@@ -16038,56 +16038,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 170,
-      "menuName": "deloris.schneider",
-      "type": "m1n7gy",
-      "typeName": "deloris.schneider",
-      "parentName": "deloris.schneider",
-      "parentId": 706,
-      "priority": 609,
-      "path": "we19bn",
-      "component": "50q4fj",
-      "query": "bvdpyt",
-      "routeName": "deloris.schneider",
-      "isFrame": "e8jlue",
-      "isCache": "oh79g6",
-      "menuType": "0hmu61",
-      "menuTypeName": "deloris.schneider",
-      "visible": "zl36m5",
-      "status": "uo9san",
-      "perms": "i5ntiy",
-      "icon": "br7xet",
-      "imagePath": "0cw8kj",
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:51",
-      "lastTime": "2025-09-05 15:45:51",
+      "menuId": 818,
+      "menuName": "jacquelynn.veum",
+      "type": "85gnx8",
+      "typeName": "jacquelynn.veum",
+      "parentName": "jacquelynn.veum",
+      "parentId": 523,
+      "priority": 944,
+      "path": "02izit",
+      "component": "xu7cal",
+      "query": "kvm7jm",
+      "routeName": "jacquelynn.veum",
+      "isFrame": "im2h4n",
+      "isCache": "e0fugb",
+      "menuType": "valzgv",
+      "menuTypeName": "jacquelynn.veum",
+      "visible": "c1okyr",
+      "status": "78exr1",
+      "perms": "rhu8mw",
+      "icon": "3box26",
+      "imagePath": "lvgqt2",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:15",
+      "lastTime": "2025-09-06 00:01:15",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 962,
-      "description": "rsa2mz",
-      "listJson": "k3oy41",
-      "delFlag": 3,
+      "childNum": 701,
+      "description": "nnn0x0",
+      "listJson": "raqmmq",
+      "delFlag": 4,
       "permsList": [
         {
-          "permsName": "deloris.schneider",
-          "permsStr": "k5bqq3"
+          "permsName": "jacquelynn.veum",
+          "permsStr": "vjt0ol"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "12",
-          "parentId": "12",
-          "code": "17639",
-          "name": "deloris.schneider"
+          "id": "74",
+          "parentId": "74",
+          "code": "17084",
+          "name": "jacquelynn.veum"
         }
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16130,7 +16130,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?delFlag=mkzyjp&orderBy=426&menuId=752&menuType=fy12oy&q=lzybuu&startTime=2025-09-05 15:44:42&limit=10&visible=c60e8a&status=01wmlr&page=1&menuName=deloris.schneider&parentId=10&currAppId=12&endTime=2025-09-05 15:44:42
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?endTime=2025-09-06 00:00:25&parentId=141&menuName=jacquelynn.veum&currAppId=74&delFlag=3lg4c5&orderBy=330&menuId=108&visible=wjkhhd&menuType=mgmbzp&q=1vkksl&limit=10&page=1&startTime=2025-09-06 00:00:25&status=diw6kt
 ```
 **Response-fields:**
 
@@ -16170,27 +16170,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "sz0htb",
-    "pageNum": 849,
+    "stackTrace": "rysgdo",
+    "pageNum": 593,
     "pageSize": 10,
-    "startRow": 131,
-    "endRow": 848,
-    "total": 999,
-    "pages": 988,
+    "startRow": 651,
+    "endRow": 386,
+    "total": 148,
+    "pages": 816,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "lrcj1n",
-    "orderBy": "5p8rts",
+    "countColumn": "okzowa",
+    "orderBy": "hnmdh2",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "744k6i",
+    "dialectClass": "4kuk9n",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16220,7 +16220,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/115.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/829.do
 ```
 **Response-fields:**
 
@@ -16276,55 +16276,55 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 435,
-    "menuName": "deloris.schneider",
-    "type": "stsn5z",
-    "typeName": "deloris.schneider",
-    "parentName": "deloris.schneider",
-    "parentId": 549,
-    "priority": 313,
-    "path": "v0ma5m",
-    "component": "odhh8l",
-    "query": "o9wc6p",
-    "routeName": "deloris.schneider",
-    "isFrame": "nbwbmo",
-    "isCache": "ax8zpt",
-    "menuType": "6umze5",
-    "menuTypeName": "deloris.schneider",
-    "visible": "lb7gk4",
-    "status": "idgg9y",
-    "perms": "muao1s",
-    "icon": "09b5xo",
-    "imagePath": "eevote",
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:51",
-    "lastTime": "2025-09-05 15:45:51",
+    "menuId": 995,
+    "menuName": "jacquelynn.veum",
+    "type": "frhym3",
+    "typeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum",
+    "parentId": 782,
+    "priority": 609,
+    "path": "sxhl0d",
+    "component": "ki2f1w",
+    "query": "v1evrs",
+    "routeName": "jacquelynn.veum",
+    "isFrame": "m93xwk",
+    "isCache": "nbynwa",
+    "menuType": "198nqv",
+    "menuTypeName": "jacquelynn.veum",
+    "visible": "y5vhin",
+    "status": "c1fmyr",
+    "perms": "7audw2",
+    "icon": "fz8khg",
+    "imagePath": "jato14",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 806,
-    "description": "ajcdoh",
-    "listJson": "azzboe",
-    "delFlag": 3,
+    "childNum": 636,
+    "description": "9j86qo",
+    "listJson": "07q5mi",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "deloris.schneider",
-        "permsStr": "d1e4is"
+        "permsName": "jacquelynn.veum",
+        "permsStr": "7qlmnx"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "12",
-        "parentId": "12",
-        "code": "17639",
-        "name": "deloris.schneider"
+        "id": "74",
+        "parentId": "74",
+        "code": "17084",
+        "name": "jacquelynn.veum"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16367,7 +16367,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?menuName=deloris.schneider&page=1&status=h6r41g&parentId=316&orderBy=572&delFlag=71zhiv&menuId=179&currAppId=12&limit=10&visible=g170wz&startTime=2025-09-05 15:44:42&q=jfe7ra&endTime=2025-09-05 15:44:42&menuType=8lbfl0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?currAppId=74&orderBy=334&status=d6y88g&page=1&startTime=2025-09-06 00:00:25&visible=bsmycp&endTime=2025-09-06 00:00:25&parentId=826&limit=10&q=qvgemt&menuId=771&menuName=jacquelynn.veum&delFlag=aw0zsq&menuType=pmcmbh
 ```
 **Response-fields:**
 
@@ -16393,12 +16393,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      538
+      337
     ],
     "menus": [
       {
-        "id": 998,
-        "label": "db3rg2",
+        "id": 302,
+        "label": "hu47jg",
         "children": [
           {
             "$ref": ".."
@@ -16407,8 +16407,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16472,7 +16472,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?isProtect=true&parentNull=u5425f&parentId=421&appId=12&endTime=2025-09-05 15:44:42&imagePath=hnb37p&typeNoButton=ecorju&name=deloris.schneider&q=82l0o8&isDisabled=true&page=1&url=www.lynn-stehr.co&offset=1&startTime=2025-09-05 15:44:42&type=41sp24&menuLevel=763&subCount=122&icon=lv62i3&shortCut=f0akbr&isDisplay=true&description=5y00ty&urlType=3e0pln&appIds=53pbvo&appIds=53pbvo&menuIds=k792lk&menuIds=k792lk&parentRoot=7ot2vy&orderBy=3&spare1=g6c21u&popPosition=859&isMenuAll=bm7w6u&createTime=2025-09-05 15:44:42&limit=10&spare2=fl2j3o&isCheck=true&code=17639&delFlag=3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?limit=10&createTime=2025-09-06 00:00:25&menuLevel=757&url=www.gonzalo-smith.com&urlType=tirjuo&isCheck=true&startTime=2025-09-06 00:00:25&icon=7qut6e&description=y47cls&appId=74&offset=1&endTime=2025-09-06 00:00:25&parentId=949&typeNoButton=yjg1si&menuIds=tvbjod&menuIds=tvbjod&page=1&q=ganfmg&code=17084&subCount=35&spare2=b8yo6t&type=7osr1e&delFlag=4&isDisplay=true&isProtect=true&parentRoot=4dtg6a&isMenuAll=lnalqv&popPosition=65&name=jacquelynn.veum&imagePath=dqk8mp&shortCut=f5udmd&orderBy=818&isDisabled=true&spare1=ce46y7&appIds=m5xpgl&appIds=m5xpgl&parentNull=jz3qs7
 ```
 **Response-fields:**
 
@@ -16502,11 +16502,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "816me0",
-      "id": "12",
-      "parentId": "12",
-      "extId": "12",
-      "href": "ippmoa",
+      "title": "r4zkt1",
+      "id": "74",
+      "parentId": "74",
+      "extId": "74",
+      "href": "um89xo",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -16517,8 +16517,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16548,7 +16548,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/607.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/468.do
 ```
 **Response-fields:**
 
@@ -16574,12 +16574,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      245
+      36
     ],
     "menus": [
       {
-        "id": 372,
-        "label": "op4sgn",
+        "id": 441,
+        "label": "xvbun1",
         "children": [
           {
             "$ref": ".."
@@ -16588,8 +16588,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16657,50 +16657,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 22,
-    "menuName": "deloris.schneider",
-    "type": "cluia5",
-    "typeName": "deloris.schneider",
-    "parentName": "deloris.schneider",
-    "parentId": 517,
-    "priority": 400,
-    "path": "mojn8k",
-    "component": "zr7ypp",
-    "query": "rizz8i",
-    "routeName": "deloris.schneider",
-    "isFrame": "awmmk4",
-    "isCache": "ys2tdr",
-    "menuType": "onxeue",
-    "menuTypeName": "deloris.schneider",
-    "visible": "ojkfa9",
-    "status": "clbboj",
-    "perms": "96w88j",
-    "icon": "9qj7oz",
-    "imagePath": "rl2yk2",
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:51",
-    "lastTime": "2025-09-05 15:45:51",
+    "menuId": 525,
+    "menuName": "jacquelynn.veum",
+    "type": "4et8aq",
+    "typeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum",
+    "parentId": 66,
+    "priority": 266,
+    "path": "a8vonu",
+    "component": "3cokz6",
+    "query": "e3zgf4",
+    "routeName": "jacquelynn.veum",
+    "isFrame": "hynrw3",
+    "isCache": "xm9qce",
+    "menuType": "r496o5",
+    "menuTypeName": "jacquelynn.veum",
+    "visible": "gva9h8",
+    "status": "8ucahc",
+    "perms": "bo7w5i",
+    "icon": "5y5309",
+    "imagePath": "cds5ec",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 162,
-    "description": "f87kr5",
-    "listJson": "umnfah",
-    "delFlag": 3,
+    "childNum": 845,
+    "description": "qo8vro",
+    "listJson": "6di41j",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "deloris.schneider",
-        "permsStr": "in3iy3"
+        "permsName": "jacquelynn.veum",
+        "permsStr": "7welou"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "12",
-        "parentId": "12",
-        "code": "17639",
-        "name": "deloris.schneider"
+        "id": "74",
+        "parentId": "74",
+        "code": "17084",
+        "name": "jacquelynn.veum"
       }
     ]
   }
@@ -16723,9 +16723,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "poarre",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "v8y4vk",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16793,50 +16793,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 501,
-    "menuName": "deloris.schneider",
-    "type": "52hzw3",
-    "typeName": "deloris.schneider",
-    "parentName": "deloris.schneider",
-    "parentId": 140,
-    "priority": 191,
-    "path": "qkaef6",
-    "component": "fesu25",
-    "query": "gnujwb",
-    "routeName": "deloris.schneider",
-    "isFrame": "viege5",
-    "isCache": "f32uav",
-    "menuType": "ss5v40",
-    "menuTypeName": "deloris.schneider",
-    "visible": "a3nenl",
-    "status": "y1buhr",
-    "perms": "1r92zx",
-    "icon": "rtcdd7",
-    "imagePath": "vd83st",
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
+    "menuId": 962,
+    "menuName": "jacquelynn.veum",
+    "type": "psdf0l",
+    "typeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum",
+    "parentId": 460,
+    "priority": 252,
+    "path": "z8udg8",
+    "component": "q185uh",
+    "query": "fj4c54",
+    "routeName": "jacquelynn.veum",
+    "isFrame": "6kovp1",
+    "isCache": "l7i7pu",
+    "menuType": "wsok1a",
+    "menuTypeName": "jacquelynn.veum",
+    "visible": "hxppgm",
+    "status": "l2mm59",
+    "perms": "04f9i9",
+    "icon": "16cbay",
+    "imagePath": "6bad5t",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 124,
-    "description": "zi5fj7",
-    "listJson": "hqbr7k",
-    "delFlag": 3,
+    "childNum": 95,
+    "description": "jyf1kf",
+    "listJson": "2whimr",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "deloris.schneider",
-        "permsStr": "h3k7if"
+        "permsName": "jacquelynn.veum",
+        "permsStr": "6dnaoc"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "12",
-        "parentId": "12",
-        "code": "17639",
-        "name": "deloris.schneider"
+        "id": "74",
+        "parentId": "74",
+        "code": "17084",
+        "name": "jacquelynn.veum"
       }
     ]
   }
@@ -16859,9 +16859,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4w7k4v",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "97sinb",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -16929,50 +16929,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 910,
-    "menuName": "deloris.schneider",
-    "type": "xglefn",
-    "typeName": "deloris.schneider",
-    "parentName": "deloris.schneider",
-    "parentId": 690,
-    "priority": 4,
-    "path": "paoa1x",
-    "component": "xfv476",
-    "query": "r6dgeq",
-    "routeName": "deloris.schneider",
-    "isFrame": "4muts3",
-    "isCache": "lk62lb",
-    "menuType": "uvef69",
-    "menuTypeName": "deloris.schneider",
-    "visible": "154ekl",
-    "status": "w5v2xd",
-    "perms": "xnpalb",
-    "icon": "5kc64c",
-    "imagePath": "od5pwd",
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
+    "menuId": 829,
+    "menuName": "jacquelynn.veum",
+    "type": "5acmr8",
+    "typeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum",
+    "parentId": 948,
+    "priority": 437,
+    "path": "7v82hx",
+    "component": "utr6rp",
+    "query": "l3m5c0",
+    "routeName": "jacquelynn.veum",
+    "isFrame": "t6c8tr",
+    "isCache": "59f8uc",
+    "menuType": "fz5i3y",
+    "menuTypeName": "jacquelynn.veum",
+    "visible": "vwbgl9",
+    "status": "ryq3nu",
+    "perms": "seewx5",
+    "icon": "iqyddy",
+    "imagePath": "qc1ytr",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 125,
-    "description": "srfg7b",
-    "listJson": "buil7u",
-    "delFlag": 3,
+    "childNum": 764,
+    "description": "nsp1z2",
+    "listJson": "klqu92",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "deloris.schneider",
-        "permsStr": "o7ecnv"
+        "permsName": "jacquelynn.veum",
+        "permsStr": "k0odiq"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "12",
-        "parentId": "12",
-        "code": "17639",
-        "name": "deloris.schneider"
+        "id": "74",
+        "parentId": "74",
+        "code": "17084",
+        "name": "jacquelynn.veum"
       }
     ]
   }
@@ -16995,9 +16995,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3wt3e3",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "0vpjze",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17065,50 +17065,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 138,
-    "menuName": "deloris.schneider",
-    "type": "akpuhr",
-    "typeName": "deloris.schneider",
-    "parentName": "deloris.schneider",
-    "parentId": 934,
-    "priority": 523,
-    "path": "74oees",
-    "component": "7e2scm",
-    "query": "iycrmb",
-    "routeName": "deloris.schneider",
-    "isFrame": "3kb4pa",
-    "isCache": "unkau0",
-    "menuType": "0v89lj",
-    "menuTypeName": "deloris.schneider",
-    "visible": "lgmonw",
-    "status": "vyibuf",
-    "perms": "e6co92",
-    "icon": "idaf7c",
-    "imagePath": "5wcvvk",
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
+    "menuId": 81,
+    "menuName": "jacquelynn.veum",
+    "type": "uel4fi",
+    "typeName": "jacquelynn.veum",
+    "parentName": "jacquelynn.veum",
+    "parentId": 916,
+    "priority": 300,
+    "path": "h4l2vu",
+    "component": "xh2frn",
+    "query": "v742dq",
+    "routeName": "jacquelynn.veum",
+    "isFrame": "8n40ws",
+    "isCache": "xmdba5",
+    "menuType": "ijyzfp",
+    "menuTypeName": "jacquelynn.veum",
+    "visible": "2ofaby",
+    "status": "pghhxy",
+    "perms": "1epqyj",
+    "icon": "naitpf",
+    "imagePath": "nignuy",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 465,
-    "description": "urknbv",
-    "listJson": "l87tsr",
-    "delFlag": 3,
+    "childNum": 257,
+    "description": "mwpgfc",
+    "listJson": "dlcm3t",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "deloris.schneider",
-        "permsStr": "zx50hg"
+        "permsName": "jacquelynn.veum",
+        "permsStr": "ouhidp"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "12",
-        "parentId": "12",
-        "code": "17639",
-        "name": "deloris.schneider"
+        "id": "74",
+        "parentId": "74",
+        "code": "17084",
+        "name": "jacquelynn.veum"
       }
     ]
   }
@@ -17131,9 +17131,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gqvyfc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "lyh77w",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17182,9 +17182,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6mjwge",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "l64cjb",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17253,41 +17253,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "id": 178,
-    "parentId": 80,
-    "appId": "12",
-    "name": "deloris.schneider",
-    "ename": "deloris.schneider",
-    "sname": "deloris.schneider",
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "id": 337,
+    "parentId": 743,
+    "appId": "74",
+    "name": "jacquelynn.veum",
+    "ename": "jacquelynn.veum",
+    "sname": "jacquelynn.veum",
     "isProtect": true,
-    "type": "bs0v82",
-    "userId": "12",
-    "code": "17639",
-    "menuLevel": 166,
-    "subCount": 565,
-    "perms": "i1qtj4",
-    "urlType": "9tlh8p",
-    "url": "www.lynn-stehr.co",
-    "icon": "9mkalz",
-    "popPosition": 637,
-    "imagePath": "m8uzcv",
-    "css": "h9dtk3",
-    "jsEvent": "u0fiff",
-    "menuSeq": "5y234s",
-    "shortCut": "5yj9vk",
+    "type": "s26oiq",
+    "userId": "74",
+    "code": "17084",
+    "menuLevel": 661,
+    "subCount": 17,
+    "perms": "mgv2il",
+    "urlType": "s2h8ts",
+    "url": "www.gonzalo-smith.com",
+    "icon": "qsgcnw",
+    "popPosition": 110,
+    "imagePath": "zv2upw",
+    "css": "heivds",
+    "jsEvent": "465i24",
+    "menuSeq": "xy0qqo",
+    "shortCut": "4y8gd4",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 928,
-    "delFlag": 3,
-    "deleteTime": "2025-09-05 15:45:52",
-    "description": "1pdsze",
-    "spare1": "lcpwem",
-    "spare2": "kavo0b",
+    "priority": 781,
+    "delFlag": 4,
+    "deleteTime": "2025-09-06 00:01:16",
+    "description": "ar8137",
+    "spare1": "m79kuj",
+    "spare2": "sfk38n",
     "open": true,
     "list": [
       {
@@ -17314,9 +17314,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c0arr9",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "nhpodz",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17356,7 +17356,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleName=deloris.schneider&roleKey=0c4061&roleId=492&limit=10&q=t47e27&endTime=2025-09-05 15:44:42&page=1&orderBy=5&startTime=2025-09-05 15:44:42&status=853
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?q=wp1q95&roleName=jacquelynn.veum&page=1&startTime=2025-09-06 00:00:25&roleId=331&roleKey=nww0l8&orderBy=133&endTime=2025-09-06 00:00:25&status=43&limit=10
 ```
 **Response-fields:**
 
@@ -17398,37 +17398,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:52",
-      "lastTime": "2025-09-05 15:45:52",
-      "roleId": 418,
-      "roleName": "deloris.schneider",
-      "roleKey": "8w2ewh",
-      "roleSort": 299,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:16",
+      "lastTime": "2025-09-06 00:01:16",
+      "roleId": 854,
+      "roleName": "jacquelynn.veum",
+      "roleKey": "jrqdrj",
+      "roleSort": 398,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 744,
+      "status": 467,
       "flag": true,
       "menuIds": [
-        867
+        699
       ],
       "deptIds": [
-        504
+        988
       ],
       "permissions": [
-        "wr4ynq"
+        "ggsflc"
       ],
-      "remark": "9i13l8",
-      "parentName": "deloris.schneider",
-      "appName": "deloris.schneider",
-      "roletypeId": "12",
-      "roletypeName": "deloris.schneider",
-      "priority": 998,
+      "remark": "tu4afw",
+      "parentName": "jacquelynn.veum",
+      "appName": "jacquelynn.veum",
+      "roletypeId": "74",
+      "roletypeName": "jacquelynn.veum",
+      "priority": 152,
       "isSuper": true
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17467,7 +17467,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'limit=10&roleName=deloris.schneider&startTime=2025-09-05 15:44:42&status=790&endTime=2025-09-05 15:44:42&q=hqiead&orderBy=227&page=1&roleKey=43f3sl&roleId=283'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'limit=10&status=268&roleName=jacquelynn.veum&q=0fjbn1&roleKey=95dmbk&roleId=150&endTime=2025-09-06 00:00:25&page=1&startTime=2025-09-06 00:00:25&orderBy=697'
 ```
 **Response-fields:**
 
@@ -17486,9 +17486,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wh1wu9",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "kgqohn",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17518,7 +17518,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/515.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/289.do
 ```
 **Response-fields:**
 
@@ -17559,36 +17559,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 637,
-    "roleName": "deloris.schneider",
-    "roleKey": "t9xqtl",
-    "roleSort": 473,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "roleId": 33,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "mr0of8",
+    "roleSort": 782,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 575,
+    "status": 770,
     "flag": true,
     "menuIds": [
-      585
+      860
     ],
     "deptIds": [
-      494
+      334
     ],
     "permissions": [
-      "boqurs"
+      "2daq3z"
     ],
-    "remark": "ku9tdx",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 145,
+    "remark": "2ibpaf",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 79,
     "isSuper": true
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17641,32 +17641,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 37,
-    "roleName": "deloris.schneider",
-    "roleKey": "bzpcdm",
-    "roleSort": 398,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "roleId": 959,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "ak7fuh",
+    "roleSort": 535,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 510,
+    "status": 45,
     "flag": true,
     "menuIds": [
-      515
+      400
     ],
     "deptIds": [
-      790
+      896
     ],
     "permissions": [
-      "l5097s"
+      "7omd8d"
     ],
-    "remark": "hi18ab",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 565,
+    "remark": "3g84rb",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 717,
     "isSuper": true
   }
 }'
@@ -17688,9 +17688,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vh92we",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "pe0g5i",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17743,32 +17743,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 772,
-    "roleName": "deloris.schneider",
-    "roleKey": "pupauk",
-    "roleSort": 829,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "roleId": 267,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "8515la",
+    "roleSort": 176,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 974,
+    "status": 422,
     "flag": true,
     "menuIds": [
-      412
+      396
     ],
     "deptIds": [
-      724
+      106
     ],
     "permissions": [
-      "90g228"
+      "rtni31"
     ],
-    "remark": "9xgzjr",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 290,
+    "remark": "eqfa7z",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 510,
     "isSuper": true
   }
 }'
@@ -17790,9 +17790,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bjbfqj",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "qkgmsz",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17845,32 +17845,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 941,
-    "roleName": "deloris.schneider",
-    "roleKey": "7cfmec",
-    "roleSort": 676,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "roleId": 685,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "vzol1u",
+    "roleSort": 640,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 512,
+    "status": 927,
     "flag": true,
     "menuIds": [
-      684
+      283
     ],
     "deptIds": [
-      426
+      562
     ],
     "permissions": [
-      "7oeox3"
+      "hcl3rw"
     ],
-    "remark": "wdv73w",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 269,
+    "remark": "zvk1fh",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 162,
     "isSuper": true
   }
 }'
@@ -17892,9 +17892,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "55tti0",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "ag3hje",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -17947,32 +17947,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 823,
-    "roleName": "deloris.schneider",
-    "roleKey": "cb1arq",
-    "roleSort": 844,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:16",
+    "lastTime": "2025-09-06 00:01:16",
+    "roleId": 39,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "cvapc0",
+    "roleSort": 164,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 859,
+    "status": 444,
     "flag": true,
     "menuIds": [
-      566
+      990
     ],
     "deptIds": [
-      414
+      970
     ],
     "permissions": [
-      "zhx3ui"
+      "rb65eq"
     ],
-    "remark": "sec4ia",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 469,
+    "remark": "4e8bj6",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 645,
     "isSuper": true
   }
 }'
@@ -17994,9 +17994,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kk580c",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "y5872s",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18045,9 +18045,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f79r4x",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "a3a6j0",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18094,21 +18094,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "id": 790,
-    "roletypeId": "12",
-    "appId": "12",
-    "name": "deloris.schneider",
-    "code": "17639",
-    "priority": 749,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "id": 596,
+    "roletypeId": "74",
+    "appId": "74",
+    "name": "jacquelynn.veum",
+    "code": "17084",
+    "priority": 360,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 77,
-    "description": "np4agu",
-    "areaType": "7ahimb"
+    "status": 757,
+    "description": "2x25lq",
+    "areaType": "640xys"
   }
 }'
 ```
@@ -18129,9 +18129,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tv24m8",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "g3hheg",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18184,32 +18184,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 669,
-    "roleName": "deloris.schneider",
-    "roleKey": "peswf4",
-    "roleSort": 786,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "roleId": 550,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "epena5",
+    "roleSort": 909,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 822,
+    "status": 121,
     "flag": true,
     "menuIds": [
-      439
+      379
     ],
     "deptIds": [
-      827
+      18
     ],
     "permissions": [
-      "es2o01"
+      "7awwz2"
     ],
-    "remark": "8vei8v",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 952,
+    "remark": "gg8z8s",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 75,
     "isSuper": true
   }
 }'
@@ -18231,9 +18231,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "geiiw5",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "vkjcqk",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18286,32 +18286,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "12",
-    "createTime": "2025-09-05 15:45:52",
-    "lastTime": "2025-09-05 15:45:52",
-    "roleId": 264,
-    "roleName": "deloris.schneider",
-    "roleKey": "uu6rfd",
-    "roleSort": 275,
+    "creatorId": "74",
+    "createTime": "2025-09-06 00:01:17",
+    "lastTime": "2025-09-06 00:01:17",
+    "roleId": 741,
+    "roleName": "jacquelynn.veum",
+    "roleKey": "kmhpe9",
+    "roleSort": 224,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 246,
+    "status": 932,
     "flag": true,
     "menuIds": [
-      397
+      90
     ],
     "deptIds": [
-      397
+      216
     ],
     "permissions": [
-      "c847hf"
+      "95af9d"
     ],
-    "remark": "3lr275",
-    "parentName": "deloris.schneider",
-    "appName": "deloris.schneider",
-    "roletypeId": "12",
-    "roletypeName": "deloris.schneider",
-    "priority": 699,
+    "remark": "bk7rvk",
+    "parentName": "jacquelynn.veum",
+    "appName": "jacquelynn.veum",
+    "roletypeId": "74",
+    "roletypeName": "jacquelynn.veum",
+    "priority": 235,
     "isSuper": true
   }
 }'
@@ -18333,9 +18333,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7xool5",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "2in178",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18401,37 +18401,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:52",
-      "lastTime": "2025-09-05 15:45:52",
-      "roleId": 540,
-      "roleName": "deloris.schneider",
-      "roleKey": "1q1p4i",
-      "roleSort": 282,
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:17",
+      "lastTime": "2025-09-06 00:01:17",
+      "roleId": 989,
+      "roleName": "jacquelynn.veum",
+      "roleKey": "0ct9s6",
+      "roleSort": 156,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 70,
+      "status": 14,
       "flag": true,
       "menuIds": [
-        877
+        719
       ],
       "deptIds": [
-        473
+        622
       ],
       "permissions": [
-        "dbo24l"
+        "txe3x0"
       ],
-      "remark": "05l8np",
-      "parentName": "deloris.schneider",
-      "appName": "deloris.schneider",
-      "roletypeId": "12",
-      "roletypeName": "deloris.schneider",
-      "priority": 396,
+      "remark": "pwg2fj",
+      "parentName": "jacquelynn.veum",
+      "appName": "jacquelynn.veum",
+      "roletypeId": "74",
+      "roletypeName": "jacquelynn.veum",
+      "priority": 962,
       "isSuper": true
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18476,7 +18476,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?orderBy=165&status=pkdart&page=1&nickName=lon.nicolas&adminId=779&userId=12&endTime=2025-09-05 15:44:42&delFlag=3&email=ralph.kerluke@hotmail.com&startTime=2025-09-05 15:44:42&organId=12&username=deloris.schneider&deptId=808&limit=10&mobile=(682) 505-7451&q=5lykxb
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?startTime=2025-09-06 00:00:25&q=u2sly2&endTime=2025-09-06 00:00:25&username=jacquelynn.veum&email=jake.kunze@gmail.com&mobile=1-484-863-9255&status=jmwnhz&orderBy=767&limit=10&userId=74&deptId=971&organId=74&delFlag=4&nickName=darrin.langosh&adminId=494&page=1
 ```
 **Response-fields:**
 
@@ -18582,60 +18582,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:52",
-      "lastTime": "2025-09-05 15:45:52",
-      "id": 299,
-      "userId": "12",
-      "deptId": 226,
-      "deptName": "deloris.schneider",
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "name": "deloris.schneider",
-      "username": "deloris.schneider",
-      "nickName": "lon.nicolas",
-      "email": "ralph.kerluke@hotmail.com",
-      "mobile": "(682) 505-7451",
-      "imagePath": "miavh0",
-      "password": "lfbtp6",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:17",
+      "lastTime": "2025-09-06 00:01:17",
+      "id": 12,
+      "userId": "74",
+      "deptId": 582,
+      "deptName": "jacquelynn.veum",
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "name": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "nickName": "darrin.langosh",
+      "email": "jake.kunze@gmail.com",
+      "mobile": "1-484-863-9255",
+      "imagePath": "vu0ygw",
+      "password": "r262nd",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 362,
-      "delFlag": 3,
-      "lastLoginIp": "188.87.89.33",
-      "lastLoginTime": "2025-09-05 15:45:52",
-      "description": "bps1o7",
+      "status": 135,
+      "delFlag": 4,
+      "lastLoginIp": "97.63.215.106",
+      "lastLoginTime": "2025-09-06 00:01:17",
+      "description": "u7bukb",
       "dept": {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:52",
-        "lastTime": "2025-09-05 15:45:52",
-        "id": 900,
-        "organId": "12",
-        "parentId": 556,
-        "appId": "12",
-        "depttypeId": 900,
-        "foreignId": "12",
-        "createType": 242,
-        "type": "x3jg22",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "areaCode": "17639",
-        "organLeader": "3yrsya",
-        "leaderId": "12",
-        "leaderMobile": "(682) 505-7451",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:17",
+        "lastTime": "2025-09-06 00:01:17",
+        "id": 376,
+        "organId": "74",
+        "parentId": 914,
+        "appId": "74",
+        "depttypeId": 817,
+        "foreignId": "74",
+        "createType": 495,
+        "type": "e2hlqw",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "areaCode": "17084",
+        "organLeader": "dpmk7d",
+        "leaderId": "74",
+        "leaderMobile": "1-484-863-9255",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "17639",
-        "imagePath": "livgiq",
-        "priority": 169,
-        "status": 473,
-        "delFlag": 3,
-        "description": "2bvyi5",
-        "spare1": "sutrlt",
-        "spare2": "avpr88",
+        "searchCode": "17084",
+        "imagePath": "08ju2d",
+        "priority": 258,
+        "status": 196,
+        "delFlag": 4,
+        "description": "muk5eb",
+        "spare1": "wfrl6m",
+        "spare2": "c5nub9",
         "children": [
           {
             "$ref": ".."
@@ -18644,48 +18644,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "12",
-          "createTime": "2025-09-05 15:45:52",
-          "lastTime": "2025-09-05 15:45:52",
-          "id": 806,
-          "roletypeId": "12",
-          "appId": "12",
-          "name": "deloris.schneider",
-          "code": "17639",
-          "priority": 530,
+          "creatorId": "74",
+          "createTime": "2025-09-06 00:01:17",
+          "lastTime": "2025-09-06 00:01:17",
+          "id": 774,
+          "roletypeId": "74",
+          "appId": "74",
+          "name": "jacquelynn.veum",
+          "code": "17084",
+          "priority": 149,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 606,
-          "description": "0zu6gn",
-          "areaType": "cnldkv"
+          "status": 845,
+          "description": "3o0acr",
+          "areaType": "778jxp"
         }
       ],
       "roleIds": [
-        123
+        791
       ],
       "positionIds": [
-        "xycjqf"
+        "ww6dve"
       ],
-      "roleId": 903,
+      "roleId": 876,
       "userRoleList": [
         {
-          "id": 237,
-          "deptId": 13,
-          "deptName": "deloris.schneider",
-          "organId": "12",
-          "organName": "deloris.schneider",
-          "roleId": 912,
-          "roleName": "deloris.schneider",
-          "adminId": 375
+          "id": 951,
+          "deptId": 754,
+          "deptName": "jacquelynn.veum",
+          "organId": "74",
+          "organName": "jacquelynn.veum",
+          "roleId": 956,
+          "roleName": "jacquelynn.veum",
+          "adminId": 166
         }
       ],
-      "code": "17639",
-      "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+      "code": "17084",
+      "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18730,7 +18730,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?userId=12&status=0krem0&deptId=687&username=deloris.schneider&orderBy=221&adminId=984&organId=12&email=ralph.kerluke@hotmail.com&q=dxasea&limit=10&endTime=2025-09-05 15:44:42&page=1&startTime=2025-09-05 15:44:42&mobile=(682) 505-7451&nickName=lon.nicolas&delFlag=3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?userId=74&nickName=darrin.langosh&mobile=1-484-863-9255&endTime=2025-09-06 00:00:25&delFlag=4&organId=74&email=jake.kunze@gmail.com&adminId=697&deptId=836&orderBy=546&startTime=2025-09-06 00:00:25&page=1&username=jacquelynn.veum&q=ojpdis&status=ywoiau&limit=10
 ```
 **Response-fields:**
 
@@ -18836,60 +18836,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "12",
-      "createTime": "2025-09-05 15:45:52",
-      "lastTime": "2025-09-05 15:45:52",
-      "id": 940,
-      "userId": "12",
-      "deptId": 830,
-      "deptName": "deloris.schneider",
-      "organId": "12",
-      "organName": "deloris.schneider",
-      "name": "deloris.schneider",
-      "username": "deloris.schneider",
-      "nickName": "lon.nicolas",
-      "email": "ralph.kerluke@hotmail.com",
-      "mobile": "(682) 505-7451",
-      "imagePath": "m37m5z",
-      "password": "9j55wm",
+      "creatorId": "74",
+      "createTime": "2025-09-06 00:01:17",
+      "lastTime": "2025-09-06 00:01:17",
+      "id": 422,
+      "userId": "74",
+      "deptId": 436,
+      "deptName": "jacquelynn.veum",
+      "organId": "74",
+      "organName": "jacquelynn.veum",
+      "name": "jacquelynn.veum",
+      "username": "jacquelynn.veum",
+      "nickName": "darrin.langosh",
+      "email": "jake.kunze@gmail.com",
+      "mobile": "1-484-863-9255",
+      "imagePath": "1ag8v7",
+      "password": "rq5oi2",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 132,
-      "delFlag": 3,
-      "lastLoginIp": "188.87.89.33",
-      "lastLoginTime": "2025-09-05 15:45:52",
-      "description": "5b2wx4",
+      "status": 477,
+      "delFlag": 4,
+      "lastLoginIp": "97.63.215.106",
+      "lastLoginTime": "2025-09-06 00:01:17",
+      "description": "auflei",
       "dept": {
-        "creatorId": "12",
-        "createTime": "2025-09-05 15:45:52",
-        "lastTime": "2025-09-05 15:45:52",
-        "id": 914,
-        "organId": "12",
-        "parentId": 268,
-        "appId": "12",
-        "depttypeId": 398,
-        "foreignId": "12",
-        "createType": 310,
-        "type": "gc68fo",
-        "name": "deloris.schneider",
-        "sname": "deloris.schneider",
-        "areaCode": "17639",
-        "organLeader": "p33kaw",
-        "leaderId": "12",
-        "leaderMobile": "(682) 505-7451",
+        "creatorId": "74",
+        "createTime": "2025-09-06 00:01:17",
+        "lastTime": "2025-09-06 00:01:17",
+        "id": 573,
+        "organId": "74",
+        "parentId": 174,
+        "appId": "74",
+        "depttypeId": 899,
+        "foreignId": "74",
+        "createType": 710,
+        "type": "amyld9",
+        "name": "jacquelynn.veum",
+        "sname": "jacquelynn.veum",
+        "areaCode": "17084",
+        "organLeader": "wbtpjw",
+        "leaderId": "74",
+        "leaderMobile": "1-484-863-9255",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "17639",
-        "imagePath": "zuv0za",
-        "priority": 464,
-        "status": 466,
-        "delFlag": 3,
-        "description": "e9m6ff",
-        "spare1": "tqpy7d",
-        "spare2": "dqa22y",
+        "searchCode": "17084",
+        "imagePath": "77tdhv",
+        "priority": 908,
+        "status": 352,
+        "delFlag": 4,
+        "description": "3e3i3d",
+        "spare1": "xsat6w",
+        "spare2": "1oyz9u",
         "children": [
           {
             "$ref": ".."
@@ -18898,48 +18898,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "12",
-          "createTime": "2025-09-05 15:45:52",
-          "lastTime": "2025-09-05 15:45:52",
-          "id": 813,
-          "roletypeId": "12",
-          "appId": "12",
-          "name": "deloris.schneider",
-          "code": "17639",
-          "priority": 818,
+          "creatorId": "74",
+          "createTime": "2025-09-06 00:01:17",
+          "lastTime": "2025-09-06 00:01:17",
+          "id": 829,
+          "roletypeId": "74",
+          "appId": "74",
+          "name": "jacquelynn.veum",
+          "code": "17084",
+          "priority": 239,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 598,
-          "description": "p1k2id",
-          "areaType": "rxyy6m"
+          "status": 465,
+          "description": "p9drja",
+          "areaType": "o4530e"
         }
       ],
       "roleIds": [
-        769
+        16
       ],
       "positionIds": [
-        "ranfz3"
+        "ul42k1"
       ],
-      "roleId": 142,
+      "roleId": 667,
       "userRoleList": [
         {
-          "id": 629,
-          "deptId": 847,
-          "deptName": "deloris.schneider",
-          "organId": "12",
-          "organName": "deloris.schneider",
-          "roleId": 142,
-          "roleName": "deloris.schneider",
-          "adminId": 295
+          "id": 551,
+          "deptId": 266,
+          "deptName": "jacquelynn.veum",
+          "organId": "74",
+          "organName": "jacquelynn.veum",
+          "roleId": 189,
+          "roleName": "jacquelynn.veum",
+          "adminId": 180
         }
       ],
-      "code": "17639",
-      "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47"
+      "code": "17084",
+      "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -18974,9 +18974,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 322,
-    "roleId": 142,
-    "adminId": 585
+    "id": 851,
+    "roleId": 10,
+    "adminId": 242
   }
 }'
 ```
@@ -18997,9 +18997,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pu7dmi",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "5wxpa7",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19030,7 +19030,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=ai2uhc&adminIds=ai2uhc&roleId=952'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=5ofnm8&adminIds=5ofnm8&roleId=261'
 ```
 **Response-fields:**
 
@@ -19049,9 +19049,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "odi9lf",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "uygsvt",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19082,7 +19082,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=20f4y1&adminIds=20f4y1&roleId=651'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=qsvom5&adminIds=qsvom5&roleId=709'
 ```
 **Response-fields:**
 
@@ -19101,9 +19101,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l213it",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "siczal",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19133,7 +19133,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/356.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/855.do
 ```
 **Response-fields:**
 
@@ -19159,12 +19159,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      558
+      568
     ],
     "depts": [
       {
-        "id": 41,
-        "label": "5qbuuw",
+        "id": 580,
+        "label": "4dzby7",
         "children": [
           {
             "$ref": ".."
@@ -19173,8 +19173,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19213,7 +19213,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?cfgKey=0mqrpc&q=qdzq87&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&orderBy=847&ids=1g8xsx&ids=1g8xsx&limit=10&page=1&cfgValue=s5aedv
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?orderBy=948&q=dxzvqz&ids=7kwhhf&ids=7kwhhf&limit=10&endTime=2025-09-06 00:00:25&startTime=2025-09-06 00:00:25&cfgValue=c1o37f&page=1&cfgKey=vi1i4r
 ```
 **Response-fields:**
 
@@ -19240,19 +19240,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 261,
+    "totalCount": 284,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "svj1ps",
-        "cfgValue": "b3tmty"
+        "cfgKey": "6f7lw4",
+        "cfgValue": "uu0n6k"
       }
     ]
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19290,7 +19290,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'limit=10&orderBy=172&q=vc73ec&cfgKey=8p7dux&ids=2fq5fr&ids=2fq5fr&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&page=1&cfgValue=lph4pv'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'startTime=2025-09-06 00:00:25&orderBy=723&page=1&q=yj3zdi&cfgKey=xhh493&endTime=2025-09-06 00:00:25&ids=2r9r3o&ids=2r9r3o&cfgValue=0ng1uz&limit=10'
 ```
 **Response-fields:**
 
@@ -19309,9 +19309,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t6gzhc",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "54z7tf",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19341,7 +19341,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/1sl50h.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/mgg5fv.do
 ```
 **Response-fields:**
 
@@ -19363,11 +19363,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "roiki9",
-    "cfgValue": "kgb6y0"
+    "cfgKey": "4v9l05",
+    "cfgValue": "9qxzop"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19401,8 +19401,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "9oqy06",
-    "cfgValue": "vrfcdj"
+    "cfgKey": "doeysf",
+    "cfgValue": "ephagn"
   }
 }'
 ```
@@ -19423,9 +19423,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m5cuju",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "0syh3d",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19459,8 +19459,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "ymrsb5",
-    "cfgValue": "s3197l"
+    "cfgKey": "r86o7o",
+    "cfgValue": "p0upnj"
   }
 }'
 ```
@@ -19481,9 +19481,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "79nuyt",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "ty6vxc",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19532,9 +19532,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xv3658",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "m3evjv",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19577,9 +19577,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6sckyk",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "2xdits",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19616,9 +19616,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xbblv0",
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "data": "vj5j45",
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19653,7 +19653,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?orderBy=506&q=c3npfr&limit=10&endTime=2025-09-05 15:44:42&page=1&startTime=2025-09-05 15:44:42
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?startTime=2025-09-06 00:00:25&page=1&q=5m45f1&limit=10&orderBy=680&endTime=2025-09-06 00:00:25
 ```
 **Response-fields:**
 
@@ -19682,18 +19682,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "un1fma",
-      "deptNum": "48pjfq",
-      "peopleNum": "v4cle3",
-      "roleNum": "mvih6k",
-      "dicTypeNum": "1ctsw9",
-      "appNum": "lod8gk",
-      "fileNum": "79sa81",
-      "paramNum": "9be6pz"
+      "organNum": "wopuka",
+      "deptNum": "8o3t49",
+      "peopleNum": "qrebub",
+      "roleNum": "ghcpxb",
+      "dicTypeNum": "1ibg8n",
+      "appNum": "2ttrzf",
+      "fileNum": "akokxb",
+      "paramNum": "nadxa1"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19728,7 +19728,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?startTime=2025-09-05 15:44:42&q=oqwhpu&page=1&endTime=2025-09-05 15:44:42&limit=10&orderBy=951
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?limit=10&startTime=2025-09-06 00:00:25&endTime=2025-09-06 00:00:25&orderBy=610&q=s90ecz&page=1
 ```
 **Response-fields:**
 
@@ -19751,12 +19751,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "pp7z5v",
-      "modelNum": "9c405a"
+      "objectNum": "z6fct7",
+      "modelNum": "wq9yna"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19791,7 +19791,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?limit=10&orderBy=835&endTime=2025-09-05 15:44:42&startTime=2025-09-05 15:44:42&page=1&q=avv8ys
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?endTime=2025-09-06 00:00:25&limit=10&page=1&q=2xpp0w&orderBy=18&startTime=2025-09-06 00:00:25
 ```
 **Response-fields:**
 
@@ -19815,13 +19815,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "q40oqy",
-      "accountNum": "mbtp7c",
-      "serviceOrganNum": "h1guf2"
+      "siteNum": "zb46ab",
+      "accountNum": "0sbm2s",
+      "serviceOrganNum": "mat3l2"
     }
   ],
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19864,12 +19864,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47",
-    "img": "uk8ud3",
-    "code": "17639"
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5",
+    "img": "g36e32",
+    "code": "17084"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
@@ -19911,12 +19911,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "d0e3bf3f-0921-41cf-a446-2ab6e687fc47",
-    "img": "jca5ot",
-    "code": "17639"
+    "uuid": "6b47448a-2653-41ef-a90e-476a37f266d5",
+    "img": "rl9fq3",
+    "code": "17084"
   },
-  "requestId": "12",
-  "timestamp": "2025-09-05 15:44:42"
+  "requestId": "74",
+  "timestamp": "2025-09-06 00:00:25"
 }
 ```
 
