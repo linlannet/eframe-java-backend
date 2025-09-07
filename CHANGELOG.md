@@ -3,6 +3,7 @@
 - 更新内容：
 1. 增加http内工具类
 2. HttpContextUtils内方法增加
+3. BaseConfigWholeService内增加getByKeys，getByKeyLike等方法
 
 ### 版本号：1.1.3
 - 更新日期：2025-08-31

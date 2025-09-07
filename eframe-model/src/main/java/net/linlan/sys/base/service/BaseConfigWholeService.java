@@ -157,10 +157,6 @@ public class BaseConfigWholeService {
         return dao.getDtoById(id);
     }
 
-    public BaseConfigWhole getByKey(String key) {
-        return dao.getByKey(key);
-    }
-
     /** update value by key
      * 通过key关键字更新value信息
      * @param key   键
@@ -169,19 +165,9 @@ public class BaseConfigWholeService {
     @Transactional
     public void updateValueByKey(String key, String value) {
         dao.updateValueByKey(key, value);
-        //hcday disabled redis http 2017-10-18
-        //hcday enable redis http 2019-05-12
-        //        redisConfigService.delete(key);
     }
 
     public String getValue(String key) {
-        //        BaseConfigWhole baseConfigWhole = redisConfigService.get(key);
-        //        if(baseConfigWhole == null){
-        //            baseConfigWhole = dao.getByKey(key);
-        ////            redisConfigService.baseConfigSaveOrUpdate(baseConfigWhole);
-        //        }
-        //
-        //        return baseConfigWhole == null ? null : baseConfigWhole.getCfgValue();
         return dao.getByKey(key).getCfgKey();
     }
 
@@ -200,6 +186,32 @@ public class BaseConfigWholeService {
 
     public List<BaseConfigWhole> getByIds(List<String> ids) {
         return dao.getByIds(ids);
+    }
+
+    public BaseConfigWhole getByKey(String key) {
+        return dao.getByKey(key);
+    }
+
+    public List<BaseConfigWhole> getByKeys(List<String> keys) {
+        return dao.getByKeys(keys);
+    }
+
+    public List<BaseConfigWhole> getByKeyLike(String key) {
+        return dao.getByKeyLike(key);
+    }
+
+    public void deleteByKey(String key) {
+        if (StringUtils.isBlank(key)) {
+            return;
+        }
+        dao.deleteByKey(key);
+    }
+
+    public void deleteByKeys(List<String> keys) {
+        if (ObjectUtils.isEmpty(keys)) {
+            return;
+        }
+        dao.deleteByKeys(keys);
     }
 
 }

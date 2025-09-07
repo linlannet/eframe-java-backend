@@ -53,12 +53,12 @@ public interface BaseConfigWholeDao extends MybatisBaseDao<BaseConfigWhole> {
      */
     BaseConfigWholeDto getDtoById(String id);
 
-    /**
-     * 根据key，查询对象
+    /** 通过key和description查询对象
      * @param key 关键字
-     * @return    查询结果
+     * @param description 分类类型
+     * @return  查询结果
      */
-    BaseConfigWhole getByKey(String key);
+    BaseConfigWhole getConfigs(@Param("key") String key, @Param("description") String description);
 
     /**
      * 根据key，更新value
@@ -75,11 +75,19 @@ public interface BaseConfigWholeDao extends MybatisBaseDao<BaseConfigWhole> {
      */
     List<BaseConfigWhole> getByIds(@Param("ids") List<String> ids);
 
-    /** 通过key和description查询对象
+    /**
+     * 根据key，查询对象
      * @param key 关键字
-     * @param description 分类类型
-     * @return  查询结果
+     * @return    查询结果
      */
-    BaseConfigWhole getConfigs(@Param("key") String key, @Param("description") String description);
+    BaseConfigWhole getByKey(String key);
+
+    List<BaseConfigWhole> getByKeys(@Param("keys") List<String> keys);
+
+    List<BaseConfigWhole> getByKeyLike(@Param("key") String key);
+
+    void deleteByKey(@Param("key") String key);
+
+    void deleteByKeys(@Param("keys") List<String> keys);
 
 }

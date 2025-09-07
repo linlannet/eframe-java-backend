@@ -225,17 +225,6 @@
         WHERE CFG_ID = #{value}
     </select>
 
-    <!-- 根据key，查询value -->
-    <select id="getByKey" parameterType="string" resultMap="baseConfigWholeMap">
-        select * from BASE_CONFIG_WHOLE where CFG_KEY = #{cfg_key}
-    </select>
-
-    <select id="getByIds" parameterType="string" resultMap="baseConfigWholeMap">
-        select * from BASE_CONFIG_WHOLE where CFG_ID IN
-        <foreach item="id" collection="ids" open="(" separator="," close=")">
-            #{id}
-        </foreach>
-    </select>
     <select id="getConfigs" resultMap="baseConfigWholeMap">
         select * from BASE_CONFIG_WHOLE where CFG_KEY=#{key} and DESCRIPTION=#{description}
         <choose>
@@ -256,5 +245,41 @@
         update BASE_CONFIG_WHOLE set CFG_VALUE = #{value} where CFG_KEY = #{key}
     </update>
 
+    <select id="getByIds" parameterType="string" resultMap="baseConfigWholeMap">
+        select * from BASE_CONFIG_WHOLE where CFG_ID IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <!-- 根据key，查询value -->
+    <select id="getByKey" parameterType="string" resultMap="baseConfigWholeMap">
+        select * from BASE_CONFIG_WHOLE where CFG_KEY = #{cfg_key}
+    </select>
+
+    <select id="getByKeys" parameterType="string" resultMap="baseConfigWholeMap">
+        select * from BASE_CONFIG_WHOLE where CFG_KEY IN
+        <foreach item="key" collection="keys" open="(" separator="," close=")">
+            #{key}
+        </foreach>
+    </select>
+
+    <!-- 根据key，查询value -->
+    <select id="getByKeyLike" parameterType="string" resultMap="baseConfigWholeMap">
+        select * from BASE_CONFIG_WHOLE where CFG_KEY like concat('%',concat(#{key},'%'))
+    </select>
+
+    <delete id="deleteByKey">
+        DELETE FROM BASE_CONFIG_WHOLE
+        WHERE CFG_KEY = #{key}
+    </delete>
+
+    <delete id="deleteByKeys">
+        DELETE FROM BASE_CONFIG_WHOLE
+        WHERE CFG_KEY IN
+        <foreach item="key" collection="keys" open="(" separator="," close=")">
+            #{key}
+        </foreach>
+    </delete>
 
 </mapper>
