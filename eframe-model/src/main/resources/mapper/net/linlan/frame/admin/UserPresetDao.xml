@@ -471,40 +471,6 @@
           AND PRESET_ID = #{value}
     </select>
 
-    <select id="getByMobileAndType" resultMap="userPresetMap">
-        select *
-        from USER_PRESET
-        where MOBILE=#{mobile}
-          and TYPE=#{type}
-        <if test="areaId!=null">
-            AND BIZ_AREA_ID = #{areaId}
-        </if>
-        and DEL_FLAG=0
-    </select>
-
-
-
-
-    <update id="concatUser">
-        update MATERIAL_PEOPLE_BASE set CONN_USER_ID = #{userId}  where PEOPLE_ID=#{peopleId} and CONN_USER_ID is null
-    </update>
-
-    <insert id="addByPeopleId">
-        INSERT INTO USER_PRESET (
-        PRESET_ID, APP_ID, SAVE_SOURCE, UNIT_NAME, NAME, ID_NUM, DUTY, TELEPHONE, MOBILE, EXT_INFO1, EXT_INFO2, EXT_INFO3, NEED_INIT_USER, USER_ID, NEED_INIT_ORGAN, ORGAN_ID, TYPE, FOREIGN_URL, BIZ_TYPE, BIZ_ORGAN_ID, BIZ_AREA_ID, BIZ_GROUP_ID, BIZ_POWER, BIZ_MULTI_INFO, NEED_SET_ORGAN, NEED_SET_AREA, NEED_SET_GROUP, NEED_SET_POWER, OP_USER_ID, OP_ORGAN_ID, OP_TIME, OP_INFO, PRIORITY, CREATE_TIME, STATUS, DEL_FLAG, DATA_BATCH, DATA_VERSION, UPDATE_TIME, SYNC_MODE, SYNC_TIME, DESCRIPTION
-        )
-        SELECT
-        #{powerPresent.id}, #{powerPresent.appId}, #{powerPresent.saveSource},S.ORGAN_NAME,S.ID_NAME,S.ID_NUM, #{powerPresent.duty}, #{powerPresent.telephone},S.MOBILE, #{powerPresent.extInfo1}, #{powerPresent.extInfo2},
-        #{powerPresent.extInfo3}, #{powerPresent.needInitUser}, #{powerPresent.userId}, #{powerPresent.needInitOrgan},S.ORGAN_ID, #{powerPresent.type}, #{powerPresent.foreignUrl}, #{powerPresent.bizType},S.ORGAN_ID, #{powerPresent.bizAreaId},
-        #{powerPresent.bizGroupId}, #{powerPresent.bizPower}, #{powerPresent.bizMultiInfo}, #{powerPresent.needSetOrgan}, #{powerPresent.needSetArea}, #{powerPresent.needSetGroup}, #{powerPresent.needSetPower}, #{powerPresent.opUserId}, #{powerPresent.opOrganId}, #{powerPresent.opTime},
-        #{powerPresent.opInfo}, #{powerPresent.PRIORITY}, #{powerPresent.createTime}, #{powerPresent.status}, #{powerPresent.delFlag}, #{powerPresent.dataBatch}, #{powerPresent.dataVersion}, #{powerPresent.updateTime}, #{powerPresent.syncMode}, #{powerPresent.syncTime}, #{powerPresent.description}
-        FROM MATERIAL_PEOPLE_BASE S
-        WHERE 1=1 AND S.PEOPLE_ID IN
-        <foreach collection="ids" item="peopleId" open="(" separator="," close=")">
-            #{peopleId}
-        </foreach>
-    </insert>
-
     <select id="getPresetByMobileAndPositionId" resultMap="userPresetMap">
         select *
         from USER_PRESET
@@ -514,5 +480,17 @@
           AND DEL_FLAG=0
           limit 1
     </select>
+
+    <select id="getByMobileAndType" resultMap="userPresetMap">
+        select *
+        from USER_PRESET
+        where MOBILE=#{mobile}
+        and TYPE=#{type}
+        <if test="areaId!=null">
+            AND BIZ_AREA_ID = #{areaId}
+        </if>
+        and DEL_FLAG=0
+    </select>
+
 
 </mapper>

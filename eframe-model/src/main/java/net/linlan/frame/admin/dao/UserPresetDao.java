@@ -53,19 +53,7 @@ public interface UserPresetDao extends MybatisBaseDao<UserPreset> {
      */
     UserPresetDto getDtoById(Long id);
 
-    List<UserPreset> getByMobileAndType(@Param("mobile") String mobile, @Param("type") String type,
-                                        @Param("areaId") String areaId);
-
     void batchSave(List<UserPreset> list);
-
-    /**
-     * 关联用户
-     * @param peopleId  人员ID
-     * @param userId    用户ID
-     */
-    void concatUser(@Param("peopleId") String peopleId, @Param("userId") String userId);
-
-    void addByPeopleId(@Param("ids") String[] ids, @Param("powerPresent") UserPreset userPreset);
 
     /**
      * 是否有预置的信息
@@ -76,12 +64,13 @@ public interface UserPresetDao extends MybatisBaseDao<UserPreset> {
     UserPreset getPresetByMobileAndPositionId(@Param("mobile") String mobile,
                                               @Param("positionId") String positionId);
 
-    /**
-     * 根据手机号和类别查询
-     * @param mobile    手机号码
-     * @param type  类型
-     * @return  返回对象列表
+    /** 根据手机号和类别、地域ID查询
+     * @param mobile
+     * @param type
+     * @param areaId
+     * @return
      */
-    List<UserPreset> getByMobileAndType(@Param("mobile") String mobile, @Param("type") String type);
+    List<UserPreset> getByMobileAndType(@Param("mobile") String mobile, @Param("type") String type,
+                                        @Param("areaId") String areaId);
 
 }

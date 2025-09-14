@@ -23,6 +23,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
@@ -30,6 +31,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import net.linlan.frame.admin.constant.PresetTypeEnum;
 import net.linlan.frame.admin.dao.UserPresetDao;
 import net.linlan.frame.admin.dto.UserPresetDto;
 import net.linlan.frame.admin.entity.UserPreset;
@@ -148,6 +150,26 @@ public class UserPresetService {
      */
     public UserPresetDto getDtoById(Long id) {
         return dao.getDtoById(id);
+    }
+
+    private boolean checkAuthType(String authType) {
+        for (PresetTypeEnum presetTypeEnum : PresetTypeEnum.values()) {
+            if (presetTypeEnum.getKey().equals(authType)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public UserPreset getPresetByMobileAndPositionId(@Param("mobile") String mobile,
+                                                     @Param("positionId") String positionId) {
+        return dao.getPresetByMobileAndPositionId(mobile, positionId);
+    }
+
+    public List<UserPreset> getByMobileAndType(@Param("mobile") String mobile,
+                                               @Param("type") String type,
+                                               @Param("areaId") String areaId) {
+        return dao.getByMobileAndType(mobile, type, areaId);
     }
 
 }
