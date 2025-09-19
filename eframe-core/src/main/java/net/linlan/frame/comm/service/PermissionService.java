@@ -17,6 +17,7 @@
  */
 package net.linlan.frame.comm.service;
 
+import java.util.Objects;
 import java.util.Set;
 
 import org.springframework.stereotype.Service;
@@ -98,5 +99,22 @@ public class PermissionService {
     private boolean hasPermissions(Set<String> permissions, String permission) {
         return permissions.contains(Constants.ALL_PERMISSION)
                || permissions.contains(StringUtils.trim(permission));
+    }
+
+    /**
+     * 判断是否有相应权限
+     *
+     * @param authority 权限
+     * @return {boolean}
+     */
+    public boolean hasAuthority(Object authority) {
+        if (Objects.isNull(authority)) {
+            return false;
+        }
+        String adminType = SecurityUtils.getLoginUser().getAdminType();
+        if (adminType.equals(AdminType.ADMIN.getType())) {
+            return AdminType.ADMIN.equals(authority);
+        }
+        return AdminType.USER.equals(authority);
     }
 }

@@ -20,6 +20,7 @@ package net.linlan.frame;
 import java.util.Collection;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -124,16 +125,24 @@ public class FrameAdminUser implements UserDetails {
      */
     private Set<String>       perms;
 
+    /**
+     * 管理类型：ADMIN管理员，DEMO演示用户
+     */
+    @JsonProperty("userType")
+    private String   adminType;
+
     public FrameAdminUser() {
     }
 
     public FrameAdminUser(Long adminId, Long deptId, String username, String password, String appId,
+                          String adminType,
                           Set<String> perms) {
         this.adminId = adminId;
         this.deptId = deptId;
         this.username = username;
         this.password = password;
         this.appId = appId;
+        this.adminType = adminType;
         this.perms = perms;
         this.isSuperAdmin = false;
     }
@@ -206,6 +215,7 @@ public class FrameAdminUser implements UserDetails {
     public void setPerms(Set<String> perms) {
         this.perms = perms;
     }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -1,9 +1,9 @@
 ### 版本号：1.1.5
-- 更新日期：2025-09-14
+- 更新日期：2025-09-19
 - 更新内容：
 1. UserPresetService内新增方法
-2. 
-3. 
+2. PermissionService内新增adminType的权限判断方法
+3. FrameAdminUser内新增adminType
 
 ### 版本号：1.1.4
 - 更新日期：2025-09-05
