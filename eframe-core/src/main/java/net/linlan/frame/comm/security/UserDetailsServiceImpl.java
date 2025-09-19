@@ -75,6 +75,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     public UserDetails createLoginUser(AdminUserDto user) {
         return new FrameAdminUser(user.getId(), user.getDeptId(), user.getUsername(),
-            user.getPassword(), user.getLastAppId(), user.getAdminType(), sysPermissionService.getMenuPermission(user));
+            user.getPassword(), user.getLastAppId(), user.getAdminType(),
+            sysPermissionService.getMenuPermission(user));
     }
 }
