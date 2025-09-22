@@ -540,7 +540,8 @@ public class UploadFileService {
      *
      * @param hash : 文件hash
      * @param uploadPath : 文件上传路径
-     * @return : 文件
+     * @return 文件
+     * @throws Exception 异常
      */
     public FileInfo checkUploadImp(String hash, String uploadPath) throws Exception {
         //判断文件是否上传成功

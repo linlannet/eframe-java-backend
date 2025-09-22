@@ -289,7 +289,7 @@ public class AdminUserOpController extends BaseController {
     @Encrypt
     public ResponseResult<String> authRole(@PathVariable("adminId") Long adminId) {
         LoginUserRolesVo loginUserRolesVo = new LoginUserRolesVo();
-        AdminUserDto dto = adminUserService.selectAdminById(adminId);
+        AdminUserDto dto = adminUserService.getMoreById(adminId);
         AdminUserVo vo = null;
         if (ObjectUtils.isNotEmpty(dto)) {
             vo = (AdminUserVo) AdminUserVo.DTO.apply(dto);

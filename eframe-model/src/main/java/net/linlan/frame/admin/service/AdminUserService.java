@@ -129,7 +129,7 @@ public class AdminUserService {
      * 批量删除方法，通过ids删除对象
      * @param ids the input ids
      */
-    //@Transactional
+    @Transactional
     public void deleteByIds(Long[] ids) {
         if (ObjectUtils.isEmpty(ids)) {
             return;
@@ -137,6 +137,7 @@ public class AdminUserService {
         dao.deleteByIds(ids);
     }
 
+    @Transactional
     public void deleteByIdsWithRelation(Long[] ids) {
         if (ObjectUtils.isEmpty(ids)) {
             return;
@@ -235,8 +236,8 @@ public class AdminUserService {
      * @param username 用户名
      * @return 用户对象信息
      */
-    public AdminUserDto selectUserByUsername(String username) {
-        return dao.selectUserByUsername(username);
+    public AdminUserDto getByUsername(String username) {
+        return dao.getByUsername(username);
     }
 
     /**
@@ -245,8 +246,8 @@ public class AdminUserService {
      * @param adminId 用户LID
      * @return 用户对象信息
      */
-    public AdminUserDto selectAdminById(Long adminId) {
-        return dao.selectAdminById(adminId);
+    public AdminUserDto getMoreById(Long adminId) {
+        return dao.getMoreById(adminId);
     }
 
     /**
@@ -255,8 +256,8 @@ public class AdminUserService {
      * @param mobile 手机号
      * @return 用户对象信息
      */
-    public AdminUserDto selectUserByMobile(String mobile) {
-        return dao.selectUserByMobile(mobile);
+    public AdminUserDto getByMobile(String mobile) {
+        return dao.getByMobile(mobile);
     }
 
     /**
@@ -419,6 +420,17 @@ public class AdminUserService {
     /**
      * 重置用户密码
      *
+     * @param id 用户ID
+     * @param password 密码
+     * @return 结果
+     */
+    public int updateUserPwd(Long id, String password) {
+        return dao.updateUserPwd(id, password);
+    }
+
+    /**
+     * 重置用户密码
+     *
      * @param username 用户名
      * @param password 密码
      * @return 结果
@@ -500,4 +512,43 @@ public class AdminUserService {
         }
     }
 
+    /** find the entity by input id, return entity
+     * 对象详情方法，通过id查询对象{@link AdminUser}
+     * @param id 企业管理用户ID|1
+     * @return {@link AdminUser}
+     */
+    public AdminUser findByUserId(String id) {
+        return dao.findByUserId(id);
+    }
+
+    /**
+     * 通过用户手机查询用户
+     *
+     * @param email 邮箱地址
+     * @return 用户对象信息
+     */
+    public AdminUserDto getByEmail(String email) {
+        return dao.getByEmail(email);
+    }
+
+    /** delete the entity by input userId
+     * 删除方法，通过id删除对象
+     * @param userId 用户ID|1
+     */
+    public void deleteByUserId(String userId) {
+        AdminUser entity = findByUserId(userId);
+        if (entity != null) {
+            dao.deleteById(entity.getId());
+        }
+    }
+
+    /** delete the entity by input userId
+     * 删除方法，通过id删除对象
+     * @param adminId 用户ID|1
+     * @param ip ip|192.168.1.1
+     * @return 更新状态
+     */
+    public int updateLoginCount(Long adminId, String ip) {
+        return dao.updateLoginCount(adminId, ip);
+    }
 }

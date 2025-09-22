@@ -227,7 +227,7 @@ public class AdminLoginService {
      * @return  登录对象
      */
     public AppLoginInfo redirectLogin(String username, String encodePwd, String appId) {
-        AdminUserDto user = adminUserService.selectUserByUsername(username);
+        AdminUserDto user = adminUserService.getByUsername(username);
 
         //        UserDetails userDetails=userDetailsServiceImpl.loadUserByUsername(username);
         if (ObjectUtils.isEmpty(user)) {

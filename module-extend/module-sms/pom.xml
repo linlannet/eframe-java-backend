@@ -24,12 +24,12 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>module-extend</artifactId>
-        <version>1.1.5</version>
+        <version>1.1.6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>module-sms</artifactId>
-    <version>1.1.5</version>
+    <version>1.1.6</version>
     <packaging>jar</packaging>
     <name>module-sms</name>
     <description>

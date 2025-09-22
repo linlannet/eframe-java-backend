@@ -65,10 +65,10 @@ public interface UserPresetDao extends MybatisBaseDao<UserPreset> {
                                               @Param("positionId") String positionId);
 
     /** 根据手机号和类别、地域ID查询
-     * @param mobile
-     * @param type
-     * @param areaId
-     * @return
+     * @param mobile    手机号码
+     * @param type  类型
+     * @param areaId    手机所属地域
+     * @return 返回信息
      */
     List<UserPreset> getByMobileAndType(@Param("mobile") String mobile, @Param("type") String type,
                                         @Param("areaId") String areaId);

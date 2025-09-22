@@ -1,3 +1,12 @@
+### 版本号：1.1.6
+- 更新日期：2025-09-20
+- 更新内容：
+1. AdminUser内新增getByEmail
+2. AdminUser内findBy方法名调整，查询结果为AdminUser对象
+3. AdminUser内getBy方法名调整，查询结果为AdminUserDto对象
+4. AdminDept内增加organId、name的方法
+
+
 ### 版本号：1.1.5
 - 更新日期：2025-09-19
 - 更新内容：

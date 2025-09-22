@@ -94,7 +94,7 @@ public class AdminUserOnlineService {
         if (ObjectUtils.isEmpty(loginUser)) {
             return null;
         }
-        AdminUserDto user = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
         if (user != null) {
             AdminUserOnline sysUserOnline = new AdminUserOnline();
             sysUserOnline.setTokenId(loginUser.getToken());

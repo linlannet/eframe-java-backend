@@ -56,7 +56,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        AdminUserDto user = adminUserService.selectUserByUsername(username);
+        AdminUserDto user = adminUserService.getByUsername(username);
         if (ObjectUtils.isEmpty(user)) {
             log.info("登录用户：{} 不存在.", username);
             throw new CommonException(MessageUtils.message("user.not.exists"));

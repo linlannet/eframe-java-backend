@@ -59,7 +59,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    public List<AdminUserDto> selectAllocatedList(AdminUserParam user);
+    List<AdminUserDto> selectAllocatedList(AdminUserParam user);
 
     /**
      * 根据条件分页查询未分配用户角色列表
@@ -67,7 +67,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param user 用户信息
      * @return 用户信息集合信息
      */
-    public List<AdminUserDto> selectUnallocatedList(AdminUserParam user);
+    List<AdminUserDto> selectUnallocatedList(AdminUserParam user);
 
     /**
      * 通过用户名查询用户
@@ -75,7 +75,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param username 用户名
      * @return 用户对象信息
      */
-    public AdminUserDto selectUserByUsername(String username);
+    AdminUserDto getByUsername(String username);
 
     /**
      * 通过用户LID查询用户
@@ -83,7 +83,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param adminId 用户LID
      * @return 用户对象信息
      */
-    public AdminUserDto selectAdminById(Long adminId);
+    AdminUserDto getMoreById(Long adminId);
 
     /**
      * 通过用户手机查询用户
@@ -91,7 +91,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param mobile 手机号
      * @return 用户对象信息
      */
-    AdminUserDto selectUserByMobile(String mobile);
+    AdminUserDto getByMobile(String mobile);
 
     /**
      * 修改用户状态
@@ -100,7 +100,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param status 状态
      * @return 结果
      */
-    public int updateUserStatus(@Param("adminId") Long adminId, @Param("status") Integer status);
+    int updateUserStatus(@Param("adminId") Long adminId, @Param("status") Integer status);
 
     /**
      * 修改用户头像
@@ -109,8 +109,17 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param imagePath 头像地址
      * @return 结果
      */
-    public int updateUserImagePath(@Param("username") String username,
-                                   @Param("imagePath") String imagePath);
+    int updateUserImagePath(@Param("username") String username,
+                            @Param("imagePath") String imagePath);
+
+    /**
+     * 更新用户密码
+     *
+     * @param id 用户名
+     * @param password 密码
+     * @return 结果
+     */
+    int updateUserPwd(@Param("adminId") Long id, @Param("password") String password);
 
     /**
      * 重置用户密码
@@ -119,7 +128,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param password 密码
      * @return 结果
      */
-    public int resetUserPwd(@Param("username") String username, @Param("password") String password);
+    int resetUserPwd(@Param("username") String username, @Param("password") String password);
 
     /**
      * 通过用户LID删除用户
@@ -127,7 +136,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param adminId 用户LID
      * @return 结果
      */
-    public int deleteAdminById(Long adminId);
+    int deleteAdminById(Long adminId);
 
     /**
      * 批量删除用户信息
@@ -135,7 +144,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param adminIds 需要删除的用户LID
      * @return 结果
      */
-    public int deleteUserByIds(Long[] adminIds);
+    int deleteUserByIds(Long[] adminIds);
 
     /**
      * 校验用户名称是否唯一
@@ -143,7 +152,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param username 用户名称
      * @return 结果
      */
-    public AdminUser checkUsernameUnique(String username);
+    AdminUser checkUsernameUnique(String username);
 
     /**
      * 校验手机号码是否唯一
@@ -151,7 +160,7 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param mobile 手机号码
      * @return 结果
      */
-    public AdminUser checkMobileUnique(String mobile);
+    AdminUser checkMobileUnique(String mobile);
 
     /**
      * 校验email是否唯一
@@ -159,6 +168,12 @@ public interface AdminUserDao extends MybatisBaseDao<AdminUser> {
      * @param email 用户邮箱
      * @return 结果
      */
-    public AdminUser checkEmailUnique(String email);
+    AdminUser checkEmailUnique(String email);
+
+    AdminUserDto getByEmail(String email);
+
+    AdminUser findByUserId(String id);
+
+    int updateLoginCount(@Param("adminId") Long adminId, @Param("ip") String ip);
 
 }

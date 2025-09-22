@@ -278,7 +278,7 @@ public class AdminUserOpManager {
         for (AdminUserVo user : userList) {
             try {
                 // 验证是否存在这个用户
-                AdminUser u = adminUserService.selectUserByUsername(user.getUsername());
+                AdminUser u = adminUserService.getByUsername(user.getUsername());
                 if (ObjectUtils.isEmpty(u)) {
                     BeanValidators.validateWithException(validator, user);
                     adminDeptService.checkDeptDataScope(user.getDeptId());

@@ -290,7 +290,7 @@ public class AdminMenuManager {
         Long adminId = loginUser.getAdminId();
         List<AdminMenuVo> menus = adminMenuEntService.selectMenuTreeByAdminId(adminId);
         List<AdminBaseMenuInfo> menuList = buildMenusForAdmin(menus);
-        AdminUserDto user = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
         AppPageIndexInfo entity = new AppPageIndexInfo();
         entity.setAccountId("NULL");
         entity.setAreaId(0L);

@@ -370,27 +370,27 @@ ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL
         WHERE ADMIN_ID = #{value}
     </select>
 
-    <select id="selectUserByUsername" parameterType="String" resultMap="adminUserDtoMap">
+    <select id="getByUsername" parameterType="String" resultMap="adminUserDtoMap">
         SELECT
         B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
         , DEPT.DEPT_ID, DEPT.PARENT_ID, DEPT.SEARCH_CODE, DEPT.NAME AS DEPT_NAME, DEPT.PRIORITY, DEPT.ORGAN_LEADER, DEPT.STATUS as DEPT_STATUS
         , RO.ROLE_ID, RO.NAME, RO.CODE, RO.PRIORITY, RO.STATUS as ROLE_STATUS
         FROM ADMIN_USER B
         <include refid="commonUnionJoin"></include>
-        where B.USERNAME = #{username} and B.DEL_FLAG = 0
+        where B.USERNAME = #{value} and B.DEL_FLAG = 0
     </select>
 
-    <select id="selectUserByMobile" parameterType="String" resultMap="adminUserDtoMap">
+    <select id="getByMobile" parameterType="String" resultMap="adminUserDtoMap">
         SELECT
         B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
         , DEPT.DEPT_ID, DEPT.PARENT_ID, DEPT.SEARCH_CODE, DEPT.NAME, DEPT.PRIORITY, DEPT.ORGAN_LEADER, DEPT.STATUS as DEPT_STATUS
         , RO.ROLE_ID, RO.NAME, RO.CODE, RO.PRIORITY, RO.STATUS as ROLE_STATUS
         FROM ADMIN_USER B
         <include refid="commonUnionJoin"></include>
-        where B.MOBILE = #{mobile} and B.DEL_FLAG = 0
+        where B.MOBILE = #{value} and B.DEL_FLAG = 0
     </select>
 
-    <select id="selectAdminById" parameterType="Long" resultMap="adminUserDtoMap">
+    <select id="getMoreById" parameterType="Long" resultMap="adminUserDtoMap">
         SELECT
         B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
         , DEPT.DEPT_ID, DEPT.PARENT_ID, DEPT.SEARCH_CODE, DEPT.NAME AS DEPT_NAME, DEPT.PRIORITY, DEPT.ORGAN_LEADER, DEPT.STATUS as DEPT_STATUS
@@ -399,7 +399,7 @@ ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL
         FROM ADMIN_USER B
         LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
         <include refid="commonUnionJoin"></include>
-        where B.ADMIN_ID = #{adminId}
+        where B.ADMIN_ID = #{value}
     </select>
 
     <!-- 以下为新增特定的操作 -->
@@ -457,6 +457,10 @@ ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL
         update ADMIN_USER set IMAGE_PATH = #{imagePath} where USERNAME = #{username}
     </update>
 
+    <update id="updateUserPwd" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        update ADMIN_USER set PASSWORD = #{password} where ADMIN_ID = #{adminId}
+    </update>
+
     <update id="resetUserPwd" parameterType="net.linlan.frame.admin.entity.AdminUser">
         update ADMIN_USER set PASSWORD = #{password} where USERNAME = #{username}
     </update>
@@ -472,4 +476,27 @@ ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL
         </foreach>
     </delete>
 
+    <select id="getByEmail" parameterType="String" resultMap="adminUserDtoMap">
+        SELECT
+        B.ADMIN_ID, B.USER_ID, B.ORGAN_ID, B.DEPT_ID, B.CREATE_TYPE, B.NAME, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.IMAGE_PATH, B.ADMIN_TYPE, B.IS_SUPER_ADMIN, B.IS_AUDIT_ADMIN, B.IS_SELF_ADMIN, B.ADMIN_RANGE, B.ADMIN_PERMS, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LOGIN_COUNT, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.SPARE1, B.SPARE2
+        , DEPT.DEPT_ID, DEPT.PARENT_ID, DEPT.SEARCH_CODE, DEPT.NAME, DEPT.PRIORITY, DEPT.ORGAN_LEADER, DEPT.STATUS as DEPT_STATUS
+        , RO.ROLE_ID, RO.NAME, RO.CODE, RO.PRIORITY, RO.STATUS as ROLE_STATUS
+        FROM ADMIN_USER B
+        <include refid="commonUnionJoin"></include>
+        where B.EMAIL = #{value} and B.DEL_FLAG = 0
+    </select>
+
+    <select id="findByUserId" resultMap="adminUserMap">
+        SELECT
+            ADMIN_ID, USER_ID, ORGAN_ID, DEPT_ID, CREATE_TYPE, NAME, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, IMAGE_PATH, ADMIN_TYPE, IS_SUPER_ADMIN, IS_AUDIT_ADMIN, IS_SELF_ADMIN, ADMIN_RANGE, ADMIN_PERMS, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LOGIN_COUNT, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, SPARE1, SPARE2
+        FROM ADMIN_USER B
+        WHERE B.USER_ID = #{value}
+    </select>
+
+
+    <update id="updateLoginCount" parameterType="net.linlan.frame.admin.entity.AdminUser">
+        UPDATE ADMIN_USER
+        set LOGIN_COUNT = LOGIN_COUNT + 1, LAST_LOGIN_TIME = now(), LAST_LOGIN_IP = #{ip}
+        WHERE ADMIN_ID = #{adminId}
+    </update>
 </mapper>

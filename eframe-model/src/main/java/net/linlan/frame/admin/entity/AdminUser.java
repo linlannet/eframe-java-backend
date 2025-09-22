@@ -186,7 +186,9 @@ public class AdminUser extends BaseEntity {
         if (getId() == null) {
             setId(RandomUtils.randomLid());
         }
-
+        if (getUserId() == null) {
+            setUserId(RandomUtils.randomSid());
+        }
     }
 
     public boolean isAdmin() {

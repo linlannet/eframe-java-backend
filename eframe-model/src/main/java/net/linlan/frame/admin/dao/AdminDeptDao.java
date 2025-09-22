@@ -61,7 +61,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param dept 部门信息
      * @return 部门信息集合
      */
-    public List<AdminDept> selectDeptList(AdminDept dept);
+    List<AdminDept> selectDeptList(AdminDept dept);
 
     /**
      * 根据角色ID查询部门树信息
@@ -70,7 +70,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param deptCheckStrictly 部门树选择项是否关联显示
      * @return 选中部门列表
      */
-    public List<Long> selectDeptListByRoleId(@Param("roleId") Long roleId,
+    List<Long> selectDeptListByRoleId(@Param("roleId") Long roleId,
                                              @Param("deptCheckStrictly") boolean deptCheckStrictly);
 
     /**
@@ -79,7 +79,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param deptId 部门ID
      * @return 部门列表
      */
-    public List<AdminDept> selectChildrenDeptById(Long deptId);
+    List<AdminDept> selectChildrenDeptById(Long deptId);
 
     /**
      * 根据ID查询所有子部门（正常状态）
@@ -87,7 +87,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param deptId 部门ID
      * @return 子部门数
      */
-    public int selectNormalChildrenDeptById(Long deptId);
+    int selectNormalChildrenDeptById(Long deptId);
 
     /**
      * 是否存在子节点
@@ -95,7 +95,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param deptId 部门ID
      * @return 结果
      */
-    public int hasChildByDeptId(Long deptId);
+    int hasChildByDeptId(Long deptId);
 
     /**
      * 查询部门是否存在用户
@@ -103,7 +103,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param deptId 部门ID
      * @return 结果
      */
-    public int checkDeptExistUser(Long deptId);
+    int checkDeptExistUser(Long deptId);
 
     /**
      * 校验部门名称是否唯一
@@ -112,7 +112,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param parentId 父部门ID
      * @return 结果
      */
-    public AdminDept checkDeptNameUnique(@Param("deptName") String deptName,
+    AdminDept checkDeptNameUnique(@Param("deptName") String deptName,
                                          @Param("parentId") Long parentId);
 
     /**
@@ -121,7 +121,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param dept 部门信息
      * @return 结果
      */
-    public int insertDept(AdminDept dept);
+    int insertDept(AdminDept dept);
 
     /**
      * 修改部门信息
@@ -129,14 +129,14 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param dept 部门信息
      * @return 结果
      */
-    public int updateDept(AdminDept dept);
+    int updateDept(AdminDept dept);
 
     /**
      * 修改所在部门正常状态
      *
      * @param deptIds 部门ID组
      */
-    public void updateDeptStatusNormal(Long[] deptIds);
+    void updateDeptStatusNormal(Long[] deptIds);
 
     /**
      * 修改子元素关系
@@ -144,15 +144,15 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @param depts 子元素
      * @return 结果
      */
-    public int updateDeptChildren(@Param("depts") List<AdminDept> depts);
+    int updateDeptChildren(@Param("depts") List<AdminDept> depts);
 
     /**
-     * 删除部门管理信息
+     * 通过机构ID删除部门信息
      *
-     * @param deptId 部门ID
+     * @param organId 机构ID
      * @return 结果
      */
-    public int deleteDeptById(Long deptId);
+    int deleteByOrganId(String organId);
 
     /**
      * 获取所有部门数据
@@ -161,5 +161,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @return 结果
      */
     List<TreeNode> allDepttreeList(TreeParam treeParam);
+
+    AdminDeptDto selectDeptByName(String name);
 
 }

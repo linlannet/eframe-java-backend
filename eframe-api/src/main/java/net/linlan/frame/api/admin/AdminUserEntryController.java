@@ -103,7 +103,7 @@ public class AdminUserEntryController extends BaseController {
         LoginUserRolesPosVo loginUserRolesPosVo = new LoginUserRolesPosVo();
         if (ObjectUtils.isNotEmpty(adminId)) {
             adminUserService.checkUserDataScope(adminId);
-            AdminUserDto dto = adminUserService.selectAdminById(adminId);
+            AdminUserDto dto = adminUserService.getMoreById(adminId);
             AdminUserVo vo = null;
             if (ObjectUtils.isNotEmpty(dto)) {
                 vo = (AdminUserVo) AdminUserVo.DTO.apply(dto);

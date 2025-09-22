@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
 
+import net.linlan.frame.admin.dto.AdminUserDto;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
@@ -343,13 +344,13 @@ public class AdminDeptService {
     }
 
     /**
-     * 删除部门管理信息
+     * 通过机构ID删除部门信息
      *
-     * @param deptId 部门ID
+     * @param organId 机构ID
      * @return 结果
      */
-    public int deleteDeptById(Long deptId) {
-        return dao.deleteDeptById(deptId);
+    public int deleteByOrganId(String organId) {
+        return dao.deleteByOrganId(organId);
     }
 
     /**
@@ -440,6 +441,16 @@ public class AdminDeptService {
             }
         }
         return topNodes;
+    }
+
+    /**
+     * 通过机构名称查询机构
+     *
+     * @param name 机构名称
+     * @return 对象信息
+     */
+    public AdminDeptDto selectDeptByName(String name) {
+        return dao.selectDeptByName(name);
     }
 
 }

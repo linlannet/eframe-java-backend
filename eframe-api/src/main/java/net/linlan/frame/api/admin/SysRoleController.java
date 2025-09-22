@@ -197,7 +197,7 @@ public class SysRoleController extends BaseController {
             // 更新缓存用户权限
             FrameAdminUser loginUser = getLoginUser();
             if (ObjectUtils.isNotEmpty(loginUser)) {
-                AdminUserDto dto = adminUserService.selectUserByUsername(loginUser.getUsername());
+                AdminUserDto dto = adminUserService.getByUsername(loginUser.getUsername());
                 loginUser.setPerms(sysPermissionService.getMenuPermission(dto));
                 tokenService.setLoginUser(loginUser);
             }
@@ -249,7 +249,7 @@ public class SysRoleController extends BaseController {
             // 更新缓存用户权限
             FrameAdminUser loginUser = getLoginUser();
             if (ObjectUtils.isNotEmpty(loginUser)) {
-                AdminUserDto dto = adminUserService.selectUserByUsername(loginUser.getUsername());
+                AdminUserDto dto = adminUserService.getByUsername(loginUser.getUsername());
                 loginUser.setPerms(sysPermissionService.getMenuPermission(dto));
                 tokenService.setLoginUser(loginUser);
             }
@@ -321,7 +321,7 @@ public class SysRoleController extends BaseController {
             // 更新缓存用户权限
             FrameAdminUser loginUser = getLoginUser();
             if (ObjectUtils.isNotEmpty(loginUser)) {
-                AdminUserDto dto = adminUserService.selectUserByUsername(loginUser.getUsername());
+                AdminUserDto dto = adminUserService.getByUsername(loginUser.getUsername());
                 loginUser.setPerms(sysPermissionService.getMenuPermission(dto));
                 tokenService.setLoginUser(loginUser);
             }

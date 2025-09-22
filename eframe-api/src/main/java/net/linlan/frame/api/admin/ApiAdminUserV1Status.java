@@ -90,7 +90,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @Encrypt
     public ResponseResult<AdminUserVo> info() {
         FrameAdminUser loginUser = getLoginUser();
-        AdminUserDto currentUser = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
 
         AdminUserVo userVo = (AdminUserVo) AdminUserVo.DTO.apply(currentUser);
 
@@ -107,7 +107,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @Encrypt
     public ResponseResult<Boolean> updateProfile(@RequestBody AdminUserVo input) {
         FrameAdminUser loginUser = getLoginUser();
-        AdminUserDto currentUser = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
         if (!currentUser.getMobile().equals(input.getMobile())) {
             if (ObjectUtils.isNotEmpty(input.getMobile())
                 && !adminUserService.checkMobileUnique(input.getMobile(), input.getId())) {
@@ -146,7 +146,7 @@ public class ApiAdminUserV1Status extends BaseController {
     public ResponseResult updatePwd(@RequestBody PasswordVo vo) {
         FrameAdminUser loginUser = getLoginUser();
         String username = loginUser.getUsername();
-        AdminUserDto currentUser = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
 
         String oldPassword = vo.getOldPassword();
         String newPassword = vo.getNewPassword();

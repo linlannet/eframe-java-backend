@@ -115,7 +115,7 @@ public class SysLoginController {
     @Encrypt
     public ResponseResult<AppUserInfo> appUserInfo() {
         FrameAdminUser loginUser = getLoginUser();
-        AdminUserDto user = adminUserService.selectUserByUsername(loginUser.getUsername());
+        AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
         // 角色集合
         Set<String> roles = sysPermissionService.getRolePermission(user);
         // 权限集合
