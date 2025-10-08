@@ -135,10 +135,10 @@
             or B.PATH = #{existKey})
         </if>
         <if test='mode != null and mode == 1'>
-            AND B.APP_ID in ('COC-SS', 'COC-SE', 'COC-SM')
+            AND B.APP_ID in ('EFRAME')
         </if>
         <if test='mode != null and mode == 2'>
-            AND B.APP_ID in ('COC-SA')
+            AND B.APP_ID in ('EMIS')
         </if>
         <if test="ids != null ">
             and B.APP_ID IN

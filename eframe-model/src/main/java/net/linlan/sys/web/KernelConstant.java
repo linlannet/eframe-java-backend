@@ -50,14 +50,11 @@ public class KernelConstant {
      * default app id
      */
     public static final String  DEFAULT_APP_ID          = "PA-STAGE";
-    /**
-     * default app domain,用于判断是产品域还是工程域
-     */
-    public static final String  DEFAULT_DOMAIN          = "coc";
+
     /**
      * 缺省的产品域APP_ID前缀
      */
-    public static final String  DEFAULT_COC_PREFIX      = "COC-";
+    public static final String  DEFAULT_APP_PREFIX      = "EFRAME-";
     /**
      * default 页码
      */

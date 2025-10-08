@@ -46,8 +46,8 @@ public class KernelAdminUtils {
     /** 对params对象进行处理，确定是否需要增加appId的条件
      * 如果params内包含appId条件，则沿用原appId
      * 当条件内没有appId时，通过线程内获取当前应用的appId，然后进行处理
-     * 此时appId为产品coc域时,不对appId做任何条件处理
-     * 当传入的appId为非coc域时,此时表示,只查询此应用的相关资源,即某一个具体项目的资源
+     * 此时appId为产品域时,不对appId做任何条件处理
+     * 当传入的appId为非产品域时,此时表示,只查询此应用的相关资源,即某一个具体项目的资源
      * 如果原有params内包含appId，则覆盖，没有则添加appId的新条件
      * @param params         查询参数
      * @return 配置信息
@@ -55,7 +55,7 @@ public class KernelAdminUtils {
     public static Map<String, Object> getAppIdByEnv(Map<String, Object> params) {
         String appId = KernelThreadVariable.getBaseAppId();
         if (StringUtils.isNotBlank(appId)) {
-            if (appId.contains(KernelConstant.DEFAULT_COC_PREFIX)) {
+            if (appId.contains(KernelConstant.DEFAULT_APP_PREFIX)) {
                 //可能原params内包含appId的条件，满足产品条件时，什么都不做
             } else {
                 params.put("appId", appId);

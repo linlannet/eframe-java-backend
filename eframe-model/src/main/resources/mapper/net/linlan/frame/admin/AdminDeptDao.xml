@@ -90,6 +90,12 @@
                     <when test='orderBy == 3'>
                         ORDER BY B.PRIORITY ASC
                     </when>
+                    <when test='orderBy == 4'>
+                        ORDER BY B.PARENT_ID DESC
+                    </when>
+                    <when test='orderBy == 5'>
+                        ORDER BY B.PARENT_ID ASC
+                    </when>
                     <otherwise>
                         ORDER BY B.DEPT_ID ASC
                     </otherwise>
@@ -328,7 +334,6 @@
         , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
         , (select COUNT(DEPT_ID) from ADMIN_DEPT where PARENT_ID = B.DEPT_ID AND DEL_FLAG = 0) CHILD_NUM
         FROM ADMIN_DEPT B
-        <include refid="commonUnionJoin"></include>
         WHERE 1=1
         <include refid="commonList"></include>
         <include refid="getListOrderBy"></include>
@@ -342,14 +347,10 @@
         , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
         , (select NAME from BASE_ORGAN where ORGAN_ID = B.ORGAN_ID) ORGAN_NAME
         FROM ADMIN_DEPT B
-        <include refid="commonUnionJoin"></include>
         WHERE DEPT_ID = #{value}
     </select>
 
-    <!-- 关联表 -->
-    <sql id="commonUnionJoin">
 
-    </sql>
 
     <!-- 以下为新增特定的操作 -->
     <select id="selectDeptListByRoleId" resultType="Long">
@@ -448,13 +449,34 @@
     </delete>
 
     <!-- get dto with input id，通过ID，查询dto对象 -->
-    <select id="selectDeptByName" resultMap="adminDeptDtoMap">
+    <select id="getByName" resultMap="adminDeptDtoMap">
         SELECT
             B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
              , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
              , (select NAME from BASE_ORGAN where ORGAN_ID = B.ORGAN_ID) ORGAN_NAME
         FROM ADMIN_DEPT B
         WHERE NAME = #{value}
+    </select>
+
+    <select id="getListByParam" resultMap="adminDeptDtoMap">
+        SELECT
+        B.DEPT_ID, B.ORGAN_ID, B.PARENT_ID, B.APP_ID, B.DEPTTYPE_ID, B.FOREIGN_ID, B.CREATE_TYPE, B.TYPE, B.NAME, B.SNAME, B.AREA_CODE, B.ORGAN_LEADER, B.LEADER_ID, B.LEADER_MOBILE, B.IS_ORGAN_LEVEL, B.IS_VIRTUAL, B.IS_LEAF, B.IS_DISABLED, B.SEARCH_CODE, B.IMAGE_PATH, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , (select NAME from ADMIN_DEPT where DEPT_ID = B.PARENT_ID) PARENT_NAME
+        , (select COUNT(DEPT_ID) from ADMIN_DEPT where PARENT_ID = B.DEPT_ID AND DEL_FLAG = 0) CHILD_NUM
+        FROM ADMIN_DEPT B
+        WHERE 1=1
+        <if test="parentId != null">
+            <choose>
+                <when test="parentId == 0">
+                    AND ( B.PARENT_ID = 0 OR B.PARENT_ID IS NULL )
+                </when>
+                <otherwise>
+                    and B.PARENT_ID = #{parentId}
+                </otherwise>
+            </choose>
+        </if>
+        <include refid="getListOrderBy"></include>
+
     </select>
 
 </mapper>

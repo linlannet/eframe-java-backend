@@ -507,12 +507,11 @@
                           WHERE t1.MENU_ID = t2.MENU_ID)
     </select>
 
-
     <!-- 获取应用初始菜单 -->
     <select id="menuInitializeZtreeList" resultType="net.linlan.sys.role.dto.SysMenuTreeDto">
         SELECT A.MENU_ID AS id, A.PARENT_ID, A.APP_ID, A.NAME, 0 AS checked
         FROM SYS_MENU A
-        WHERE APP_ID IN ('COC-SS', 'COC-SE', 'COC-SM')
+        WHERE APP_ID IN ('EFRAME')
         AND DEL_FLAG = 0
         AND TYPE != 'BUTTON'
         ORDER BY APP_ID, PARENT_ID, PRIORITY ASC
@@ -523,7 +522,6 @@
         SELECT max(t.MENU_ID) as maxid FROM
             SYS_MENU t
     </select>
-
 
     <!-- 对传入的menuIds进行分割，批量保存菜单信息 -->
     <insert id="saveMenuById" parameterType="java.util.List">

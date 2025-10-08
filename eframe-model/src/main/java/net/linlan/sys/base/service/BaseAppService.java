@@ -181,8 +181,8 @@ public class BaseAppService {
     //        return params;
     //    }
 
-    //    /** 获取缺省的应用列表，可传入appId,当传入的appId为产品coc域时,返回全部应用列表,不添加appId条件
-    //     * 当传入的appId为非coc域时,此时表示,只查询此应用的相关资源,即某一个具体项目的资源
+    //    /** 获取缺省的应用列表，可传入appId,当传入的appId为产品域时,返回全部应用列表,不添加appId条件
+    //     * 当传入的appId为非产品域时,此时表示,只查询此应用的相关资源,即某一个具体项目的资源
     //     */
     //    public StringMap getAppIdByEnv(){
     //        StringMap map = new StringMap();

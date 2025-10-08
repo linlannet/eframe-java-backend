@@ -71,7 +71,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @return 选中部门列表
      */
     List<Long> selectDeptListByRoleId(@Param("roleId") Long roleId,
-                                             @Param("deptCheckStrictly") boolean deptCheckStrictly);
+                                      @Param("deptCheckStrictly") boolean deptCheckStrictly);
 
     /**
      * 根据ID查询所有子部门
@@ -113,7 +113,7 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      * @return 结果
      */
     AdminDept checkDeptNameUnique(@Param("deptName") String deptName,
-                                         @Param("parentId") Long parentId);
+                                  @Param("parentId") Long parentId);
 
     /**
      * 新增部门信息
@@ -162,6 +162,9 @@ public interface AdminDeptDao extends MybatisBaseDao<AdminDept> {
      */
     List<TreeNode> allDepttreeList(TreeParam treeParam);
 
-    AdminDeptDto selectDeptByName(String name);
+    AdminDeptDto getByName(String name);
 
+    List<AdminDeptDto> getListByParam(AdminDeptParam param);
+
+    AdminDeptDto getByOrganId(String organId);
 }

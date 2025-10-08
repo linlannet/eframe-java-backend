@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
 
-import net.linlan.frame.admin.dto.AdminUserDto;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
@@ -374,7 +373,7 @@ public class AdminDeptService {
      * @param list 部门list
      * @param t 部们
      * @return 部门列表
-     * */
+     */
     private List<AdminDept> getChildList(Page<AdminDeptDto> list, AdminDept t) {
         List<AdminDept> tlist = new ArrayList<AdminDept>();
         Iterator<AdminDeptDto> it = list.iterator();
@@ -444,13 +443,31 @@ public class AdminDeptService {
     }
 
     /**
+     * 通过机构ID查询机构
+     *
+     * @param organId 机构ID
+     * @return 对象信息
+     */
+    public AdminDeptDto getByOrganId(String organId) {
+        return dao.getByOrganId(organId);
+    }
+
+    /**
      * 通过机构名称查询机构
      *
      * @param name 机构名称
      * @return 对象信息
      */
-    public AdminDeptDto selectDeptByName(String name) {
-        return dao.selectDeptByName(name);
+    public AdminDeptDto getByName(String name) {
+        return dao.getByName(name);
+    }
+
+    /** 通过条件组合查询全部的list，返回Dto对象
+     * @param param 查询条件
+     * @return  对象列表
+     */
+    public List<AdminDeptDto> getListByParam(AdminDeptParam param) {
+        return dao.getListByParam(param);
     }
 
 }
