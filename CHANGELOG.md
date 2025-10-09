@@ -3,6 +3,7 @@
 - 更新内容：
 1. AdminDept内新增getByOrganId
 2. 更新部分方法中关于默认appId的判断
+3. 更新eframe数据库脚本名称
 
 ### 版本号：1.1.6
 - 更新日期：2025-09-20
@@ -58,7 +59,7 @@
 4. 核对自动生成的doc接口api文档
    1. [EFRAME-API-HTML](./scripts/doc/ent-frame.html)
    2. [EFRAME-API-MD](./scripts/doc/ent-frame.html.md)
-5. 增加数据库默认结构SQL  [DB_STRUCTURE](./scripts/sql/db_structure.sql)
+5. 增加数据库默认结构SQL  [DB_STRUCTURE](./scripts/sql/eframe_structure.sql)
 6. 配置代码文件增加Formatter和Licence
 
 

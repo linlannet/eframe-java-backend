@@ -60,8 +60,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -126,35 +126,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:24",
-    "lastTime": "2025-09-19 17:32:24",
-    "id": 840,
-    "organId": "118",
-    "parentId": 712,
-    "appId": "118",
-    "depttypeId": 31,
-    "foreignId": "118",
-    "createType": 834,
-    "type": "4ojtg8",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "areaCode": "9574",
-    "organLeader": "jewta1",
-    "leaderId": "118",
-    "leaderMobile": "828.254.1097",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:44",
+    "lastTime": "2025-09-22 22:45:44",
+    "id": 314,
+    "organId": "119",
+    "parentId": 537,
+    "appId": "119",
+    "depttypeId": 997,
+    "foreignId": "119",
+    "createType": 526,
+    "type": "vvs7qg",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "areaCode": "95555",
+    "organLeader": "cg33k9",
+    "leaderId": "119",
+    "leaderMobile": "724.248.1428",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "9574",
-    "imagePath": "7sqq33",
-    "priority": 675,
-    "status": 418,
-    "delFlag": 0,
-    "description": "v1betg",
-    "spare1": "izpbdb",
-    "spare2": "9jxwpq",
+    "searchCode": "95555",
+    "imagePath": "hsojbv",
+    "priority": 138,
+    "status": 869,
+    "delFlag": 2,
+    "description": "c7etov",
+    "spare1": "sxr9b0",
+    "spare2": "yryd3c",
     "children": [
       {
         "$ref": ".."
@@ -180,9 +180,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z9xzqu",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "tmc9tt",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -245,35 +245,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:24",
-    "lastTime": "2025-09-19 17:32:24",
-    "id": 349,
-    "organId": "118",
-    "parentId": 299,
-    "appId": "118",
-    "depttypeId": 878,
-    "foreignId": "118",
-    "createType": 148,
-    "type": "kjtc6m",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "areaCode": "9574",
-    "organLeader": "5b1c5u",
-    "leaderId": "118",
-    "leaderMobile": "828.254.1097",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:44",
+    "lastTime": "2025-09-22 22:45:44",
+    "id": 820,
+    "organId": "119",
+    "parentId": 103,
+    "appId": "119",
+    "depttypeId": 335,
+    "foreignId": "119",
+    "createType": 299,
+    "type": "3wefbs",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "areaCode": "95555",
+    "organLeader": "nvtzxm",
+    "leaderId": "119",
+    "leaderMobile": "724.248.1428",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "9574",
-    "imagePath": "rrnu06",
-    "priority": 780,
-    "status": 417,
-    "delFlag": 0,
-    "description": "prxl0h",
-    "spare1": "yoy1zx",
-    "spare2": "u5z62u",
+    "searchCode": "95555",
+    "imagePath": "tpvxrb",
+    "priority": 118,
+    "status": 387,
+    "delFlag": 2,
+    "description": "sygp0h",
+    "spare1": "a5nbem",
+    "spare2": "ilb6hw",
     "children": [
       {
         "$ref": ".."
@@ -299,9 +299,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0x7kve",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "d27ev4",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -351,9 +351,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "asamlx",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "8frvrd",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -416,35 +416,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:24",
-    "lastTime": "2025-09-19 17:32:24",
-    "id": 820,
-    "organId": "118",
-    "parentId": 951,
-    "appId": "118",
-    "depttypeId": 452,
-    "foreignId": "118",
-    "createType": 962,
-    "type": "dhb464",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "areaCode": "9574",
-    "organLeader": "ahoxde",
-    "leaderId": "118",
-    "leaderMobile": "828.254.1097",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:44",
+    "lastTime": "2025-09-22 22:45:44",
+    "id": 300,
+    "organId": "119",
+    "parentId": 511,
+    "appId": "119",
+    "depttypeId": 442,
+    "foreignId": "119",
+    "createType": 742,
+    "type": "mxtkb3",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "areaCode": "95555",
+    "organLeader": "ilau9p",
+    "leaderId": "119",
+    "leaderMobile": "724.248.1428",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "9574",
-    "imagePath": "mhii40",
-    "priority": 543,
-    "status": 958,
-    "delFlag": 0,
-    "description": "a12bko",
-    "spare1": "xn3ihy",
-    "spare2": "o7727z",
+    "searchCode": "95555",
+    "imagePath": "b33dwn",
+    "priority": 211,
+    "status": 510,
+    "delFlag": 2,
+    "description": "49z1cu",
+    "spare1": "saaj9c",
+    "spare2": "ul39q8",
     "children": [
       {
         "$ref": ".."
@@ -470,9 +470,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l8ou3h",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "wp4ntj",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -535,7 +535,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?depttypeId=708&status=429&isOrganLevel=true&imagePath=smdq3y&limit=10&delFlag=0&endTime=2025-09-19 17:31:32&leaderId=118&searchCode=9574&sname=cleopatra.thompson&leaderMobile=828.254.1097&parentId=825&foreignId=118&type=mbc65x&organLeader=x29g67&description=ctyxhl&name=cleopatra.thompson&creatorId=118&organId=118&spare2=h8o47z&isLeaf=true&isDisabled=true&areaCode=9574&spare1=7bsec2&createType=66&deptId=4&isVirtual=true&orderBy=550&q=r2irg7&appId=118&page=1&startTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?isOrganLevel=true&spare2=s4jyt4&startTime=2025-09-22 22:44:42&deptId=762&status=36&leaderMobile=724.248.1428&isDisabled=true&sname=pauline.robel&searchCode=95555&spare1=1qq5ku&description=z74okn&foreignId=119&isLeaf=true&leaderId=119&parentId=209&depttypeId=95&appId=119&name=pauline.robel&delFlag=2&orderBy=687&page=1&imagePath=194xsr&creatorId=119&organLeader=mzcu4o&type=jv93uy&limit=10&isVirtual=true&q=pjtz5i&areaCode=95555&createType=881&organId=119&endTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -575,27 +575,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "uent5a",
-    "pageNum": 576,
+    "stackTrace": "wlcl28",
+    "pageNum": 288,
     "pageSize": 10,
-    "startRow": 938,
-    "endRow": 710,
-    "total": 175,
-    "pages": 660,
+    "startRow": 886,
+    "endRow": 831,
+    "total": 253,
+    "pages": 583,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "0iamlr",
-    "orderBy": "fbac1g",
+    "countColumn": "qav0o7",
+    "orderBy": "xdcy72",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "ivk628",
+    "dialectClass": "vcamq1",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -657,7 +657,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?spare1=bb77ae&endTime=2025-09-19 17:31:32&appId=118&searchCode=9574&imagePath=t6oibr&sname=cleopatra.thompson&parentId=353&foreignId=118&leaderId=118&startTime=2025-09-19 17:31:32&createType=444&isVirtual=true&page=1&depttypeId=514&name=cleopatra.thompson&deptId=714&isOrganLevel=true&type=vgp598&delFlag=0&isLeaf=true&organLeader=dgom3z&organId=118&q=kmcvx9&description=t2tbvw&orderBy=582&isDisabled=true&spare2=cwi0dw&leaderMobile=828.254.1097&limit=10&status=989&areaCode=9574&creatorId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?depttypeId=246&type=xuwyww&creatorId=119&isVirtual=true&deptId=737&description=6eqfsw&startTime=2025-09-22 22:44:42&imagePath=oa4hvr&delFlag=2&parentId=380&name=pauline.robel&leaderMobile=724.248.1428&organLeader=bhpxzy&endTime=2025-09-22 22:44:42&foreignId=119&createType=774&leaderId=119&appId=119&spare2=cgxyhs&searchCode=95555&limit=10&isOrganLevel=true&isLeaf=true&sname=pauline.robel&page=1&status=815&isDisabled=true&spare1=s6vdos&q=zzvkaq&orderBy=72&areaCode=95555&organId=119
 ```
 **Response-fields:**
 
@@ -697,27 +697,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "zd8oc8",
-    "pageNum": 227,
+    "stackTrace": "lv377m",
+    "pageNum": 257,
     "pageSize": 10,
-    "startRow": 307,
-    "endRow": 848,
-    "total": 909,
-    "pages": 416,
+    "startRow": 701,
+    "endRow": 969,
+    "total": 339,
+    "pages": 32,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "6fc6bk",
-    "orderBy": "o3s4li",
+    "countColumn": "48y5sg",
+    "orderBy": "yxbps7",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "pclw5l",
+    "dialectClass": "dcsmyv",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -748,7 +748,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/564.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/333.do
 ```
 **Response-fields:**
 
@@ -801,42 +801,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 408,
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "parentId": 595,
-      "appId": "118",
-      "depttypeId": 829,
-      "foreignId": "118",
-      "createType": 4,
-      "type": "u84jq9",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "gsft09",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "id": 587,
+      "organId": "119",
+      "organName": "pauline.robel",
+      "parentId": 54,
+      "appId": "119",
+      "depttypeId": 528,
+      "foreignId": "119",
+      "createType": 878,
+      "type": "ckdcfs",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "3nzqrb",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "looez5",
-      "priority": 165,
-      "status": 68,
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:24",
-      "lastTime": "2025-09-19 17:32:24",
-      "delFlag": 0,
-      "description": "5w5l4j",
-      "spare1": "h35ejv",
-      "spare2": "ololgc",
-      "parentName": "cleopatra.thompson",
-      "childNum": "plggvu"
+      "searchCode": "95555",
+      "imagePath": "ksworp",
+      "priority": 989,
+      "status": 985,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:44",
+      "lastTime": "2025-09-22 22:45:44",
+      "delFlag": 2,
+      "description": "a36t5r",
+      "spare1": "pyhasr",
+      "spare2": "dsf3yv",
+      "parentName": "pauline.robel",
+      "childNum": "e4wt8b"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -867,7 +867,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/86.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/899.do
 ```
 **Response-fields:**
 
@@ -919,41 +919,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 371,
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "parentId": 585,
-    "appId": "118",
-    "depttypeId": 937,
-    "foreignId": "118",
-    "createType": 676,
-    "type": "qpfr0y",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "areaCode": "9574",
-    "organLeader": "fytlsu",
-    "leaderId": "118",
-    "leaderMobile": "828.254.1097",
+    "id": 130,
+    "organId": "119",
+    "organName": "pauline.robel",
+    "parentId": 829,
+    "appId": "119",
+    "depttypeId": 48,
+    "foreignId": "119",
+    "createType": 981,
+    "type": "i2bh3n",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "areaCode": "95555",
+    "organLeader": "cxeazt",
+    "leaderId": "119",
+    "leaderMobile": "724.248.1428",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "9574",
-    "imagePath": "fw7gsh",
-    "priority": 618,
-    "status": 170,
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:24",
-    "lastTime": "2025-09-19 17:32:24",
-    "delFlag": 0,
-    "description": "kai1wf",
-    "spare1": "ejwuh0",
-    "spare2": "ijkw5q",
-    "parentName": "cleopatra.thompson",
-    "childNum": "32z3uy"
+    "searchCode": "95555",
+    "imagePath": "awzoi1",
+    "priority": 354,
+    "status": 559,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:44",
+    "lastTime": "2025-09-22 22:45:44",
+    "delFlag": 2,
+    "description": "vu0czt",
+    "spare1": "f6b04e",
+    "spare2": "gz8bzf",
+    "parentName": "pauline.robel",
+    "childNum": "45b9d0"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1015,7 +1015,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?isLeaf=true&searchCode=9574&organId=118&limit=10&imagePath=m9o5u8&creatorId=118&orderBy=888&page=1&organLeader=jadxkd&isOrganLevel=true&depttypeId=280&areaCode=9574&startTime=2025-09-19 17:31:32&foreignId=118&parentId=698&name=cleopatra.thompson&createType=956&isDisabled=true&appId=118&description=9zfsgu&spare2=uz0p2k&sname=cleopatra.thompson&leaderId=118&leaderMobile=828.254.1097&q=8tm2sa&endTime=2025-09-19 17:31:32&status=977&spare1=xja260&delFlag=0&isVirtual=true&type=2rmiqz&deptId=203
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?parentId=188&foreignId=119&leaderMobile=724.248.1428&delFlag=2&isLeaf=true&sname=pauline.robel&limit=10&createType=787&areaCode=95555&spare2=jhie4h&description=b3wwab&depttypeId=468&page=1&creatorId=119&endTime=2025-09-22 22:44:42&q=8jjx0l&startTime=2025-09-22 22:44:42&organId=119&type=ab1lrv&deptId=940&isDisabled=true&organLeader=upuig2&isOrganLevel=true&leaderId=119&status=829&name=pauline.robel&appId=119&isVirtual=true&imagePath=o719ps&orderBy=98&searchCode=95555&spare1=7axc15
 ```
 **Response-fields:**
 
@@ -1045,11 +1045,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "0e02xd",
-      "id": "118",
-      "parentId": "118",
-      "extId": "118",
-      "href": "zopnh7",
+      "title": "sboxsj",
+      "id": "119",
+      "parentId": "119",
+      "extId": "119",
+      "href": "83f80s",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -1060,8 +1060,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1106,7 +1106,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?ipaddr=c9epby&browser=5mxx7b&page=1&infoId=788&status=8zaanf&endTime=2025-09-19 17:31:32&startTime=2025-09-19 17:31:32&limit=10&os=tyd3t2&q=vkxqls&msg=1en6zf&orderBy=758&username=cleopatra.thompson&loginTime=2025-09-19 17:32:30
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?q=90sxky&infoId=210&page=1&limit=10&startTime=2025-09-22 22:44:42&orderBy=34&endTime=2025-09-22 22:44:42&browser=sl0598&msg=0buv29&os=79389b&status=d7kkaz&ipaddr=uy39no&loginTime=2025-09-22 22:45:51&username=pauline.robel
 ```
 **Response-fields:**
 
@@ -1141,27 +1141,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 590,
+    "totalCount": 828,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 984,
-        "username": "cleopatra.thompson",
-        "status": "4y2lve",
-        "ipaddr": "kh8yga",
-        "loginLocation": "yauzjk",
-        "browser": "j9fz80",
-        "os": "k7lukm",
-        "msg": "ev5m4j",
-        "loginTime": "2025-09-19 17:32:30",
-        "remark": "p5bv6e"
+        "infoId": 964,
+        "username": "pauline.robel",
+        "status": "dyojw7",
+        "ipaddr": "gtd9te",
+        "loginLocation": "b0bdv1",
+        "browser": "0xwgkm",
+        "os": "8lqs9v",
+        "msg": "058f26",
+        "loginTime": "2025-09-22 22:45:51",
+        "remark": "sbqaj7"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1205,7 +1205,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'loginTime=2025-09-19 17:32:30&os=wgpbpf&orderBy=526&username=cleopatra.thompson&infoId=440&endTime=2025-09-19 17:31:32&status=k1069k&page=1&q=cdixkg&limit=10&ipaddr=nji9yj&browser=9ih9vr&msg=yojh6w&startTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'q=1819mo&infoId=360&limit=10&browser=fafna4&loginTime=2025-09-22 22:45:51&orderBy=803&status=vyfltg&startTime=2025-09-22 22:44:42&msg=zz6n2o&endTime=2025-09-22 22:44:42&ipaddr=gms28y&username=pauline.robel&os=7ic2uw&page=1'
 ```
 **Response-fields:**
 
@@ -1224,9 +1224,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0cgm3f",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4afm61",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1276,9 +1276,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kbc73q",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rqdv42",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1322,9 +1322,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "32fdwn",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ibiv9q",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1355,7 +1355,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/cleopatra.thompson.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/pauline.robel.do
 ```
 **Response-fields:**
 
@@ -1374,9 +1374,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ilwoqi",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "zjforj",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1495,60 +1495,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:25",
-    "lastTime": "2025-09-19 17:32:25",
-    "id": 285,
-    "userId": "118",
-    "deptId": 997,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "hc7nje",
-    "password": "a9ml93",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:45",
+    "lastTime": "2025-09-22 22:45:45",
+    "id": 57,
+    "userId": "119",
+    "deptId": 597,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "hy6r2g",
+    "password": "8s8o0m",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 581,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:25",
-    "description": "143hf9",
+    "status": 508,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:45",
+    "description": "hj4gxs",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 412,
-      "organId": "118",
-      "parentId": 921,
-      "appId": "118",
-      "depttypeId": 176,
-      "foreignId": "118",
-      "createType": 531,
-      "type": "ly1onx",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "c27alf",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:45",
+      "lastTime": "2025-09-22 22:45:45",
+      "id": 911,
+      "organId": "119",
+      "parentId": 256,
+      "appId": "119",
+      "depttypeId": 578,
+      "foreignId": "119",
+      "createType": 195,
+      "type": "lgjne4",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "gf69b0",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "pqsrto",
-      "priority": 278,
-      "status": 155,
-      "delFlag": 0,
-      "description": "7flvzt",
-      "spare1": "jpelr0",
-      "spare2": "yp9asx",
+      "searchCode": "95555",
+      "imagePath": "to6xx7",
+      "priority": 803,
+      "status": 374,
+      "delFlag": 2,
+      "description": "axwprd",
+      "spare1": "ytnz0w",
+      "spare2": "glzps0",
       "children": [
         {
           "$ref": ".."
@@ -1557,44 +1557,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 9,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 628,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "id": 913,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 223,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 865,
-        "description": "cyhcom",
-        "areaType": "s59fan"
+        "status": 960,
+        "description": "tdv937",
+        "areaType": "z4znic"
       }
     ],
     "roleIds": [
-      646
+      5
     ],
     "positionIds": [
-      "vzth4b"
+      "3y61lc"
     ],
-    "roleId": 720,
+    "roleId": 866,
     "userRoleList": [
       {
-        "id": 774,
-        "deptId": 809,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 766,
-        "roleName": "cleopatra.thompson",
-        "adminId": 117
+        "id": 5,
+        "deptId": 266,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 984,
+        "roleName": "pauline.robel",
+        "adminId": 567
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -1615,9 +1615,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tjbcva",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "qpti7s",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1735,60 +1735,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:25",
-    "lastTime": "2025-09-19 17:32:25",
-    "id": 228,
-    "userId": "118",
-    "deptId": 605,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "klxint",
-    "password": "2ivh87",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:45",
+    "lastTime": "2025-09-22 22:45:45",
+    "id": 812,
+    "userId": "119",
+    "deptId": 260,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "5pxr3j",
+    "password": "un9oef",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 478,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:25",
-    "description": "9n8l4e",
+    "status": 229,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:45",
+    "description": "61e63z",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 546,
-      "organId": "118",
-      "parentId": 405,
-      "appId": "118",
-      "depttypeId": 791,
-      "foreignId": "118",
-      "createType": 207,
-      "type": "n3gq7z",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "swm9s0",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:45",
+      "lastTime": "2025-09-22 22:45:45",
+      "id": 861,
+      "organId": "119",
+      "parentId": 892,
+      "appId": "119",
+      "depttypeId": 954,
+      "foreignId": "119",
+      "createType": 754,
+      "type": "m9iyji",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "zs7zph",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "vra0kq",
-      "priority": 94,
-      "status": 283,
-      "delFlag": 0,
-      "description": "mydp88",
-      "spare1": "kpjhkm",
-      "spare2": "j7pjkx",
+      "searchCode": "95555",
+      "imagePath": "z4jktz",
+      "priority": 283,
+      "status": 74,
+      "delFlag": 2,
+      "description": "ugtha6",
+      "spare1": "4mi980",
+      "spare2": "7d5cks",
       "children": [
         {
           "$ref": ".."
@@ -1797,44 +1797,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 114,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 389,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "id": 881,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 919,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 726,
-        "description": "iq9svd",
-        "areaType": "c2c7iq"
+        "status": 404,
+        "description": "7t72po",
+        "areaType": "0l27on"
       }
     ],
     "roleIds": [
-      71
+      326
     ],
     "positionIds": [
-      "h5li1i"
+      "z4d48n"
     ],
-    "roleId": 5,
+    "roleId": 554,
     "userRoleList": [
       {
-        "id": 954,
-        "deptId": 511,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 580,
-        "roleName": "cleopatra.thompson",
-        "adminId": 0
+        "id": 333,
+        "deptId": 325,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 280,
+        "roleName": "pauline.robel",
+        "adminId": 786
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -1855,9 +1855,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6xtq6l",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "drnele",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -1921,40 +1921,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:25",
-    "lastTime": "2025-09-19 17:32:25",
-    "id": 903,
-    "userId": "118",
-    "organId": "118",
-    "deptId": 913,
-    "createType": 737,
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "mobile": "828.254.1097",
-    "email": "sheree.stanton@gmail.com",
-    "password": "wncoln",
-    "salt": "l3n5xs",
-    "imagePath": "405hc9",
-    "adminType": "dpjb74",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:45",
+    "lastTime": "2025-09-22 22:45:45",
+    "id": 370,
+    "userId": "119",
+    "organId": "119",
+    "deptId": 706,
+    "createType": 678,
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "mobile": "724.248.1428",
+    "email": "leonard.grady@yahoo.com",
+    "password": "gm86wc",
+    "salt": "6m3llz",
+    "imagePath": "qlkuf5",
+    "adminType": "yl0uye",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "350qbm",
-    "adminPerms": "fxqrt5",
-    "lastAppId": "118",
-    "lastLoginTime": "2025-09-19 17:32:25",
-    "lastLoginIp": "142.83.169.77",
-    "loginCount": 898,
-    "status": 424,
-    "delFlag": 0,
-    "spare1": "yrs6ee",
-    "spare2": "u80uox",
+    "adminRange": "cf7bgj",
+    "adminPerms": "illndg",
+    "lastAppId": "119",
+    "lastLoginTime": "2025-09-22 22:45:45",
+    "lastLoginIp": "112.28.203.208",
+    "loginCount": 652,
+    "status": 332,
+    "delFlag": 2,
+    "spare1": "7pp8pj",
+    "spare2": "vwa0qv",
     "roleIds": [
-      290
+      580
     ],
     "positionIds": [
-      "0wbxkd"
+      "vyxauz"
     ]
   }
 }'
@@ -1976,9 +1976,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rg8lre",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "pws0dh",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2102,60 +2102,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:25",
-    "lastTime": "2025-09-19 17:32:25",
-    "id": 200,
-    "userId": "118",
-    "deptId": 259,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "t7v98c",
-    "password": "asusvm",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:45",
+    "lastTime": "2025-09-22 22:45:45",
+    "id": 548,
+    "userId": "119",
+    "deptId": 331,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "kmka6u",
+    "password": "gns0jh",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 588,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:25",
-    "description": "semrbr",
+    "status": 521,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:45",
+    "description": "n3sa5c",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 26,
-      "organId": "118",
-      "parentId": 148,
-      "appId": "118",
-      "depttypeId": 482,
-      "foreignId": "118",
-      "createType": 298,
-      "type": "z9ls6z",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "19s0zo",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:45",
+      "lastTime": "2025-09-22 22:45:45",
+      "id": 890,
+      "organId": "119",
+      "parentId": 710,
+      "appId": "119",
+      "depttypeId": 713,
+      "foreignId": "119",
+      "createType": 201,
+      "type": "wdpdc2",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "qbn4ak",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "i9zlf1",
-      "priority": 245,
-      "status": 232,
-      "delFlag": 0,
-      "description": "mff8rh",
-      "spare1": "tooy09",
-      "spare2": "in8353",
+      "searchCode": "95555",
+      "imagePath": "znptzc",
+      "priority": 196,
+      "status": 680,
+      "delFlag": 2,
+      "description": "xyon9t",
+      "spare1": "5xthcn",
+      "spare2": "x9llql",
       "children": [
         {
           "$ref": ".."
@@ -2164,44 +2164,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 166,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 580,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "id": 179,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 789,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 779,
-        "description": "101bsy",
-        "areaType": "lgnf2o"
+        "status": 562,
+        "description": "fq8qye",
+        "areaType": "hf8glf"
       }
     ],
     "roleIds": [
-      382
+      944
     ],
     "positionIds": [
-      "uc36ug"
+      "5c7ems"
     ],
-    "roleId": 440,
+    "roleId": 836,
     "userRoleList": [
       {
-        "id": 596,
-        "deptId": 884,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 724,
-        "roleName": "cleopatra.thompson",
-        "adminId": 768
+        "id": 635,
+        "deptId": 432,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 202,
+        "roleName": "pauline.robel",
+        "adminId": 199
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -2222,9 +2222,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zmomgr",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "q8qyzi",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2274,9 +2274,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "eszb7f",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "8rwyec",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2322,7 +2322,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'status=cjhw15&mobile=828.254.1097&q=xax7r3&limit=10&username=cleopatra.thompson&deptId=319&nickName=maribeth.rutherford&adminId=721&page=1&delFlag=0&startTime=2025-09-19 17:31:32&organId=118&userId=118&email=sheree.stanton@gmail.com&orderBy=753&endTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'orderBy=363&page=1&limit=10&status=9kbirc&endTime=2025-09-22 22:44:42&delFlag=2&email=leonard.grady@yahoo.com&nickName=heriberto.bahringer&organId=119&q=hd5gsq&mobile=724.248.1428&userId=119&username=pauline.robel&startTime=2025-09-22 22:44:42&adminId=6&deptId=775'
 ```
 **Response-fields:**
 
@@ -2341,9 +2341,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oihwfu",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "gpqy5g",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2394,9 +2394,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8yinho",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "7a0785",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2440,9 +2440,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "j6fq78",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "c0k0ec",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2560,60 +2560,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:25",
-    "lastTime": "2025-09-19 17:32:25",
-    "id": 106,
-    "userId": "118",
-    "deptId": 953,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "1geztn",
-    "password": "f1e7sf",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:46",
+    "lastTime": "2025-09-22 22:45:46",
+    "id": 248,
+    "userId": "119",
+    "deptId": 674,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "47sg89",
+    "password": "3ca4ae",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 92,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:25",
-    "description": "ttis5b",
+    "status": 791,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:46",
+    "description": "f4axcf",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 645,
-      "organId": "118",
-      "parentId": 845,
-      "appId": "118",
-      "depttypeId": 980,
-      "foreignId": "118",
-      "createType": 759,
-      "type": "ucepf3",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "pg3wdd",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:46",
+      "lastTime": "2025-09-22 22:45:46",
+      "id": 16,
+      "organId": "119",
+      "parentId": 825,
+      "appId": "119",
+      "depttypeId": 611,
+      "foreignId": "119",
+      "createType": 838,
+      "type": "ylaf2g",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "nktfyw",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "qmj0r5",
-      "priority": 614,
-      "status": 279,
-      "delFlag": 0,
-      "description": "buzdwz",
-      "spare1": "fh2q4b",
-      "spare2": "5u8ef2",
+      "searchCode": "95555",
+      "imagePath": "mrlies",
+      "priority": 668,
+      "status": 219,
+      "delFlag": 2,
+      "description": "2nj2qc",
+      "spare1": "dkrwk0",
+      "spare2": "eka47x",
       "children": [
         {
           "$ref": ".."
@@ -2622,44 +2622,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 602,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 923,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:46",
+        "lastTime": "2025-09-22 22:45:46",
+        "id": 767,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 30,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 938,
-        "description": "btckox",
-        "areaType": "mg9zth"
+        "status": 935,
+        "description": "bjn3o5",
+        "areaType": "8chwhc"
       }
     ],
     "roleIds": [
-      665
+      66
     ],
     "positionIds": [
-      "4kiz3i"
+      "8d0yqe"
     ],
-    "roleId": 263,
+    "roleId": 215,
     "userRoleList": [
       {
-        "id": 921,
-        "deptId": 366,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 853,
-        "roleName": "cleopatra.thompson",
-        "adminId": 143
+        "id": 876,
+        "deptId": 544,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 868,
+        "roleName": "pauline.robel",
+        "adminId": 782
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -2680,9 +2680,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qohm0f",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "7qcadv",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2800,60 +2800,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:26",
-    "lastTime": "2025-09-19 17:32:26",
-    "id": 425,
-    "userId": "118",
-    "deptId": 665,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "di5mat",
-    "password": "3boepy",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:46",
+    "lastTime": "2025-09-22 22:45:46",
+    "id": 27,
+    "userId": "119",
+    "deptId": 395,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "0x9jdu",
+    "password": "nfgiud",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 664,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:26",
-    "description": "jl1i9f",
+    "status": 322,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:46",
+    "description": "odgokc",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:26",
-      "lastTime": "2025-09-19 17:32:26",
-      "id": 213,
-      "organId": "118",
-      "parentId": 391,
-      "appId": "118",
-      "depttypeId": 740,
-      "foreignId": "118",
-      "createType": 611,
-      "type": "wwqq4j",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "g3h95y",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:46",
+      "lastTime": "2025-09-22 22:45:46",
+      "id": 725,
+      "organId": "119",
+      "parentId": 21,
+      "appId": "119",
+      "depttypeId": 599,
+      "foreignId": "119",
+      "createType": 749,
+      "type": "j7xrog",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "ng6nsf",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "zfhy2e",
-      "priority": 657,
-      "status": 773,
-      "delFlag": 0,
-      "description": "2wgzwf",
-      "spare1": "sjl2v2",
-      "spare2": "ktrrtg",
+      "searchCode": "95555",
+      "imagePath": "al89gb",
+      "priority": 33,
+      "status": 62,
+      "delFlag": 2,
+      "description": "0rn4ed",
+      "spare1": "3fcfiz",
+      "spare2": "6zgltc",
       "children": [
         {
           "$ref": ".."
@@ -2862,44 +2862,44 @@ curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${to
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:26",
-        "lastTime": "2025-09-19 17:32:26",
-        "id": 81,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 715,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:46",
+        "lastTime": "2025-09-22 22:45:46",
+        "id": 604,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 342,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 319,
-        "description": "buva9i",
-        "areaType": "yf3a4y"
+        "status": 743,
+        "description": "023us5",
+        "areaType": "wyhk24"
       }
     ],
     "roleIds": [
-      447
+      822
     ],
     "positionIds": [
-      "rr2o2z"
+      "yahx02"
     ],
-    "roleId": 237,
+    "roleId": 493,
     "userRoleList": [
       {
-        "id": 465,
-        "deptId": 767,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 631,
-        "roleName": "cleopatra.thompson",
-        "adminId": 602
+        "id": 680,
+        "deptId": 482,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 321,
+        "roleName": "pauline.robel",
+        "adminId": 650
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -2920,9 +2920,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m6k6ac",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "lg12ra",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -2953,7 +2953,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/322.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/135.do
 ```
 **Response-fields:**
 
@@ -2972,9 +2972,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "o4v7iv",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "gavp49",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3006,7 +3006,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=19pkmr&roleIds=19pkmr&adminId=117'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=908&roleIds=zq1rrj&roleIds=zq1rrj'
 ```
 **Response-fields:**
 
@@ -3025,9 +3025,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gifqgs",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "2x598o",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3074,7 +3074,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?userId=118&endTime=2025-09-19 17:31:32&adminId=420&orderBy=937&mobile=828.254.1097&startTime=2025-09-19 17:31:32&page=1&email=sheree.stanton@gmail.com&nickName=maribeth.rutherford&q=1hjgye&delFlag=0&organId=118&status=uuuarb&limit=10&username=cleopatra.thompson&deptId=489
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?q=mkgznt&userId=119&orderBy=438&startTime=2025-09-22 22:44:42&endTime=2025-09-22 22:44:42&adminId=398&organId=119&page=1&email=leonard.grady@yahoo.com&mobile=724.248.1428&username=pauline.robel&status=r20j90&delFlag=2&deptId=488&nickName=heriberto.bahringer&limit=10
 ```
 **Response-fields:**
 
@@ -3180,60 +3180,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 2,
-      "userId": "118",
-      "deptId": 73,
-      "deptName": "cleopatra.thompson",
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "name": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "nickName": "maribeth.rutherford",
-      "email": "sheree.stanton@gmail.com",
-      "mobile": "828.254.1097",
-      "imagePath": "t9y9mi",
-      "password": "diy391",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:45",
+      "lastTime": "2025-09-22 22:45:45",
+      "id": 71,
+      "userId": "119",
+      "deptId": 210,
+      "deptName": "pauline.robel",
+      "organId": "119",
+      "organName": "pauline.robel",
+      "name": "pauline.robel",
+      "username": "pauline.robel",
+      "nickName": "heriberto.bahringer",
+      "email": "leonard.grady@yahoo.com",
+      "mobile": "724.248.1428",
+      "imagePath": "8n3vqj",
+      "password": "njc65x",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 846,
-      "delFlag": 0,
-      "lastLoginIp": "142.83.169.77",
-      "lastLoginTime": "2025-09-19 17:32:25",
-      "description": "3d3mz5",
+      "status": 592,
+      "delFlag": 2,
+      "lastLoginIp": "112.28.203.208",
+      "lastLoginTime": "2025-09-22 22:45:45",
+      "description": "6c10kp",
       "dept": {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 453,
-        "organId": "118",
-        "parentId": 302,
-        "appId": "118",
-        "depttypeId": 596,
-        "foreignId": "118",
-        "createType": 18,
-        "type": "2swde7",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "areaCode": "9574",
-        "organLeader": "jk5ohp",
-        "leaderId": "118",
-        "leaderMobile": "828.254.1097",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "id": 885,
+        "organId": "119",
+        "parentId": 836,
+        "appId": "119",
+        "depttypeId": 11,
+        "foreignId": "119",
+        "createType": 2,
+        "type": "wt818x",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "areaCode": "95555",
+        "organLeader": "pfgc6c",
+        "leaderId": "119",
+        "leaderMobile": "724.248.1428",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "9574",
-        "imagePath": "6kqe3u",
-        "priority": 265,
-        "status": 261,
-        "delFlag": 0,
-        "description": "idtk7t",
-        "spare1": "wexbji",
-        "spare2": "x2db07",
+        "searchCode": "95555",
+        "imagePath": "se38b7",
+        "priority": 467,
+        "status": 0,
+        "delFlag": 2,
+        "description": "on31hd",
+        "spare1": "h17gu4",
+        "spare2": "ozuwtr",
         "children": [
           {
             "$ref": ".."
@@ -3242,48 +3242,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "118",
-          "createTime": "2025-09-19 17:32:25",
-          "lastTime": "2025-09-19 17:32:25",
-          "id": 908,
-          "roletypeId": "118",
-          "appId": "118",
-          "name": "cleopatra.thompson",
-          "code": "9574",
-          "priority": 525,
+          "creatorId": "119",
+          "createTime": "2025-09-22 22:45:45",
+          "lastTime": "2025-09-22 22:45:45",
+          "id": 344,
+          "roletypeId": "119",
+          "appId": "119",
+          "name": "pauline.robel",
+          "code": "95555",
+          "priority": 999,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 266,
-          "description": "8oyp1a",
-          "areaType": "767ijk"
+          "status": 690,
+          "description": "uq7jn0",
+          "areaType": "msxivs"
         }
       ],
       "roleIds": [
-        637
+        577
       ],
       "positionIds": [
-        "cjczqy"
+        "s972t9"
       ],
-      "roleId": 534,
+      "roleId": 211,
       "userRoleList": [
         {
-          "id": 830,
-          "deptId": 757,
-          "deptName": "cleopatra.thompson",
-          "organId": "118",
-          "organName": "cleopatra.thompson",
-          "roleId": 568,
-          "roleName": "cleopatra.thompson",
-          "adminId": 384
+          "id": 284,
+          "deptId": 366,
+          "deptName": "pauline.robel",
+          "organId": "119",
+          "organName": "pauline.robel",
+          "roleId": 788,
+          "roleName": "pauline.robel",
+          "adminId": 549
         }
       ],
-      "code": "9574",
-      "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+      "code": "95555",
+      "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3462,60 +3462,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:25",
-      "lastTime": "2025-09-19 17:32:25",
-      "id": 474,
-      "userId": "118",
-      "deptId": 851,
-      "deptName": "cleopatra.thompson",
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "name": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "nickName": "maribeth.rutherford",
-      "email": "sheree.stanton@gmail.com",
-      "mobile": "828.254.1097",
-      "imagePath": "tunjbl",
-      "password": "ihyl5l",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:45",
+      "lastTime": "2025-09-22 22:45:45",
+      "id": 624,
+      "userId": "119",
+      "deptId": 870,
+      "deptName": "pauline.robel",
+      "organId": "119",
+      "organName": "pauline.robel",
+      "name": "pauline.robel",
+      "username": "pauline.robel",
+      "nickName": "heriberto.bahringer",
+      "email": "leonard.grady@yahoo.com",
+      "mobile": "724.248.1428",
+      "imagePath": "oju64o",
+      "password": "l6z255",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 498,
-      "delFlag": 0,
-      "lastLoginIp": "142.83.169.77",
-      "lastLoginTime": "2025-09-19 17:32:25",
-      "description": "9b12c2",
+      "status": 275,
+      "delFlag": 2,
+      "lastLoginIp": "112.28.203.208",
+      "lastLoginTime": "2025-09-22 22:45:45",
+      "description": "37eqqx",
       "dept": {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "id": 85,
-        "organId": "118",
-        "parentId": 202,
-        "appId": "118",
-        "depttypeId": 101,
-        "foreignId": "118",
-        "createType": 985,
-        "type": "9x331x",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "areaCode": "9574",
-        "organLeader": "u9ymzs",
-        "leaderId": "118",
-        "leaderMobile": "828.254.1097",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "id": 569,
+        "organId": "119",
+        "parentId": 562,
+        "appId": "119",
+        "depttypeId": 0,
+        "foreignId": "119",
+        "createType": 535,
+        "type": "lib4ah",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "areaCode": "95555",
+        "organLeader": "ny6bqe",
+        "leaderId": "119",
+        "leaderMobile": "724.248.1428",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "9574",
-        "imagePath": "sv7xne",
-        "priority": 385,
-        "status": 375,
-        "delFlag": 0,
-        "description": "3i8lk9",
-        "spare1": "7g5bnb",
-        "spare2": "fe8l6j",
+        "searchCode": "95555",
+        "imagePath": "ono2rg",
+        "priority": 623,
+        "status": 794,
+        "delFlag": 2,
+        "description": "hqv5bb",
+        "spare1": "7zz76y",
+        "spare2": "r6u7bb",
         "children": [
           {
             "$ref": ".."
@@ -3524,116 +3524,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "118",
-          "createTime": "2025-09-19 17:32:25",
-          "lastTime": "2025-09-19 17:32:25",
-          "id": 356,
-          "roletypeId": "118",
-          "appId": "118",
-          "name": "cleopatra.thompson",
-          "code": "9574",
-          "priority": 271,
+          "creatorId": "119",
+          "createTime": "2025-09-22 22:45:45",
+          "lastTime": "2025-09-22 22:45:45",
+          "id": 844,
+          "roletypeId": "119",
+          "appId": "119",
+          "name": "pauline.robel",
+          "code": "95555",
+          "priority": 613,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 285,
-          "description": "7zg9bq",
-          "areaType": "kuehed"
+          "status": 917,
+          "description": "mqcucc",
+          "areaType": "rvzpff"
         }
       ],
       "roleIds": [
-        278
+        735
       ],
       "positionIds": [
-        "mtism0"
+        "lvwa3p"
       ],
-      "roleId": 747,
+      "roleId": 812,
       "userRoleList": [
         {
-          "id": 866,
-          "deptId": 192,
-          "deptName": "cleopatra.thompson",
-          "organId": "118",
-          "organName": "cleopatra.thompson",
-          "roleId": 920,
-          "roleName": "cleopatra.thompson",
-          "adminId": 455
+          "id": 284,
+          "deptId": 757,
+          "deptName": "pauline.robel",
+          "organId": "119",
+          "organName": "pauline.robel",
+          "roleId": 537,
+          "roleName": "pauline.robel",
+          "adminId": 377
         }
       ],
-      "code": "9574",
-      "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+      "code": "95555",
+      "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "roleId": 35,
-        "roleName": "cleopatra.thompson",
-        "roleKey": "o6ifud",
-        "roleSort": 128,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "roleId": 483,
+        "roleName": "pauline.robel",
+        "roleKey": "xiodru",
+        "roleSort": 64,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 636,
+        "status": 492,
         "flag": true,
         "menuIds": [
-          412
+          317
         ],
         "deptIds": [
-          250
+          373
         ],
         "permissions": [
-          "tiz3vd"
+          "besqo8"
         ],
-        "remark": "r8fze2",
-        "parentName": "cleopatra.thompson",
-        "appName": "cleopatra.thompson",
-        "roletypeId": "118",
-        "roletypeName": "cleopatra.thompson",
-        "priority": 453,
+        "remark": "0p0znc",
+        "parentName": "pauline.robel",
+        "appName": "pauline.robel",
+        "roletypeId": "119",
+        "roletypeName": "pauline.robel",
+        "priority": 545,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 451,
-        "roleId": 108,
-        "adminId": 756,
-        "deptId": 221,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleName": "cleopatra.thompson"
+        "id": 725,
+        "roleId": 496,
+        "adminId": 661,
+        "deptId": 954,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleName": "pauline.robel"
       }
     ],
     "positions": [
       {
-        "postId": "118",
-        "postCode": "9574",
-        "postName": "cleopatra.thompson",
-        "postSort": 612,
-        "status": 592,
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:25",
-        "lastTime": "2025-09-19 17:32:25",
-        "delFlag": 0,
-        "remark": "7jiye4",
+        "postId": "119",
+        "postCode": "95555",
+        "postName": "pauline.robel",
+        "postSort": 98,
+        "status": 277,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:45",
+        "lastTime": "2025-09-22 22:45:45",
+        "delFlag": 2,
+        "remark": "tx8cvx",
         "ids": [
-          "h4924t"
+          "8nvh7i"
         ],
-        "positionId": "118",
+        "positionId": "119",
         "flag": true
       }
     ],
     "roleIds": [
-      875
+      215
     ],
     "positionIds": [
-      223
+      922
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3695,7 +3695,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?isOrganLevel=true&areaCode=9574&organId=118&depttypeId=265&status=81&page=1&name=cleopatra.thompson&imagePath=2b2445&parentId=585&description=1m322d&createType=87&leaderMobile=828.254.1097&spare2=yvpkkx&appId=118&sname=cleopatra.thompson&isLeaf=true&leaderId=118&spare1=rwofis&endTime=2025-09-19 17:31:32&orderBy=777&creatorId=118&isVirtual=true&q=mot47z&deptId=485&delFlag=0&isDisabled=true&limit=10&startTime=2025-09-19 17:31:32&foreignId=118&type=engpx2&organLeader=dvs62x&searchCode=9574
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?description=zeeu31&spare1=4m4pz3&delFlag=2&startTime=2025-09-22 22:44:42&page=1&type=wk1z5m&sname=pauline.robel&deptId=62&createType=505&isLeaf=true&areaCode=95555&name=pauline.robel&endTime=2025-09-22 22:44:42&orderBy=869&searchCode=95555&appId=119&depttypeId=428&leaderMobile=724.248.1428&isDisabled=true&imagePath=qqd1vy&q=d311ow&leaderId=119&organLeader=i8mo9f&parentId=288&status=191&isVirtual=true&spare2=wp9ihk&foreignId=119&creatorId=119&limit=10&isOrganLevel=true&organId=119
 ```
 **Response-fields:**
 
@@ -3719,8 +3719,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 373,
-      "label": "ky1qce",
+      "id": 393,
+      "label": "vgurma",
       "children": [
         {
           "$ref": ".."
@@ -3728,8 +3728,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3783,7 +3783,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?appType=0jtc6q&existKey=afn0ij&ftpId=118&isMobileApp=true&status=770&page=1&path=u5wsg8&limit=10&isDisabled=true&ids=pyouo4&ids=pyouo4&xzqhId=314&description=nd9885&endTime=2025-09-19 17:31:32&orderBy=602&delFlag=0&organId=118&sertypeId=118&domainId=118&startTime=2025-09-19 17:31:32&mode=725&name=cleopatra.thompson&isSite=true&q=r9p0t3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?isSite=true&status=99&delFlag=2&orderBy=235&limit=10&q=u769y4&domainId=119&sertypeId=119&description=85v3t2&endTime=2025-09-22 22:44:42&existKey=fgr6f7&xzqhId=30&ftpId=119&isDisabled=true&path=vmubb7&appType=32sl1r&mode=154&organId=119&isMobileApp=true&page=1&name=pauline.robel&startTime=2025-09-22 22:44:42&ids=j2fqok&ids=j2fqok
 ```
 **Response-fields:**
 
@@ -3827,33 +3827,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:30",
-      "lastTime": "2025-09-19 17:32:30",
-      "id": "118",
-      "ftpId": "118",
-      "domainId": "118",
-      "organId": "118",
-      "xzqhId": 155,
-      "sertypeId": "118",
-      "name": "cleopatra.thompson",
-      "path": "ahab6j",
-      "appType": "6w8sae",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:51",
+      "lastTime": "2025-09-22 22:45:51",
+      "id": "119",
+      "ftpId": "119",
+      "domainId": "119",
+      "organId": "119",
+      "xzqhId": 698,
+      "sertypeId": "119",
+      "name": "pauline.robel",
+      "path": "w1rone",
+      "appType": "r0jimd",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 416,
-      "priority": 885,
-      "delFlag": 0,
-      "deleteTime": "2025-09-19 17:32:30",
-      "description": "0lfze3",
-      "spare1": "lw1rr0",
-      "spare2": "m8mhbv",
-      "xzqhName": "cleopatra.thompson"
+      "status": 36,
+      "priority": 953,
+      "delFlag": 2,
+      "deleteTime": "2025-09-22 22:45:51",
+      "description": "m83p9k",
+      "spare1": "mdfzgp",
+      "spare2": "pek96u",
+      "xzqhName": "pauline.robel"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -3907,7 +3907,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?ftpId=118&delFlag=0&mode=116&description=x5zoef&ids=vuveko&ids=vuveko&startTime=2025-09-19 17:31:32&isSite=true&limit=10&xzqhId=570&page=1&sertypeId=118&organId=118&isMobileApp=true&orderBy=813&endTime=2025-09-19 17:31:32&domainId=118&path=f3amki&status=971&existKey=hqt8l0&q=iqtbei&appType=56mm13&idArr=6vmbdy&name=cleopatra.thompson&isDisabled=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?name=pauline.robel&isSite=true&domainId=119&isMobileApp=true&organId=119&status=122&ftpId=119&path=xjpl01&startTime=2025-09-22 22:44:42&xzqhId=965&idArr=4e2iov&sertypeId=119&delFlag=2&orderBy=552&ids=a36h6b&ids=a36h6b&isDisabled=true&limit=10&page=1&q=5ufdap&endTime=2025-09-22 22:44:42&appType=sd2jb9&existKey=rb2ubp&mode=820&description=lgnu12
 ```
 **Response-fields:**
 
@@ -3955,40 +3955,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 30,
+    "totalCount": 17,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:30",
-        "lastTime": "2025-09-19 17:32:30",
-        "id": "118",
-        "ftpId": "118",
-        "domainId": "118",
-        "organId": "118",
-        "xzqhId": 180,
-        "sertypeId": "118",
-        "name": "cleopatra.thompson",
-        "path": "99dz15",
-        "appType": "hhi7xy",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:51",
+        "lastTime": "2025-09-22 22:45:51",
+        "id": "119",
+        "ftpId": "119",
+        "domainId": "119",
+        "organId": "119",
+        "xzqhId": 637,
+        "sertypeId": "119",
+        "name": "pauline.robel",
+        "path": "4xnmy0",
+        "appType": "7ddkbl",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 974,
-        "priority": 275,
-        "delFlag": 0,
-        "deleteTime": "2025-09-19 17:32:30",
-        "description": "4t0u5g",
-        "spare1": "azafyk",
-        "spare2": "pg45sl",
-        "xzqhName": "cleopatra.thompson"
+        "status": 648,
+        "priority": 379,
+        "delFlag": 2,
+        "deleteTime": "2025-09-22 22:45:51",
+        "description": "4efpd5",
+        "spare1": "qlvs1g",
+        "spare2": "2qsz9o",
+        "xzqhName": "pauline.robel"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4042,7 +4042,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'idArr=mx9car&isDisabled=true&description=lszkxh&sertypeId=118&ftpId=118&xzqhId=707&path=ptuoln&isMobileApp=true&endTime=2025-09-19 17:31:32&organId=118&existKey=p46q3z&delFlag=0&appType=qb5nhf&status=954&isSite=true&mode=990&page=1&startTime=2025-09-19 17:31:32&ids=30prkw&ids=30prkw&domainId=118&q=li7dy3&limit=10&name=cleopatra.thompson&orderBy=15'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'ftpId=119&isSite=true&appType=s36hxj&delFlag=2&q=c1bgez&organId=119&xzqhId=76&orderBy=385&endTime=2025-09-22 22:44:42&isDisabled=true&status=492&name=pauline.robel&page=1&isMobileApp=true&sertypeId=119&limit=10&path=ahswd7&description=q0jhlg&existKey=1y4emj&ids=4mej6p&ids=4mej6p&idArr=gtkj5l&startTime=2025-09-22 22:44:42&mode=770&domainId=119'
 ```
 **Response-fields:**
 
@@ -4061,9 +4061,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uuj591",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "wcczt2",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4094,7 +4094,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/118.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/119.do
 ```
 **Response-fields:**
 
@@ -4141,36 +4141,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:30",
-    "lastTime": "2025-09-19 17:32:30",
-    "id": "118",
-    "ftpId": "118",
-    "domainId": "118",
-    "organId": "118",
-    "xzqhId": 523,
-    "sertypeId": "118",
-    "name": "cleopatra.thompson",
-    "path": "ff5hhj",
-    "appType": "3wnspm",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:52",
+    "lastTime": "2025-09-22 22:45:52",
+    "id": "119",
+    "ftpId": "119",
+    "domainId": "119",
+    "organId": "119",
+    "xzqhId": 775,
+    "sertypeId": "119",
+    "name": "pauline.robel",
+    "path": "pndaw7",
+    "appType": "z7jgjh",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 980,
-    "priority": 412,
-    "delFlag": 0,
-    "deleteTime": "2025-09-19 17:32:30",
-    "description": "r352rg",
-    "spare1": "kd7a1d",
-    "spare2": "npn0e1",
-    "xzqhName": "cleopatra.thompson",
-    "ftpName": "cleopatra.thompson",
-    "sertypeName": "cleopatra.thompson",
-    "domainName": "cleopatra.thompson",
-    "organName": "cleopatra.thompson"
+    "status": 563,
+    "priority": 964,
+    "delFlag": 2,
+    "deleteTime": "2025-09-22 22:45:52",
+    "description": "k8c167",
+    "spare1": "lw9zs4",
+    "spare2": "fr9wsz",
+    "xzqhName": "pauline.robel",
+    "ftpName": "pauline.robel",
+    "sertypeName": "pauline.robel",
+    "domainName": "pauline.robel",
+    "organName": "pauline.robel"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4227,31 +4227,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "118",
-    "ftpId": "118",
-    "ftpName": "cleopatra.thompson",
-    "domainId": "118",
-    "domainName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "xzqhId": 469,
-    "xzqhName": "cleopatra.thompson",
-    "sertypeId": "118",
-    "sertypeName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "path": "xegsdi",
-    "appType": "t4z94l",
+    "id": "119",
+    "ftpId": "119",
+    "ftpName": "pauline.robel",
+    "domainId": "119",
+    "domainName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "xzqhId": 975,
+    "xzqhName": "pauline.robel",
+    "sertypeId": "119",
+    "sertypeName": "pauline.robel",
+    "name": "pauline.robel",
+    "path": "euv67b",
+    "appType": "rjsl4k",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 409,
-    "statusName": "cleopatra.thompson",
-    "priority": 569,
-    "createTime": "2025-09-19 17:32:30",
-    "description": "4xay0q",
-    "spare1": "uqonz7",
+    "status": 108,
+    "statusName": "pauline.robel",
+    "priority": 628,
+    "createTime": "2025-09-22 22:45:52",
+    "description": "2kdsvb",
+    "spare1": "m5x8uc",
     "statusMap": {
-      "mapKey": "5dd8w2"
+      "mapKey": "3pqr3s"
     }
   }
 }'
@@ -4273,9 +4273,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ba61zc",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "l7l0nk",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4332,31 +4332,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "118",
-    "ftpId": "118",
-    "ftpName": "cleopatra.thompson",
-    "domainId": "118",
-    "domainName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "xzqhId": 693,
-    "xzqhName": "cleopatra.thompson",
-    "sertypeId": "118",
-    "sertypeName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "path": "i2soyt",
-    "appType": "r47ss8",
+    "id": "119",
+    "ftpId": "119",
+    "ftpName": "pauline.robel",
+    "domainId": "119",
+    "domainName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "xzqhId": 566,
+    "xzqhName": "pauline.robel",
+    "sertypeId": "119",
+    "sertypeName": "pauline.robel",
+    "name": "pauline.robel",
+    "path": "cfarrq",
+    "appType": "v5pd3m",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 804,
-    "statusName": "cleopatra.thompson",
-    "priority": 483,
-    "createTime": "2025-09-19 17:32:30",
-    "description": "serfoo",
-    "spare1": "e6upok",
+    "status": 59,
+    "statusName": "pauline.robel",
+    "priority": 441,
+    "createTime": "2025-09-22 22:45:52",
+    "description": "1vtp1a",
+    "spare1": "ay2k6z",
     "statusMap": {
-      "mapKey": "72ha4o"
+      "mapKey": "0c8qw2"
     }
   }
 }'
@@ -4378,9 +4378,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qnbyzp",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "noi5a6",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4430,9 +4430,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pflfzz",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "egnyzy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4476,16 +4476,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/118.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/119.do --data '{
   "data": {
-    "id": "118",
+    "id": "119",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "cleopatra.thompson",
-    "password": "lnnimy",
-    "initPath": "bnyc4v"
+    "username": "pauline.robel",
+    "password": "rjhbru",
+    "initPath": "8jtoln"
   }
 }'
 ```
@@ -4509,8 +4509,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4554,9 +4554,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e7s7w1",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "vzf27d",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4612,7 +4612,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?areatypeId=118&page=1&limit=10&code=9574&likeQuery=2anct2&orderBy=10&endTime=2025-09-19 17:31:32&hasContent=true&isDisplay=true&delFlag=0&deleteTime=2025-09-19 17:31:32&q=tcddge&nameTotal=1dibnu&sname=cleopatra.thompson&nameEn=4i6lsh&lft=51&searchCode=9574&areatypeIds=6bcf8o&areatypeIds=6bcf8o&ids=wtd6vm&ids=wtd6vm&startTime=2025-09-19 17:31:32&name=cleopatra.thompson&description=r6q3d7&rgt=373&parentIds=83k0jt&parentIds=83k0jt&countryId=118&parentId=213
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?q=ymkfka&name=pauline.robel&parentId=96&hasContent=true&code=95555&countryId=119&sname=pauline.robel&ids=qyvy4h&ids=qyvy4h&isDisplay=true&likeQuery=k5k5zz&delFlag=2&description=il6nf2&rgt=673&limit=10&parentIds=8ymu63&parentIds=8ymu63&page=1&nameTotal=s6rt77&areatypeIds=ujd8oc&areatypeIds=ujd8oc&endTime=2025-09-22 22:44:42&searchCode=95555&areatypeId=119&deleteTime=2025-09-22 22:44:42&lft=302&nameEn=alld0y&orderBy=488&startTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -4661,41 +4661,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 641,
+    "totalCount": 394,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:31",
-        "lastTime": "2025-09-19 17:32:31",
-        "id": 121,
-        "parentId": 326,
-        "countryId": "118",
-        "areatypeId": "118",
-        "lft": 843,
-        "rgt": 386,
-        "code": "9574",
-        "name": "cleopatra.thompson",
-        "nameTotal": "wbdo88",
-        "sname": "cleopatra.thompson",
-        "nameEn": "8lyvdq",
-        "searchCode": "9574",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:52",
+        "lastTime": "2025-09-22 22:45:52",
+        "id": 394,
+        "parentId": 517,
+        "countryId": "119",
+        "areatypeId": "119",
+        "lft": 310,
+        "rgt": 912,
+        "code": "95555",
+        "name": "pauline.robel",
+        "nameTotal": "e7lfco",
+        "sname": "pauline.robel",
+        "nameEn": "hwd54n",
+        "searchCode": "95555",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 493,
-        "delFlag": 0,
-        "deleteTime": "2025-09-19 17:32:31",
-        "description": "9byzu0",
-        "countryName": "cleopatra.thompson",
-        "parentName": "cleopatra.thompson",
-        "areatypeName": "cleopatra.thompson"
+        "priority": 597,
+        "delFlag": 2,
+        "deleteTime": "2025-09-22 22:45:52",
+        "description": "iq459q",
+        "countryName": "pauline.robel",
+        "parentName": "pauline.robel",
+        "areatypeName": "pauline.robel"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4746,7 +4746,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?orderBy=826&xzqhId=250&startTime=2025-09-19 17:31:32&orgtypeId=118&unionCode=9574&ids=sqighp&ids=sqighp&name=cleopatra.thompson&organName=cleopatra.thompson&page=1&isOrganWork=wxvkk9&limit=10&source=183&organCode=9574&createType=502&spare1=ytifjp&q=0xh5wl&endTime=2025-09-19 17:31:32&spare2=t83rh0&key=taae0o&description=7stclb&delFlag=0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?createType=691&spare1=wh7m1z&startTime=2025-09-22 22:44:42&xzqhId=919&organCode=95555&ids=z1if4h&ids=z1if4h&source=581&delFlag=2&unionCode=95555&page=1&description=1cmysn&spare2=boq8ll&organName=pauline.robel&key=ptnbx9&isOrganWork=9eioh2&orderBy=306&name=pauline.robel&q=f5v25x&endTime=2025-09-22 22:44:42&limit=10&orgtypeId=119
 ```
 **Response-fields:**
 
@@ -4776,22 +4776,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 732,
+    "totalCount": 815,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:31",
-        "lastTime": "2025-09-19 17:32:31",
-        "cmsKey": "tu771q",
-        "cmsValue": "nbqiby"
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:52",
+        "lastTime": "2025-09-22 22:45:52",
+        "cmsKey": "ojfzvp",
+        "cmsValue": "xjtvrl"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4848,7 +4848,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?ids=0ei7f0&ids=0ei7f0&nameTotal=m8voq1&startTime=2025-09-19 17:31:32&parentIds=wy7ayy&parentIds=wy7ayy&limit=10&name=cleopatra.thompson&q=ykcxqt&parentId=305&orderBy=948&hasContent=true&countryId=118&areatypeId=118&endTime=2025-09-19 17:31:32&isDisplay=true&description=0eksgw&deleteTime=2025-09-19 17:31:32&page=1&nameEn=zsvqdg&searchCode=9574&areatypeIds=czc68b&areatypeIds=czc68b&likeQuery=4hnrae&delFlag=0&sname=cleopatra.thompson&lft=179&code=9574&rgt=136
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?description=km926z&sname=pauline.robel&endTime=2025-09-22 22:44:42&hasContent=true&lft=235&areatypeIds=pmllfj&areatypeIds=pmllfj&orderBy=224&nameTotal=13s8dt&limit=10&rgt=787&nameEn=ceigoq&searchCode=95555&page=1&countryId=119&parentId=224&code=95555&name=pauline.robel&likeQuery=n55j78&startTime=2025-09-22 22:44:42&q=t2upeg&isDisplay=true&deleteTime=2025-09-22 22:44:42&ids=mpx8b1&ids=mpx8b1&areatypeId=119&delFlag=2&parentIds=no38bu&parentIds=no38bu
 ```
 **Response-fields:**
 
@@ -4890,31 +4890,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:31",
-      "lastTime": "2025-09-19 17:32:31",
-      "id": 913,
-      "parentId": 975,
-      "countryId": "118",
-      "areatypeId": "118",
-      "lft": 142,
-      "rgt": 815,
-      "code": "9574",
-      "name": "cleopatra.thompson",
-      "nameTotal": "ujfrax",
-      "sname": "cleopatra.thompson",
-      "nameEn": "k725el",
-      "searchCode": "9574",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:52",
+      "lastTime": "2025-09-22 22:45:52",
+      "id": 283,
+      "parentId": 732,
+      "countryId": "119",
+      "areatypeId": "119",
+      "lft": 870,
+      "rgt": 744,
+      "code": "95555",
+      "name": "pauline.robel",
+      "nameTotal": "6b9r84",
+      "sname": "pauline.robel",
+      "nameEn": "riq9gj",
+      "searchCode": "95555",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 658,
-      "delFlag": 0,
-      "deleteTime": "2025-09-19 17:32:31",
-      "description": "j3qmi3"
+      "priority": 29,
+      "delFlag": 2,
+      "deleteTime": "2025-09-22 22:45:52",
+      "description": "qbg1vr"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -4970,7 +4970,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'nameTotal=fqjcst&parentId=944&searchCode=9574&lft=58&rgt=760&delFlag=0&parentIds=0rv6no&parentIds=0rv6no&name=cleopatra.thompson&description=oaz3fs&page=1&nameEn=v95mo4&q=gntb7v&orderBy=489&startTime=2025-09-19 17:31:32&limit=10&countryId=118&isDisplay=true&endTime=2025-09-19 17:31:32&sname=cleopatra.thompson&areatypeIds=3cphf7&areatypeIds=3cphf7&areatypeId=118&likeQuery=3fc69n&hasContent=true&ids=fl1mdg&ids=fl1mdg&code=9574&deleteTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'delFlag=2&page=1&parentIds=rhapu9&parentIds=rhapu9&name=pauline.robel&code=95555&nameEn=kiwdlb&startTime=2025-09-22 22:44:42&areatypeIds=5ut4x4&areatypeIds=5ut4x4&q=wlammy&hasContent=true&lft=9&deleteTime=2025-09-22 22:44:42&description=i5n5xn&isDisplay=true&searchCode=95555&likeQuery=t9qicj&orderBy=420&areatypeId=119&nameTotal=xbo5hf&countryId=119&endTime=2025-09-22 22:44:42&parentId=423&ids=k0a6lr&ids=k0a6lr&sname=pauline.robel&rgt=468&limit=10'
 ```
 **Response-fields:**
 
@@ -4989,9 +4989,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "64o11c",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "tlnehl",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5063,30 +5063,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:31",
-    "lastTime": "2025-09-19 17:32:31",
-    "id": 813,
-    "parentId": 869,
-    "countryId": "118",
-    "areatypeId": "118",
-    "lft": 664,
-    "rgt": 393,
-    "code": "9574",
-    "name": "cleopatra.thompson",
-    "nameTotal": "26sr8p",
-    "sname": "cleopatra.thompson",
-    "nameEn": "h9cx0z",
-    "searchCode": "9574",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:52",
+    "lastTime": "2025-09-22 22:45:52",
+    "id": 897,
+    "parentId": 683,
+    "countryId": "119",
+    "areatypeId": "119",
+    "lft": 551,
+    "rgt": 731,
+    "code": "95555",
+    "name": "pauline.robel",
+    "nameTotal": "217wkj",
+    "sname": "pauline.robel",
+    "nameEn": "g8by48",
+    "searchCode": "95555",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 656,
-    "delFlag": 0,
-    "deleteTime": "2025-09-19 17:32:31",
-    "description": "gykc0f"
+    "priority": 113,
+    "delFlag": 2,
+    "deleteTime": "2025-09-22 22:45:52",
+    "description": "o1lym6"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5140,27 +5140,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:31",
-    "lastTime": "2025-09-19 17:32:31",
-    "id": 108,
-    "parentId": 7,
-    "countryId": "118",
-    "areatypeId": "118",
-    "lft": 930,
-    "rgt": 363,
-    "code": "9574",
-    "name": "cleopatra.thompson",
-    "nameTotal": "vske8g",
-    "sname": "cleopatra.thompson",
-    "nameEn": "noo2cw",
-    "searchCode": "9574",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:52",
+    "lastTime": "2025-09-22 22:45:52",
+    "id": 920,
+    "parentId": 743,
+    "countryId": "119",
+    "areatypeId": "119",
+    "lft": 266,
+    "rgt": 245,
+    "code": "95555",
+    "name": "pauline.robel",
+    "nameTotal": "1hsgv2",
+    "sname": "pauline.robel",
+    "nameEn": "wlssge",
+    "searchCode": "95555",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 538,
-    "delFlag": 0,
-    "deleteTime": "2025-09-19 17:32:31",
-    "description": "akulxg"
+    "priority": 984,
+    "delFlag": 2,
+    "deleteTime": "2025-09-22 22:45:52",
+    "description": "5p24rt"
   }
 }'
 ```
@@ -5181,9 +5181,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pry2r4",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "s7soxb",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5237,27 +5237,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:31",
-    "lastTime": "2025-09-19 17:32:31",
-    "id": 683,
-    "parentId": 513,
-    "countryId": "118",
-    "areatypeId": "118",
-    "lft": 524,
-    "rgt": 351,
-    "code": "9574",
-    "name": "cleopatra.thompson",
-    "nameTotal": "uqte16",
-    "sname": "cleopatra.thompson",
-    "nameEn": "7dx2q7",
-    "searchCode": "9574",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:53",
+    "lastTime": "2025-09-22 22:45:53",
+    "id": 597,
+    "parentId": 201,
+    "countryId": "119",
+    "areatypeId": "119",
+    "lft": 383,
+    "rgt": 136,
+    "code": "95555",
+    "name": "pauline.robel",
+    "nameTotal": "eyfrha",
+    "sname": "pauline.robel",
+    "nameEn": "gz4zsz",
+    "searchCode": "95555",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 438,
-    "delFlag": 0,
-    "deleteTime": "2025-09-19 17:32:31",
-    "description": "6u4qlz"
+    "priority": 332,
+    "delFlag": 2,
+    "deleteTime": "2025-09-22 22:45:53",
+    "description": "vj4pjg"
   }
 }'
 ```
@@ -5278,9 +5278,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jeo39g",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "01ayom",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5330,9 +5330,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vnfyrp",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "15qbhr",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5396,7 +5396,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?serverUrl=www.lezlie-kreiger.net&type=718&serverConf3=mhevhq&organName=cleopatra.thompson&serverIp=142.83.169.77&orderBy=17&startTime=2025-09-19 17:31:32&isSingle=true&clientId=118&q=vkqr3v&isAdmin=true&aesKey=qnuq3h&serverConf2=f3m89e&organId=118&serverType=3bunay&isDisabled=true&description=mi9c2b&spare2=etegz0&inoutMode=913&clientSecret=2j5pdu&cname=cleopatra.thompson&serverConf1=dyl8h4&status=991&name=cleopatra.thompson&aesIvKey=qoszas&endTime=2025-09-19 17:31:32&id=118&confLimit=10&page=1&limit=10&appId=118&spare1=y37j58&currCount=876
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?serverConf3=77fdsk&currCount=384&status=907&organId=119&aesKey=dzrbyx&q=1bud6h&isAdmin=true&description=yjtnr7&serverConf1=ihye1i&spare1=y5br1q&endTime=2025-09-22 22:44:42&cname=pauline.robel&isDisabled=true&clientId=119&isSingle=true&clientSecret=k29ml9&spare2=3a9j9s&page=1&aesIvKey=yk8c1z&serverType=jxbynt&inoutMode=305&name=pauline.robel&serverConf2=3udnvy&organName=pauline.robel&confLimit=10&startTime=2025-09-22 22:44:42&limit=10&id=119&type=412&appId=119&orderBy=884&serverUrl=www.chanda-skiles.net&serverIp=112.28.203.208
 ```
 **Response-fields:**
 
@@ -5452,45 +5452,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:33",
-      "lastTime": "2025-09-19 17:32:33",
-      "id": "118",
-      "organId": "118",
-      "appId": "118",
-      "organName": "cleopatra.thompson",
-      "inoutMode": 947,
-      "name": "cleopatra.thompson",
-      "cname": "cleopatra.thompson",
-      "type": 958,
-      "clientId": "118",
-      "clientSecret": "x4kp2y",
-      "aesKey": "xrmvgh",
-      "aesIvKey": "0h6vlh",
-      "serverIp": "142.83.169.77",
-      "serverType": "q4n8oe",
-      "serverUrl": "www.lezlie-kreiger.net",
-      "serverConf1": "q9cxp7",
-      "serverConf2": "rxvp2i",
-      "serverConf3": "o9sey7",
-      "currCount": 591,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:54",
+      "lastTime": "2025-09-22 22:45:54",
+      "id": "119",
+      "organId": "119",
+      "appId": "119",
+      "organName": "pauline.robel",
+      "inoutMode": 272,
+      "name": "pauline.robel",
+      "cname": "pauline.robel",
+      "type": 347,
+      "clientId": "119",
+      "clientSecret": "2hhlio",
+      "aesKey": "n2th4j",
+      "aesIvKey": "dyaih3",
+      "serverIp": "112.28.203.208",
+      "serverType": "dg619p",
+      "serverUrl": "www.chanda-skiles.net",
+      "serverConf1": "ahtdvs",
+      "serverConf2": "mq6o16",
+      "serverConf3": "46m2ew",
+      "currCount": 300,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 528,
-      "description": "w9sril",
-      "spare1": "lo72is",
-      "spare2": "gohdmk",
-      "inOrganName": "cleopatra.thompson",
-      "userName": "cleopatra.thompson",
-      "appName": "cleopatra.thompson",
-      "inoutModeName": "cleopatra.thompson",
-      "typeName": "cleopatra.thompson"
+      "status": 703,
+      "description": "0voqp1",
+      "spare1": "wx0kok",
+      "spare2": "239bw3",
+      "inOrganName": "pauline.robel",
+      "userName": "pauline.robel",
+      "appName": "pauline.robel",
+      "inoutModeName": "pauline.robel",
+      "typeName": "pauline.robel"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5521,7 +5521,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=119
 ```
 **Response-fields:**
 
@@ -5577,45 +5577,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:33",
-      "lastTime": "2025-09-19 17:32:33",
-      "id": "118",
-      "organId": "118",
-      "appId": "118",
-      "organName": "cleopatra.thompson",
-      "inoutMode": 759,
-      "name": "cleopatra.thompson",
-      "cname": "cleopatra.thompson",
-      "type": 546,
-      "clientId": "118",
-      "clientSecret": "e7gn7j",
-      "aesKey": "zg5myo",
-      "aesIvKey": "2arizh",
-      "serverIp": "142.83.169.77",
-      "serverType": "fnhzrd",
-      "serverUrl": "www.lezlie-kreiger.net",
-      "serverConf1": "atwn6e",
-      "serverConf2": "0w0g9r",
-      "serverConf3": "ws5mfc",
-      "currCount": 397,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:54",
+      "lastTime": "2025-09-22 22:45:54",
+      "id": "119",
+      "organId": "119",
+      "appId": "119",
+      "organName": "pauline.robel",
+      "inoutMode": 979,
+      "name": "pauline.robel",
+      "cname": "pauline.robel",
+      "type": 599,
+      "clientId": "119",
+      "clientSecret": "9oo6lt",
+      "aesKey": "6zgtxg",
+      "aesIvKey": "4janc6",
+      "serverIp": "112.28.203.208",
+      "serverType": "nsw3b8",
+      "serverUrl": "www.chanda-skiles.net",
+      "serverConf1": "36dd03",
+      "serverConf2": "pl6exk",
+      "serverConf3": "n2j1of",
+      "currCount": 467,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 92,
-      "description": "y54605",
-      "spare1": "kdnbub",
-      "spare2": "eal981",
-      "inOrganName": "cleopatra.thompson",
-      "userName": "cleopatra.thompson",
-      "appName": "cleopatra.thompson",
-      "inoutModeName": "cleopatra.thompson",
-      "typeName": "cleopatra.thompson"
+      "status": 72,
+      "description": "s013u7",
+      "spare1": "m109mj",
+      "spare2": "ahyukt",
+      "inOrganName": "pauline.robel",
+      "userName": "pauline.robel",
+      "appName": "pauline.robel",
+      "inoutModeName": "pauline.robel",
+      "typeName": "pauline.robel"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5646,7 +5646,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=119
 ```
 **Response-fields:**
 
@@ -5702,45 +5702,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:33",
-      "lastTime": "2025-09-19 17:32:33",
-      "id": "118",
-      "organId": "118",
-      "appId": "118",
-      "organName": "cleopatra.thompson",
-      "inoutMode": 23,
-      "name": "cleopatra.thompson",
-      "cname": "cleopatra.thompson",
-      "type": 976,
-      "clientId": "118",
-      "clientSecret": "9obxyr",
-      "aesKey": "wc5loo",
-      "aesIvKey": "u256kj",
-      "serverIp": "142.83.169.77",
-      "serverType": "cmwysm",
-      "serverUrl": "www.lezlie-kreiger.net",
-      "serverConf1": "grjapr",
-      "serverConf2": "zvojkp",
-      "serverConf3": "yh8gph",
-      "currCount": 722,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:54",
+      "lastTime": "2025-09-22 22:45:54",
+      "id": "119",
+      "organId": "119",
+      "appId": "119",
+      "organName": "pauline.robel",
+      "inoutMode": 757,
+      "name": "pauline.robel",
+      "cname": "pauline.robel",
+      "type": 932,
+      "clientId": "119",
+      "clientSecret": "pdhk4u",
+      "aesKey": "pe81a7",
+      "aesIvKey": "3v1olo",
+      "serverIp": "112.28.203.208",
+      "serverType": "bajue1",
+      "serverUrl": "www.chanda-skiles.net",
+      "serverConf1": "cz9qel",
+      "serverConf2": "y8s0wp",
+      "serverConf3": "rrurxv",
+      "currCount": 628,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 272,
-      "description": "rfvmob",
-      "spare1": "60s7sx",
-      "spare2": "ilac57",
-      "inOrganName": "cleopatra.thompson",
-      "userName": "cleopatra.thompson",
-      "appName": "cleopatra.thompson",
-      "inoutModeName": "cleopatra.thompson",
-      "typeName": "cleopatra.thompson"
+      "status": 321,
+      "description": "ebimyx",
+      "spare1": "9zrfbe",
+      "spare2": "anvj8x",
+      "inOrganName": "pauline.robel",
+      "userName": "pauline.robel",
+      "appName": "pauline.robel",
+      "inoutModeName": "pauline.robel",
+      "typeName": "pauline.robel"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5816,7 +5816,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"118","timestamp":"2025-09-19 17:31:32"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"119","timestamp":"2025-09-22 22:44:42"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5859,9 +5859,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qt79qj",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "03e76e",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5905,9 +5905,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iwnuk0",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "gar061",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -5957,9 +5957,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fgbus1",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "5sz20i",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6000,7 +6000,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?organId=118&limit=10&endTime=2025-09-19 17:31:32&q=lyubwh&startTime=2025-09-19 17:31:32&page=1&organName=cleopatra.thompson&delFlag=0&orderBy=786&wlType=ijodit
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?limit=10&orderBy=958&organName=pauline.robel&startTime=2025-09-22 22:44:42&q=rhu2qc&page=1&endTime=2025-09-22 22:44:42&wlType=099mo9&organId=119&delFlag=2
 ```
 **Response-fields:**
 
@@ -6039,28 +6039,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "4cj1jh"
+        "dxtn9b"
       ],
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "organSName": "cleopatra.thompson",
-      "organCode": "9574",
-      "address": "Apt. 241 1389 Wiegand Camp， Jesusamouth， MN 26066-3844",
-      "wlType": "hcscwf",
-      "wlTypeName": "cleopatra.thompson",
-      "priority": 605,
-      "delFlag": 0,
-      "createTime": "2025-09-19 17:32:32",
-      "lastTime": "2025-09-19 17:32:32",
-      "contactName": "cleopatra.thompson",
-      "contactEmail": "sheree.stanton@gmail.com",
-      "contactMobile": "828.254.1097",
-      "description": "lutf79",
-      "tel": "kap2pb"
+      "organId": "119",
+      "organName": "pauline.robel",
+      "organSName": "pauline.robel",
+      "organCode": "95555",
+      "address": "417 Tajuana Harbors， Larryton， FL 55527",
+      "wlType": "vwki6u",
+      "wlTypeName": "pauline.robel",
+      "priority": 827,
+      "delFlag": 2,
+      "createTime": "2025-09-22 22:45:53",
+      "lastTime": "2025-09-22 22:45:53",
+      "contactName": "pauline.robel",
+      "contactEmail": "leonard.grady@yahoo.com",
+      "contactMobile": "724.248.1428",
+      "description": "vtnz10",
+      "tel": "k24105"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6129,27 +6129,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "p51zhz"
+      "75dqix"
     ],
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "organSName": "cleopatra.thompson",
-    "organCode": "9574",
-    "address": "Apt. 241 1389 Wiegand Camp， Jesusamouth， MN 26066-3844",
-    "wlType": "w0sj8i",
-    "wlTypeName": "cleopatra.thompson",
-    "priority": 437,
-    "delFlag": 0,
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "contactName": "cleopatra.thompson",
-    "contactEmail": "sheree.stanton@gmail.com",
-    "contactMobile": "828.254.1097",
-    "description": "nh7d49",
-    "tel": "gkfqmc"
+    "organId": "119",
+    "organName": "pauline.robel",
+    "organSName": "pauline.robel",
+    "organCode": "95555",
+    "address": "417 Tajuana Harbors， Larryton， FL 55527",
+    "wlType": "rwm80j",
+    "wlTypeName": "pauline.robel",
+    "priority": 459,
+    "delFlag": 2,
+    "createTime": "2025-09-22 22:45:53",
+    "lastTime": "2025-09-22 22:45:53",
+    "contactName": "pauline.robel",
+    "contactEmail": "leonard.grady@yahoo.com",
+    "contactMobile": "724.248.1428",
+    "description": "o18q9m",
+    "tel": "uk29dr"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6200,24 +6200,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "a9h824"
+      "1knukw"
     ],
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "organSName": "cleopatra.thompson",
-    "organCode": "9574",
-    "address": "Apt. 241 1389 Wiegand Camp， Jesusamouth， MN 26066-3844",
-    "wlType": "gjzik7",
-    "wlTypeName": "cleopatra.thompson",
-    "priority": 246,
-    "delFlag": 0,
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "contactName": "cleopatra.thompson",
-    "contactEmail": "sheree.stanton@gmail.com",
-    "contactMobile": "828.254.1097",
-    "description": "zjfwj7",
-    "tel": "l6nv47"
+    "organId": "119",
+    "organName": "pauline.robel",
+    "organSName": "pauline.robel",
+    "organCode": "95555",
+    "address": "417 Tajuana Harbors， Larryton， FL 55527",
+    "wlType": "5f2xzt",
+    "wlTypeName": "pauline.robel",
+    "priority": 476,
+    "delFlag": 2,
+    "createTime": "2025-09-22 22:45:53",
+    "lastTime": "2025-09-22 22:45:53",
+    "contactName": "pauline.robel",
+    "contactEmail": "leonard.grady@yahoo.com",
+    "contactMobile": "724.248.1428",
+    "description": "bgjh6x",
+    "tel": "2ozr0t"
   }
 }'
 ```
@@ -6238,9 +6238,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kxcz1g",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "nzfiwy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6291,24 +6291,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "7d8q89"
+      "ujhm9l"
     ],
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "organSName": "cleopatra.thompson",
-    "organCode": "9574",
-    "address": "Apt. 241 1389 Wiegand Camp， Jesusamouth， MN 26066-3844",
-    "wlType": "8ihp0v",
-    "wlTypeName": "cleopatra.thompson",
-    "priority": 220,
-    "delFlag": 0,
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "contactName": "cleopatra.thompson",
-    "contactEmail": "sheree.stanton@gmail.com",
-    "contactMobile": "828.254.1097",
-    "description": "iyxo0b",
-    "tel": "ma8gei"
+    "organId": "119",
+    "organName": "pauline.robel",
+    "organSName": "pauline.robel",
+    "organCode": "95555",
+    "address": "417 Tajuana Harbors， Larryton， FL 55527",
+    "wlType": "rq94dv",
+    "wlTypeName": "pauline.robel",
+    "priority": 643,
+    "delFlag": 2,
+    "createTime": "2025-09-22 22:45:53",
+    "lastTime": "2025-09-22 22:45:53",
+    "contactName": "pauline.robel",
+    "contactEmail": "leonard.grady@yahoo.com",
+    "contactMobile": "724.248.1428",
+    "description": "jttc59",
+    "tel": "wg5xrd"
   }
 }'
 ```
@@ -6329,9 +6329,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3a2oie",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "v0cz9i",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6381,9 +6381,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vqkprh",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4o3wk9",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6434,24 +6434,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "gflt7d"
+      "cstt4u"
     ],
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "organSName": "cleopatra.thompson",
-    "organCode": "9574",
-    "address": "Apt. 241 1389 Wiegand Camp， Jesusamouth， MN 26066-3844",
-    "wlType": "92ntno",
-    "wlTypeName": "cleopatra.thompson",
-    "priority": 246,
-    "delFlag": 0,
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "contactName": "cleopatra.thompson",
-    "contactEmail": "sheree.stanton@gmail.com",
-    "contactMobile": "828.254.1097",
-    "description": "3b67n1",
-    "tel": "h0m9th"
+    "organId": "119",
+    "organName": "pauline.robel",
+    "organSName": "pauline.robel",
+    "organCode": "95555",
+    "address": "417 Tajuana Harbors， Larryton， FL 55527",
+    "wlType": "fck4us",
+    "wlTypeName": "pauline.robel",
+    "priority": 337,
+    "delFlag": 2,
+    "createTime": "2025-09-22 22:45:53",
+    "lastTime": "2025-09-22 22:45:53",
+    "contactName": "pauline.robel",
+    "contactEmail": "leonard.grady@yahoo.com",
+    "contactMobile": "724.248.1428",
+    "description": "bsh8ui",
+    "tel": "x6he9z"
   }
 }'
 ```
@@ -6472,9 +6472,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ldkm9q",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "0fzalw",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6515,7 +6515,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?description=u5ncqb&limit=10&sname=cleopatra.thompson&startTime=2025-09-19 17:31:32&delFlag=0&q=cuwpt3&endTime=2025-09-19 17:31:32&orderBy=78&page=1&name=cleopatra.thompson
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?q=bmzs4b&startTime=2025-09-22 22:44:42&endTime=2025-09-22 22:44:42&page=1&orderBy=824&delFlag=2&name=pauline.robel&limit=10&sname=pauline.robel&description=yeca1r
 ```
 **Response-fields:**
 
@@ -6545,19 +6545,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:32",
-      "lastTime": "2025-09-19 17:32:32",
-      "id": "118",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "priority": 163,
-      "delFlag": 0,
-      "description": "e8ptlr"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:54",
+      "lastTime": "2025-09-22 22:45:54",
+      "id": "119",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "priority": 867,
+      "delFlag": 2,
+      "description": "4yud8x"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6597,7 +6597,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'orderBy=396&page=1&limit=10&sname=cleopatra.thompson&delFlag=0&endTime=2025-09-19 17:31:32&name=cleopatra.thompson&description=9nrflh&startTime=2025-09-19 17:31:32&q=cl8tik'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'startTime=2025-09-22 22:44:42&name=pauline.robel&page=1&delFlag=2&orderBy=647&endTime=2025-09-22 22:44:42&limit=10&description=pur85p&sname=pauline.robel&q=cdf5rf'
 ```
 **Response-fields:**
 
@@ -6616,9 +6616,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cbh6e4",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "o70fnb",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6678,18 +6678,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "priority": 834,
-    "delFlag": 0,
-    "description": "y59ko0"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "priority": 686,
+    "delFlag": 2,
+    "description": "2wji7z"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6731,15 +6731,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "priority": 970,
-    "delFlag": 0,
-    "description": "k3hx78"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "priority": 749,
+    "delFlag": 2,
+    "description": "yfcq94"
   }
 }'
 ```
@@ -6760,9 +6760,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7ayws0",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "jtzban",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6804,15 +6804,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "priority": 863,
-    "delFlag": 0,
-    "description": "t5ik9o"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "priority": 363,
+    "delFlag": 2,
+    "description": "vptujl"
   }
 }'
 ```
@@ -6833,9 +6833,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uqgdds",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "irz6fi",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6885,9 +6885,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3nzvth",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "n7gkk7",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -6930,7 +6930,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?description=p970ju&code=9574&page=1&type=n6re9l&q=kql258&orderBy=340&startTime=2025-09-19 17:31:32&endTime=2025-09-19 17:31:32&limit=10&existKey=98exx1&delFlag=0&name=cleopatra.thompson
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?endTime=2025-09-22 22:44:42&delFlag=2&description=wazf47&code=95555&existKey=d1mzx2&startTime=2025-09-22 22:44:42&orderBy=956&page=1&q=3njpt9&name=pauline.robel&limit=10&type=0g1yt7
 ```
 **Response-fields:**
 
@@ -6961,20 +6961,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:32",
-      "lastTime": "2025-09-19 17:32:32",
-      "id": "118",
-      "name": "cleopatra.thompson",
-      "type": "tga8ci",
-      "code": "9574",
-      "priority": 157,
-      "delFlag": 0,
-      "description": "dygld0"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:54",
+      "lastTime": "2025-09-22 22:45:54",
+      "id": "119",
+      "name": "pauline.robel",
+      "type": "parhxg",
+      "code": "95555",
+      "priority": 527,
+      "delFlag": 2,
+      "description": "4m0xti"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7016,7 +7016,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'code=9574&orderBy=972&existKey=u9f76z&startTime=2025-09-19 17:31:32&endTime=2025-09-19 17:31:32&type=or2nsw&q=nsk2mm&delFlag=0&limit=10&name=cleopatra.thompson&description=rq94xd&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'orderBy=307&description=ww1ya7&name=pauline.robel&q=ffoeuv&existKey=26ydrd&type=9ilo7t&code=95555&startTime=2025-09-22 22:44:42&delFlag=2&endTime=2025-09-22 22:44:42&page=1&limit=10'
 ```
 **Response-fields:**
 
@@ -7035,9 +7035,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bwqzxo",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rlhwbe",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7098,19 +7098,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "type": "0fhnr1",
-    "code": "9574",
-    "priority": 746,
-    "delFlag": 0,
-    "description": "qdbki8"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "type": "6qw3s8",
+    "code": "95555",
+    "priority": 241,
+    "delFlag": 2,
+    "description": "3ku75w"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7153,16 +7153,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "type": "vpux8x",
-    "code": "9574",
-    "priority": 217,
-    "delFlag": 0,
-    "description": "ty14p5"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "type": "ls0f67",
+    "code": "95555",
+    "priority": 710,
+    "delFlag": 2,
+    "description": "akyiur"
   }
 }'
 ```
@@ -7183,9 +7183,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ehb2wa",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "zgaiq6",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7228,16 +7228,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:32",
-    "lastTime": "2025-09-19 17:32:32",
-    "id": "118",
-    "name": "cleopatra.thompson",
-    "type": "9jia3x",
-    "code": "9574",
-    "priority": 4,
-    "delFlag": 0,
-    "description": "o93xmb"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:54",
+    "lastTime": "2025-09-22 22:45:54",
+    "id": "119",
+    "name": "pauline.robel",
+    "type": "kf8cr5",
+    "code": "95555",
+    "priority": 600,
+    "delFlag": 2,
+    "description": "gnj1wq"
   }
 }'
 ```
@@ -7258,9 +7258,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1lf5p2",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rn8num",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7310,9 +7310,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i9tl8n",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "bphw8x",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7358,7 +7358,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?endTime=2025-09-19 17:31:32&appId=118&fileSize=783&resclassId=118&refType=8pq35y&orderBy=488&refId=118&q=gqhs35&limit=10&key=hhj73j&fileName=cleopatra.thompson&fileExtension=zya4el&startTime=2025-09-19 17:31:32&page=1&fileIsvalid=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?q=dyho47&limit=10&refId=119&endTime=2025-09-22 22:44:42&fileSize=968&resclassId=119&fileExtension=zjl183&orderBy=642&appId=119&fileIsvalid=true&fileName=pauline.robel&page=1&key=pzlkvw&startTime=2025-09-22 22:44:42&refType=cfhpfz
 ```
 **Response-fields:**
 
@@ -7390,26 +7390,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 592,
+    "totalCount": 759,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "118",
-        "resclassId": "118",
-        "fileName": "cleopatra.thompson",
+        "id": "119",
+        "resclassId": "119",
+        "fileName": "pauline.robel",
         "fileIsvalid": true,
-        "createTime": "2025-09-19 17:32:31",
-        "fileExtension": "vq9s6g",
+        "createTime": "2025-09-22 22:45:53",
+        "fileExtension": "bnhh3z",
         "ids": [
-          "mgrag9"
+          "fpuvfg"
         ]
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7454,7 +7454,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'startTime=2025-09-19 17:31:32&page=1&resclassId=118&q=jy9ujo&fileSize=676&fileExtension=1bzxxd&endTime=2025-09-19 17:31:32&refId=118&limit=10&refType=ccmpz6&fileName=cleopatra.thompson&appId=118&fileIsvalid=true&key=45fgxu&orderBy=934'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'refId=119&resclassId=119&fileName=pauline.robel&appId=119&limit=10&endTime=2025-09-22 22:44:42&page=1&fileIsvalid=true&fileExtension=s1fk0k&q=uaznay&orderBy=893&key=ezu68i&startTime=2025-09-22 22:44:42&fileSize=293&refType=av15ma'
 ```
 **Response-fields:**
 
@@ -7473,9 +7473,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9rx1by",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "kq3mfu",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7506,7 +7506,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=119
 ```
 **Response-fields:**
 
@@ -7533,18 +7533,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "118",
-    "resclassId": "118",
-    "fileName": "cleopatra.thompson",
+    "id": "119",
+    "resclassId": "119",
+    "fileName": "pauline.robel",
     "fileIsvalid": true,
-    "createTime": "2025-09-19 17:32:31",
-    "fileExtension": "ix864i",
+    "createTime": "2025-09-22 22:45:53",
+    "fileExtension": "ekfb1c",
     "ids": [
-      "fksv2v"
+      "m44pds"
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7584,14 +7584,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "118",
-    "resclassId": "118",
-    "fileName": "cleopatra.thompson",
+    "id": "119",
+    "resclassId": "119",
+    "fileName": "pauline.robel",
     "fileIsvalid": true,
-    "createTime": "2025-09-19 17:32:31",
-    "fileExtension": "hlugef",
+    "createTime": "2025-09-22 22:45:53",
+    "fileExtension": "j6pcyv",
     "ids": [
-      "zdfrtm"
+      "yk29qr"
     ]
   }
 }'
@@ -7613,9 +7613,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3kx4tz",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "o3tmjy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7655,14 +7655,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "118",
-    "resclassId": "118",
-    "fileName": "cleopatra.thompson",
+    "id": "119",
+    "resclassId": "119",
+    "fileName": "pauline.robel",
     "fileIsvalid": true,
-    "createTime": "2025-09-19 17:32:31",
-    "fileExtension": "cefnjp",
+    "createTime": "2025-09-22 22:45:53",
+    "fileExtension": "2vewrx",
     "ids": [
-      "50leg1"
+      "ebdqvo"
     ]
   }
 }'
@@ -7684,9 +7684,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lxsdsy",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "d0umkt",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7726,14 +7726,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "118",
-    "resclassId": "118",
-    "fileName": "cleopatra.thompson",
+    "id": "119",
+    "resclassId": "119",
+    "fileName": "pauline.robel",
     "fileIsvalid": true,
-    "createTime": "2025-09-19 17:32:31",
-    "fileExtension": "wci0so",
+    "createTime": "2025-09-22 22:45:53",
+    "fileExtension": "7fsjbz",
     "ids": [
-      "8eu9w7"
+      "bzs2hm"
     ]
   }
 }'
@@ -7755,9 +7755,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8shoab",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "iueq9y",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7801,9 +7801,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fmxc8t",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4g2rhy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7835,7 +7835,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?delete=true&fileName=cleopatra.thompson
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?delete=true&fileName=pauline.robel
 ```
 **Response-fields:**
 
@@ -7854,9 +7854,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hhkf8l",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "07av4y",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7907,15 +7907,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "cleopatra.thompson",
-    "filename": "cleopatra.thompson",
-    "fileType": "ufyj3h",
-    "fileUrl": "www.lezlie-kreiger.net",
-    "fileHttpUrl": "www.lezlie-kreiger.net",
-    "statusCode": "9574"
+    "originFilename": "pauline.robel",
+    "filename": "pauline.robel",
+    "fileType": "rs6p3z",
+    "fileUrl": "www.chanda-skiles.net",
+    "fileHttpUrl": "www.chanda-skiles.net",
+    "statusCode": "95555"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -7973,16 +7973,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "cleopatra.thompson",
-      "filename": "cleopatra.thompson",
-      "fileType": "7tdnkt",
-      "fileUrl": "www.lezlie-kreiger.net",
-      "fileHttpUrl": "www.lezlie-kreiger.net",
-      "statusCode": "9574"
+      "originFilename": "pauline.robel",
+      "filename": "pauline.robel",
+      "fileType": "ukm6q1",
+      "fileUrl": "www.chanda-skiles.net",
+      "fileHttpUrl": "www.chanda-skiles.net",
+      "statusCode": "95555"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8013,7 +8013,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=qxmpji
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=rppcd0
 ```
 **Response-fields:**
 
@@ -8032,9 +8032,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f1kau1",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "xfo2lz",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8081,7 +8081,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?organId=118&startTime=2025-09-19 17:31:32&type=42rfxp&status=882&appId=118&areaId=970&batchId=118&orderBy=432&groupId=467&endTime=2025-09-19 17:31:32&limit=10&page=1&positionId=118&roleTypeId=118&q=l139zi&keyWords=hejw0s
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?status=816&groupId=205&limit=10&keyWords=d61yzk&batchId=119&type=6p82oh&roleTypeId=119&endTime=2025-09-22 22:44:42&appId=119&areaId=50&positionId=119&page=1&startTime=2025-09-22 22:44:42&orderBy=433&q=ldson6&organId=119
 ```
 **Response-fields:**
 
@@ -8155,66 +8155,66 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 575,
+    "totalCount": 258,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:28",
-        "lastTime": "2025-09-19 17:32:28",
-        "id": 3,
-        "appId": "118",
-        "saveSource": "1jn6cq",
-        "unitName": "cleopatra.thompson",
-        "name": "cleopatra.thompson",
-        "idNum": "o8oay6",
-        "duty": "218oir",
-        "telephone": "(716) 567-3660",
-        "mobile": "828.254.1097",
-        "extInfo1": "3ahzo9",
-        "extInfo2": "4kbp9t",
-        "extInfo3": "ij7fe6",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:49",
+        "lastTime": "2025-09-22 22:45:49",
+        "id": 605,
+        "appId": "119",
+        "saveSource": "u6vq43",
+        "unitName": "pauline.robel",
+        "name": "pauline.robel",
+        "idNum": "zc8qlc",
+        "duty": "3nycyz",
+        "telephone": "484.704.3631",
+        "mobile": "724.248.1428",
+        "extInfo1": "4bncer",
+        "extInfo2": "iy88zx",
+        "extInfo3": "dl9i8r",
         "needInitUser": true,
-        "userId": "118",
+        "userId": "119",
         "needInitOrgan": true,
-        "organId": "118",
-        "type": "cxbhny",
-        "foreignUrl": "www.lezlie-kreiger.net",
-        "bizType": 722,
-        "bizOrganId": "118",
-        "bizAreaId": 626,
-        "bizGroupId": 610,
-        "bizPower": "khxn0t",
-        "bizMultiInfo": "e4z4o2",
+        "organId": "119",
+        "type": "wljkgl",
+        "foreignUrl": "www.chanda-skiles.net",
+        "bizType": 992,
+        "bizOrganId": "119",
+        "bizAreaId": 912,
+        "bizGroupId": 329,
+        "bizPower": "4xfh1d",
+        "bizMultiInfo": "1g80uq",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "118",
-        "opOrganId": "118",
-        "opTime": "2025-09-19 17:32:28",
-        "opInfo": "wxavvl",
-        "priority": 139,
-        "status": 526,
-        "delFlag": 0,
-        "dataBatch": "ej4nb9",
-        "dataVersion": 162,
-        "updateTime": "2025-09-19 17:32:28",
-        "syncMode": "5rpaeq",
-        "syncTime": "2025-09-19 17:32:28",
-        "description": "y4wzie",
-        "groupName": "cleopatra.thompson",
-        "positionName": "cleopatra.thompson",
-        "bizPowerName": "cleopatra.thompson",
-        "subdistrictName": "cleopatra.thompson",
-        "communityName": "cleopatra.thompson"
+        "opUserId": "119",
+        "opOrganId": "119",
+        "opTime": "2025-09-22 22:45:49",
+        "opInfo": "hxmbme",
+        "priority": 54,
+        "status": 706,
+        "delFlag": 2,
+        "dataBatch": "vq4uor",
+        "dataVersion": 357,
+        "updateTime": "2025-09-22 22:45:49",
+        "syncMode": "di86gi",
+        "syncTime": "2025-09-22 22:45:49",
+        "description": "p5y3wm",
+        "groupName": "pauline.robel",
+        "positionName": "pauline.robel",
+        "bizPowerName": "pauline.robel",
+        "subdistrictName": "pauline.robel",
+        "communityName": "pauline.robel"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8260,7 +8260,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'q=o8qktl&status=135&page=1&organId=118&roleTypeId=118&positionId=118&appId=118&orderBy=81&endTime=2025-09-19 17:31:32&groupId=61&areaId=374&keyWords=bb79vt&limit=10&batchId=118&type=5k76ek&startTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'appId=119&startTime=2025-09-22 22:44:42&positionId=119&endTime=2025-09-22 22:44:42&page=1&status=188&groupId=331&batchId=119&q=auxt8l&areaId=191&limit=10&roleTypeId=119&orderBy=480&type=fc9oa8&organId=119&keyWords=3gwxdu'
 ```
 **Response-fields:**
 
@@ -8279,9 +8279,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nvyfh4",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ofy3sy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8312,7 +8312,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/882.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/805.do
 ```
 **Response-fields:**
 
@@ -8381,58 +8381,58 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "id": 572,
-    "appId": "118",
-    "saveSource": "g7l0j3",
-    "unitName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "idNum": "grugvi",
-    "duty": "joo1y5",
-    "telephone": "(716) 567-3660",
-    "mobile": "828.254.1097",
-    "extInfo1": "95bdn8",
-    "extInfo2": "3drrhn",
-    "extInfo3": "nk4mwp",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:49",
+    "lastTime": "2025-09-22 22:45:49",
+    "id": 956,
+    "appId": "119",
+    "saveSource": "r3zz11",
+    "unitName": "pauline.robel",
+    "name": "pauline.robel",
+    "idNum": "i81sll",
+    "duty": "gyyqhd",
+    "telephone": "484.704.3631",
+    "mobile": "724.248.1428",
+    "extInfo1": "ojdi35",
+    "extInfo2": "prnti7",
+    "extInfo3": "gst5qy",
     "needInitUser": true,
-    "userId": "118",
+    "userId": "119",
     "needInitOrgan": true,
-    "organId": "118",
-    "type": "042r7i",
-    "foreignUrl": "www.lezlie-kreiger.net",
-    "bizType": 256,
-    "bizOrganId": "118",
-    "bizAreaId": 302,
-    "bizGroupId": 79,
-    "bizPower": "go8j91",
-    "bizMultiInfo": "42omak",
+    "organId": "119",
+    "type": "pxn52a",
+    "foreignUrl": "www.chanda-skiles.net",
+    "bizType": 332,
+    "bizOrganId": "119",
+    "bizAreaId": 764,
+    "bizGroupId": 874,
+    "bizPower": "bkqh1p",
+    "bizMultiInfo": "e0lmxj",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "118",
-    "opOrganId": "118",
-    "opTime": "2025-09-19 17:32:28",
-    "opInfo": "p1hx1y",
-    "priority": 130,
-    "status": 349,
-    "delFlag": 0,
-    "dataBatch": "8isqxv",
-    "dataVersion": 725,
-    "updateTime": "2025-09-19 17:32:28",
-    "syncMode": "451bia",
-    "syncTime": "2025-09-19 17:32:28",
-    "description": "3w6nbx",
-    "groupName": "cleopatra.thompson",
-    "positionName": "cleopatra.thompson",
-    "bizPowerName": "cleopatra.thompson",
-    "subdistrictName": "cleopatra.thompson",
-    "communityName": "cleopatra.thompson"
+    "opUserId": "119",
+    "opOrganId": "119",
+    "opTime": "2025-09-22 22:45:49",
+    "opInfo": "klvcqe",
+    "priority": 702,
+    "status": 474,
+    "delFlag": 2,
+    "dataBatch": "lqftrd",
+    "dataVersion": 207,
+    "updateTime": "2025-09-22 22:45:49",
+    "syncMode": "6ni693",
+    "syncTime": "2025-09-22 22:45:49",
+    "description": "md46y5",
+    "groupName": "pauline.robel",
+    "positionName": "pauline.robel",
+    "bizPowerName": "pauline.robel",
+    "subdistrictName": "pauline.robel",
+    "communityName": "pauline.robel"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8509,50 +8509,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "id": 542,
-    "appId": "118",
-    "saveSource": "n6xi9s",
-    "unitName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "idNum": "bq3vrg",
-    "duty": "ygirat",
-    "telephone": "(716) 567-3660",
-    "mobile": "828.254.1097",
-    "extInfo1": "v5ymz0",
-    "extInfo2": "vpfatd",
-    "extInfo3": "bmkosk",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:49",
+    "lastTime": "2025-09-22 22:45:49",
+    "id": 172,
+    "appId": "119",
+    "saveSource": "osfcfb",
+    "unitName": "pauline.robel",
+    "name": "pauline.robel",
+    "idNum": "d15x9u",
+    "duty": "8u4a4j",
+    "telephone": "484.704.3631",
+    "mobile": "724.248.1428",
+    "extInfo1": "5nclgm",
+    "extInfo2": "aesuqv",
+    "extInfo3": "79ljxa",
     "needInitUser": true,
-    "userId": "118",
+    "userId": "119",
     "needInitOrgan": true,
-    "organId": "118",
-    "type": "kyk0iy",
-    "foreignUrl": "www.lezlie-kreiger.net",
-    "bizType": 571,
-    "bizOrganId": "118",
-    "bizAreaId": 772,
-    "bizGroupId": 545,
-    "bizPower": "giyz8v",
-    "bizMultiInfo": "0wnu33",
+    "organId": "119",
+    "type": "l4hqtw",
+    "foreignUrl": "www.chanda-skiles.net",
+    "bizType": 45,
+    "bizOrganId": "119",
+    "bizAreaId": 588,
+    "bizGroupId": 634,
+    "bizPower": "fpji8l",
+    "bizMultiInfo": "rm6b5w",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "118",
-    "opOrganId": "118",
-    "opTime": "2025-09-19 17:32:28",
-    "opInfo": "b8zdee",
-    "priority": 954,
-    "status": 941,
-    "delFlag": 0,
-    "dataBatch": "gyu2iq",
-    "dataVersion": 582,
-    "updateTime": "2025-09-19 17:32:28",
-    "syncMode": "0gcgr6",
-    "syncTime": "2025-09-19 17:32:28",
-    "description": "9h5se0"
+    "opUserId": "119",
+    "opOrganId": "119",
+    "opTime": "2025-09-22 22:45:49",
+    "opInfo": "d936ub",
+    "priority": 508,
+    "status": 381,
+    "delFlag": 2,
+    "dataBatch": "8hhg5s",
+    "dataVersion": 489,
+    "updateTime": "2025-09-22 22:45:49",
+    "syncMode": "ft9pah",
+    "syncTime": "2025-09-22 22:45:49",
+    "description": "55ox6v"
   }
 }'
 ```
@@ -8573,9 +8573,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f0bf8n",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "7k348u",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8652,50 +8652,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "id": 971,
-    "appId": "118",
-    "saveSource": "erl5gu",
-    "unitName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "idNum": "v65v2v",
-    "duty": "i9zhdq",
-    "telephone": "(716) 567-3660",
-    "mobile": "828.254.1097",
-    "extInfo1": "rgp2oa",
-    "extInfo2": "p3d6w9",
-    "extInfo3": "a7llyy",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:49",
+    "lastTime": "2025-09-22 22:45:49",
+    "id": 398,
+    "appId": "119",
+    "saveSource": "12mw4b",
+    "unitName": "pauline.robel",
+    "name": "pauline.robel",
+    "idNum": "eweb5t",
+    "duty": "6tkll6",
+    "telephone": "484.704.3631",
+    "mobile": "724.248.1428",
+    "extInfo1": "a601wv",
+    "extInfo2": "h3anx7",
+    "extInfo3": "c5fivt",
     "needInitUser": true,
-    "userId": "118",
+    "userId": "119",
     "needInitOrgan": true,
-    "organId": "118",
-    "type": "807mx6",
-    "foreignUrl": "www.lezlie-kreiger.net",
-    "bizType": 193,
-    "bizOrganId": "118",
-    "bizAreaId": 301,
-    "bizGroupId": 659,
-    "bizPower": "cqdhrh",
-    "bizMultiInfo": "cmn696",
+    "organId": "119",
+    "type": "730xaj",
+    "foreignUrl": "www.chanda-skiles.net",
+    "bizType": 597,
+    "bizOrganId": "119",
+    "bizAreaId": 542,
+    "bizGroupId": 183,
+    "bizPower": "ruoh7x",
+    "bizMultiInfo": "68kqwf",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "118",
-    "opOrganId": "118",
-    "opTime": "2025-09-19 17:32:28",
-    "opInfo": "0r04lb",
-    "priority": 728,
-    "status": 561,
-    "delFlag": 0,
-    "dataBatch": "641780",
-    "dataVersion": 868,
-    "updateTime": "2025-09-19 17:32:28",
-    "syncMode": "ldbnce",
-    "syncTime": "2025-09-19 17:32:28",
-    "description": "brdu2z"
+    "opUserId": "119",
+    "opOrganId": "119",
+    "opTime": "2025-09-22 22:45:49",
+    "opInfo": "hpri0y",
+    "priority": 393,
+    "status": 36,
+    "delFlag": 2,
+    "dataBatch": "oclmu2",
+    "dataVersion": 166,
+    "updateTime": "2025-09-22 22:45:49",
+    "syncMode": "nxt3pr",
+    "syncTime": "2025-09-22 22:45:49",
+    "description": "hm779c"
   }
 }'
 ```
@@ -8716,9 +8716,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "luvy64",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rzfsr3",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8768,9 +8768,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z5iqhf",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "1lvccf",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8814,9 +8814,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "32lb8v",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "kuwb49",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8874,7 +8874,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?id=22&content=ugnq7u&orderBy=780&updatorId=118&updateTime=2025-09-19 17:32:34&title=8cgog7&status=197&siteId=120&recvMemberId=118&description=n7apnj&endTime=2025-09-19 17:31:32&recvOrganId=118&readStatus=7vtbjx&startTime=2025-09-19 17:31:32&page=1&bizType=rzbjmw&msgUrl=www.lezlie-kreiger.net&recvTargetid=118&recvGroupId=118&type=905&iconStyle=o6dqel&creatorId=118&foreignId=118&q=vwcktr&limit=10&imagePath=1b03vz&organId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?limit=10&updatorId=119&endTime=2025-09-22 22:44:42&recvMemberId=119&imagePath=ahjlv4&recvTargetid=119&bizType=alcpzb&type=646&msgUrl=www.chanda-skiles.net&content=daejvv&recvOrganId=119&updateTime=2025-09-22 22:45:57&description=cnqgdl&readStatus=f0qubp&id=989&page=1&startTime=2025-09-22 22:44:42&recvGroupId=119&q=2wcwa8&iconStyle=v8tzx7&status=69&siteId=129&creatorId=119&orderBy=510&organId=119&title=sve18c&foreignId=119
 ```
 **Response-fields:**
 
@@ -8917,32 +8917,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:34",
-      "lastTime": "2025-09-19 17:32:34",
-      "id": 500,
-      "siteId": 300,
-      "organId": "118",
-      "bizType": "ll1on2",
-      "type": 68,
-      "title": "fe8ttg",
-      "content": "i7ae8r",
-      "msgUrl": "www.lezlie-kreiger.net",
-      "foreignId": "118",
-      "imagePath": "zgm9ah",
-      "iconStyle": "ef4t7u",
-      "recvMemberId": "118",
-      "recvGroupId": "118",
-      "recvOrganId": "118",
-      "recvTargetid": "118",
-      "status": 170,
-      "updatorId": "118",
-      "updateTime": "2025-09-19 17:32:34",
-      "description": "2fnq2c"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:57",
+      "lastTime": "2025-09-22 22:45:57",
+      "id": 636,
+      "siteId": 820,
+      "organId": "119",
+      "bizType": "o16yzf",
+      "type": 546,
+      "title": "mgu2mp",
+      "content": "b8eikb",
+      "msgUrl": "www.chanda-skiles.net",
+      "foreignId": "119",
+      "imagePath": "0todpp",
+      "iconStyle": "zutuzg",
+      "recvMemberId": "119",
+      "recvGroupId": "119",
+      "recvOrganId": "119",
+      "recvTargetid": "119",
+      "status": 516,
+      "updatorId": "119",
+      "updateTime": "2025-09-22 22:45:57",
+      "description": "sl344g"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -8999,7 +8999,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?iconStyle=fb3q1w&bizType=t8nazq&page=1&description=geerva&status=983&msgUrl=www.lezlie-kreiger.net&recvTargetid=118&content=wv8y61&foreignId=118&creatorId=118&readStatus=yzd5ff&imagePath=n1bfzn&title=ujmwdd&orderBy=940&startTime=2025-09-19 17:31:32&recvMemberId=118&type=689&organId=118&updateTime=2025-09-19 17:32:35&recvOrganId=118&limit=10&updatorId=118&q=wrbgia&siteId=534&recvGroupId=118&id=724&endTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?foreignId=119&organId=119&recvOrganId=119&creatorId=119&id=935&updateTime=2025-09-22 22:45:57&content=gnx7np&updatorId=119&orderBy=385&page=1&description=epby4e&siteId=110&limit=10&q=81zmjr&endTime=2025-09-22 22:44:42&msgUrl=www.chanda-skiles.net&iconStyle=qr07jx&type=917&bizType=hxa74z&recvGroupId=119&recvTargetid=119&title=pt60jv&imagePath=p8m6bz&status=211&startTime=2025-09-22 22:44:42&recvMemberId=119&readStatus=4bumnd
 ```
 **Response-fields:**
 
@@ -9042,32 +9042,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:35",
-      "lastTime": "2025-09-19 17:32:35",
-      "id": 566,
-      "siteId": 993,
-      "organId": "118",
-      "bizType": "u9fzsi",
-      "type": 202,
-      "title": "frab4h",
-      "content": "nmo980",
-      "msgUrl": "www.lezlie-kreiger.net",
-      "foreignId": "118",
-      "imagePath": "22oiif",
-      "iconStyle": "2bm4aw",
-      "recvMemberId": "118",
-      "recvGroupId": "118",
-      "recvOrganId": "118",
-      "recvTargetid": "118",
-      "status": 407,
-      "updatorId": "118",
-      "updateTime": "2025-09-19 17:32:35",
-      "description": "q00fev"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:57",
+      "lastTime": "2025-09-22 22:45:57",
+      "id": 886,
+      "siteId": 294,
+      "organId": "119",
+      "bizType": "ttq1z6",
+      "type": 226,
+      "title": "1hf5k3",
+      "content": "isj8lb",
+      "msgUrl": "www.chanda-skiles.net",
+      "foreignId": "119",
+      "imagePath": "hzj73t",
+      "iconStyle": "wf9l7x",
+      "recvMemberId": "119",
+      "recvGroupId": "119",
+      "recvOrganId": "119",
+      "recvTargetid": "119",
+      "status": 258,
+      "updatorId": "119",
+      "updateTime": "2025-09-22 22:45:57",
+      "description": "cakqmj"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9124,7 +9124,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'msgUrl=www.lezlie-kreiger.net&page=1&q=pzj7je&foreignId=118&type=367&status=580&organId=118&iconStyle=ezijyc&creatorId=118&readStatus=2qnb3x&bizType=w5j6xl&recvGroupId=118&updatorId=118&updateTime=2025-09-19 17:32:35&orderBy=230&imagePath=x379id&recvMemberId=118&endTime=2025-09-19 17:31:32&startTime=2025-09-19 17:31:32&recvTargetid=118&recvOrganId=118&limit=10&content=cok510&siteId=110&id=220&title=mzg6qq&description=w9t2gu'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'organId=119&creatorId=119&orderBy=494&title=oeijau&iconStyle=5db3nk&startTime=2025-09-22 22:44:42&msgUrl=www.chanda-skiles.net&recvOrganId=119&recvMemberId=119&q=tndnpv&limit=10&updateTime=2025-09-22 22:45:58&status=123&updatorId=119&endTime=2025-09-22 22:44:42&foreignId=119&description=7y3gbs&recvTargetid=119&id=170&page=1&type=849&siteId=791&bizType=ugr9tw&recvGroupId=119&content=2tihmf&imagePath=o7vwvr&readStatus=a8w97q'
 ```
 **Response-fields:**
 
@@ -9143,9 +9143,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qci3n8",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "x7neib",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9218,31 +9218,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": 409,
-    "siteId": 439,
-    "organId": "118",
-    "bizType": "g89io9",
-    "type": 739,
-    "title": "j9qfqm",
-    "content": "ckzypl",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "foreignId": "118",
-    "imagePath": "e9myqj",
-    "iconStyle": "6x3v69",
-    "recvMemberId": "118",
-    "recvGroupId": "118",
-    "recvOrganId": "118",
-    "recvTargetid": "118",
-    "status": 843,
-    "updatorId": "118",
-    "updateTime": "2025-09-19 17:32:35",
-    "description": "izzia6"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:58",
+    "lastTime": "2025-09-22 22:45:58",
+    "id": 86,
+    "siteId": 719,
+    "organId": "119",
+    "bizType": "jmgwmo",
+    "type": 893,
+    "title": "tvvk5t",
+    "content": "n6ryet",
+    "msgUrl": "www.chanda-skiles.net",
+    "foreignId": "119",
+    "imagePath": "qpcnyu",
+    "iconStyle": "elqgrg",
+    "recvMemberId": "119",
+    "recvGroupId": "119",
+    "recvOrganId": "119",
+    "recvTargetid": "119",
+    "status": 831,
+    "updatorId": "119",
+    "updateTime": "2025-09-22 22:45:58",
+    "description": "fj170c"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9297,28 +9297,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": 167,
-    "siteId": 701,
-    "organId": "118",
-    "bizType": "u545q3",
-    "type": 261,
-    "title": "7m2i6n",
-    "content": "irixmz",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "foreignId": "118",
-    "imagePath": "gzeay5",
-    "iconStyle": "ot8ui0",
-    "recvMemberId": "118",
-    "recvGroupId": "118",
-    "recvOrganId": "118",
-    "recvTargetid": "118",
-    "status": 277,
-    "updatorId": "118",
-    "updateTime": "2025-09-19 17:32:35",
-    "description": "2xe90w"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:58",
+    "lastTime": "2025-09-22 22:45:58",
+    "id": 593,
+    "siteId": 850,
+    "organId": "119",
+    "bizType": "s07vju",
+    "type": 239,
+    "title": "41wbd9",
+    "content": "b4it5w",
+    "msgUrl": "www.chanda-skiles.net",
+    "foreignId": "119",
+    "imagePath": "udcwi9",
+    "iconStyle": "tzga1z",
+    "recvMemberId": "119",
+    "recvGroupId": "119",
+    "recvOrganId": "119",
+    "recvTargetid": "119",
+    "status": 771,
+    "updatorId": "119",
+    "updateTime": "2025-09-22 22:45:58",
+    "description": "ejzvok"
   }
 }'
 ```
@@ -9339,9 +9339,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "87ijvt",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "nsmtxk",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9396,28 +9396,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": 239,
-    "siteId": 670,
-    "organId": "118",
-    "bizType": "lqdsbt",
-    "type": 668,
-    "title": "ala22m",
-    "content": "5oh0xl",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "foreignId": "118",
-    "imagePath": "i9s41j",
-    "iconStyle": "b5faxv",
-    "recvMemberId": "118",
-    "recvGroupId": "118",
-    "recvOrganId": "118",
-    "recvTargetid": "118",
-    "status": 277,
-    "updatorId": "118",
-    "updateTime": "2025-09-19 17:32:35",
-    "description": "av7x05"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:58",
+    "lastTime": "2025-09-22 22:45:58",
+    "id": 558,
+    "siteId": 267,
+    "organId": "119",
+    "bizType": "50ap0w",
+    "type": 558,
+    "title": "dq6x1t",
+    "content": "jqwxu8",
+    "msgUrl": "www.chanda-skiles.net",
+    "foreignId": "119",
+    "imagePath": "kmzk7p",
+    "iconStyle": "xsa0qi",
+    "recvMemberId": "119",
+    "recvGroupId": "119",
+    "recvOrganId": "119",
+    "recvTargetid": "119",
+    "status": 577,
+    "updatorId": "119",
+    "updateTime": "2025-09-22 22:45:58",
+    "description": "f9g4s5"
   }
 }'
 ```
@@ -9438,9 +9438,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dm0obt",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "8gzk6z",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9490,9 +9490,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ar4592",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4j48ri",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9536,9 +9536,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zky59g",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "zxuo4a",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9588,9 +9588,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hatikt",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "z18clz",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9640,9 +9640,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6cwehi",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "jhxx3s",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9687,11 +9687,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "liq4r9",
-    "mapKey2": "4jna44"
+    "mapKey1": "dme6dm",
+    "mapKey2": "nyaiop"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9758,7 +9758,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?msgOrganName=cleopatra.thompson&msgContent=3mznbl&msgTitle=7z1043&orderBy=795&q=1gusot&opUserId=118&msgModuleId=118&msgAbstract=kwaox5&msgOrganId=118&limit=10&msgId=832&msgLabels=54xhlz&id=118&page=1&msgUserId=118&msgUrl=www.lezlie-kreiger.net&msgUserName=cleopatra.thompson&opTime=2025-09-19 17:32:35&msgModuleName=cleopatra.thompson&opOrganName=cleopatra.thompson&creatorId=118&spare2=fc5ozy&msgAccountId=118&siteId=311&type=vf1n8h&msgType=694&msgAccountName=cleopatra.thompson&foreignId=118&status=04af3v&description=jui1q6&opOrganId=118&bizType=pxrnky&spare1=11p73u&msgCreateTime=2025-09-19 17:32:35&endTime=2025-09-19 17:31:32&startTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?msgCreateTime=2025-09-22 22:45:59&spare2=a3ca86&status=kw2369&msgTitle=ow10cn&limit=10&opOrganId=119&creatorId=119&type=6bck2b&description=c4eysr&msgOrganName=pauline.robel&bizType=cd4f3u&orderBy=508&msgAbstract=ediprf&msgType=927&msgUrl=www.chanda-skiles.net&q=r6dq6v&spare1=ck0xs1&startTime=2025-09-22 22:44:42&foreignId=119&endTime=2025-09-22 22:44:42&msgModuleId=119&msgAccountId=119&msgContent=vf3ulw&opOrganName=pauline.robel&opUserId=119&siteId=82&msgModuleName=pauline.robel&id=119&opTime=2025-09-22 22:45:59&msgUserName=pauline.robel&msgId=307&msgUserId=119&page=1&msgOrganId=119&msgLabels=un0zou&msgAccountName=pauline.robel
 ```
 **Response-fields:**
 
@@ -9811,42 +9811,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:35",
-      "lastTime": "2025-09-19 17:32:35",
-      "id": "118",
-      "siteId": 922,
-      "foreignId": "118",
-      "type": "b4fkpq",
-      "bizType": "mrzryj",
-      "msgCreateTime": "2025-09-19 17:32:35",
-      "msgId": 741,
-      "msgType": 536,
-      "msgTitle": "2yank7",
-      "msgAbstract": "arrhpp",
-      "msgAccountId": "118",
-      "msgAccountName": "cleopatra.thompson",
-      "msgModuleId": "118",
-      "msgModuleName": "cleopatra.thompson",
-      "msgUserId": "118",
-      "msgUserName": "cleopatra.thompson",
-      "msgOrganId": "118",
-      "msgOrganName": "cleopatra.thompson",
-      "msgUrl": "www.lezlie-kreiger.net",
-      "msgLabels": "xemff6",
-      "msgContent": "gusmxw",
-      "status": "ngond9",
-      "opUserId": "118",
-      "opTime": "2025-09-19 17:32:35",
-      "opOrganId": "118",
-      "opOrganName": "cleopatra.thompson",
-      "description": "s9iqdf",
-      "spare1": "986zvn",
-      "spare2": "8q5e6i"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:59",
+      "lastTime": "2025-09-22 22:45:59",
+      "id": "119",
+      "siteId": 528,
+      "foreignId": "119",
+      "type": "4rlno7",
+      "bizType": "kuc1pe",
+      "msgCreateTime": "2025-09-22 22:45:59",
+      "msgId": 945,
+      "msgType": 680,
+      "msgTitle": "q7ft98",
+      "msgAbstract": "d9ausv",
+      "msgAccountId": "119",
+      "msgAccountName": "pauline.robel",
+      "msgModuleId": "119",
+      "msgModuleName": "pauline.robel",
+      "msgUserId": "119",
+      "msgUserName": "pauline.robel",
+      "msgOrganId": "119",
+      "msgOrganName": "pauline.robel",
+      "msgUrl": "www.chanda-skiles.net",
+      "msgLabels": "pr0qfr",
+      "msgContent": "ltu0dh",
+      "status": "fxadd3",
+      "opUserId": "119",
+      "opTime": "2025-09-22 22:45:59",
+      "opOrganId": "119",
+      "opOrganName": "pauline.robel",
+      "description": "lk83zn",
+      "spare1": "juaygq",
+      "spare2": "9xm2ec"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -9912,7 +9912,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'description=uybjja&bizType=dbue53&msgAccountName=cleopatra.thompson&id=118&type=0plvi7&startTime=2025-09-19 17:31:32&page=1&msgModuleId=118&msgUserId=118&limit=10&msgId=361&msgType=339&msgAccountId=118&msgUserName=cleopatra.thompson&msgOrganId=118&msgUrl=www.lezlie-kreiger.net&msgContent=9zx8tm&msgTitle=oyc9fz&endTime=2025-09-19 17:31:32&msgModuleName=cleopatra.thompson&q=y2oqbn&foreignId=118&opTime=2025-09-19 17:32:35&msgOrganName=cleopatra.thompson&opUserId=118&opOrganId=118&status=hwppgh&creatorId=118&msgLabels=meyi2i&siteId=131&orderBy=370&spare2=10o7av&msgCreateTime=2025-09-19 17:32:35&msgAbstract=2w90dm&spare1=r7kio2&opOrganName=cleopatra.thompson'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'q=7aovhb&id=119&msgLabels=7kgi7y&opTime=2025-09-22 22:45:59&msgContent=pwm8al&foreignId=119&description=xgyrg9&msgUserId=119&opOrganId=119&bizType=4wwwwj&spare2=wn3y8m&startTime=2025-09-22 22:44:42&siteId=687&msgTitle=vc4a6j&msgCreateTime=2025-09-22 22:45:59&msgAccountName=pauline.robel&orderBy=411&msgModuleName=pauline.robel&msgAbstract=e8k7ui&msgUserName=pauline.robel&msgAccountId=119&msgOrganId=119&msgOrganName=pauline.robel&creatorId=119&opOrganName=pauline.robel&msgModuleId=119&msgUrl=www.chanda-skiles.net&msgType=526&status=na440k&opUserId=119&endTime=2025-09-22 22:44:42&page=1&spare1=qu1l2f&msgId=406&type=01fojd&limit=10'
 ```
 **Response-fields:**
 
@@ -9931,9 +9931,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7l54y8",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "6s6gof",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10016,41 +10016,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": "118",
-    "siteId": 612,
-    "foreignId": "118",
-    "type": "djn83t",
-    "bizType": "hstmyp",
-    "msgCreateTime": "2025-09-19 17:32:35",
-    "msgId": 926,
-    "msgType": 649,
-    "msgTitle": "1bd4d0",
-    "msgAbstract": "wwns7p",
-    "msgAccountId": "118",
-    "msgAccountName": "cleopatra.thompson",
-    "msgModuleId": "118",
-    "msgModuleName": "cleopatra.thompson",
-    "msgUserId": "118",
-    "msgUserName": "cleopatra.thompson",
-    "msgOrganId": "118",
-    "msgOrganName": "cleopatra.thompson",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "msgLabels": "ko4uzm",
-    "msgContent": "1d04lz",
-    "status": "qi4kzy",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:35",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "fkhzuz",
-    "spare1": "i9ziis",
-    "spare2": "n2awtb"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:59",
+    "lastTime": "2025-09-22 22:45:59",
+    "id": "119",
+    "siteId": 993,
+    "foreignId": "119",
+    "type": "oecb24",
+    "bizType": "2nc9b4",
+    "msgCreateTime": "2025-09-22 22:45:59",
+    "msgId": 746,
+    "msgType": 46,
+    "msgTitle": "8lzgwr",
+    "msgAbstract": "cb9bo6",
+    "msgAccountId": "119",
+    "msgAccountName": "pauline.robel",
+    "msgModuleId": "119",
+    "msgModuleName": "pauline.robel",
+    "msgUserId": "119",
+    "msgUserName": "pauline.robel",
+    "msgOrganId": "119",
+    "msgOrganName": "pauline.robel",
+    "msgUrl": "www.chanda-skiles.net",
+    "msgLabels": "beoxrw",
+    "msgContent": "6ch8rl",
+    "status": "wwm180",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:45:59",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "2zme68",
+    "spare1": "ydueuu",
+    "spare2": "fi220g"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10115,38 +10115,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": "118",
-    "siteId": 772,
-    "foreignId": "118",
-    "type": "p7zm2d",
-    "bizType": "rc4rri",
-    "msgCreateTime": "2025-09-19 17:32:35",
-    "msgId": 526,
-    "msgType": 628,
-    "msgTitle": "2jpsnd",
-    "msgAbstract": "v5a3hw",
-    "msgAccountId": "118",
-    "msgAccountName": "cleopatra.thompson",
-    "msgModuleId": "118",
-    "msgModuleName": "cleopatra.thompson",
-    "msgUserId": "118",
-    "msgUserName": "cleopatra.thompson",
-    "msgOrganId": "118",
-    "msgOrganName": "cleopatra.thompson",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "msgLabels": "x099b8",
-    "msgContent": "v7wn5e",
-    "status": "nzavb1",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:35",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "t54tll",
-    "spare1": "zvniia",
-    "spare2": "4mvfig"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:59",
+    "lastTime": "2025-09-22 22:45:59",
+    "id": "119",
+    "siteId": 942,
+    "foreignId": "119",
+    "type": "rosaiu",
+    "bizType": "eb3ho7",
+    "msgCreateTime": "2025-09-22 22:45:59",
+    "msgId": 24,
+    "msgType": 412,
+    "msgTitle": "jqprbn",
+    "msgAbstract": "ia20js",
+    "msgAccountId": "119",
+    "msgAccountName": "pauline.robel",
+    "msgModuleId": "119",
+    "msgModuleName": "pauline.robel",
+    "msgUserId": "119",
+    "msgUserName": "pauline.robel",
+    "msgOrganId": "119",
+    "msgOrganName": "pauline.robel",
+    "msgUrl": "www.chanda-skiles.net",
+    "msgLabels": "prv05k",
+    "msgContent": "yhcexb",
+    "status": "e8krbo",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:45:59",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "l9sma3",
+    "spare1": "j4rgrn",
+    "spare2": "la2yvp"
   }
 }'
 ```
@@ -10167,9 +10167,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "clzsqg",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "l3lhl0",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10234,38 +10234,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:35",
-    "lastTime": "2025-09-19 17:32:35",
-    "id": "118",
-    "siteId": 657,
-    "foreignId": "118",
-    "type": "jccbe1",
-    "bizType": "oyiumo",
-    "msgCreateTime": "2025-09-19 17:32:35",
-    "msgId": 293,
-    "msgType": 514,
-    "msgTitle": "pwz43v",
-    "msgAbstract": "hqtjt8",
-    "msgAccountId": "118",
-    "msgAccountName": "cleopatra.thompson",
-    "msgModuleId": "118",
-    "msgModuleName": "cleopatra.thompson",
-    "msgUserId": "118",
-    "msgUserName": "cleopatra.thompson",
-    "msgOrganId": "118",
-    "msgOrganName": "cleopatra.thompson",
-    "msgUrl": "www.lezlie-kreiger.net",
-    "msgLabels": "4hfuvc",
-    "msgContent": "20lt8b",
-    "status": "qo0iud",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:35",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "bj2kz9",
-    "spare1": "sei5hs",
-    "spare2": "w6ufc7"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:59",
+    "lastTime": "2025-09-22 22:45:59",
+    "id": "119",
+    "siteId": 991,
+    "foreignId": "119",
+    "type": "xyv7km",
+    "bizType": "av0rf7",
+    "msgCreateTime": "2025-09-22 22:45:59",
+    "msgId": 868,
+    "msgType": 604,
+    "msgTitle": "a9ntiv",
+    "msgAbstract": "o4ynx3",
+    "msgAccountId": "119",
+    "msgAccountName": "pauline.robel",
+    "msgModuleId": "119",
+    "msgModuleName": "pauline.robel",
+    "msgUserId": "119",
+    "msgUserName": "pauline.robel",
+    "msgOrganId": "119",
+    "msgOrganName": "pauline.robel",
+    "msgUrl": "www.chanda-skiles.net",
+    "msgLabels": "3pewpk",
+    "msgContent": "2taia3",
+    "status": "1r3y0l",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:45:59",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "0xr7yq",
+    "spare1": "aztr53",
+    "spare2": "c4a0i5"
   }
 }'
 ```
@@ -10286,9 +10286,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h4eo31",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "k1xs47",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10338,9 +10338,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i1cc3d",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "iatdb2",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10372,7 +10372,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/2wx2le.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/o8yy38.do
 ```
 **Response-fields:**
 
@@ -10391,9 +10391,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c6c680",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "qmmyqd",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10465,7 +10465,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoLabels=x3uywh&q=ekea3n&todoProcessInfo=frxprf&todoNextInfo=6wb8gz&opUserId=118&opOrganId=118&todoId=118&description=8ohz18&siteId=600&todoCurrInfo=puhtyn&spare2=xnl5ov&foreignId=118&todoContent=9esp9k&creatorId=118&todoCreateTime=2025-09-19 17:32:36&todoModuleName=cleopatra.thompson&todoUrl=www.lezlie-kreiger.net&todoName=cleopatra.thompson&todoOrganName=cleopatra.thompson&opOrganName=cleopatra.thompson&todoAccountName=cleopatra.thompson&startTime=2025-09-19 17:31:32&id=118&page=1&todoType=t7pchx&todoUserId=118&todoProcessName=cleopatra.thompson&todoModuleId=118&orderBy=885&endTime=2025-09-19 17:31:32&opTime=2025-09-19 17:32:36&todoAccountId=118&limit=10&todoUserName=cleopatra.thompson&todoOrganId=118&spare1=zjqs7z&bizType=46fh7f&todoAbstract=mp68bk&status=98xys0&type=yyutdr&todoProcessStatus=ljslvl
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?endTime=2025-09-22 22:44:42&todoProcessName=pauline.robel&todoUserId=119&todoProcessInfo=8dzhy2&todoCreateTime=2025-09-22 22:46:00&todoName=pauline.robel&todoAccountId=119&limit=10&todoAbstract=59pmqn&type=wntrl6&todoUserName=pauline.robel&bizType=45xggw&opUserId=119&foreignId=119&status=14iydj&spare2=sf9nnx&creatorId=119&orderBy=63&page=1&todoOrganName=pauline.robel&startTime=2025-09-22 22:44:42&todoId=119&todoUrl=www.chanda-skiles.net&spare1=lipw6o&siteId=117&todoCurrInfo=xbq9jz&todoProcessStatus=dkc93a&todoAccountName=pauline.robel&todoNextInfo=pdu0d0&opOrganId=119&opOrganName=pauline.robel&description=d5csxm&todoOrganId=119&todoModuleName=pauline.robel&todoModuleId=119&todoContent=rzt0h7&todoLabels=62qvo7&todoType=xdvrj3&q=42xbm6&opTime=2025-09-22 22:46:00&id=119
 ```
 **Response-fields:**
 
@@ -10523,47 +10523,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:36",
-      "lastTime": "2025-09-19 17:32:36",
-      "id": "118",
-      "siteId": 238,
-      "foreignId": "118",
-      "type": "iygn3t",
-      "bizType": "98cpdu",
-      "todoCreateTime": "2025-09-19 17:32:36",
-      "todoId": "118",
-      "todoType": "hu2un7",
-      "todoName": "cleopatra.thompson",
-      "todoAbstract": "g170d3",
-      "todoAccountId": "118",
-      "todoAccountName": "cleopatra.thompson",
-      "todoModuleId": "118",
-      "todoModuleName": "cleopatra.thompson",
-      "todoUserId": "118",
-      "todoUserName": "cleopatra.thompson",
-      "todoOrganId": "118",
-      "todoOrganName": "cleopatra.thompson",
-      "todoProcessName": "cleopatra.thompson",
-      "todoProcessStatus": "qd0xuo",
-      "todoProcessInfo": "8mh2ki",
-      "todoCurrInfo": "inzw25",
-      "todoNextInfo": "iutsjj",
-      "todoUrl": "www.lezlie-kreiger.net",
-      "todoLabels": "n09162",
-      "todoContent": "u48okw",
-      "status": "bdbr5l",
-      "opUserId": "118",
-      "opTime": "2025-09-19 17:32:36",
-      "opOrganId": "118",
-      "opOrganName": "cleopatra.thompson",
-      "description": "qj3f6f",
-      "spare1": "adc4k4",
-      "spare2": "u4hmck"
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:46:00",
+      "lastTime": "2025-09-22 22:46:00",
+      "id": "119",
+      "siteId": 224,
+      "foreignId": "119",
+      "type": "poyn73",
+      "bizType": "n91oxs",
+      "todoCreateTime": "2025-09-22 22:46:00",
+      "todoId": "119",
+      "todoType": "gwdwpt",
+      "todoName": "pauline.robel",
+      "todoAbstract": "4l86x4",
+      "todoAccountId": "119",
+      "todoAccountName": "pauline.robel",
+      "todoModuleId": "119",
+      "todoModuleName": "pauline.robel",
+      "todoUserId": "119",
+      "todoUserName": "pauline.robel",
+      "todoOrganId": "119",
+      "todoOrganName": "pauline.robel",
+      "todoProcessName": "pauline.robel",
+      "todoProcessStatus": "otxacs",
+      "todoProcessInfo": "8nqoej",
+      "todoCurrInfo": "dpffyu",
+      "todoNextInfo": "agn4gl",
+      "todoUrl": "www.chanda-skiles.net",
+      "todoLabels": "3rxazl",
+      "todoContent": "8oj8rx",
+      "status": "1frlml",
+      "opUserId": "119",
+      "opTime": "2025-09-22 22:46:00",
+      "opOrganId": "119",
+      "opOrganName": "pauline.robel",
+      "description": "9bqtvq",
+      "spare1": "r2urbn",
+      "spare2": "k674f9"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10634,7 +10634,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoOrganId=118&todoUrl=www.lezlie-kreiger.net&orderBy=272&id=118&foreignId=118&todoContent=6e4njd&opTime=2025-09-19 17:32:36&limit=10&todoProcessStatus=h5yotu&spare2=lx8tgq&todoUserName=cleopatra.thompson&todoProcessInfo=f4dh9b&type=s2n08q&q=jl1ayf&todoCurrInfo=9pbx25&todoAbstract=i3ku0o&todoLabels=cb4wap&opOrganId=118&todoAccountId=118&todoCreateTime=2025-09-19 17:32:36&todoName=cleopatra.thompson&todoProcessName=cleopatra.thompson&bizType=q1s3zu&endTime=2025-09-19 17:31:32&todoAccountName=cleopatra.thompson&todoId=118&todoModuleId=118&siteId=366&opOrganName=cleopatra.thompson&creatorId=118&status=cufshe&description=ouqjbd&page=1&startTime=2025-09-19 17:31:32&todoModuleName=cleopatra.thompson&todoUserId=118&opUserId=118&spare1=jvtsg6&todoType=x4q18x&todoOrganName=cleopatra.thompson&todoNextInfo=xl04pb'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoModuleName=pauline.robel&todoCurrInfo=uvrvge&todoOrganName=pauline.robel&todoOrganId=119&q=5na02s&todoAccountName=pauline.robel&todoLabels=tdzd7q&opTime=2025-09-22 22:46:00&startTime=2025-09-22 22:44:42&type=m0ym5z&todoType=sz5qbs&id=119&todoProcessInfo=btptc8&orderBy=869&endTime=2025-09-22 22:44:42&spare2=3f60rp&todoAccountId=119&todoUrl=www.chanda-skiles.net&todoModuleId=119&foreignId=119&todoAbstract=okv5gt&todoUserName=pauline.robel&todoProcessName=pauline.robel&creatorId=119&limit=10&description=qspfnh&spare1=bp2kfi&bizType=08qd0x&todoNextInfo=lfmcdf&todoContent=4bim2i&opUserId=119&todoId=119&todoUserId=119&page=1&siteId=547&status=ve8t0v&opOrganId=119&todoProcessStatus=md1x4j&opOrganName=pauline.robel&todoName=pauline.robel&todoCreateTime=2025-09-22 22:46:00'
 ```
 **Response-fields:**
 
@@ -10653,9 +10653,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7k3103",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "tkogdi",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10743,46 +10743,46 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:36",
-    "lastTime": "2025-09-19 17:32:36",
-    "id": "118",
-    "siteId": 120,
-    "foreignId": "118",
-    "type": "hfongb",
-    "bizType": "9lx0zc",
-    "todoCreateTime": "2025-09-19 17:32:36",
-    "todoId": "118",
-    "todoType": "6zf9ri",
-    "todoName": "cleopatra.thompson",
-    "todoAbstract": "u7eapc",
-    "todoAccountId": "118",
-    "todoAccountName": "cleopatra.thompson",
-    "todoModuleId": "118",
-    "todoModuleName": "cleopatra.thompson",
-    "todoUserId": "118",
-    "todoUserName": "cleopatra.thompson",
-    "todoOrganId": "118",
-    "todoOrganName": "cleopatra.thompson",
-    "todoProcessName": "cleopatra.thompson",
-    "todoProcessStatus": "8r0o7v",
-    "todoProcessInfo": "y5l7se",
-    "todoCurrInfo": "9n0uh5",
-    "todoNextInfo": "2yve1n",
-    "todoUrl": "www.lezlie-kreiger.net",
-    "todoLabels": "mpvnih",
-    "todoContent": "medqdw",
-    "status": "snwuxz",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:36",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "cnmaay",
-    "spare1": "vjh2y4",
-    "spare2": "kxky2e"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:46:00",
+    "lastTime": "2025-09-22 22:46:00",
+    "id": "119",
+    "siteId": 870,
+    "foreignId": "119",
+    "type": "k35zct",
+    "bizType": "p3vpug",
+    "todoCreateTime": "2025-09-22 22:46:00",
+    "todoId": "119",
+    "todoType": "l6dzes",
+    "todoName": "pauline.robel",
+    "todoAbstract": "rt2j22",
+    "todoAccountId": "119",
+    "todoAccountName": "pauline.robel",
+    "todoModuleId": "119",
+    "todoModuleName": "pauline.robel",
+    "todoUserId": "119",
+    "todoUserName": "pauline.robel",
+    "todoOrganId": "119",
+    "todoOrganName": "pauline.robel",
+    "todoProcessName": "pauline.robel",
+    "todoProcessStatus": "hjgsle",
+    "todoProcessInfo": "aip9is",
+    "todoCurrInfo": "mr3m1r",
+    "todoNextInfo": "ydssze",
+    "todoUrl": "www.chanda-skiles.net",
+    "todoLabels": "0uerdx",
+    "todoContent": "gfkrei",
+    "status": "lbslst",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:46:00",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "gc3wqz",
+    "spare1": "26dons",
+    "spare2": "vrq8pi"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10852,43 +10852,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:36",
-    "lastTime": "2025-09-19 17:32:36",
-    "id": "118",
-    "siteId": 876,
-    "foreignId": "118",
-    "type": "x97a80",
-    "bizType": "zb8jo5",
-    "todoCreateTime": "2025-09-19 17:32:36",
-    "todoId": "118",
-    "todoType": "xbwd10",
-    "todoName": "cleopatra.thompson",
-    "todoAbstract": "gxrze5",
-    "todoAccountId": "118",
-    "todoAccountName": "cleopatra.thompson",
-    "todoModuleId": "118",
-    "todoModuleName": "cleopatra.thompson",
-    "todoUserId": "118",
-    "todoUserName": "cleopatra.thompson",
-    "todoOrganId": "118",
-    "todoOrganName": "cleopatra.thompson",
-    "todoProcessName": "cleopatra.thompson",
-    "todoProcessStatus": "f64jka",
-    "todoProcessInfo": "ow9mes",
-    "todoCurrInfo": "tkvrtg",
-    "todoNextInfo": "468d7a",
-    "todoUrl": "www.lezlie-kreiger.net",
-    "todoLabels": "zwyloo",
-    "todoContent": "856jeh",
-    "status": "qg3gbu",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:36",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "t2nuos",
-    "spare1": "vilnmk",
-    "spare2": "cn7da2"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:46:00",
+    "lastTime": "2025-09-22 22:46:00",
+    "id": "119",
+    "siteId": 854,
+    "foreignId": "119",
+    "type": "dbz69z",
+    "bizType": "rowrkf",
+    "todoCreateTime": "2025-09-22 22:46:00",
+    "todoId": "119",
+    "todoType": "azgsuy",
+    "todoName": "pauline.robel",
+    "todoAbstract": "dd9j9k",
+    "todoAccountId": "119",
+    "todoAccountName": "pauline.robel",
+    "todoModuleId": "119",
+    "todoModuleName": "pauline.robel",
+    "todoUserId": "119",
+    "todoUserName": "pauline.robel",
+    "todoOrganId": "119",
+    "todoOrganName": "pauline.robel",
+    "todoProcessName": "pauline.robel",
+    "todoProcessStatus": "3l3pdo",
+    "todoProcessInfo": "kkx8s9",
+    "todoCurrInfo": "ne0g8d",
+    "todoNextInfo": "phdimo",
+    "todoUrl": "www.chanda-skiles.net",
+    "todoLabels": "l0yfwe",
+    "todoContent": "pgp5b2",
+    "status": "0dwpt8",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:46:00",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "7u8i0m",
+    "spare1": "efwmgd",
+    "spare2": "lvo6b0"
   }
 }'
 ```
@@ -10909,9 +10909,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "byw9vv",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rwhb3j",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -10981,43 +10981,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:36",
-    "lastTime": "2025-09-19 17:32:36",
-    "id": "118",
-    "siteId": 525,
-    "foreignId": "118",
-    "type": "gcr1yz",
-    "bizType": "oqtcun",
-    "todoCreateTime": "2025-09-19 17:32:36",
-    "todoId": "118",
-    "todoType": "a6cg6w",
-    "todoName": "cleopatra.thompson",
-    "todoAbstract": "zocrsk",
-    "todoAccountId": "118",
-    "todoAccountName": "cleopatra.thompson",
-    "todoModuleId": "118",
-    "todoModuleName": "cleopatra.thompson",
-    "todoUserId": "118",
-    "todoUserName": "cleopatra.thompson",
-    "todoOrganId": "118",
-    "todoOrganName": "cleopatra.thompson",
-    "todoProcessName": "cleopatra.thompson",
-    "todoProcessStatus": "lbat8e",
-    "todoProcessInfo": "vp5tht",
-    "todoCurrInfo": "8phuli",
-    "todoNextInfo": "k8ec70",
-    "todoUrl": "www.lezlie-kreiger.net",
-    "todoLabels": "t31zu1",
-    "todoContent": "b650jp",
-    "status": "7d2cjb",
-    "opUserId": "118",
-    "opTime": "2025-09-19 17:32:36",
-    "opOrganId": "118",
-    "opOrganName": "cleopatra.thompson",
-    "description": "t8ldfx",
-    "spare1": "5nqshm",
-    "spare2": "bxmyo7"
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:46:00",
+    "lastTime": "2025-09-22 22:46:00",
+    "id": "119",
+    "siteId": 502,
+    "foreignId": "119",
+    "type": "uvcy5p",
+    "bizType": "tgpsr6",
+    "todoCreateTime": "2025-09-22 22:46:00",
+    "todoId": "119",
+    "todoType": "fqib2y",
+    "todoName": "pauline.robel",
+    "todoAbstract": "r4dj09",
+    "todoAccountId": "119",
+    "todoAccountName": "pauline.robel",
+    "todoModuleId": "119",
+    "todoModuleName": "pauline.robel",
+    "todoUserId": "119",
+    "todoUserName": "pauline.robel",
+    "todoOrganId": "119",
+    "todoOrganName": "pauline.robel",
+    "todoProcessName": "pauline.robel",
+    "todoProcessStatus": "aia6t8",
+    "todoProcessInfo": "sqbe82",
+    "todoCurrInfo": "yco4b1",
+    "todoNextInfo": "t0x52x",
+    "todoUrl": "www.chanda-skiles.net",
+    "todoLabels": "js4h0f",
+    "todoContent": "zitu4l",
+    "status": "bl5cz1",
+    "opUserId": "119",
+    "opTime": "2025-09-22 22:46:00",
+    "opOrganId": "119",
+    "opOrganName": "pauline.robel",
+    "description": "3coa3u",
+    "spare1": "5694wp",
+    "spare2": "x1jdb9"
   }
 }'
 ```
@@ -11038,9 +11038,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6vbat3",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "yz82kz",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11090,9 +11090,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vflu11",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "97wbf7",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11128,8 +11128,8 @@ code|string|返回状态码:正常状态为0|-
 msg|string|返回消息|-
 data|object|返回数据对象|-
 └─user|object|当前用户|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─authorities|array|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|用户LID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
@@ -11159,36 +11159,36 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "password": "g4gmag",
-      "username": "cleopatra.thompson",
+      "username": "pauline.robel",
+      "password": "lujek5",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "adminId": 165,
-      "userId": "118",
-      "appId": "118",
-      "deptId": 152,
-      "organId": "118",
-      "token": "x7ffr5",
-      "imagePath": "kxzlt0",
+      "adminId": 46,
+      "userId": "119",
+      "appId": "119",
+      "deptId": 409,
+      "organId": "119",
+      "token": "kugmnn",
+      "imagePath": "v84l95",
       "isSuperAdmin": true,
-      "loginIp": "142.83.169.77",
-      "loginTime": 1758274292622,
-      "loginBrowse": "3b1k9m",
-      "loginOs": "06asix",
-      "expireTime": 1758274292622,
+      "loginIp": "112.28.203.208",
+      "loginTime": 1758552282472,
+      "loginBrowse": "8rd6rl",
+      "loginOs": "sp6uf6",
+      "expireTime": 1758552282472,
       "perms": [
-        "1lhydx"
+        "u8nz7w"
       ],
-      "userType": "ls8jpv"
+      "userType": "x1a8dq"
     },
-    "roleGroup": "bjl03y",
-    "positionGroup": "va6d8c"
+    "roleGroup": "hmg1o0",
+    "positionGroup": "3l5cdz"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11317,60 +11317,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:26",
-    "lastTime": "2025-09-19 17:32:26",
-    "id": 839,
-    "userId": "118",
-    "deptId": 706,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "2rhxfw",
-    "password": "h8jxgs",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:46",
+    "lastTime": "2025-09-22 22:45:46",
+    "id": 168,
+    "userId": "119",
+    "deptId": 373,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "v9wimz",
+    "password": "oz1e3r",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 220,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:26",
-    "description": "goy5yi",
+    "status": 87,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:46",
+    "description": "9herrp",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:26",
-      "lastTime": "2025-09-19 17:32:26",
-      "id": 632,
-      "organId": "118",
-      "parentId": 935,
-      "appId": "118",
-      "depttypeId": 868,
-      "foreignId": "118",
-      "createType": 358,
-      "type": "zj4pom",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "iho7dv",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:46",
+      "lastTime": "2025-09-22 22:45:46",
+      "id": 682,
+      "organId": "119",
+      "parentId": 416,
+      "appId": "119",
+      "depttypeId": 268,
+      "foreignId": "119",
+      "createType": 946,
+      "type": "ekqzbk",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "9qzvw9",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "52nmxh",
-      "priority": 611,
-      "status": 330,
-      "delFlag": 0,
-      "description": "ey4g1i",
-      "spare1": "2o6xnj",
-      "spare2": "66iwds",
+      "searchCode": "95555",
+      "imagePath": "3w32bi",
+      "priority": 900,
+      "status": 948,
+      "delFlag": 2,
+      "description": "gdgaxo",
+      "spare1": "6apm9c",
+      "spare2": "owsuk7",
       "children": [
         {
           "$ref": ".."
@@ -11379,47 +11379,47 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:26",
-        "lastTime": "2025-09-19 17:32:26",
-        "id": 808,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 144,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:46",
+        "lastTime": "2025-09-22 22:45:46",
+        "id": 447,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 315,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 924,
-        "description": "z1t6gc",
-        "areaType": "uifh0y"
+        "status": 632,
+        "description": "zv36fb",
+        "areaType": "l4mb69"
       }
     ],
     "roleIds": [
-      865
+      117
     ],
     "positionIds": [
-      "2rntzu"
+      "b8mpnp"
     ],
-    "roleId": 934,
+    "roleId": 206,
     "userRoleList": [
       {
-        "id": 789,
-        "deptId": 370,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 496,
-        "roleName": "cleopatra.thompson",
-        "adminId": 132
+        "id": 87,
+        "deptId": 840,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 793,
+        "roleName": "pauline.robel",
+        "adminId": 199
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11536,60 +11536,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:26",
-    "lastTime": "2025-09-19 17:32:26",
-    "id": 193,
-    "userId": "118",
-    "deptId": 530,
-    "deptName": "cleopatra.thompson",
-    "organId": "118",
-    "organName": "cleopatra.thompson",
-    "name": "cleopatra.thompson",
-    "username": "cleopatra.thompson",
-    "nickName": "maribeth.rutherford",
-    "email": "sheree.stanton@gmail.com",
-    "mobile": "828.254.1097",
-    "imagePath": "0bk2q8",
-    "password": "51iu6p",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:46",
+    "lastTime": "2025-09-22 22:45:46",
+    "id": 970,
+    "userId": "119",
+    "deptId": 553,
+    "deptName": "pauline.robel",
+    "organId": "119",
+    "organName": "pauline.robel",
+    "name": "pauline.robel",
+    "username": "pauline.robel",
+    "nickName": "heriberto.bahringer",
+    "email": "leonard.grady@yahoo.com",
+    "mobile": "724.248.1428",
+    "imagePath": "rwmosi",
+    "password": "i70kky",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 697,
-    "delFlag": 0,
-    "lastLoginIp": "142.83.169.77",
-    "lastLoginTime": "2025-09-19 17:32:26",
-    "description": "6w0i16",
+    "status": 576,
+    "delFlag": 2,
+    "lastLoginIp": "112.28.203.208",
+    "lastLoginTime": "2025-09-22 22:45:46",
+    "description": "q83tv9",
     "dept": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:26",
-      "lastTime": "2025-09-19 17:32:26",
-      "id": 914,
-      "organId": "118",
-      "parentId": 471,
-      "appId": "118",
-      "depttypeId": 413,
-      "foreignId": "118",
-      "createType": 253,
-      "type": "4s9ye0",
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "areaCode": "9574",
-      "organLeader": "wwm6ff",
-      "leaderId": "118",
-      "leaderMobile": "828.254.1097",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:46",
+      "lastTime": "2025-09-22 22:45:46",
+      "id": 237,
+      "organId": "119",
+      "parentId": 867,
+      "appId": "119",
+      "depttypeId": 604,
+      "foreignId": "119",
+      "createType": 925,
+      "type": "tgh0ns",
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "areaCode": "95555",
+      "organLeader": "idtx8c",
+      "leaderId": "119",
+      "leaderMobile": "724.248.1428",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "9574",
-      "imagePath": "qi30z5",
-      "priority": 508,
-      "status": 55,
-      "delFlag": 0,
-      "description": "b9d9uf",
-      "spare1": "jgcovv",
-      "spare2": "0thrjy",
+      "searchCode": "95555",
+      "imagePath": "5xxi0s",
+      "priority": 624,
+      "status": 115,
+      "delFlag": 2,
+      "description": "8e3fpc",
+      "spare1": "liha2h",
+      "spare2": "4sp958",
       "children": [
         {
           "$ref": ".."
@@ -11598,44 +11598,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:26",
-        "lastTime": "2025-09-19 17:32:26",
-        "id": 336,
-        "roletypeId": "118",
-        "appId": "118",
-        "name": "cleopatra.thompson",
-        "code": "9574",
-        "priority": 437,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:46",
+        "lastTime": "2025-09-22 22:45:46",
+        "id": 365,
+        "roletypeId": "119",
+        "appId": "119",
+        "name": "pauline.robel",
+        "code": "95555",
+        "priority": 632,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 65,
-        "description": "7bxc9h",
-        "areaType": "ymyj69"
+        "status": 107,
+        "description": "4ale6s",
+        "areaType": "mvd0vz"
       }
     ],
     "roleIds": [
-      382
+      562
     ],
     "positionIds": [
-      "bax9mq"
+      "t7n5k9"
     ],
-    "roleId": 138,
+    "roleId": 932,
     "userRoleList": [
       {
-        "id": 998,
-        "deptId": 661,
-        "deptName": "cleopatra.thompson",
-        "organId": "118",
-        "organName": "cleopatra.thompson",
-        "roleId": 633,
-        "roleName": "cleopatra.thompson",
-        "adminId": 432
+        "id": 800,
+        "deptId": 823,
+        "deptName": "pauline.robel",
+        "organId": "119",
+        "organName": "pauline.robel",
+        "roleId": 735,
+        "roleName": "pauline.robel",
+        "adminId": 558
       }
     ],
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
   }
 }'
 ```
@@ -11657,8 +11657,8 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11692,8 +11692,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "2tahud",
-    "newPassword": "3zz4lc"
+    "oldPassword": "tn3ps9",
+    "newPassword": "oeugl2"
   }
 }'
 ```
@@ -11717,8 +11717,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11769,10 +11769,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.lezlie-kreiger.net"
+    "imageUrl": "www.chanda-skiles.net"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11812,7 +11812,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-09-19 17:31:32&remark=zy8rw0&orderBy=370&configKey=dfwly8&isDisabled=true&page=1&configValue=nyjk70&q=b4w9wb&endTime=2025-09-19 17:31:32&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?orderBy=50&endTime=2025-09-22 22:44:42&page=1&limit=10&configValue=jjlngd&configKey=v2mtnw&remark=71rdj5&q=rjex96&isDisabled=true&startTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -11842,22 +11842,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 896,
+    "totalCount": 842,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "118",
-        "configKey": "c2i0y6",
-        "configValue": "jz4ikv",
+        "configId": "119",
+        "configKey": "43tjr5",
+        "configValue": "odblal",
         "isDisabled": true,
-        "remark": "4ppjvg"
+        "remark": "9y3sfb"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11896,7 +11896,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'remark=bss7vo&configValue=ftq0h8&isDisabled=true&page=1&startTime=2025-09-19 17:31:32&endTime=2025-09-19 17:31:32&q=k1f24u&configKey=iv1yuj&orderBy=345&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'page=1&configKey=mhu8zn&startTime=2025-09-22 22:44:42&configValue=ddz0lk&limit=10&q=o4s8d5&isDisabled=true&remark=6zycfv&orderBy=901&endTime=2025-09-22 22:44:42'
 ```
 **Response-fields:**
 
@@ -11915,9 +11915,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "k5854w",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "jq6gul",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -11947,7 +11947,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/118.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/119.do
 ```
 **Response-fields:**
 
@@ -11972,14 +11972,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "118",
-    "configKey": "pnu98m",
-    "configValue": "vya4mf",
+    "configId": "119",
+    "configKey": "ws45fh",
+    "configValue": "3dybeb",
     "isDisabled": true,
-    "remark": "yujirb"
+    "remark": "q8blp7"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12009,7 +12009,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/ok4zn0.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/8962c8.do
 ```
 **Response-fields:**
 
@@ -12034,14 +12034,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "118",
-    "configKey": "ek9vxk",
-    "configValue": "i63nws",
+    "configId": "119",
+    "configKey": "q2kts5",
+    "configValue": "kc8rus",
     "isDisabled": true,
-    "remark": "6o3exc"
+    "remark": "h7j4wb"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12078,11 +12078,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "118",
-    "configKey": "mng2fv",
-    "configValue": "ru5nfm",
+    "configId": "119",
+    "configKey": "iypnu7",
+    "configValue": "tlma05",
     "isDisabled": true,
-    "remark": "2tfy52"
+    "remark": "y8hp3y"
   }
 }'
 ```
@@ -12103,9 +12103,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0weg4h",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4wc76y",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12142,11 +12142,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "118",
-    "configKey": "y4q3qu",
-    "configValue": "dviyrg",
+    "configId": "119",
+    "configKey": "uotmqy",
+    "configValue": "6fizok",
     "isDisabled": true,
-    "remark": "g7zxvo"
+    "remark": "13ur8j"
   }
 }'
 ```
@@ -12167,9 +12167,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ekvye6",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "aolj4f",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12218,9 +12218,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9748da",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ieypir",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12263,9 +12263,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qfp78m",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "vf7j8w",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12297,7 +12297,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=cleopatra.thompson&ipaddr=r235j4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=pauline.robel&ipaddr=gc7lr7
 ```
 **Response-fields:**
 
@@ -12326,18 +12326,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "118",
-      "deptName": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "ipaddr": "1cw8ow",
-      "loginLocation": "x2eq0h",
-      "browser": "91dw6w",
-      "os": "2zdzy1",
-      "loginTime": 1758274292622
+      "tokenId": "119",
+      "deptName": "pauline.robel",
+      "username": "pauline.robel",
+      "ipaddr": "gy578q",
+      "loginLocation": "x5bagv",
+      "browser": "tgirid",
+      "os": "b8jsry",
+      "loginTime": 1758552282472
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12367,7 +12367,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/118.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/119.do
 ```
 **Response-fields:**
 
@@ -12386,9 +12386,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "60zldr",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "iglkwc",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12431,7 +12431,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?q=3t2d7i&remark=xa823l&key=vo74ya&typeMode=40&startTime=2025-09-19 17:31:32&orderBy=576&name=cleopatra.thompson&page=1&typeClass=hiwbn9&status=bi296i&limit=10&endTime=2025-09-19 17:31:32&typeId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?remark=ncjppv&endTime=2025-09-22 22:44:42&page=1&typeMode=224&q=lwmykw&typeId=119&typeClass=liytrm&key=ipan2m&startTime=2025-09-22 22:44:42&limit=10&status=tqaoc2&orderBy=418&name=pauline.robel
 ```
 **Response-fields:**
 
@@ -12466,27 +12466,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 234,
+    "totalCount": 246,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "118",
-        "name": "cleopatra.thompson",
-        "typeClass": "rsdx39",
-        "typeRef": "a77vkf",
-        "typeMode": 152,
-        "searchCode": "9574",
-        "priority": 828,
-        "createTime": "2025-09-19 17:32:34",
-        "status": 850,
-        "remark": "484373"
+        "typeId": "119",
+        "name": "pauline.robel",
+        "typeClass": "k8bjh0",
+        "typeRef": "twsuxd",
+        "typeMode": 946,
+        "searchCode": "95555",
+        "priority": 838,
+        "createTime": "2025-09-22 22:45:56",
+        "status": 567,
+        "remark": "yqt10g"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12528,7 +12528,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'q=cwhsel&typeMode=383&remark=xrn4we&startTime=2025-09-19 17:31:32&orderBy=752&key=xuf0zt&typeId=118&page=1&limit=10&status=fm852z&name=cleopatra.thompson&typeClass=02fbdy&endTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'endTime=2025-09-22 22:44:42&startTime=2025-09-22 22:44:42&orderBy=43&page=1&q=tjvoc7&remark=7e5hau&name=pauline.robel&typeId=119&typeMode=261&typeClass=hqsg9l&status=5wrl99&limit=10&key=4p8nrs'
 ```
 **Response-fields:**
 
@@ -12547,9 +12547,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c5gqdo",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "80ccvt",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12579,7 +12579,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/118.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/119.do
 ```
 **Response-fields:**
 
@@ -12609,19 +12609,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "118",
-    "name": "cleopatra.thompson",
-    "typeClass": "nqfy4n",
-    "typeRef": "jozgts",
-    "typeMode": 516,
-    "searchCode": "9574",
-    "priority": 843,
-    "createTime": "2025-09-19 17:32:34",
-    "status": 550,
-    "remark": "zsf14f"
+    "typeId": "119",
+    "name": "pauline.robel",
+    "typeClass": "0e3rqq",
+    "typeRef": "izllk3",
+    "typeMode": 307,
+    "searchCode": "95555",
+    "priority": 574,
+    "createTime": "2025-09-22 22:45:56",
+    "status": 718,
+    "remark": "gjh6iy"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12663,16 +12663,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "118",
-    "name": "cleopatra.thompson",
-    "typeClass": "jbn1vw",
-    "typeRef": "nbd58g",
-    "typeMode": 673,
-    "searchCode": "9574",
-    "priority": 801,
-    "createTime": "2025-09-19 17:32:34",
-    "status": 680,
-    "remark": "3ib75e"
+    "typeId": "119",
+    "name": "pauline.robel",
+    "typeClass": "vf073o",
+    "typeRef": "t88mtx",
+    "typeMode": 275,
+    "searchCode": "95555",
+    "priority": 772,
+    "createTime": "2025-09-22 22:45:57",
+    "status": 835,
+    "remark": "rlzve9"
   }
 }'
 ```
@@ -12693,9 +12693,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c8g9rr",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "5ga6wv",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12737,16 +12737,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "118",
-    "name": "cleopatra.thompson",
-    "typeClass": "o9agy9",
-    "typeRef": "g1vml8",
-    "typeMode": 53,
-    "searchCode": "9574",
-    "priority": 70,
-    "createTime": "2025-09-19 17:32:34",
-    "status": 665,
-    "remark": "tz3q2h"
+    "typeId": "119",
+    "name": "pauline.robel",
+    "typeClass": "0my11s",
+    "typeRef": "oxozht",
+    "typeMode": 193,
+    "searchCode": "95555",
+    "priority": 289,
+    "createTime": "2025-09-22 22:45:57",
+    "status": 863,
+    "remark": "cvebzk"
   }
 }'
 ```
@@ -12767,9 +12767,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vle73h",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ieb58o",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12818,9 +12818,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9d3tvu",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "d3v98w",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12863,9 +12863,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u7opbv",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "cf9k5z",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12920,20 +12920,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "118",
-      "name": "cleopatra.thompson",
-      "typeClass": "lgj053",
-      "typeRef": "ggc24v",
-      "typeMode": 547,
-      "searchCode": "9574",
-      "priority": 527,
-      "createTime": "2025-09-19 17:32:34",
-      "status": 750,
-      "remark": "8kzawm"
+      "typeId": "119",
+      "name": "pauline.robel",
+      "typeClass": "s19qff",
+      "typeRef": "o0d2rt",
+      "typeMode": 748,
+      "searchCode": "95555",
+      "priority": 732,
+      "createTime": "2025-09-22 22:45:57",
+      "status": 250,
+      "remark": "rjoeqx"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -12991,7 +12991,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?name=cleopatra.thompson&postypeId=118&roletypeId=118&oname=cleopatra.thompson&positionId=118&officePhone=(716) 567-3660&orderBy=313&limit=10&parentId=118&isPub=true&sname=cleopatra.thompson&mobilePhone=(716) 567-3660&createTime=2025-09-19 17:31:32&posRank=489&status=8&posType=n4xidd&page=1&startTime=2025-09-19 17:31:32&id=118&code=9574&posFunction=0tm2zj&roleTypeId=118&groupId=118&endTime=2025-09-19 17:31:32&ids=znmn8u&ids=znmn8u&delFlag=0&description=hf9jsw&q=cznz1v
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?posType=p7ezyd&q=8hxbfv&name=pauline.robel&officePhone=484.704.3631&description=c98dek&id=119&status=749&parentId=119&sname=pauline.robel&positionId=119&startTime=2025-09-22 22:44:42&limit=10&posFunction=b8psoo&orderBy=724&roletypeId=119&postypeId=119&endTime=2025-09-22 22:44:42&posRank=612&mobilePhone=484.704.3631&page=1&oname=pauline.robel&isPub=true&code=95555&delFlag=2&createTime=2025-09-22 22:44:42&ids=p7ep0e&ids=p7ep0e&groupId=119&roleTypeId=119
 ```
 **Response-fields:**
 
@@ -13029,32 +13029,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 356,
+    "totalCount": 428,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "118",
-        "postCode": "9574",
-        "postName": "cleopatra.thompson",
-        "postSort": 95,
-        "status": 860,
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:29",
-        "lastTime": "2025-09-19 17:32:29",
-        "delFlag": 0,
-        "remark": "e5hb06",
+        "postId": "119",
+        "postCode": "95555",
+        "postName": "pauline.robel",
+        "postSort": 208,
+        "status": 838,
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:50",
+        "lastTime": "2025-09-22 22:45:50",
+        "delFlag": 2,
+        "remark": "usr482",
         "ids": [
-          "pi7bkb"
+          "1wjxwm"
         ],
-        "positionId": "118",
+        "positionId": "119",
         "flag": true
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13093,7 +13093,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postCode=9574&q=jzm4e2&postName=cleopatra.thompson&status=820&delFlag=0&startTime=2025-09-19 17:31:32&orderBy=196&page=1&limit=10&endTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'limit=10&q=hbru1g&postCode=95555&endTime=2025-09-22 22:44:42&orderBy=234&startTime=2025-09-22 22:44:42&status=114&postName=pauline.robel&delFlag=2&page=1'
 ```
 **Response-fields:**
 
@@ -13112,9 +13112,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jy8a76",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "j0y40g",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13144,7 +13144,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/118.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/119.do
 ```
 **Response-fields:**
 
@@ -13205,50 +13205,50 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:29",
-    "lastTime": "2025-09-19 17:32:29",
-    "id": "118",
-    "parentId": "118",
-    "postypeId": "118",
-    "roletypeId": "118",
-    "userId": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "code": "9574",
-    "oname": "cleopatra.thompson",
-    "posFunction": "8jw8dz",
-    "posRank": 566,
-    "posType": "314kuk",
-    "editorType": "hndtb1",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:50",
+    "lastTime": "2025-09-22 22:45:50",
+    "id": "119",
+    "parentId": "119",
+    "postypeId": "119",
+    "roletypeId": "119",
+    "userId": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "code": "95555",
+    "oname": "pauline.robel",
+    "posFunction": "jostcf",
+    "posRank": 158,
+    "posType": "07fy7d",
+    "editorType": "bq4vx3",
     "isEditorCreate": true,
-    "status": 997,
+    "status": 339,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "118",
-    "manageDeptids": "c9e68w",
+    "leaderId": "119",
+    "manageDeptids": "nj3nb0",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(716) 567-3660",
-    "officePhone": "(716) 567-3660",
-    "buildingId": "118",
-    "roomNo": "npaj8z",
-    "extQmType": "ew18m3",
-    "extQmTypePhoto": "soxd50",
-    "extPosName": "cleopatra.thompson",
-    "extOrganName": "cleopatra.thompson",
-    "priority": 14,
-    "priorityInOrgan": 947,
-    "priorityInDomain": 788,
-    "updaterId": "118",
-    "updateTime": "2025-09-19 17:32:29",
-    "delFlag": 0,
-    "description": "2sfs5l",
-    "remark": "eexo41"
+    "mobilePhone": "484.704.3631",
+    "officePhone": "484.704.3631",
+    "buildingId": "119",
+    "roomNo": "79oos0",
+    "extQmType": "d0807s",
+    "extQmTypePhoto": "hp9bpx",
+    "extPosName": "pauline.robel",
+    "extOrganName": "pauline.robel",
+    "priority": 189,
+    "priorityInOrgan": 179,
+    "priorityInDomain": 314,
+    "updaterId": "119",
+    "updateTime": "2025-09-22 22:45:50",
+    "delFlag": 2,
+    "description": "pr92so",
+    "remark": "2lr50r"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13324,50 +13324,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:29",
-    "lastTime": "2025-09-19 17:32:29",
-    "id": "118",
-    "parentId": "118",
-    "postypeId": "118",
-    "roletypeId": "118",
-    "userId": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "code": "9574",
-    "oname": "cleopatra.thompson",
-    "posFunction": "srj4nc",
-    "posRank": 633,
-    "posType": "hau2a4",
-    "editorType": "o4u902",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:50",
+    "lastTime": "2025-09-22 22:45:50",
+    "id": "119",
+    "parentId": "119",
+    "postypeId": "119",
+    "roletypeId": "119",
+    "userId": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "code": "95555",
+    "oname": "pauline.robel",
+    "posFunction": "5p7c4w",
+    "posRank": 334,
+    "posType": "twarim",
+    "editorType": "nbixxu",
     "isEditorCreate": true,
-    "status": 35,
+    "status": 483,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "118",
-    "manageDeptids": "pao5a1",
+    "leaderId": "119",
+    "manageDeptids": "2qawr7",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(716) 567-3660",
-    "officePhone": "(716) 567-3660",
-    "buildingId": "118",
-    "roomNo": "y4hxwc",
-    "extQmType": "yt5cdn",
-    "extQmTypePhoto": "ppdr4y",
-    "extPosName": "cleopatra.thompson",
-    "extOrganName": "cleopatra.thompson",
-    "priority": 974,
-    "priorityInOrgan": 639,
-    "priorityInDomain": 265,
-    "updaterId": "118",
-    "updateTime": "2025-09-19 17:32:29",
-    "delFlag": 0,
-    "description": "c68l1v",
-    "remark": "f7v0ed",
-    "parentName": "cleopatra.thompson",
-    "roletypeName": "cleopatra.thompson",
-    "postypeName": "cleopatra.thompson"
+    "mobilePhone": "484.704.3631",
+    "officePhone": "484.704.3631",
+    "buildingId": "119",
+    "roomNo": "stjv7u",
+    "extQmType": "h99m2f",
+    "extQmTypePhoto": "56ao8f",
+    "extPosName": "pauline.robel",
+    "extOrganName": "pauline.robel",
+    "priority": 477,
+    "priorityInOrgan": 851,
+    "priorityInDomain": 948,
+    "updaterId": "119",
+    "updateTime": "2025-09-22 22:45:50",
+    "delFlag": 2,
+    "description": "c9vpgt",
+    "remark": "8lk190",
+    "parentName": "pauline.robel",
+    "roletypeName": "pauline.robel",
+    "postypeName": "pauline.robel"
   }
 }'
 ```
@@ -13388,9 +13388,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a79kwy",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "r6f0xb",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13466,50 +13466,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:29",
-    "lastTime": "2025-09-19 17:32:29",
-    "id": "118",
-    "parentId": "118",
-    "postypeId": "118",
-    "roletypeId": "118",
-    "userId": "118",
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "code": "9574",
-    "oname": "cleopatra.thompson",
-    "posFunction": "599dm9",
-    "posRank": 383,
-    "posType": "afikm6",
-    "editorType": "vb7b4c",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:50",
+    "lastTime": "2025-09-22 22:45:50",
+    "id": "119",
+    "parentId": "119",
+    "postypeId": "119",
+    "roletypeId": "119",
+    "userId": "119",
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "code": "95555",
+    "oname": "pauline.robel",
+    "posFunction": "gi6vaf",
+    "posRank": 807,
+    "posType": "sth1zr",
+    "editorType": "vq4l5a",
     "isEditorCreate": true,
-    "status": 743,
+    "status": 661,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "118",
-    "manageDeptids": "70vc0c",
+    "leaderId": "119",
+    "manageDeptids": "8pykvo",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(716) 567-3660",
-    "officePhone": "(716) 567-3660",
-    "buildingId": "118",
-    "roomNo": "9bgact",
-    "extQmType": "2eylcu",
-    "extQmTypePhoto": "l1n5n3",
-    "extPosName": "cleopatra.thompson",
-    "extOrganName": "cleopatra.thompson",
-    "priority": 647,
-    "priorityInOrgan": 832,
-    "priorityInDomain": 131,
-    "updaterId": "118",
-    "updateTime": "2025-09-19 17:32:29",
-    "delFlag": 0,
-    "description": "phwtji",
-    "remark": "o2r9d1",
-    "parentName": "cleopatra.thompson",
-    "roletypeName": "cleopatra.thompson",
-    "postypeName": "cleopatra.thompson"
+    "mobilePhone": "484.704.3631",
+    "officePhone": "484.704.3631",
+    "buildingId": "119",
+    "roomNo": "h8kjf2",
+    "extQmType": "nsft7l",
+    "extQmTypePhoto": "gc45l3",
+    "extPosName": "pauline.robel",
+    "extOrganName": "pauline.robel",
+    "priority": 419,
+    "priorityInOrgan": 441,
+    "priorityInDomain": 937,
+    "updaterId": "119",
+    "updateTime": "2025-09-22 22:45:50",
+    "delFlag": 2,
+    "description": "cun017",
+    "remark": "ntt4vv",
+    "parentName": "pauline.robel",
+    "roletypeName": "pauline.robel",
+    "postypeName": "pauline.robel"
   }
 }'
 ```
@@ -13530,9 +13530,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uwrluc",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "tc5dc7",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13581,9 +13581,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yq8e5w",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "yxnaq5",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13628,20 +13628,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "118",
-    "postCode": "9574",
-    "postName": "cleopatra.thompson",
-    "postSort": 170,
-    "status": 840,
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:29",
-    "lastTime": "2025-09-19 17:32:29",
-    "delFlag": 0,
-    "remark": "1ixvow",
+    "postId": "119",
+    "postCode": "95555",
+    "postName": "pauline.robel",
+    "postSort": 273,
+    "status": 578,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:50",
+    "lastTime": "2025-09-22 22:45:50",
+    "delFlag": 2,
+    "remark": "50dqly",
     "ids": [
-      "kp658j"
+      "6116fm"
     ],
-    "positionId": "118",
+    "positionId": "119",
     "flag": true
   }
 }'
@@ -13663,9 +13663,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hb95c0",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "flrgn6",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13703,12 +13703,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 563,
-    "roleId": 676,
-    "positionId": "118",
-    "status": 422,
-    "beginTime": "2025-09-19",
-    "endTime": "2025-09-19"
+    "id": 686,
+    "roleId": 201,
+    "positionId": "119",
+    "status": 592,
+    "beginTime": "2025-09-22",
+    "endTime": "2025-09-22"
   }
 }'
 ```
@@ -13729,9 +13729,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7udll3",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "i242bi",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13789,25 +13789,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "118",
-      "postCode": "9574",
-      "postName": "cleopatra.thompson",
-      "postSort": 994,
-      "status": 84,
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:29",
-      "lastTime": "2025-09-19 17:32:29",
-      "delFlag": 0,
-      "remark": "tntz7i",
+      "postId": "119",
+      "postCode": "95555",
+      "postName": "pauline.robel",
+      "postSort": 939,
+      "status": 816,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:50",
+      "lastTime": "2025-09-22 22:45:50",
+      "delFlag": 2,
+      "remark": "9pbtve",
       "ids": [
-        "q733ws"
+        "jkajfx"
       ],
-      "positionId": "118",
+      "positionId": "119",
       "flag": true
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13853,7 +13853,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?appId=118&operation=xrm8q3&endTime=2025-09-19 17:31:32&category=345&method=281u5z&createTime=2025-09-19 17:32:29&startTime=2025-09-19 17:31:32&ip=142.83.169.77&page=1&limit=10&userId=118&time=1758274292622&srcCode=775&username=cleopatra.thompson&q=xmvvbh&orderBy=888
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?method=9shgp3&username=pauline.robel&srcCode=701&limit=10&startTime=2025-09-22 22:44:42&createTime=2025-09-22 22:45:51&page=1&category=873&orderBy=565&q=xnn23b&userId=119&endTime=2025-09-22 22:44:42&appId=119&operation=glgahv&time=1758552282472&ip=112.28.203.208
 ```
 **Response-fields:**
 
@@ -13898,39 +13898,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 881,
+    "totalCount": 949,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 344,
-        "title": "j1i732",
-        "businessType": 262,
-        "businessTypeName": "cleopatra.thompson",
+        "operId": 382,
+        "title": "5fe2ub",
+        "businessType": 514,
+        "businessTypeName": "pauline.robel",
         "businessTypes": [
-          176
+          49
         ],
-        "method": "cqwtf2",
-        "requestMethod": "22esrq",
-        "operatorType": 142,
-        "operName": "cleopatra.thompson",
-        "deptName": "cleopatra.thompson",
-        "operUrl": "www.lezlie-kreiger.net",
-        "operIp": "142.83.169.77",
-        "operLocation": "s2q714",
-        "operParam": "19bepf",
-        "jsonResult": "7th3uf",
-        "status": 636,
-        "errorMsg": "m8rpk3",
-        "operTime": "2025-09-19 17:32:29",
-        "costTime": 1758274292622,
-        "remark": "d3ds6q"
+        "method": "ehvvm6",
+        "requestMethod": "nfkxl2",
+        "operatorType": 976,
+        "operName": "pauline.robel",
+        "deptName": "pauline.robel",
+        "operUrl": "www.chanda-skiles.net",
+        "operIp": "112.28.203.208",
+        "operLocation": "3gn3mr",
+        "operParam": "dl465w",
+        "jsonResult": "5r9vv1",
+        "status": 164,
+        "errorMsg": "hr8d14",
+        "operTime": "2025-09-22 22:45:51",
+        "costTime": 1758552282472,
+        "remark": "j8r68o"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -13975,7 +13975,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'orderBy=558&deptName=cleopatra.thompson&operatorType=517&endTime=2025-09-19 17:31:32&operId=937&page=1&operName=cleopatra.thompson&operIp=142.83.169.77&operTime=2025-09-19 17:32:29&startTime=2025-09-19 17:31:32&businessType=197&title=03phov&remark=eutkw2&status=387&q=ehar4q&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'title=68vm9f&deptName=pauline.robel&remark=edr0v4&page=1&startTime=2025-09-22 22:44:42&operId=592&operTime=2025-09-22 22:45:51&businessType=39&operIp=112.28.203.208&orderBy=769&operName=pauline.robel&q=r57k6h&limit=10&status=921&operatorType=16&endTime=2025-09-22 22:44:42'
 ```
 **Response-fields:**
 
@@ -13994,9 +13994,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "y1doi0",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "uq5w3k",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14045,9 +14045,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vqp14d",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "cgv9ql",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14097,7 +14097,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?endTime=2025-09-19 17:31:32&status=e2wvmh&q=r2daov&dictSort=110&typeCode=9574&remark=bsybdk&searchCode=9574&parentId=890&cssClass=l8ztf7&orderBy=789&isDefault=hh2d8i&dictLabel=47x797&cddId=728&cddValue=cym6cn&limit=10&page=1&listClass=u22i26&key=63a43z&name=cleopatra.thompson&startTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddValue=8woorm&isDefault=l2fuu7&cssClass=pj2779&q=r8xuxf&page=1&startTime=2025-09-22 22:44:42&orderBy=874&typeCode=95555&endTime=2025-09-22 22:44:42&status=pgf1j6&remark=7fycub&dictLabel=tqwuvk&searchCode=95555&limit=10&parentId=688&key=b3tgz3&cddId=811&dictSort=15&listClass=sbrvap&name=pauline.robel
 ```
 **Response-fields:**
 
@@ -14135,30 +14135,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 332,
+    "totalCount": 242,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 916,
-        "typeCode": "9574",
-        "parentId": 772,
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "cddValue": "m6b0by",
-        "searchCode": "9574",
-        "priority": 564,
-        "createTime": "2025-09-19 17:32:33",
-        "remark": "l368ph",
-        "dictLabel": "hr9awr",
-        "typeCodeName": "cleopatra.thompson",
-        "parentName": "cleopatra.thompson"
+        "cddId": 683,
+        "typeCode": "95555",
+        "parentId": 31,
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "cddValue": "3csbfa",
+        "searchCode": "95555",
+        "priority": 775,
+        "createTime": "2025-09-22 22:45:55",
+        "remark": "kkzkp0",
+        "dictLabel": "op7vf3",
+        "typeCodeName": "pauline.robel",
+        "parentName": "pauline.robel"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14207,7 +14207,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'q=46f130&cssClass=slxkvw&status=vgyyf6&limit=10&dictSort=486&orderBy=249&remark=3cpf42&key=7fjkqq&searchCode=9574&endTime=2025-09-19 17:31:32&isDefault=mb3z3z&typeCode=9574&name=cleopatra.thompson&parentId=822&startTime=2025-09-19 17:31:32&dictLabel=bnk4q8&listClass=xxhi72&cddId=462&page=1&cddValue=e2zozd'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'remark=mwdpdt&orderBy=199&endTime=2025-09-22 22:44:42&cssClass=o53p5o&isDefault=9vrq4l&dictLabel=8x9t1e&name=pauline.robel&searchCode=95555&status=tltakz&limit=10&cddId=740&q=0k0xtd&dictSort=698&cddValue=th5bae&listClass=3yjixn&parentId=307&page=1&startTime=2025-09-22 22:44:42&key=s6g6l9&typeCode=95555'
 ```
 **Response-fields:**
 
@@ -14226,9 +14226,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fnkvcn",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "0296e6",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14258,7 +14258,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/290.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/490.do
 ```
 **Response-fields:**
 
@@ -14291,22 +14291,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 270,
-    "typeCode": "9574",
-    "parentId": 977,
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "cddValue": "wpfo0x",
-    "searchCode": "9574",
-    "priority": 863,
-    "createTime": "2025-09-19 17:32:34",
-    "remark": "gztchv",
-    "dictLabel": "ospqc6",
-    "typeCodeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson"
+    "cddId": 355,
+    "typeCode": "95555",
+    "parentId": 648,
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "cddValue": "nv8sbd",
+    "searchCode": "95555",
+    "priority": 399,
+    "createTime": "2025-09-22 22:45:55",
+    "remark": "jsvexj",
+    "dictLabel": "fd95xq",
+    "typeCodeName": "pauline.robel",
+    "parentName": "pauline.robel"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14345,7 +14345,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/zulbuu.do?roletypeId=118&typeCode=9574&parentId=118&zparentId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/4wrj2n.do?roletypeId=119&typeCode=95555&parentId=119&zparentId=119
 ```
 **Response-fields:**
 
@@ -14367,8 +14367,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14413,19 +14413,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 23,
-    "typeCode": "9574",
-    "parentId": 276,
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "cddValue": "uigffz",
-    "searchCode": "9574",
-    "priority": 36,
-    "createTime": "2025-09-19 17:32:34",
-    "remark": "yzlfvp",
-    "dictLabel": "dr30in",
-    "typeCodeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson"
+    "cddId": 860,
+    "typeCode": "95555",
+    "parentId": 632,
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "cddValue": "spumgd",
+    "searchCode": "95555",
+    "priority": 692,
+    "createTime": "2025-09-22 22:45:56",
+    "remark": "vjmfte",
+    "dictLabel": "k7ofwp",
+    "typeCodeName": "pauline.robel",
+    "parentName": "pauline.robel"
   }
 }'
 ```
@@ -14446,9 +14446,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "danzx5",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "hxmwrh",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14493,19 +14493,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 137,
-    "typeCode": "9574",
-    "parentId": 122,
-    "name": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
-    "cddValue": "cyf25k",
-    "searchCode": "9574",
-    "priority": 568,
-    "createTime": "2025-09-19 17:32:34",
-    "remark": "0jiyrr",
-    "dictLabel": "6fbf24",
-    "typeCodeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson"
+    "cddId": 961,
+    "typeCode": "95555",
+    "parentId": 491,
+    "name": "pauline.robel",
+    "sname": "pauline.robel",
+    "cddValue": "dcqus2",
+    "searchCode": "95555",
+    "priority": 329,
+    "createTime": "2025-09-22 22:45:56",
+    "remark": "r27lm7",
+    "dictLabel": "sxvqeq",
+    "typeCodeName": "pauline.robel",
+    "parentName": "pauline.robel"
   }
 }'
 ```
@@ -14526,9 +14526,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6i4k1u",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "b91bez",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14577,9 +14577,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tlakgr",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "z0gxzb",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14633,7 +14633,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?startTime=2025-09-19 17:31:32&positionType=66rms3&showButton=a3nyty&groupId=118&roleTypeId=118&wlType=zpe32b&refType=h7xa7o&orderBy=663&parentId=118&appId=118&gnType=o6q6ln&q=yrms24&type=pvdbzy&organwId=118&metaId=118&page=1&key=k18w9u&limit=10&roleId=118&roletypeId=118&endTime=2025-09-19 17:31:32&refresh=x89y18&status=0k1s1e&subType=9793gi&positionId=118
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?status=u3oha8&gnType=84smzm&positionType=su9e76&refresh=ts38yi&q=q42kfi&organwId=119&roletypeId=119&subType=4cbrio&metaId=119&page=1&type=u9svty&orderBy=573&limit=10&showButton=xgjoxg&wlType=izxct2&startTime=2025-09-22 22:44:42&groupId=119&roleTypeId=119&endTime=2025-09-22 22:44:42&refType=cg6uff&appId=119&key=593c9a&positionId=119&parentId=119&roleId=119
 ```
 **Response-fields:**
 
@@ -14667,18 +14667,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "118",
-      "label": "0b5dag",
-      "shortName": "cleopatra.thompson",
-      "organId": "118",
-      "areaId": 899,
-      "searchCode": "9574",
-      "childNum": 790,
+      "id": "119",
+      "label": "87ju48",
+      "shortName": "pauline.robel",
+      "organId": "119",
+      "areaId": 214,
+      "searchCode": "95555",
+      "childNum": 587,
       "checked": true,
-      "entity": 657,
+      "entity": 389,
       "show": true,
       "showIcon": true,
-      "parentId": "118",
+      "parentId": "119",
       "children": [
         {
           "$ref": ".."
@@ -14686,8 +14686,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14738,7 +14738,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?typeCodes=b5je12&typeCodes=b5je12&ids=824gvg&ids=824gvg&orderBy=624&key=1wyzrf&cddLevel=ix8xfi&q=88o4yc&description=svesme&sname=cleopatra.thompson&typeMode=cmr2mb&delFlag=0&dispFlag=ch4y8m&limit=10&startTime=2025-09-19 17:31:32&endTime=2025-09-19 17:31:32&typeCode=9574&name=cleopatra.thompson&existKey=yfe5pv&parentId=964&cddValue=y98s24&page=1&searchCode=9574&isAllChild=uhzaxq
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?cddLevel=d7y9tx&startTime=2025-09-22 22:44:42&orderBy=539&isAllChild=rerdqy&key=2zahn8&ids=ijm142&ids=ijm142&parentId=171&limit=10&existKey=6vlnj3&searchCode=95555&dispFlag=8otb3t&q=bxrskj&sname=pauline.robel&endTime=2025-09-22 22:44:42&cddValue=1sil1x&typeMode=krpb3k&delFlag=2&page=1&name=pauline.robel&typeCode=95555&typeCodes=aceyrr&typeCodes=aceyrr&description=2ihraa
 ```
 **Response-fields:**
 
@@ -14778,24 +14778,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:34",
-      "lastTime": "2025-09-19 17:32:34",
-      "id": 623,
-      "typeCode": "9574",
-      "parentId": 994,
-      "name": "cleopatra.thompson",
-      "sname": "cleopatra.thompson",
-      "cddValue": "cvxrnw",
-      "cddLevel": "2p93gb",
-      "searchCode": "9574",
-      "dispFlag": "76lj8b",
-      "priority": 586,
-      "delFlag": 0,
-      "deleteTime": "2025-09-19 17:32:34",
-      "description": "blxyqv",
-      "spare1": "yalkfe",
-      "spare2": "clnsa9",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:56",
+      "lastTime": "2025-09-22 22:45:56",
+      "id": 958,
+      "typeCode": "95555",
+      "parentId": 246,
+      "name": "pauline.robel",
+      "sname": "pauline.robel",
+      "cddValue": "9p9qn9",
+      "cddLevel": "lcpke4",
+      "searchCode": "95555",
+      "dispFlag": "mq3lfg",
+      "priority": 267,
+      "delFlag": 2,
+      "deleteTime": "2025-09-22 22:45:56",
+      "description": "4a7g6j",
+      "spare1": "rqz4gu",
+      "spare2": "md1v8s",
       "children": [
         {
           "$ref": ".."
@@ -14803,8 +14803,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14881,46 +14881,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 767,
-      "total": 91.24,
-      "sys": 21.03,
-      "used": 27.82,
-      "wait": 76.69,
-      "free": 76.08
+      "cpuNum": 611,
+      "total": 24.39,
+      "sys": 68.83,
+      "used": 35.36,
+      "wait": 0.76,
+      "free": 29.08
     },
     "mem": {
-      "total": 75.77,
-      "used": 66.08,
-      "free": 71.74
+      "total": 98.42,
+      "used": 73.61,
+      "free": 21.46
     },
     "jvm": {
-      "total": 34.80,
-      "max": 70.36,
-      "free": 52.77,
-      "version": "6.0.1",
-      "home": "g50oo0"
+      "total": 77.13,
+      "max": 96.58,
+      "free": 13.80,
+      "version": "4.7.2",
+      "home": "8g6ada"
     },
     "sys": {
-      "computerName": "cleopatra.thompson",
-      "computerIp": "142.83.169.77",
-      "userDir": "pb84u4",
-      "osName": "cleopatra.thompson",
-      "osArch": "o5k8rj"
+      "computerName": "pauline.robel",
+      "computerIp": "112.28.203.208",
+      "userDir": "apahj2",
+      "osName": "pauline.robel",
+      "osArch": "rdtnpr"
     },
     "sysFiles": [
       {
-        "dirName": "cleopatra.thompson",
-        "sysTypeName": "cleopatra.thompson",
-        "typeName": "cleopatra.thompson",
-        "total": "61lkzj",
-        "free": "rvmh4f",
-        "used": "7uo3f8",
-        "usage": 23.53
+        "dirName": "pauline.robel",
+        "sysTypeName": "pauline.robel",
+        "typeName": "pauline.robel",
+        "total": "yi0a8i",
+        "free": "b477az",
+        "used": "josata",
+        "usage": 15.92
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -14951,11 +14951,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "cleopatra.thompson",
-    "password": "iq8nt3",
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d",
-    "appId": "118"
+    "username": "pauline.robel",
+    "password": "sy63ht",
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7",
+    "appId": "119"
   }
 }'
 ```
@@ -14976,9 +14976,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pgebl3",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "dasfjz",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15009,11 +15009,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "cleopatra.thompson",
-    "password": "zp2pag",
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d",
-    "appId": "118"
+    "username": "pauline.robel",
+    "password": "2xz5vx",
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7",
+    "appId": "119"
   }
 }'
 ```
@@ -15039,13 +15039,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 424,
-    "token": "8s3tdd",
-    "updateTime": "2025-09-19 17:32:26",
-    "expireTime": "2025-09-19 17:32:26"
+    "adminId": 461,
+    "token": "e9wwht",
+    "updateTime": "2025-09-22 22:45:46",
+    "expireTime": "2025-09-22 22:45:46"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15171,60 +15171,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:26",
-      "lastTime": "2025-09-19 17:32:26",
-      "id": 272,
-      "userId": "118",
-      "deptId": 171,
-      "deptName": "cleopatra.thompson",
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "name": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "nickName": "maribeth.rutherford",
-      "email": "sheree.stanton@gmail.com",
-      "mobile": "828.254.1097",
-      "imagePath": "0opiib",
-      "password": "t0m99f",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:46",
+      "lastTime": "2025-09-22 22:45:46",
+      "id": 298,
+      "userId": "119",
+      "deptId": 231,
+      "deptName": "pauline.robel",
+      "organId": "119",
+      "organName": "pauline.robel",
+      "name": "pauline.robel",
+      "username": "pauline.robel",
+      "nickName": "heriberto.bahringer",
+      "email": "leonard.grady@yahoo.com",
+      "mobile": "724.248.1428",
+      "imagePath": "bg52eu",
+      "password": "rpok5k",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 80,
-      "delFlag": 0,
-      "lastLoginIp": "142.83.169.77",
-      "lastLoginTime": "2025-09-19 17:32:26",
-      "description": "x52q61",
+      "status": 10,
+      "delFlag": 2,
+      "lastLoginIp": "112.28.203.208",
+      "lastLoginTime": "2025-09-22 22:45:46",
+      "description": "o4kei3",
       "dept": {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:26",
-        "lastTime": "2025-09-19 17:32:26",
-        "id": 543,
-        "organId": "118",
-        "parentId": 214,
-        "appId": "118",
-        "depttypeId": 486,
-        "foreignId": "118",
-        "createType": 776,
-        "type": "pwupn8",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "areaCode": "9574",
-        "organLeader": "ow956g",
-        "leaderId": "118",
-        "leaderMobile": "828.254.1097",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:46",
+        "lastTime": "2025-09-22 22:45:46",
+        "id": 455,
+        "organId": "119",
+        "parentId": 704,
+        "appId": "119",
+        "depttypeId": 105,
+        "foreignId": "119",
+        "createType": 384,
+        "type": "8a5ccj",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "areaCode": "95555",
+        "organLeader": "6kvxqy",
+        "leaderId": "119",
+        "leaderMobile": "724.248.1428",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "9574",
-        "imagePath": "at1phe",
-        "priority": 894,
-        "status": 923,
-        "delFlag": 0,
-        "description": "i1535k",
-        "spare1": "3sgmse",
-        "spare2": "bxwhv6",
+        "searchCode": "95555",
+        "imagePath": "flaw28",
+        "priority": 785,
+        "status": 425,
+        "delFlag": 2,
+        "description": "mrch2a",
+        "spare1": "m8twic",
+        "spare2": "odo3gz",
         "children": [
           {
             "$ref": ".."
@@ -15233,54 +15233,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "118",
-          "createTime": "2025-09-19 17:32:26",
-          "lastTime": "2025-09-19 17:32:26",
-          "id": 173,
-          "roletypeId": "118",
-          "appId": "118",
-          "name": "cleopatra.thompson",
-          "code": "9574",
-          "priority": 141,
+          "creatorId": "119",
+          "createTime": "2025-09-22 22:45:46",
+          "lastTime": "2025-09-22 22:45:46",
+          "id": 493,
+          "roletypeId": "119",
+          "appId": "119",
+          "name": "pauline.robel",
+          "code": "95555",
+          "priority": 308,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 886,
-          "description": "1g80wr",
-          "areaType": "xypfyk"
+          "status": 952,
+          "description": "scyp5p",
+          "areaType": "smkj9l"
         }
       ],
       "roleIds": [
-        798
+        786
       ],
       "positionIds": [
-        "hoyooq"
+        "01vdju"
       ],
-      "roleId": 704,
+      "roleId": 230,
       "userRoleList": [
         {
-          "id": 557,
-          "deptId": 440,
-          "deptName": "cleopatra.thompson",
-          "organId": "118",
-          "organName": "cleopatra.thompson",
-          "roleId": 2,
-          "roleName": "cleopatra.thompson",
-          "adminId": 146
+          "id": 441,
+          "deptId": 387,
+          "deptName": "pauline.robel",
+          "organId": "119",
+          "organName": "pauline.robel",
+          "roleId": 554,
+          "roleName": "pauline.robel",
+          "adminId": 291
         }
       ],
-      "code": "9574",
-      "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+      "code": "95555",
+      "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
     },
     "roles": [
-      "c35jst"
+      "lm4ojx"
     ],
     "permissions": [
-      "ynxxgk"
+      "ab55b2"
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15338,33 +15338,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "118",
-    "areaId": 13,
-    "groupId": 690,
-    "positionId": "118",
-    "tplSolution": "0z6gax",
+    "accountId": "119",
+    "areaId": 903,
+    "groupId": 326,
+    "positionId": "119",
+    "tplSolution": "pysd4y",
     "menuList": [
       {
-        "id": 878,
-        "parentId": 680,
-        "name": "cleopatra.thompson",
-        "ename": "cleopatra.thompson",
-        "type": "g8dgcw",
-        "perms": "57aml3",
-        "menuLevel": 643,
-        "urlType": "t09c0z",
-        "url": "www.lezlie-kreiger.net",
-        "menuSeq": "wkyxxr",
-        "icon": "1amssr",
-        "imagePath": "mz0tj3",
-        "css": "tvu9es",
-        "description": "cw2ezu",
-        "todoTotalApi": "nqjq50"
+        "id": 282,
+        "parentId": 398,
+        "name": "pauline.robel",
+        "ename": "pauline.robel",
+        "type": "2llrq9",
+        "perms": "24fbkg",
+        "menuLevel": 932,
+        "urlType": "803d9j",
+        "url": "www.chanda-skiles.net",
+        "menuSeq": "6cnyr9",
+        "icon": "hyi0hc",
+        "imagePath": "adlvu5",
+        "css": "6c1akr",
+        "description": "54208u",
+        "todoTotalApi": "uwyvg3"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15427,40 +15427,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "118",
+    "id": "119",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "5obac4",
-    "aesKey": "i20i2i",
-    "clientId": "118",
-    "serverUrl": "www.lezlie-kreiger.net",
-    "serverConf1": "hx9nxq",
+    "publicKey": "k4i817",
+    "aesKey": "kly0nb",
+    "clientId": "119",
+    "serverUrl": "www.chanda-skiles.net",
+    "serverConf1": "mjtxk3",
     "appConf": {
-      "siteId": 283,
-      "appId": "118",
-      "topXzqhId": "118",
+      "siteId": 907,
+      "appId": "119",
+      "topXzqhId": "119",
       "appConfJson": {
-        "mapKey": "1kx73a"
+        "mapKey": "nbbziw"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "e9286o",
+      "layout": "4k5yci",
       "siteInfo": {
-        "id": 608,
-        "appId": "118",
-        "areaCode": "9574",
-        "path": "o3vzft",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "layout": "opqstb",
-        "logoUrl": "www.lezlie-kreiger.net",
-        "cdnUrl": "www.lezlie-kreiger.net"
+        "id": 769,
+        "appId": "119",
+        "areaCode": "95555",
+        "path": "xl4tor",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "layout": "2dgcck",
+        "logoUrl": "www.chanda-skiles.net",
+        "cdnUrl": "www.chanda-skiles.net"
       }
     }
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15490,11 +15490,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/thirdOrgan/login.do --data '{
   "data": {
-    "username": "cleopatra.thompson",
-    "password": "pjlboo",
-    "code": "9574",
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d",
-    "appId": "118"
+    "username": "pauline.robel",
+    "password": "05qnx3",
+    "code": "95555",
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7",
+    "appId": "119"
   }
 }'
 ```
@@ -15520,13 +15520,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "adminId": 614,
-    "token": "ly7tee",
-    "updateTime": "2025-09-19 17:32:26",
-    "expireTime": "2025-09-19 17:32:26"
+    "adminId": 911,
+    "token": "1edpg2",
+    "updateTime": "2025-09-22 22:45:47",
+    "expireTime": "2025-09-22 22:45:47"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15550,7 +15550,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=d082834c-f9da-4015-b3e4-8437c1e9c18d&code=9574
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?code=95555&uuid=00cac69a-9477-4125-93fb-90055b7977a7
 ```
 **Response-fields:**
 
@@ -15569,9 +15569,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cr15rw",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "o9heg8",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15621,8 +15621,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15671,14 +15671,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "cleopatra.thompson",
-      "cacheKey": "pngzer",
-      "cacheValue": "ehcz13",
-      "remark": "yji3np"
+      "cacheName": "pauline.robel",
+      "cacheKey": "8xt2wi",
+      "cacheValue": "9ir9fk",
+      "remark": "mm2cw1"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15708,7 +15708,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/cleopatra.thompson.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/pauline.robel.do
 ```
 **Response-fields:**
 
@@ -15730,8 +15730,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15762,7 +15762,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/cleopatra.thompson/iz8mll.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/pauline.robel/c233kp.do
 ```
 **Response-fields:**
 
@@ -15786,13 +15786,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "cleopatra.thompson",
-    "cacheKey": "1sp3oj",
-    "cacheValue": "6yhlm6",
-    "remark": "on422z"
+    "cacheName": "pauline.robel",
+    "cacheKey": "0wprhh",
+    "cacheValue": "o6g9bo",
+    "remark": "u6uxun"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15822,7 +15822,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/cleopatra.thompson.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/pauline.robel.do
 ```
 **Response-fields:**
 
@@ -15841,9 +15841,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6dktbx",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ovlwr1",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15873,7 +15873,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/0znc41.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/abc1a5.do
 ```
 **Response-fields:**
 
@@ -15892,9 +15892,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vn9kvu",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "cgze9n",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15937,9 +15937,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dfp65x",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "t03okn",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -15983,7 +15983,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?parentId=716&q=tkgm9z&currAppId=118&orderBy=320&startTime=2025-09-19 17:31:32&status=hv1don&limit=10&menuId=665&visible=ku7w6l&page=1&delFlag=yr9noq&endTime=2025-09-19 17:31:32&menuType=jno8xj&menuName=cleopatra.thompson
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?parentId=810&menuType=6vo9gr&endTime=2025-09-22 22:44:42&q=2ftblc&menuName=pauline.robel&status=yuqnkp&orderBy=50&currAppId=119&limit=10&visible=xtzu1t&menuId=795&page=1&startTime=2025-09-22 22:44:42&delFlag=gbp40d
 ```
 **Response-fields:**
 
@@ -16040,56 +16040,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 353,
-      "menuName": "cleopatra.thompson",
-      "type": "qwiucm",
-      "typeName": "cleopatra.thompson",
-      "parentName": "cleopatra.thompson",
-      "parentId": 155,
-      "priority": 407,
-      "path": "65fzwz",
-      "component": "cupca6",
-      "query": "c00h49",
-      "routeName": "cleopatra.thompson",
-      "isFrame": "4rtf9f",
-      "isCache": "klrivy",
-      "menuType": "467kp8",
-      "menuTypeName": "cleopatra.thompson",
-      "visible": "7cwluv",
-      "status": "pfqk44",
-      "perms": "000rcw",
-      "icon": "6q4uyk",
-      "imagePath": "xvzd38",
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:27",
-      "lastTime": "2025-09-19 17:32:27",
+      "menuId": 641,
+      "menuName": "pauline.robel",
+      "type": "mxfxbe",
+      "typeName": "pauline.robel",
+      "parentName": "pauline.robel",
+      "parentId": 193,
+      "priority": 540,
+      "path": "p6adrc",
+      "component": "mnfcdx",
+      "query": "nrs67y",
+      "routeName": "pauline.robel",
+      "isFrame": "lrvsxb",
+      "isCache": "46yvrl",
+      "menuType": "77mbvh",
+      "menuTypeName": "pauline.robel",
+      "visible": "ojq3yr",
+      "status": "84rcix",
+      "perms": "sdabc3",
+      "icon": "kk794w",
+      "imagePath": "8sgddo",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:47",
+      "lastTime": "2025-09-22 22:45:47",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 536,
-      "description": "kzg4hj",
-      "listJson": "704xhl",
-      "delFlag": 0,
+      "childNum": 670,
+      "description": "j3z5qy",
+      "listJson": "bgmq66",
+      "delFlag": 2,
       "permsList": [
         {
-          "permsName": "cleopatra.thompson",
-          "permsStr": "ipq60x"
+          "permsName": "pauline.robel",
+          "permsStr": "xy0xj5"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "118",
-          "parentId": "118",
-          "code": "9574",
-          "name": "cleopatra.thompson"
+          "id": "119",
+          "parentId": "119",
+          "code": "95555",
+          "name": "pauline.robel"
         }
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16132,7 +16132,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?visible=ck6ihm&status=d03gp1&delFlag=9p7ezv&menuName=cleopatra.thompson&page=1&parentId=719&orderBy=776&menuType=wsmjeb&endTime=2025-09-19 17:31:32&q=4ybd59&startTime=2025-09-19 17:31:32&limit=10&currAppId=118&menuId=503
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuType=37o3bf&currAppId=119&orderBy=365&menuName=pauline.robel&visible=mi7n3l&page=1&endTime=2025-09-22 22:44:42&limit=10&parentId=665&q=m30sjl&menuId=793&delFlag=t4o3mb&status=7s8t9d&startTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -16172,27 +16172,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "055k08",
-    "pageNum": 217,
+    "stackTrace": "e6sdu3",
+    "pageNum": 995,
     "pageSize": 10,
-    "startRow": 3,
-    "endRow": 229,
-    "total": 329,
-    "pages": 97,
+    "startRow": 647,
+    "endRow": 473,
+    "total": 199,
+    "pages": 722,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "l7312p",
-    "orderBy": "1k8fwn",
+    "countColumn": "1xd6ey",
+    "orderBy": "2vr5nx",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "gf4xjr",
+    "dialectClass": "nh0dp8",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16222,7 +16222,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/844.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/137.do
 ```
 **Response-fields:**
 
@@ -16278,55 +16278,55 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 526,
-    "menuName": "cleopatra.thompson",
-    "type": "qfhls2",
-    "typeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson",
-    "parentId": 865,
-    "priority": 869,
-    "path": "xxiy9x",
-    "component": "ind39a",
-    "query": "rq167c",
-    "routeName": "cleopatra.thompson",
-    "isFrame": "4qqrfw",
-    "isCache": "1zct2r",
-    "menuType": "6apt04",
-    "menuTypeName": "cleopatra.thompson",
-    "visible": "6si45d",
-    "status": "4esy00",
-    "perms": "1saymz",
-    "icon": "0yu8o2",
-    "imagePath": "iiedmy",
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
+    "menuId": 875,
+    "menuName": "pauline.robel",
+    "type": "bgcqj4",
+    "typeName": "pauline.robel",
+    "parentName": "pauline.robel",
+    "parentId": 323,
+    "priority": 332,
+    "path": "575c6l",
+    "component": "55uamm",
+    "query": "robajb",
+    "routeName": "pauline.robel",
+    "isFrame": "c3ozpc",
+    "isCache": "mjc9fk",
+    "menuType": "mz70wq",
+    "menuTypeName": "pauline.robel",
+    "visible": "m2bt74",
+    "status": "viotof",
+    "perms": "3tw1sy",
+    "icon": "kf5o2v",
+    "imagePath": "t1kxys",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:47",
+    "lastTime": "2025-09-22 22:45:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 504,
-    "description": "3ni4wg",
-    "listJson": "ioxxi5",
-    "delFlag": 0,
+    "childNum": 669,
+    "description": "tkd08m",
+    "listJson": "uvz78u",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "cleopatra.thompson",
-        "permsStr": "wg3qa8"
+        "permsName": "pauline.robel",
+        "permsStr": "c2w51x"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "118",
-        "parentId": "118",
-        "code": "9574",
-        "name": "cleopatra.thompson"
+        "id": "119",
+        "parentId": "119",
+        "code": "95555",
+        "name": "pauline.robel"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16369,7 +16369,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?page=1&menuName=cleopatra.thompson&delFlag=ksbqsq&visible=p8py1j&orderBy=731&currAppId=118&startTime=2025-09-19 17:31:32&menuType=n5hgpo&q=vvjbpm&menuId=875&status=dq4c7l&limit=10&endTime=2025-09-19 17:31:32&parentId=321
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?status=bvwct6&q=kwjqqz&parentId=792&orderBy=514&page=1&menuType=2ujgwo&visible=hdn3bj&startTime=2025-09-22 22:44:42&menuId=221&limit=10&delFlag=fkneer&endTime=2025-09-22 22:44:42&currAppId=119&menuName=pauline.robel
 ```
 **Response-fields:**
 
@@ -16395,12 +16395,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      501
+      485
     ],
     "menus": [
       {
-        "id": 598,
-        "label": "qgwok6",
+        "id": 358,
+        "label": "yhuf21",
         "children": [
           {
             "$ref": ".."
@@ -16409,8 +16409,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16474,7 +16474,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?appIds=s9gl00&appIds=s9gl00&isCheck=true&parentNull=8exymm&startTime=2025-09-19 17:31:32&icon=abc1c8&imagePath=57fp0n&createTime=2025-09-19 17:31:32&description=r5fgsd&subCount=231&endTime=2025-09-19 17:31:32&page=1&isProtect=true&isDisplay=true&delFlag=0&appId=118&urlType=gkiclv&type=gl058i&typeNoButton=phyz8p&spare2=bqm86x&limit=10&offset=1&q=sjh03o&parentRoot=3e37jt&menuIds=cm21tw&menuIds=cm21tw&shortCut=4je39k&isDisabled=true&spare1=4akico&orderBy=826&parentId=347&popPosition=644&menuLevel=664&name=cleopatra.thompson&code=9574&url=www.lezlie-kreiger.net&isMenuAll=roem1e
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?startTime=2025-09-22 22:44:42&icon=ma8xr5&offset=1&url=www.chanda-skiles.net&parentNull=8564ns&menuLevel=406&spare1=hdj2w7&menuIds=hswgky&menuIds=hswgky&parentRoot=blhunc&createTime=2025-09-22 22:44:42&code=95555&orderBy=309&page=1&endTime=2025-09-22 22:44:42&imagePath=ikapmn&isCheck=true&popPosition=831&isDisabled=true&appIds=qgf9vf&appIds=qgf9vf&subCount=525&name=pauline.robel&isMenuAll=dau2or&parentId=472&shortCut=nrw390&q=a88fu2&description=da5bkm&typeNoButton=oz8o6h&spare2=icjug4&delFlag=2&isProtect=true&isDisplay=true&limit=10&appId=119&urlType=rtwnb0&type=fjmyld
 ```
 **Response-fields:**
 
@@ -16504,11 +16504,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "5haq7h",
-      "id": "118",
-      "parentId": "118",
-      "extId": "118",
-      "href": "6iyy28",
+      "title": "ae0aln",
+      "id": "119",
+      "parentId": "119",
+      "extId": "119",
+      "href": "m0ai3t",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -16519,8 +16519,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16550,7 +16550,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/187.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/792.do
 ```
 **Response-fields:**
 
@@ -16576,12 +16576,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      501
+      568
     ],
     "menus": [
       {
-        "id": 517,
-        "label": "o0egng",
+        "id": 925,
+        "label": "io78az",
         "children": [
           {
             "$ref": ".."
@@ -16590,8 +16590,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16659,50 +16659,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 309,
-    "menuName": "cleopatra.thompson",
-    "type": "a5o1wg",
-    "typeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson",
-    "parentId": 955,
-    "priority": 521,
-    "path": "69d7kb",
-    "component": "gt55ni",
-    "query": "nudrxg",
-    "routeName": "cleopatra.thompson",
-    "isFrame": "oeluam",
-    "isCache": "2adunb",
-    "menuType": "acew1s",
-    "menuTypeName": "cleopatra.thompson",
-    "visible": "1cvjjf",
-    "status": "iv1iik",
-    "perms": "rytytl",
-    "icon": "8e7yer",
-    "imagePath": "ws7v4n",
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
+    "menuId": 637,
+    "menuName": "pauline.robel",
+    "type": "g7iv2f",
+    "typeName": "pauline.robel",
+    "parentName": "pauline.robel",
+    "parentId": 868,
+    "priority": 467,
+    "path": "gx92r1",
+    "component": "j6nqaf",
+    "query": "70esg8",
+    "routeName": "pauline.robel",
+    "isFrame": "os57w5",
+    "isCache": "zkgkt2",
+    "menuType": "27oqu7",
+    "menuTypeName": "pauline.robel",
+    "visible": "9zdj54",
+    "status": "69u3qc",
+    "perms": "fsgwel",
+    "icon": "vjadsg",
+    "imagePath": "kasyj0",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:47",
+    "lastTime": "2025-09-22 22:45:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 463,
-    "description": "nlz3sw",
-    "listJson": "py2yo0",
-    "delFlag": 0,
+    "childNum": 260,
+    "description": "2ztvap",
+    "listJson": "gjwler",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "cleopatra.thompson",
-        "permsStr": "mtd9xu"
+        "permsName": "pauline.robel",
+        "permsStr": "zw48w6"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "118",
-        "parentId": "118",
-        "code": "9574",
-        "name": "cleopatra.thompson"
+        "id": "119",
+        "parentId": "119",
+        "code": "95555",
+        "name": "pauline.robel"
       }
     ]
   }
@@ -16725,9 +16725,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t6sotv",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "i6ytda",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16795,50 +16795,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu.do --data '{
   "data": {
-    "menuId": 480,
-    "menuName": "cleopatra.thompson",
-    "type": "dlet13",
-    "typeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson",
-    "parentId": 544,
-    "priority": 874,
-    "path": "3ps4kg",
-    "component": "u14riv",
-    "query": "rgm6yx",
-    "routeName": "cleopatra.thompson",
-    "isFrame": "6pw30r",
-    "isCache": "rxudn0",
-    "menuType": "4b1q5h",
-    "menuTypeName": "cleopatra.thompson",
-    "visible": "cmk2r7",
-    "status": "wio401",
-    "perms": "m0lrfi",
-    "icon": "iyld3j",
-    "imagePath": "vb360g",
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
+    "menuId": 641,
+    "menuName": "pauline.robel",
+    "type": "p5poot",
+    "typeName": "pauline.robel",
+    "parentName": "pauline.robel",
+    "parentId": 980,
+    "priority": 769,
+    "path": "ildjao",
+    "component": "izn9ja",
+    "query": "oggm78",
+    "routeName": "pauline.robel",
+    "isFrame": "a0vum5",
+    "isCache": "6ob32v",
+    "menuType": "o6gyxi",
+    "menuTypeName": "pauline.robel",
+    "visible": "jupbfz",
+    "status": "gga6r1",
+    "perms": "hw94gl",
+    "icon": "q8rzgp",
+    "imagePath": "4t1rqe",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:47",
+    "lastTime": "2025-09-22 22:45:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 642,
-    "description": "1be0cu",
-    "listJson": "7hfwzm",
-    "delFlag": 0,
+    "childNum": 777,
+    "description": "1pkfed",
+    "listJson": "tu46d3",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "cleopatra.thompson",
-        "permsStr": "5vlxi3"
+        "permsName": "pauline.robel",
+        "permsStr": "ddglzg"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "118",
-        "parentId": "118",
-        "code": "9574",
-        "name": "cleopatra.thompson"
+        "id": "119",
+        "parentId": "119",
+        "code": "95555",
+        "name": "pauline.robel"
       }
     ]
   }
@@ -16861,9 +16861,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "55zogb",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "jemh1x",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -16931,50 +16931,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 604,
-    "menuName": "cleopatra.thompson",
-    "type": "tt1n24",
-    "typeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson",
-    "parentId": 642,
-    "priority": 160,
-    "path": "xnsl2a",
-    "component": "lyu0re",
-    "query": "6eopy7",
-    "routeName": "cleopatra.thompson",
-    "isFrame": "k45njf",
-    "isCache": "56oq0c",
-    "menuType": "kbqg3n",
-    "menuTypeName": "cleopatra.thompson",
-    "visible": "ruyfq6",
-    "status": "9ljzg0",
-    "perms": "mopwly",
-    "icon": "qc87en",
-    "imagePath": "1vqx6a",
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
+    "menuId": 593,
+    "menuName": "pauline.robel",
+    "type": "0wp0rf",
+    "typeName": "pauline.robel",
+    "parentName": "pauline.robel",
+    "parentId": 739,
+    "priority": 924,
+    "path": "tz7pd3",
+    "component": "p2a08o",
+    "query": "5d978l",
+    "routeName": "pauline.robel",
+    "isFrame": "shwywk",
+    "isCache": "tdfwi7",
+    "menuType": "x6675j",
+    "menuTypeName": "pauline.robel",
+    "visible": "r1gszf",
+    "status": "xu4vu2",
+    "perms": "xe62iw",
+    "icon": "hfbc4k",
+    "imagePath": "i7lkh2",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:47",
+    "lastTime": "2025-09-22 22:45:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 26,
-    "description": "3wect9",
-    "listJson": "bn5i4t",
-    "delFlag": 0,
+    "childNum": 177,
+    "description": "l7149i",
+    "listJson": "fk227u",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "cleopatra.thompson",
-        "permsStr": "uzcoqv"
+        "permsName": "pauline.robel",
+        "permsStr": "dnou6p"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "118",
-        "parentId": "118",
-        "code": "9574",
-        "name": "cleopatra.thompson"
+        "id": "119",
+        "parentId": "119",
+        "code": "95555",
+        "name": "pauline.robel"
       }
     ]
   }
@@ -16997,9 +16997,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6twioy",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "xnwqpu",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17067,50 +17067,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 177,
-    "menuName": "cleopatra.thompson",
-    "type": "eruley",
-    "typeName": "cleopatra.thompson",
-    "parentName": "cleopatra.thompson",
-    "parentId": 999,
-    "priority": 104,
-    "path": "pvs81y",
-    "component": "6bph9c",
-    "query": "wkhvly",
-    "routeName": "cleopatra.thompson",
-    "isFrame": "o4xtuo",
-    "isCache": "46mijv",
-    "menuType": "rcc590",
-    "menuTypeName": "cleopatra.thompson",
-    "visible": "92s62w",
-    "status": "84okfq",
-    "perms": "rfkts7",
-    "icon": "lqm9ch",
-    "imagePath": "0n8p75",
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
+    "menuId": 723,
+    "menuName": "pauline.robel",
+    "type": "e602zp",
+    "typeName": "pauline.robel",
+    "parentName": "pauline.robel",
+    "parentId": 795,
+    "priority": 69,
+    "path": "8o67p7",
+    "component": "d0s0qc",
+    "query": "vbnfi9",
+    "routeName": "pauline.robel",
+    "isFrame": "1o93ro",
+    "isCache": "szqytr",
+    "menuType": "wi4wil",
+    "menuTypeName": "pauline.robel",
+    "visible": "y3hf3e",
+    "status": "s0lp07",
+    "perms": "fbm98m",
+    "icon": "xzxnh8",
+    "imagePath": "dzcp2f",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:47",
+    "lastTime": "2025-09-22 22:45:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 816,
-    "description": "lxm68w",
-    "listJson": "93cv9r",
-    "delFlag": 0,
+    "childNum": 654,
+    "description": "iqh26i",
+    "listJson": "tlckc8",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "cleopatra.thompson",
-        "permsStr": "8zz6l7"
+        "permsName": "pauline.robel",
+        "permsStr": "ugkqej"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "118",
-        "parentId": "118",
-        "code": "9574",
-        "name": "cleopatra.thompson"
+        "id": "119",
+        "parentId": "119",
+        "code": "95555",
+        "name": "pauline.robel"
       }
     ]
   }
@@ -17133,9 +17133,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kduw6q",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "6j9pgv",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17184,9 +17184,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wpjqnc",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "4tc27x",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17255,41 +17255,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
-    "id": 782,
-    "parentId": 655,
-    "appId": "118",
-    "name": "cleopatra.thompson",
-    "ename": "cleopatra.thompson",
-    "sname": "cleopatra.thompson",
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "id": 948,
+    "parentId": 983,
+    "appId": "119",
+    "name": "pauline.robel",
+    "ename": "pauline.robel",
+    "sname": "pauline.robel",
     "isProtect": true,
-    "type": "0t77yw",
-    "userId": "118",
-    "code": "9574",
-    "menuLevel": 207,
-    "subCount": 340,
-    "perms": "elikvi",
-    "urlType": "t802fv",
-    "url": "www.lezlie-kreiger.net",
-    "icon": "0frdqx",
-    "popPosition": 611,
-    "imagePath": "st69i5",
-    "css": "ih59pn",
-    "jsEvent": "gq7g4u",
-    "menuSeq": "5tornp",
-    "shortCut": "3q6p5v",
+    "type": "vmxycb",
+    "userId": "119",
+    "code": "95555",
+    "menuLevel": 964,
+    "subCount": 29,
+    "perms": "o58r71",
+    "urlType": "r6wg2t",
+    "url": "www.chanda-skiles.net",
+    "icon": "0tu50e",
+    "popPosition": 908,
+    "imagePath": "ob4k01",
+    "css": "0gon6d",
+    "jsEvent": "2x48yq",
+    "menuSeq": "oqqc3e",
+    "shortCut": "bbgbek",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 421,
-    "delFlag": 0,
-    "deleteTime": "2025-09-19 17:32:27",
-    "description": "cpghmu",
-    "spare1": "a03g8j",
-    "spare2": "i2q1cj",
+    "priority": 683,
+    "delFlag": 2,
+    "deleteTime": "2025-09-22 22:45:48",
+    "description": "7luw8d",
+    "spare1": "ppijbo",
+    "spare2": "s6874j",
     "open": true,
     "list": [
       {
@@ -17316,9 +17316,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8nzfuv",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "m3eqcc",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17358,7 +17358,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?page=1&roleName=cleopatra.thompson&roleKey=93nzam&status=388&orderBy=183&roleId=890&endTime=2025-09-19 17:31:32&startTime=2025-09-19 17:31:32&limit=10&q=xyx6h6
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?q=m2jbhk&roleId=817&status=854&endTime=2025-09-22 22:44:42&roleName=pauline.robel&roleKey=afmn9o&orderBy=370&page=1&startTime=2025-09-22 22:44:42&limit=10
 ```
 **Response-fields:**
 
@@ -17400,37 +17400,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:27",
-      "lastTime": "2025-09-19 17:32:27",
-      "roleId": 408,
-      "roleName": "cleopatra.thompson",
-      "roleKey": "j0x5pd",
-      "roleSort": 418,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:48",
+      "lastTime": "2025-09-22 22:45:48",
+      "roleId": 634,
+      "roleName": "pauline.robel",
+      "roleKey": "wbioax",
+      "roleSort": 842,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 660,
+      "status": 116,
       "flag": true,
       "menuIds": [
-        776
+        824
       ],
       "deptIds": [
-        572
+        388
       ],
       "permissions": [
-        "1jg518"
+        "zavq33"
       ],
-      "remark": "3z9mf4",
-      "parentName": "cleopatra.thompson",
-      "appName": "cleopatra.thompson",
-      "roletypeId": "118",
-      "roletypeName": "cleopatra.thompson",
-      "priority": 856,
+      "remark": "taop50",
+      "parentName": "pauline.robel",
+      "appName": "pauline.robel",
+      "roletypeId": "119",
+      "roletypeName": "pauline.robel",
+      "priority": 546,
       "isSuper": true
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17469,7 +17469,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleName=cleopatra.thompson&roleId=85&status=91&q=8zargd&startTime=2025-09-19 17:31:32&limit=10&page=1&orderBy=512&roleKey=z9m2n6&endTime=2025-09-19 17:31:32'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleId=829&roleKey=ypckpj&status=628&q=oz046t&roleName=pauline.robel&limit=10&page=1&endTime=2025-09-22 22:44:42&orderBy=608&startTime=2025-09-22 22:44:42'
 ```
 **Response-fields:**
 
@@ -17488,9 +17488,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8tafkc",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "fki5or",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17520,7 +17520,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/726.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/42.do
 ```
 **Response-fields:**
 
@@ -17561,36 +17561,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
-    "roleId": 924,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "1q92p1",
-    "roleSort": 965,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 855,
+    "roleName": "pauline.robel",
+    "roleKey": "z38sws",
+    "roleSort": 928,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 449,
+    "status": 685,
     "flag": true,
     "menuIds": [
-      701
+      370
     ],
     "deptIds": [
-      718
+      553
     ],
     "permissions": [
-      "0qc10v"
+      "b8zs8v"
     ],
-    "remark": "6nju6z",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 180,
+    "remark": "m8ytcg",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 116,
     "isSuper": true
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17643,32 +17643,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
-    "roleId": 841,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "807bvm",
-    "roleSort": 821,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 158,
+    "roleName": "pauline.robel",
+    "roleKey": "ijlibr",
+    "roleSort": 169,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 446,
+    "status": 478,
     "flag": true,
     "menuIds": [
-      562
+      738
     ],
     "deptIds": [
-      150
+      320
     ],
     "permissions": [
-      "hq2wqp"
+      "ca4jb4"
     ],
-    "remark": "mi1ul4",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 762,
+    "remark": "k77kn0",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 304,
     "isSuper": true
   }
 }'
@@ -17690,9 +17690,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b9l46w",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "drucmv",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17745,32 +17745,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:27",
-    "lastTime": "2025-09-19 17:32:27",
-    "roleId": 511,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "61lpdh",
-    "roleSort": 25,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 307,
+    "roleName": "pauline.robel",
+    "roleKey": "bp4r4g",
+    "roleSort": 340,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 905,
+    "status": 3,
     "flag": true,
     "menuIds": [
-      145
+      269
     ],
     "deptIds": [
-      797
+      509
     ],
     "permissions": [
-      "3dcesq"
+      "8mq8fj"
     ],
-    "remark": "rnnnth",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 391,
+    "remark": "vh9byj",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 395,
     "isSuper": true
   }
 }'
@@ -17792,9 +17792,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4fd6q0",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "3q7op5",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17847,32 +17847,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "roleId": 76,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "jwbuos",
-    "roleSort": 67,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 223,
+    "roleName": "pauline.robel",
+    "roleKey": "lbwaxe",
+    "roleSort": 643,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 75,
+    "status": 167,
     "flag": true,
     "menuIds": [
-      105
+      671
     ],
     "deptIds": [
-      69
+      465
     ],
     "permissions": [
-      "o44yui"
+      "e4za5u"
     ],
-    "remark": "401zg3",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 914,
+    "remark": "fqo33g",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 571,
     "isSuper": true
   }
 }'
@@ -17894,9 +17894,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3jirb3",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ai3h4f",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -17949,32 +17949,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "roleId": 685,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "clzd1s",
-    "roleSort": 246,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 707,
+    "roleName": "pauline.robel",
+    "roleKey": "acrbme",
+    "roleSort": 541,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 482,
+    "status": 333,
     "flag": true,
     "menuIds": [
-      379
+      860
     ],
     "deptIds": [
-      541
+      827
     ],
     "permissions": [
-      "jhp972"
+      "uh9tub"
     ],
-    "remark": "s141ic",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 859,
+    "remark": "zljhjq",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 518,
     "isSuper": true
   }
 }'
@@ -17996,9 +17996,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kzqv5c",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "15dtb1",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18047,9 +18047,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8ccznd",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ja0qfp",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18096,21 +18096,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "id": 756,
-    "roletypeId": "118",
-    "appId": "118",
-    "name": "cleopatra.thompson",
-    "code": "9574",
-    "priority": 954,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "id": 496,
+    "roletypeId": "119",
+    "appId": "119",
+    "name": "pauline.robel",
+    "code": "95555",
+    "priority": 914,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 379,
-    "description": "el486i",
-    "areaType": "ez3h4j"
+    "status": 631,
+    "description": "261bgg",
+    "areaType": "1ws4hu"
   }
 }'
 ```
@@ -18131,9 +18131,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z9343a",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "bf3w76",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18186,32 +18186,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "roleId": 712,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "iou3b8",
-    "roleSort": 222,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 213,
+    "roleName": "pauline.robel",
+    "roleKey": "6ezw9w",
+    "roleSort": 203,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 536,
+    "status": 699,
     "flag": true,
     "menuIds": [
-      383
+      326
     ],
     "deptIds": [
-      258
+      151
     ],
     "permissions": [
-      "o222rd"
+      "tqn46m"
     ],
-    "remark": "oxq80b",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 101,
+    "remark": "by0hk9",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 28,
     "isSuper": true
   }
 }'
@@ -18233,9 +18233,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xs3cmz",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "klim86",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18288,32 +18288,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "118",
-    "createTime": "2025-09-19 17:32:28",
-    "lastTime": "2025-09-19 17:32:28",
-    "roleId": 180,
-    "roleName": "cleopatra.thompson",
-    "roleKey": "qzyqda",
-    "roleSort": 835,
+    "creatorId": "119",
+    "createTime": "2025-09-22 22:45:48",
+    "lastTime": "2025-09-22 22:45:48",
+    "roleId": 853,
+    "roleName": "pauline.robel",
+    "roleKey": "idxdr8",
+    "roleSort": 78,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 316,
+    "status": 590,
     "flag": true,
     "menuIds": [
-      115
+      939
     ],
     "deptIds": [
-      740
+      104
     ],
     "permissions": [
-      "ir87nm"
+      "r8qxbu"
     ],
-    "remark": "2ez5ve",
-    "parentName": "cleopatra.thompson",
-    "appName": "cleopatra.thompson",
-    "roletypeId": "118",
-    "roletypeName": "cleopatra.thompson",
-    "priority": 729,
+    "remark": "2z9toa",
+    "parentName": "pauline.robel",
+    "appName": "pauline.robel",
+    "roletypeId": "119",
+    "roletypeName": "pauline.robel",
+    "priority": 383,
     "isSuper": true
   }
 }'
@@ -18335,9 +18335,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "brnu32",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "pqs0lk",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18403,37 +18403,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:28",
-      "lastTime": "2025-09-19 17:32:28",
-      "roleId": 381,
-      "roleName": "cleopatra.thompson",
-      "roleKey": "klgciv",
-      "roleSort": 152,
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:48",
+      "lastTime": "2025-09-22 22:45:48",
+      "roleId": 868,
+      "roleName": "pauline.robel",
+      "roleKey": "duxblv",
+      "roleSort": 760,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 117,
+      "status": 723,
       "flag": true,
       "menuIds": [
-        889
+        764
       ],
       "deptIds": [
-        799
+        325
       ],
       "permissions": [
-        "9icvbe"
+        "phd2tq"
       ],
-      "remark": "gt1bpv",
-      "parentName": "cleopatra.thompson",
-      "appName": "cleopatra.thompson",
-      "roletypeId": "118",
-      "roletypeName": "cleopatra.thompson",
-      "priority": 606,
+      "remark": "23870u",
+      "parentName": "pauline.robel",
+      "appName": "pauline.robel",
+      "roletypeId": "119",
+      "roletypeName": "pauline.robel",
+      "priority": 268,
       "isSuper": true
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18478,7 +18478,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?organId=118&deptId=790&endTime=2025-09-19 17:31:32&userId=118&adminId=627&q=hzg7or&startTime=2025-09-19 17:31:32&nickName=maribeth.rutherford&status=vgrr62&limit=10&email=sheree.stanton@gmail.com&username=cleopatra.thompson&page=1&mobile=828.254.1097&orderBy=189&delFlag=0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?nickName=heriberto.bahringer&q=hc6m9w&adminId=546&delFlag=2&startTime=2025-09-22 22:44:42&username=pauline.robel&organId=119&orderBy=102&page=1&limit=10&email=leonard.grady@yahoo.com&mobile=724.248.1428&endTime=2025-09-22 22:44:42&userId=119&deptId=149&status=ujk71a
 ```
 **Response-fields:**
 
@@ -18584,60 +18584,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:28",
-      "lastTime": "2025-09-19 17:32:28",
-      "id": 589,
-      "userId": "118",
-      "deptId": 173,
-      "deptName": "cleopatra.thompson",
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "name": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "nickName": "maribeth.rutherford",
-      "email": "sheree.stanton@gmail.com",
-      "mobile": "828.254.1097",
-      "imagePath": "o88x9z",
-      "password": "o6vozw",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:49",
+      "lastTime": "2025-09-22 22:45:49",
+      "id": 682,
+      "userId": "119",
+      "deptId": 340,
+      "deptName": "pauline.robel",
+      "organId": "119",
+      "organName": "pauline.robel",
+      "name": "pauline.robel",
+      "username": "pauline.robel",
+      "nickName": "heriberto.bahringer",
+      "email": "leonard.grady@yahoo.com",
+      "mobile": "724.248.1428",
+      "imagePath": "ua9a3k",
+      "password": "8t99f1",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 362,
-      "delFlag": 0,
-      "lastLoginIp": "142.83.169.77",
-      "lastLoginTime": "2025-09-19 17:32:28",
-      "description": "iomw7a",
+      "status": 237,
+      "delFlag": 2,
+      "lastLoginIp": "112.28.203.208",
+      "lastLoginTime": "2025-09-22 22:45:49",
+      "description": "8k388b",
       "dept": {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:28",
-        "lastTime": "2025-09-19 17:32:28",
-        "id": 776,
-        "organId": "118",
-        "parentId": 398,
-        "appId": "118",
-        "depttypeId": 234,
-        "foreignId": "118",
-        "createType": 713,
-        "type": "pfy3rg",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "areaCode": "9574",
-        "organLeader": "04vovh",
-        "leaderId": "118",
-        "leaderMobile": "828.254.1097",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:49",
+        "lastTime": "2025-09-22 22:45:49",
+        "id": 210,
+        "organId": "119",
+        "parentId": 641,
+        "appId": "119",
+        "depttypeId": 252,
+        "foreignId": "119",
+        "createType": 444,
+        "type": "6ugkgz",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "areaCode": "95555",
+        "organLeader": "dcss3x",
+        "leaderId": "119",
+        "leaderMobile": "724.248.1428",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "9574",
-        "imagePath": "ijk6jm",
-        "priority": 964,
-        "status": 785,
-        "delFlag": 0,
-        "description": "0w01ot",
-        "spare1": "bmg9xc",
-        "spare2": "w65ini",
+        "searchCode": "95555",
+        "imagePath": "wm8skd",
+        "priority": 132,
+        "status": 806,
+        "delFlag": 2,
+        "description": "xe5hod",
+        "spare1": "wzihbq",
+        "spare2": "xj3cdc",
         "children": [
           {
             "$ref": ".."
@@ -18646,48 +18646,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "118",
-          "createTime": "2025-09-19 17:32:28",
-          "lastTime": "2025-09-19 17:32:28",
-          "id": 121,
-          "roletypeId": "118",
-          "appId": "118",
-          "name": "cleopatra.thompson",
-          "code": "9574",
-          "priority": 564,
+          "creatorId": "119",
+          "createTime": "2025-09-22 22:45:49",
+          "lastTime": "2025-09-22 22:45:49",
+          "id": 995,
+          "roletypeId": "119",
+          "appId": "119",
+          "name": "pauline.robel",
+          "code": "95555",
+          "priority": 377,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 370,
-          "description": "n5rl83",
-          "areaType": "365oh6"
+          "status": 495,
+          "description": "oaa108",
+          "areaType": "sr3po6"
         }
       ],
       "roleIds": [
-        42
+        531
       ],
       "positionIds": [
-        "6ip48x"
+        "greg2f"
       ],
-      "roleId": 335,
+      "roleId": 613,
       "userRoleList": [
         {
-          "id": 341,
-          "deptId": 258,
-          "deptName": "cleopatra.thompson",
-          "organId": "118",
-          "organName": "cleopatra.thompson",
-          "roleId": 911,
-          "roleName": "cleopatra.thompson",
-          "adminId": 698
+          "id": 443,
+          "deptId": 981,
+          "deptName": "pauline.robel",
+          "organId": "119",
+          "organName": "pauline.robel",
+          "roleId": 730,
+          "roleName": "pauline.robel",
+          "adminId": 256
         }
       ],
-      "code": "9574",
-      "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+      "code": "95555",
+      "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18732,7 +18732,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?email=sheree.stanton@gmail.com&username=cleopatra.thompson&mobile=828.254.1097&nickName=maribeth.rutherford&orderBy=892&startTime=2025-09-19 17:31:32&endTime=2025-09-19 17:31:32&limit=10&adminId=488&userId=118&q=6f72ue&organId=118&status=vj4fob&delFlag=0&page=1&deptId=538
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?limit=10&deptId=142&nickName=heriberto.bahringer&orderBy=281&username=pauline.robel&q=x0xkrp&organId=119&delFlag=2&email=leonard.grady@yahoo.com&page=1&status=rd32z7&userId=119&endTime=2025-09-22 22:44:42&adminId=965&mobile=724.248.1428&startTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -18838,60 +18838,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "118",
-      "createTime": "2025-09-19 17:32:28",
-      "lastTime": "2025-09-19 17:32:28",
-      "id": 936,
-      "userId": "118",
-      "deptId": 949,
-      "deptName": "cleopatra.thompson",
-      "organId": "118",
-      "organName": "cleopatra.thompson",
-      "name": "cleopatra.thompson",
-      "username": "cleopatra.thompson",
-      "nickName": "maribeth.rutherford",
-      "email": "sheree.stanton@gmail.com",
-      "mobile": "828.254.1097",
-      "imagePath": "g33wee",
-      "password": "a638b5",
+      "creatorId": "119",
+      "createTime": "2025-09-22 22:45:49",
+      "lastTime": "2025-09-22 22:45:49",
+      "id": 341,
+      "userId": "119",
+      "deptId": 588,
+      "deptName": "pauline.robel",
+      "organId": "119",
+      "organName": "pauline.robel",
+      "name": "pauline.robel",
+      "username": "pauline.robel",
+      "nickName": "heriberto.bahringer",
+      "email": "leonard.grady@yahoo.com",
+      "mobile": "724.248.1428",
+      "imagePath": "ey0izm",
+      "password": "tyghyg",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 927,
-      "delFlag": 0,
-      "lastLoginIp": "142.83.169.77",
-      "lastLoginTime": "2025-09-19 17:32:28",
-      "description": "y8bs3a",
+      "status": 615,
+      "delFlag": 2,
+      "lastLoginIp": "112.28.203.208",
+      "lastLoginTime": "2025-09-22 22:45:49",
+      "description": "s6cnip",
       "dept": {
-        "creatorId": "118",
-        "createTime": "2025-09-19 17:32:28",
-        "lastTime": "2025-09-19 17:32:28",
-        "id": 701,
-        "organId": "118",
-        "parentId": 946,
-        "appId": "118",
-        "depttypeId": 571,
-        "foreignId": "118",
-        "createType": 354,
-        "type": "uatntk",
-        "name": "cleopatra.thompson",
-        "sname": "cleopatra.thompson",
-        "areaCode": "9574",
-        "organLeader": "syxx44",
-        "leaderId": "118",
-        "leaderMobile": "828.254.1097",
+        "creatorId": "119",
+        "createTime": "2025-09-22 22:45:49",
+        "lastTime": "2025-09-22 22:45:49",
+        "id": 191,
+        "organId": "119",
+        "parentId": 502,
+        "appId": "119",
+        "depttypeId": 431,
+        "foreignId": "119",
+        "createType": 692,
+        "type": "htuggy",
+        "name": "pauline.robel",
+        "sname": "pauline.robel",
+        "areaCode": "95555",
+        "organLeader": "tjmjzq",
+        "leaderId": "119",
+        "leaderMobile": "724.248.1428",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "9574",
-        "imagePath": "1o00u0",
-        "priority": 518,
-        "status": 824,
-        "delFlag": 0,
-        "description": "www2gw",
-        "spare1": "75aog0",
-        "spare2": "irimwu",
+        "searchCode": "95555",
+        "imagePath": "jrln99",
+        "priority": 237,
+        "status": 185,
+        "delFlag": 2,
+        "description": "qm2uf5",
+        "spare1": "waw36g",
+        "spare2": "9si8nk",
         "children": [
           {
             "$ref": ".."
@@ -18900,48 +18900,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "118",
-          "createTime": "2025-09-19 17:32:28",
-          "lastTime": "2025-09-19 17:32:28",
-          "id": 208,
-          "roletypeId": "118",
-          "appId": "118",
-          "name": "cleopatra.thompson",
-          "code": "9574",
-          "priority": 525,
+          "creatorId": "119",
+          "createTime": "2025-09-22 22:45:49",
+          "lastTime": "2025-09-22 22:45:49",
+          "id": 197,
+          "roletypeId": "119",
+          "appId": "119",
+          "name": "pauline.robel",
+          "code": "95555",
+          "priority": 357,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 771,
-          "description": "b1bx3g",
-          "areaType": "t7qc88"
+          "status": 879,
+          "description": "bvga6x",
+          "areaType": "bser0e"
         }
       ],
       "roleIds": [
-        92
+        202
       ],
       "positionIds": [
-        "ms05ya"
+        "ufjcpi"
       ],
-      "roleId": 180,
+      "roleId": 938,
       "userRoleList": [
         {
-          "id": 338,
-          "deptId": 520,
-          "deptName": "cleopatra.thompson",
-          "organId": "118",
-          "organName": "cleopatra.thompson",
-          "roleId": 828,
-          "roleName": "cleopatra.thompson",
-          "adminId": 373
+          "id": 710,
+          "deptId": 139,
+          "deptName": "pauline.robel",
+          "organId": "119",
+          "organName": "pauline.robel",
+          "roleId": 228,
+          "roleName": "pauline.robel",
+          "adminId": 290
         }
       ],
-      "code": "9574",
-      "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d"
+      "code": "95555",
+      "uuid": "00cac69a-9477-4125-93fb-90055b7977a7"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -18976,9 +18976,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X PUT -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 434,
-    "roleId": 474,
-    "adminId": 456
+    "id": 122,
+    "roleId": 223,
+    "adminId": 549
   }
 }'
 ```
@@ -18999,9 +18999,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ma9tee",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "src20a",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19032,7 +19032,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=987&adminIds=cnuzfl&adminIds=cnuzfl'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=278&adminIds=xexcy0&adminIds=xexcy0'
 ```
 **Response-fields:**
 
@@ -19051,9 +19051,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ditfi7",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "rpf3r3",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19084,7 +19084,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=b3davr&adminIds=b3davr&roleId=64'
+curl -X PUT -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=xd4b1p&adminIds=xd4b1p&roleId=663'
 ```
 **Response-fields:**
 
@@ -19103,9 +19103,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xayeng",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "hinifc",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19135,7 +19135,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/24.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/5.do
 ```
 **Response-fields:**
 
@@ -19161,12 +19161,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      954
+      31
     ],
     "depts": [
       {
-        "id": 758,
-        "label": "3mkhr1",
+        "id": 661,
+        "label": "jns2v7",
         "children": [
           {
             "$ref": ".."
@@ -19175,8 +19175,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19215,7 +19215,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?endTime=2025-09-19 17:31:32&page=1&limit=10&cfgValue=rxasi2&ids=yn9x8z&ids=yn9x8z&q=10t4e2&startTime=2025-09-19 17:31:32&cfgKey=y9ccan&orderBy=106
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?ids=yqt1ma&ids=yqt1ma&cfgValue=rdho1m&orderBy=919&startTime=2025-09-22 22:44:42&endTime=2025-09-22 22:44:42&cfgKey=nb55uz&q=236lem&page=1&limit=10
 ```
 **Response-fields:**
 
@@ -19242,19 +19242,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 726,
+    "totalCount": 138,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "g4howi",
-        "cfgValue": "z5w14s"
+        "cfgKey": "15wx99",
+        "cfgValue": "y6hvaz"
       }
     ]
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19292,7 +19292,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'endTime=2025-09-19 17:31:32&cfgValue=g6k860&startTime=2025-09-19 17:31:32&q=3628jm&orderBy=623&limit=10&cfgKey=3qfd04&ids=zo2jou&ids=zo2jou&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'cfgValue=x3nrv2&startTime=2025-09-22 22:44:42&cfgKey=0nntgx&page=1&endTime=2025-09-22 22:44:42&limit=10&ids=i7dkjb&ids=i7dkjb&q=eg4azt&orderBy=485'
 ```
 **Response-fields:**
 
@@ -19311,9 +19311,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7kly4c",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "a3136b",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19343,7 +19343,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/gebepm.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/nbqv56.do
 ```
 **Response-fields:**
 
@@ -19365,11 +19365,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "zekihd",
-    "cfgValue": "1wyj4y"
+    "cfgKey": "2akhvf",
+    "cfgValue": "4c7ovc"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19403,8 +19403,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "8hyaul",
-    "cfgValue": "9yo4or"
+    "cfgKey": "3ddl4b",
+    "cfgValue": "ugc2ql"
   }
 }'
 ```
@@ -19425,9 +19425,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2elimr",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "l5zs6n",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19461,8 +19461,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "75u2fa",
-    "cfgValue": "24on5m"
+    "cfgKey": "ce3p06",
+    "cfgValue": "qsyde1"
   }
 }'
 ```
@@ -19483,9 +19483,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "avno0x",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "ndqfsp",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19534,9 +19534,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ldr6qd",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "n32270",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19579,9 +19579,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qaf471",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "t9uv6c",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19618,9 +19618,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pjp9hq",
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "data": "3r98hy",
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19655,7 +19655,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?q=ltjs20&limit=10&orderBy=336&page=1&endTime=2025-09-19 17:31:32&startTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?limit=10&startTime=2025-09-22 22:44:42&endTime=2025-09-22 22:44:42&orderBy=884&q=afmgld&page=1
 ```
 **Response-fields:**
 
@@ -19684,18 +19684,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "7644lx",
-      "deptNum": "xie4nq",
-      "peopleNum": "tzczpe",
-      "roleNum": "ree2zm",
-      "dicTypeNum": "tcmx7a",
-      "appNum": "j97kf3",
-      "fileNum": "gbe77a",
-      "paramNum": "aajh4u"
+      "organNum": "46ic4p",
+      "deptNum": "d2xjht",
+      "peopleNum": "i7ra88",
+      "roleNum": "w0e0u4",
+      "dicTypeNum": "5td25s",
+      "appNum": "rogrow",
+      "fileNum": "dig7ar",
+      "paramNum": "v4j86c"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19730,7 +19730,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?endTime=2025-09-19 17:31:32&orderBy=359&startTime=2025-09-19 17:31:32&limit=10&page=1&q=igfbgt
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?endTime=2025-09-22 22:44:42&startTime=2025-09-22 22:44:42&q=yz688s&page=1&orderBy=658&limit=10
 ```
 **Response-fields:**
 
@@ -19753,12 +19753,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "zdoyng",
-      "modelNum": "kk2syi"
+      "objectNum": "nqszro",
+      "modelNum": "qqele4"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19793,7 +19793,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?page=1&orderBy=545&endTime=2025-09-19 17:31:32&limit=10&q=ttuyxi&startTime=2025-09-19 17:31:32
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?page=1&q=k3aceu&orderBy=770&limit=10&endTime=2025-09-22 22:44:42&startTime=2025-09-22 22:44:42
 ```
 **Response-fields:**
 
@@ -19817,13 +19817,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "zj6s66",
-      "accountNum": "xaoxsw",
-      "serviceOrganNum": "of04fk"
+      "siteNum": "cj2vdc",
+      "accountNum": "7466e6",
+      "serviceOrganNum": "32nvfc"
     }
   ],
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19866,12 +19866,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d",
-    "img": "4otnic",
-    "code": "9574"
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7",
+    "img": "xwuw7s",
+    "code": "95555"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 
@@ -19913,12 +19913,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "d082834c-f9da-4015-b3e4-8437c1e9c18d",
-    "img": "655bsg",
-    "code": "9574"
+    "uuid": "00cac69a-9477-4125-93fb-90055b7977a7",
+    "img": "4ml6lh",
+    "code": "95555"
   },
-  "requestId": "118",
-  "timestamp": "2025-09-19 17:31:32"
+  "requestId": "119",
+  "timestamp": "2025-09-22 22:44:42"
 }
 ```
 

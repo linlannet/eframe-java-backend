@@ -23,7 +23,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.linlan.eframe</groupId>
     <artifactId>eframe-java-backend</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <packaging>pom</packaging>
     <name>eframe-java-backend</name>
     <description>JAVA开发的企业级后端框架，基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等，借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
@@ -31,7 +31,7 @@
 
     <properties>
 
-        <linlan.eframe.version>1.1.6</linlan.eframe.version>
+        <linlan.eframe.version>1.1.7</linlan.eframe.version>
         <linlan.plugin.version>2.3.12</linlan.plugin.version>
         <linlan.tools.version>2.6.7</linlan.tools.version>
 
