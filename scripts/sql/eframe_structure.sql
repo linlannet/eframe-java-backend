@@ -28,7 +28,7 @@ CREATE TABLE `ADMIN_DEPT`  (
                                `DEPTTYPE_ID` bigint(0) NULL DEFAULT NULL COMMENT '部门分类ID',
                                `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外部业务ID',
                                `CREATE_TYPE` int(0) NULL DEFAULT 1 COMMENT '创建方式0导入1录入2授权',
-                               `TYPE` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '部门类型，NEISHE内设机构，FENZI分子机构',
+                               `TYPE` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构',
                                `NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称，多级累加名称',
                                `SNAME` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称简称，本单位显示名称',
                                `AREA_CODE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '地域编码，所在城市',

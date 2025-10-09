@@ -138,7 +138,7 @@
 	<select id="selectMenuListByAdminId" resultMap="adminMenuMap">
 		select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
 		from SYS_MENU B
-		left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+		left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
 		left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
 		left join SYS_ROLE ROLE on AUR.ROLE_ID = RO.ROLE_ID
 		where AUR.ADMIN_ID = #{adminId}  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
@@ -160,7 +160,7 @@
     <select id="selectMenuTreeByAdminId" resultMap="adminMenuMap">
 		select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
 		from SYS_MENU B
-			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
 			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
 			 left join SYS_ROLE RO on AUR.ROLE_ID = RO.ROLE_ID
 			 left join ADMIN_USER UR on AUR.ADMIN_ID = UR.ADMIN_ID
@@ -175,13 +175,13 @@
 	<select id="selectMenuListByRoleId" resultType="Long">
 		select B.MENU_ID
 		from SYS_MENU B
-            left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+            left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
         where SRM.ROLE_ID = #{roleId}  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
         <if test="currAppId != null and currAppId != ''">
             AND B.APP_ID = #{currAppId}
         </if>
         <if test="menuCheckStrictly">
-            and B.MENU_ID not in (select B.PARENT_ID from SYS_MENU B inner join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID and SRM.ROLE_ID = #{roleId})
+            and B.MENU_ID not in (select B.PARENT_ID from SYS_MENU B inner join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID and SRM.ROLE_ID = #{roleId})
         </if>
 		order by B.PARENT_ID, B.PRIORITY
 	</select>
@@ -189,7 +189,7 @@
 	<select id="selectMenuPerms" resultType="String">
 		select distinct B.PERMS
 		from SYS_MENU B
-			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
 			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
 		where 1 = 1  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0
         <if test="currAppId != null and currAppId != ''">
@@ -200,7 +200,7 @@
 	<select id="selectMenuPermsByAdminId" parameterType="Long" resultType="String">
 		select distinct B.PERMS
 		from SYS_MENU B
-			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
 			 left join ADMIN_USER_ROLE AUR on SRM.ROLE_ID = AUR.ROLE_ID
 			 left join SYS_ROLE RO on RO.ROLE_ID = AUR.ROLE_ID
 		where B.IS_DISABLED = 0 and RO.STATUS = 0  AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0 and AUR.ADMIN_ID = #{userId}
@@ -212,7 +212,7 @@
 	<select id="selectMenuPermsByRoleId" resultType="String">
 		select distinct B.PERMS
 		from SYS_MENU B
-			 left join ADMIN_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+			 left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
 		where B.IS_DISABLED = 0 AND B.TYPE = 'ADMIN' AND B.DEL_FLAG = 0 and SRM.ROLE_ID = #{roleId}
         <if test="currAppId != null and currAppId != ''">
             AND B.APP_ID = #{currAppId}

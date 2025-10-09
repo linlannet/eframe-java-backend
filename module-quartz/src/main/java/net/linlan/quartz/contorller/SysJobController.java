@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -122,7 +122,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:save')")
     @PlatLog(value = "定时任务", category = 10)
-    @PostMapping("job")
+    @PostMapping("job/save")
     @LimitScope(name = "sysJobSave", key = "sysJobSave")
     public ResponseResult<String> save(@RequestBody SysJobVo input) {
         if (!ScheduleUtils.isValid(input.getCronExpression())) {
@@ -152,7 +152,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:update')")
     @PlatLog(value = "定时任务", category = 20)
-    @PutMapping("job")
+    @PostMapping("job/update")
     @LimitScope(name = "sysJobUpdate", key = "sysJobUpdate")
     public ResponseResult<String> edit(@RequestBody SysJobVo input) {
         if (!ScheduleUtils.isValid(input.getCronExpression())) {
@@ -182,7 +182,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:changeStatus')")
     @PlatLog(value = "定时任务", category = 20)
-    @PutMapping("job/changeStatus")
+    @PostMapping("job/changeStatus")
     public ResponseResult<String> changeStatus(@RequestBody SysJobVo input) {
         ScheduleInfo newJob = scheduleInfoService.findById(input.getJobId());
         newJob.setStatus(input.getStatus());
@@ -197,7 +197,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:changeStatus')")
     @PlatLog(value = "定时任务", category = 20)
-    @PutMapping("job/run")
+    @PostMapping("job/run")
     public ResponseResult<String> run(@RequestBody SysJobVo input) {
         scheduleInfoService.run(new String[] { input.getJobId() });
         return success();

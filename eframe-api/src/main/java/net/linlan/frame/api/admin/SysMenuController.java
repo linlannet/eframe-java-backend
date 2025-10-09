@@ -214,7 +214,7 @@ public class SysMenuController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:menu:save')")
     @PlatLog(value = "新增单个菜单", category = 10)
-    @PostMapping("menu")
+    @PostMapping("menu/save/single")
     @Encrypt
     @LimitScope(name = "sysMenuSave", key = "sysMenuSave")
     public ResponseResult<String> saveSingle(@Validated @RequestBody AdminMenuVo input) {
@@ -239,7 +239,7 @@ public class SysMenuController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:menu:update')")
     @PlatLog(value = "修改菜单管理", category = 20)
-    @PutMapping("menu")
+    @PostMapping("menu/update/single")
     @Encrypt
     @LimitScope(name = "sysMenuUpdate", key = "sysMenuUpdate")
     public ResponseResult<String> updateSingle(@Validated @RequestBody AdminMenuVo input) {

@@ -15,42 +15,26 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.sys.base.constant;
+package net.linlan.frame.admin.constant;
 
 import net.linlan.utils.enums.BaseEnumString;
 
 /**
  * 应用类型状态枚举类
  */
-public enum AppTypeEnum implements BaseEnumString {
+public enum DeptTypeEnum implements BaseEnumString {
     /**
-     * 全部领域
+     * 本级
      */
-    QUANBU("QUANBU", "全部领域"),
+    BENJI("BENJI", "本级"),
     /**
-     * 工作端
+     * 内设机构
      */
-    WORK("WORK", "工作端"),
+    NEISHE("NEISHE", "内设机构"),
     /**
-     * 移动端
+     * 分子机构
      */
-    H5("H5", "移动端"),
-    /**
-     * 大屏端
-     */
-    SCREEN("SCREEN", "大屏端"),
-    /**
-     * 浏览器服务器
-     */
-    BS("BS", "浏览器服务器"),
-    /**
-     * 客户端服务器
-     */
-    CS("CS", "客户端服务器"),
-    /**
-     * 独立应用
-     */
-    EXE("EXE", "独立应用"),
+    FENZI("FENZI", "分子机构"),
     /**
      * 其他
      */
@@ -65,7 +49,7 @@ public enum AppTypeEnum implements BaseEnumString {
      */
     private String value;
 
-    AppTypeEnum(String key, String value) {
+    DeptTypeEnum(String key, String value) {
         this.key = key;
         this.value = value;
     }

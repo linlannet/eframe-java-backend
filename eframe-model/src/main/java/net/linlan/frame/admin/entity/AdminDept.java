@@ -23,6 +23,7 @@ import java.util.List;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.frame.admin.constant.DeptTypeEnum;
 import net.linlan.utils.entity.BaseEntity;
 
 /**
@@ -71,7 +72,7 @@ public class AdminDept extends BaseEntity {
     private Integer         createType;
 
     /**
-     * 部门类型，NEISHE内设机构，FENZI分子机构
+     * 部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构
      */
     private String          type;
 
@@ -165,7 +166,9 @@ public class AdminDept extends BaseEntity {
      */
     private String          spare2;
 
-    /** 子部门 */
+    /**
+     * 子部门
+     */
     private List<AdminDept> children = new ArrayList<>();
 
     /**
@@ -176,7 +179,9 @@ public class AdminDept extends BaseEntity {
         if (getId() == null) {
             setId(RandomUtils.randomLid());
         }
-
+        if (getType() == null) {
+            setType(DeptTypeEnum.NEISHE.getKey());
+        }
     }
 
 }

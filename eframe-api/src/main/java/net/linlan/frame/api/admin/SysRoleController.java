@@ -28,7 +28,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -161,7 +161,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:save')")
     @PlatLog(value = "新增角色", category = 10)
-    @PostMapping("role")
+    @PostMapping("role/save")
     @Encrypt
     @LimitScope(name = "sysRoleSave", key = "sysRoleSave")
     public ResponseResult<String> save(@Validated @RequestBody SysRoleVo input) {
@@ -183,7 +183,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:update')")
     @PlatLog(value = "修改保存角色", category = 20)
-    @PutMapping("role")
+    @PostMapping("role/update")
     @Encrypt
     @LimitScope(name = "sysRoleUpdate", key = "sysRoleUpdate")
     public ResponseResult<String> update(@Validated @RequestBody SysRoleVo input) {
@@ -213,7 +213,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:save')")
     @PlatLog(value = "新增角色及绑定菜单部门", category = 10)
-    @PostMapping("role/save")
+    @PostMapping("role/save/all")
     @Encrypt
     @LimitScope(name = "sysRoleSave", key = "sysRoleSave")
     public ResponseResult<String> saveAll(@Validated @RequestBody SysRoleVo input) {
@@ -235,7 +235,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:update')")
     @PlatLog(value = "修改保存角色及绑定菜单部门", category = 20)
-    @PostMapping("role/update")
+    @PostMapping("role/update/all")
     @Encrypt
     @LimitScope(name = "sysRoleUpdate", key = "sysRoleUpdate")
     public ResponseResult<String> updateAll(@Validated @RequestBody SysRoleVo input) {
@@ -409,7 +409,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:update')")
     @PlatLog(value = "取消授权用户", category = 31)
-    @PutMapping("role/authUser/cancel")
+    @PostMapping("role/authUser/cancel")
     @Encrypt
     @LimitScope(name = "sysRoleCancel", key = "sysRoleCancel")
     public ResponseResult<String> cancelAuthUser(@RequestBody AdminUserRole input) {
@@ -424,7 +424,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:update')")
     @PlatLog(value = "批量取消授权用户", category = 31)
-    @PutMapping("role/authUser/cancelAll")
+    @PostMapping("role/authUser/cancelAll")
     @Encrypt
     @LimitScope(name = "sysRoleCancelAll", key = "sysRoleCancelAll")
     public ResponseResult<String> cancelAuthUserAll(Long roleId, Long[] adminIds) {
@@ -439,7 +439,7 @@ public class SysRoleController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:role:update')")
     @PlatLog(value = "批量选择用户授权", category = 31)
-    @PutMapping("role/authUser/selectAll")
+    @PostMapping("role/authUser/selectAll")
     @Encrypt
     @LimitScope(name = "sysRoleSelectAll", key = "sysRoleSelectAll")
     public ResponseResult<String> selectAuthUserAll(Long roleId, Long[] adminIds) {

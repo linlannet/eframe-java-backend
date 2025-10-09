@@ -70,7 +70,7 @@ public class AdminDeptVo {
      */
     private Integer createType;
     /**
-     * 部门类型，NEISHE内设机构，FENZI分子机构
+     * 部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构
      */
     private String  type;
     /**

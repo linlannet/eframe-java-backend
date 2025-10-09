@@ -22,7 +22,6 @@ logging:
         net.linlan: debug
         org.springframework: warn
 
-
 # 数据源配置
 spring:
     datasource:
@@ -30,7 +29,7 @@ spring:
         #        driverClassName: com.mysql.cj.jdbc.Driver
         druid:
             first: #数据源1-产品数据源
-                url: jdbc:mysql://localhost:3306/framedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+                url: jdbc:mysql://localhost:3306/eframedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
                 username: 'lldba'
                 password: 'DB_Lldba_2023!'
             h2: #数据源-H2本地数据库
@@ -40,7 +39,7 @@ spring:
             second: #数据源2-业务主要数据库
                 # 从数据源开关/默认关闭
                 enabled: false
-                url: jdbc:mysql://localhost:3306/framedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+                url: jdbc:mysql://localhost:3306/eframedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
                 username: 'lldba'
                 password: 'DB_Lldba_2023!'
 

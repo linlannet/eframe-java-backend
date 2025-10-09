@@ -255,7 +255,7 @@ public class AdminUserOpController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:resetPwd')")
     @Encrypt
     @PlatLog(value = "重置密码", category = 20)
-    @PutMapping("user/resetPwd")
+    @PostMapping("user/resetPwd")
     public ResponseResult<String> resetPwd(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
         adminUserService.checkUserDataScope(input.getId());
@@ -270,7 +270,7 @@ public class AdminUserOpController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:user:update')")
     @PlatLog(value = "用户状态修改", category = 20)
-    @PutMapping("user/changeStatus")
+    @PostMapping("user/changeStatus")
     @Encrypt
     public ResponseResult<String> changeStatus(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
@@ -310,7 +310,7 @@ public class AdminUserOpController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('admin:user:update')")
     @PlatLog(value = "用户授权角色", category = 31)
-    @PutMapping("user/authRole")
+    @PostMapping("user/authRole")
     @Encrypt
     public ResponseResult<String> insertAuthRole(Long adminId, Long[] roleIds) {
         adminUserService.checkUserDataScope(adminId);

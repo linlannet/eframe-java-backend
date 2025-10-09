@@ -75,7 +75,7 @@ public class SysPositionController extends BaseController {
      * @return  返回对象
      */
     @PlatLog(value = "获取岗位列表")
-    @PreAuthorize("@ss.hasPerms('admin:post:list')")
+    @PreAuthorize("@ss.hasPerms('admin:position:list')")
     @GetMapping("position/list")
     @Encrypt
     public ResponseResult<Pagination<SysPositionVo>> getSysPositionPage(SysPositionParam param) {
@@ -96,7 +96,7 @@ public class SysPositionController extends BaseController {
      * @param param     导出查询条件
      */
     @PlatLog(value = "岗位列表导出", category = 52)
-    @PreAuthorize("@ss.hasPerms('admin:post:export')")
+    @PreAuthorize("@ss.hasPerms('admin:position:export')")
     @PostMapping("position/export")
     @Encrypt
     public void export(HttpServletResponse response, SysPositionVoParam param) {
@@ -118,7 +118,7 @@ public class SysPositionController extends BaseController {
      * @return  操作结果
      */
     @PlatLog(value = "根据岗位编号获取详细信息")
-    @PreAuthorize("@ss.hasPerms('admin:post:detail')")
+    @PreAuthorize("@ss.hasPerms('admin:position:detail')")
     @GetMapping(value = "position/{postId}")
     @Encrypt
     public ResponseResult<SysPosition> getInfo(@PathVariable String postId) {
@@ -134,7 +134,7 @@ public class SysPositionController extends BaseController {
      * @param input  输入对象
      * @return  操作结果
      */
-    @PreAuthorize("@ss.hasPerms('admin:post:save')")
+    @PreAuthorize("@ss.hasPerms('admin:position:save')")
     @PlatLog(value = "新增岗位", category = 10)
     @PostMapping("position/save")
     @Encrypt
@@ -156,7 +156,7 @@ public class SysPositionController extends BaseController {
      * @param input  输入对象
      * @return  操作结果
      */
-    @PreAuthorize("@ss.hasPerms('admin:post:update')")
+    @PreAuthorize("@ss.hasPerms('admin:position:update')")
     @PlatLog(value = "修改岗位", category = 20)
     @PostMapping("position/update")
     @Encrypt
@@ -179,7 +179,7 @@ public class SysPositionController extends BaseController {
      * @param positionIds  岗位Ids
      * @return  操作结果
      */
-    @PreAuthorize("@ss.hasPerms('admin:post:delete')")
+    @PreAuthorize("@ss.hasPerms('admin:position:delete')")
     @PlatLog(value = "删除岗位", category = 40)
     @PostMapping("position/{positionIds}")
     @Encrypt
@@ -200,7 +200,7 @@ public class SysPositionController extends BaseController {
      * @param input  输入对象
      * @return  操作结果
      */
-    @PreAuthorize("@ss.hasPerms('admin:post:delete')")
+    @PreAuthorize("@ss.hasPerms('admin:position:delete')")
     @PlatLog(value = "绑定角色", category = 53)
     @PostMapping("position/bind/{positionId}")
     @Encrypt
@@ -221,7 +221,7 @@ public class SysPositionController extends BaseController {
      * @param input  输入对象
      * @return  操作结果
      */
-    @PreAuthorize("@ss.hasPerms('admin:post:delete')")
+    @PreAuthorize("@ss.hasPerms('admin:position:delete')")
     @PlatLog(value = "解绑角色", category = 54)
     @PostMapping("position/unbind/{positionId}")
     @Encrypt

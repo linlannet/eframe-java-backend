@@ -97,7 +97,7 @@ public class AdminUserEntryController extends BaseController {
      */
     @PlatLog(value = "根据用户编号获取详细信息")
     @PreAuthorize("@ss.hasPerms('admin:user:detail')")
-    @GetMapping(value = { "user/", "user/{adminId}" })
+    @GetMapping(value = {  "user/{adminId}" })
     @Encrypt
     public ResponseResult<LoginUserRolesPosVo> getInfo(@PathVariable(value = "adminId", required = false) Long adminId) {
         LoginUserRolesPosVo loginUserRolesPosVo = new LoginUserRolesPosVo();

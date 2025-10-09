@@ -180,7 +180,7 @@ public class GenController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('tool:gen:update')")
     @PlatLog(value = "修改保存代码生成业务", category = 20)
-    @PutMapping("gen")
+    @PostMapping("gen")
     @LimitScope(name = "genTableUpdate", key = "genTableUpdate")
     public ResponseResult<String> editSave(@Validated @RequestBody GenTable genTable) {
         genTableService.validateEdit(genTable);
