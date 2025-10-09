@@ -1,12 +1,10 @@
--- 表结构
 /*
- Navicat Premium Data Transfer
 
- Source Server         : 152_WIOC
+ Source Server         : LLDB
  Source Server Type    : MySQL
  Source Server Version : 80022
- Source Host           : 172.22.213.152:8306
- Source Schema         : framedb_1.0
+ Source Host           : localhost:3306
+ Source Schema         : framedb_1.1
 
  Target Server Type    : MySQL
  Target Server Version : 80022
