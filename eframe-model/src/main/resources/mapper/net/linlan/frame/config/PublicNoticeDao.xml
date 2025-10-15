@@ -25,7 +25,7 @@
     <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
     <resultMap type="net.linlan.frame.config.entity.PublicNotice" id="publicNoticeMap">
         <id property="id" column="MSG_ID"/>
-        <result property="siteId" column="SITE_ID"/>
+        <result property="appId" column="APP_ID"/>
         <result property="organId" column="ORGAN_ID"/>
         <result property="bizType" column="BIZ_TYPE"/>
         <result property="type" column="TYPE"/>
@@ -51,7 +51,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="publicNoticeMap">
         SELECT
-MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+MSG_ID, APP_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
         FROM PUBLIC_NOTICE B
         WHERE B.MSG_ID = #{value}
     </select>
@@ -59,7 +59,7 @@ MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, 
     <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
     <select id="getList" resultMap="publicNoticeMap">
         SELECT
-B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+B.MSG_ID, B.APP_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
         FROM PUBLIC_NOTICE B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -100,8 +100,8 @@ B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_U
         <if test="id != null and id != ''">
             and B.MSG_ID = #{id}
         </if>
-        <if test="siteId != null and siteId != ''">
-            and B.SITE_ID = #{siteId}
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
         </if>
         <if test="organId != null and organId != ''">
             and B.ORGAN_ID = #{organId}
@@ -177,11 +177,11 @@ B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_U
     <insert id="save" parameterType="net.linlan.frame.config.entity.PublicNotice">
         INSERT INTO PUBLIC_NOTICE
         (
-MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+MSG_ID, APP_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
         )
         VALUES
         (
-#{id}, #{siteId}, #{organId}, #{bizType}, #{type}, #{title}, #{content}, #{msgUrl}, #{foreignId}, #{imagePath}, #{iconStyle}, #{recvMemberId}, #{recvGroupId}, #{recvOrganId}, #{recvTargetid}, #{status}, #{createTime}, #{creatorId}, #{updatorId}, #{updateTime}, #{lastTime}, #{description}
+#{id}, #{appId}, #{organId}, #{bizType}, #{type}, #{title}, #{content}, #{msgUrl}, #{foreignId}, #{imagePath}, #{iconStyle}, #{recvMemberId}, #{recvGroupId}, #{recvOrganId}, #{recvTargetid}, #{status}, #{createTime}, #{creatorId}, #{updatorId}, #{updateTime}, #{lastTime}, #{description}
         )
     </insert>
 
@@ -190,12 +190,12 @@ MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, 
             <when test='_databaseId == "mysql"'>
                 INSERT INTO PUBLIC_NOTICE
                 (
-MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+MSG_ID, APP_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
                 )
                 VALUES
                 <foreach collection="list" index="index" item="item" separator=",">
                     (
-#{item.id}, #{item.siteId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
+#{item.id}, #{item.appId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
                     )
                 </foreach>
             </when>
@@ -203,11 +203,11 @@ MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, 
                 <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
                     INSERT INTO PUBLIC_NOTICE
                     (
-MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
+MSG_ID, APP_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, IMAGE_PATH, ICON_STYLE, RECV_MEMBER_ID, RECV_GROUP_ID, RECV_ORGAN_ID, RECV_TARGETID, STATUS, CREATE_TIME, CREATOR_ID, UPDATOR_ID, UPDATE_TIME, LAST_TIME, DESCRIPTION
                     )
                     VALUES
                     (
-#{item.id}, #{item.siteId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
+#{item.id}, #{item.appId}, #{item.organId}, #{item.bizType}, #{item.type}, #{item.title}, #{item.content}, #{item.msgUrl}, #{item.foreignId}, #{item.imagePath}, #{item.iconStyle}, #{item.recvMemberId}, #{item.recvGroupId}, #{item.recvOrganId}, #{item.recvTargetid}, #{item.status}, #{item.createTime}, #{item.creatorId}, #{item.updatorId}, #{item.updateTime}, #{item.lastTime}, #{item.description}
                     )
                 </foreach>
             </otherwise>
@@ -218,7 +218,7 @@ MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, 
     <update id="update" parameterType="net.linlan.frame.config.entity.PublicNotice">
         UPDATE PUBLIC_NOTICE
         <set>
-            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
             <if test="organId != null">ORGAN_ID = #{organId}, </if>
             <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
             <if test="type != null">TYPE = #{type}, </if>
@@ -275,7 +275,7 @@ MSG_ID, SITE_ID, ORGAN_ID, BIZ_TYPE, TYPE, TITLE, CONTENT, MSG_URL, FOREIGN_ID, 
     <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <select id="getPageDto" resultMap="publicNoticeDtoMap">
         SELECT
-B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+B.MSG_ID, B.APP_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
         FROM PUBLIC_NOTICE B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -286,19 +286,19 @@ B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_U
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="publicNoticeDtoMap">
         SELECT
-B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+B.MSG_ID, B.APP_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
         FROM PUBLIC_NOTICE B
         WHERE MSG_ID = #{value}
     </select>
 
     <!-- 以下为新增特定的操作 -->
     <select id="getMyselfList" resultMap="publicNoticeDtoMap">
-        select B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
+        select B.MSG_ID, B.APP_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION
              , B.readStatus
         from
         (
         SELECT
-        B.MSG_ID, B.SITE_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION,
+        B.MSG_ID, B.APP_ID, B.ORGAN_ID, B.BIZ_TYPE, B.TYPE, B.TITLE, B.CONTENT, B.MSG_URL, B.FOREIGN_ID, B.IMAGE_PATH, B.ICON_STYLE, B.RECV_MEMBER_ID, B.RECV_GROUP_ID, B.RECV_ORGAN_ID, B.RECV_TARGETID, B.STATUS, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.LAST_TIME, B.DESCRIPTION,
         (case when (( EXISTS (SELECT A.RECORD_ID FROM PORTAL_UNION_MESSAGE A WHERE A.TYPE='PUBLIC_NOTICE' AND A.MSG_USER_ID =#{recvMemberId} AND A.MSG_ID = B.MSG_ID ))) then 1 else 0 end) as readStatus
         FROM PUBLIC_NOTICE B
         WHERE 1=1

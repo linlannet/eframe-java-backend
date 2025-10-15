@@ -25,7 +25,7 @@
     <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
     <resultMap type="net.linlan.frame.config.entity.PublicUnionMessage" id="publicUnionMessageMap">
         <id property="id" column="RECORD_ID"/>
-        <result property="siteId" column="SITE_ID"/>
+        <result property="appId" column="APP_ID"/>
         <result property="foreignId" column="FOREIGN_ID"/>
         <result property="type" column="TYPE"/>
         <result property="bizType" column="BIZ_TYPE"/>
@@ -61,7 +61,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="publicUnionMessageMap">
         SELECT
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
         FROM PUBLIC_UNION_MESSAGE B
         WHERE B.RECORD_ID = #{value}
     </select>
@@ -69,7 +69,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYP
     <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
     <select id="getList" resultMap="publicUnionMessageMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_MESSAGE B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -110,8 +110,8 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.M
         <if test="id != null and id != ''">
             and B.RECORD_ID = #{id}
         </if>
-        <if test="siteId != null and siteId != ''">
-            and B.SITE_ID = #{siteId}
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
         </if>
         <if test="foreignId != null and foreignId != ''">
             and B.FOREIGN_ID = #{foreignId}
@@ -217,11 +217,11 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.M
     <insert id="save" parameterType="net.linlan.frame.config.entity.PublicUnionMessage">
         INSERT INTO PUBLIC_UNION_MESSAGE
         (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
         )
         VALUES
         (
-#{id}, #{siteId}, #{foreignId}, #{type}, #{bizType}, #{msgCreateTime}, #{msgId}, #{msgType}, #{msgTitle}, #{msgAbstract}, #{msgAccountId}, #{msgAccountName}, #{msgModuleId}, #{msgModuleName}, #{msgUserId}, #{msgUserName}, #{msgOrganId}, #{msgOrganName}, #{msgUrl}, #{msgLabels}, #{msgContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+#{id}, #{appId}, #{foreignId}, #{type}, #{bizType}, #{msgCreateTime}, #{msgId}, #{msgType}, #{msgTitle}, #{msgAbstract}, #{msgAccountId}, #{msgAccountName}, #{msgModuleId}, #{msgModuleName}, #{msgUserId}, #{msgUserName}, #{msgOrganId}, #{msgOrganName}, #{msgUrl}, #{msgLabels}, #{msgContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
         )
     </insert>
 
@@ -230,12 +230,12 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYP
             <when test='_databaseId == "mysql"'>
                 INSERT INTO PUBLIC_UNION_MESSAGE
                 (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
                 )
                 VALUES
                 <foreach collection="list" index="index" item="item" separator=",">
                     (
-#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.appId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </when>
@@ -243,11 +243,11 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYP
                 <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
                     INSERT INTO PUBLIC_UNION_MESSAGE
                     (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYPE, MSG_TITLE, MSG_ABSTRACT, MSG_ACCOUNT_ID, MSG_ACCOUNT_NAME, MSG_MODULE_ID, MSG_MODULE_NAME, MSG_USER_ID, MSG_USER_NAME, MSG_ORGAN_ID, MSG_ORGAN_NAME, MSG_URL, MSG_LABELS, MSG_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
                     )
                     VALUES
                     (
-#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.appId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.msgCreateTime}, #{item.msgId}, #{item.msgType}, #{item.msgTitle}, #{item.msgAbstract}, #{item.msgAccountId}, #{item.msgAccountName}, #{item.msgModuleId}, #{item.msgModuleName}, #{item.msgUserId}, #{item.msgUserName}, #{item.msgOrganId}, #{item.msgOrganName}, #{item.msgUrl}, #{item.msgLabels}, #{item.msgContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </otherwise>
@@ -258,7 +258,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYP
     <update id="update" parameterType="net.linlan.frame.config.entity.PublicUnionMessage">
         UPDATE PUBLIC_UNION_MESSAGE
         <set>
-            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
             <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
             <if test="type != null">TYPE = #{type}, </if>
             <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
@@ -324,7 +324,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, MSG_CREATE_TIME, MSG_ID, MSG_TYP
     <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <select id="getPageDto" resultMap="publicUnionMessageDtoMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_MESSAGE B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -335,7 +335,7 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.M
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="publicUnionMessageDtoMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.MSG_CREATE_TIME, B.MSG_ID, B.MSG_TYPE, B.MSG_TITLE, B.MSG_ABSTRACT, B.MSG_ACCOUNT_ID, B.MSG_ACCOUNT_NAME, B.MSG_MODULE_ID, B.MSG_MODULE_NAME, B.MSG_USER_ID, B.MSG_USER_NAME, B.MSG_ORGAN_ID, B.MSG_ORGAN_NAME, B.MSG_URL, B.MSG_LABELS, B.MSG_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_MESSAGE B
         WHERE RECORD_ID = #{value}
     </select>

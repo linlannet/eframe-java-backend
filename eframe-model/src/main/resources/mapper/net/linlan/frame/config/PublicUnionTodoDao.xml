@@ -25,7 +25,7 @@
     <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
     <resultMap type="net.linlan.frame.config.entity.PublicUnionTodo" id="publicUnionTodoMap">
         <id property="id" column="RECORD_ID"/>
-        <result property="siteId" column="SITE_ID"/>
+        <result property="appId" column="APP_ID"/>
         <result property="foreignId" column="FOREIGN_ID"/>
         <result property="type" column="TYPE"/>
         <result property="bizType" column="BIZ_TYPE"/>
@@ -66,7 +66,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="publicUnionTodoMap">
         SELECT
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
         FROM PUBLIC_UNION_TODO B
         WHERE B.RECORD_ID = #{value}
     </select>
@@ -74,7 +74,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_
     <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
     <select id="getList" resultMap="publicUnionTodoMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_TODO B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -115,8 +115,8 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.
         <if test="id != null and id != ''">
             and B.RECORD_ID = #{id}
         </if>
-        <if test="siteId != null and siteId != ''">
-            and B.SITE_ID = #{siteId}
+        <if test="appId != null and appId != ''">
+            and B.APP_ID = #{appId}
         </if>
         <if test="foreignId != null and foreignId != ''">
             and B.FOREIGN_ID = #{foreignId}
@@ -237,11 +237,11 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.
     <insert id="save" parameterType="net.linlan.frame.config.entity.PublicUnionTodo">
         INSERT INTO PUBLIC_UNION_TODO
         (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
         )
         VALUES
         (
-#{id}, #{siteId}, #{foreignId}, #{type}, #{bizType}, #{todoCreateTime}, #{todoId}, #{todoType}, #{todoName}, #{todoAbstract}, #{todoAccountId}, #{todoAccountName}, #{todoModuleId}, #{todoModuleName}, #{todoUserId}, #{todoUserName}, #{todoOrganId}, #{todoOrganName}, #{todoProcessName}, #{todoProcessStatus}, #{todoProcessInfo}, #{todoCurrInfo}, #{todoNextInfo}, #{todoUrl}, #{todoLabels}, #{todoContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
+#{id}, #{appId}, #{foreignId}, #{type}, #{bizType}, #{todoCreateTime}, #{todoId}, #{todoType}, #{todoName}, #{todoAbstract}, #{todoAccountId}, #{todoAccountName}, #{todoModuleId}, #{todoModuleName}, #{todoUserId}, #{todoUserName}, #{todoOrganId}, #{todoOrganName}, #{todoProcessName}, #{todoProcessStatus}, #{todoProcessInfo}, #{todoCurrInfo}, #{todoNextInfo}, #{todoUrl}, #{todoLabels}, #{todoContent}, #{status}, #{opUserId}, #{opTime}, #{opOrganId}, #{opOrganName}, #{creatorId}, #{createTime}, #{lastTime}, #{description}, #{spare1}, #{spare2}
         )
     </insert>
 
@@ -250,12 +250,12 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_
             <when test='_databaseId == "mysql"'>
                 INSERT INTO PUBLIC_UNION_TODO
                 (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
                 )
                 VALUES
                 <foreach collection="list" index="index" item="item" separator=",">
                     (
-#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.appId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </when>
@@ -263,11 +263,11 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_
                 <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
                     INSERT INTO PUBLIC_UNION_TODO
                     (
-RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
+RECORD_ID, APP_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_TYPE, TODO_NAME, TODO_ABSTRACT, TODO_ACCOUNT_ID, TODO_ACCOUNT_NAME, TODO_MODULE_ID, TODO_MODULE_NAME, TODO_USER_ID, TODO_USER_NAME, TODO_ORGAN_ID, TODO_ORGAN_NAME, TODO_PROCESS_NAME, TODO_PROCESS_STATUS, TODO_PROCESS_INFO, TODO_CURR_INFO, TODO_NEXT_INFO, TODO_URL, TODO_LABELS, TODO_CONTENT, STATUS, OP_USER_ID, OP_TIME, OP_ORGAN_ID, OP_ORGAN_NAME, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION, SPARE1, SPARE2
                     )
                     VALUES
                     (
-#{item.id}, #{item.siteId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.appId}, #{item.foreignId}, #{item.type}, #{item.bizType}, #{item.todoCreateTime}, #{item.todoId}, #{item.todoType}, #{item.todoName}, #{item.todoAbstract}, #{item.todoAccountId}, #{item.todoAccountName}, #{item.todoModuleId}, #{item.todoModuleName}, #{item.todoUserId}, #{item.todoUserName}, #{item.todoOrganId}, #{item.todoOrganName}, #{item.todoProcessName}, #{item.todoProcessStatus}, #{item.todoProcessInfo}, #{item.todoCurrInfo}, #{item.todoNextInfo}, #{item.todoUrl}, #{item.todoLabels}, #{item.todoContent}, #{item.status}, #{item.opUserId}, #{item.opTime}, #{item.opOrganId}, #{item.opOrganName}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </otherwise>
@@ -278,7 +278,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_
     <update id="update" parameterType="net.linlan.frame.config.entity.PublicUnionTodo">
         UPDATE PUBLIC_UNION_TODO
         <set>
-            <if test="siteId != null">SITE_ID = #{siteId}, </if>
+            <if test="appId != null">APP_ID = #{appId}, </if>
             <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
             <if test="type != null">TYPE = #{type}, </if>
             <if test="bizType != null">BIZ_TYPE = #{bizType}, </if>
@@ -349,7 +349,7 @@ RECORD_ID, SITE_ID, FOREIGN_ID, TYPE, BIZ_TYPE, TODO_CREATE_TIME, TODO_ID, TODO_
     <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <select id="getPageDto" resultMap="publicUnionTodoDtoMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_TODO B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -360,7 +360,7 @@ B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="publicUnionTodoDtoMap">
         SELECT
-B.RECORD_ID, B.SITE_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.RECORD_ID, B.APP_ID, B.FOREIGN_ID, B.TYPE, B.BIZ_TYPE, B.TODO_CREATE_TIME, B.TODO_ID, B.TODO_TYPE, B.TODO_NAME, B.TODO_ABSTRACT, B.TODO_ACCOUNT_ID, B.TODO_ACCOUNT_NAME, B.TODO_MODULE_ID, B.TODO_MODULE_NAME, B.TODO_USER_ID, B.TODO_USER_NAME, B.TODO_ORGAN_ID, B.TODO_ORGAN_NAME, B.TODO_PROCESS_NAME, B.TODO_PROCESS_STATUS, B.TODO_PROCESS_INFO, B.TODO_CURR_INFO, B.TODO_NEXT_INFO, B.TODO_URL, B.TODO_LABELS, B.TODO_CONTENT, B.STATUS, B.OP_USER_ID, B.OP_TIME, B.OP_ORGAN_ID, B.OP_ORGAN_NAME, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM PUBLIC_UNION_TODO B
         WHERE RECORD_ID = #{value}
     </select>

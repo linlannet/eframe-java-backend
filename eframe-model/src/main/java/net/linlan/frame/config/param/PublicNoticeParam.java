@@ -38,9 +38,9 @@ public class PublicNoticeParam extends BaseParam {
      */
     private Long    id;
     /**
-     * 站点ID
+     * 应用ID
      */
-    private Long    siteId;
+    private String appId;
     /**
      * 机构ID
      */

@@ -40,9 +40,9 @@ public class PublicUnionTodo extends BaseEntity {
     private String id;
 
     /**
-     * 站点ID
+     * 应用ID
      */
-    private Long   siteId;
+    private String appId;
 
     /**
      * 站点门户ID
@@ -50,7 +50,7 @@ public class PublicUnionTodo extends BaseEntity {
     private String foreignId;
 
     /**
-     * 类型，内部则关联GLOBAL_SERTYPE，外部则为OUT
+     * 类型，外部则为OUT
      */
     private String type;
 

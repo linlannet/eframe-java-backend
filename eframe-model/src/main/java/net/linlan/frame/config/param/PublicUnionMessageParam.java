@@ -38,9 +38,9 @@ public class PublicUnionMessageParam extends BaseParam {
      */
     private String  id;
     /**
-     * 站点ID
+     * 应用ID
      */
-    private Long    siteId;
+    private String appId;
     /**
      * 站点门户ID
      */
