@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseUserExtDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseUserExt" id="baseUserExtMap">
+        <id property="id" column="USER_ID"/>
+        <result property="nickname" column="NICKNAME"/>
+        <result property="idName" column="ID_NAME"/>
+        <result property="idType" column="ID_TYPE"/>
+        <result property="idNum" column="ID_NUM"/>
+        <result property="idMobile" column="ID_MOBILE"/>
+        <result property="namePy" column="NAME_PY"/>
+        <result property="sname" column="SNAME"/>
+        <result property="nameEn" column="NAME_EN"/>
+        <result property="searchCode" column="SEARCH_CODE"/>
+        <result property="sex" column="SEX"/>
+        <result property="birthday" column="BIRTHDAY"/>
+        <result property="postCode" column="POST_CODE"/>
+        <result property="address" column="ADDRESS"/>
+        <result property="nativePlace" column="NATIVE_PLACE"/>
+        <result property="familyAddress" column="FAMILY_ADDRESS"/>
+        <result property="homeTel" column="HOME_ID_MOBILE"/>
+        <result property="qqNo" column="QQ_NO"/>
+        <result property="weixinId" column="WEIXIN_ID"/>
+        <result property="weiboId" column="WEIBO_ID"/>
+        <result property="spareMobile" column="SPARE_MOBILE"/>
+        <result property="isMobileConfirm" column="IS_MOBILE_CONFIRM"/>
+        <result property="emergencePhone" column="EMERGENCE_PHONE"/>
+        <result property="keywords" column="KEYWORDS"/>
+        <result property="intro" column="INTRO"/>
+        <result property="comefrom" column="COMEFROM"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="userSignature" column="USER_SIGNATURE"/>
+        <result property="ipRange" column="IP_RANGE"/>
+        <result property="macCode" column="MAC_CODE"/>
+        <result property="resume" column="RESUME"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+        <result property="spare3" column="SPARE3"/>
+        <result property="spare4" column="SPARE4"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseUserExtMap">
+        SELECT
+        B.USER_ID, B.NICKNAME,
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            </when>
+            <otherwise>
+                B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
+            </otherwise>
+        </choose>
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        FROM BASE_USER_EXT B
+        WHERE USER_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseUserExtMap">
+        SELECT
+        B.USER_ID, B.NICKNAME,
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            </when>
+            <otherwise>
+                B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
+            </otherwise>
+        </choose>
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        FROM BASE_USER_EXT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY USER_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY USER_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="nickname != null and nickname != ''">
+            and B.NICKNAME = #{nickname}
+        </if>
+        <if test="name != null and name != ''">
+            and B.ID_NAME = #{name}
+        </if>
+        <if test="idNum != null and idNum != ''">
+            and B.ID_NUM = #{idNum}
+        </if>
+        <if test="idMobile != null and idMobile != ''">
+            and B.ID_MOBILE = #{idMobile}
+        </if>
+        <if test="idType != null and idType != ''">
+            and B.ID_TYPE = #{idType}
+        </if>
+        <if test="namePy != null and namePy != ''">
+            and B.NAME_PY = #{namePy}
+        </if>
+        <if test="sname != null and sname != ''">
+            and B.SNAME = #{sname}
+        </if>
+        <if test="nameEn != null and nameEn != ''">
+            and B.NAME_EN = #{nameEn}
+        </if>
+        <if test="searchCode != null and searchCode != ''">
+            and B.SEARCH_CODE = #{searchCode}
+        </if>
+        <if test="sex != null and sex != ''">
+            and B.SEX = #{sex}
+        </if>
+        <if test="birthday != null and birthday != ''">
+            and B.BIRTHDAY = #{birthday}
+        </if>
+        <if test="postCode != null and postCode != ''">
+            and B.POST_CODE = #{postCode}
+        </if>
+        <if test="address != null and address != ''">
+            and B.ADDRESS = #{address}
+        </if>
+        <if test="nativePlace != null and nativePlace != ''">
+            and B.NATIVE_PLACE = #{nativePlace}
+        </if>
+        <if test="familyAddress != null and familyAddress != ''">
+            and B.FAMILY_ADDRESS = #{familyAddress}
+        </if>
+        <if test="homeTel != null and homeTel != ''">
+            and B.HOME_ID_MOBILE = #{homeTel}
+        </if>
+        <if test="qqNo != null and qqNo != ''">
+            and B.QQ_NO = #{qqNo}
+        </if>
+        <if test="weixinId != null and weixinId != ''">
+            and B.WEIXIN_ID = #{weixinId}
+        </if>
+        <if test="spareMobile != null and spareMobile != ''">
+            and B.SPARE_MOBILE = #{spareMobile}
+        </if>
+        <if test="isMobileConfirm != null and isMobileConfirm != ''">
+            and B.IS_MOBILE_CONFIRM = #{isMobileConfirm}
+        </if>
+        <if test="emergencePhone != null and emergencePhone != ''">
+            and B.EMERGENCE_PHONE = #{emergencePhone}
+        </if>
+        <if test="keywords != null and keywords != ''">
+            and B.KEYWORDS = #{keywords}
+        </if>
+        <if test="intro != null and intro != ''">
+            and B.INTRO = #{intro}
+        </if>
+        <if test="comefrom != null and comefrom != ''">
+            and B.COMEFROM = #{comefrom}
+        </if>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+        <if test="idType != null and idType != ''">
+            and B.SPARE3 = #{spare3}
+        </if>
+        <if test="spare4 != null and spare4 != ''">
+            and B.SPARE4 = #{spare4}
+        </if>
+        <if test="ids != null ">
+            and B.USER_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseUserExt">
+        INSERT INTO BASE_USER_EXT
+        (
+        USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+        )
+        VALUES
+        (
+        #{id}, #{nickname},
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                HEX(AES_ENCRYPT(#{name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+            </when>
+            <otherwise>
+                #{name}, #{idNum}, #{idMobile},
+            </otherwise>
+        </choose>
+        #{idType}, #{namePy}, #{sname}, #{nameEn}, #{searchCode}, #{sex}, #{birthday}, #{postCode}, #{address}, #{nativePlace}, #{familyAddress}, #{homeTel}, #{qqNo}, #{weixinId}, #{weiboId}, #{spareMobile}, #{isMobileConfirm}, #{emergencePhone}, #{keywords}, #{intro}, #{comefrom}, #{imagePath}, #{userSignature}, #{ipRange}, #{macCode}, #{resume}, #{spare1}, #{spare2}, #{idType}, #{spare4}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_USER_EXT
+                (
+                USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.nickname},
+                    <choose>
+                        <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                            HEX(AES_ENCRYPT(#{item.name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                        </when>
+                        <otherwise>
+                            #{item.name}, #{item.idNum}, #{item.idMobile},
+                        </otherwise>
+                    </choose>
+                    #{item.idType}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.sex}, #{item.birthday}, #{item.postCode}, #{item.address}, #{item.nativePlace}, #{item.familyAddress}, #{item.homeTel}, #{item.qqNo}, #{item.weixinId}, #{item.weiboId}, #{item.spareMobile}, #{item.isMobileConfirm}, #{item.emergencePhone}, #{item.keywords}, #{item.intro}, #{item.comefrom}, #{item.imagePath}, #{item.userSignature}, #{item.ipRange}, #{item.macCode}, #{item.resume}, #{item.spare1}, #{item.spare2}, #{item.spare3}, #{item.spare4}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_USER_EXT
+                    (
+                    USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.nickname},
+                    <choose>
+                        <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                            HEX(AES_ENCRYPT(#{item.name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                        </when>
+                        <otherwise>
+                            #{item.name}, #{item.idNum}, #{item.idMobile},
+                        </otherwise>
+                    </choose>
+                    #{item.idType}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.sex}, #{item.birthday}, #{item.postCode}, #{item.address}, #{item.nativePlace}, #{item.familyAddress}, #{item.homeTel}, #{item.qqNo}, #{item.weixinId}, #{item.weiboId}, #{item.spareMobile}, #{item.isMobileConfirm}, #{item.emergencePhone}, #{item.keywords}, #{item.intro}, #{item.comefrom}, #{item.imagePath}, #{item.userSignature}, #{item.ipRange}, #{item.macCode}, #{item.resume}, #{item.spare1}, #{item.spare2}, #{item.spare3}, #{item.spare4}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseUserExt">
+        UPDATE BASE_USER_EXT
+        <set>
+            <if test="nickname != null">NICKNAME = #{nickname}, </if>
+            <if test="idType != null">ID_TYPE = #{idType}, </if>
+            <if test="namePy != null">NAME_PY = #{namePy}, </if>
+            <if test="sname != null">SNAME = #{sname}, </if>
+            <if test="nameEn != null">NAME_EN = #{nameEn}, </if>
+            <if test="searchCode != null">SEARCH_CODE = #{searchCode}, </if>
+            <if test="sex != null">SEX = #{sex}, </if>
+            <if test="birthday != null">BIRTHDAY = #{birthday}, </if>
+            <if test="postCode != null">POST_CODE = #{postCode}, </if>
+            <if test="address != null">ADDRESS = #{address}, </if>
+            <if test="nativePlace != null">NATIVE_PLACE = #{nativePlace}, </if>
+            <if test="familyAddress != null">FAMILY_ADDRESS = #{familyAddress}, </if>
+            <if test="homeTel != null">HOME_ID_MOBILE = #{homeTel}, </if>
+            <if test="qqNo != null">QQ_NO = #{qqNo}, </if>
+            <if test="weixinId != null">WEIXIN_ID = #{weixinId}, </if>
+            <if test="weiboId != null">WEIBO_ID = #{weiboId}, </if>
+            <if test="spareMobile != null">SPARE_MOBILE = #{spareMobile}, </if>
+            <if test="isMobileConfirm != null">IS_MOBILE_CONFIRM = #{isMobileConfirm}, </if>
+            <if test="emergencePhone != null">EMERGENCE_PHONE = #{emergencePhone}, </if>
+            <if test="keywords != null">KEYWORDS = #{keywords}, </if>
+            <if test="intro != null">INTRO = #{intro}, </if>
+            <if test="comefrom != null">COMEFROM = #{comefrom}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="userSignature != null">USER_SIGNATURE = #{userSignature}, </if>
+            <if test="ipRange != null">IP_RANGE = #{ipRange}, </if>
+            <if test="macCode != null">MAC_CODE = #{macCode}, </if>
+            <if test="resume != null">RESUME = #{resume}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}, </if>
+            <if test="spare3 != null">SPARE3 = #{spare3}, </if>
+            <if test="spare4 != null">SPARE4 = #{spare4}</if>
+        </set>
+        WHERE USER_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM BASE_USER_EXT
+        WHERE USER_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM BASE_USER_EXT
+        WHERE USER_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_USER_EXT B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseUserExtDto" extends="baseUserExtMap" id="baseUserExtDtoMap">
+
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseUserExtDtoMap">
+        SELECT
+        B.USER_ID, B.NICKNAME,
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            </when>
+            <otherwise>
+                B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
+            </otherwise>
+        </choose>
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        FROM BASE_USER_EXT B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseUserExtDtoMap">
+        SELECT
+        B.USER_ID, B.NICKNAME,
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            </when>
+            <otherwise>
+                B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
+            </otherwise>
+        </choose>
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        FROM BASE_USER_EXT B
+        WHERE USER_ID = #{value}
+    </select>
+
+    <!-- 获取某一年龄段的人ID -->
+    <select id="getUserAgeList" resultType="map">
+        select USER_ID AS userId from BASE_USER_EXT  WHERE 1=1
+        <if test='lessAge != null and lessAge !=""'>
+            <choose>
+                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'), 7, 8),curdate()) > #{lessAge}]]>
+                </when>
+                <otherwise>
+                    <![CDATA[ and timestampdiff(year, substring(ID_NUM,7,8),curdate()) > #{lessAge}]]>
+                </otherwise>
+            </choose>
+        </if>
+        <if test='moreAge != null and moreAge !=""'>
+            <choose>
+                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'), 7, 8),curdate()) <= #{moreAge}]]>
+                </when>
+                <otherwise>
+                    <![CDATA[ and timestampdiff(year, substring(ID_NUM,7,8),curdate()) <= #{moreAge}]]>
+                </otherwise>
+            </choose>
+        </if>
+    </select>
+
+
+    <!-- update password ，传入新密码和旧密码，进行密码更新操作 -->
+    <update id="updatePassword" parameterType="map">
+        update BASE_USER_EXT set NAME_PY = #{newPassword}
+        where USER_ID = #{id}
+    </update>
+
+    <update id="batUpdatePassword">
+        <choose>
+            <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_USER_EXT set NAME_PY = #{password}
+                where USER_ID in
+                <foreach item="userId" collection="userIds" open="(" separator="," close=")">
+                    #{userId}
+                </foreach>
+
+            </when>
+            <when test='_databaseId == "oracle"'>
+                update BASE_USER_EXT set NAME_PY = #{password}
+                where USER_ID in
+                <foreach item="userId" collection="userIds" open="(" separator="," close=")">
+                    #{userId}
+                </foreach>
+            </when>
+        </choose>
+
+    </update>
+
+    <!-- update object，更新对象信息 -->
+    <update id="updateSensitiveInfo" parameterType="net.linlan.sys.base.entity.BaseUserExt">
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                UPDATE BASE_USER_EXT
+                <set>
+                    <if test="idNum != null">ID_NUM = HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')), </if>
+                    <if test="idType != null">ID_TYPE = #{idType}, </if>
+                    <if test="name != null">ID_NAME = HEX(AES_ENCRYPT(#{name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')), </if>
+                    <if test="idMobile != null">ID_MOBILE = HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')) </if>
+                </set>
+                WHERE USER_ID = #{id}
+            </when>
+            <otherwise>
+                UPDATE BASE_USER_EXT
+                <set>
+                    <if test="idNum != null">ID_NUM = #{idNum}, </if>
+                    <if test="idType != null">ID_TYPE = #{idType}, </if>
+                    <if test="name != null">ID_NAME = #{name}, </if>
+                    <if test="idMobile != null">ID_MOBILE = #{idMobile} </if>
+                </set>
+                WHERE USER_ID = #{id}
+            </otherwise>
+        </choose>
+    </update>
+
+</mapper>

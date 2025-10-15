@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    eframe-model - model模型数据模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.sys.base.dao.BaseUserDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseUser" id="baseUserMap">
+        <id property="id" column="USER_ID"/>
+        <result property="xzqhId" column="XZQH_ID"/>
+        <result property="source" column="SOURCE"/>
+        <result property="createType" column="CREATE_TYPE"/>
+        <result property="username" column="USERNAME"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="email" column="EMAIL"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="salt" column="SALT"/>
+        <result property="srcCode" column="SRC_CODE"/>
+        <result property="registerTime" column="REGISTER_TIME"/>
+        <result property="registerIp" column="REGISTER_IP"/>
+        <result property="currentLoginTime" column="CURRENT_LOGIN_TIME"/>
+        <result property="currentLoginIp" column="CURRENT_LOGIN_IP"/>
+        <result property="lastAppId" column="LAST_APP_ID"/>
+        <result property="lastLoginTime" column="LAST_LOGIN_TIME"/>
+        <result property="lastLoginIp" column="LAST_LOGIN_IP"/>
+        <result property="lastLogoutTime" column="LAST_LOGOUT_TIME"/>
+        <result property="loginCount" column="LOGIN_COUNT"/>
+        <result property="resetKey" column="RESET_KEY"/>
+        <result property="resetPwd" column="RESET_PWD"/>
+        <result property="lastResetTime" column="LAST_RESET_TIME"/>
+        <result property="errorTime" column="ERROR_TIME"/>
+        <result property="errorCount" column="ERROR_COUNT"/>
+        <result property="errorIp" column="ERROR_IP"/>
+        <result property="lockTime" column="LOCK_TIME"/>
+        <result property="activation" column="ACTIVATION"/>
+        <result property="activationCode" column="ACTIVATION_CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="deleteTime" column="DELETE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- 增加扩展类的BaseUser对象 -->
+    <resultMap type="net.linlan.sys.base.entity.BaseUser" id="baseUserMoreMap" extends="baseUserMap">
+        <association property="baseUserExt" column="{value=USER_ID}" select="net.linlan.sys.base.dao.BaseUserExtDao.findById"></association>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="baseUserMoreMap">
+        SELECT
+        USER_ID, XZQH_ID, SOURCE, CREATE_TYPE, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, SRC_CODE, REGISTER_TIME, REGISTER_IP, CURRENT_LOGIN_TIME, CURRENT_LOGIN_IP, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LAST_LOGOUT_TIME, LOGIN_COUNT, RESET_KEY, RESET_PWD, LAST_RESET_TIME, ERROR_TIME, ERROR_COUNT, ERROR_IP, LOCK_TIME, ACTIVATION, ACTIVATION_CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2
+        FROM BASE_USER
+        WHERE USER_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="baseUserMap">
+        SELECT
+        B.USER_ID, B.XZQH_ID, B.SOURCE, B.CREATE_TYPE, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.SRC_CODE, B.REGISTER_TIME, B.REGISTER_IP, B.CURRENT_LOGIN_TIME, B.CURRENT_LOGIN_IP, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LAST_LOGOUT_TIME, B.LOGIN_COUNT, B.RESET_KEY, B.RESET_PWD, B.LAST_RESET_TIME, B.ERROR_TIME, B.ERROR_COUNT, B.ERROR_IP, B.LOCK_TIME, B.ACTIVATION, B.ACTIVATION_CODE, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM BASE_USER B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                ORDER BY USER_ID ASC
+            </when>
+            <otherwise>
+                ORDER BY USER_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <if test="xzqhId != null and xzqhId != ''">
+            and B.XZQH_ID = #{xzqhId}
+        </if>
+        <if test="source != null and source != ''">
+            and B.SOURCE = #{source}
+        </if>
+        <if test="createType != null and createType != ''">
+            and B.CREATE_TYPE = #{createType}
+        </if>
+        <if test="username != null and username != ''">
+            AND  B.USERNAME like concat('%',concat(#{username},'%'))
+        </if>
+        <if test="mobile != null and mobile != ''">
+            and B.MOBILE = #{mobile}
+        </if>
+        <if test="email != null and email != ''">
+            and B.EMAIL = #{email}
+        </if>
+        <if test="srcCode != null and srcCode != ''">
+            and B.SRC_CODE = #{srcCode}
+        </if>
+        <if test="lastAppId != null and lastAppId != ''">
+            and B.LAST_APP_ID = #{lastAppId}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test="spare1 != null and spare1 != ''">
+            and B.SPARE1 = #{spare1}
+        </if>
+        <if test="spare2 != null and spare2 != ''">
+            and B.SPARE2 = #{spare2}
+        </if>
+        <if test="searchCode != null and searchCode.trim() != ''">
+            AND GX.SEARCH_CODE like concat(#{searchCode}, '%')
+        </if>
+
+        <if test='q != null and q.trim() != ""'>
+            <choose>
+                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                    AND  (B.MOBILE like concat('%',concat(#{q},'%'))
+                    OR   B.USER_ID in (SELECT GUE.USER_ID FROM BASE_USER_EXT GUE WHERE AES_DECRYPT(UNHEX(GUE.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') = #{q})
+                    OR   B.USERNAME like concat('%',concat(#{q},'%')))
+                </when>
+                <otherwise>
+                    AND  (B.MOBILE like concat('%',concat(#{q},'%'))
+                    OR   B.USER_ID in (SELECT GUE.USER_ID FROM BASE_USER_EXT GUE WHERE GUE.NAME like concat('%',concat(#{q},'%')))
+                    OR   B.USERNAME like concat('%',concat(#{q},'%')))
+                </otherwise>
+            </choose>
+        </if>
+        <if test='bindOrganId != null and bindOrganId.trim() != ""'>
+            <choose>
+                <when test='bindOrganType != null and bindOrganType == 1'>
+                    AND B.USER_ID IN (SELECT SURO.USER_ID FROM USER_RANGE_ORGAN SURO WHERE SURO.ORGAN_ID = #{bindOrganId})
+                </when>
+                <otherwise>
+                    AND B.USER_ID NOT IN (SELECT SURO.USER_ID FROM USER_RANGE_ORGAN SURO WHERE SURO.ORGAN_ID = #{bindOrganId})
+                </otherwise>
+            </choose>
+        </if>
+        <if test='isBindFrontUser == 1'>
+            AND B.USERNAME IN ( SELECT NAME FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
+            AND B.MOBILE IN ( SELECT TELEPHONE FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
+        </if>
+        <if test='isBindFrontUser == 0'>
+            AND (
+            B.USERNAME NOT IN ( SELECT NAME FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
+            OR B.MOBILE NOT IN ( SELECT TELEPHONE FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
+            )
+        </if>
+        <if test="ids != null ">
+            and B.USER_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test="createTime != null and createTime.trim()!=''">
+                    <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') = date_format(#{createTime},'%Y-%m-%d') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test="createTime != null and createTime.trim()!=''">
+                    <![CDATA[ to_char(B.CREATE_TIME,'yyyy-mm-dd') =  #{createTime} ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test="createTime != null and createTime.trim()!=''">
+                    <![CDATA[ to_char(B.CREATE_TIME,'yyyy-mm-dd') =  #{createTime} ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.sys.base.entity.BaseUser">
+        INSERT INTO BASE_USER
+        (
+            USER_ID, XZQH_ID, SOURCE, CREATE_TYPE, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, SRC_CODE, REGISTER_TIME, REGISTER_IP, CURRENT_LOGIN_TIME, CURRENT_LOGIN_IP, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LAST_LOGOUT_TIME, LOGIN_COUNT, RESET_KEY, RESET_PWD, LAST_RESET_TIME, ERROR_TIME, ERROR_COUNT, ERROR_IP, LOCK_TIME, ACTIVATION, ACTIVATION_CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2
+        )
+        VALUES
+        (
+            #{id}, #{xzqhId}, #{source}, #{createType}, #{username}, #{mobile}, #{email}, #{password}, #{salt}, #{srcCode}, #{registerTime}, #{registerIp}, #{currentLoginTime}, #{currentLoginIp}, #{lastAppId}, #{lastLoginTime}, #{lastLoginIp}, #{lastLogoutTime}, #{loginCount}, #{resetKey}, #{resetPwd}, #{lastResetTime}, #{errorTime}, #{errorCount}, #{errorIp}, #{lockTime}, #{activation}, #{activationCode}, #{priority}, #{createTime}, #{lastTime}, #{delFlag}, #{deleteTime}, #{description}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO BASE_USER
+                (
+                USER_ID, XZQH_ID, SOURCE, CREATE_TYPE, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, SRC_CODE, REGISTER_TIME, REGISTER_IP, CURRENT_LOGIN_TIME, CURRENT_LOGIN_IP, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LAST_LOGOUT_TIME, LOGIN_COUNT, RESET_KEY, RESET_PWD, LAST_RESET_TIME, ERROR_TIME, ERROR_COUNT, ERROR_IP, LOCK_TIME, ACTIVATION, ACTIVATION_CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.xzqhId}, #{item.source}, #{item.createType}, #{item.username}, #{item.mobile}, #{item.email}, #{item.password}, #{item.salt}, #{item.srcCode}, #{item.registerTime}, #{item.registerIp}, #{item.currentLoginTime}, #{item.currentLoginIp}, #{item.lastAppId}, #{item.lastLoginTime}, #{item.lastLoginIp}, #{item.lastLogoutTime}, #{item.loginCount}, #{item.resetKey}, #{item.resetPwd}, #{item.lastResetTime}, #{item.errorTime}, #{item.errorCount}, #{item.errorIp}, #{item.lockTime}, #{item.activation}, #{item.activationCode}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO BASE_USER
+                    (
+                    USER_ID, XZQH_ID, SOURCE, CREATE_TYPE, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, SRC_CODE, REGISTER_TIME, REGISTER_IP, CURRENT_LOGIN_TIME, CURRENT_LOGIN_IP, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LAST_LOGOUT_TIME, LOGIN_COUNT, RESET_KEY, RESET_PWD, LAST_RESET_TIME, ERROR_TIME, ERROR_COUNT, ERROR_IP, LOCK_TIME, ACTIVATION, ACTIVATION_CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.xzqhId}, #{item.source}, #{item.createType}, #{item.username}, #{item.mobile}, #{item.email}, #{item.password}, #{item.salt}, #{item.srcCode}, #{item.registerTime}, #{item.registerIp}, #{item.currentLoginTime}, #{item.currentLoginIp}, #{item.lastAppId}, #{item.lastLoginTime}, #{item.lastLoginIp}, #{item.lastLogoutTime}, #{item.loginCount}, #{item.resetKey}, #{item.resetPwd}, #{item.lastResetTime}, #{item.errorTime}, #{item.errorCount}, #{item.errorIp}, #{item.lockTime}, #{item.activation}, #{item.activationCode}, #{item.priority}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.deleteTime}, #{item.description}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.sys.base.entity.BaseUser">
+        UPDATE BASE_USER
+        <set>
+            <if test="xzqhId != null">XZQH_ID = #{xzqhId}, </if>
+            <if test="source != null">SOURCE = #{source}, </if>
+            <if test="createType != null">CREATE_TYPE = #{createType}, </if>
+            <if test="username != null">USERNAME = #{username}, </if>
+            <if test="mobile != null">MOBILE = #{mobile}, </if>
+            <if test="email != null">EMAIL = #{email}, </if>
+            <if test="password != null">PASSWORD = #{password}, </if>
+            <if test="salt != null">SALT = #{salt}, </if>
+            <if test="srcCode != null">SRC_CODE = #{srcCode}, </if>
+            <if test="registerTime != null">REGISTER_TIME = #{registerTime}, </if>
+            <if test="registerIp != null">REGISTER_IP = #{registerIp}, </if>
+            <if test="currentLoginTime != null">CURRENT_LOGIN_TIME = #{currentLoginTime}, </if>
+            <if test="currentLoginIp != null">CURRENT_LOGIN_IP = #{currentLoginIp}, </if>
+            <if test="lastAppId != null">LAST_APP_ID = #{lastAppId}, </if>
+            <if test="lastLoginTime != null">LAST_LOGIN_TIME = #{lastLoginTime}, </if>
+            <if test="lastLoginIp != null">LAST_LOGIN_IP = #{lastLoginIp}, </if>
+            <if test="lastLogoutTime != null">LAST_LOGOUT_TIME = #{lastLogoutTime}, </if>
+            <if test="loginCount != null">LOGIN_COUNT = #{loginCount}, </if>
+            <if test="resetKey != null">RESET_KEY = #{resetKey}, </if>
+            <if test="resetPwd != null">RESET_PWD = #{resetPwd}, </if>
+            <if test="lastResetTime != null">LAST_RESET_TIME = #{lastResetTime}, </if>
+            <if test="errorTime != null">ERROR_TIME = #{errorTime}, </if>
+            <if test="errorCount != null">ERROR_COUNT = #{errorCount}, </if>
+            <if test="errorIp != null">ERROR_IP = #{errorIp}, </if>
+            <if test="lockTime != null">LOCK_TIME = #{lockTime}, </if>
+            <if test="activation != null">ACTIVATION = #{activation}, </if>
+            <if test="activationCode != null">ACTIVATION_CODE = #{activationCode}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="lastTime != null">LAST_TIME = #{lastTime}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="deleteTime != null">DELETE_TIME = #{deleteTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE USER_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <update id="deleteById">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() where USER_ID = #{value}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() where USER_ID = #{value}
+            </when>
+            <otherwise>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate() where USER_ID = #{value}
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <update id="deleteByIds">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE USER_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE USER_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </when>
+            <otherwise>
+                update BASE_USER set DEL_FLAG = 1, DELETE_TIME = sysdate(), LAST_TIME = sysdate()
+                WHERE USER_ID IN
+                <foreach item="id" collection="array" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </otherwise>
+        </choose>
+    </update>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM BASE_USER B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.sys.base.dto.BaseUserDto" extends="baseUserMap" id="baseUserDtoMap">
+        <result property="xzqhName" column="xzqhName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="baseUserDtoMap">
+        SELECT
+        B.USER_ID, B.XZQH_ID, B.SOURCE, B.CREATE_TYPE, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.SRC_CODE, B.REGISTER_TIME, B.REGISTER_IP, B.CURRENT_LOGIN_TIME, B.CURRENT_LOGIN_IP, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LAST_LOGOUT_TIME, B.LOGIN_COUNT, B.RESET_KEY, B.RESET_PWD, B.LAST_RESET_TIME, B.ERROR_TIME, B.ERROR_COUNT, B.ERROR_IP, B.LOCK_TIME, B.ACTIVATION, B.ACTIVATION_CODE, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , GX.NAME as xzqhName
+        FROM BASE_USER B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join BASE_XZQH GX on B.XZQH_ID = GX.XZQH_ID
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="baseUserDtoMap">
+        SELECT
+        B.USER_ID, B.XZQH_ID, B.SOURCE, B.CREATE_TYPE, B.USERNAME, B.MOBILE, B.EMAIL, B.PASSWORD, B.SALT, B.SRC_CODE, B.REGISTER_TIME, B.REGISTER_IP, B.CURRENT_LOGIN_TIME, B.CURRENT_LOGIN_IP, B.LAST_APP_ID, B.LAST_LOGIN_TIME, B.LAST_LOGIN_IP, B.LAST_LOGOUT_TIME, B.LOGIN_COUNT, B.RESET_KEY, B.RESET_PWD, B.LAST_RESET_TIME, B.ERROR_TIME, B.ERROR_COUNT, B.ERROR_IP, B.LOCK_TIME, B.ACTIVATION, B.ACTIVATION_CODE, B.PRIORITY, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DELETE_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , GX.NAME as xzqhName
+        FROM BASE_USER B
+        <include refid="commonUnionJoin"></include>
+        WHERE USER_ID = #{value}
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.BaseUserSelect" id="baseUserSelectMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="mobile" column="mobile"/>
+    </resultMap>
+    <select id="getListByCode" resultMap="baseUserSelectMap">
+        SELECT B.USER_ID AS id, B.USERNAME AS name, B.MOBILE AS mobile from BASE_USER B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <!-- find by username，通过username获取对象 -->
+    <select id="getByUsername" resultMap="baseUserMap">
+        select * from BASE_USER
+        where USERNAME = #{username}
+        <choose>
+            <when test='_databaseId == "oracle"'>
+                AND rownum&lt;=1
+                ORDER BY CREATE_TIME DESC
+            </when>
+            <otherwise>
+                ORDER BY CREATE_TIME DESC
+                LIMIT 1
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- update password ，传入新密码和旧密码，进行密码更新操作 -->
+    <update id="updatePassword" parameterType="map">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                update BASE_USER set PASSWORD = #{newPassword},ACTIVATION = 0,LAST_RESET_TIME = SYSDATE()
+                where USER_ID = #{id} and PASSWORD = #{password}
+            </when>
+            <when test='_databaseId == "oracle"'>
+                update BASE_USER set PASSWORD = #{newPassword},ACTIVATION = 0,LAST_RESET_TIME = SYSDATE
+                where USER_ID = #{id} and PASSWORD = #{password}
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_USER set PASSWORD = #{newPassword},ACTIVATION = 0,LAST_RESET_TIME = SYSDATE
+                where USER_ID = #{id} and PASSWORD = #{password}
+            </when>
+        </choose>
+
+    </update>
+
+    <!-- get by mobile，通过mobile获取对象 -->
+    <select id="getByMobile" resultMap="baseUserMap">
+        select * from BASE_USER
+        where MOBILE = #{mobile}
+        <choose>
+            <when test='_databaseId == "oracle"'>
+                AND rownum&lt;=1
+                ORDER BY CREATE_TIME DESC
+            </when>
+            <otherwise>
+                ORDER BY CREATE_TIME DESC
+                LIMIT 1
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- get by email，通过email获取对象 -->
+    <select id="getByEmail" resultMap="baseUserMap">
+        select * from BASE_USER
+        where EMAIL = #{email}
+        <choose>
+            <when test='_databaseId == "oracle"'>
+                AND rownum&lt;=1
+                ORDER BY CREATE_TIME DESC
+            </when>
+            <otherwise>
+                ORDER BY CREATE_TIME DESC
+                LIMIT 1
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- get by userkey，通过username, mobile, email获取对象 -->
+    <select id="getByUserkey" resultMap="baseUserMap">
+        select * from BASE_USER
+        where (USERNAME = #{value} or MOBILE = #{value} or EMAIL = #{value})
+    </select>
+
+    <select id="getByParams" resultMap="baseUserMap">
+        select * from BASE_USER B
+        WHERE 1 = 1
+        <if test="userid != null and userid.trim() != ''">
+            AND B.USER_ID = #{userid}
+        </if>
+        <if test="mobile != null and mobile.trim() != ''">
+            AND B.MOBILE = #{mobile}
+        </if>
+        <if test='username != null and username.trim() != ""'>
+            AND B.USERNAME = #{username}
+        </if>
+    </select>
+
+    <select id="getIfExists" resultMap="baseUserMap">
+        select * from BASE_USER B
+        WHERE 1 = 1 AND (
+        <if test='username != null and username.trim() != ""'>
+            B.USERNAME = #{username}
+        </if>
+        <if test="mobile != null and mobile.trim() != ''">
+            OR B.MOBILE = #{mobile}
+        </if>
+        <if test="userid != null and userid.trim() != ''">
+            OR B.USER_ID = #{userid}
+        </if>
+        ) ORDER BY B.CREATE_TIME ASC
+    </select>
+
+    <!-- get by email，通过email获取对象 -->
+    <select id="getByIdNum" resultMap="baseUserMap">
+        select B.* from BASE_USER B
+        LEFT JOIN BASE_USER_EXT GUE ON B.USER_ID = GUE.USER_ID
+        WHERE 1=1
+        <choose>
+            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                AND GUE.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{idNum}), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'))
+            </when>
+            <otherwise>
+                AND GUE.ID_NUM = #{idNum}
+            </otherwise>
+        </choose>
+        ORDER BY B.CREATE_TIME ASC
+    </select>
+
+    <update id="batUpdatePassword">
+        <choose>
+            <when test='_databaseId == "mysql" or _databaseId == "dm8" or _databaseId == "xg"'>
+                update BASE_USER set PASSWORD = #{password},ACTIVATION = 1,LAST_RESET_TIME = SYSDATE(),LAST_TIME = SYSDATE(),SALT = #{salt}
+                where USER_ID in
+                <foreach item="userId" collection="userIds" open="(" separator="," close=")">
+                    #{userId}
+                </foreach>
+
+            </when>
+            <when test='_databaseId == "oracle"'>
+                update BASE_USER set PASSWORD = #{password},ACTIVATION = 1,LAST_RESET_TIME = SYSDATE,LAST_TIME = SYSDATE(),SALT = #{salt}
+                where USER_ID in
+                <foreach item="userId" collection="userIds" open="(" separator="," close=")">
+                    #{userId}
+                </foreach>
+            </when>
+        </choose>
+
+    </update>
+
+</mapper>
