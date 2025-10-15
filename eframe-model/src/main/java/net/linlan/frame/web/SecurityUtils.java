@@ -26,7 +26,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.PatternMatchUtils;
 
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.utils.constant.Constants;
 import net.linlan.utils.exception.CommonException;
 import net.linlan.utils.http.HttpStatus;
@@ -40,27 +40,19 @@ public class SecurityUtils {
     private static final Logger logger = LoggerFactory.getLogger(SecurityUtils.class);
 
     /**
-     * 用户LID
-     * @return 管理用户LID
-     **/
-    public static Long getAdminId() {
-        try {
-            return getLoginUser().getAdminId();
-        } catch (Exception e) {
-            throw new CommonException("获取用户LID异常", HttpStatus.UNAUTHORIZED);
-        }
-    }
-
-    /**
      * 用户UUID
      * @return 管理用户ID
      **/
     public static String getUserId() {
         try {
-            return getLoginUser().getUserId();
+            FrameUserDetails frameUserDetails = getLoginUser();
+            if (frameUserDetails != null) {
+                return getLoginUser().getUserId();
+            }
         } catch (Exception e) {
             throw new CommonException("获取用户LID异常", HttpStatus.UNAUTHORIZED);
         }
+        return null;
     }
 
     /**
@@ -69,10 +61,14 @@ public class SecurityUtils {
      **/
     public static Long getDeptId() {
         try {
-            return getLoginUser().getDeptId();
+            FrameUserDetails frameUserDetails = getLoginUser();
+            if (frameUserDetails != null) {
+                return getLoginUser().getDeptId();
+            }
         } catch (Exception e) {
             throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED);
         }
+        return null;
     }
 
     /**
@@ -81,10 +77,14 @@ public class SecurityUtils {
      **/
     public static String getOrganId() {
         try {
-            return getLoginUser().getOrganId();
+            FrameUserDetails frameUserDetails = getLoginUser();
+            if (frameUserDetails != null) {
+                return getLoginUser().getOrganId();
+            }
         } catch (Exception e) {
             throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED);
         }
+        return null;
     }
 
     /**
@@ -93,22 +93,26 @@ public class SecurityUtils {
      **/
     public static String getUsername() {
         try {
-            return getLoginUser().getUsername();
+            FrameUserDetails frameUserDetails = getLoginUser();
+            if (frameUserDetails != null) {
+                return getLoginUser().getUsername();
+            }
         } catch (Exception e) {
             throw new CommonException("获取用户账户异常", HttpStatus.UNAUTHORIZED);
         }
+        return null;
     }
 
     /**
      * 获取用户
      * @return 管理用户对象
      **/
-    public static FrameAdminUser getLoginUser() {
+    public static FrameUserDetails getLoginUser() {
         try {
-            return (FrameAdminUser) getAuthentication().getPrincipal();
+            return (FrameUserDetails) getAuthentication().getPrincipal();
         } catch (Exception e) {
             //在登出的时候，没有用户，此时仍然需要保存操作记录，返回null对象
-            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED);
+//            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED);
             return null;
         }
     }

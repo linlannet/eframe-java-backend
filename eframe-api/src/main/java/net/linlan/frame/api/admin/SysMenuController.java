@@ -46,6 +46,7 @@ import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.manager.AdminMenuManager;
 import net.linlan.frame.view.admin.vo.MenuTreeRoleVo;
 import net.linlan.frame.view.sys.service.FrameDictionaryService;
+import net.linlan.frame.web.SecurityUtils;
 import net.linlan.frame.web.model.TreeSelect;
 import net.linlan.sys.role.dto.SysMenuButtonDto;
 import net.linlan.sys.role.dto.SysMenuDto;
@@ -83,7 +84,8 @@ public class SysMenuController extends BaseController {
     @GetMapping("menu/list")
     @Encrypt
     public ResponseResult<List<AdminMenuVo>> list(AdminMenuVoParam param) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param, getAdminId());
+        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param,
+            SecurityUtils.getUserId());
         return success(menus);
     }
 
@@ -149,7 +151,8 @@ public class SysMenuController extends BaseController {
     @GetMapping("menu/treeselect")
     @Encrypt
     public ResponseResult<MenuTreeRoleVo> treeselect(AdminMenuVoParam param) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param, getAdminId());
+        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param,
+            SecurityUtils.getUserId());
         List<TreeSelect> treeSelects = adminMenuManager.buildMenuTreeSelect(menus);
         MenuTreeRoleVo menuTreeRoleVo = new MenuTreeRoleVo();
         menuTreeRoleVo.setMenus(treeSelects);
@@ -200,7 +203,7 @@ public class SysMenuController extends BaseController {
     @GetMapping(value = "menu/roleMenuTreeselect/{roleId}")
     @Encrypt
     public ResponseResult<MenuTreeRoleVo> roleMenuTreeselect(@PathVariable("roleId") Long roleId) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(getAdminId());
+        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(SecurityUtils.getUserId());
         MenuTreeRoleVo menuTreeVo = new MenuTreeRoleVo();
         menuTreeVo.setCheckedKeys(adminMenuEntService.selectMenuListByRoleId(roleId));
         menuTreeVo.setMenus(adminMenuManager.buildMenuTreeSelect(menus));

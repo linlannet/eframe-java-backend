@@ -22,22 +22,34 @@ package net.linlan.utils.enums;
  * 
  * @author Linlan
  */
-public enum UserStatus {
-                        OK("1", "正常"), DISABLE("0", "停用"), DELETED("2", "删除");
+public enum UserStatus implements BaseEnumInteger{
+    NOT(0, "未生效"),
+    OK(1, "正常"),
+    DISABLE(2, "停用"),
+    LOCKED(3, "锁定"),
+    DELETED(4, "删除");
+    /**
+     * 键
+     */
+    private final int key;
+    /**
+     * 值
+     */
+    private final String value;
 
-    private final String code;
-    private final String info;
-
-    UserStatus(String code, String info) {
-        this.code = code;
-        this.info = info;
+    UserStatus(int key, String value) {
+        this.key = key;
+        this.value = value;
     }
 
-    public String getCode() {
-        return code;
+    @Override
+    public int getKey() {
+        return key;
     }
 
-    public String getInfo() {
-        return info;
+    @Override
+    public String getValue() {
+        return value;
     }
+
 }

@@ -37,7 +37,7 @@ import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.commons.script.json.JsonMapUtils;
 import net.linlan.commons.script.json.StringMap;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.config.dto.PublicNoticeDto;
 import net.linlan.frame.config.entity.PublicNotice;
@@ -89,11 +89,11 @@ public class PublicNoticeController extends BaseController {
     @GetMapping("/notice/list/myself")
     @Encrypt
     public ResponseResult<List<PublicNotice>> myselfList(PublicNoticeParam param) {
-        FrameAdminUser loginUser = getLoginUser();
-        if (loginUser.getAdminId() == null) {
+        FrameUserDetails loginUser = getLoginUser();
+        if (loginUser.getUserId() == null) {
             return error();
         }
-        param.setRecvMemberId(String.valueOf(loginUser.getAdminId()));
+        param.setRecvMemberId(loginUser.getUserId());
         Page<PublicNoticeDto> result = publicNoticeService.getMyselfList(param);
         if (result == null) {
             return empty();
@@ -181,12 +181,12 @@ public class PublicNoticeController extends BaseController {
     @LimitScope(name = "publicNoticeReadAll", key = "publicNoticeReadAll")
     public ResponseResult<String> allRead() {
 
-        FrameAdminUser loginUser = getLoginUser();
-        if (loginUser.getAdminId() == null) {
+        FrameUserDetails loginUser = getLoginUser();
+        if (loginUser.getUserId() == null) {
             return error();
         }
         PublicNoticeParam param = new PublicNoticeParam();
-        param.setRecvMemberId(String.valueOf(loginUser.getAdminId()));
+        param.setRecvMemberId(loginUser.getUserId());
         param.setBizType("ent");
         param.setReadStatus("0");
 
@@ -198,7 +198,7 @@ public class PublicNoticeController extends BaseController {
                 message.init();
                 message.setType("PUBLIC_NOTICE");
                 message.setMsgId(publicNoticeDto.getId());
-                message.setMsgUserId(String.valueOf(loginUser.getAdminId()));
+                message.setMsgUserId(loginUser.getUserId());
                 message.setCreateTime(new Date());
                 portalUnionMessageService.save(message);
             }
@@ -220,8 +220,8 @@ public class PublicNoticeController extends BaseController {
         if (ObjectUtils.isEmpty(ids)) {
             return error();
         }
-        FrameAdminUser loginUser = getLoginUser();
-        if (loginUser.getAdminId() == null) {
+        FrameUserDetails loginUser = getLoginUser();
+        if (loginUser.getUserId() == null) {
             return error();
         }
         //设置批量已读未读
@@ -230,7 +230,7 @@ public class PublicNoticeController extends BaseController {
             message.init();
             message.setType("PUBLIC_NOTICE");
             message.setMsgId(pkId);
-            message.setMsgUserId(String.valueOf(loginUser.getAdminId()));
+            message.setMsgUserId(loginUser.getUserId());
             message.setCreateTime(new Date());
             portalUnionMessageService.save(message);
         }
@@ -251,8 +251,8 @@ public class PublicNoticeController extends BaseController {
         if (ObjectUtils.isEmpty(ids)) {
             return error();
         }
-        FrameAdminUser loginUser = getLoginUser();
-        if (loginUser.getAdminId() == null) {
+        FrameUserDetails loginUser = getLoginUser();
+        if (loginUser.getUserId() == null) {
             return error();
         }
         //设置批量已读未读
@@ -279,13 +279,13 @@ public class PublicNoticeController extends BaseController {
     @Encrypt
     public ResponseResult<Map<String, String>> getNum() {
 
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
 
-        if (loginUser.getAdminId() == null) {
+        if (loginUser.getUserId() == null) {
             return error();
         }
         PublicNoticeParam param = new PublicNoticeParam();
-        param.setRecvMemberId(String.valueOf(loginUser.getAdminId()));
+        param.setRecvMemberId(loginUser.getUserId());
         param.setBizType("ent");
         param.setReadStatus("0");
 

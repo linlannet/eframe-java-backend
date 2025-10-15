@@ -19,6 +19,8 @@ package net.linlan.frame.comm.service;
 
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,9 +36,10 @@ import eu.bitwalker.useragentutils.UserAgent;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import net.linlan.commons.core.DateUtils;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.comm.vo.AppLoginInfo;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.ServletUtils;
@@ -85,20 +88,11 @@ public class TokenService {
      * @param request   请求request
      * @return 用户信息
      */
-    public FrameAdminUser getLoginUser(HttpServletRequest request) {
+    public FrameUserDetails getLoginUser(HttpServletRequest request) {
         // 获取请求携带的令牌
         String token = getToken(request);
         if (ObjectUtils.isNotEmpty(token)) {
-            try {
-                Claims claims = parseToken(token);
-                // 解析对应的权限以及用户信息
-                String uuid = (String) claims.get(Constants.LOGIN_USER_KEY);
-                String userKey = getTokenKey(uuid);
-                FrameAdminUser user = redisService.get(userKey, FrameAdminUser.class);
-                return user;
-            } catch (Exception e) {
-                log.error("获取用户信息异常'{}'", e.getMessage());
-            }
+            return getLoginUserByToken(token);
         }
         return null;
     }
@@ -108,33 +102,17 @@ public class TokenService {
      * @param token     token令牌
      * @return 用户信息
      */
-    public FrameAdminUser getLoginUserByToken(String token) {
+    public FrameUserDetails getLoginUserByToken(String token) {
         if (StringUtils.isNotEmpty(token)) {
             try {
                 Claims claims = parseToken(token);
                 // 解析对应的权限以及用户信息
                 String uuid = (String) claims.get(Constants.LOGIN_USER_KEY);
                 String userKey = getTokenKey(uuid);
-                FrameAdminUser user = redisService.get(userKey, FrameAdminUser.class);
+                FrameUserDetails user = (FrameUserDetails) redisService.get(userKey);
                 return user;
             } catch (Exception e) {
-            }
-        }
-        return null;
-    }
-
-    /**
-     * 根据用户id获取用户身份信息
-     * 由于多端登录，根据token获取的用户信息不一样，所以增加一个根据用户id获取用户信息的缓存key，以后多端需要获取用户最新信息就用这个方法吧
-     * @param userId    用户ID
-     * @return 用户信息
-     */
-    public FrameAdminUser getLoginUserByUserId(Long userId) {
-        if (userId != null) {
-            try {
-                String userKey = getAdminIdKey(userId);
-                return redisService.get(userKey, FrameAdminUser.class);
-            } catch (Exception e) {
+                log.error("获取用户信息异常'{}'", e.getMessage());
             }
         }
         return null;
@@ -144,7 +122,7 @@ public class TokenService {
      * 设置用户身份信息
      * @param loginUser 设置登录用户
      */
-    public void setLoginUser(FrameAdminUser loginUser) {
+    public void setLoginUser(FrameUserDetails loginUser) {
         if (ObjectUtils.isNotEmpty(loginUser) && ObjectUtils.isNotEmpty(loginUser.getToken())) {
             refreshToken(loginUser);
         }
@@ -167,7 +145,7 @@ public class TokenService {
      * @param loginUser 用户信息
      * @return 登录对象
      */
-    public AppLoginInfo createToken(FrameAdminUser loginUser) {
+    public AppLoginInfo createToken(FrameUserDetails loginUser) {
         String token = TokenGenerator.generateValue();
         loginUser.setToken(token);
         setUserAgent(loginUser);
@@ -177,7 +155,7 @@ public class TokenService {
         claims.put(Constants.LOGIN_USER_KEY, token);
         String newtoken = createToken(claims);
         AppLoginInfo appLoginInfo = new AppLoginInfo();
-        appLoginInfo.setAdminId(loginUser.getAdminId());
+        appLoginInfo.setUserId(loginUser.getUserId());
         appLoginInfo.setToken(newtoken);
         return appLoginInfo;
     }
@@ -187,10 +165,10 @@ public class TokenService {
      *
      * @param loginUser 登录用户信息
      */
-    public void verifyToken(FrameAdminUser loginUser) {
-        long expireTime = loginUser.getExpireTime();
-        long currentTime = System.currentTimeMillis();
-        if (expireTime - currentTime <= MILLIS_MINUTE_TEN) {
+    public void verifyToken(FrameUserDetails loginUser) {
+        Date expireTime = loginUser.getExpireTime();
+        Date currentTime = new Date();
+        if (DateUtils.getBetweenMinute(expireTime, currentTime) <= MILLIS_MINUTE_TEN) {
             refreshToken(loginUser);
         }
     }
@@ -200,9 +178,9 @@ public class TokenService {
      *
      * @param loginUser 登录用户信息
      */
-    public void refreshToken(FrameAdminUser loginUser) {
-        loginUser.setLoginTime(System.currentTimeMillis());
-        loginUser.setExpireTime(loginUser.getLoginTime() + expireTime * MILLIS_MINUTE);
+    public void refreshToken(FrameUserDetails loginUser) {
+        loginUser.setLoginTime(new Timestamp(System.currentTimeMillis()));
+        loginUser.setExpireTime(DateUtils.addHours(loginUser.getLoginTime(), 1));
         // 根据uuid将loginUser缓存
         String userKey = getTokenKey(loginUser.getToken());
         redisService.set(userKey, loginUser, expireTime * 60);
@@ -213,7 +191,7 @@ public class TokenService {
      *
      * @param loginUser 登录用户信息
      */
-    public void setUserAgent(FrameAdminUser loginUser) {
+    public void setUserAgent(FrameUserDetails loginUser) {
         UserAgent userAgent = UserAgent
             .parseUserAgentString(ServletUtils.getRequest().getHeader("User-Agent"));
         String ip = IPUtils.getIpAddr(ServletUtils.getRequest());
@@ -311,13 +289,6 @@ public class TokenService {
         return CacheConstants.LOGIN_TOKEN_KEY + uuid;
     }
 
-    /** 获取用户AdminId
-     * @param adminId    管理员ID
-     * @return    查询信息
-     */
-    private String getAdminIdKey(Long adminId) {
-        return CacheConstants.LOGIN_ADMIN_ID_KEY + adminId;
-    }
 
     /** 获取用户UserId
      * @param userId    用户ID

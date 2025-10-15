@@ -32,7 +32,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.api.BaseController;
@@ -71,7 +71,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @GetMapping("/user/profile")
     @Encrypt
     public ResponseResult<LoginUserProfileVo> profile() {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         LoginUserProfileVo loginUserProfileVo = new LoginUserProfileVo();
         loginUserProfileVo.setUser(loginUser);
         loginUserProfileVo
@@ -89,7 +89,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @GetMapping("/user/info")
     @Encrypt
     public ResponseResult<AdminUserVo> info() {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
 
         AdminUserVo userVo = (AdminUserVo) AdminUserVo.DTO.apply(currentUser);
@@ -106,7 +106,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @PostMapping("/user/profile")
     @Encrypt
     public ResponseResult<Boolean> updateProfile(@RequestBody AdminUserVo input) {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
         if (!currentUser.getMobile().equals(input.getMobile())) {
             if (ObjectUtils.isNotEmpty(input.getMobile())
@@ -144,7 +144,7 @@ public class ApiAdminUserV1Status extends BaseController {
     @PostMapping("/user/updatePwd")
     @Encrypt
     public ResponseResult updatePwd(@RequestBody PasswordVo vo) {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         String username = loginUser.getUsername();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
 
@@ -181,7 +181,7 @@ public class ApiAdminUserV1Status extends BaseController {
     public ResponseResult<UserImagePathVo> imagePath(@RequestParam("file") MultipartFile file,
                                                      HttpServletRequest request) throws Exception {
         if (!file.isEmpty()) {
-            FrameAdminUser loginUser = getLoginUser();
+            FrameUserDetails loginUser = getLoginUser();
             String context = request.getContextPath();
             FileInfo fileInfo = uploadFileService.uploadFileByMember(file, context,
                 Constants.ENT_APP_ID, loginUser.getUserId());

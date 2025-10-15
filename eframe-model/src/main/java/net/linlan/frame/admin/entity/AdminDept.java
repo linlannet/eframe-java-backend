@@ -142,7 +142,7 @@ public class AdminDept extends BaseEntity {
     private Integer         priority;
 
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 状态0未生效1正常2受限3锁定4删除
      */
     private Integer         status;
 
@@ -181,6 +181,11 @@ public class AdminDept extends BaseEntity {
         }
         if (getType() == null) {
             setType(DeptTypeEnum.NEISHE.getKey());
+        }
+        if (getOrganId() == null) {
+            if (getParentId() == null) {
+                setOrganId(RandomUtils.UUID32());
+            }
         }
     }
 

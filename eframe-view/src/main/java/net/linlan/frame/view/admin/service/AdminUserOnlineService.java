@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.view.admin.vo.AdminUserOnline;
@@ -47,7 +47,7 @@ public class AdminUserOnlineService {
      * @param user 用户信息
      * @return 在线用户信息
      */
-    public AdminUserOnline selectOnlineByIpaddr(String ipaddr, FrameAdminUser user) {
+    public AdminUserOnline selectOnlineByIpaddr(String ipaddr, FrameUserDetails user) {
         if (StringUtils.equals(ipaddr, user.getLoginIp())) {
             return loginUserToUserOnline(user);
         }
@@ -61,7 +61,7 @@ public class AdminUserOnlineService {
      * @param user 用户信息
      * @return 在线用户信息
      */
-    public AdminUserOnline selectOnlineByUsername(String username, FrameAdminUser user) {
+    public AdminUserOnline selectOnlineByUsername(String username, FrameUserDetails user) {
         if (StringUtils.equals(username, user.getUsername())) {
             return loginUserToUserOnline(user);
         }
@@ -76,7 +76,7 @@ public class AdminUserOnlineService {
      * @param user 用户信息
      * @return 在线用户信息
      */
-    public AdminUserOnline selectOnlineByInfo(String ipaddr, String username, FrameAdminUser user) {
+    public AdminUserOnline selectOnlineByInfo(String ipaddr, String username, FrameUserDetails user) {
         if (StringUtils.equals(ipaddr, user.getLoginIp())
             && StringUtils.equals(username, user.getUsername())) {
             return loginUserToUserOnline(user);
@@ -90,7 +90,7 @@ public class AdminUserOnlineService {
      * @param loginUser 用户信息
      * @return 在线用户
      */
-    public AdminUserOnline loginUserToUserOnline(FrameAdminUser loginUser) {
+    public AdminUserOnline loginUserToUserOnline(FrameUserDetails loginUser) {
         if (ObjectUtils.isEmpty(loginUser)) {
             return null;
         }

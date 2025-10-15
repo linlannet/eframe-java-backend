@@ -91,7 +91,7 @@ public class KernelAdminUtils {
     //        return permissions;
     //    }
     //
-    //    public static void setPermissions(Set<String> perms){
+    //    public static void setPermissions(Collection<GrantedAuthority> authorities){
     //        permissions.addAll(perms);
     //    }
 

@@ -17,12 +17,7 @@
  */
 package net.linlan.frame.admin.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.annotation.Resource;
 
@@ -47,7 +42,6 @@ import net.linlan.sys.role.service.SysRoleService;
  */
 @Service
 public class AdminMenuVoService {
-    public static final String PREMISSION_STRING = "perms[\"{0}\"]";
 
     @Resource
     private AdminMenuVoDao     adminMenuDao;
@@ -55,6 +49,8 @@ public class AdminMenuVoService {
     private SysRoleService     sysRoleService;
     @Resource
     private CurrAppService     currAppService;
+    @Resource
+    private AdminUserService   adminUserService;
 
     /**
      * 根据用户所有权限
@@ -69,28 +65,29 @@ public class AdminMenuVoService {
     /**
      * 根据用户查询系统菜单列表
      * 
-     * @param adminId 用户LID
+     * @param userId 用户ID
      * @return 菜单列表
      */
-    public List<AdminMenuVo> selectMenuList(Long adminId) {
-        return selectMenuList(new AdminMenuVoParam(), adminId);
+    public List<AdminMenuVo> selectMenuList(String userId) {
+        return selectMenuList(new AdminMenuVoParam(), userId);
     }
 
     /**
      * 查询系统菜单列表
      * 
      * @param menu 菜单信息
-     * @param adminId 管理员ID
+     * @param userId 用户ID
      * @return 菜单列表
      */
-    public List<AdminMenuVo> selectMenuList(AdminMenuVoParam menu, Long adminId) {
+    public List<AdminMenuVo> selectMenuList(AdminMenuVoParam menu, String userId) {
         List<AdminMenuVo> menuList = null;
         // 管理员显示所有菜单信息
-        if (AdminUser.isAdmin(adminId)) {
+        AdminUser adminUser = adminUserService.findByUserId(userId);
+        if (adminUser.isAdmin()) {
             menuList = adminMenuDao.selectMenuList(menu);
         } else {
             String currAppId = currAppService.getCurrAppId();
-            menuList = adminMenuDao.selectMenuListByAdminId(adminId, currAppId);
+            menuList = adminMenuDao.selectMenuListByAdminId(adminUser.getId(), currAppId);
         }
         return menuList;
     }
@@ -145,7 +142,8 @@ public class AdminMenuVoService {
      */
     public List<AdminMenuVo> selectMenuTreeByAdminId(Long adminId) {
         List<AdminMenuVo> menus = null;
-        if (AdminUser.isAdmin(adminId)) {
+        AdminUser adminUser = adminUserService.findById(adminId);
+        if (adminUser.isAdmin()) {
             menus = adminMenuDao.selectMenuTreeAll();
         } else {
             String currAppId = currAppService.getCurrAppId();
@@ -153,8 +151,6 @@ public class AdminMenuVoService {
 
         }
         return menus;
-        //        shuxiaobo 20250307 modify 直接返回全部菜单，不在后台组装
-        //        return getChildPerms(menus, 0);
     }
 
     /**

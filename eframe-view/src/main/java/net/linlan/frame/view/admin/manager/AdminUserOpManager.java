@@ -233,8 +233,10 @@ public class AdminUserOpManager {
             if (!regFlag) {
                 msg = "注册失败,请联系系统管理人员";
             } else {
-                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(id, username,
-                    Constants.REGISTER, MessageUtils.message("user.register.success"), ENT_APP_ID));
+                AsyncManager.me()
+                    .execute(AsyncFactory.saveAdminLoginLog(adminUser.getUserId(), username,
+                        Constants.REGISTER, MessageUtils.message("user.register.success"),
+                        ENT_APP_ID));
             }
         }
         return msg;
@@ -249,7 +251,7 @@ public class AdminUserOpManager {
      */
     public void validateCaptcha(String username, String code, String uuid) {
         String verifyKey = CacheConstants.CAPTCHA_CODE_KEY + StringUtils.nvl(uuid, "");
-        String captcha = redisService.get(verifyKey);
+        String captcha = (String) redisService.get(verifyKey);
         redisService.delete(verifyKey);
         if (captcha == null) {
             throw new CaptchaExpireException();

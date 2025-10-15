@@ -25,12 +25,12 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import net.linlan.commons.core.ObjectUtils;
+import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminUserService;
@@ -109,23 +109,22 @@ public class AdminLoginService {
         } catch (Exception e) {
             if (e instanceof BadCredentialsException) {
                 AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
                         appId));
                 throw new UserPasswordNotMatchException();
             } else {
-                AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
-                        Constants.LOGIN_FAIL, e.getMessage(), appId));
+                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
+                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
                 throw new CommonException(e.getMessage());
             }
         } finally {
             AuthenticationContextHolder.clearContext();
         }
-        FrameAdminUser loginUser = (FrameAdminUser) authentication.getPrincipal();
-        recordLoginInfo(loginUser.getAdminId());
+        FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
+        recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(loginUser.getAdminId(), username,
+            .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
                 loginUser.getAppId()));
         // 生成token
@@ -158,23 +157,22 @@ public class AdminLoginService {
         } catch (Exception e) {
             if (e instanceof BadCredentialsException) {
                 AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
                         appId));
                 throw new UserPasswordNotMatchException();
             } else {
-                AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
-                        Constants.LOGIN_FAIL, e.getMessage(), appId));
+                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
+                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
                 throw new CommonException(e.getMessage());
             }
         } finally {
             AuthenticationContextHolder.clearContext();
         }
-        FrameAdminUser loginUser = (FrameAdminUser) authentication.getPrincipal();
-        recordLoginInfo(loginUser.getAdminId());
+        FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
+        recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(loginUser.getAdminId(), username,
+            .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
                 loginUser.getAppId()));
         // 生成token
@@ -198,21 +196,20 @@ public class AdminLoginService {
         } catch (Exception e) {
             if (e instanceof BadCredentialsException) {
                 AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
                         appId));
                 throw new UserPasswordNotMatchException();
             } else {
-                AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
-                        Constants.LOGIN_FAIL, e.getMessage(), appId));
+                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
+                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
                 throw new CommonException(e.getMessage());
             }
         }
-        FrameAdminUser loginUser = (FrameAdminUser) authentication.getPrincipal();
-        recordLoginInfo(loginUser.getAdminId());
+        FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
+        recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
                 loginUser.getAppId()));
         // 生成token
@@ -228,22 +225,20 @@ public class AdminLoginService {
      */
     public AppLoginInfo redirectLogin(String username, String encodePwd, String appId) {
         AdminUserDto user = adminUserService.getByUsername(username);
-
-        //        UserDetails userDetails=userDetailsServiceImpl.loadUserByUsername(username);
         if (ObjectUtils.isEmpty(user)) {
             throw new CommonException("登录用户：" + username + " 不存在");
-        } else if (UserStatus.DELETED.getCode().equals(user.getDelFlag())) {
+        } else if (UserStatus.DELETED.getKey() == user.getDelFlag()) {
             throw new CommonException("对不起，您的账号：" + username + " 已被删除");
-        } else if (UserStatus.DISABLE.getCode().equals(user.getStatus())) {
+        } else if (UserStatus.DISABLE.getKey() == user.getStatus()) {
             throw new CommonException("对不起，您的账号：" + username + " 已停用");
         }
         // 重写验证方法
         sysPasswordService.socialValidate(user, encodePwd, appId);
-        UserDetails userDetails = userDetailsServiceImpl.createLoginUser(user);
-        FrameAdminUser loginUser = (FrameAdminUser) userDetails;
-        recordLoginInfo(loginUser.getAdminId());
+        org.springframework.security.core.userdetails.UserDetails userDetails = userDetailsServiceImpl.createLoginUser(user);
+        FrameUserDetails loginUser = (FrameUserDetails) userDetails;
+        recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
                 loginUser.getAppId()));
         // 生成token
@@ -263,17 +258,17 @@ public class AdminLoginService {
         boolean captchaEnabled = initialConfigService.selectCaptchaEnabled();
         if (captchaEnabled) {
             String verifyKey = CacheConstants.CAPTCHA_CODE_KEY + StringUtils.nvl(uuid, "");
-            String captcha = redisService.get(verifyKey);
+            String captcha = (String) redisService.get(verifyKey);
             if (captcha == null) {
                 AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.expire"), appId));
                 throw new CaptchaExpireException();
             }
             redisService.delete(verifyKey);
             if (!code.equalsIgnoreCase(captcha)) {
                 AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.error"), appId));
                 throw new CaptchaException();
             }
@@ -289,7 +284,7 @@ public class AdminLoginService {
     public void loginPreCheck(String username, String password, String appId) {
         // 用户名或密码为空 错误
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
-            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT,
+            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
                 username, Constants.LOGIN_FAIL, MessageUtils.message("not.null"), appId));
             throw new UserNotExistsException();
         }
@@ -297,7 +292,7 @@ public class AdminLoginService {
         if (password.length() < UserConstants.PASSWORD_MIN_LENGTH
             || password.length() > UserConstants.PASSWORD_MAX_LENGTH) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId));
             throw new UserPasswordNotMatchException();
         }
@@ -305,14 +300,14 @@ public class AdminLoginService {
         if (username.length() < UserConstants.USERNAME_MIN_LENGTH
             || username.length() > UserConstants.USERNAME_MAX_LENGTH) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId));
             throw new UserPasswordNotMatchException();
         }
         // IP黑名单校验
         String blackStr = initialConfigService.selectConfigByKey("sys.login.blackIPList");
         if (IPUtils.isMatchedIp(blackStr, IPUtils.getIpAddr(ServletUtils.getRequest()))) {
-            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT,
+            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
                 username, Constants.LOGIN_FAIL, MessageUtils.message("login.blocked"), appId));
             throw new BlackListException();
         }
@@ -323,9 +318,19 @@ public class AdminLoginService {
      *
      * @param adminId 用户LID
      */
-    public void recordLoginInfo(Long adminId) {
+    public void recordLoginInfo(Long adminId, String userId) {
         AdminUser adminUser = new AdminUser();
-        adminUser.setId(adminId);
+        if (ObjectUtils.isEmpty(adminId)) {
+            adminUser.setId(RandomUtils.randomLid());
+
+        } else {
+            adminUser.setId(adminId);
+        }
+        if (ObjectUtils.isEmpty(userId)) {
+            adminUser.setUserId(RandomUtils.UUID32());
+        } else {
+            adminUser.setUserId(userId);
+        }
         adminUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
         adminUser.setLastLoginTime(new Date());
         adminUserService.update(adminUser);

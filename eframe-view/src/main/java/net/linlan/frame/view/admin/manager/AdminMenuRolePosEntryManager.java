@@ -32,6 +32,8 @@ import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.frame.admin.dao.AdminRoleVoDao;
+import net.linlan.frame.admin.entity.AdminUser;
+import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
 import net.linlan.frame.view.admin.vo.SysPositionVo;
 import net.linlan.frame.view.admin.vo.SysRoleVo;
@@ -65,6 +67,8 @@ public class AdminMenuRolePosEntryManager {
     private SysRoleService     sysRoleService;
     @Resource
     private AdminRoleVoDao     frameAdminRoleDao;
+    @Resource
+    private AdminUserService   adminUserService;
 
     /**
      * 查询所有角色
@@ -182,7 +186,12 @@ public class AdminMenuRolePosEntryManager {
      * @param roleIds 角色id
      */
     public void checkRoleDataScope(Long... roleIds) {
-        if (!AdminUserVo.isAdmin(SecurityUtils.getAdminId())) {
+        String userId = SecurityUtils.getUserId();
+        AdminUser adminUser = adminUserService.findByUserId(userId);
+        if (adminUser == null) {
+            return;
+        }
+        if (!AdminUserVo.isAdmin(adminUser.getId())) {
             for (Long roleId : roleIds) {
                 SysRole entity = sysRoleService.findById(roleId);
                 if (ObjectUtils.isEmpty(entity)) {

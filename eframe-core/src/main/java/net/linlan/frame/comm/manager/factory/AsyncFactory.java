@@ -44,7 +44,7 @@ public class AsyncFactory {
     /**
      * 记录登录信息
      * 
-     * @param adminId 用户Lid
+     * @param userId 用户id
      * @param username 用户名
      * @param status 状态
      * @param message 消息
@@ -52,7 +52,7 @@ public class AsyncFactory {
      * @param args 列表
      * @return 任务task
      */
-    public static TimerTask saveAdminLoginLog(final Long adminId, final String username,
+    public static TimerTask saveAdminLoginLog(final String userId, final String username,
                                               final String status, final String message,
                                               final String appId, final Object... args) {
         final UserAgent userAgent = UserAgent
@@ -77,7 +77,7 @@ public class AsyncFactory {
                 String browser = userAgent.getBrowser().getName();
                 // 封装对象
                 AdminLoginLog adminLoginLog = new AdminLoginLog();
-                adminLoginLog.setAdminId(adminId);
+                adminLoginLog.setUserId(userId);
                 adminLoginLog.setUserId(username);
                 adminLoginLog.setAppId(appId);
                 adminLoginLog.setLogIp(ip);

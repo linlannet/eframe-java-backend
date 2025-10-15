@@ -41,6 +41,8 @@ import net.linlan.sys.base.param.TreeParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 
+import static net.linlan.utils.constant.CacheConstants.BASE_XZQH_KEY;
+
 /**
  *
  * BaseXzqh数据域:行政区划服务类
@@ -57,10 +59,6 @@ public class BaseXzqhService {
     @Resource
     private RedisService       redisService;
 
-    /**
-     * redis 字典缓存前缀
-     */
-    public static final String BASE_XZQH_PREFIX = "BASE_XZQH:";
 
     /** get the list of entity BaseXzqh
      * 列表方法，返回列表的行政区划数据 {@link List} 对象，包含 {@link BaseXzqh} 列表
@@ -195,13 +193,13 @@ public class BaseXzqhService {
         if (parentId == null) {
             parentId = 0L;
         }
-        List<XzqhInitDto> dist = redisService.getList(BASE_XZQH_PREFIX + parentId);
+        List<XzqhInitDto> dist = redisService.getList(BASE_XZQH_KEY + parentId);
         if (dist != null && dist.size() > 0) {
             return dist;
         } else {
             List<XzqhInitDto> dicResult = dao.getChildren(parentId);
             if (dicResult != null && dicResult.size() > 0) {
-                redisService.setList(BASE_XZQH_PREFIX + parentId, dicResult,
+                redisService.setList(BASE_XZQH_KEY + parentId, dicResult,
                     KernelConstant.ONE_HOUR_EXPIRE * 2);
             }
             return dicResult;

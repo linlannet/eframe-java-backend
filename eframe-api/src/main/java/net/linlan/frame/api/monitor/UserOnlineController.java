@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.service.AdminUserOnlineService;
 import net.linlan.frame.view.admin.vo.AdminUserOnline;
@@ -68,7 +68,7 @@ public class UserOnlineController extends BaseController {
         Collection<String> keys = redisService.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
         List<AdminUserOnline> userOnlineList = new ArrayList<>();
         for (String key : keys) {
-            FrameAdminUser user = redisService.get(key, FrameAdminUser.class);
+            FrameUserDetails user = (FrameUserDetails) redisService.get(key);
             if (ObjectUtils.isNotEmpty(ipaddr) && ObjectUtils.isNotEmpty(username)) {
                 userOnlineList
                     .add(adminUserOnlineService.selectOnlineByInfo(ipaddr, username, user));

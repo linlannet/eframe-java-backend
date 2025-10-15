@@ -19,9 +19,9 @@ package net.linlan.frame.api.config;
 
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,7 +50,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 @RequestMapping("/api/system")
 public class PublicUnionMessageController extends BaseController {
 
-    @Autowired
+    @Resource
     private PublicUnionMessageService portalUnionMessageService;
 
     /** Get PublicUnionMessage list. 获取消息阅读列表或分页, 返回PublicUnionMessage对象.

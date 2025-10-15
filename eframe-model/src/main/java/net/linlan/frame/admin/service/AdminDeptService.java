@@ -58,9 +58,11 @@ import net.linlan.utils.text.Convert;
 public class AdminDeptService {
 
     @Resource
-    private AdminDeptDao   dao;
+    private AdminDeptDao     dao;
     @Resource
-    private SysRoleService sysRoleService;
+    private SysRoleService   sysRoleService;
+    @Resource
+    private AdminUserService adminUserService;
 
     /** get the list of entity AdminDept
      * 列表方法，返回分页的部门数据 {@link Page} 对象，包含 {@link AdminDept} 列表
@@ -263,7 +265,12 @@ public class AdminDeptService {
      * @param deptId 部门id
      */
     public void checkDeptDataScope(Long deptId) {
-        if (!AdminUser.isAdmin(SecurityUtils.getAdminId()) && ObjectUtils.isNotEmpty(deptId)) {
+        String userId = SecurityUtils.getUserId();
+        AdminUser adminUser = adminUserService.findByUserId(userId);
+        if (adminUser == null) {
+            return;
+        }
+        if (!adminUser.isAdmin() && ObjectUtils.isNotEmpty(deptId)) {
             AdminDeptParam param = new AdminDeptParam();
             param.setDeptId(deptId);
             Page<AdminDeptDto> depts = getPageDto(param);

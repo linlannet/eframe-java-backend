@@ -25,8 +25,8 @@ import org.springframework.util.CollectionUtils;
 
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
-import net.linlan.frame.comm.constant.AdminType;
+import net.linlan.constant.AdminType;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.comm.security.context.PermissionContextHolder;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.utils.constant.Constants;
@@ -48,7 +48,7 @@ public class PermissionService {
         if (StringUtils.isEmpty(permission)) {
             return false;
         }
-        FrameAdminUser loginUser = SecurityUtils.getLoginUser();
+        FrameUserDetails loginUser = SecurityUtils.getLoginUser();
         if (ObjectUtils.isEmpty(loginUser) || CollectionUtils.isEmpty(loginUser.getPerms())) {
             return false;
         }
@@ -76,7 +76,7 @@ public class PermissionService {
         if (StringUtils.isEmpty(permissions)) {
             return false;
         }
-        FrameAdminUser loginUser = SecurityUtils.getLoginUser();
+        FrameUserDetails loginUser = SecurityUtils.getLoginUser();
         if (ObjectUtils.isEmpty(loginUser) || CollectionUtils.isEmpty(loginUser.getPerms())) {
             return false;
         }
@@ -112,7 +112,7 @@ public class PermissionService {
         if (Objects.isNull(authority)) {
             return false;
         }
-        String adminType = SecurityUtils.getLoginUser().getAdminType();
+        String adminType = SecurityUtils.getLoginUser().getUserType();
         if (adminType.equals(AdminType.ADMIN.getType())) {
             return AdminType.ADMIN.equals(authority);
         }

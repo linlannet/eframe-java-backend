@@ -354,7 +354,12 @@ public class AdminUserService {
      * @param adminId 用户LID
      */
     public void checkUserDataScope(Long adminId) {
-        if (!AdminUser.isAdmin(SecurityUtils.getAdminId())) {
+        String userId = SecurityUtils.getUserId();
+        AdminUser adminUser = findByUserId(userId);
+        if (adminUser == null) {
+            return;
+        }
+        if (!adminUser.isAdmin()) {
             AdminUser user = findById(adminId);
             if (ObjectUtils.isEmpty(user)) {
                 throw new CommonException("没有权限访问用户数据！");

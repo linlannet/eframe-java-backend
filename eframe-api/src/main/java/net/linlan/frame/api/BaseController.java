@@ -36,7 +36,7 @@ import net.linlan.commons.core.Rcode;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.db.page.Pagination;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.mbiz.ApiIntfConfig;
 import net.linlan.frame.mbiz.constant.HttpStatusEnum;
 import net.linlan.frame.web.SecurityUtils;
@@ -232,16 +232,8 @@ public class BaseController {
      * 获取用户缓存信息
      * @return 返回结果
      */
-    public FrameAdminUser getLoginUser() {
+    public FrameUserDetails getLoginUser() {
         return SecurityUtils.getLoginUser();
-    }
-
-    /**
-     * 获取登录用户lid
-     * @return 返回结果
-     */
-    public Long getAdminId() {
-        return getLoginUser().getAdminId();
     }
 
     /**

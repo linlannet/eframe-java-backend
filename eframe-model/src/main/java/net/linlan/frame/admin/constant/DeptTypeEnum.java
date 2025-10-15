@@ -23,22 +23,22 @@ import net.linlan.utils.enums.BaseEnumString;
  * 应用类型状态枚举类
  */
 public enum DeptTypeEnum implements BaseEnumString {
-    /**
-     * 本级
-     */
-    BENJI("BENJI", "本级"),
-    /**
-     * 内设机构
-     */
-    NEISHE("NEISHE", "内设机构"),
-    /**
-     * 分子机构
-     */
-    FENZI("FENZI", "分子机构"),
-    /**
-     * 其他
-     */
-    QITA("QITA", "其他"),;
+                                                    /**
+                                                     * 本级
+                                                     */
+                                                    BENJI("BENJI", "本级"),
+                                                    /**
+                                                     * 内设机构
+                                                     */
+                                                    NEISHE("NEISHE", "内设机构"),
+                                                    /**
+                                                     * 分子机构
+                                                     */
+                                                    FENZI("FENZI", "分子机构"),
+                                                    /**
+                                                     * 其他
+                                                     */
+                                                    QITA("QITA", "其他"),;
 
     /**
      * 配置项名称

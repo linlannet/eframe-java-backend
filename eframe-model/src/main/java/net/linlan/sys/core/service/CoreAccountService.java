@@ -243,4 +243,26 @@ public class CoreAccountService {
         return result;
     }
 
+    public CoreAccount getByName(String name) {
+        if (StringUtils.isBlank(name)) {
+            return null;
+        }
+        List<CoreAccount> coreAccountList = getByParams(new StringMap().put("name", name).map());
+        if (null != coreAccountList && coreAccountList.size() > 0) {
+            return coreAccountList.get(0);
+        }
+        return null;
+    }
+
+    public CoreAccount getByServerType(String serverType) {
+        if (StringUtils.isBlank(serverType)) {
+            return null;
+        }
+        List<CoreAccount> coreAccountList = getByParams(
+            new StringMap().put("serverType", serverType).map());
+        if (null != coreAccountList && coreAccountList.size() > 0) {
+            return coreAccountList.get(0);
+        }
+        return null;
+    }
 }

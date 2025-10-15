@@ -82,7 +82,7 @@ public class CoreAccount extends BaseEntity {
     private Integer            inoutMode;
 
     /**
-     * 对接系统或账户名称
+     * 对接系统或账户名称，开放平台认证平台名称
      */
     private String             name;
 
@@ -122,7 +122,7 @@ public class CoreAccount extends BaseEntity {
     private String             serverIp;
 
     /**
-     * 对接服务器类型，授权类型
+     * 对接服务器类型，授权类型，开放平台认证平台类型
      */
     private String             serverType;
 

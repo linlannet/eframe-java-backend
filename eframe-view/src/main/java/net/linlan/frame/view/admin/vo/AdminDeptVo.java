@@ -126,7 +126,7 @@ public class AdminDeptVo {
      */
     private Integer priority;
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 状态0未生效1正常2受限3锁定4删除
      */
     private Integer status;
     /**

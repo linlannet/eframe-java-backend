@@ -75,7 +75,7 @@ public class SysPositionParam extends BaseParam {
     */
     private String   posType;
     /**
-     * 岗位性质0未生效1启用，STATUS，状态0未生效1正常2受限3锁定
+     * 岗位性质0未生效1启用，STATUS，状态0未生效1正常2受限3锁定4删除
      */
     private Integer  status;
     /**

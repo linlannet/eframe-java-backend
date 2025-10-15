@@ -188,14 +188,8 @@ public class FrameDictionaryService {
                 dicResult = baseAppService.getForSelect();
             } else if (TypeCodeEnum.JSXLK.getKey().equals(typeCode)) {
                 dicResult = coreRoletypeService.getForSelect(typeCode);
-                //            }else if(TypeCodeEnum.HYLXXLK.getKey().equals(typeCode)){
-                //                dicResult = memberGroupService.getForSelect();
-                //            }else if(TypeCodeEnum.HYZXLK.getKey().equals(typeCode)){
-                //                dicResult = memberGroupService.getForSelect();
             } else if (TypeCodeEnum.GWXLK.getKey().equals(typeCode)) {
                 dicResult = adminPositionService.getForSelect();
-                //            }else if(TypeCodeEnum.GUESTBOOK_TYPE.getKey().equals(typeCode)){
-                //                dicResult = guestbookCtgService.getForSelect();
             } else {
                 dicResult = baseDictionaryService.getInitByTypeCode(typeCode);
             }

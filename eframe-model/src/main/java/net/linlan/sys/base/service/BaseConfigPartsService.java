@@ -130,8 +130,7 @@ public class BaseConfigPartsService {
      * @return {@link BaseConfigParts}
      */
     public BaseConfigParts findById(String id) {
-        BaseConfigParts configParts = (BaseConfigParts) redisService.get(BASE_CONFIGWHOLE_KEY + id,
-            BaseConfigParts.class);
+        BaseConfigParts configParts = (BaseConfigParts) redisService.get(BASE_CONFIGWHOLE_KEY + id);
         if (configParts == null) {
             configParts = dao.findById(id);
             redisService.set(BASE_CONFIGWHOLE_KEY + id, configParts,

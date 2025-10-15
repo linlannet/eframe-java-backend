@@ -19,7 +19,7 @@ package net.linlan.frame.view.admin.vo;
 
 import lombok.Data;
 
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 
 /**
  *
@@ -35,7 +35,7 @@ public class LoginUserProfileVo {
     /**
      * 当前用户
      */
-    private FrameAdminUser user;
+    private FrameUserDetails user;
 
     /**
      * 角色组

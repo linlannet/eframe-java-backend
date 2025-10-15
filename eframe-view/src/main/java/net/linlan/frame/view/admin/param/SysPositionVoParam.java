@@ -36,7 +36,7 @@ public class SysPositionVoParam extends BaseParam {
     /** 岗位名称 */
     private String  postName;
 
-    /** 状态（0未生效1正常2受限3锁定） */
+    /** 状态（0未生效1正常2受限3锁定4删除） */
     private Integer status;
 
     /** 删除标记（0正常 1删除） */

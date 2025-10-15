@@ -57,8 +57,7 @@ public class DictionaryUtils {
      * @return dictDatas 字典数据列表
      */
     public static List<BaseDictionaryVo> getDictCache(String key) {
-        JSONArray arrayCache = SpringContextUtils.getBean(RedisService.class).get(getCacheKey(key),
-            JSONArray.class);
+        JSONArray arrayCache = (JSONArray) SpringContextUtils.getBean(RedisService.class).get(getCacheKey(key));
         if (ObjectUtils.isNotEmpty(arrayCache)) {
             return arrayCache.toList(BaseDictionaryVo.class);
         }

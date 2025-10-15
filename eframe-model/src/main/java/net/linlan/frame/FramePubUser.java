@@ -126,7 +126,7 @@ public class FramePubUser {
      */
     private String  address;
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 状态0未生效1正常2受限3锁定4删除
      */
     private String  status;
     /**

@@ -29,11 +29,6 @@ public class CacheConstants {
     public static final String LOGIN_TOKEN_KEY      = "login_tokens:";
 
     /**
-     * 登录用户ADMIN_ID
-     */
-    public static final String LOGIN_ADMIN_ID_KEY   = "login_admin_id:";
-
-    /**
      * 登录用户USER_ID
      */
     public static final String LOGIN_USER_ID_KEY    = "login_user_id:";
@@ -77,4 +72,9 @@ public class CacheConstants {
      * 字典管理 cache key
      */
     public static final String BASE_DICTIONARY_KEY  = "base_dictionary:";
+
+    /**
+     * redis 字典缓存前缀
+     */
+    public static final String BASE_XZQH_KEY = "base_xzqh:";
 }

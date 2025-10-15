@@ -48,6 +48,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
 import net.linlan.frame.view.admin.vo.LoginUserRolesVo;
 import net.linlan.frame.view.admin.vo.SysRoleVo;
+import net.linlan.frame.web.SecurityUtils;
 import net.linlan.utils.crypt.ShaUtils;
 
 /**
@@ -146,7 +147,7 @@ public class AdminUserOpController extends BaseController {
     @PostMapping("user/disable/{id}")
     @Encrypt
     public ResponseResult<String> disable(@RequestBody AdminUser input) {
-        if (input.getId().equals(getAdminId())) {
+        if (input.getUserId().equals(SecurityUtils.getUserId())) {
             return error("当前用户不能停用");
         }
         adminUserService.update(input);
@@ -189,7 +190,12 @@ public class AdminUserOpController extends BaseController {
     @Encrypt
     @LimitScope(name = "adminUserDelete", key = "adminUserDelete")
     public ResponseResult<String> delete(@PathVariable Long[] adminIds) {
-        if (ArrayUtils.contains(adminIds, getAdminId())) {
+        String userId = SecurityUtils.getUserId();
+        AdminUser adminUser = adminUserService.findByUserId(userId);
+        if (adminUser == null) {
+            return error("系统未登录");
+        }
+        if (ArrayUtils.contains(adminIds, adminUser.getId())) {
             return error("当前用户不能删除");
         }
         adminUserService.deleteByIdsWithRelation(adminIds);
@@ -296,7 +302,7 @@ public class AdminUserOpController extends BaseController {
         }
         List<SysRoleVo> roles = adminMenuRolePosEntryManager.selectRolesByAdminId(adminId);
         loginUserRolesVo.setUser(vo);
-        loginUserRolesVo.setRoles(AdminUser.isAdmin(adminId) ? roles
+        loginUserRolesVo.setRoles(dto.isAdmin() ? roles
             : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
 
         return success(loginUserRolesVo);

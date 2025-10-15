@@ -64,12 +64,12 @@ public class CacheMonitorController {
         caches.add(new SysCacheVo(CacheConstants.PWD_ERR_CNT_KEY, "密码错误次数"));
         caches.add(new SysCacheVo(CacheConstants.PLAT_ACCOUNT_KEY, "平台账户"));
 
-        caches.add(new SysCacheVo(CacheConstants.LOGIN_ADMIN_ID_KEY, "管理账号LID"));
         caches.add(new SysCacheVo(CacheConstants.LOGIN_USER_ID_KEY, "用户ID"));
 
         caches.add(new SysCacheVo(CacheConstants.LOCK_KEY, "锁定缓存前缀"));
         caches.add(new SysCacheVo(CacheConstants.BASE_CONFIGWHOLE_KEY, "配置信息"));
         caches.add(new SysCacheVo(CacheConstants.BASE_DICTIONARY_KEY, "数据字典"));
+        caches.add(new SysCacheVo(CacheConstants.BASE_XZQH_KEY, "行政区划"));
     }
 
     /**

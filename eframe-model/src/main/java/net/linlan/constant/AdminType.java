@@ -1,5 +1,5 @@
 /*
- * eframe-core - core核心共性模块
+ * eframe-model - model模型数据模块
  * Copyright © 2020-2025 Linlan (open@linlan.net)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.frame.comm.constant;
+package net.linlan.constant;
 
 import java.io.Serializable;
 

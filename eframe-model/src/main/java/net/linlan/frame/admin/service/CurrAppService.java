@@ -20,7 +20,7 @@ package net.linlan.frame.admin.service;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.StringUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.utils.config.PlatformConfig;
 import static net.linlan.frame.web.SecurityUtils.getLoginUser;
 import static net.linlan.utils.constant.Constants.ENT_APP_ID;
@@ -36,7 +36,7 @@ public class CurrAppService {
         // 是否开启app全局切换
         boolean openAppChange = PlatformConfig.isOpenAppChange();
         if (openAppChange) {
-            FrameAdminUser loginUser = getLoginUser();
+            FrameUserDetails loginUser = getLoginUser();
             String lastAppId = loginUser.getAppId();
             if (StringUtils.isNotBlank(lastAppId)) {
                 result = lastAppId;

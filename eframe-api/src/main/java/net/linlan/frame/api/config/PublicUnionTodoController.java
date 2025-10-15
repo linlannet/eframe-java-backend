@@ -19,9 +19,9 @@ package net.linlan.frame.api.config;
 
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,7 +49,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 @RequestMapping("/api/system")
 public class PublicUnionTodoController extends BaseController {
 
-    @Autowired
+    @Resource
     private PublicUnionTodoService portalUnionTodoService;
 
     /** Get PublicUnionTodo list. 获取统一待办列表或分页, 返回PublicUnionTodo对象.

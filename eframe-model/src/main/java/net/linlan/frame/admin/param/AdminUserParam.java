@@ -122,7 +122,7 @@ public class AdminUserParam extends BaseParam {
      */
     private Integer loginCount;
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 状态0未生效1正常2受限3锁定4删除
      */
     private Integer status;
     /**

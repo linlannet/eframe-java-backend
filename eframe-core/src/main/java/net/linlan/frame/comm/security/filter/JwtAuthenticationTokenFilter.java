@@ -32,7 +32,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.comm.service.TokenService;
 import net.linlan.frame.web.SecurityUtils;
 
@@ -49,7 +49,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
-        FrameAdminUser loginUser = tokenService.getLoginUser(request);
+        FrameUserDetails loginUser = tokenService.getLoginUser(request);
         if (ObjectUtils.isNotEmpty(loginUser)
             && ObjectUtils.isEmpty(SecurityUtils.getAuthentication())) {
             tokenService.verifyToken(loginUser);

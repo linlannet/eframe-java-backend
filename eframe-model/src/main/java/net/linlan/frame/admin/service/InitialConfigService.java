@@ -19,6 +19,7 @@ package net.linlan.frame.admin.service;
 
 import javax.annotation.Resource;
 
+import net.linlan.sys.web.KernelConstant;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
@@ -55,7 +56,7 @@ public class InitialConfigService {
         }
         BaseConfigWhole retConfig = baseConfigWholeService.getByKey(configKey);
         if (ObjectUtils.isNotEmpty(retConfig)) {
-            redisService.set(getCacheKey(configKey), retConfig.getCfgValue());
+            redisService.set(getCacheKey(configKey), retConfig.getCfgValue(), KernelConstant.ONE_DAY_EXPIRE);
             return retConfig.getCfgValue();
         }
         return StringUtils.EMPTY;

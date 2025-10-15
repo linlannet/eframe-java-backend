@@ -19,22 +19,31 @@ package net.linlan.frame.comm.security;
 
 import javax.annotation.Resource;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.lang.Nullable;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.comm.service.SysPasswordService;
 import net.linlan.frame.comm.service.SysPermissionService;
+import net.linlan.frame.web.UserDetailsService;
 import net.linlan.utils.MessageUtils;
 import net.linlan.utils.enums.UserStatus;
 import net.linlan.utils.exception.CommonException;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * 用户验证处理
@@ -55,15 +64,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private SysPermissionService sysPermissionService;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public FrameUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         AdminUserDto user = adminUserService.getByUsername(username);
         if (ObjectUtils.isEmpty(user)) {
             log.info("登录用户：{} 不存在.", username);
             throw new CommonException(MessageUtils.message("user.not.exists"));
-        } else if (UserStatus.DELETED.getCode().equals(user.getDelFlag())) {
+        } else if (UserStatus.DELETED.getKey() == user.getDelFlag()) {
             log.info("登录用户：{} 已被删除.", username);
             throw new CommonException(MessageUtils.message("user.password.delete"));
-        } else if (UserStatus.DISABLE.getCode().equals(user.getStatus())) {
+        } else if (UserStatus.DISABLE.getKey() == user.getStatus()) {
             log.info("登录用户：{} 已被停用.", username);
             throw new CommonException(MessageUtils.message("user.blocked"));
         }
@@ -73,9 +82,52 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return createLoginUser(user);
     }
 
-    public UserDetails createLoginUser(AdminUserDto user) {
-        return new FrameAdminUser(user.getId(), user.getDeptId(), user.getUsername(),
-            user.getPassword(), user.getLastAppId(), user.getAdminType(),
-            sysPermissionService.getMenuPermission(user));
+    public FrameUserDetails createLoginUser(AdminUserDto user) {
+        // 用户权限列表
+        Set<String> perms = sysPermissionService.getMenuPermission(user);
+        FrameUserDetails frameUserDetails = new FrameUserDetails(user.getUserId(), perms);
+        frameUserDetails.setUserId(user.getUserId());
+        frameUserDetails.setUsername(user.getUsername());
+        frameUserDetails.setPassword(user.getPassword());
+        frameUserDetails.setViewName(user.getName());
+        frameUserDetails.setDeptId(user.getDeptId());
+        frameUserDetails.setOrganId(user.getOrganId());
+        frameUserDetails.setMobile(user.getMobile());
+        frameUserDetails.setEmail(user.getEmail());
+        frameUserDetails.setImagePath(user.getImagePath());
+        frameUserDetails.setUserType(user.getAdminType());
+        frameUserDetails.setLoginIp(user.getLastLoginIp());
+        frameUserDetails.setLoginTime(user.getLastLoginTime());
+        frameUserDetails.setLoginCount(user.getLoginCount());
+        // 数据权限范围关联机构部门或地域层级，TODO
+        List<Long> deptIds = new ArrayList<>();
+
+        // 用户角色编码列表
+        Set<String> roleCodeList = sysPermissionService.getRolePermission(user);
+        roleCodeList.forEach(roleCode -> perms.add("ROLE_" + roleCode));
+
+        frameUserDetails.setPerms(perms);
+        return frameUserDetails;
+    }
+
+    @Override
+    public void changePassword(String username, String newPassword) {
+
+    }
+
+    @Override
+    public void changePassword(String username, String oldPassword,
+                               String newPassword) throws Exception {
+
+    }
+
+    @Override
+    public FrameUserDetails loadUserByMobile(String mobile) throws UsernameNotFoundException {
+        return null;
+    }
+
+    @Override
+    public FrameUserDetails loadUserByEmail(String email) throws UsernameNotFoundException {
+        return null;
     }
 }

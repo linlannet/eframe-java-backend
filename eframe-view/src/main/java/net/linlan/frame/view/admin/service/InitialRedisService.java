@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
+import net.linlan.sys.web.KernelConstant;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
@@ -73,7 +74,7 @@ public class InitialRedisService {
         List<BaseConfigWhole> configsList = baseConfigWholeService
             .getList(new StringMap().put("isDisabled", false).map());
         for (BaseConfigWhole config : configsList) {
-            redisService.set(getCacheKey(config.getCfgKey()), config.getCfgValue());
+            redisService.set(getCacheKey(config.getCfgKey()), config.getCfgValue(), KernelConstant.ONE_DAY_EXPIRE);
         }
     }
 

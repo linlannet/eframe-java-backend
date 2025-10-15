@@ -39,7 +39,7 @@ import net.linlan.commons.core.ArrayUtils;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.commons.script.json.JsonUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.sys.comm.entity.CommLog;
 import net.linlan.sys.comm.service.CommLogService;
@@ -134,14 +134,13 @@ public class PlatLogAspect {
         commLog.setIp(IPUtils.getIpAddr(request));
 
         //20240511，进行request内传递使用
-        FrameAdminUser user = SecurityUtils.getLoginUser();
+        FrameUserDetails user = SecurityUtils.getLoginUser();
         if (user != null) {
             commLog.setUsername(user.getUsername());
-            commLog.setAppId(Constants.ENT_APP_ID);
         } else {
             commLog.setUsername("member_noToken");
-            commLog.setAppId(Constants.ENT_APP_ID);
         }
+        commLog.setAppId(Constants.ENT_APP_ID);
         commLog.setTime(time);
         //保存系统日志
         commLogService.save(commLog);

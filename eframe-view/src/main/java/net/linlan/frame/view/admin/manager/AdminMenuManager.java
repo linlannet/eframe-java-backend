@@ -28,9 +28,10 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.dto.AdminUserDto;
+import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminMenuVoService;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.view.admin.vo.AdminBaseMenuInfo;
@@ -286,20 +287,26 @@ public class AdminMenuManager {
     //                new String[] { "", "", "", "/", "/" });
     //    }
 
-    public AppPageIndexInfo getAppPageIndexInfo(FrameAdminUser loginUser) {
-        Long adminId = loginUser.getAdminId();
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuTreeByAdminId(adminId);
-        List<AdminBaseMenuInfo> menuList = buildMenusForAdmin(menus);
-        AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
-        AppPageIndexInfo entity = new AppPageIndexInfo();
-        entity.setAccountId("NULL");
-        entity.setAreaId(0L);
-        entity.setPositionId(
-            ObjectUtils.isNotEmpty(user.getPositionIds()) ? user.getPositionIds()[0] : "");
-        entity.setGroupId(ObjectUtils.isNotEmpty(user.getRoleIds()) ? user.getRoleIds()[0] : 0L);
-        entity.setTplSolution("default");
-        entity.setMenuList(menuList);
-        return entity;
+    public AppPageIndexInfo getAppPageIndexInfo(FrameUserDetails loginUser) {
+        String userId = loginUser.getUserId();
+        AdminUser adminUser = adminUserService.findByUserId(userId);
+        if (ObjectUtils.isNotEmpty(adminUser)) {
+            Long adminId = adminUser.getId();
+            List<AdminMenuVo> menus = adminMenuEntService.selectMenuTreeByAdminId(adminId);
+            List<AdminBaseMenuInfo> menuList = buildMenusForAdmin(menus);
+            AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
+            AppPageIndexInfo entity = new AppPageIndexInfo();
+            entity.setAccountId("NULL");
+            entity.setAreaId(0L);
+            entity.setPositionId(
+                ObjectUtils.isNotEmpty(user.getPositionIds()) ? user.getPositionIds()[0] : "");
+            entity
+                .setGroupId(ObjectUtils.isNotEmpty(user.getRoleIds()) ? user.getRoleIds()[0] : 0L);
+            entity.setTplSolution("default");
+            entity.setMenuList(menuList);
+            return entity;
+        }
+        return null;
     }
 
     private List<AdminBaseMenuInfo> buildMenusForAdmin(List<AdminMenuVo> menus) {

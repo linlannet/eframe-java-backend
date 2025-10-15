@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.ContextualSerializer;
 
 import net.linlan.annotation.Sensitive;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.utils.enums.DesensitizedType;
 
 /**
@@ -67,7 +67,7 @@ public class SensitiveJsonSerializer extends JsonSerializer<String>
      */
     private boolean desensitization() {
         try {
-            FrameAdminUser loginUser = SecurityUtils.getLoginUser();
+            FrameUserDetails loginUser = SecurityUtils.getLoginUser();
             // 管理员不脱敏
             return !loginUser.getIsSuperAdmin();
         } catch (Exception e) {

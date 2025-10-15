@@ -19,10 +19,12 @@ package net.linlan.frame.admin.entity;
 
 import java.util.Date;
 
+import com.alibaba.fastjson2.annotation.JSONField;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.utils.entity.BaseEntity;
+import net.linlan.utils.enums.UserStatus;
 
 /**
  *
@@ -145,7 +147,7 @@ public class AdminUser extends BaseEntity {
     private Integer  loginCount;
 
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 状态0未生效1正常2受限3锁定4删除
      */
     private Integer  status;
 
@@ -192,11 +194,45 @@ public class AdminUser extends BaseEntity {
     }
 
     public boolean isAdmin() {
-        return isAdmin(this.id) || isSuperAdmin;
+        return isSuperAdmin;
     }
 
-    public static boolean isAdmin(Long adminId) {
-        return adminId != null && 1L == adminId;
+    /**
+     * 账户是否未过期,过期无法验证
+     */
+    @JSONField(serialize = false)
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    /**
+     * 指定用户是否解锁,锁定的用户无法进行身份验证
+     *
+     * @return  是否解锁
+     */
+    @JSONField(serialize = false)
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    /**
+     * 指示是否已过期的用户的凭据(密码),过期的凭据防止认证
+     *
+     * @return  是否已过期
+     */
+    @JSONField(serialize = false)
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    /**
+     * 是否可用 ,禁用的用户不能身份验证
+     *
+     * @return  是否可用
+     */
+    @JSONField(serialize = false)
+    public boolean isEnabled() {
+        return UserStatus.OK.getKey() == getStatus();
     }
 
 }

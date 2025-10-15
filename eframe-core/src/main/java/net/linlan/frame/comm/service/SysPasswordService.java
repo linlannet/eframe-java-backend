@@ -68,7 +68,7 @@ public class SysPasswordService {
         String username = usernamePasswordAuthenticationToken.getName();
         String password = usernamePasswordAuthenticationToken.getCredentials().toString();
 
-        Integer retryCount = redisService.get(getCacheKey(username), Integer.class);
+        Integer retryCount = (Integer) redisService.get(getCacheKey(username));
 
         if (retryCount == null) {
             retryCount = 0;
@@ -91,25 +91,24 @@ public class SysPasswordService {
         String username = user.getUsername();
         String password = user.getPassword();
 
-        Integer retryCount = redisService.get(getCacheKey(username), Integer.class);
+        Integer retryCount = (Integer) redisService.get(getCacheKey(username));
 
         if (retryCount == null) {
             retryCount = 0;
         }
 
         if (retryCount >= Integer.valueOf(maxRetryCount).intValue()) {
-            AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(
-                    KernelConstant.DEFAULT_BIGINT, username, Constants.LOGIN_FAIL, MessageUtils
-                        .message("user.password.retry.limit.exceed", maxRetryCount, lockTime),
-                    appId));
+            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
+                username, Constants.LOGIN_FAIL,
+                MessageUtils.message("user.password.retry.limit.exceed", maxRetryCount, lockTime),
+                appId));
             throw new UserPasswordRetryLimitExceedException(maxRetryCount, lockTime);
         }
 
         if (!password.equals(encodePwd)) {
             retryCount = retryCount + 1;
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                     Constants.LOGIN_FAIL,
                     MessageUtils.message("user.password.retry.limit.count", retryCount), appId));
             redisService.set(getCacheKey(username), retryCount, lockTime * 60);

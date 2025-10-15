@@ -31,9 +31,9 @@ import lombok.Data;
 @Data
 public class AppLoginInfo {
     /**
-     * 用户LID
+     * 用户ID
      */
-    private Long   adminId;
+    private String userId;
     /**
      * 令牌TOKEN
      */

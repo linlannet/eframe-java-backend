@@ -31,7 +31,7 @@ import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.dto.WebLayoutDto;
 import net.linlan.frame.admin.service.AdminUserService;
@@ -114,7 +114,7 @@ public class SysLoginController {
     @GetMapping("appUserInfo")
     @Encrypt
     public ResponseResult<AppUserInfo> appUserInfo() {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
         // 角色集合
         Set<String> roles = sysPermissionService.getRolePermission(user);
@@ -141,7 +141,7 @@ public class SysLoginController {
     @GetMapping("appIndexInfo")
     @Encrypt
     public ResponseResult<AppPageIndexInfo> appIndexInfo() {
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         AppPageIndexInfo appPageIndexInfo = adminMenuManager.getAppPageIndexInfo(loginUser);
         return ResponseResult.ok(appPageIndexInfo);
     }
@@ -156,8 +156,7 @@ public class SysLoginController {
     @Encrypt
     public ResponseResult<WebLayoutDto> platLogin(HttpServletRequest request) {
         String accountId = request.getHeader(Constants.ACCOUNT_KEY);
-        CoreAccount coreAccount = redisService.get(CacheConstants.PLAT_ACCOUNT_KEY + accountId,
-            CoreAccount.class);
+        CoreAccount coreAccount = (CoreAccount) redisService.get(CacheConstants.PLAT_ACCOUNT_KEY + accountId);
         if (coreAccount == null) {
             //用户信息未在Session中
             coreAccount = coreAccountService.findById(accountId);
@@ -208,20 +207,20 @@ public class SysLoginController {
     @LimitScope(name = "sysLoginCaptcha", key = "sysLoginCaptcha", interval = 10, count = 5)
     public ResponseResult<String> validateCaptcha(String code, String uuid) {
 
-        FrameAdminUser loginUser = getLoginUser();
+        FrameUserDetails loginUser = getLoginUser();
         String username = loginUser.getUsername();
         String verifyKey = CacheConstants.CAPTCHA_CODE_KEY + StringUtils.nvl(uuid, "");
-        String captcha = redisService.get(verifyKey);
+        String captcha = (String) redisService.get(verifyKey);
         if (captcha == null) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.expire"),
                     loginUser.getAppId()));
             throw new CaptchaExpireException();
         }
         if (!code.equalsIgnoreCase(captcha)) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.DEFAULT_BIGINT, username,
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.error"),
                     loginUser.getAppId()));
             throw new CaptchaException();

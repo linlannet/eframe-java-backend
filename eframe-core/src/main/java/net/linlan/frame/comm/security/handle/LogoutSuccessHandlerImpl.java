@@ -32,7 +32,7 @@ import com.alibaba.fastjson2.JSON;
 
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
 import net.linlan.frame.comm.service.TokenService;
@@ -54,14 +54,14 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
                                 Authentication authentication) throws IOException,
                                                                ServletException {
-        FrameAdminUser loginUser = tokenService.getLoginUser(request);
+        FrameUserDetails loginUser = tokenService.getLoginUser(request);
         if (ObjectUtils.isNotEmpty(loginUser)) {
             String username = loginUser.getUsername();
             // 删除用户缓存记录
             tokenService.delLoginUser(loginUser.getToken());
             // 记录用户退出日志
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(loginUser.getAdminId(), username,
+                .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                     Constants.LOGOUT, MessageUtils.message("user.logout.success"),
                     loginUser.getAppId()));
         }

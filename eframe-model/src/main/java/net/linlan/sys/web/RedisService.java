@@ -36,8 +36,6 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 
 import net.linlan.commons.core.RandomUtils;
-import net.linlan.commons.script.json.JsonDeUtils;
-import net.linlan.commons.script.json.JsonUtils;
 import net.linlan.utils.constant.CacheConstants;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
@@ -58,17 +56,8 @@ import static net.linlan.commons.core.NumberUtils.isNumeric;
 public class RedisService {
 
     @Resource
-    private RedisTemplate<String, String>          redisTemplate;
-    @Resource(name = "redisTemplate")
-    private ValueOperations<String, String>        valueOperations;
-    @Resource(name = "redisTemplate")
-    private HashOperations<String, String, Object> hashOperations;
-    @Resource(name = "redisTemplate")
-    private ListOperations<String, Object>         listOperations;
-    @Resource(name = "redisTemplate")
-    private SetOperations<String, Object>          setOperations;
-    @Resource(name = "redisTemplate")
-    private ZSetOperations<String, Object>         zSetOperations;
+    private RedisTemplate          redisTemplate;
+
     @Resource
     private StringRedisTemplate                    stringRedisTemplate;
 
@@ -77,58 +66,6 @@ public class RedisService {
      */
     public final static long                       NOT_EXPIRE = KernelConstant.NOT_EXPIRE;
 
-    /**
-     * get the key of input clazz with default expire
-     *
-     * @param key   the input key
-     * @param clazz the input clazz
-     * @param <T>   the type
-     * @return T
-     */
-    public <T> T get(String key, Class<T> clazz) {
-        return get(key, clazz, NOT_EXPIRE);
-    }
-
-    /**
-     * set the redis key with value with default expire
-     *
-     * @param key   the input key
-     * @param value the input value
-     */
-    public void set(String key, Object value) {
-        set(key, value, KernelConstant.ONE_DAY_EXPIRE);
-    }
-
-    /**
-     * get the key of input clazz with input expire
-     *
-     * @param key    the input key
-     * @param clazz  the input clazz
-     * @param expire the input expire
-     * @param <T>    the type
-     * @return T
-     */
-    public <T> T get(String key, Class<T> clazz, long expire) {
-        String value = valueOperations.get(key);
-        if (expire != NOT_EXPIRE) {
-            redisTemplate.expire(key, expire, TimeUnit.SECONDS);
-        }
-        return value == null ? null : fromJson(value, clazz);
-    }
-
-    /**
-     * set the redis key with value
-     *
-     * @param key    the input key
-     * @param value  the input value
-     * @param expire the input expire
-     */
-    public void set(String key, Object value, long expire) {
-        valueOperations.set(key, toJson(value));
-        if (expire != NOT_EXPIRE) {
-            redisTemplate.expire(key, expire, TimeUnit.SECONDS);
-        }
-    }
 
     /**
      * get the value of input key
@@ -136,8 +73,9 @@ public class RedisService {
      * @param key the key
      * @return the value
      */
-    public String get(String key) {
-        return get(key, NOT_EXPIRE);
+    public <T> T get(String key) {
+        ValueOperations<String, T> operation = redisTemplate.opsForValue();
+        return operation.get(key);
     }
 
     /**
@@ -147,12 +85,37 @@ public class RedisService {
      * @param expire the expire time
      * @return the value
      */
-    public String get(String key, long expire) {
-        String value = valueOperations.get(key);
+    private <T> T get(String key, long expire) {
+        if (expire != NOT_EXPIRE) {
+            ValueOperations<String, T> operation = redisTemplate.opsForValue();
+            return operation.get(key);
+        }
+        return null;
+    }
+
+
+    /**
+     * set the redis key with value with default expire
+     *
+     * @param key   the input key
+     * @param value the input value
+     */
+    public <T> void set(String key, T value) {
+        set(key, value, KernelConstant.ONE_DAY_EXPIRE);
+    }
+
+    /**
+     * set the redis key with value
+     *
+     * @param key    the input key
+     * @param value  the input value
+     * @param expire the input expire
+     */
+    public <T> void set(String key, T value, long expire) {
+        redisTemplate.opsForValue().set(key, value);
         if (expire != NOT_EXPIRE) {
             redisTemplate.expire(key, expire, TimeUnit.SECONDS);
         }
-        return value;
     }
 
     /**
@@ -162,7 +125,7 @@ public class RedisService {
      * @param expire    过期时间
      */
     public void setMap(String key, Map<String, Object> value, Long expire) {
-        hashOperations.putAll(key, value);
+        redisTemplate.opsForHash().putAll(key, value);
         if (expire != NOT_EXPIRE) {
             redisTemplate.expire(key, expire, TimeUnit.SECONDS);
         }
@@ -180,7 +143,7 @@ public class RedisService {
         boolean lock = getLock(lockKey, uuid);
         if (lock) {
             redisTemplate.delete(key);
-            listOperations.rightPushAll(key, values);
+            redisTemplate.opsForList().rightPushAll(key, values);
             if (expire != NOT_EXPIRE) {
                 redisTemplate.expire(key, expire, TimeUnit.SECONDS);
             }
@@ -194,7 +157,7 @@ public class RedisService {
      * @return      获取列表
      */
     public List getList(String key) {
-        return listOperations.range(key, 0, -1);
+        return redisTemplate.opsForList().range(key, 0, -1);
     }
 
     /**
@@ -205,7 +168,7 @@ public class RedisService {
      * @return      获取列表
      */
     public List getList(String key, long start, long end) {
-        return listOperations.range(key, start, end);
+        return redisTemplate.opsForList().range(key, start, end);
     }
 
     /**
@@ -214,7 +177,7 @@ public class RedisService {
      * @return  MAP对象
      */
     public Map<String, Object> getMap(String key) {
-        return hashOperations.entries(key);
+        return redisTemplate.opsForHash().entries(key);
     }
 
     /**
@@ -235,32 +198,6 @@ public class RedisService {
      */
     public boolean delete(final Collection collection) {
         return redisTemplate.delete(collection) > 0;
-    }
-
-    /**
-     * trans the input source to json object
-     *
-     * @param source the source object
-     * @return String
-     */
-    private String toJson(Object source) {
-        if (source instanceof Integer || source instanceof Long || source instanceof Float
-            || source instanceof Double || source instanceof Boolean || source instanceof String) {
-            return String.valueOf(source);
-        }
-        return JsonUtils.toJson(source);
-    }
-
-    /**
-     * trans the input json to object
-     *
-     * @param source the source json string
-     * @param clazz  the clazz to accept
-     * @param <T>    the type
-     * @return T
-     */
-    public <T> T fromJson(String source, Class<T> clazz) {
-        return JsonDeUtils.fromJson(source, clazz);
     }
 
     /**
@@ -361,7 +298,7 @@ public class RedisService {
         args.add(uuid);
 
         Boolean resp = true;
-        Long result = redisTemplate.execute(new RedisCallback<Long>() {
+        Long result = (Long) redisTemplate.execute(new RedisCallback<Long>() {
             @Override
             public Long doInRedis(RedisConnection connection) throws DataAccessException {
                 Object nativeConnection = connection.getNativeConnection();

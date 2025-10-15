@@ -59,7 +59,7 @@ public class SysPositionVo {
     /** 状态（0未生效 1正常） */
     @Excel(name = "状态", readConverterExp = "0=未生效,1=正常")
 
-    /** 状态（0未生效1正常2受限3锁定） */
+    /** 状态（0未生效1正常2受限3锁定4删除） */
     private Integer  status;
 
     /** 创建者 */

@@ -45,7 +45,7 @@ import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.commons.db.page.Pagination;
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.mbiz.constant.HttpStatusEnum;
 import net.linlan.frame.view.admin.service.InitialRedisService;
@@ -264,7 +264,7 @@ public class CommFileController extends BaseController {
             String ext = FilenameUtils.getExtension(origName).toLowerCase(Locale.ENGLISH);
             if (ResourceType.FILE_SUFFIX.contains(ext)) {//FILE_SUFFIX中不包含xlsx 因此加了判断 DOCUMENT_SUFFIX
                 String context = request.getContextPath();
-                FrameAdminUser loginUser = SecurityUtils.getLoginUser();
+                FrameUserDetails loginUser = SecurityUtils.getLoginUser();
                 FileInfo fileInfo = uploadFileService.uploadFileByMember(multipartFile, context,
                     Constants.ENT_APP_ID, loginUser.getUserId());
                 return ResponseResult.ok().setResultData(fileInfo);
@@ -290,7 +290,7 @@ public class CommFileController extends BaseController {
                                                       HttpServletRequest request) throws Exception {
         try {
             // 上传文件路径
-            FrameAdminUser loginUser = SecurityUtils.getLoginUser();
+            FrameUserDetails loginUser = SecurityUtils.getLoginUser();
             List<FileInfo> fileInfos = new ArrayList<>();
 
             for (MultipartFile file : files) {

@@ -28,7 +28,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
-import net.linlan.frame.FrameAdminUser;
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -73,7 +73,7 @@ public class PropertiesAutoSaveAspect {
                     baseEntity.setLastTime(date);
                 }
                 if (baseEntity.getCreatorId() == null) {
-                    FrameAdminUser user = SecurityUtils.getLoginUser();
+                    FrameUserDetails user = SecurityUtils.getLoginUser();
                     if (user != null) {
                         baseEntity.setCreatorId(user == null ? null : user.getUserId());
                     }
