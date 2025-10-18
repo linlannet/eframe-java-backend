@@ -42,7 +42,7 @@ public class PublicNotice extends BaseEntity {
     /**
      * 应用ID
      */
-    private String appId;
+    private String  appId;
 
     /**
      * 机构ID

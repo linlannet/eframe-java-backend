@@ -1,5 +1,5 @@
 /*
- * eframe-support - frame支撑模块
+ * eframe-model - model模型数据模块
  * Copyright © 2020-2025 Linlan (open@linlan.net)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,27 +15,21 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.utils.enums;
+package net.linlan.frame.provider.dto;
+
+import lombok.Data;
+
+import net.linlan.frame.provider.entity.IdentityProvider;
 
 /**
  *
- * BaseEnum:整形基础枚举接口,对枚举类字段进行定义
+ * IdentityProvider数据域:身份提供商Dto对象
  * @author Linlan
- * CreateTime 2021-11-22 18:18:55
+ *
+ * CreateTime 2025-08-31 23:33:33
  *
  */
-public interface BaseEnumInteger {
-
-    /**
-     * 名称
-     * @return 名称
-     */
-    int getKey();
-
-    /**
-     * 值
-     * @return 值
-     */
-    String getValue();
+@Data
+public class IdentityProviderDto extends IdentityProvider {
 
 }

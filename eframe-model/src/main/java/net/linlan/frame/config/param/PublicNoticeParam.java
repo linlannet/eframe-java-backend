@@ -40,7 +40,7 @@ public class PublicNoticeParam extends BaseParam {
     /**
      * 应用ID
      */
-    private String appId;
+    private String  appId;
     /**
      * 机构ID
      */

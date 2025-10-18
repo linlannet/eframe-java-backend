@@ -56,16 +56,15 @@ import static net.linlan.commons.core.NumberUtils.isNumeric;
 public class RedisService {
 
     @Resource
-    private RedisTemplate          redisTemplate;
+    private RedisTemplate       redisTemplate;
 
     @Resource
-    private StringRedisTemplate                    stringRedisTemplate;
+    private StringRedisTemplate stringRedisTemplate;
 
     /**
      * 不设置过期时长
      */
-    public final static long                       NOT_EXPIRE = KernelConstant.NOT_EXPIRE;
-
+    public final static long    NOT_EXPIRE = KernelConstant.NOT_EXPIRE;
 
     /**
      * get the value of input key
@@ -92,7 +91,6 @@ public class RedisService {
         }
         return null;
     }
-
 
     /**
      * set the redis key with value with default expire

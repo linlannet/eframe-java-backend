@@ -19,13 +19,13 @@ package net.linlan.frame.admin.service;
 
 import javax.annotation.Resource;
 
-import net.linlan.sys.web.KernelConstant;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.sys.base.entity.BaseConfigWhole;
 import net.linlan.sys.base.service.BaseConfigWholeService;
+import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.text.Convert;
@@ -56,7 +56,8 @@ public class InitialConfigService {
         }
         BaseConfigWhole retConfig = baseConfigWholeService.getByKey(configKey);
         if (ObjectUtils.isNotEmpty(retConfig)) {
-            redisService.set(getCacheKey(configKey), retConfig.getCfgValue(), KernelConstant.ONE_DAY_EXPIRE);
+            redisService.set(getCacheKey(configKey), retConfig.getCfgValue(),
+                KernelConstant.ONE_DAY_EXPIRE);
             return retConfig.getCfgValue();
         }
         return StringUtils.EMPTY;

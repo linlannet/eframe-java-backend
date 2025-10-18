@@ -289,7 +289,6 @@ public class TokenService {
         return CacheConstants.LOGIN_TOKEN_KEY + uuid;
     }
 
-
     /** 获取用户UserId
      * @param userId    用户ID
      * @return    查询信息

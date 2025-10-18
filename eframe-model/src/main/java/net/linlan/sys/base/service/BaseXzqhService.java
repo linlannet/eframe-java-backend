@@ -40,7 +40,6 @@ import net.linlan.sys.base.param.BaseXzqhParam;
 import net.linlan.sys.base.param.TreeParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
-
 import static net.linlan.utils.constant.CacheConstants.BASE_XZQH_KEY;
 
 /**
@@ -55,10 +54,9 @@ import static net.linlan.utils.constant.CacheConstants.BASE_XZQH_KEY;
 public class BaseXzqhService {
 
     @Resource
-    private BaseXzqhDao        dao;
+    private BaseXzqhDao  dao;
     @Resource
-    private RedisService       redisService;
-
+    private RedisService redisService;
 
     /** get the list of entity BaseXzqh
      * 列表方法，返回列表的行政区划数据 {@link List} 对象，包含 {@link BaseXzqh} 列表

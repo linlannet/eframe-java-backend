@@ -76,5 +76,5 @@ public class CacheConstants {
     /**
      * redis 字典缓存前缀
      */
-    public static final String BASE_XZQH_KEY = "base_xzqh:";
+    public static final String BASE_XZQH_KEY        = "base_xzqh:";
 }

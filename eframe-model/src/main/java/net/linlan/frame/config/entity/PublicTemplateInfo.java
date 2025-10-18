@@ -1,6 +1,22 @@
+/*
+ * eframe-model - model模型数据模块
+ * Copyright © 2020-2025 Linlan (open@linlan.net)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package net.linlan.frame.config.entity;
 
-import java.util.Date;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
@@ -22,57 +38,57 @@ public class PublicTemplateInfo extends BaseEntity {
     /**
      * 模板ID
      */
-    private String id;
+    private String  id;
 
     /**
      * 应用ID
      */
-    private String appId;
+    private String  appId;
 
     /**
      * 机构ID
      */
-    private String organId;
+    private String  organId;
 
     /**
      * 提供商ID，平台ID
      */
-    private String providerId;
+    private String  providerId;
 
     /**
      * 提供商名称，平台名称
      */
-    private String providerName;
+    private String  providerName;
 
     /**
      * 外键ID
      */
-    private String foreignId;
+    private String  foreignId;
 
     /**
      * 模板类型，邮件模板，短信模板
      */
-    private String type;
+    private String  type;
 
     /**
      * 模板子类型
      */
-    private String subType;
+    private String  subType;
 
     /**
      * 模板名称，标题名称
      */
-    private String name;
+    private String  name;
 
     /**
      * 签名，发送人名称
      */
-    private String signature;
+    private String  signature;
 
     /**
      * 内容JSON，发布版本的JSON配置
      */
-    private String content;
+    private String  content;
 
     /**
      * 排序号
@@ -92,25 +108,24 @@ public class PublicTemplateInfo extends BaseEntity {
     /**
      * 备注
      */
-    private String description;
+    private String  description;
 
     /**
      * 备用1
      */
-    private String spare1;
+    private String  spare1;
 
     /**
      * 备用2
      */
-    private String spare2;
-
+    private String  spare2;
 
     /**
      * 初始化方法
      */
     public void init() {
         //添加对数据库或实体对象的默认值处理
-        if(getId() == null) {
+        if (getId() == null) {
             setId(RandomUtils.randomSid());
         }
 

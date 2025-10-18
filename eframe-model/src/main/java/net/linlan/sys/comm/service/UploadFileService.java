@@ -296,7 +296,8 @@ public class UploadFileService {
         //String origName = file.getOriginalFilename();//获取源文件名
         //String ext = FilenameUtils.getExtension(origName).toLowerCase(Locale.ENGLISH);//获取扩展名称
         //设置redis 实现秒传
-        String resRedis = (String) redisService.get("bigFileUpload:finish:hash:" + hash + ":seq" + seq);
+        String resRedis = (String) redisService
+            .get("bigFileUpload:finish:hash:" + hash + ":seq" + seq);
         if (resRedis != null && "200".equals(resRedis)) {//表示已经完成了上传直接跳过
             fileInfo.setOriginFilename(file.getOriginalFilename());
             fileInfo.setFilename(file.getOriginalFilename());

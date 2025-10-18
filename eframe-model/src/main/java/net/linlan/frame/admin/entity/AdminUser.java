@@ -20,11 +20,12 @@ package net.linlan.frame.admin.entity;
 import java.util.Date;
 
 import com.alibaba.fastjson2.annotation.JSONField;
+
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.constant.UserStatus;
 import net.linlan.utils.entity.BaseEntity;
-import net.linlan.utils.enums.UserStatus;
 
 /**
  *

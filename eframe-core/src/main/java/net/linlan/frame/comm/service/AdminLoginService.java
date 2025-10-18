@@ -30,6 +30,7 @@ import org.springframework.stereotype.Component;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.constant.UserStatus;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUser;
@@ -37,7 +38,6 @@ import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.admin.service.InitialConfigService;
 import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
-import net.linlan.frame.comm.security.UserDetailsServiceImpl;
 import net.linlan.frame.comm.security.context.AuthenticationContextHolder;
 import net.linlan.frame.comm.vo.AppLoginInfo;
 import net.linlan.sys.web.KernelConstant;
@@ -47,7 +47,6 @@ import net.linlan.utils.ServletUtils;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.constant.Constants;
 import net.linlan.utils.constant.UserConstants;
-import net.linlan.utils.enums.UserStatus;
 import net.linlan.utils.exception.CommonException;
 import net.linlan.utils.exception.user.BlackListException;
 import net.linlan.utils.exception.user.CaptchaException;
@@ -64,23 +63,23 @@ import net.linlan.utils.ip.IPUtils;
 @Component
 public class AdminLoginService {
     @Resource
-    private TokenService           tokenService;
+    private TokenService          tokenService;
 
     @Resource
-    private AuthenticationManager  authenticationManager;
+    private AuthenticationManager authenticationManager;
 
     @Resource
-    private RedisService           redisService;
+    private RedisService          redisService;
 
     @Resource
-    private AdminUserService       adminUserService;
+    private AdminUserService      adminUserService;
 
     @Resource
-    private InitialConfigService   initialConfigService;
+    private InitialConfigService  initialConfigService;
     @Resource
-    private SysPasswordService     sysPasswordService;
+    private SysPasswordService    sysPasswordService;
     @Resource
-    private UserDetailsServiceImpl userDetailsServiceImpl;
+    private SysPermissionService  sysPermissionService;
 
     /**
      * 登录验证
@@ -234,7 +233,8 @@ public class AdminLoginService {
         }
         // 重写验证方法
         sysPasswordService.socialValidate(user, encodePwd, appId);
-        org.springframework.security.core.userdetails.UserDetails userDetails = userDetailsServiceImpl.createLoginUser(user);
+        org.springframework.security.core.userdetails.UserDetails userDetails = sysPermissionService
+            .createLoginUser(user);
         FrameUserDetails loginUser = (FrameUserDetails) userDetails;
         recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()

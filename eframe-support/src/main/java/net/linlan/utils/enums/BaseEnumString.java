@@ -28,11 +28,13 @@ public interface BaseEnumString {
 
     /**
      * 名称
+     * @return 名称
      */
     String getKey();
 
     /**
      * 值
+     * @return 值
      */
     String getValue();
 

@@ -40,7 +40,7 @@ public class PublicUnionMessageParam extends BaseParam {
     /**
      * 应用ID
      */
-    private String appId;
+    private String  appId;
     /**
      * 站点门户ID
      */

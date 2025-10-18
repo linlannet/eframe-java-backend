@@ -42,7 +42,7 @@ public class PublicUnionMessage extends BaseEntity {
     /**
      * 应用ID
      */
-    private String appId;
+    private String  appId;
 
     /**
      * 站点门户ID

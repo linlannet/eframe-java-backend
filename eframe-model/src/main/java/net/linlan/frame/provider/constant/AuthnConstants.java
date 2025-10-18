@@ -1,5 +1,5 @@
 /*
- * eframe-support - frame支撑模块
+ * eframe-model - model模型数据模块
  * Copyright © 2020-2025 Linlan (open@linlan.net)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,41 +15,37 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.utils.enums;
+package net.linlan.frame.provider.constant;
+
+import net.linlan.utils.constant.SecurityConstants;
 
 /**
- * 用户状态
- * 
+ * 认证授权常量
+ *
  * @author Linlan
  */
-public enum UserStatus implements BaseEnumInteger{
-    NOT(0, "未生效"),
-    OK(1, "正常"),
-    DISABLE(2, "停用"),
-    LOCKED(3, "锁定"),
-    DELETED(4, "删除");
+public class AuthnConstants {
     /**
-     * 键
+     * 认证管理
      */
-    private final int key;
+    public static final String AUTHN_GROUP_NAME          = "认证管理";
     /**
-     * 值
+     * 授权路径
      */
-    private final String value;
+    public final static String AUTHN_PATH                = "/authn";
 
-    UserStatus(int key, String value) {
-        this.key = key;
-        this.value = value;
-    }
+    /**
+     * 登录配置
+     */
+    public static final String LOGIN_CONFIG              = SecurityConstants.LOGIN_PATH + "/config";
 
-    @Override
-    public int getKey() {
-        return key;
-    }
-
-    @Override
-    public String getValue() {
-        return value;
-    }
+    /**
+     * 前端登录路由
+     */
+    public static final String FE_LOGIN                  = "/login";
+    /**
+     * 认证请求URL
+     */
+    public static final String AUTHORIZATION_REQUEST_URI = "/authorization";
 
 }

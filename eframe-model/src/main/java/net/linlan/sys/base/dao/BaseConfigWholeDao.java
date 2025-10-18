@@ -90,4 +90,5 @@ public interface BaseConfigWholeDao extends MybatisBaseDao<BaseConfigWhole> {
 
     void deleteByKeys(@Param("keys") List<String> keys);
 
+    List<BaseConfigWhole> getByCfgCategory(String cfgCategory);
 }

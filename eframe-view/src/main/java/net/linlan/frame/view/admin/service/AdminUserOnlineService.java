@@ -76,7 +76,8 @@ public class AdminUserOnlineService {
      * @param user 用户信息
      * @return 在线用户信息
      */
-    public AdminUserOnline selectOnlineByInfo(String ipaddr, String username, FrameUserDetails user) {
+    public AdminUserOnline selectOnlineByInfo(String ipaddr, String username,
+                                              FrameUserDetails user) {
         if (StringUtils.equals(ipaddr, user.getLoginIp())
             && StringUtils.equals(username, user.getUsername())) {
             return loginUserToUserOnline(user);

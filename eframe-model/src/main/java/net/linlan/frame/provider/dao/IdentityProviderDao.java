@@ -15,42 +15,39 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.frame.config.dao;
+package net.linlan.frame.provider.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
 import com.github.pagehelper.Page;
 
 import net.linlan.commons.db.mybatis.MybatisBaseDao;
-import net.linlan.frame.config.dto.PublicTemplateInfoDto;
-import net.linlan.frame.config.entity.PublicTemplateInfo;
-import net.linlan.frame.config.param.PublicTemplateInfoParam;
+import net.linlan.frame.provider.dto.IdentityProviderDto;
+import net.linlan.frame.provider.entity.IdentityProvider;
+import net.linlan.frame.provider.param.IdentityProviderParam;
 
 /**
 *
-* PublicTemplateInfo数据域:模板信息配置持久层Dao
-* 
+* IdentityProvider数据域:身份提供商持久层Dao
 * @author Linlan
-* CreateTime 2025-10-15 13:52:44
-* @version 1.0
-* @since 1.0
+* CreateTime 2025-08-31 23:33:33
 *
 */
 @Mapper
-public interface PublicTemplateInfoDao extends MybatisBaseDao<PublicTemplateInfo> {
+public interface IdentityProviderDao extends MybatisBaseDao<IdentityProvider> {
 
-    /** get the page of dto PublicTemplateInfoDto
+    /** get the page of dto IdentityProviderDto
      * 列表分页方法，返回分页DTO对象列表
      * @param param the input param 查询参数
-     * @return 分页的模板信息配置数据 {@link Page} 对象，包含 {@link PublicTemplateInfo} 列表
+     * @return 分页的身份提供商数据 {@link Page} 对象，包含 {@link IdentityProvider} 列表
      */
-    Page<PublicTemplateInfoDto> getPageDto(PublicTemplateInfoParam param);
+    Page<IdentityProviderDto> getPageDto(IdentityProviderParam param);
 
     /** get the dto by input id, return dto
-     * 对象详情方法，通过id查询对象{@link PublicTemplateInfoDto}
-     * @param id 模板ID|1
-     * @return {@link PublicTemplateInfoDto}
+     * 对象详情方法，通过id查询对象{@link IdentityProviderDto}
+     * @param id 主键ID|1
+     * @return {@link IdentityProviderDto}
      */
-    PublicTemplateInfoDto getDtoById(String id);
+    IdentityProviderDto getDtoById(String id);
 
 }

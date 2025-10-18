@@ -17,6 +17,7 @@
  */
 package net.linlan.frame.comm.service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -26,6 +27,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.service.AdminMenuVoService;
 import net.linlan.frame.admin.service.AdminRoleVoService;
@@ -93,4 +95,33 @@ public class SysPermissionService {
         }
         return perms;
     }
+
+    public FrameUserDetails createLoginUser(AdminUserDto user) {
+        // 用户权限列表
+        Set<String> perms = getMenuPermission(user);
+        FrameUserDetails frameUserDetails = new FrameUserDetails(user.getUserId(), perms);
+        frameUserDetails.setUserId(user.getUserId());
+        frameUserDetails.setUsername(user.getUsername());
+        frameUserDetails.setPassword(user.getPassword());
+        frameUserDetails.setViewName(user.getName());
+        frameUserDetails.setDeptId(user.getDeptId());
+        frameUserDetails.setOrganId(user.getOrganId());
+        frameUserDetails.setMobile(user.getMobile());
+        frameUserDetails.setEmail(user.getEmail());
+        frameUserDetails.setImagePath(user.getImagePath());
+        frameUserDetails.setUserType(user.getAdminType());
+        frameUserDetails.setLoginIp(user.getLastLoginIp());
+        frameUserDetails.setLoginTime(user.getLastLoginTime());
+        frameUserDetails.setLoginCount(user.getLoginCount());
+        // 数据权限范围关联机构部门或地域层级，TODO
+        List<Long> deptIds = new ArrayList<>();
+
+        // 用户角色编码列表
+        Set<String> roleCodeList = getRolePermission(user);
+        roleCodeList.forEach(roleCode -> perms.add("ROLE_" + roleCode));
+
+        frameUserDetails.setPerms(perms);
+        return frameUserDetails;
+    }
+
 }

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.frame.config.param;
+package net.linlan.frame.provider.param;
 
 import lombok.Data;
 
@@ -23,71 +23,57 @@ import net.linlan.utils.param.BaseParam;
 
 /**
  *
- * PublicTemplateInfo数据域:模板信息配置查询参数实体类
- * 
+ * IdentityProvider数据域:身份提供商查询参数实体类
  * @author Linlan
- * CreateTime 2025-10-15 13:52:44
- * @version 1.0
- * @since 1.0
+ * 
+ * CreateTime 2025-08-31 23:33:33
  *
  */
 @Data
-public class PublicTemplateInfoParam extends BaseParam {
+public class IdentityProviderParam extends BaseParam {
 
     /**
-     * 模板ID
+     * 主键ID
      */
     private String  id;
-    /**
-     * 应用ID
-     */
-    private String  appId;
-    /**
-     * 机构ID
-     */
-    private String  organId;
-    /**
-     * 提供商ID，平台ID
-     */
-    private String  providerId;
-    /**
-     * 提供商名称，平台名称
-     */
-    private String  providerName;
     /**
      * 外键ID
      */
     private String  foreignId;
     /**
-     * 模板类型，邮件模板，短信模板
-     */
-    private String  type;
-    /**
-     * 模板子类型
-     */
-    private String  subType;
-    /**
-     * 模板名称，标题名称
+     * 名称
      */
     private String  name;
     /**
-     * 签名，发送人名称
+     * 编码
      */
-    private String  signature;
+    private String  code;
     /**
-     * 内容JSON，发布版本的JSON配置
+     * 提供者类型
      */
-    private String  content;
+    private String  type;
     /**
-     * 状态0未生效1正常2受限3锁定
+     * 配置JSON
      */
-    private Integer status;
+    private String  config;
     /**
-     * 创建者ID
+     * 认证源分类（社交、企业）
+     */
+    private String  category;
+    /**
+     * 是否启用，0否1是
+     */
+    private Boolean isEnabled;
+    /**
+     * 是否显示，0否1是
+     */
+    private Boolean isDisplayed;
+    /**
+     * 创建人ID
      */
     private String  creatorId;
     /**
-     * 删除标记0正常1已删除2应用内受限3回收站
+     * 删除标记，0未删除1已删除
      */
     private Integer delFlag;
     /**

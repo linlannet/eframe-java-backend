@@ -199,4 +199,9 @@ public class Constants {
      */
     public static final String   SITE_KEY             = "ll-site";
 
+    /**
+     * OK
+     */
+    public static final String   OK                   = "OK";
+
 }

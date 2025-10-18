@@ -40,11 +40,11 @@ public class LoginUserProfileVo {
     /**
      * 角色组
      */
-    private String         roleGroup;
+    private String           roleGroup;
 
     /**
      * 岗位组
      */
-    private String         positionGroup;
+    private String           positionGroup;
 
 }

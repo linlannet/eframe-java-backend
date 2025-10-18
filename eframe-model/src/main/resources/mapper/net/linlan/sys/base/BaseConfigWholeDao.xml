@@ -282,4 +282,9 @@
         </foreach>
     </delete>
 
+    <!-- 根据cfgCategory查询列表 -->
+    <select id="getByCfgCategory" parameterType="string" resultMap="baseConfigWholeMap">
+        select * from BASE_CONFIG_WHOLE where CFG_CATAGORY = #{cfgCategory}
+    </select>
+
 </mapper>

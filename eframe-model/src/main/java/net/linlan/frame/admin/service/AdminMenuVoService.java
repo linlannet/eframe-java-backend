@@ -44,13 +44,13 @@ import net.linlan.sys.role.service.SysRoleService;
 public class AdminMenuVoService {
 
     @Resource
-    private AdminMenuVoDao     adminMenuDao;
+    private AdminMenuVoDao   adminMenuDao;
     @Resource
-    private SysRoleService     sysRoleService;
+    private SysRoleService   sysRoleService;
     @Resource
-    private CurrAppService     currAppService;
+    private CurrAppService   currAppService;
     @Resource
-    private AdminUserService   adminUserService;
+    private AdminUserService adminUserService;
 
     /**
      * 根据用户所有权限

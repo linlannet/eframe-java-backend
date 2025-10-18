@@ -26,7 +26,6 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
-import net.linlan.sys.web.KernelConstant;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
@@ -39,6 +38,7 @@ import net.linlan.sys.base.entity.BaseConfigWhole;
 import net.linlan.sys.base.entity.BaseDictionary;
 import net.linlan.sys.base.service.BaseConfigWholeService;
 import net.linlan.sys.base.service.BaseDictionaryService;
+import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
 import net.linlan.utils.constant.CacheConstants;
 
@@ -74,7 +74,8 @@ public class InitialRedisService {
         List<BaseConfigWhole> configsList = baseConfigWholeService
             .getList(new StringMap().put("isDisabled", false).map());
         for (BaseConfigWhole config : configsList) {
-            redisService.set(getCacheKey(config.getCfgKey()), config.getCfgValue(), KernelConstant.ONE_DAY_EXPIRE);
+            redisService.set(getCacheKey(config.getCfgKey()), config.getCfgValue(),
+                KernelConstant.ONE_DAY_EXPIRE);
         }
     }
 

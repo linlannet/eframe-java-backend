@@ -1,6 +1,24 @@
+/*
+ * eframe-api - api接口网关模块
+ * Copyright © 2020-2025 Linlan (open@linlan.net)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package net.linlan.frame.api.config;
 
 import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,19 +36,18 @@ import net.linlan.frame.config.entity.PublicTemplateInfo;
 import net.linlan.frame.config.param.PublicTemplateInfoParam;
 import net.linlan.frame.config.service.PublicTemplateInfoService;
 
- /**
- *
- * PublicTemplateInfo控制域:模板信息配置读写控制类
- * @author Linlan
- * CreateTime 2025-10-15 13:52:44
- * @version 1.0
- * @since 1.0
- *
- */
+/**
+*
+* PublicTemplateInfo控制域:模板信息配置读写控制类
+* @author Linlan
+* CreateTime 2025-10-15 13:52:44
+* @version 1.0
+* @since 1.0
+*
+*/
 @RestController
 @RequestMapping("/api/system")
-public class PublicTemplateInfoController extends BaseController
-{
+public class PublicTemplateInfoController extends BaseController {
     @Resource
     private PublicTemplateInfoService publicTemplateInfoService;
 
@@ -42,13 +59,13 @@ public class PublicTemplateInfoController extends BaseController
     @PlatLog(value = "查询模板信息配置分页", category = 0)
     @GetMapping("/template/list")
     @Encrypt
-    public ResponseResult<List<PublicTemplateInfo>> list(PublicTemplateInfoParam param)
-    {
+    public ResponseResult<List<PublicTemplateInfo>> list(PublicTemplateInfoParam param) {
         Page<PublicTemplateInfoDto> result = publicTemplateInfoService.getPageDto(param);
-        if (result == null){
+        if (result == null) {
             return empty();
         }
-        return successPage(result.getResult(), result.getPageSize(), result.getPageNum(), result.getTotal());
+        return successPage(result.getResult(), result.getPageSize(), result.getPageNum(),
+            result.getTotal());
     }
 
     /**
@@ -60,8 +77,7 @@ public class PublicTemplateInfoController extends BaseController
     @PlatLog(value = "主键获取模板信息配置详细信息", category = 1)
     @GetMapping(value = "/template/{id}")
     @Encrypt
-    public ResponseResult<PublicTemplateInfo> findById(@PathVariable("id") String id)
-    {
+    public ResponseResult<PublicTemplateInfo> findById(@PathVariable("id") String id) {
         return success(publicTemplateInfoService.findById(id));
     }
 
@@ -74,8 +90,7 @@ public class PublicTemplateInfoController extends BaseController
     @PostMapping("/template/save")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoSave", key = "publicTemplateInfoSave")
-    public ResponseResult<String> save(@RequestBody PublicTemplateInfo input)
-    {
+    public ResponseResult<String> save(@RequestBody PublicTemplateInfo input) {
         publicTemplateInfoService.save(input);
         return success();
     }
@@ -89,8 +104,7 @@ public class PublicTemplateInfoController extends BaseController
     @PostMapping("/template/update")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoUpdate", key = "publicTemplateInfoUpdate")
-    public ResponseResult<String> update(@RequestBody PublicTemplateInfo input)
-    {
+    public ResponseResult<String> update(@RequestBody PublicTemplateInfo input) {
         publicTemplateInfoService.update(input);
         return success();
     }
@@ -101,11 +115,10 @@ public class PublicTemplateInfoController extends BaseController
      */
     @PreAuthorize("@ss.hasPerms('system:template:delete')")
     @PlatLog(value = "删除模板信息配置", category = 40)
-	@PostMapping("/template/delete/{ids}")
+    @PostMapping("/template/delete/{ids}")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoDelete", key = "publicTemplateInfoDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids)
-    {
+    public ResponseResult<String> delete(@PathVariable String[] ids) {
         publicTemplateInfoService.deleteByIds(ids);
         return success();
     }

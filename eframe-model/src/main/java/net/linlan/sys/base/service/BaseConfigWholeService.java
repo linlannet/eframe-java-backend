@@ -214,4 +214,8 @@ public class BaseConfigWholeService {
         dao.deleteByKeys(keys);
     }
 
+    public List<BaseConfigWhole> getByCfgCategory(String cfgCategory) {
+        return dao.getByCfgCategory(cfgCategory);
+    }
+
 }

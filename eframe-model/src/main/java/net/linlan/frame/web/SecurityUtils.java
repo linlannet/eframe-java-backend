@@ -112,7 +112,7 @@ public class SecurityUtils {
             return (FrameUserDetails) getAuthentication().getPrincipal();
         } catch (Exception e) {
             //在登出的时候，没有用户，此时仍然需要保存操作记录，返回null对象
-//            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED);
+            //            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED);
             return null;
         }
     }

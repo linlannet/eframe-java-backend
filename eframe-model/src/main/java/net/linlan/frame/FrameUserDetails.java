@@ -19,21 +19,19 @@ package net.linlan.frame;
 
 import java.util.Collection;
 import java.util.Date;
-
 import java.util.Set;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import com.alibaba.fastjson2.annotation.JSONField;
-import lombok.Getter;
-import lombok.Setter;
-import net.linlan.frame.admin.dto.AdminUserDto;
-import org.springframework.security.core.GrantedAuthority;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import net.linlan.commons.core.DateUtils;
-import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  *
@@ -115,7 +113,7 @@ public class FrameUserDetails implements UserDetails {
     /**
      * 上次登录IP
      */
-    private String loginIp;
+    private String            loginIp;
 
     /**
      * 最后修改密码时间
@@ -135,7 +133,7 @@ public class FrameUserDetails implements UserDetails {
     /**
      * 过期时间
      */
-    private Date expireTime;
+    private Date              expireTime;
 
     /**
      * 登录时间
@@ -165,14 +163,13 @@ public class FrameUserDetails implements UserDetails {
     /**
      * 权限列表
      */
-    private Set<String> perms;
+    private Set<String>       perms;
 
     public FrameUserDetails() {
 
     }
 
-    public FrameUserDetails(String userId, Set<String> permissions)
-    {
+    public FrameUserDetails(String userId, Set<String> permissions) {
         this.userId = userId;
         this.perms = permissions;
     }
@@ -216,8 +213,7 @@ public class FrameUserDetails implements UserDetails {
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities()
-    {
+    public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 

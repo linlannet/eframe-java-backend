@@ -1,7 +1,25 @@
+/*
+ * eframe-model - model模型数据模块
+ * Copyright © 2020-2025 Linlan (open@linlan.net)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package net.linlan.frame.config.service;
 
 import java.util.List;
 import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -12,8 +30,8 @@ import com.github.pagehelper.PageHelper;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.config.dao.PublicTemplateInfoDao;
-import net.linlan.frame.config.entity.PublicTemplateInfo;
 import net.linlan.frame.config.dto.PublicTemplateInfoDto;
+import net.linlan.frame.config.entity.PublicTemplateInfo;
 import net.linlan.frame.config.param.PublicTemplateInfoParam;
 
 /**
@@ -48,7 +66,7 @@ public class PublicTemplateInfoService {
      * @return {@link PublicTemplateInfo}
      */
     public PublicTemplateInfo findById(String id) {
-        if (StringUtils.isBlank(id)){
+        if (StringUtils.isBlank(id)) {
             return null;
         }
         return dao.findById(id);
@@ -86,7 +104,7 @@ public class PublicTemplateInfoService {
      * @param id 模板ID|1
      */
     public void deleteById(String id) {
-        if (StringUtils.isBlank(id)){
+        if (StringUtils.isBlank(id)) {
             return;
         }
         dao.deleteById(id);
@@ -98,7 +116,7 @@ public class PublicTemplateInfoService {
      */
     //@Transactional
     public void deleteByIds(String[] ids) {
-        if(ObjectUtils.isEmpty(ids)){
+        if (ObjectUtils.isEmpty(ids)) {
             return;
         }
         dao.deleteByIds(ids);
@@ -130,7 +148,7 @@ public class PublicTemplateInfoService {
      * @return {@link PublicTemplateInfoDto}
      */
     public PublicTemplateInfoDto getDtoById(String id) {
-        if (StringUtils.isBlank(id)){
+        if (StringUtils.isBlank(id)) {
             return null;
         }
         return dao.getDtoById(id);

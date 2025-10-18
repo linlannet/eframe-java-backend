@@ -17,25 +17,16 @@
  */
 package net.linlan.utils.enums;
 
+import java.lang.annotation.*;
+
 /**
+ * 枚举转换
+ * 作用于方法上
  *
- * BaseEnum:整形基础枚举接口,对枚举类字段进行定义
  * @author Linlan
- * CreateTime 2021-11-22 18:18:55
- *
  */
-public interface BaseEnumInteger {
-
-    /**
-     * 名称
-     * @return 名称
-     */
-    int getKey();
-
-    /**
-     * 值
-     * @return 值
-     */
-    String getValue();
-
+@Target({ ElementType.METHOD })
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface EnumConvert {
 }

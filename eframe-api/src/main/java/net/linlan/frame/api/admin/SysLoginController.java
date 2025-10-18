@@ -156,7 +156,8 @@ public class SysLoginController {
     @Encrypt
     public ResponseResult<WebLayoutDto> platLogin(HttpServletRequest request) {
         String accountId = request.getHeader(Constants.ACCOUNT_KEY);
-        CoreAccount coreAccount = (CoreAccount) redisService.get(CacheConstants.PLAT_ACCOUNT_KEY + accountId);
+        CoreAccount coreAccount = (CoreAccount) redisService
+            .get(CacheConstants.PLAT_ACCOUNT_KEY + accountId);
         if (coreAccount == null) {
             //用户信息未在Session中
             coreAccount = coreAccountService.findById(accountId);

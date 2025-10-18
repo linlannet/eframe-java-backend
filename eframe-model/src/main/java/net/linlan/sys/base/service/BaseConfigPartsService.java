@@ -37,7 +37,7 @@ import net.linlan.sys.base.entity.BaseConfigParts;
 import net.linlan.sys.base.param.BaseConfigPartsParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
-import net.linlan.utils.crypt.AESUtil;
+import net.linlan.utils.crypt.AESUtils;
 import static net.linlan.utils.constant.CacheConstants.BASE_CONFIGWHOLE_KEY;
 
 /**
@@ -271,7 +271,7 @@ public class BaseConfigPartsService {
         }
         BaseConfigParts parts = dao.findById(AES_SALT_KEY);
         if (parts != null) {
-            String globalSalt = AESUtil.decryptAes(parts.getCfgValue(), SALT);
+            String globalSalt = AESUtils.decrypt(parts.getCfgValue(), SALT);
             AES_SALT = globalSalt;
             return globalSalt;
         }
@@ -283,35 +283,11 @@ public class BaseConfigPartsService {
      * @param content   内容
      * @return    返回结果
      */
-    public static String encryptAes(String content) {
-        if (StringUtils.isEmpty(AES_SALT)) {
-            return "";
-        }
-        return AESUtil.encryptAes(content, AES_SALT);
-    }
-
-    /**
-     * 敏感信息加密
-     * @param content    内容
-     * @return    返回结果
-     */
     public static String encrypt(String content) {
-        return encryptAes(content);
-    }
-
-    /**
-     * 敏感信息解密
-     * @param content    内容
-     * @return    返回结果
-     */
-    public static String decryptAes(String content) {
         if (StringUtils.isEmpty(AES_SALT)) {
             return "";
         }
-        if (StringUtils.isEmpty(content)) {
-            return "";
-        }
-        return AESUtil.decryptAes(content, AES_SALT);
+        return AESUtils.encrypt(content, AES_SALT);
     }
 
     /**
@@ -320,7 +296,13 @@ public class BaseConfigPartsService {
      * @return    返回结果
      */
     public static String decrypt(String content) {
-        return decryptAes(content);
+        if (StringUtils.isEmpty(AES_SALT)) {
+            return "";
+        }
+        if (StringUtils.isEmpty(content)) {
+            return "";
+        }
+        return AESUtils.decrypt(content, AES_SALT);
     }
 
 }
