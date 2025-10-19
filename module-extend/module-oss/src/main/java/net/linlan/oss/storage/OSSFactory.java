@@ -1,5 +1,5 @@
 /*
- * eframe-java-backend - JAVA开发的企业级后端框架，基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等，借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
+ * module-oss - 存储对接模块
  * Copyright © 2020-2025 Linlan (open@linlan.net)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -62,14 +62,14 @@ public final class OSSFactory {
                                * 腾讯云
                                */
                               QCLOUD(3),
-        /**
-         * 阿里云
-         */
-        HUAWEICLOUD(4),
-        /**
-         * 腾讯云
-         */
-        MINIO(5);
+                              /**
+                               * 阿里云
+                               */
+                              HUAWEICLOUD(4),
+                              /**
+                               * 腾讯云
+                               */
+                              MINIO(5);
 
         private int value;
 
