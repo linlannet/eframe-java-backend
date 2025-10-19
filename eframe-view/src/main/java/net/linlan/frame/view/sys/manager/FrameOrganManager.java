@@ -32,6 +32,7 @@ import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.mbiz.ApiIntfConfig;
 import net.linlan.frame.view.sys.service.FrameDictionaryService;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.base.entity.BaseOrgan;
 import net.linlan.sys.base.entity.BaseOrganExt;
 import net.linlan.sys.base.service.BaseOrganExtService;
@@ -133,12 +134,12 @@ public class FrameOrganManager {
                 for (String organId : ids) {
                     CoreOrgan coreOrgan = new CoreOrgan();
                     coreOrgan.setId(organId);
-                    coreOrgan.setDelFlag(KernelConstant.DEL_FLAG_APP);
+                    coreOrgan.setDelFlag(DelFlagEnum.LOCKED.getKey());
 
                     BaseOrgan baseOrgan = new BaseOrgan();
                     baseOrgan.setId(organId);
                     baseOrgan.setLastTime(new Timestamp(System.currentTimeMillis()));
-                    baseOrgan.setDelFlag(KernelConstant.DEL_FLAG_APP);
+                    baseOrgan.setDelFlag(DelFlagEnum.LOCKED.getKey());
 
                     BaseOrganExt baseOrganExt = new BaseOrganExt();
                     baseOrganExt.setId(organId);

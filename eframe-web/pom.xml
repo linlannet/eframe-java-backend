@@ -24,11 +24,11 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.9</version>
+        <version>1.1.10</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>eframe-web</artifactId>
-    <version>1.1.9</version>
+    <version>1.1.10</version>
     <packaging>jar</packaging>
     <name>eframe-web</name>
     <description>
@@ -211,6 +211,18 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
 
+        <!-- 配置文件加密 -->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt-spring31</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
         <!-- 核心模块-->
         <dependency>
             <groupId>net.linlan.commons</groupId>
@@ -244,17 +256,21 @@
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-generator</artifactId>
         </dependency>
-
-        <!-- 配置文件加密 -->
+        <!-- 短信邮件社交等扩展模块 -->
         <dependency>
-            <groupId>com.github.ulisesbocchio</groupId>
-            <artifactId>jasypt-spring-boot</artifactId>
-            <version>3.0.3</version>
+            <groupId>net.linlan.eframe</groupId>
+            <artifactId>module-authn</artifactId>
+            <version>1.1.10</version>
         </dependency>
         <dependency>
-            <groupId>org.jasypt</groupId>
-            <artifactId>jasypt-spring31</artifactId>
-            <version>1.9.3</version>
+            <groupId>net.linlan.eframe</groupId>
+            <artifactId>module-oss</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>net.linlan.eframe</groupId>
+            <artifactId>module-social</artifactId>
+            <version>1.1.10</version>
         </dependency>
 
     </dependencies>
@@ -365,12 +381,16 @@
                         <include>net.linlan.eframe:eframe-core</include>
                         <include>net.linlan.eframe:eframe-view</include>
                         <include>net.linlan.eframe:eframe-api</include>
+                        <include>net.linlan.eframe:module-generator</include>
+                        <include>net.linlan.eframe:module-quartz</include>
+                        <include>net.linlan.eframe:module-authn</include>
+                        <include>net.linlan.eframe:module-third</include>
                     </includes>
                 </configuration>
                 <executions>
                     <execution>
                         <!--如果不需要在执行编译时启动smart-doc，则将phase注释掉-->
-<!--                        <phase>compile</phase>-->
+                        <phase>compile</phase>
                         <goals>
                             <!--smart-doc提供了html、openapi、markdown等goal，可按需配置-->
                             <goal>html</goal>

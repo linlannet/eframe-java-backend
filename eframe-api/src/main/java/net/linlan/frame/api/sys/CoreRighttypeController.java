@@ -40,7 +40,7 @@ import net.linlan.sys.core.service.CoreRighttypeService;
 
 /**
  *
- * CoreRighttype控制域:权限分类读写控制类
+ * 权限分类读写控制类
  * @author Linlan
  * CreateTime 2024-12-16 10:58:56
  *

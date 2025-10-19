@@ -73,7 +73,7 @@ public enum Language implements BaseEnumString {
      * @return {@link Language}
      */
     @EnumConvert
-    public static Language getType(String code) {
+    public static Language fromType(String code) {
         Language[] values = values();
         for (Language status : values) {
             if (String.valueOf(status.getLocale()).equals(code)) {

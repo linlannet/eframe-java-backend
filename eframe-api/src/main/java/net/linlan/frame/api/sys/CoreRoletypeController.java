@@ -40,7 +40,7 @@ import net.linlan.sys.core.service.CoreRoletypeService;
 
 /**
  *
- * CoreRoletype控制域:角色分类读写控制类
+ * 角色分类读写控制类
  * @author Linlan
  * CreateTime 2024-12-16 10:47:36
  *

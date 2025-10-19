@@ -20,6 +20,7 @@ package net.linlan.sys.core.entity;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -83,7 +84,7 @@ public class CoreRoletype extends BaseEntity {
             setPriority(KernelConstant.DEFAULT_PRIORITY);
         }
         if (getDelFlag() == null) {
-            setDelFlag(KernelConstant.DEL_FLAG_DEFAULT);
+            setDelFlag(DelFlagEnum.NORMAL.getKey());
         }
     }
 

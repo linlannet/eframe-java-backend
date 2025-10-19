@@ -22,6 +22,7 @@ import java.util.Collection;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.AppStatusEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -134,7 +135,7 @@ public class SysRole extends BaseEntity {
             setPriority(KernelConstant.DEFAULT_PRIORITY);
         }
         if (getStatus() == null) {
-            setStatus(KernelConstant.DEFAULT_STATUS);
+            setStatus(AppStatusEnum.NORMAL.getKey());
         }
         if (getCode() == null) {
             setCode(RandomUtils.randomCode());

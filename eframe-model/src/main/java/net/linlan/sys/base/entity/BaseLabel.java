@@ -20,6 +20,7 @@ package net.linlan.sys.base.entity;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.AppStatusEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -81,13 +82,13 @@ public class BaseLabel extends BaseEntity {
             setId(RandomUtils.randomSid());
         }
         if (getStatus() == null) {
-            setStatus(KernelConstant.DEFAULT_STATUS);
+            setStatus(AppStatusEnum.NORMAL.getKey());
         }
         if (getRefCount() == null) {
-            setRefCount(KernelConstant.DEFAULT_STATUS);
+            setRefCount(KernelConstant.DEFAULT_COUNT);
         }
         if (getAccessCount() == null) {
-            setAccessCount(KernelConstant.DEFAULT_STATUS);
+            setAccessCount(KernelConstant.DEFAULT_COUNT);
         }
 
     }

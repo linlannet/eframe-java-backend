@@ -24,6 +24,7 @@ import org.apache.commons.codec.binary.Base64;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.AppStatusEnum;
 import net.linlan.sys.core.constant.InoutModeEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.crypt.RSAUtil;
@@ -229,7 +230,7 @@ public class CoreAccount extends BaseEntity {
             setIsDisabled(KernelConstant.DEFAULT_BOOLEAN);
         }
         if (getStatus() == null) {
-            setStatus(KernelConstant.DEFAULT_STATUS);
+            setStatus(AppStatusEnum.NORMAL.getKey());
         }
 
     }

@@ -38,7 +38,7 @@ import net.linlan.frame.api.BaseController;
 
 /**
 *
-* MailSendRecord控制域:邮件发送记录读写控制类
+* 邮件发送记录读写控制类
 * @author Linlan
 * CreateTime 2025-10-15 14:09:40
 * @version 1.0

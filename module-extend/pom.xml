@@ -24,12 +24,12 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.8</version>
+        <version>1.1.10</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>module-extend</artifactId>
-    <version>1.1.8</version>
+    <version>1.1.10</version>
     <packaging>pom</packaging>
     <name>module-extend</name>
     <description>
@@ -37,8 +37,10 @@
     </description>
 
     <modules>
-        <module>module-sms</module>
         <module>module-social</module>
+        <module>module-oss</module>
+        <module>module-authn</module>
+        <module>module-enterprise</module>
     </modules>
     <url>https://gitee.com/linlannet/eframe-java-backend.git</url>
     <licenses>

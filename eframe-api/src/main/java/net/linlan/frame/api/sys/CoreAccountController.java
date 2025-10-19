@@ -50,7 +50,7 @@ import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *
- * CoreAccount控制域:平台账号信息读写控制类
+ * 平台账号信息读写控制类
  * @author Linlan
  * CreateTime 2024-11-19 14:58:36
  *

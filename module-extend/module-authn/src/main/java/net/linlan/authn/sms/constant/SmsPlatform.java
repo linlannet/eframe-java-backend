@@ -76,7 +76,7 @@ public enum SmsPlatform implements BaseEnumString {
     }
 
     @EnumConvert
-    public static SmsPlatform getType(String key) {
+    public static SmsPlatform fromType(String key) {
         SmsPlatform[] values = values();
         for (SmsPlatform status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

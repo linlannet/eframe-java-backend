@@ -17,22 +17,28 @@
  */
 package net.linlan.sys.base.constant;
 
+import net.linlan.utils.enums.BaseEnumInteger;
+
 /**
  * 创建类型枚举，数字类型
  */
-public enum CreateTypeEnum {
-                            IMPORT(0,
-                                   "导入"), INPUT(1,
-                                                "录入"), AUTH(2,
-                                                            "授权"), AUTH_SMY(40,
-                                                                            "市民云授权"), AUTH_ZWWX(41,
-                                                                                                "政务微信授权"), AUTH_WECHAT(42,
-                                                                                                                       "微信授权"), AUTH_ALIPAY(43,
-                                                                                                                                            "支付宝授权"), AUTH_RONGMEITI(50,
-                                                                                                                                                                     "融媒体授权"), AUTH_DINGDING(51,
-                                                                                                                                                                                             "阿里钉钉授权"), AUTH_WEWORK(52,
-                                                                                                                                                                                                                    "企业微信授权"), AUTH_FEISHU(53,
-                                                                                                                                                                                                                                           "飞书授权"),;
+public enum CreateTypeEnum implements BaseEnumInteger {
+                                                       /**
+                                                        * 导入
+                                                        */
+                                                       IMPORT(0, "导入"),
+                                                       /**
+                                                        * 录入
+                                                        */
+                                                       INPUT(1, "录入"),
+                                                       /**
+                                                        * 授权
+                                                        */
+                                                       AUTH(2, "授权"),
+                                                       /**
+                                                        * 其他
+                                                        */
+                                                       OTHER(9, "其他"),;
 
     /**
      * 配置项名称
@@ -48,6 +54,7 @@ public enum CreateTypeEnum {
         this.value = value;
     }
 
+    @Override
     public int getKey() {
         return key;
     }
@@ -56,6 +63,7 @@ public enum CreateTypeEnum {
         this.key = key;
     }
 
+    @Override
     public String getValue() {
         return value;
     }

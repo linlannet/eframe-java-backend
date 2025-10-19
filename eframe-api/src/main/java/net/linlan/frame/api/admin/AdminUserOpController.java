@@ -53,7 +53,7 @@ import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *
- * AdminUser控制域:管理用户增删改操作控制类
+ * 管理用户增删改操作控制类
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *

@@ -31,10 +31,10 @@ import cn.hutool.core.util.ArrayUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import net.linlan.authn.mail.cache.EmailConfigCache;
-import net.linlan.authn.mail.param.EmailAliyunBatchSendParam;
-import net.linlan.authn.mail.param.EmailAliyunSendParam;
-import net.linlan.authn.mail.param.EmailLocalSendParam;
+import net.linlan.authn.mail.cache.MailConfigCache;
+import net.linlan.authn.mail.param.MailAliyunBatchSendParam;
+import net.linlan.authn.mail.param.MailAliyunSendParam;
+import net.linlan.authn.mail.param.MailLocalSendParam;
 import net.linlan.authn.mail.utils.MailAliyunUtils;
 import net.linlan.authn.mail.utils.MailLocalUtils;
 import net.linlan.authn.mail.vo.MailConfigVo;
@@ -60,16 +60,16 @@ public class MailSendService {
     private static final String          CONFIG_MAIL_CATEGORY = "MailCategory";
 
     private final BaseConfigWholeService baseConfigWholeService;
-    private final EmailConfigCache       emailConfigCache;
+    private final MailConfigCache        emailConfigCache;
     private final MailSendRecordService  mailSendRecordService;
 
     /**
      * 本地 发送邮件
      *
      * @param param 发送邮件参数
-     * @return message-id
+     * @return 发送状态
      */
-    public boolean sendLocal(EmailLocalSendParam param) {
+    public boolean sendLocal(MailLocalSendParam param) {
         MailConfigVo config = roundEmailConfig(param.getGroupName());
         return sendLocal(param, config);
     }
@@ -78,9 +78,10 @@ public class MailSendService {
      * 本地 发送邮件
      *
      * @param param 发送邮件参数
-     * @return message-id
+     * @param config 邮件配置
+     * @return 发送状态
      */
-    public boolean sendLocal(EmailLocalSendParam param, MailConfigVo config) {
+    public boolean sendLocal(MailLocalSendParam param, MailConfigVo config) {
         try {
             new MailLocalUtils(config).sendEmail(param.getTos(), param.getSubject(),
                 param.getContent(), param.isHtml(),
@@ -102,9 +103,9 @@ public class MailSendService {
      * 阿里云 发送邮件
      *
      * @param param 发送邮件参数
-     * @return env-id
+     * @return 发送状态
      */
-    public boolean sendAliyun(EmailAliyunSendParam param) {
+    public boolean sendAliyun(MailAliyunSendParam param) {
         MailConfigVo config = roundEmailConfig(param.getGroupName());
 
         return sendAliyun(param, config);
@@ -114,9 +115,10 @@ public class MailSendService {
      * 阿里云 发送邮件
      *
      * @param param 发送邮件参数
-     * @return env-id
+     * @param config 邮件配置
+     * @return 发送状态
      */
-    public boolean sendAliyun(EmailAliyunSendParam param, MailConfigVo config) {
+    public boolean sendAliyun(MailAliyunSendParam param, MailConfigVo config) {
         try {
             new MailAliyunUtils(config).sendEmail(param.getFrom(), param.getFormAlias(),
                 param.getTos(), param.getSubject(), param.getContent(), param.isHtml());
@@ -137,9 +139,9 @@ public class MailSendService {
      * 阿里云 批量发送邮件
      *
      * @param param 发送邮件参数
-     * @return message-id
+     * @return 发送状态
      */
-    public boolean batchSendAliyun(EmailAliyunBatchSendParam param) {
+    public boolean batchSendAliyun(MailAliyunBatchSendParam param) {
         MailConfigVo config = roundEmailConfig(param.getGroupName());
 
         return batchSendAliyun(param, config);
@@ -149,9 +151,10 @@ public class MailSendService {
      * 阿里云 批量发送邮件
      *
      * @param param 发送邮件参数
-     * @return message-id
+     * @param config 邮件配置
+     * @return 发送状态
      */
-    public boolean batchSendAliyun(EmailAliyunBatchSendParam param, MailConfigVo config) {
+    public boolean batchSendAliyun(MailAliyunBatchSendParam param, MailConfigVo config) {
         try {
             new MailAliyunUtils(config).batchSendEmail(param.getFrom(), param.getReceiversName(),
                 param.getTemplateName(), param.getTagName());

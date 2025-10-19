@@ -29,6 +29,11 @@ public final class SecurityConstants {
     public static final String LOGIN_PATH             = "/login";
 
     /**
+     * LOGOUT
+     */
+    public final static String LOGOUT_PATH            = "/logout";
+
+    /**
      * form 表单登录
      */
     public static final String FORM_LOGIN             = LOGIN_PATH;
@@ -54,18 +59,30 @@ public final class SecurityConstants {
     public static final String LOGIN_OTP_SEND         = LOGIN_PATH + "/otp/send";
 
     /**
-     * idp 绑定用户 路径
-     */
-    public static final String USER_BIND_IDP          = LOGIN_PATH + "/idp_bind_user";
-
-    /**
-     * LOGOUT
-     */
-    public final static String LOGOUT_PATH            = "/logout";
-
-    /**
      * 需要重置密码
      */
     public final static String REQUIRE_RESET_PASSWORD = "require_reset_password";
+
+    /**
+     * 第三方登录路径，社交登录路径
+     */
+    public static final String SOCIAL_LOGIN           = LOGIN_PATH + "/social";
+    /**
+     * 社交登录渲染路径
+     */
+    public static final String SOCIAL_RENDER          = LOGIN_PATH + "/social/render";
+    /**
+     * 社交登录回调路径
+     */
+    public static final String SOCIAL_CALLBACK        = LOGIN_PATH + "/social/callback";
+
+    /**
+     * 社交登录 绑定用户 路径
+     */
+    public static final String IDP_MEMBER_BIND        = LOGIN_PATH + "/member/bind";
+    /**
+     * 社交登录 解绑用户 路径
+     */
+    public static final String IDP_MEMBER_UNBIND      = LOGIN_PATH + "/member/unBind";
 
 }

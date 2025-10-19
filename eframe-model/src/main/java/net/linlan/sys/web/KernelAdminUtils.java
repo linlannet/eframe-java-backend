@@ -22,6 +22,8 @@ import java.net.URL;
 import java.util.*;
 
 import net.linlan.commons.core.StringUtils;
+import net.linlan.sys.base.constant.AppStatusEnum;
+import net.linlan.sys.base.constant.DelFlagEnum;
 
 /**
  *
@@ -101,8 +103,8 @@ public class KernelAdminUtils {
      * @return  查询结果
      */
     public static Map<String, Object> dealDelFlagParam(Map<String, Object> params) {
-        if (!params.containsKey(KernelConstant.FIELD_DEL_FLAG)) {
-            params.put(KernelConstant.FIELD_DEL_FLAG, KernelConstant.DEL_FLAG_DEFAULT);
+        if (!params.containsKey(DelFlagEnum.NORMAL.getKey())) {
+            params.put(KernelConstant.FIELD_DEL_FLAG, DelFlagEnum.NORMAL.getKey());
         }
         return params;
     }
@@ -150,7 +152,7 @@ public class KernelAdminUtils {
      */
     public static Map<String, Object> dealStatusParam(Map<String, Object> params) {
         if (!params.containsKey(KernelConstant.FIELD_STATUS)) {
-            params.put(KernelConstant.FIELD_STATUS, KernelConstant.DEFAULT_STATUS);
+            params.put(KernelConstant.FIELD_STATUS, AppStatusEnum.NORMAL.getKey());
         }
         return params;
     }

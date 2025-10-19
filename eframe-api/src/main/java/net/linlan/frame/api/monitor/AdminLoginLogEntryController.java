@@ -43,7 +43,7 @@ import net.linlan.frame.view.admin.vo.AdminLoginLogVo;
 
 /**
  *
- * AdminLoginLog控制域:管理员登录日志查询读取控制类
+ * 管理员登录日志查询读取控制类
  * @author Linlan
  * CreateTime 2024-10-07 20:45:06
  *

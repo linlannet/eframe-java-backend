@@ -47,7 +47,7 @@ import net.linlan.sys.comm.param.CommLogParam;
 import net.linlan.sys.comm.service.CommLogService;
 
 /**
- * 操作日志记录
+ * 系统操作日志记录
  * 
  * @author Linlan
  */

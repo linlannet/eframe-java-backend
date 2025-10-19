@@ -38,7 +38,7 @@ import net.linlan.sys.base.service.BaseUserExtService;
 
 /**
 *
-* BaseUserExt控制域:基础用户扩展信息读写控制类
+* 基础用户扩展信息读写控制类
 * @author Linlan
 * CreateTime 2025-10-13 16:58:20
 * @version 1.0

@@ -23,6 +23,7 @@ import java.util.List;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -121,9 +122,8 @@ public class BaseDictionary extends BaseEntity {
         if (getId() == null) {
             setId(RandomUtils.randomLid());
         }
-
         if (getDelFlag() == null) {
-            setDelFlag(KernelConstant.DEL_FLAG_DEFAULT);
+            setDelFlag(DelFlagEnum.NORMAL.getKey());
         }
         setCddLevel(KernelConstant.DEFAULT_INT + "");
         if (getPriority() == null) {

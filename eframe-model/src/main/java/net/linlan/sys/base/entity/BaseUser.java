@@ -23,6 +23,7 @@ import java.util.Date;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
 
@@ -46,9 +47,9 @@ public class BaseUser extends BaseEntity {
     private Long        xzqhId;
 
     /**
-     * 创建来源类型1后台，2前台，101网格化201公众号
+     * 创建来源类型
      */
-    private Integer     source;
+    private String      source;
 
     /**
      * 创建方式0导入1录入2授权
@@ -243,9 +244,6 @@ public class BaseUser extends BaseEntity {
         if (getBaseUserExt() == null) {
             setBaseUserExt(new BaseUserExt());
         }
-        if (getSource() == null) {
-            setSource(KernelConstant.DEFAULT_INT);
-        }
         if (getSrcCode() == null) {
             setSrcCode(KernelConstant.SRC_CODE_DEFAULT);
         }
@@ -253,10 +251,10 @@ public class BaseUser extends BaseEntity {
             setPriority(KernelConstant.DEFAULT_PRIORITY);
         }
         if (getDelFlag() == null) {
-            setDelFlag(KernelConstant.DEL_FLAG_DEFAULT);
+            setDelFlag(DelFlagEnum.NORMAL.getKey());
         }
         if (getLoginCount() == null) {
-            setLoginCount(KernelConstant.DEFAULT_STATUS);
+            setLoginCount(KernelConstant.DEFAULT_COUNT);
         }
         if (getErrorCount() == null) {
             setErrorCount(KernelConstant.DEFAULT_INT);

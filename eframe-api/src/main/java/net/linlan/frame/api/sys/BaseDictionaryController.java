@@ -51,7 +51,7 @@ import net.linlan.sys.base.param.TreeParam;
 import net.linlan.sys.base.service.BaseDictionaryService;
 
 /**
- * 数据字典信息
+ * 数据字典信息读写
  * 
  * @author Linlan
  */

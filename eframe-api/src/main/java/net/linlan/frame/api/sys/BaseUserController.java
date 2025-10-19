@@ -38,7 +38,7 @@ import net.linlan.sys.base.service.BaseUserService;
 
 /**
 *
-* BaseUser控制域:基础用户读写控制类
+* 基础用户读写控制类
 * @author Linlan
 * CreateTime 2025-10-13 16:58:20
 * @version 1.0

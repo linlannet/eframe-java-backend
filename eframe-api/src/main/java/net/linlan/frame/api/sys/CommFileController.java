@@ -64,7 +64,7 @@ import net.linlan.utils.upload.ResourceType;
 
 /**
  *
- * File控制域:公共文件管理读写控制类
+ * 公共文件管理读写控制类
  * @author Linlan
  * CreateTime 2024-11-19 14:58:36
  *

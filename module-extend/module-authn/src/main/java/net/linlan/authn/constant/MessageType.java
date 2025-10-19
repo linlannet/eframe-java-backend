@@ -69,7 +69,7 @@ public enum MessageType implements BaseEnumString {
      * @return {@link String}
      */
     @EnumConvert
-    public static MessageType getType(String key) {
+    public static MessageType fromType(String key) {
         MessageType[] values = values();
         for (MessageType status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

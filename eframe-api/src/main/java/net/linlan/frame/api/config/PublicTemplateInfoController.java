@@ -38,7 +38,7 @@ import net.linlan.frame.config.service.PublicTemplateInfoService;
 
 /**
 *
-* PublicTemplateInfo控制域:模板信息配置读写控制类
+* 模板信息配置读写控制类
 * @author Linlan
 * CreateTime 2025-10-15 13:52:44
 * @version 1.0

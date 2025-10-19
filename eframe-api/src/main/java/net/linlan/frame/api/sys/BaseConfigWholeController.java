@@ -50,7 +50,7 @@ import net.linlan.sys.base.entity.BaseConfigWhole;
 import net.linlan.sys.base.service.BaseConfigWholeService;
 
 /**
- * 参数配置 信息操作处理
+ * 参数配置信息操作处理
  * 
  * @author Linlan
  */

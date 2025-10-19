@@ -37,7 +37,7 @@ import net.linlan.frame.admin.service.FrameIndexService;
 import net.linlan.utils.config.PlatformConfig;
 
 /**
- * 首页入口
+ * 平台首页入口
  *
  * @author Linlan
  */

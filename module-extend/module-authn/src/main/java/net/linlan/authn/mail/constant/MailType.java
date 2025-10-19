@@ -177,7 +177,7 @@ public enum MailType implements BaseEnumString {
     }
 
     @EnumConvert
-    public static MailType getType(String code) {
+    public static MailType fromType(String code) {
         MailType[] values = values();
         for (MailType status : values) {
             if (String.valueOf(status.getKey()).equals(code)) {

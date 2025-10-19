@@ -17,35 +17,53 @@
  */
 package net.linlan.sys.base.constant;
 
+import net.linlan.utils.enums.BaseEnumInteger;
+
 /**
  * 应用状态字典
  */
-public enum AppStatusEnum {
-                           DISABLE("0", "停用"), NORMAL("1", "正常"), UPDATE("2", "升级"), LOCKED("3",
-                                                                                            "锁定"),;
+public enum AppStatusEnum implements BaseEnumInteger {
+                                                      /**
+                                                       * 停用
+                                                       */
+                                                      DISABLE(0, "停用"),
+                                                      /**
+                                                       * 正常
+                                                       */
+                                                      NORMAL(1, "正常"),
+                                                      /**
+                                                       * 升级
+                                                       */
+                                                      UPDATE(2, "升级"),
+                                                      /**
+                                                       * 锁定
+                                                       */
+                                                      LOCKED(3, "锁定"),;
 
     /**
      * 配置项名称
      */
-    private String key;
+    private int    key;
     /**
      * 配置项值
      */
     private String value;
 
-    AppStatusEnum(String key, String value) {
+    AppStatusEnum(int key, String value) {
         this.key = key;
         this.value = value;
     }
 
-    public String getKey() {
+    @Override
+    public int getKey() {
         return key;
     }
 
-    public void setKey(String key) {
+    public void setKey(int key) {
         this.key = key;
     }
 
+    @Override
     public String getValue() {
         return value;
     }

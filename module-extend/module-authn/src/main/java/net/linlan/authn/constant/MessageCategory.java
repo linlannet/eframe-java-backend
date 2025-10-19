@@ -69,7 +69,7 @@ public enum MessageCategory implements BaseEnumString {
      * @return {@link MessageCategory}
      */
     @EnumConvert
-    public static MessageCategory getType(String key) {
+    public static MessageCategory fromType(String key) {
         MessageCategory[] values = values();
         for (MessageCategory status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

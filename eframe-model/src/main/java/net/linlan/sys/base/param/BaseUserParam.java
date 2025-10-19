@@ -37,7 +37,7 @@ public class BaseUserParam extends BaseParam {
     */
     private Long     xzqhId;
     /**
-    * 创建来源类型1后台，2前台，101网格化201公众号
+    * 创建来源类型
     */
     private Integer  source;
     /**

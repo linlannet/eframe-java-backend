@@ -61,28 +61,18 @@ public class KernelConstant {
     public static final int     DEFAULT_PAGE            = 1;
 
     /**
-     * default page count 5
-     */
-    public static final int     DEFAULT_PAGE_FIVE       = 5;
-
-    /**
      * default page count 10
      */
     public static final int     DEFAULT_PAGECOUNT       = 10;
-
-    /**
-     * default page count 9
-     */
-    public static final int     DEFAULT_PAGE_NINE       = 9;
 
     /**
      * 数据禁用缺省值
      */
     public static final boolean DEFAULT_DISABLED        = false;
     /**
-     * 数据状态缺省值0未生效1正常2有限使用3锁定
+     * 数据量
      */
-    public static final int     DEFAULT_STATUS          = 1;
+    public static final int     DEFAULT_COUNT           = 1;
 
     /**
      * default display, true 1 show, false 0 hide
@@ -92,22 +82,7 @@ public class KernelConstant {
      * 数据排序码缺省值
      */
     public static final int     DEFAULT_PRIORITY        = 10;
-    /**
-     * 数据删除缺省值：0正常（都可以访问）
-     */
-    public static final int     DEL_FLAG_DEFAULT        = 0;
-    /**
-     * 数据删除缺省值： 1已删除（都不能访问）
-     */
-    public static final int     DEL_FLAG_NORMAL         = 1;
-    /**
-     * 数据删除缺省值：2应用内受限访问
-     */
-    public static final int     DEL_FLAG_APP            = 2;
-    /**
-     * 数据删除缺省值：3回收站
-     */
-    public static final int     DEL_FLAG_RECYCLE        = 3;
+
     /**
      * 缺省整形值，0
      */
@@ -220,7 +195,7 @@ public class KernelConstant {
     /**
      * 默认初始化密码，简单
      */
-    public static final String  DEFAULT_PASSWORD_NORMAL = "Z123456";
+    public static final String  DEFAULT_PASSWORD_NORMAL = "Eframe_123456!";
 
     /**
      * 删除标记：delFlag
@@ -251,7 +226,7 @@ public class KernelConstant {
     /**
      * 默认证件类型，身份证为1908
      */
-    public static final String  DEFAULT_ID_TYPE         = "1908";
+    public static final String  DEFAULT_ID_TYPE         = "shenfenzheng";
 
     //--------------------各种配置项的key值---------------------------------
 

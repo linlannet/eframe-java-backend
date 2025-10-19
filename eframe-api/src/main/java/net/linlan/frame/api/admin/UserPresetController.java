@@ -42,7 +42,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 
 /**
  *
- * PowerPreset控制域: 用户权限预置
+ * 用户权限预置
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *

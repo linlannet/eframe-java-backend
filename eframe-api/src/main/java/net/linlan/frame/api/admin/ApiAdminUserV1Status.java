@@ -47,7 +47,7 @@ import net.linlan.utils.constant.Constants;
 import net.linlan.utils.crypt.ShaUtils;
 
 /**
- * 个人信息 业务处理
+ * 个人信息业务处理
  * 
  * @author Linlan
  */

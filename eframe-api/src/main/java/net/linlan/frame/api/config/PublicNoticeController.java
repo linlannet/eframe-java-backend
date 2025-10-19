@@ -49,7 +49,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 
 /**
  *
- * PublicNotice控制域:平台公共消息读写控制类
+ * 平台公共消息读写控制类
  * @author Linlan
  * CreateTime 2024-11-19 14:58:36
  *

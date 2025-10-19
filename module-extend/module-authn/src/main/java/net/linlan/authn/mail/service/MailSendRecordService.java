@@ -28,6 +28,7 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
+import net.linlan.authn.constant.MessageSendStatus;
 import net.linlan.authn.constant.MessageStatus;
 import net.linlan.authn.mail.dao.MailSendRecordDao;
 import net.linlan.authn.mail.dto.MailSendRecordDto;
@@ -160,11 +161,11 @@ public class MailSendRecordService {
         if (errorInfo != null) {
             mailSendRecord.setStatus(MessageStatus.FAIL.getKey());
             mailSendRecord.setDescription(errorInfo.toString());
-            mailSendRecord.setSendStatus(MessageStatus.FAIL.getKey());
+            mailSendRecord.setSendStatus(MessageSendStatus.SEND.getKey());
             mailSendRecord.setSendTime(new Date());
         } else {
             mailSendRecord.setStatus(MessageStatus.SUCCESS.getKey());
-            mailSendRecord.setSendStatus(MessageStatus.SUCCESS.getKey());
+            mailSendRecord.setSendStatus(MessageSendStatus.DRAFT.getKey());
             mailSendRecord.setSendTime(new Date());
         }
         save(mailSendRecord);

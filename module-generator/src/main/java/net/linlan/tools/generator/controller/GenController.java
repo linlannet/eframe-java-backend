@@ -50,7 +50,7 @@ import net.linlan.utils.sql.SqlUtil;
 import net.linlan.utils.text.Convert;
 
 /**
- * 代码生成 操作处理
+ * 代码生成操作处理
  * 
  * @author Linlan
  */

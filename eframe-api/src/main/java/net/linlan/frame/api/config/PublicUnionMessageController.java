@@ -41,7 +41,7 @@ import net.linlan.frame.view.admin.utils.ExcelUtil;
 
 /**
  *
- * PublicUnionMessage控制域:消息阅读读写控制类
+ * 消息阅读读写控制类
  * @author Linlan
  * CreateTime 2024-11-19 14:58:52
  *

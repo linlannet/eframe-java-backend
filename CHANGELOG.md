@@ -1,3 +1,29 @@
+### 版本号：1.1.10
+- 更新日期：2025-10-19
+- 更新内容：
+1. 更新oss包的资源内容
+2. AESUtil修改为AESUtils，新增EncryptContextHelper
+3. module-mail和module-sms合并，包名称修改为module-authn，调整authn包资源
+4. 配置登录的Provider信息
+5. 新增module-social包，增加资源
+6. 新增module-enterprise包
+7. 修改生成api接口文件的配置，增加扩展模块接口API
+8. 对文件内用于api文档的名称进行调整
+
+### 版本号：1.1.9
+- 更新日期：2025-10-13
+- 更新内容：
+1. 扩展BaseUser、BaseUserExt资源
+2. 增加1.0_1新增脚本 
+3. FrameAdminUser内字段调整，删除adminId，全部使用userId
+4. FrameAdminUser修改为FrameUserDetails，新增UserDetailsService
+5. SecurityUtils内刪除getAdminId方法
+6. redis的存储键值规范化调整
+7. 新增PublicTemplateInfo包资源，Public三张表内SITE_ID修改为APP_ID
+8. 增加ThirdMember、ThirdMemberToken、ThirdMemberBind
+9. 新增module-oss包
+10. 新增module-authn包资源
+
 ### 版本号：1.1.8
 - 更新日期：2025-10-09
 - 更新内容：

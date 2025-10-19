@@ -55,7 +55,7 @@ import net.linlan.sys.base.param.BaseDicTypeParam;
 import net.linlan.sys.base.service.BaseDicTypeService;
 
 /**
- * 字典类型信息
+ * 数据字典类型信息读写
  * 
  * @author Linlan
  */

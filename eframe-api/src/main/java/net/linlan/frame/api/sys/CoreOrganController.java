@@ -39,7 +39,7 @@ import net.linlan.utils.exception.CommonException;
 
 /**
  *
- * CoreOrgan控制域:系统机构表读写控制类
+ * 系统机构表读写控制类
  * @author Linlan
  * CreateTime 2024-11-21 15:35:19
  *

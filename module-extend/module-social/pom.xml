@@ -24,16 +24,20 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>module-extend</artifactId>
-        <version>1.1.8</version>
+        <version>1.1.10</version>
     </parent>
+    <groupId>net.linlan.eframe</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>module-social</artifactId>
-    <version>1.1.8</version>
+    <version>1.1.10</version>
     <packaging>jar</packaging>
     <name>module-social</name>
     <description>
         社交平台对接模块
     </description>
+    <properties>
+        <justauth.version>1.16.6</justauth.version>
+    </properties>
     <url>https://gitee.com/linlannet/eframe-java-backend.git</url>
     <licenses>
         <license>
@@ -58,13 +62,20 @@
         </developer>
     </developers>
     <dependencies>
-
+        <dependency>
+            <groupId>me.zhyd.oauth</groupId>
+            <artifactId>JustAuth</artifactId>
+            <version>${justauth.version}</version>
+        </dependency>
         <!-- 通用工具-->
         <dependency>
             <groupId>net.linlan.eframe</groupId>
-            <artifactId>eframe-support</artifactId>
+            <artifactId>eframe-model</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>net.linlan.eframe</groupId>
+            <artifactId>eframe-api</artifactId>
+        </dependency>
 
     </dependencies>
 

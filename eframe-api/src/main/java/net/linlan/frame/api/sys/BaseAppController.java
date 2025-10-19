@@ -58,7 +58,7 @@ import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *
- * App控制域:应用管理读写控制类
+ * 应用管理读写控制类
  * @author Linlan
  * CreateTime 2024-11-19 14:58:36
  *

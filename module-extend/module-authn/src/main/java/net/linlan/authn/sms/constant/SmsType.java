@@ -134,7 +134,7 @@ public enum SmsType implements BaseEnumString {
      * @return {@link SmsType}
      */
     @EnumConvert
-    public static SmsType getType(String key) {
+    public static SmsType fromType(String key) {
         SmsType[] values = values();
         for (SmsType status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

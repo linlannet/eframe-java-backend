@@ -38,7 +38,7 @@ import net.linlan.frame.api.BaseController;
 
 /**
 *
-* SmsSendRecord控制域:短信发送记录读写控制类
+* 短信发送记录读写控制类
 * @author Linlan
 * CreateTime 2025-10-15 14:07:47
 * @version 1.0

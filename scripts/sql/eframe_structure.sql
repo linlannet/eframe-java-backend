@@ -928,7 +928,7 @@ CREATE TABLE `PUBLIC_UNION_TODO`  (
                                       `RECORD_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '记录ID',
                                       `SITE_ID` bigint(0) NULL DEFAULT NULL COMMENT '站点ID',
                                       `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '站点门户ID',
-                                      `TYPE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '类型，内部则关联GLOBAL_SERTYPE，外部则为OUT',
+                                      `TYPE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '类型，外部则为OUT',
                                       `BIZ_TYPE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '业务类型',
                                       `TODO_CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '待办创建时间',
                                       `TODO_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '单据编号',

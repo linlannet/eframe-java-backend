@@ -50,6 +50,7 @@ public class SmsConfigCache {
 
     /**
      * 获取短信轮询值
+     * @return 轮询值
      */
     public Long getRoundValue() {
         return redisCache.incr(SMS_ROUND_KEY, 10);
@@ -57,6 +58,7 @@ public class SmsConfigCache {
 
     /**
      * 获取短信编码轮询值
+     * @return 轮询值
      */
     public Long getRoundCodeValue() {
         return redisCache.incr(SMS_ROUND_CODE_KEY, 10);

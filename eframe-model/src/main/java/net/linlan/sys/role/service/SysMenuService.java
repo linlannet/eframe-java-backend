@@ -30,6 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.script.json.StringMap;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.base.dto.TreeNode;
 import net.linlan.sys.role.dao.SysMenuDao;
 import net.linlan.sys.role.dto.SysMenuDto;
@@ -38,7 +39,6 @@ import net.linlan.sys.role.dto.SysMenuTreeDto;
 import net.linlan.sys.role.entity.SysMenu;
 import net.linlan.sys.role.param.MenuTreeParam;
 import net.linlan.sys.role.param.SysMenuParam;
-import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.KernelThreadVariable;
 
 /**
@@ -232,7 +232,7 @@ public class SysMenuService {
      */
     public List<SysMenu> getListByParent(Long parentId, String appId) {
         return getList(new StringMap().put("parentId", parentId).put("appId", appId)
-            .put("delFlag", KernelConstant.DEL_FLAG_DEFAULT).map());
+            .put("delFlag", DelFlagEnum.NORMAL.getKey()).map());
     }
 
     /** get list by input parentId and include ids

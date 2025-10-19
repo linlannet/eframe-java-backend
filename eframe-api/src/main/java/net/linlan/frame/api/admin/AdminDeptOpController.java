@@ -38,7 +38,7 @@ import net.linlan.utils.exception.CommonException;
 
 /**
  *
- * AdminDept控制域:系统机构部门增删改操作控制类
+ * 系统机构部门增删改操作控制类
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *

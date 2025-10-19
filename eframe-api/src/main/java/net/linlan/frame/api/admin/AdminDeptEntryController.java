@@ -47,7 +47,7 @@ import net.linlan.utils.dto.LayuiTree;
 
 /**
  *
- * AdminDept控制域:系统机构部门查询读取控制类
+ * 系统机构部门查询读取控制类
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *

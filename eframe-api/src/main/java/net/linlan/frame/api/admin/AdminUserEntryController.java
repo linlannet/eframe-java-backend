@@ -50,7 +50,7 @@ import net.linlan.sys.role.entity.SysRole;
 
 /**
  *
- * AdminUser控制域:管理用户查询读取控制类
+ * 管理用户查询读取控制类
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *

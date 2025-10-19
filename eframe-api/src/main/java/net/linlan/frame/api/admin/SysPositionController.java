@@ -55,7 +55,7 @@ import net.linlan.sys.role.param.SysPositionParam;
 import net.linlan.sys.role.service.SysPositionService;
 
 /**
- * 岗位信息操作处理
+ * 系统岗位信息操作处理
  * 
  * @author Linlan
  */

@@ -50,7 +50,7 @@ import net.linlan.sys.base.dto.BaseConfigPartsDto;
 import net.linlan.sys.base.service.BaseConfigPartsService;
 
 /**
- * 键值配置 信息操作处理
+ * 键值配置信息操作处理
  *
  * @author Linlan
  */

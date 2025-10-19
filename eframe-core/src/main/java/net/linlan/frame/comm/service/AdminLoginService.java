@@ -140,8 +140,8 @@ public class AdminLoginService {
      * @param appId 应用ID
      * @return 结果
      */
-    public AppLoginInfo thirdUserlogin(String username, String password, String code, String uuid,
-                                       String appId) {
+    public AppLoginInfo thirdEcorganLogin(String username, String password, String code,
+                                          String uuid, String appId) {
         // 验证码校验
         // 登录前置校验
         loginPreCheck(username, password, appId);
@@ -151,7 +151,6 @@ public class AdminLoginService {
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                 username, password);
             AuthenticationContextHolder.setContext(authenticationToken);
-            // 该方法会去调用UserDetailsServiceImpl.loadUserByUsername
             authentication = authenticationManager.authenticate(authenticationToken);
         } catch (Exception e) {
             if (e instanceof BadCredentialsException) {
@@ -172,43 +171,6 @@ public class AdminLoginService {
         recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
-                Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
-                loginUser.getAppId()));
-        // 生成token
-        return tokenService.createToken(loginUser);
-    }
-
-    /**
-     * 第三方验证后，调用登录方法
-     * @param username 用户名
-     * @param password 密码
-     * @param appId 应用ID
-     * @return token
-     */
-    public AppLoginInfo socialLogin(String username, String password, String appId) {
-        // 用户验证
-        Authentication authentication = null;
-        try {
-            // 该方法会去调用UserDetailsServiceImpl.loadUserByUsername
-            authentication = authenticationManager
-                .authenticate(new UsernamePasswordAuthenticationToken(username, password));
-        } catch (Exception e) {
-            if (e instanceof BadCredentialsException) {
-                AsyncManager.me()
-                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                        Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
-                        appId));
-                throw new UserPasswordNotMatchException();
-            } else {
-                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
-                throw new CommonException(e.getMessage());
-            }
-        }
-        FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
-        recordLoginInfo(null, loginUser.getUserId());
-        AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
                 loginUser.getAppId()));
         // 生成token
@@ -317,6 +279,7 @@ public class AdminLoginService {
      * 记录登录信息
      *
      * @param adminId 用户LID
+     * @param userId 用户ID
      */
     public void recordLoginInfo(Long adminId, String userId) {
         AdminUser adminUser = new AdminUser();

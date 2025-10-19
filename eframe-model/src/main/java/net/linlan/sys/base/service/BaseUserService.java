@@ -42,6 +42,7 @@ import net.linlan.sys.base.dto.BaseUserSelect;
 import net.linlan.sys.base.entity.BaseUser;
 import net.linlan.sys.base.param.BaseUserParam;
 import net.linlan.sys.web.KernelConstant;
+import net.linlan.utils.ServletUtils;
 import net.linlan.utils.crypt.ShaUtils;
 import net.linlan.utils.http.HttpContextUtils;
 import net.linlan.utils.ip.IPUtils;
@@ -390,4 +391,18 @@ public class BaseUserService {
         return result;
     }
 
+    /**
+     * 记录登录信息
+     *
+     * @param userId 用户ID
+     */
+    public void recordLoginInfo(String userId) {
+        if (ObjectUtils.isNotEmpty(userId)) {
+            BaseUser baseUser = new BaseUser();
+            baseUser.setId(userId);
+            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+            baseUser.setLastLoginTime(new Date());
+            update(baseUser);
+        }
+    }
 }

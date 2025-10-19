@@ -65,7 +65,7 @@ import net.linlan.sys.role.entity.SysRole;
 import net.linlan.sys.role.service.SysRoleService;
 
 /**
- * 角色信息
+ * 系统角色信息读写
  * 
  * @author Linlan
  */

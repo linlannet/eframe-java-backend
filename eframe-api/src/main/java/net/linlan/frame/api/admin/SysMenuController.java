@@ -58,7 +58,7 @@ import net.linlan.utils.constant.Constants;
 import net.linlan.utils.dto.LayuiTree;
 
 /**
- * 菜单信息
+ * 系统菜单信息读写
  * 
  * @author Linlan
  */

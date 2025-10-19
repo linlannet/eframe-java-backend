@@ -21,7 +21,9 @@ import java.util.Date;
 
 import lombok.Data;
 
+import net.linlan.authn.constant.MessageSendStatus;
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.utils.entity.BaseEntity;
 
 /**
@@ -144,6 +146,12 @@ public class SmsSendRecord extends BaseEntity {
         //添加对数据库或实体对象的默认值处理
         if (getId() == null) {
             setId(RandomUtils.randomLid());
+        }
+        if (getSendStatus() == null) {
+            setSendStatus(MessageSendStatus.SEND.getKey());
+        }
+        if (getDelFlag() == null) {
+            setDelFlag(DelFlagEnum.NORMAL.getKey());
         }
 
     }

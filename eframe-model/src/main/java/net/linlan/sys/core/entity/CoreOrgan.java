@@ -23,6 +23,7 @@ import java.util.Date;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.base.entity.BaseOrgan;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.entity.BaseEntity;
@@ -168,7 +169,7 @@ public class CoreOrgan extends BaseEntity {
             setIsDisabled(false);
         }
         if (getDelFlag() == null) {
-            setDelFlag(KernelConstant.DEL_FLAG_DEFAULT);
+            setDelFlag(DelFlagEnum.NORMAL.getKey());
         }
         if (getCreateTime() == null) {
             setCreateTime(new Date());

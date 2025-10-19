@@ -28,6 +28,7 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
+import net.linlan.authn.constant.MessageSendStatus;
 import net.linlan.authn.constant.MessageStatus;
 import net.linlan.authn.sms.dao.SmsSendRecordDao;
 import net.linlan.authn.sms.dto.SmsSendRecordDto;
@@ -160,11 +161,11 @@ public class SmsSendRecordService {
         if (ObjectUtils.isEmpty(errorInfo)) {
             entity.setStatus(MessageStatus.SUCCESS.getKey());
             entity.setSendTime(new Date());
-            entity.setSendStatus(MessageStatus.SUCCESS.getKey());
+            entity.setSendStatus(MessageSendStatus.SEND.getKey());
         } else {
             entity.setStatus(MessageStatus.FAIL.getKey());
             entity.setSendTime(new Date());
-            entity.setSendStatus(MessageStatus.FAIL.getKey());
+            entity.setSendStatus(MessageSendStatus.DRAFT.getKey());
             entity.setReturnInfo(errorInfo.toString());
         }
         entity.setDescription(config.getSignName());

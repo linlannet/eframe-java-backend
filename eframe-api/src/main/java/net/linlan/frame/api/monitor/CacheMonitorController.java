@@ -44,7 +44,7 @@ import net.linlan.frame.view.admin.vo.SysCacheVo;
 import net.linlan.utils.constant.CacheConstants;
 
 /**
- * 缓存监控
+ * 系统缓存监控
  * 
  * @author Linlan
  */

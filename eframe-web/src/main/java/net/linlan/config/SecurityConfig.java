@@ -17,12 +17,18 @@
  */
 package net.linlan.config;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.Resource;
 
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.DefaultAuthenticationEventPublisher;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -35,14 +41,20 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.web.filter.CorsFilter;
 
+import net.linlan.authn.sms.security.MobileAuthenticationProvider;
+import net.linlan.authn.sms.security.MobileUserDetailsService;
+import net.linlan.authn.sms.security.MobileVerifyCodeService;
 import net.linlan.config.properties.PermitAllUrlProperties;
 import net.linlan.frame.comm.security.filter.JwtAuthenticationTokenFilter;
 import net.linlan.frame.comm.security.handle.AuthenticationEntryPointImpl;
 import net.linlan.frame.comm.security.handle.LogoutSuccessHandlerImpl;
+import net.linlan.social.security.ThirdAuthenticationProvider;
+import net.linlan.social.security.ThirdOpenIdService;
+import net.linlan.social.security.ThirdUserDetailsService;
 
 /**
  * spring security配置
- * 
+ *
  * @author Linlan
  */
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true)
@@ -53,12 +65,21 @@ public class SecurityConfig {
      */
     @Resource
     private UserDetailsService           userDetailsService;
-
+    @Resource
+    private MobileUserDetailsService     mobileUserDetailsService;
+    @Resource
+    private MobileVerifyCodeService      mobileVerifyCodeService;
+    @Resource
+    private ThirdUserDetailsService      thirdUserDetailsService;
+    @Resource
+    private ThirdOpenIdService           thirdOpenIdService;
+    @Resource
+    private ApplicationEventPublisher    applicationEventPublisher;
     /**
      * 认证失败处理类
      */
     @Resource
-    private AuthenticationEntryPointImpl unauthorizedHandler;
+    private AuthenticationEntryPointImpl authenticationEntryPoint;
 
     /**
      * 退出处理类
@@ -70,7 +91,7 @@ public class SecurityConfig {
      * token认证过滤器
      */
     @Resource
-    private JwtAuthenticationTokenFilter authenticationTokenFilter;
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
     /**
      * 跨域过滤器
@@ -85,15 +106,37 @@ public class SecurityConfig {
     private PermitAllUrlProperties       permitAllUrlProperties;
 
     /**
-     * 身份验证实现
+     * 多身份验证实现，增加用户名密码、手机短信、第三方授权认证三种方式
      * @return 身份验证管理器
      */
     @Bean
     public AuthenticationManager authenticationManager() {
+        List<AuthenticationProvider> providerList = new ArrayList<>();
+        providerList.add(daoAuthenticationProvider());
+        providerList.add(mobileAuthenticationProvider());
+        providerList.add(thirdAuthenticationProvider());
+        ProviderManager providerManager = new ProviderManager(providerList);
+        providerManager.setAuthenticationEventPublisher(
+            new DefaultAuthenticationEventPublisher(applicationEventPublisher));
+        return providerManager;
+    }
+
+    @Bean
+    DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
         daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder());
-        return new ProviderManager(daoAuthenticationProvider);
+        return daoAuthenticationProvider;
+    }
+
+    @Bean
+    public MobileAuthenticationProvider mobileAuthenticationProvider() {
+        return new MobileAuthenticationProvider(mobileUserDetailsService, mobileVerifyCodeService);
+    }
+
+    @Bean
+    public ThirdAuthenticationProvider thirdAuthenticationProvider() {
+        return new ThirdAuthenticationProvider(thirdUserDetailsService, thirdOpenIdService);
     }
 
     /**
@@ -125,7 +168,8 @@ public class SecurityConfig {
                     .frameOptions(options -> options.sameOrigin());
             })
             // 认证失败处理类
-            .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
+            .exceptionHandling(
+                exception -> exception.authenticationEntryPoint(authenticationEntryPoint))
             // 基于token，所以不需要session
             .sessionManagement(
                 session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -135,7 +179,7 @@ public class SecurityConfig {
                     .forEach(url -> requests.antMatchers(url).permitAll());
                 // 对于登录login 注册register 和开放类接口api/open/等 允许匿名访问
                 requests
-                    .antMatchers("/login", "/thirdOrgan/login", "/platLogin", "/register",
+                    .antMatchers("/login", "/third/ecorgan/login", "/platLogin", "/register",
                         "/api/app/third/user/register", "/api/open/**")
                     .permitAll()
                     // 静态资源，可匿名访问
@@ -152,7 +196,8 @@ public class SecurityConfig {
             .logout(
                 logout -> logout.logoutUrl("/logout").logoutSuccessHandler(logoutSuccessHandler))
             // 添加JWT filter
-            .addFilterBefore(authenticationTokenFilter, UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(jwtAuthenticationTokenFilter,
+                UsernamePasswordAuthenticationFilter.class)
             // 添加CORS filter
             .addFilterBefore(corsFilter, JwtAuthenticationTokenFilter.class)
             .addFilterBefore(corsFilter, LogoutFilter.class).build();

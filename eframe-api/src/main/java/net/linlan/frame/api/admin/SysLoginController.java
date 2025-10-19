@@ -58,19 +58,20 @@ import net.linlan.sys.web.RedisService;
 import net.linlan.utils.MessageUtils;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.constant.Constants;
+import net.linlan.utils.constant.SecurityConstants;
 import net.linlan.utils.exception.user.CaptchaException;
 import net.linlan.utils.exception.user.CaptchaExpireException;
 import static net.linlan.frame.web.SecurityUtils.getLoginUser;
 
 /**
- * 登录验证
+ * 系统登录验证
  * 
  * @author Linlan
  */
 @RestController
 public class SysLoginController {
     @Resource
-    private AdminLoginService    sysLoginService;
+    private AdminLoginService    adminLoginService;
     @Resource
     private AdminMenuManager     adminMenuManager;
     @Resource
@@ -95,11 +96,11 @@ public class SysLoginController {
      * @return 结果
      */
     @PlatLog(value = "登录方法", category = 10)
-    @PostMapping("/login")
+    @PostMapping(SecurityConstants.FORM_LOGIN)
     @Encrypt
     public ResponseResult<AppLoginInfo> login(@RequestBody LoginBody loginBody) {
         // 生成令牌
-        AppLoginInfo appLoginInfo = sysLoginService.login(loginBody.getUsername(),
+        AppLoginInfo appLoginInfo = adminLoginService.login(loginBody.getUsername(),
             loginBody.getPassword(), loginBody.getCode(), loginBody.getUuid(),
             loginBody.getAppId());
         return ResponseResult.ok(appLoginInfo);
@@ -180,17 +181,17 @@ public class SysLoginController {
     }
 
     /**
-     * 登录方法
+     * 第三方服务商登录方法
      *
      * @param loginBody 登录信息
      * @return 结果
      */
-    @PlatLog(value = "登录方法", category = 10, srcCode = 11)
-    @PostMapping("/thirdOrgan/login")
+    @PlatLog(value = "第三方服务商登录方法", category = 10, srcCode = 11)
+    @PostMapping("/third/ecorgan/login")
     @Encrypt
-    public ResponseResult<AppLoginInfo> thirdOrganLogin(@RequestBody LoginBody loginBody) {
+    public ResponseResult<AppLoginInfo> thirdEcorganLogin(@RequestBody LoginBody loginBody) {
         // 生成令牌
-        AppLoginInfo appLoginInfo = sysLoginService.thirdUserlogin(loginBody.getUsername(),
+        AppLoginInfo appLoginInfo = adminLoginService.thirdEcorganLogin(loginBody.getUsername(),
             loginBody.getPassword(), loginBody.getCode(), loginBody.getUuid(),
             loginBody.getAppId());
         return ResponseResult.ok(appLoginInfo);

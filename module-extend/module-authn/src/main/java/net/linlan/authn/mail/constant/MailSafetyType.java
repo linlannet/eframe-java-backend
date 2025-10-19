@@ -59,7 +59,7 @@ public enum MailSafetyType implements BaseEnumString {
     }
 
     @EnumConvert
-    public static MailSafetyType getType(String key) {
+    public static MailSafetyType fromType(String key) {
         MailSafetyType[] values = values();
         for (MailSafetyType status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

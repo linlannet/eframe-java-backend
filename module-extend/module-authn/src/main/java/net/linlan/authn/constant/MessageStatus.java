@@ -21,23 +21,24 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import lombok.Getter;
 
+import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
 /**
- * 事件状态
+ * 消息主状态
  *
  * @author Linlan
  */
 @Getter
-public enum MessageStatus {
-                           /**
-                            * 成功
-                            */
-                           SUCCESS("success", "成功"),
-                           /**
-                            * 失败
-                            */
-                           FAIL("fail", "失败");
+public enum MessageStatus implements BaseEnumString {
+                                                     /**
+                                                      * 成功
+                                                      */
+                                                     SUCCESS("success", "成功"),
+                                                     /**
+                                                      * 失败
+                                                      */
+                                                     FAIL("fail", "失败");
 
     /**
      * 键
@@ -61,7 +62,7 @@ public enum MessageStatus {
      * @return {@link MessageStatus}
      */
     @EnumConvert
-    public static MessageStatus getType(String key) {
+    public static MessageStatus fromType(String key) {
         MessageStatus[] values = values();
         for (MessageStatus status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {

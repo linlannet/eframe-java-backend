@@ -34,7 +34,7 @@ import net.linlan.frame.view.admin.manager.AdminUserOpManager;
 import net.linlan.frame.web.model.RegisterBody;
 
 /**
- * 注册验证
+ * 用户注册验证
  * 
  * @author Linlan
  */

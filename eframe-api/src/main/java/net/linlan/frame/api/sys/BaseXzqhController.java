@@ -40,7 +40,7 @@ import net.linlan.sys.base.service.BaseXzqhService;
 
 /**
  *
- * BaseXzqh控制域:行政区划管理读写控制类
+ * 行政区划管理读写控制类
  * @author Linlan
  * CreateTime 2024-12-16 16:04:14
  *

@@ -6,7 +6,7 @@
 
 ## 介绍
 
-JAVA开发的企业级后端框架（EFRAME），基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等。
+JAVA企业级后端框架（EFRAME），基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等。
 借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
 
 **工具类代码地址：** <a target="_blank">https://gitee.com/linlannet/java-tools-parent
