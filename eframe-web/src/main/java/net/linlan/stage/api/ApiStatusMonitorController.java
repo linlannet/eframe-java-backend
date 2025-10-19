@@ -35,8 +35,7 @@ import net.linlan.utils.constant.Constants;
 import net.linlan.utils.http.HttpContextUtils;
 
 /**
- * Filename:ApiStatusMonitorController.java
- * Desc:平台当前应用的版本，用于验证进程服务是否正常
+ * 平台当前监控状态
  *
  * @author Linlan
  * CreateTime:12/19/17 9:00 PM

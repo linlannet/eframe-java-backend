@@ -13,8 +13,8 @@ api.push({
 api[1].list.push({
     alias: 'ApiStatusMonitorController',
     order: '1',
-    link: 'filename:apistatusmonitorcontroller.javadesc:平台当前应用的版本，用于验证进程服务是否正常',
-    desc: 'Filename:ApiStatusMonitorController.javaDesc:平台当前应用的版本，用于验证进程服务是否正常',
+    link: '平台当前监控状态',
+    desc: '平台当前监控状态',
     list: []
 })
 api[1].list[0].list.push({
@@ -1180,7 +1180,7 @@ api[2].list.push({
 api[2].list[26].list.push({
     order: '1',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/SecurityConstants.FORM_LOGIN.do',
+    url: 'https://linlan.net/eframe_backend/login.do',
     desc: '登录方法',
 });
 api[2].list[26].list.push({
@@ -1790,13 +1790,13 @@ api[3].list.push({
 api[3].list[2].list.push({
     order: '1',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/SecurityConstants.SMS_LOGIN.do',
+    url: 'https://linlan.net/eframe_backend/login/sms.do',
     desc: '短信邮箱登录方法',
 });
 api[3].list[2].list.push({
     order: '2',
     deprecated: 'false',
-    url: 'https://linlan.net/eframe_backend/SecurityConstants.LOGIN_OTP_SEND.do',
+    url: 'https://linlan.net/eframe_backend/login/otp/send.do',
     desc: '登录发送短信验证码',
 });
 api[3].list.push({

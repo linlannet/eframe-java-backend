@@ -39,9 +39,9 @@ import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.frame.comm.vo.AppLoginInfo;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.social.service.ThirdLoginService;
+import net.linlan.social.third.service.ThirdMemberService;
 import net.linlan.social.vo.ThirdCallbackVo;
 import net.linlan.social.vo.ThirdLoginBody;
-import net.linlan.utils.constant.SecurityConstants;
 
 /**
  * 第三方社交平台登录验证
@@ -51,7 +51,9 @@ import net.linlan.utils.constant.SecurityConstants;
 @RestController
 public class ThirdLoginController {
     @Resource
-    private ThirdLoginService thirdLoginService;
+    private ThirdLoginService  thirdLoginService;
+    @Resource
+    private ThirdMemberService thirdMemberService;
 
     /**
      * 社交平台登录方法
@@ -60,7 +62,7 @@ public class ThirdLoginController {
      * @return 结果
      */
     @PlatLog(value = "社交平台登录方法", category = 10, srcCode = 11)
-    @PostMapping(SecurityConstants.SOCIAL_LOGIN)
+    @PostMapping("/login/social")
     @Encrypt
     public ResponseResult<AppLoginInfo> socialLogin(@RequestBody ThirdLoginBody loginBody) {
         // 生成令牌
@@ -74,11 +76,11 @@ public class ThirdLoginController {
      * @throws IOException  异常
      */
     @PlatLog(value = "根据类型，获取授权请求", category = 40)
-    @RequestMapping(SecurityConstants.SOCIAL_RENDER + "/{source}")
+    @RequestMapping("/login/social/render/{source}")
     @Encrypt
     public void renderAuth(@PathVariable("source") String source,
                            HttpServletResponse response) throws IOException {
-        AuthRequest authRequest = thirdLoginService.getAuthRequest(source);
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(source);
         String authorizeUrl = authRequest.authorize(AuthStateUtils.createState());
         response.sendRedirect(authorizeUrl);
     }
@@ -89,7 +91,7 @@ public class ThirdLoginController {
      * @return 页面跳转
      */
     @PlatLog(value = "根据类型，获取授权请求", category = 40)
-    @RequestMapping(SecurityConstants.SOCIAL_CALLBACK + "/{source}")
+    @RequestMapping("/login/social/callback/{source}")
     @Encrypt
     public ModelAndView login(@PathVariable("source") String source, AuthCallback callback) {
         Map<String, Object> map = new HashMap<>();
@@ -104,11 +106,11 @@ public class ThirdLoginController {
      * @param callbackVo    账户信息
      * @return  绑定状态
      */
-    @PostMapping(SecurityConstants.IDP_MEMBER_BIND)
+    @PostMapping("/login/member/bind")
     @Encrypt
     @LimitScope(name = "thirdMemberUpdate", key = "thirdMemberUpdate")
     public ResponseResult<String> bind(@RequestBody ThirdCallbackVo callbackVo) {
-        AuthRequest authRequest = thirdLoginService.getAuthRequest(callbackVo.getPlatformType());
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(callbackVo.getPlatformType());
         AuthCallback callback = AuthCallback.builder().code(callbackVo.getCode())
             .state(callbackVo.getState()).build();
         // 根据code，获取用户信息
@@ -118,7 +120,7 @@ public class ThirdLoginController {
             throw new RuntimeException("第三方登录失败");
         }
         // 绑定用户信息
-        thirdLoginService.bind(SecurityUtils.getUserId(), callbackVo.getPlatformType(),
+        thirdMemberService.bind(SecurityUtils.getUserId(), callbackVo.getPlatformType(),
             response.getData());
         return ResponseResult.ok();
     }
@@ -127,11 +129,11 @@ public class ThirdLoginController {
      * @param platformType    平台类型
      * @return  解绑状态
      */
-    @PutMapping(SecurityConstants.IDP_MEMBER_BIND + "/{platformType}")
+    @PutMapping("/login/member/bind/{platformType}")
     @Encrypt
     @LimitScope(name = "thirdMemberUpdate", key = "thirdMemberUpdate")
     public ResponseResult<String> unBind(@PathVariable("platformType") String platformType) {
-        thirdLoginService.unBind(SecurityUtils.getUserId(), platformType);
+        thirdMemberService.unBind(SecurityUtils.getUserId(), platformType);
         return ResponseResult.ok();
     }
 

@@ -7,7 +7,7 @@ Version |  Update Time  | Status | Author |  Description
 
 # default
 # 平台通用接口API
-## Filename:ApiStatusMonitorController.javaDesc:平台当前应用的版本，用于验证进程服务是否正常
+## 平台当前监控状态
 ### 每次发版前，将版本号进行调整，以明确当前发布的版本和启动的版本是一致的
 **URL:** https://linlan.net/eframe_backend/api/stage/getStatus.do
 
@@ -60,8 +60,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -136,43 +136,43 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "username": "zona.sauer",
-      "password": "vpwuzq",
+      "username": "necole.oreilly",
+      "password": "e25yjo",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "userId": "149",
-      "appId": "149",
-      "deptId": 738,
-      "organId": "149",
-      "token": "gqnx43",
-      "viewName": "zona.sauer",
+      "userId": "127",
+      "appId": "127",
+      "deptId": 657,
+      "organId": "127",
+      "token": "hejhwm",
+      "viewName": "necole.oreilly",
       "needChangePassword": true,
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "r9cjsp",
-      "loginCount": 974,
-      "loginIp": "171.216.115.206",
-      "lastUpdatePasswordTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "foreignId": "149",
-      "expireTime": "2025-10-19 22:39:39",
-      "loginTime": "2025-10-19 22:39:39",
-      "userType": "t3hol1",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "zzwzm5",
+      "loginCount": 385,
+      "loginIp": "148.144.89.250",
+      "lastUpdatePasswordTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "foreignId": "127",
+      "expireTime": "2025-10-20 01:16:45",
+      "loginTime": "2025-10-20 01:16:45",
+      "userType": "vsb21e",
       "isSuperAdmin": true,
-      "loginBrowse": "f9idk1",
-      "loginOs": "evkybl",
+      "loginBrowse": "seq58e",
+      "loginOs": "gp2hqw",
       "perms": [
-        "hgze3n"
+        "i4qy82"
       ]
     },
-    "roleGroup": "gwobqp",
-    "positionGroup": "rc6d3i"
+    "roleGroup": "fm9fj2",
+    "positionGroup": "00a0id"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -301,60 +301,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:39",
-    "lastTime": "2025-10-19 22:39:39",
-    "id": 952,
-    "userId": "149",
-    "deptId": 668,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "3ys1zt",
-    "password": "v9d3rc",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:45",
+    "lastTime": "2025-10-20 01:16:45",
+    "id": 665,
+    "userId": "127",
+    "deptId": 648,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "wq3hmh",
+    "password": "htn92l",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 298,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:39",
-    "description": "6ljkop",
+    "status": 883,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:45",
+    "description": "chqohi",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "id": 244,
-      "organId": "149",
-      "parentId": 476,
-      "appId": "149",
-      "depttypeId": 494,
-      "foreignId": "149",
-      "createType": 201,
-      "type": "9ctaqi",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "gg8wti",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 416,
+      "organId": "127",
+      "parentId": 168,
+      "appId": "127",
+      "depttypeId": 435,
+      "foreignId": "127",
+      "createType": 175,
+      "type": "j3q8qt",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "jqsf4p",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "9eo7f7",
-      "priority": 58,
-      "status": 49,
-      "delFlag": 7,
-      "description": "d2pjwd",
-      "spare1": "snavr1",
-      "spare2": "gwkljl",
+      "searchCode": "65412",
+      "imagePath": "d16802",
+      "priority": 409,
+      "status": 724,
+      "delFlag": 4,
+      "description": "zm3dbj",
+      "spare1": "r726om",
+      "spare2": "lub45u",
       "children": [
         {
           "$ref": ".."
@@ -363,47 +363,47 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:39",
-        "lastTime": "2025-10-19 22:39:39",
-        "id": 280,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 408,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 215,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 158,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 143,
-        "description": "t7xms6",
-        "areaType": "o7hmq3"
+        "status": 643,
+        "description": "lmo58v",
+        "areaType": "0jrl7v"
       }
     ],
     "roleIds": [
-      53
+      418
     ],
     "positionIds": [
-      "w1bi99"
+      "oxr17d"
     ],
-    "roleId": 382,
+    "roleId": 466,
     "userRoleList": [
       {
-        "id": 979,
-        "deptId": 357,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 607,
-        "roleName": "zona.sauer",
-        "adminId": 959
+        "id": 138,
+        "deptId": 262,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 278,
+        "roleName": "necole.oreilly",
+        "adminId": 613
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -520,60 +520,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:39",
-    "lastTime": "2025-10-19 22:39:39",
-    "id": 337,
-    "userId": "149",
-    "deptId": 265,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "gee6sj",
-    "password": "tpjwf7",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:45",
+    "lastTime": "2025-10-20 01:16:45",
+    "id": 729,
+    "userId": "127",
+    "deptId": 816,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "jj8mev",
+    "password": "o23pt0",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 817,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:39",
-    "description": "hvjoek",
+    "status": 707,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:45",
+    "description": "exndgt",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "id": 53,
-      "organId": "149",
-      "parentId": 48,
-      "appId": "149",
-      "depttypeId": 24,
-      "foreignId": "149",
-      "createType": 255,
-      "type": "18jur9",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "a38e7s",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 474,
+      "organId": "127",
+      "parentId": 971,
+      "appId": "127",
+      "depttypeId": 367,
+      "foreignId": "127",
+      "createType": 976,
+      "type": "v5k30t",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "28l3yv",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "ok7l68",
-      "priority": 372,
-      "status": 255,
-      "delFlag": 7,
-      "description": "icpzes",
-      "spare1": "886nuk",
-      "spare2": "z5drlj",
+      "searchCode": "65412",
+      "imagePath": "oro8rp",
+      "priority": 494,
+      "status": 445,
+      "delFlag": 4,
+      "description": "g5b3ky",
+      "spare1": "7msq3x",
+      "spare2": "2ji2qp",
       "children": [
         {
           "$ref": ".."
@@ -582,44 +582,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:39",
-        "lastTime": "2025-10-19 22:39:39",
-        "id": 184,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 806,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 183,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 723,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 495,
-        "description": "5uein3",
-        "areaType": "skm63z"
+        "status": 866,
+        "description": "ipjjmw",
+        "areaType": "kd7f81"
       }
     ],
     "roleIds": [
-      553
+      591
     ],
     "positionIds": [
-      "5lafy9"
+      "k7zdfb"
     ],
-    "roleId": 817,
+    "roleId": 768,
     "userRoleList": [
       {
-        "id": 172,
-        "deptId": 824,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 904,
-        "roleName": "zona.sauer",
-        "adminId": 918
+        "id": 398,
+        "deptId": 632,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 717,
+        "roleName": "necole.oreilly",
+        "adminId": 762
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -641,8 +641,8 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -676,8 +676,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "pk5d38",
-    "newPassword": "1e87ul"
+    "oldPassword": "4lzz7v",
+    "newPassword": "dojz5w"
   }
 }'
 ```
@@ -701,8 +701,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -753,10 +753,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.aubrey-rice.net"
+    "imageUrl": "www.emanuel-bosco.biz"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -802,7 +802,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?q=q6lc83&endTime=2025-10-19 22:38:36&startTime=2025-10-19 22:38:36&resclassId=149&refId=149&refType=8exer7&orderBy=169&fileName=zona.sauer&key=kzt6jj&fileSize=149&fileExtension=4wy2f3&appId=149&page=1&fileIsvalid=true&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?endTime=2025-10-20 01:15:40&refId=127&limit=10&refType=ge889d&startTime=2025-10-20 01:15:40&fileIsvalid=true&resclassId=127&fileSize=30&page=1&fileExtension=69jal1&fileName=necole.oreilly&appId=127&key=j1mg2s&orderBy=340&q=eqh4ao
 ```
 **Response-fields:**
 
@@ -834,26 +834,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 875,
+    "totalCount": 438,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "149",
-        "resclassId": "149",
-        "fileName": "zona.sauer",
+        "id": "127",
+        "resclassId": "127",
+        "fileName": "necole.oreilly",
         "fileIsvalid": true,
-        "createTime": "2025-10-19 22:39:45",
-        "fileExtension": "vizfxx",
+        "createTime": "2025-10-20 01:16:51",
+        "fileExtension": "ec2y9p",
         "ids": [
-          "dvs0hm"
+          "qpup37"
         ]
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -898,7 +898,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileSize=900&refId=149&key=gjgzue&refType=1nke6s&appId=149&endTime=2025-10-19 22:38:36&startTime=2025-10-19 22:38:36&q=e30ytr&limit=10&fileName=zona.sauer&resclassId=149&fileIsvalid=true&page=1&orderBy=266&fileExtension=5of3b8'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileSize=262&appId=127&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&fileName=necole.oreilly&fileExtension=17oc08&refId=127&key=xgdxw8&q=yyki96&limit=10&refType=za7ruq&fileIsvalid=true&resclassId=127&orderBy=480&page=1'
 ```
 **Response-fields:**
 
@@ -917,9 +917,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t598nh",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "po450p",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -950,7 +950,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=127
 ```
 **Response-fields:**
 
@@ -977,18 +977,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "149",
-    "resclassId": "149",
-    "fileName": "zona.sauer",
+    "id": "127",
+    "resclassId": "127",
+    "fileName": "necole.oreilly",
     "fileIsvalid": true,
-    "createTime": "2025-10-19 22:39:45",
-    "fileExtension": "lmj513",
+    "createTime": "2025-10-20 01:16:51",
+    "fileExtension": "dsqmac",
     "ids": [
-      "54l62g"
+      "h3vbid"
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1028,14 +1028,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "149",
-    "resclassId": "149",
-    "fileName": "zona.sauer",
+    "id": "127",
+    "resclassId": "127",
+    "fileName": "necole.oreilly",
     "fileIsvalid": true,
-    "createTime": "2025-10-19 22:39:45",
-    "fileExtension": "5v9wpd",
+    "createTime": "2025-10-20 01:16:51",
+    "fileExtension": "o2pyk8",
     "ids": [
-      "gd742o"
+      "so61a2"
     ]
   }
 }'
@@ -1057,9 +1057,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qk4lmv",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "l951d1",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1099,14 +1099,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "149",
-    "resclassId": "149",
-    "fileName": "zona.sauer",
+    "id": "127",
+    "resclassId": "127",
+    "fileName": "necole.oreilly",
     "fileIsvalid": true,
-    "createTime": "2025-10-19 22:39:45",
-    "fileExtension": "wab450",
+    "createTime": "2025-10-20 01:16:51",
+    "fileExtension": "xyneuh",
     "ids": [
-      "knry2v"
+      "y1jx5m"
     ]
   }
 }'
@@ -1128,9 +1128,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "249k1i",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "mqj4r4",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1170,14 +1170,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "149",
-    "resclassId": "149",
-    "fileName": "zona.sauer",
+    "id": "127",
+    "resclassId": "127",
+    "fileName": "necole.oreilly",
     "fileIsvalid": true,
-    "createTime": "2025-10-19 22:39:45",
-    "fileExtension": "oxowk7",
+    "createTime": "2025-10-20 01:16:51",
+    "fileExtension": "697cfg",
     "ids": [
-      "rwi5c4"
+      "hapil2"
     ]
   }
 }'
@@ -1199,9 +1199,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fyppom",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "whi97k",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1245,9 +1245,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zkae95",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "e6zaok",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1279,7 +1279,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=zona.sauer&delete=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=necole.oreilly&delete=true
 ```
 **Response-fields:**
 
@@ -1298,9 +1298,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3mrws7",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "9aqoib",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1351,15 +1351,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "zona.sauer",
-    "filename": "zona.sauer",
-    "fileType": "nzwijs",
-    "fileUrl": "www.aubrey-rice.net",
-    "fileHttpUrl": "www.aubrey-rice.net",
-    "statusCode": "62411"
+    "originFilename": "necole.oreilly",
+    "filename": "necole.oreilly",
+    "fileType": "t1podx",
+    "fileUrl": "www.emanuel-bosco.biz",
+    "fileHttpUrl": "www.emanuel-bosco.biz",
+    "statusCode": "65412"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1417,16 +1417,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "zona.sauer",
-      "filename": "zona.sauer",
-      "fileType": "23vokh",
-      "fileUrl": "www.aubrey-rice.net",
-      "fileHttpUrl": "www.aubrey-rice.net",
-      "statusCode": "62411"
+      "originFilename": "necole.oreilly",
+      "filename": "necole.oreilly",
+      "fileType": "9apb90",
+      "fileUrl": "www.emanuel-bosco.biz",
+      "fileHttpUrl": "www.emanuel-bosco.biz",
+      "statusCode": "65412"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1457,7 +1457,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=0glbai
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=12blq9
 ```
 **Response-fields:**
 
@@ -1476,9 +1476,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3ty5nk",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ucdbmp",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1518,7 +1518,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?q=32yisd&limit=10&remark=tvcfwr&startTime=2025-10-19 22:38:36&isDisabled=true&configKey=5sli4s&page=1&orderBy=105&endTime=2025-10-19 22:38:36&configValue=otubro
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-10-20 01:15:40&limit=10&configKey=nqdxb4&isDisabled=true&page=1&configValue=0lu9oe&q=8dfxuc&endTime=2025-10-20 01:15:40&remark=s1p7ps&orderBy=352
 ```
 **Response-fields:**
 
@@ -1548,22 +1548,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 735,
+    "totalCount": 126,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "149",
-        "configKey": "tb5hwx",
-        "configValue": "3we25m",
+        "configId": "127",
+        "configKey": "kgxkpk",
+        "configValue": "fi9y6c",
         "isDisabled": true,
-        "remark": "rjri0e"
+        "remark": "hesv4j"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1602,7 +1602,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'limit=10&isDisabled=true&startTime=2025-10-19 22:38:36&q=f17072&page=1&remark=9iemtw&endTime=2025-10-19 22:38:36&configValue=do7o55&configKey=r22vgr&orderBy=725'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'endTime=2025-10-20 01:15:40&page=1&orderBy=92&configKey=95wuhn&q=ysc4d1&startTime=2025-10-20 01:15:40&limit=10&configValue=azbzb5&isDisabled=true&remark=26138c'
 ```
 **Response-fields:**
 
@@ -1621,9 +1621,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "elid41",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "wekr16",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1653,7 +1653,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/127.do
 ```
 **Response-fields:**
 
@@ -1678,14 +1678,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "149",
-    "configKey": "lzita4",
-    "configValue": "txmgzz",
+    "configId": "127",
+    "configKey": "nhr7ja",
+    "configValue": "5mh3la",
     "isDisabled": true,
-    "remark": "x3sjne"
+    "remark": "kwhlks"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1715,7 +1715,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/1i0voq.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/et5f0m.do
 ```
 **Response-fields:**
 
@@ -1740,14 +1740,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "149",
-    "configKey": "rghcmi",
-    "configValue": "gltcol",
+    "configId": "127",
+    "configKey": "4zbasv",
+    "configValue": "ji9uzi",
     "isDisabled": true,
-    "remark": "y33kl6"
+    "remark": "lll2w6"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1784,11 +1784,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "149",
-    "configKey": "z6ut3g",
-    "configValue": "pbsp8k",
+    "configId": "127",
+    "configKey": "iozc39",
+    "configValue": "uvswtd",
     "isDisabled": true,
-    "remark": "7aw4sl"
+    "remark": "tn6cew"
   }
 }'
 ```
@@ -1809,9 +1809,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rx995u",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "bdd6zn",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1848,11 +1848,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "149",
-    "configKey": "qf4ydp",
-    "configValue": "fj00du",
+    "configId": "127",
+    "configKey": "xllvts",
+    "configValue": "1pcte1",
     "isDisabled": true,
-    "remark": "2oe58e"
+    "remark": "ppzea5"
   }
 }'
 ```
@@ -1873,9 +1873,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "el1uuy",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "htwk2d",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1924,9 +1924,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9qejj5",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "85bol8",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -1969,9 +1969,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wbomwa",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "me2z2r",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2003,7 +2003,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=zona.sauer&ipaddr=yahz3l
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=necole.oreilly&ipaddr=vnqoy3
 ```
 **Response-fields:**
 
@@ -2032,18 +2032,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "149",
-      "deptName": "zona.sauer",
-      "username": "zona.sauer",
-      "ipaddr": "b0k2uv",
-      "loginLocation": "u3fvmp",
-      "browser": "bu6tw5",
-      "os": "afu5ao",
-      "loginTime": 1760884716921
+      "tokenId": "127",
+      "deptName": "necole.oreilly",
+      "username": "necole.oreilly",
+      "ipaddr": "7ma4vw",
+      "loginLocation": "uu4y65",
+      "browser": "0jfkcc",
+      "os": "7ve499",
+      "loginTime": 1760894140169
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2073,7 +2073,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/149.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/127.do
 ```
 **Response-fields:**
 
@@ -2092,9 +2092,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1zyh8t",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "3b2tfy",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2160,7 +2160,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?name=zona.sauer&startTime=2025-10-19 22:38:36&spare2=yu6bmp&nativePlace=2uqpf1&nameEn=e90sgf&intro=dq01pv&orderBy=595&endTime=2025-10-19 22:38:36&keywords=lx0vtm&namePy=xmquyy&searchCode=62411&address=01408 Franklyn Rue， Laurynchester， PA 11972-0444&q=5sb4iu&familyAddress=01408 Franklyn Rue， Laurynchester， PA 11972-0444&sname=zona.sauer&postCode=62411&isMobileConfirm=true&page=1&comefrom=1g6uyg&spare1=hn3o4f&ids=b1zf5p&ids=b1zf5p&nickname=hilton.brown&limit=10&homeTel=41g1cz&idNum=7r0jdn&sex=ibo471&idMobile=1-312-770-5203&spare3=ebkt6q&idType=p8wqvv&qqNo=3qvlyc&weixinId=149&birthday=2025-10-19 22:39:49&spareMobile=1-312-770-5203&emergencePhone=1-980-925-4411&spare4=b7gvby
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?namePy=07bf2a&idMobile=1-856-813-9551&spare3=8ital3&intro=9d2cew&address=752 Francene Creek， Gislasonstad， NM 46451-7250&q=rlcsxz&birthday=2025-10-20 01:16:55&endTime=2025-10-20 01:15:40&familyAddress=752 Francene Creek， Gislasonstad， NM 46451-7250&searchCode=65412&comefrom=8xxvqn&spare1=0c3yss&limit=10&spare4=6lzyac&idNum=0gdzhg&spareMobile=1-856-813-9551&ids=92xuoc&ids=92xuoc&page=1&emergencePhone=1-614-814-9478&idType=42whh3&nameEn=gkw8oe&isMobileConfirm=true&name=necole.oreilly&keywords=dxxigb&spare2=i2mznk&weixinId=127&startTime=2025-10-20 01:15:40&postCode=65412&nativePlace=vylndk&sname=necole.oreilly&sex=anyo11&qqNo=xkdets&orderBy=359&homeTel=bqd4k4&nickname=ethyl.nitzsche
 ```
 **Response-fields:**
 
@@ -2219,48 +2219,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:49",
-      "lastTime": "2025-10-19 22:39:49",
-      "id": "149",
-      "nickname": "hilton.brown",
-      "idName": "zona.sauer",
-      "idNum": "csfi88",
-      "idMobile": "1-312-770-5203",
-      "idType": "y05o3h",
-      "namePy": "b3wayr",
-      "sname": "zona.sauer",
-      "nameEn": "7raev2",
-      "searchCode": "62411",
-      "sex": "foxoi6",
-      "birthday": "2025-10-19 22:39:49",
-      "postCode": "62411",
-      "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "nativePlace": "64o264",
-      "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "homeTel": "xuw18l",
-      "qqNo": "hnlpnd",
-      "weixinId": "149",
-      "weiboId": "149",
-      "spareMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:55",
+      "lastTime": "2025-10-20 01:16:55",
+      "id": "127",
+      "nickname": "ethyl.nitzsche",
+      "idName": "necole.oreilly",
+      "idNum": "y0w256",
+      "idMobile": "1-856-813-9551",
+      "idType": "o9um9j",
+      "namePy": "fhsr2m",
+      "sname": "necole.oreilly",
+      "nameEn": "sscwn3",
+      "searchCode": "65412",
+      "sex": "icm6dr",
+      "birthday": "2025-10-20 01:16:55",
+      "postCode": "65412",
+      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "nativePlace": "47r9g8",
+      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "homeTel": "onk44k",
+      "qqNo": "mrrmys",
+      "weixinId": "127",
+      "weiboId": "127",
+      "spareMobile": "1-856-813-9551",
       "isMobileConfirm": true,
-      "emergencePhone": "1-980-925-4411",
-      "keywords": "y07fm2",
-      "intro": "3xxtq9",
-      "comefrom": "hnh6hx",
-      "imagePath": "p3dwfz",
-      "userSignature": "dcnbra",
-      "ipRange": "gbswwu",
-      "macCode": "62411",
-      "resume": "zoi8nq",
-      "spare1": "y6ujdg",
-      "spare2": "ur50vb",
-      "spare3": "ask5h6",
-      "spare4": "84bnhq"
+      "emergencePhone": "1-614-814-9478",
+      "keywords": "7t2c65",
+      "intro": "n5p5z1",
+      "comefrom": "u050fn",
+      "imagePath": "5z2lti",
+      "userSignature": "m8pmy1",
+      "ipRange": "l90bf5",
+      "macCode": "65412",
+      "resume": "zpg73x",
+      "spare1": "x58y8a",
+      "spare2": "2unxsp",
+      "spare3": "oqbxfo",
+      "spare4": "fb5uhc"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2349,47 +2349,47 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": "149",
-    "nickname": "hilton.brown",
-    "idName": "zona.sauer",
-    "idNum": "gjqm2p",
-    "idMobile": "1-312-770-5203",
-    "idType": "lybt0b",
-    "namePy": "jc4xzj",
-    "sname": "zona.sauer",
-    "nameEn": "g8qmv8",
-    "searchCode": "62411",
-    "sex": "6woszh",
-    "birthday": "2025-10-19 22:39:49",
-    "postCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "nativePlace": "dd0qf6",
-    "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "homeTel": "cxe8k6",
-    "qqNo": "audbqe",
-    "weixinId": "149",
-    "weiboId": "149",
-    "spareMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "nickname": "ethyl.nitzsche",
+    "idName": "necole.oreilly",
+    "idNum": "yvknoj",
+    "idMobile": "1-856-813-9551",
+    "idType": "i5oreg",
+    "namePy": "p7qulg",
+    "sname": "necole.oreilly",
+    "nameEn": "lf3f4j",
+    "searchCode": "65412",
+    "sex": "jdzmz9",
+    "birthday": "2025-10-20 01:16:55",
+    "postCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "nativePlace": "3zqs98",
+    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "homeTel": "3t1o4c",
+    "qqNo": "k04131",
+    "weixinId": "127",
+    "weiboId": "127",
+    "spareMobile": "1-856-813-9551",
     "isMobileConfirm": true,
-    "emergencePhone": "1-980-925-4411",
-    "keywords": "0sgofi",
-    "intro": "eg2agc",
-    "comefrom": "mek9r8",
-    "imagePath": "gysg5b",
-    "userSignature": "ivh4la",
-    "ipRange": "rqf9bb",
-    "macCode": "62411",
-    "resume": "jkape9",
-    "spare1": "r92pom",
-    "spare2": "f155ja",
-    "spare3": "728ido",
-    "spare4": "pajhga"
+    "emergencePhone": "1-614-814-9478",
+    "keywords": "o2lj2n",
+    "intro": "xu0fu5",
+    "comefrom": "50knhk",
+    "imagePath": "tzni8p",
+    "userSignature": "7olkqn",
+    "ipRange": "prbl6a",
+    "macCode": "65412",
+    "resume": "0k0q2b",
+    "spare1": "b5yyh1",
+    "spare2": "qj3prz",
+    "spare3": "kpl56y",
+    "spare4": "cl2dee"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2460,44 +2460,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": "149",
-    "nickname": "hilton.brown",
-    "idName": "zona.sauer",
-    "idNum": "izpp4w",
-    "idMobile": "1-312-770-5203",
-    "idType": "v1tmox",
-    "namePy": "wbzeg5",
-    "sname": "zona.sauer",
-    "nameEn": "axuavy",
-    "searchCode": "62411",
-    "sex": "2uc8jy",
-    "birthday": "2025-10-19 22:39:49",
-    "postCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "nativePlace": "p8deoj",
-    "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "homeTel": "mwdaaj",
-    "qqNo": "89sd1o",
-    "weixinId": "149",
-    "weiboId": "149",
-    "spareMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "nickname": "ethyl.nitzsche",
+    "idName": "necole.oreilly",
+    "idNum": "7f1xy3",
+    "idMobile": "1-856-813-9551",
+    "idType": "e834oy",
+    "namePy": "yin0nx",
+    "sname": "necole.oreilly",
+    "nameEn": "9nvlzu",
+    "searchCode": "65412",
+    "sex": "f82xj1",
+    "birthday": "2025-10-20 01:16:55",
+    "postCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "nativePlace": "704ey7",
+    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "homeTel": "ffow7a",
+    "qqNo": "gx9cas",
+    "weixinId": "127",
+    "weiboId": "127",
+    "spareMobile": "1-856-813-9551",
     "isMobileConfirm": true,
-    "emergencePhone": "1-980-925-4411",
-    "keywords": "ko20ac",
-    "intro": "o1x7si",
-    "comefrom": "grg1xi",
-    "imagePath": "vyycx5",
-    "userSignature": "thkus2",
-    "ipRange": "p4l57n",
-    "macCode": "62411",
-    "resume": "b9r1sc",
-    "spare1": "t1voma",
-    "spare2": "25bax6",
-    "spare3": "1a1og7",
-    "spare4": "48v7a0"
+    "emergencePhone": "1-614-814-9478",
+    "keywords": "ris4ep",
+    "intro": "8ll0m2",
+    "comefrom": "bwnl12",
+    "imagePath": "4guoaw",
+    "userSignature": "nyymfw",
+    "ipRange": "994epo",
+    "macCode": "65412",
+    "resume": "5xo19o",
+    "spare1": "79wmyy",
+    "spare2": "4vnyi3",
+    "spare3": "khs8zf",
+    "spare4": "kjx9v4"
   }
 }'
 ```
@@ -2518,9 +2518,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yvbglp",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "a0gsd2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2591,44 +2591,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": "149",
-    "nickname": "hilton.brown",
-    "idName": "zona.sauer",
-    "idNum": "jw10ax",
-    "idMobile": "1-312-770-5203",
-    "idType": "posijz",
-    "namePy": "xd9gr0",
-    "sname": "zona.sauer",
-    "nameEn": "af7dmf",
-    "searchCode": "62411",
-    "sex": "to4ra2",
-    "birthday": "2025-10-19 22:39:49",
-    "postCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "nativePlace": "ipbaqx",
-    "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "homeTel": "civgf1",
-    "qqNo": "aw09h7",
-    "weixinId": "149",
-    "weiboId": "149",
-    "spareMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "nickname": "ethyl.nitzsche",
+    "idName": "necole.oreilly",
+    "idNum": "wvui63",
+    "idMobile": "1-856-813-9551",
+    "idType": "ixgex5",
+    "namePy": "md4mo2",
+    "sname": "necole.oreilly",
+    "nameEn": "z5fjn4",
+    "searchCode": "65412",
+    "sex": "32hb3t",
+    "birthday": "2025-10-20 01:16:55",
+    "postCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "nativePlace": "pyjrrb",
+    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "homeTel": "lefoz4",
+    "qqNo": "vqx2rl",
+    "weixinId": "127",
+    "weiboId": "127",
+    "spareMobile": "1-856-813-9551",
     "isMobileConfirm": true,
-    "emergencePhone": "1-980-925-4411",
-    "keywords": "6pzx47",
-    "intro": "ac1rpz",
-    "comefrom": "9jxvmz",
-    "imagePath": "st86pc",
-    "userSignature": "h1vjtw",
-    "ipRange": "0clre4",
-    "macCode": "62411",
-    "resume": "veevav",
-    "spare1": "a9cmyj",
-    "spare2": "f328c9",
-    "spare3": "if3f9q",
-    "spare4": "j3cdt0"
+    "emergencePhone": "1-614-814-9478",
+    "keywords": "h3gjjh",
+    "intro": "npqy6a",
+    "comefrom": "dqp33a",
+    "imagePath": "zkwxej",
+    "userSignature": "cf5f5i",
+    "ipRange": "ldkd7o",
+    "macCode": "65412",
+    "resume": "x1e82c",
+    "spare1": "pfvw5o",
+    "spare2": "v0qteu",
+    "spare3": "38z5zi",
+    "spare4": "9w1jf8"
   }
 }'
 ```
@@ -2649,9 +2649,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5pj2gi",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "t4nkz5",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2701,9 +2701,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9xo28s",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "966lwi",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -2761,7 +2761,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?q=0vyn3s&bindOrganType=9eed27&limit=10&delFlag=7&spare1=cej079&key=3sbimw&email=chuck.adams@gmail.com&page=1&lastAppId=149&xzqhId=651&registerTime=2025-10-19 22:39:48&srcCode=343&endTime=2025-10-19 22:38:36&bindOrganId=149&mobile=1-312-770-5203&description=bu6xeg&ids=msta2i&ids=msta2i&createType=475&startTime=2025-10-19 22:38:36&createTime=2025-10-19 22:38:36&searchCode=62411&source=175&isBindFrontUser=0is042&orderBy=0&workUserId=149&username=zona.sauer&spare2=sc8e7h
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?email=eugenia.howe@yahoo.com&source=615&startTime=2025-10-20 01:15:40&registerTime=2025-10-20 01:16:55&workUserId=127&xzqhId=649&username=necole.oreilly&orderBy=291&bindOrganType=jlfamo&bindOrganId=127&delFlag=4&limit=10&spare2=256qdf&endTime=2025-10-20 01:15:40&description=7w355u&createTime=2025-10-20 01:15:40&searchCode=65412&q=4414e0&srcCode=604&page=1&lastAppId=127&ids=7llgl6&ids=7llgl6&spare1=iyw412&isBindFrontUser=iad1gp&mobile=1-856-813-9551&key=aji0ez&createType=498
 ```
 **Response-fields:**
 
@@ -2859,88 +2859,88 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:48",
-      "lastTime": "2025-10-19 22:39:48",
-      "id": "149",
-      "xzqhId": 438,
-      "source": "6p1nho",
-      "createType": 783,
-      "username": "zona.sauer",
-      "mobile": "1-312-770-5203",
-      "email": "chuck.adams@gmail.com",
-      "password": "ek39c4",
-      "salt": "c60x5y",
-      "srcCode": 978,
-      "registerTime": "2025-10-19 22:39:48",
-      "registerIp": "171.216.115.206",
-      "currentLoginTime": "2025-10-19 22:39:48",
-      "currentLoginIp": "171.216.115.206",
-      "lastAppId": "149",
-      "lastLoginTime": "2025-10-19 22:39:48",
-      "lastLoginIp": "171.216.115.206",
-      "lastLogoutTime": "2025-10-19 22:39:48",
-      "loginCount": 447,
-      "resetKey": "zjuxto",
-      "resetPwd": "wjpfpx",
-      "lastResetTime": "2025-10-19 22:39:48",
-      "errorTime": "2025-10-19 22:39:48",
-      "errorCount": 381,
-      "errorIp": "171.216.115.206",
-      "lockTime": "2025-10-19 22:39:48",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:55",
+      "lastTime": "2025-10-20 01:16:55",
+      "id": "127",
+      "xzqhId": 201,
+      "source": "41r9on",
+      "createType": 301,
+      "username": "necole.oreilly",
+      "mobile": "1-856-813-9551",
+      "email": "eugenia.howe@yahoo.com",
+      "password": "n3jqdb",
+      "salt": "4lhbid",
+      "srcCode": 414,
+      "registerTime": "2025-10-20 01:16:55",
+      "registerIp": "148.144.89.250",
+      "currentLoginTime": "2025-10-20 01:16:55",
+      "currentLoginIp": "148.144.89.250",
+      "lastAppId": "127",
+      "lastLoginTime": "2025-10-20 01:16:55",
+      "lastLoginIp": "148.144.89.250",
+      "lastLogoutTime": "2025-10-20 01:16:55",
+      "loginCount": 639,
+      "resetKey": "9rtp6q",
+      "resetPwd": "8f69mw",
+      "lastResetTime": "2025-10-20 01:16:55",
+      "errorTime": "2025-10-20 01:16:55",
+      "errorCount": 522,
+      "errorIp": "148.144.89.250",
+      "lockTime": "2025-10-20 01:16:55",
       "activation": true,
-      "activationCode": "62411",
-      "priority": 942,
-      "delFlag": 7,
-      "deleteTime": "2025-10-19 22:39:48",
-      "description": "0nnfdt",
-      "spare1": "yguco2",
-      "spare2": "k7a18i",
-      "newPassword": "3z15xn",
+      "activationCode": "65412",
+      "priority": 926,
+      "delFlag": 4,
+      "deleteTime": "2025-10-20 01:16:55",
+      "description": "yueh0x",
+      "spare1": "s0q1h0",
+      "spare2": "3tedeb",
+      "newPassword": "h2bmzv",
       "baseUserExt": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:48",
-        "lastTime": "2025-10-19 22:39:48",
-        "id": "149",
-        "nickname": "hilton.brown",
-        "idName": "zona.sauer",
-        "idNum": "srt18m",
-        "idMobile": "1-312-770-5203",
-        "idType": "nhj4t2",
-        "namePy": "axridg",
-        "sname": "zona.sauer",
-        "nameEn": "u3zsq0",
-        "searchCode": "62411",
-        "sex": "97h8di",
-        "birthday": "2025-10-19 22:39:48",
-        "postCode": "62411",
-        "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-        "nativePlace": "5zzcls",
-        "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-        "homeTel": "j50urr",
-        "qqNo": "ggdczx",
-        "weixinId": "149",
-        "weiboId": "149",
-        "spareMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:55",
+        "lastTime": "2025-10-20 01:16:55",
+        "id": "127",
+        "nickname": "ethyl.nitzsche",
+        "idName": "necole.oreilly",
+        "idNum": "11ulcq",
+        "idMobile": "1-856-813-9551",
+        "idType": "nfubkm",
+        "namePy": "paq13g",
+        "sname": "necole.oreilly",
+        "nameEn": "pivg5c",
+        "searchCode": "65412",
+        "sex": "sd95o9",
+        "birthday": "2025-10-20 01:16:55",
+        "postCode": "65412",
+        "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+        "nativePlace": "n9vu8m",
+        "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+        "homeTel": "y6ug78",
+        "qqNo": "s0nvxx",
+        "weixinId": "127",
+        "weiboId": "127",
+        "spareMobile": "1-856-813-9551",
         "isMobileConfirm": true,
-        "emergencePhone": "1-980-925-4411",
-        "keywords": "gk5ckq",
-        "intro": "hdwdt4",
-        "comefrom": "o0pogj",
-        "imagePath": "bgoevl",
-        "userSignature": "q5evii",
-        "ipRange": "hnlb8v",
-        "macCode": "62411",
-        "resume": "pj0bgc",
-        "spare1": "q3kryc",
-        "spare2": "0vtkyh",
-        "spare3": "f6dm4g",
-        "spare4": "prmv1d"
+        "emergencePhone": "1-614-814-9478",
+        "keywords": "jf9rk7",
+        "intro": "hbmsm8",
+        "comefrom": "wp2o28",
+        "imagePath": "r0ntkz",
+        "userSignature": "vjet1n",
+        "ipRange": "csu2sf",
+        "macCode": "65412",
+        "resume": "ynr6cx",
+        "spare1": "rommvc",
+        "spare2": "zczbs7",
+        "spare3": "zz0q3p",
+        "spare4": "g3xp9w"
       }
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3068,87 +3068,87 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:48",
-    "lastTime": "2025-10-19 22:39:48",
-    "id": "149",
-    "xzqhId": 648,
-    "source": "qr18xf",
-    "createType": 720,
-    "username": "zona.sauer",
-    "mobile": "1-312-770-5203",
-    "email": "chuck.adams@gmail.com",
-    "password": "ooh7pl",
-    "salt": "wvwui1",
-    "srcCode": 402,
-    "registerTime": "2025-10-19 22:39:48",
-    "registerIp": "171.216.115.206",
-    "currentLoginTime": "2025-10-19 22:39:48",
-    "currentLoginIp": "171.216.115.206",
-    "lastAppId": "149",
-    "lastLoginTime": "2025-10-19 22:39:48",
-    "lastLoginIp": "171.216.115.206",
-    "lastLogoutTime": "2025-10-19 22:39:48",
-    "loginCount": 669,
-    "resetKey": "cm0jfg",
-    "resetPwd": "88lzcz",
-    "lastResetTime": "2025-10-19 22:39:48",
-    "errorTime": "2025-10-19 22:39:48",
-    "errorCount": 325,
-    "errorIp": "171.216.115.206",
-    "lockTime": "2025-10-19 22:39:48",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "xzqhId": 294,
+    "source": "nwojll",
+    "createType": 134,
+    "username": "necole.oreilly",
+    "mobile": "1-856-813-9551",
+    "email": "eugenia.howe@yahoo.com",
+    "password": "r0dqad",
+    "salt": "cki9v9",
+    "srcCode": 849,
+    "registerTime": "2025-10-20 01:16:55",
+    "registerIp": "148.144.89.250",
+    "currentLoginTime": "2025-10-20 01:16:55",
+    "currentLoginIp": "148.144.89.250",
+    "lastAppId": "127",
+    "lastLoginTime": "2025-10-20 01:16:55",
+    "lastLoginIp": "148.144.89.250",
+    "lastLogoutTime": "2025-10-20 01:16:55",
+    "loginCount": 936,
+    "resetKey": "osk3xr",
+    "resetPwd": "yzi52b",
+    "lastResetTime": "2025-10-20 01:16:55",
+    "errorTime": "2025-10-20 01:16:55",
+    "errorCount": 7,
+    "errorIp": "148.144.89.250",
+    "lockTime": "2025-10-20 01:16:55",
     "activation": true,
-    "activationCode": "62411",
-    "priority": 941,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:48",
-    "description": "tmy8ao",
-    "spare1": "2ms7nd",
-    "spare2": "2dkod5",
-    "newPassword": "9yg6o5",
+    "activationCode": "65412",
+    "priority": 314,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:55",
+    "description": "l8dxu5",
+    "spare1": "ehlf0w",
+    "spare2": "kqu1zw",
+    "newPassword": "s6lsi0",
     "baseUserExt": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:48",
-      "lastTime": "2025-10-19 22:39:48",
-      "id": "149",
-      "nickname": "hilton.brown",
-      "idName": "zona.sauer",
-      "idNum": "crc7f9",
-      "idMobile": "1-312-770-5203",
-      "idType": "7fn2fu",
-      "namePy": "au498f",
-      "sname": "zona.sauer",
-      "nameEn": "c6w8b3",
-      "searchCode": "62411",
-      "sex": "snu69t",
-      "birthday": "2025-10-19 22:39:48",
-      "postCode": "62411",
-      "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "nativePlace": "kb8ehg",
-      "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "homeTel": "otzjsb",
-      "qqNo": "u2gfj4",
-      "weixinId": "149",
-      "weiboId": "149",
-      "spareMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:55",
+      "lastTime": "2025-10-20 01:16:55",
+      "id": "127",
+      "nickname": "ethyl.nitzsche",
+      "idName": "necole.oreilly",
+      "idNum": "5phj3q",
+      "idMobile": "1-856-813-9551",
+      "idType": "by1ih9",
+      "namePy": "qhp8qp",
+      "sname": "necole.oreilly",
+      "nameEn": "2lb7yv",
+      "searchCode": "65412",
+      "sex": "geqmlf",
+      "birthday": "2025-10-20 01:16:55",
+      "postCode": "65412",
+      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "nativePlace": "puywrv",
+      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "homeTel": "xv9cz2",
+      "qqNo": "itnn4r",
+      "weixinId": "127",
+      "weiboId": "127",
+      "spareMobile": "1-856-813-9551",
       "isMobileConfirm": true,
-      "emergencePhone": "1-980-925-4411",
-      "keywords": "gv58d9",
-      "intro": "hbdtwr",
-      "comefrom": "i0rra6",
-      "imagePath": "avyiaw",
-      "userSignature": "p67qhy",
-      "ipRange": "atx58m",
-      "macCode": "62411",
-      "resume": "m7rr86",
-      "spare1": "pmvss8",
-      "spare2": "0fdhi4",
-      "spare3": "a8nyi4",
-      "spare4": "wn2vcd"
+      "emergencePhone": "1-614-814-9478",
+      "keywords": "4udi0c",
+      "intro": "iu117u",
+      "comefrom": "32pz14",
+      "imagePath": "g6mtcl",
+      "userSignature": "goc4hh",
+      "ipRange": "eis3ak",
+      "macCode": "65412",
+      "resume": "7tqlv0",
+      "spare1": "v5xm6e",
+      "spare2": "5ue4s5",
+      "spare3": "994tqy",
+      "spare4": "f1j28q"
     }
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3258,83 +3258,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": "149",
-    "xzqhId": 597,
-    "source": "01qzrg",
-    "createType": 550,
-    "username": "zona.sauer",
-    "mobile": "1-312-770-5203",
-    "email": "chuck.adams@gmail.com",
-    "password": "dmx545",
-    "salt": "otaejz",
-    "srcCode": 738,
-    "registerTime": "2025-10-19 22:39:49",
-    "registerIp": "171.216.115.206",
-    "currentLoginTime": "2025-10-19 22:39:49",
-    "currentLoginIp": "171.216.115.206",
-    "lastAppId": "149",
-    "lastLoginTime": "2025-10-19 22:39:49",
-    "lastLoginIp": "171.216.115.206",
-    "lastLogoutTime": "2025-10-19 22:39:49",
-    "loginCount": 482,
-    "resetKey": "nnrgy2",
-    "resetPwd": "0ztwvg",
-    "lastResetTime": "2025-10-19 22:39:49",
-    "errorTime": "2025-10-19 22:39:49",
-    "errorCount": 768,
-    "errorIp": "171.216.115.206",
-    "lockTime": "2025-10-19 22:39:49",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "xzqhId": 745,
+    "source": "eir35c",
+    "createType": 517,
+    "username": "necole.oreilly",
+    "mobile": "1-856-813-9551",
+    "email": "eugenia.howe@yahoo.com",
+    "password": "gvuw0t",
+    "salt": "35w05o",
+    "srcCode": 620,
+    "registerTime": "2025-10-20 01:16:55",
+    "registerIp": "148.144.89.250",
+    "currentLoginTime": "2025-10-20 01:16:55",
+    "currentLoginIp": "148.144.89.250",
+    "lastAppId": "127",
+    "lastLoginTime": "2025-10-20 01:16:55",
+    "lastLoginIp": "148.144.89.250",
+    "lastLogoutTime": "2025-10-20 01:16:55",
+    "loginCount": 308,
+    "resetKey": "6vn60c",
+    "resetPwd": "p64yyq",
+    "lastResetTime": "2025-10-20 01:16:55",
+    "errorTime": "2025-10-20 01:16:55",
+    "errorCount": 621,
+    "errorIp": "148.144.89.250",
+    "lockTime": "2025-10-20 01:16:55",
     "activation": true,
-    "activationCode": "62411",
-    "priority": 602,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:49",
-    "description": "z99oyd",
-    "spare1": "tzox2o",
-    "spare2": "afquuc",
-    "newPassword": "9yulea",
+    "activationCode": "65412",
+    "priority": 340,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:55",
+    "description": "yircm0",
+    "spare1": "luy8es",
+    "spare2": "o5jerh",
+    "newPassword": "ia89ue",
     "baseUserExt": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:49",
-      "lastTime": "2025-10-19 22:39:49",
-      "id": "149",
-      "nickname": "hilton.brown",
-      "idName": "zona.sauer",
-      "idNum": "v5v3fb",
-      "idMobile": "1-312-770-5203",
-      "idType": "8tfwln",
-      "namePy": "j96i0h",
-      "sname": "zona.sauer",
-      "nameEn": "lw1hk2",
-      "searchCode": "62411",
-      "sex": "1icn0p",
-      "birthday": "2025-10-19 22:39:49",
-      "postCode": "62411",
-      "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "nativePlace": "mf5qwo",
-      "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "homeTel": "xmz56m",
-      "qqNo": "pdvtqc",
-      "weixinId": "149",
-      "weiboId": "149",
-      "spareMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:55",
+      "lastTime": "2025-10-20 01:16:55",
+      "id": "127",
+      "nickname": "ethyl.nitzsche",
+      "idName": "necole.oreilly",
+      "idNum": "4nn6tl",
+      "idMobile": "1-856-813-9551",
+      "idType": "ndajhu",
+      "namePy": "0utdzc",
+      "sname": "necole.oreilly",
+      "nameEn": "8f6wyq",
+      "searchCode": "65412",
+      "sex": "shuzkw",
+      "birthday": "2025-10-20 01:16:55",
+      "postCode": "65412",
+      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "nativePlace": "3nwf6l",
+      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "homeTel": "i93281",
+      "qqNo": "t3eys4",
+      "weixinId": "127",
+      "weiboId": "127",
+      "spareMobile": "1-856-813-9551",
       "isMobileConfirm": true,
-      "emergencePhone": "1-980-925-4411",
-      "keywords": "kzlwi5",
-      "intro": "165mxs",
-      "comefrom": "2ftv4m",
-      "imagePath": "33fovb",
-      "userSignature": "09nvg2",
-      "ipRange": "7m0edg",
-      "macCode": "62411",
-      "resume": "avl4m3",
-      "spare1": "bfgc1g",
-      "spare2": "u9slhm",
-      "spare3": "sky7i4",
-      "spare4": "nkmf0j"
+      "emergencePhone": "1-614-814-9478",
+      "keywords": "eheq8l",
+      "intro": "rz49qq",
+      "comefrom": "55ze8n",
+      "imagePath": "in2haf",
+      "userSignature": "3vmcwe",
+      "ipRange": "dscgiz",
+      "macCode": "65412",
+      "resume": "noal8r",
+      "spare1": "ajlx8r",
+      "spare2": "5u70q8",
+      "spare3": "130965",
+      "spare4": "jr1nd4"
     }
   }
 }'
@@ -3356,9 +3356,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tbqrxn",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "fved71",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3468,83 +3468,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": "149",
-    "xzqhId": 225,
-    "source": "vpwl03",
-    "createType": 850,
-    "username": "zona.sauer",
-    "mobile": "1-312-770-5203",
-    "email": "chuck.adams@gmail.com",
-    "password": "ae9rwa",
-    "salt": "9ihrg7",
-    "srcCode": 992,
-    "registerTime": "2025-10-19 22:39:49",
-    "registerIp": "171.216.115.206",
-    "currentLoginTime": "2025-10-19 22:39:49",
-    "currentLoginIp": "171.216.115.206",
-    "lastAppId": "149",
-    "lastLoginTime": "2025-10-19 22:39:49",
-    "lastLoginIp": "171.216.115.206",
-    "lastLogoutTime": "2025-10-19 22:39:49",
-    "loginCount": 533,
-    "resetKey": "rhqrnf",
-    "resetPwd": "3t1yut",
-    "lastResetTime": "2025-10-19 22:39:49",
-    "errorTime": "2025-10-19 22:39:49",
-    "errorCount": 952,
-    "errorIp": "171.216.115.206",
-    "lockTime": "2025-10-19 22:39:49",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:55",
+    "lastTime": "2025-10-20 01:16:55",
+    "id": "127",
+    "xzqhId": 523,
+    "source": "9hrt38",
+    "createType": 576,
+    "username": "necole.oreilly",
+    "mobile": "1-856-813-9551",
+    "email": "eugenia.howe@yahoo.com",
+    "password": "obe7ln",
+    "salt": "385s1d",
+    "srcCode": 671,
+    "registerTime": "2025-10-20 01:16:55",
+    "registerIp": "148.144.89.250",
+    "currentLoginTime": "2025-10-20 01:16:55",
+    "currentLoginIp": "148.144.89.250",
+    "lastAppId": "127",
+    "lastLoginTime": "2025-10-20 01:16:55",
+    "lastLoginIp": "148.144.89.250",
+    "lastLogoutTime": "2025-10-20 01:16:55",
+    "loginCount": 397,
+    "resetKey": "4lfrqw",
+    "resetPwd": "r379pt",
+    "lastResetTime": "2025-10-20 01:16:55",
+    "errorTime": "2025-10-20 01:16:55",
+    "errorCount": 806,
+    "errorIp": "148.144.89.250",
+    "lockTime": "2025-10-20 01:16:55",
     "activation": true,
-    "activationCode": "62411",
-    "priority": 258,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:49",
-    "description": "ikqavg",
-    "spare1": "43moyj",
-    "spare2": "8gzax2",
-    "newPassword": "8tuhrr",
+    "activationCode": "65412",
+    "priority": 826,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:55",
+    "description": "o6n81f",
+    "spare1": "b3il3e",
+    "spare2": "y5e83m",
+    "newPassword": "w8obgr",
     "baseUserExt": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:49",
-      "lastTime": "2025-10-19 22:39:49",
-      "id": "149",
-      "nickname": "hilton.brown",
-      "idName": "zona.sauer",
-      "idNum": "q7fauq",
-      "idMobile": "1-312-770-5203",
-      "idType": "0ow0u5",
-      "namePy": "rf2f2g",
-      "sname": "zona.sauer",
-      "nameEn": "566k2v",
-      "searchCode": "62411",
-      "sex": "qxznar",
-      "birthday": "2025-10-19 22:39:49",
-      "postCode": "62411",
-      "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "nativePlace": "wpgewc",
-      "familyAddress": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "homeTel": "od80lx",
-      "qqNo": "i0ps7h",
-      "weixinId": "149",
-      "weiboId": "149",
-      "spareMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:55",
+      "lastTime": "2025-10-20 01:16:55",
+      "id": "127",
+      "nickname": "ethyl.nitzsche",
+      "idName": "necole.oreilly",
+      "idNum": "hahwsr",
+      "idMobile": "1-856-813-9551",
+      "idType": "giybt0",
+      "namePy": "7w657a",
+      "sname": "necole.oreilly",
+      "nameEn": "yjycxm",
+      "searchCode": "65412",
+      "sex": "udx2wn",
+      "birthday": "2025-10-20 01:16:55",
+      "postCode": "65412",
+      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "nativePlace": "lx9iyr",
+      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "homeTel": "k58kil",
+      "qqNo": "vpar7j",
+      "weixinId": "127",
+      "weiboId": "127",
+      "spareMobile": "1-856-813-9551",
       "isMobileConfirm": true,
-      "emergencePhone": "1-980-925-4411",
-      "keywords": "bihtkm",
-      "intro": "li169o",
-      "comefrom": "vkmep5",
-      "imagePath": "kq3vzf",
-      "userSignature": "rgari3",
-      "ipRange": "zbx6be",
-      "macCode": "62411",
-      "resume": "e2knua",
-      "spare1": "9vthpa",
-      "spare2": "188jcv",
-      "spare3": "je9zjj",
-      "spare4": "ib5xkp"
+      "emergencePhone": "1-614-814-9478",
+      "keywords": "np1lbf",
+      "intro": "36tsc2",
+      "comefrom": "r3yybi",
+      "imagePath": "cq4d1f",
+      "userSignature": "ydrai1",
+      "ipRange": "tojfo1",
+      "macCode": "65412",
+      "resume": "3ggkli",
+      "spare1": "z9yvmy",
+      "spare2": "m2pshq",
+      "spare3": "qtja60",
+      "spare4": "ksg1nj"
     }
   }
 }'
@@ -3566,9 +3566,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iyrow1",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "63if7r",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3618,9 +3618,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oe0cvt",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "gb6614",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3678,7 +3678,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?appId=149&recvOrganId=149&updatorId=149&startTime=2025-10-19 22:38:36&status=661&title=kaddpj&bizType=rjgsjw&updateTime=2025-10-19 22:39:49&limit=10&msgUrl=www.aubrey-rice.net&recvTargetid=149&organId=149&recvGroupId=149&description=hagmcv&orderBy=580&content=l3n0ys&readStatus=yvrsob&endTime=2025-10-19 22:38:36&foreignId=149&creatorId=149&id=908&imagePath=4z6t9e&iconStyle=0o7s6b&recvMemberId=149&page=1&type=236&q=2ennxi
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?type=753&updatorId=127&endTime=2025-10-20 01:15:40&iconStyle=u6q1x4&startTime=2025-10-20 01:15:40&status=162&recvOrganId=127&msgUrl=www.emanuel-bosco.biz&imagePath=evsqis&q=dji7b7&content=mots5t&recvGroupId=127&readStatus=wacuaj&foreignId=127&updateTime=2025-10-20 01:16:56&id=435&recvMemberId=127&description=tbgae4&organId=127&title=r38o3f&creatorId=127&page=1&bizType=wllece&recvTargetid=127&orderBy=235&appId=127&limit=10
 ```
 **Response-fields:**
 
@@ -3721,32 +3721,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:49",
-      "lastTime": "2025-10-19 22:39:49",
-      "id": 78,
-      "appId": "149",
-      "organId": "149",
-      "bizType": "bohiin",
-      "type": 979,
-      "title": "90bse9",
-      "content": "1ghdye",
-      "msgUrl": "www.aubrey-rice.net",
-      "foreignId": "149",
-      "imagePath": "ij0nra",
-      "iconStyle": "ek5bur",
-      "recvMemberId": "149",
-      "recvGroupId": "149",
-      "recvOrganId": "149",
-      "recvTargetid": "149",
-      "status": 724,
-      "updatorId": "149",
-      "updateTime": "2025-10-19 22:39:49",
-      "description": "qoe4fh"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:56",
+      "lastTime": "2025-10-20 01:16:56",
+      "id": 227,
+      "appId": "127",
+      "organId": "127",
+      "bizType": "0oc473",
+      "type": 22,
+      "title": "7p6yb8",
+      "content": "35qgnf",
+      "msgUrl": "www.emanuel-bosco.biz",
+      "foreignId": "127",
+      "imagePath": "e3ipri",
+      "iconStyle": "g576tr",
+      "recvMemberId": "127",
+      "recvGroupId": "127",
+      "recvOrganId": "127",
+      "recvTargetid": "127",
+      "status": 279,
+      "updatorId": "127",
+      "updateTime": "2025-10-20 01:16:56",
+      "description": "u2zy1y"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3803,7 +3803,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?description=kk8cbe&id=774&iconStyle=c3xxqz&content=ue9owe&status=878&foreignId=149&page=1&appId=149&orderBy=401&recvOrganId=149&organId=149&updatorId=149&bizType=tcxcxq&startTime=2025-10-19 22:38:36&recvTargetid=149&type=211&msgUrl=www.aubrey-rice.net&recvMemberId=149&recvGroupId=149&updateTime=2025-10-19 22:39:49&limit=10&creatorId=149&imagePath=mnzcvq&q=dae6cv&title=ylm5wg&endTime=2025-10-19 22:38:36&readStatus=aedva0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?creatorId=127&msgUrl=www.emanuel-bosco.biz&foreignId=127&orderBy=813&iconStyle=yyq6s8&page=1&readStatus=h3gstp&bizType=3xku4i&content=fcmbye&title=doq9ex&status=37&startTime=2025-10-20 01:15:40&limit=10&updateTime=2025-10-20 01:16:56&appId=127&q=1wrpyh&type=768&imagePath=w569pz&recvGroupId=127&endTime=2025-10-20 01:15:40&description=h17n0u&recvOrganId=127&recvTargetid=127&id=183&updatorId=127&recvMemberId=127&organId=127
 ```
 **Response-fields:**
 
@@ -3846,32 +3846,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:49",
-      "lastTime": "2025-10-19 22:39:49",
-      "id": 37,
-      "appId": "149",
-      "organId": "149",
-      "bizType": "g6d15e",
-      "type": 83,
-      "title": "8r3jnp",
-      "content": "8qhhur",
-      "msgUrl": "www.aubrey-rice.net",
-      "foreignId": "149",
-      "imagePath": "zqa3hi",
-      "iconStyle": "a5me3u",
-      "recvMemberId": "149",
-      "recvGroupId": "149",
-      "recvOrganId": "149",
-      "recvTargetid": "149",
-      "status": 678,
-      "updatorId": "149",
-      "updateTime": "2025-10-19 22:39:49",
-      "description": "9o1o6k"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:56",
+      "lastTime": "2025-10-20 01:16:56",
+      "id": 875,
+      "appId": "127",
+      "organId": "127",
+      "bizType": "f4ycsl",
+      "type": 872,
+      "title": "ggmdr5",
+      "content": "8lr1k2",
+      "msgUrl": "www.emanuel-bosco.biz",
+      "foreignId": "127",
+      "imagePath": "yuekyi",
+      "iconStyle": "9n3vwn",
+      "recvMemberId": "127",
+      "recvGroupId": "127",
+      "recvOrganId": "127",
+      "recvTargetid": "127",
+      "status": 728,
+      "updatorId": "127",
+      "updateTime": "2025-10-20 01:16:56",
+      "description": "9jspr5"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -3928,7 +3928,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'limit=10&creatorId=149&recvGroupId=149&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&recvMemberId=149&title=aswnwj&foreignId=149&recvTargetid=149&id=373&imagePath=y7ac07&readStatus=h1t75q&bizType=hdlifx&type=30&appId=149&organId=149&msgUrl=www.aubrey-rice.net&status=981&orderBy=82&updateTime=2025-10-19 22:39:49&page=1&description=c44erg&q=h46bo1&iconStyle=ryocx0&updatorId=149&content=2cr8qo&recvOrganId=149'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'appId=127&organId=127&creatorId=127&updateTime=2025-10-20 01:16:56&msgUrl=www.emanuel-bosco.biz&iconStyle=qofjrc&readStatus=ob5kh3&recvTargetid=127&q=4vtqg9&content=qh3ecs&recvOrganId=127&startTime=2025-10-20 01:15:40&imagePath=zcy94g&title=43m6sd&page=1&id=488&foreignId=127&endTime=2025-10-20 01:15:40&bizType=qh3izz&recvMemberId=127&updatorId=127&orderBy=241&description=uzebk9&limit=10&recvGroupId=127&status=798&type=565'
 ```
 **Response-fields:**
 
@@ -3947,9 +3947,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4850sx",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "uaeq5p",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4022,31 +4022,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": 424,
-    "appId": "149",
-    "organId": "149",
-    "bizType": "j0mnzb",
-    "type": 520,
-    "title": "bhkvr5",
-    "content": "srnv04",
-    "msgUrl": "www.aubrey-rice.net",
-    "foreignId": "149",
-    "imagePath": "qg4jah",
-    "iconStyle": "ujbviv",
-    "recvMemberId": "149",
-    "recvGroupId": "149",
-    "recvOrganId": "149",
-    "recvTargetid": "149",
-    "status": 202,
-    "updatorId": "149",
-    "updateTime": "2025-10-19 22:39:49",
-    "description": "epr0n6"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": 371,
+    "appId": "127",
+    "organId": "127",
+    "bizType": "xudv0w",
+    "type": 210,
+    "title": "o38eur",
+    "content": "iifrz8",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "foreignId": "127",
+    "imagePath": "z38oga",
+    "iconStyle": "qvo0cd",
+    "recvMemberId": "127",
+    "recvGroupId": "127",
+    "recvOrganId": "127",
+    "recvTargetid": "127",
+    "status": 199,
+    "updatorId": "127",
+    "updateTime": "2025-10-20 01:16:56",
+    "description": "3q2tul"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4101,28 +4101,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": 870,
-    "appId": "149",
-    "organId": "149",
-    "bizType": "1150ua",
-    "type": 306,
-    "title": "ra1x4k",
-    "content": "igt84q",
-    "msgUrl": "www.aubrey-rice.net",
-    "foreignId": "149",
-    "imagePath": "yjq30z",
-    "iconStyle": "le1oz8",
-    "recvMemberId": "149",
-    "recvGroupId": "149",
-    "recvOrganId": "149",
-    "recvTargetid": "149",
-    "status": 54,
-    "updatorId": "149",
-    "updateTime": "2025-10-19 22:39:49",
-    "description": "2ezlbo"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": 427,
+    "appId": "127",
+    "organId": "127",
+    "bizType": "ll71bb",
+    "type": 334,
+    "title": "e8ys10",
+    "content": "zybksd",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "foreignId": "127",
+    "imagePath": "j0cmen",
+    "iconStyle": "qec2ng",
+    "recvMemberId": "127",
+    "recvGroupId": "127",
+    "recvOrganId": "127",
+    "recvTargetid": "127",
+    "status": 226,
+    "updatorId": "127",
+    "updateTime": "2025-10-20 01:16:56",
+    "description": "aai9pw"
   }
 }'
 ```
@@ -4143,9 +4143,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wiy15e",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "95oq12",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4200,28 +4200,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:49",
-    "lastTime": "2025-10-19 22:39:49",
-    "id": 567,
-    "appId": "149",
-    "organId": "149",
-    "bizType": "a8f2cy",
-    "type": 389,
-    "title": "qxtlpd",
-    "content": "pjstuj",
-    "msgUrl": "www.aubrey-rice.net",
-    "foreignId": "149",
-    "imagePath": "z8nxu4",
-    "iconStyle": "cjwxw6",
-    "recvMemberId": "149",
-    "recvGroupId": "149",
-    "recvOrganId": "149",
-    "recvTargetid": "149",
-    "status": 540,
-    "updatorId": "149",
-    "updateTime": "2025-10-19 22:39:49",
-    "description": "353gt8"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": 669,
+    "appId": "127",
+    "organId": "127",
+    "bizType": "35ca3a",
+    "type": 494,
+    "title": "iyftki",
+    "content": "0xw72i",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "foreignId": "127",
+    "imagePath": "bzwcgt",
+    "iconStyle": "jc36h3",
+    "recvMemberId": "127",
+    "recvGroupId": "127",
+    "recvOrganId": "127",
+    "recvTargetid": "127",
+    "status": 915,
+    "updatorId": "127",
+    "updateTime": "2025-10-20 01:16:56",
+    "description": "mkxmp1"
   }
 }'
 ```
@@ -4242,9 +4242,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ci4h3u",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "b4onho",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4294,9 +4294,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0di0bo",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "bar1mm",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4340,9 +4340,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "li81ij",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "a38ryu",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4392,9 +4392,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6ab0y6",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "z2k3zq",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4444,9 +4444,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ob58rs",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "n2xfdu",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4491,11 +4491,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "gkb24e",
-    "mapKey2": "kj0pxg"
+    "mapKey1": "93phbe",
+    "mapKey2": "ox8q6y"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4559,7 +4559,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?clientSecret=o0jlsx&endTime=2025-10-19 22:38:36&serverUrl=www.aubrey-rice.net&isSingle=true&spare2=416mk0&type=690&appId=149&serverIp=171.216.115.206&currCount=372&q=0b7p1s&organName=zona.sauer&cname=zona.sauer&clientId=149&startTime=2025-10-19 22:38:36&serverConf3=zzycuj&status=634&spare1=7vdpti&aesIvKey=3m4si8&inoutMode=471&serverType=vlmvz8&isAdmin=true&name=zona.sauer&aesKey=un1lo8&description=s5ywi6&serverConf2=55358m&id=149&isDisabled=true&limit=10&orderBy=246&organId=149&page=1&serverConf1=vb00ly&confLimit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?isAdmin=true&inoutMode=387&type=805&serverType=022e4k&cname=necole.oreilly&clientSecret=t7illh&q=vbfzwl&serverUrl=www.emanuel-bosco.biz&clientId=127&aesIvKey=ab07gl&isSingle=true&serverConf3=6gmfat&orderBy=179&serverIp=148.144.89.250&aesKey=09vpcp&startTime=2025-10-20 01:15:40&spare2=a3ihrx&page=1&id=127&limit=10&isDisabled=true&spare1=ef4syc&serverConf1=q9bfdu&endTime=2025-10-20 01:15:40&organId=127&serverConf2=tv1diw&description=zw8us7&organName=necole.oreilly&appId=127&name=necole.oreilly&confLimit=10&currCount=455&status=781
 ```
 **Response-fields:**
 
@@ -4615,45 +4615,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:46",
-      "lastTime": "2025-10-19 22:39:46",
-      "id": "149",
-      "organId": "149",
-      "appId": "149",
-      "organName": "zona.sauer",
-      "inoutMode": 249,
-      "name": "zona.sauer",
-      "cname": "zona.sauer",
-      "type": 560,
-      "clientId": "149",
-      "clientSecret": "o0cam2",
-      "aesKey": "tr29xk",
-      "aesIvKey": "q0cys6",
-      "serverIp": "171.216.115.206",
-      "serverType": "mp9936",
-      "serverUrl": "www.aubrey-rice.net",
-      "serverConf1": "i3ynz9",
-      "serverConf2": "53cotw",
-      "serverConf3": "zmgzgy",
-      "currCount": 341,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:53",
+      "lastTime": "2025-10-20 01:16:53",
+      "id": "127",
+      "organId": "127",
+      "appId": "127",
+      "organName": "necole.oreilly",
+      "inoutMode": 148,
+      "name": "necole.oreilly",
+      "cname": "necole.oreilly",
+      "type": 989,
+      "clientId": "127",
+      "clientSecret": "ljfvsi",
+      "aesKey": "jryho9",
+      "aesIvKey": "cl2s3p",
+      "serverIp": "148.144.89.250",
+      "serverType": "r2u1f8",
+      "serverUrl": "www.emanuel-bosco.biz",
+      "serverConf1": "aqqip8",
+      "serverConf2": "xtq9s7",
+      "serverConf3": "h97n3k",
+      "currCount": 418,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 901,
-      "description": "kjbv5v",
-      "spare1": "o67n45",
-      "spare2": "nwp09e",
-      "inOrganName": "zona.sauer",
-      "userName": "zona.sauer",
-      "appName": "zona.sauer",
-      "inoutModeName": "zona.sauer",
-      "typeName": "zona.sauer"
+      "status": 504,
+      "description": "4giy9q",
+      "spare1": "8da0k9",
+      "spare2": "4lk8hm",
+      "inOrganName": "necole.oreilly",
+      "userName": "necole.oreilly",
+      "appName": "necole.oreilly",
+      "inoutModeName": "necole.oreilly",
+      "typeName": "necole.oreilly"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4684,7 +4684,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=127
 ```
 **Response-fields:**
 
@@ -4740,45 +4740,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:46",
-      "lastTime": "2025-10-19 22:39:46",
-      "id": "149",
-      "organId": "149",
-      "appId": "149",
-      "organName": "zona.sauer",
-      "inoutMode": 53,
-      "name": "zona.sauer",
-      "cname": "zona.sauer",
-      "type": 717,
-      "clientId": "149",
-      "clientSecret": "l6s1w3",
-      "aesKey": "u2k6dp",
-      "aesIvKey": "5r49sw",
-      "serverIp": "171.216.115.206",
-      "serverType": "bmm52r",
-      "serverUrl": "www.aubrey-rice.net",
-      "serverConf1": "f7m97o",
-      "serverConf2": "48gko9",
-      "serverConf3": "omne34",
-      "currCount": 386,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:53",
+      "lastTime": "2025-10-20 01:16:53",
+      "id": "127",
+      "organId": "127",
+      "appId": "127",
+      "organName": "necole.oreilly",
+      "inoutMode": 410,
+      "name": "necole.oreilly",
+      "cname": "necole.oreilly",
+      "type": 665,
+      "clientId": "127",
+      "clientSecret": "zjzph2",
+      "aesKey": "y5izjy",
+      "aesIvKey": "w14m8z",
+      "serverIp": "148.144.89.250",
+      "serverType": "vl9jg6",
+      "serverUrl": "www.emanuel-bosco.biz",
+      "serverConf1": "su35ap",
+      "serverConf2": "itpujj",
+      "serverConf3": "tkcno0",
+      "currCount": 290,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 563,
-      "description": "50hgks",
-      "spare1": "xuom4t",
-      "spare2": "czng5e",
-      "inOrganName": "zona.sauer",
-      "userName": "zona.sauer",
-      "appName": "zona.sauer",
-      "inoutModeName": "zona.sauer",
-      "typeName": "zona.sauer"
+      "status": 106,
+      "description": "i5q83x",
+      "spare1": "odf3lz",
+      "spare2": "ngtq2t",
+      "inOrganName": "necole.oreilly",
+      "userName": "necole.oreilly",
+      "appName": "necole.oreilly",
+      "inoutModeName": "necole.oreilly",
+      "typeName": "necole.oreilly"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4809,7 +4809,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=127
 ```
 **Response-fields:**
 
@@ -4865,45 +4865,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:46",
-      "lastTime": "2025-10-19 22:39:46",
-      "id": "149",
-      "organId": "149",
-      "appId": "149",
-      "organName": "zona.sauer",
-      "inoutMode": 585,
-      "name": "zona.sauer",
-      "cname": "zona.sauer",
-      "type": 470,
-      "clientId": "149",
-      "clientSecret": "qfs4zr",
-      "aesKey": "s7rjcg",
-      "aesIvKey": "th6ey1",
-      "serverIp": "171.216.115.206",
-      "serverType": "u6gtqi",
-      "serverUrl": "www.aubrey-rice.net",
-      "serverConf1": "9p1uge",
-      "serverConf2": "i2qojg",
-      "serverConf3": "fiy0sj",
-      "currCount": 811,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:53",
+      "lastTime": "2025-10-20 01:16:53",
+      "id": "127",
+      "organId": "127",
+      "appId": "127",
+      "organName": "necole.oreilly",
+      "inoutMode": 612,
+      "name": "necole.oreilly",
+      "cname": "necole.oreilly",
+      "type": 399,
+      "clientId": "127",
+      "clientSecret": "dsvssx",
+      "aesKey": "yezhhh",
+      "aesIvKey": "44s7kr",
+      "serverIp": "148.144.89.250",
+      "serverType": "j5imo8",
+      "serverUrl": "www.emanuel-bosco.biz",
+      "serverConf1": "zovsze",
+      "serverConf2": "rhg5qd",
+      "serverConf3": "888opt",
+      "currCount": 996,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 436,
-      "description": "cjivnf",
-      "spare1": "6gzmmg",
-      "spare2": "z0kwv1",
-      "inOrganName": "zona.sauer",
-      "userName": "zona.sauer",
-      "appName": "zona.sauer",
-      "inoutModeName": "zona.sauer",
-      "typeName": "zona.sauer"
+      "status": 748,
+      "description": "wkqlam",
+      "spare1": "obf8oq",
+      "spare2": "xlfn5g",
+      "inOrganName": "necole.oreilly",
+      "userName": "necole.oreilly",
+      "appName": "necole.oreilly",
+      "inoutModeName": "necole.oreilly",
+      "typeName": "necole.oreilly"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -4979,7 +4979,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"149","timestamp":"2025-10-19 22:38:36"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"127","timestamp":"2025-10-20 01:15:40"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5022,9 +5022,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lqw1dt",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "r10vuy",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5068,9 +5068,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kpj74x",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "1tuhxr",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5120,9 +5120,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xigb1s",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "hwuotb",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5159,9 +5159,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ls3zci",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "1n2p86",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5196,7 +5196,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?limit=10&endTime=2025-10-19 22:38:36&startTime=2025-10-19 22:38:36&orderBy=481&q=46nwbg&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?page=1&endTime=2025-10-20 01:15:40&limit=10&startTime=2025-10-20 01:15:40&q=rh13kb&orderBy=832
 ```
 **Response-fields:**
 
@@ -5225,18 +5225,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "ncp90v",
-      "deptNum": "9oijon",
-      "peopleNum": "pkqjf0",
-      "roleNum": "9lrbg5",
-      "dicTypeNum": "mt1mmk",
-      "appNum": "ro6uy2",
-      "fileNum": "sr7wc3",
-      "paramNum": "c0qehw"
+      "organNum": "6mq3xg",
+      "deptNum": "13fn9a",
+      "peopleNum": "sjmrbx",
+      "roleNum": "zsxo2o",
+      "dicTypeNum": "sarodd",
+      "appNum": "2i930u",
+      "fileNum": "yupkiv",
+      "paramNum": "gboe6k"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5271,7 +5271,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?endTime=2025-10-19 22:38:36&page=1&orderBy=650&limit=10&startTime=2025-10-19 22:38:36&q=76ggsl
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?page=1&startTime=2025-10-20 01:15:40&limit=10&endTime=2025-10-20 01:15:40&q=etv27f&orderBy=812
 ```
 **Response-fields:**
 
@@ -5294,12 +5294,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "ttatd8",
-      "modelNum": "h6kblp"
+      "objectNum": "bvnehk",
+      "modelNum": "iyzk2a"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5334,7 +5334,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?page=1&orderBy=32&startTime=2025-10-19 22:38:36&limit=10&endTime=2025-10-19 22:38:36&q=klged4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?endTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&orderBy=653&q=pr6sv9&page=1&limit=10
 ```
 **Response-fields:**
 
@@ -5358,13 +5358,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "kmsmbb",
-      "accountNum": "7qw57o",
-      "serviceOrganNum": "6n1avk"
+      "siteNum": "14ptjs",
+      "accountNum": "h53xhy",
+      "serviceOrganNum": "ji92nh"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5418,7 +5418,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?isMobileApp=true&ids=6zqsq6&ids=6zqsq6&startTime=2025-10-19 22:38:36&page=1&status=364&limit=10&sertypeId=149&endTime=2025-10-19 22:38:36&domainId=149&isSite=true&description=cfbgq0&name=zona.sauer&ftpId=149&organId=149&path=655mxs&mode=477&xzqhId=648&q=akx3ag&isDisabled=true&orderBy=21&delFlag=7&existKey=k6ee0g&appType=ggrrkz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?page=1&path=0khtfz&orderBy=246&description=tmowk0&domainId=127&q=858vjk&isDisabled=true&endTime=2025-10-20 01:15:40&delFlag=4&mode=753&startTime=2025-10-20 01:15:40&name=necole.oreilly&status=534&limit=10&isMobileApp=true&existKey=8t7ktc&sertypeId=127&isSite=true&ftpId=127&ids=x8x4rf&ids=x8x4rf&organId=127&appType=rtn7mf&xzqhId=928
 ```
 **Response-fields:**
 
@@ -5462,33 +5462,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:43",
-      "lastTime": "2025-10-19 22:39:43",
-      "id": "149",
-      "ftpId": "149",
-      "domainId": "149",
-      "organId": "149",
-      "xzqhId": 643,
-      "sertypeId": "149",
-      "name": "zona.sauer",
-      "path": "sqm5xb",
-      "appType": "bgiiwx",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:50",
+      "lastTime": "2025-10-20 01:16:50",
+      "id": "127",
+      "ftpId": "127",
+      "domainId": "127",
+      "organId": "127",
+      "xzqhId": 217,
+      "sertypeId": "127",
+      "name": "necole.oreilly",
+      "path": "sks16a",
+      "appType": "mp70sw",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 680,
-      "priority": 859,
-      "delFlag": 7,
-      "deleteTime": "2025-10-19 22:39:43",
-      "description": "3feyw1",
-      "spare1": "75yizj",
-      "spare2": "mc3p1c",
-      "xzqhName": "zona.sauer"
+      "status": 502,
+      "priority": 458,
+      "delFlag": 4,
+      "deleteTime": "2025-10-20 01:16:50",
+      "description": "zm6z50",
+      "spare1": "ex0bh4",
+      "spare2": "cx1d18",
+      "xzqhName": "necole.oreilly"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5542,7 +5542,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?ftpId=149&name=zona.sauer&isSite=true&organId=149&isDisabled=true&path=ta53tc&limit=10&xzqhId=190&status=768&ids=d3h7jd&ids=d3h7jd&page=1&endTime=2025-10-19 22:38:36&description=fen4b3&existKey=r0ib45&q=opq4pv&mode=91&orderBy=555&delFlag=7&domainId=149&startTime=2025-10-19 22:38:36&isMobileApp=true&sertypeId=149&idArr=6czr7j&appType=70lhaj
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?isMobileApp=true&appType=gd76fq&description=pwpvq5&domainId=127&sertypeId=127&organId=127&status=445&endTime=2025-10-20 01:15:40&path=6was0c&existKey=5n58ok&startTime=2025-10-20 01:15:40&page=1&q=gmficn&mode=112&limit=10&orderBy=263&isDisabled=true&isSite=true&ftpId=127&name=necole.oreilly&ids=r4q8d4&ids=r4q8d4&xzqhId=229&delFlag=4&idArr=cf3144
 ```
 **Response-fields:**
 
@@ -5590,40 +5590,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 470,
+    "totalCount": 841,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:44",
-        "lastTime": "2025-10-19 22:39:44",
-        "id": "149",
-        "ftpId": "149",
-        "domainId": "149",
-        "organId": "149",
-        "xzqhId": 444,
-        "sertypeId": "149",
-        "name": "zona.sauer",
-        "path": "qcr2gr",
-        "appType": "3dydl4",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:50",
+        "lastTime": "2025-10-20 01:16:50",
+        "id": "127",
+        "ftpId": "127",
+        "domainId": "127",
+        "organId": "127",
+        "xzqhId": 410,
+        "sertypeId": "127",
+        "name": "necole.oreilly",
+        "path": "bmqk2a",
+        "appType": "sfngl0",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 208,
-        "priority": 221,
-        "delFlag": 7,
-        "deleteTime": "2025-10-19 22:39:44",
-        "description": "6ah7xy",
-        "spare1": "vorb2i",
-        "spare2": "3gpv5r",
-        "xzqhName": "zona.sauer"
+        "status": 114,
+        "priority": 406,
+        "delFlag": 4,
+        "deleteTime": "2025-10-20 01:16:50",
+        "description": "t20axe",
+        "spare1": "a0alv7",
+        "spare2": "j1lql1",
+        "xzqhName": "necole.oreilly"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5677,7 +5677,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'endTime=2025-10-19 22:38:36&organId=149&sertypeId=149&q=fpz0kq&page=1&appType=per6jj&status=738&path=e5i7ec&isMobileApp=true&delFlag=7&domainId=149&isSite=true&idArr=rt9ztf&name=zona.sauer&orderBy=118&mode=934&ids=4avla5&ids=4avla5&limit=10&existKey=h67cs7&startTime=2025-10-19 22:38:36&xzqhId=480&description=0imhvo&ftpId=149&isDisabled=true'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'q=kspmwo&xzqhId=982&existKey=beggdz&domainId=127&name=necole.oreilly&isMobileApp=true&appType=8dgxo1&status=784&limit=10&orderBy=17&endTime=2025-10-20 01:15:40&ftpId=127&path=33paze&organId=127&mode=245&isSite=true&delFlag=4&sertypeId=127&idArr=f1zdbz&description=m7bb3l&page=1&isDisabled=true&startTime=2025-10-20 01:15:40&ids=9ehgn5&ids=9ehgn5'
 ```
 **Response-fields:**
 
@@ -5696,9 +5696,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "awb8wl",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "97t4o2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5729,7 +5729,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/127.do
 ```
 **Response-fields:**
 
@@ -5776,36 +5776,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:44",
-    "lastTime": "2025-10-19 22:39:44",
-    "id": "149",
-    "ftpId": "149",
-    "domainId": "149",
-    "organId": "149",
-    "xzqhId": 357,
-    "sertypeId": "149",
-    "name": "zona.sauer",
-    "path": "8y2bxk",
-    "appType": "34jli3",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:50",
+    "lastTime": "2025-10-20 01:16:50",
+    "id": "127",
+    "ftpId": "127",
+    "domainId": "127",
+    "organId": "127",
+    "xzqhId": 26,
+    "sertypeId": "127",
+    "name": "necole.oreilly",
+    "path": "vpe71u",
+    "appType": "yp6qo4",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 699,
-    "priority": 51,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:44",
-    "description": "5bnxs2",
-    "spare1": "e6utbu",
-    "spare2": "933ubh",
-    "xzqhName": "zona.sauer",
-    "ftpName": "zona.sauer",
-    "sertypeName": "zona.sauer",
-    "domainName": "zona.sauer",
-    "organName": "zona.sauer"
+    "status": 772,
+    "priority": 684,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:50",
+    "description": "9vdpwt",
+    "spare1": "1ud1pw",
+    "spare2": "hkjeam",
+    "xzqhName": "necole.oreilly",
+    "ftpName": "necole.oreilly",
+    "sertypeName": "necole.oreilly",
+    "domainName": "necole.oreilly",
+    "organName": "necole.oreilly"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5862,31 +5862,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "149",
-    "ftpId": "149",
-    "ftpName": "zona.sauer",
-    "domainId": "149",
-    "domainName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "xzqhId": 274,
-    "xzqhName": "zona.sauer",
-    "sertypeId": "149",
-    "sertypeName": "zona.sauer",
-    "name": "zona.sauer",
-    "path": "2dypvv",
-    "appType": "mvqk7w",
+    "id": "127",
+    "ftpId": "127",
+    "ftpName": "necole.oreilly",
+    "domainId": "127",
+    "domainName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "xzqhId": 200,
+    "xzqhName": "necole.oreilly",
+    "sertypeId": "127",
+    "sertypeName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "path": "pvviq6",
+    "appType": "i7kl6p",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 426,
-    "statusName": "zona.sauer",
-    "priority": 232,
-    "createTime": "2025-10-19 22:39:44",
-    "description": "8fz1dc",
-    "spare1": "u2pyh6",
+    "status": 408,
+    "statusName": "necole.oreilly",
+    "priority": 594,
+    "createTime": "2025-10-20 01:16:50",
+    "description": "6gfzyb",
+    "spare1": "if7s70",
     "statusMap": {
-      "mapKey": "ulx440"
+      "mapKey": "itkhhg"
     }
   }
 }'
@@ -5908,9 +5908,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "w4e8b5",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "vrfqub",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -5967,31 +5967,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "149",
-    "ftpId": "149",
-    "ftpName": "zona.sauer",
-    "domainId": "149",
-    "domainName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "xzqhId": 717,
-    "xzqhName": "zona.sauer",
-    "sertypeId": "149",
-    "sertypeName": "zona.sauer",
-    "name": "zona.sauer",
-    "path": "eqs7l4",
-    "appType": "iye3yl",
+    "id": "127",
+    "ftpId": "127",
+    "ftpName": "necole.oreilly",
+    "domainId": "127",
+    "domainName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "xzqhId": 235,
+    "xzqhName": "necole.oreilly",
+    "sertypeId": "127",
+    "sertypeName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "path": "lmg7a8",
+    "appType": "40sj7g",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 549,
-    "statusName": "zona.sauer",
-    "priority": 997,
-    "createTime": "2025-10-19 22:39:44",
-    "description": "pxd00s",
-    "spare1": "ot57ve",
+    "status": 705,
+    "statusName": "necole.oreilly",
+    "priority": 569,
+    "createTime": "2025-10-20 01:16:50",
+    "description": "i9socq",
+    "spare1": "p6swjp",
     "statusMap": {
-      "mapKey": "slb983"
+      "mapKey": "mwc5xt"
     }
   }
 }'
@@ -6013,9 +6013,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "y12hv9",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "18wlt1",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6065,9 +6065,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4ujb2g",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "gtptqy",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6111,16 +6111,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/149.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/127.do --data '{
   "data": {
-    "id": "149",
+    "id": "127",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "zona.sauer",
-    "password": "2x5t3p",
-    "initPath": "okytpb"
+    "username": "necole.oreilly",
+    "password": "h2vihe",
+    "initPath": "t8v8xh"
   }
 }'
 ```
@@ -6144,8 +6144,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6189,9 +6189,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2vg9me",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "yx0m4w",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6247,7 +6247,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?startTime=2025-10-19 22:38:36&page=1&nameEn=gpuwid&areatypeId=149&description=oki27s&orderBy=998&countryId=149&name=zona.sauer&parentId=418&nameTotal=r07ju5&areatypeIds=byv4hf&areatypeIds=byv4hf&ids=u3xmye&ids=u3xmye&limit=10&hasContent=true&isDisplay=true&endTime=2025-10-19 22:38:36&searchCode=62411&deleteTime=2025-10-19 22:38:36&likeQuery=onvdat&code=62411&sname=zona.sauer&rgt=404&parentIds=t8x9di&parentIds=t8x9di&lft=343&delFlag=7&q=e2cayd
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?orderBy=415&page=1&parentId=38&areatypeId=127&sname=necole.oreilly&name=necole.oreilly&ids=0nwzl0&ids=0nwzl0&isDisplay=true&limit=10&startTime=2025-10-20 01:15:40&searchCode=65412&areatypeIds=5qoq8j&areatypeIds=5qoq8j&lft=86&q=mt0cn7&countryId=127&delFlag=4&likeQuery=uvig8z&description=u3t98s&endTime=2025-10-20 01:15:40&code=65412&deleteTime=2025-10-20 01:15:40&nameEn=59gqqe&parentIds=rob41x&parentIds=rob41x&rgt=442&hasContent=true&nameTotal=taw4rr
 ```
 **Response-fields:**
 
@@ -6296,41 +6296,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 367,
+    "totalCount": 405,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:44",
-        "lastTime": "2025-10-19 22:39:44",
-        "id": 305,
-        "parentId": 800,
-        "countryId": "149",
-        "areatypeId": "149",
-        "lft": 367,
-        "rgt": 314,
-        "code": "62411",
-        "name": "zona.sauer",
-        "nameTotal": "c2v9mf",
-        "sname": "zona.sauer",
-        "nameEn": "vau5jh",
-        "searchCode": "62411",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:51",
+        "lastTime": "2025-10-20 01:16:51",
+        "id": 756,
+        "parentId": 676,
+        "countryId": "127",
+        "areatypeId": "127",
+        "lft": 16,
+        "rgt": 531,
+        "code": "65412",
+        "name": "necole.oreilly",
+        "nameTotal": "g4hmg4",
+        "sname": "necole.oreilly",
+        "nameEn": "if4k53",
+        "searchCode": "65412",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 420,
-        "delFlag": 7,
-        "deleteTime": "2025-10-19 22:39:44",
-        "description": "e6on7j",
-        "countryName": "zona.sauer",
-        "parentName": "zona.sauer",
-        "areatypeName": "zona.sauer"
+        "priority": 161,
+        "delFlag": 4,
+        "deleteTime": "2025-10-20 01:16:51",
+        "description": "v4sehc",
+        "countryName": "necole.oreilly",
+        "parentName": "necole.oreilly",
+        "areatypeName": "necole.oreilly"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6381,7 +6381,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?endTime=2025-10-19 22:38:36&organCode=62411&createType=591&orgtypeId=149&spare1=cmljmy&ids=jqe4do&ids=jqe4do&xzqhId=386&name=zona.sauer&spare2=5m30gp&orderBy=957&q=fv4nxl&limit=10&source=790&description=ydpr2v&key=v91dz3&isOrganWork=z1uvz4&page=1&startTime=2025-10-19 22:38:36&organName=zona.sauer&delFlag=7&unionCode=62411
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?organCode=65412&spare2=j3w89k&ids=7zolav&ids=7zolav&organName=necole.oreilly&orderBy=557&delFlag=4&description=mu1go8&startTime=2025-10-20 01:15:40&source=69&key=jf0yz2&unionCode=65412&createType=369&page=1&endTime=2025-10-20 01:15:40&name=necole.oreilly&spare1=ww4do1&isOrganWork=p39w4k&limit=10&xzqhId=651&q=dwn2dp&orgtypeId=127
 ```
 **Response-fields:**
 
@@ -6411,22 +6411,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 155,
+    "totalCount": 227,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:44",
-        "lastTime": "2025-10-19 22:39:44",
-        "cmsKey": "wkmnyb",
-        "cmsValue": "zudeaa"
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:51",
+        "lastTime": "2025-10-20 01:16:51",
+        "cmsKey": "nkmr88",
+        "cmsValue": "n29nyy"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6476,7 +6476,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?endTime=2025-10-19 22:38:36&isDefault=5itv0j&key=v5cw56&name=zona.sauer&dictLabel=y1aw6z&startTime=2025-10-19 22:38:36&q=7uq0mw&orderBy=692&dictSort=224&cddId=166&typeCode=62411&listClass=45c0zx&cssClass=q2bfed&remark=smoh7z&status=r2dk6q&page=1&cddValue=apcxs1&searchCode=62411&parentId=456&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddValue=yaftqh&key=y5rbff&dictLabel=z8rgdv&name=necole.oreilly&parentId=755&endTime=2025-10-20 01:15:40&dictSort=658&cddId=517&orderBy=513&listClass=drs5yd&remark=w1bnte&startTime=2025-10-20 01:15:40&searchCode=65412&q=qhzlph&typeCode=65412&page=1&limit=10&cssClass=eew5m7&status=qjhykp&isDefault=dfu641
 ```
 **Response-fields:**
 
@@ -6514,30 +6514,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 398,
+    "totalCount": 776,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 782,
-        "typeCode": "62411",
-        "parentId": 93,
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "cddValue": "fflq9k",
-        "searchCode": "62411",
-        "priority": 33,
-        "createTime": "2025-10-19 22:39:47",
-        "remark": "1lfwc8",
-        "dictLabel": "0jgx5x",
-        "typeCodeName": "zona.sauer",
-        "parentName": "zona.sauer"
+        "cddId": 280,
+        "typeCode": "65412",
+        "parentId": 463,
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "cddValue": "rqa9u5",
+        "searchCode": "65412",
+        "priority": 236,
+        "createTime": "2025-10-20 01:16:54",
+        "remark": "ftm8h7",
+        "dictLabel": "h2281t",
+        "typeCodeName": "necole.oreilly",
+        "parentName": "necole.oreilly"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6586,7 +6586,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'searchCode=62411&isDefault=3fob4w&parentId=412&listClass=fknm6w&key=y37dqc&startTime=2025-10-19 22:38:36&page=1&q=hi72rd&cddId=990&typeCode=62411&dictLabel=6hn8u2&cddValue=haqe1z&dictSort=760&name=zona.sauer&status=dgca6s&remark=h2rk0f&limit=10&endTime=2025-10-19 22:38:36&cssClass=l31qw5&orderBy=657'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'name=necole.oreilly&dictLabel=nlmpju&page=1&typeCode=65412&isDefault=zj452p&cssClass=ipjivd&status=kq0btu&key=duyexv&dictSort=309&searchCode=65412&cddId=919&remark=80lspo&parentId=639&cddValue=74th0p&listClass=w96qog&q=tt1mji&orderBy=884&endTime=2025-10-20 01:15:40&limit=10&startTime=2025-10-20 01:15:40'
 ```
 **Response-fields:**
 
@@ -6605,9 +6605,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tjaexp",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "9ul5x3",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6637,7 +6637,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/236.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/278.do
 ```
 **Response-fields:**
 
@@ -6670,22 +6670,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 908,
-    "typeCode": "62411",
-    "parentId": 555,
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "cddValue": "hctirx",
-    "searchCode": "62411",
-    "priority": 390,
-    "createTime": "2025-10-19 22:39:47",
-    "remark": "fxv90n",
-    "dictLabel": "0v3cos",
-    "typeCodeName": "zona.sauer",
-    "parentName": "zona.sauer"
+    "cddId": 969,
+    "typeCode": "65412",
+    "parentId": 762,
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "cddValue": "k15nr8",
+    "searchCode": "65412",
+    "priority": 161,
+    "createTime": "2025-10-20 01:16:54",
+    "remark": "988u2v",
+    "dictLabel": "nt18wt",
+    "typeCodeName": "necole.oreilly",
+    "parentName": "necole.oreilly"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6724,7 +6724,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/lqfvsm.do?roletypeId=149&typeCode=62411&parentId=149&zparentId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/qj1nkm.do?typeCode=65412&zparentId=127&roletypeId=127&parentId=127
 ```
 **Response-fields:**
 
@@ -6746,8 +6746,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6792,19 +6792,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 488,
-    "typeCode": "62411",
-    "parentId": 258,
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "cddValue": "zrv96u",
-    "searchCode": "62411",
-    "priority": 747,
-    "createTime": "2025-10-19 22:39:47",
-    "remark": "6mlw17",
-    "dictLabel": "sssdan",
-    "typeCodeName": "zona.sauer",
-    "parentName": "zona.sauer"
+    "cddId": 830,
+    "typeCode": "65412",
+    "parentId": 381,
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "cddValue": "paxzm9",
+    "searchCode": "65412",
+    "priority": 725,
+    "createTime": "2025-10-20 01:16:54",
+    "remark": "0flbrr",
+    "dictLabel": "cj5yn9",
+    "typeCodeName": "necole.oreilly",
+    "parentName": "necole.oreilly"
   }
 }'
 ```
@@ -6825,9 +6825,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cap1vk",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "hvvkxi",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6872,19 +6872,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 604,
-    "typeCode": "62411",
-    "parentId": 36,
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "cddValue": "oij3me",
-    "searchCode": "62411",
-    "priority": 325,
-    "createTime": "2025-10-19 22:39:47",
-    "remark": "v7thou",
-    "dictLabel": "pstw0l",
-    "typeCodeName": "zona.sauer",
-    "parentName": "zona.sauer"
+    "cddId": 140,
+    "typeCode": "65412",
+    "parentId": 440,
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "cddValue": "7ggmqp",
+    "searchCode": "65412",
+    "priority": 884,
+    "createTime": "2025-10-20 01:16:54",
+    "remark": "ugmcs4",
+    "dictLabel": "ctq898",
+    "typeCodeName": "necole.oreilly",
+    "parentName": "necole.oreilly"
   }
 }'
 ```
@@ -6905,9 +6905,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4c63hk",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "2r97vm",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -6956,9 +6956,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uh3iwi",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "udahgj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7012,7 +7012,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?positionType=t8ugbv&positionId=149&endTime=2025-10-19 22:38:36&wlType=q6d8mg&parentId=149&limit=10&startTime=2025-10-19 22:38:36&key=v0yvcn&orderBy=901&q=lnyzev&subType=2hxmtv&status=6uyk0l&page=1&groupId=149&roleId=149&appId=149&type=rmxgvn&gnType=k5vha1&roletypeId=149&roleTypeId=149&organwId=149&metaId=149&refresh=1f54gq&refType=fjyv6a&showButton=hlwqa3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?groupId=127&appId=127&organwId=127&parentId=127&startTime=2025-10-20 01:15:40&roleTypeId=127&q=vsi3eh&gnType=ud0mz3&showButton=kcokqn&roleId=127&refType=65c3bl&status=gh1q4h&roletypeId=127&subType=njtdjj&positionId=127&page=1&orderBy=873&type=3rygnz&metaId=127&endTime=2025-10-20 01:15:40&wlType=wjadk5&key=adl3by&refresh=efyon5&limit=10&positionType=oq05rc
 ```
 **Response-fields:**
 
@@ -7046,18 +7046,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "149",
-      "label": "q0ydxm",
-      "shortName": "zona.sauer",
-      "organId": "149",
-      "areaId": 457,
-      "searchCode": "62411",
-      "childNum": 152,
+      "id": "127",
+      "label": "a367me",
+      "shortName": "necole.oreilly",
+      "organId": "127",
+      "areaId": 616,
+      "searchCode": "65412",
+      "childNum": 244,
       "checked": true,
-      "entity": 946,
+      "entity": 498,
       "show": true,
       "showIcon": true,
-      "parentId": "149",
+      "parentId": "127",
       "children": [
         {
           "$ref": ".."
@@ -7065,8 +7065,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7117,7 +7117,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?q=2cwz9m&page=1&orderBy=316&limit=10&existKey=i4mppg&key=cmxd0v&typeCodes=eb88cg&typeCodes=eb88cg&name=zona.sauer&cddLevel=lexe49&cddValue=mc2v20&searchCode=62411&endTime=2025-10-19 22:38:36&typeMode=06avie&ids=lhzhoj&ids=lhzhoj&description=cxwhu8&delFlag=7&isAllChild=3y1ikr&sname=zona.sauer&typeCode=62411&parentId=111&startTime=2025-10-19 22:38:36&dispFlag=jjsm82
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?dispFlag=pn7y4v&typeCodes=32ubtb&typeCodes=32ubtb&q=zm5fkq&startTime=2025-10-20 01:15:40&typeMode=6abm6f&description=s39d28&cddLevel=y3scgw&page=1&cddValue=pzhlfd&limit=10&parentId=130&isAllChild=eibh9e&name=necole.oreilly&key=6j02es&delFlag=4&ids=9896vh&ids=9896vh&sname=necole.oreilly&existKey=0fleyt&endTime=2025-10-20 01:15:40&typeCode=65412&orderBy=971&searchCode=65412
 ```
 **Response-fields:**
 
@@ -7157,24 +7157,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:48",
-      "lastTime": "2025-10-19 22:39:48",
-      "id": 423,
-      "typeCode": "62411",
-      "parentId": 211,
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "cddValue": "etycom",
-      "cddLevel": "0uqcx9",
-      "searchCode": "62411",
-      "dispFlag": "snyghd",
-      "priority": 352,
-      "delFlag": 7,
-      "deleteTime": "2025-10-19 22:39:48",
-      "description": "ffuy2a",
-      "spare1": "0mwyl4",
-      "spare2": "n0ern0",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:54",
+      "lastTime": "2025-10-20 01:16:54",
+      "id": 198,
+      "typeCode": "65412",
+      "parentId": 117,
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "cddValue": "300nqa",
+      "cddLevel": "v26f3g",
+      "searchCode": "65412",
+      "dispFlag": "xtzsu9",
+      "priority": 740,
+      "delFlag": 4,
+      "deleteTime": "2025-10-20 01:16:54",
+      "description": "p5ejtx",
+      "spare1": "qax2iz",
+      "spare2": "4b1pu9",
       "children": [
         {
           "$ref": ".."
@@ -7182,8 +7182,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7226,7 +7226,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?typeClass=6bhw88&limit=10&remark=xzootg&status=q6dpdd&page=1&typeMode=185&orderBy=844&key=o4t2le&typeId=149&name=zona.sauer&endTime=2025-10-19 22:38:36&startTime=2025-10-19 22:38:36&q=nnxaaj
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2025-10-20 01:15:40&q=39dbyd&typeId=127&status=mfg1bc&remark=hv1q7p&typeMode=202&key=ocb2pk&limit=10&name=necole.oreilly&startTime=2025-10-20 01:15:40&page=1&typeClass=vvm448&orderBy=86
 ```
 **Response-fields:**
 
@@ -7261,27 +7261,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 476,
+    "totalCount": 160,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "149",
-        "name": "zona.sauer",
-        "typeClass": "jri1oa",
-        "typeRef": "yzfn4m",
-        "typeMode": 520,
-        "searchCode": "62411",
-        "priority": 105,
-        "createTime": "2025-10-19 22:39:48",
-        "status": 697,
-        "remark": "lbm7tv"
+        "typeId": "127",
+        "name": "necole.oreilly",
+        "typeClass": "llhhi6",
+        "typeRef": "2d5icq",
+        "typeMode": 995,
+        "searchCode": "65412",
+        "priority": 648,
+        "createTime": "2025-10-20 01:16:54",
+        "status": 415,
+        "remark": "s29uva"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7323,7 +7323,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'remark=svvf4d&name=zona.sauer&typeMode=932&typeId=149&endTime=2025-10-19 22:38:36&orderBy=896&page=1&status=0xq4qv&key=med6qo&typeClass=dqtdx6&q=9one4l&limit=10&startTime=2025-10-19 22:38:36'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&q=1mjjwk&limit=10&typeMode=663&orderBy=173&typeId=127&key=u8x5fk&page=1&status=gfp0ky&remark=squzul&name=necole.oreilly&typeClass=rfsnbs'
 ```
 **Response-fields:**
 
@@ -7342,9 +7342,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gyiajh",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "elljaq",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7374,7 +7374,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/127.do
 ```
 **Response-fields:**
 
@@ -7404,19 +7404,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "149",
-    "name": "zona.sauer",
-    "typeClass": "hkh457",
-    "typeRef": "ygs8yn",
-    "typeMode": 268,
-    "searchCode": "62411",
-    "priority": 25,
-    "createTime": "2025-10-19 22:39:48",
-    "status": 545,
-    "remark": "x8gn8j"
+    "typeId": "127",
+    "name": "necole.oreilly",
+    "typeClass": "qp99sw",
+    "typeRef": "6fqvjl",
+    "typeMode": 463,
+    "searchCode": "65412",
+    "priority": 557,
+    "createTime": "2025-10-20 01:16:54",
+    "status": 298,
+    "remark": "bwymkc"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7458,16 +7458,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "149",
-    "name": "zona.sauer",
-    "typeClass": "vtr1r4",
-    "typeRef": "h1qqkb",
-    "typeMode": 492,
-    "searchCode": "62411",
-    "priority": 26,
-    "createTime": "2025-10-19 22:39:48",
-    "status": 495,
-    "remark": "vssi6q"
+    "typeId": "127",
+    "name": "necole.oreilly",
+    "typeClass": "f65g73",
+    "typeRef": "6j8k74",
+    "typeMode": 504,
+    "searchCode": "65412",
+    "priority": 171,
+    "createTime": "2025-10-20 01:16:54",
+    "status": 868,
+    "remark": "00k131"
   }
 }'
 ```
@@ -7488,9 +7488,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a4v75b",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "zwn966",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7532,16 +7532,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "149",
-    "name": "zona.sauer",
-    "typeClass": "tf48wu",
-    "typeRef": "fq8o9r",
-    "typeMode": 110,
-    "searchCode": "62411",
-    "priority": 404,
-    "createTime": "2025-10-19 22:39:48",
-    "status": 643,
-    "remark": "tgm34r"
+    "typeId": "127",
+    "name": "necole.oreilly",
+    "typeClass": "5znnzo",
+    "typeRef": "njkmkc",
+    "typeMode": 577,
+    "searchCode": "65412",
+    "priority": 864,
+    "createTime": "2025-10-20 01:16:54",
+    "status": 344,
+    "remark": "ibx9xk"
   }
 }'
 ```
@@ -7562,9 +7562,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "82adau",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "pmv9xw",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7613,9 +7613,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ipzj07",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "eb8acz",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7658,9 +7658,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e6i4d6",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ijajyo",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7715,20 +7715,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "149",
-      "name": "zona.sauer",
-      "typeClass": "mixh5o",
-      "typeRef": "e9ww8s",
-      "typeMode": 792,
-      "searchCode": "62411",
-      "priority": 84,
-      "createTime": "2025-10-19 22:39:48",
-      "status": 500,
-      "remark": "52agn3"
+      "typeId": "127",
+      "name": "necole.oreilly",
+      "typeClass": "atufo6",
+      "typeRef": "fens0g",
+      "typeMode": 733,
+      "searchCode": "65412",
+      "priority": 352,
+      "createTime": "2025-10-20 01:16:55",
+      "status": 68,
+      "remark": "69r9gm"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7805,46 +7805,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 328,
-      "total": 46.39,
-      "sys": 63.41,
-      "used": 93.14,
-      "wait": 78.05,
-      "free": 44.82
+      "cpuNum": 312,
+      "total": 62.63,
+      "sys": 44.67,
+      "used": 23.68,
+      "wait": 44.39,
+      "free": 63.87
     },
     "mem": {
-      "total": 34.63,
-      "used": 90.08,
-      "free": 10.08
+      "total": 64.86,
+      "used": 63.68,
+      "free": 36.21
     },
     "jvm": {
-      "total": 67.84,
-      "max": 38.58,
-      "free": 81.67,
-      "version": "7.82",
-      "home": "ks1tp2"
+      "total": 82.02,
+      "max": 4.79,
+      "free": 37.56,
+      "version": "0.4.0",
+      "home": "aunm1v"
     },
     "sys": {
-      "computerName": "zona.sauer",
-      "computerIp": "171.216.115.206",
-      "userDir": "4lg14m",
-      "osName": "zona.sauer",
-      "osArch": "ouc249"
+      "computerName": "necole.oreilly",
+      "computerIp": "148.144.89.250",
+      "userDir": "bobkyq",
+      "osName": "necole.oreilly",
+      "osArch": "3mxszj"
     },
     "sysFiles": [
       {
-        "dirName": "zona.sauer",
-        "sysTypeName": "zona.sauer",
-        "typeName": "zona.sauer",
-        "total": "mz1p2e",
-        "free": "c7i2ga",
-        "used": "107e7g",
-        "usage": 70.50
+        "dirName": "necole.oreilly",
+        "sysTypeName": "necole.oreilly",
+        "typeName": "necole.oreilly",
+        "total": "bfgucx",
+        "free": "znqsyc",
+        "used": "yjf3zy",
+        "usage": 95.23
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7885,7 +7885,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?sname=zona.sauer&startTime=2025-10-19 22:38:36&orderBy=535&name=zona.sauer&endTime=2025-10-19 22:38:36&limit=10&delFlag=7&page=1&description=wazrbd&q=jgzjos
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?orderBy=370&endTime=2025-10-20 01:15:40&page=1&description=co3y8i&name=necole.oreilly&limit=10&delFlag=4&sname=necole.oreilly&q=ugujrw&startTime=2025-10-20 01:15:40
 ```
 **Response-fields:**
 
@@ -7915,19 +7915,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:46",
-      "lastTime": "2025-10-19 22:39:46",
-      "id": "149",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "priority": 623,
-      "delFlag": 7,
-      "description": "qnsm9p"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:52",
+      "lastTime": "2025-10-20 01:16:52",
+      "id": "127",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "priority": 970,
+      "delFlag": 4,
+      "description": "bxq7ws"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -7967,7 +7967,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'q=6cvl93&delFlag=7&sname=zona.sauer&description=l8eszm&page=1&name=zona.sauer&startTime=2025-10-19 22:38:36&orderBy=975&endTime=2025-10-19 22:38:36&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'name=necole.oreilly&delFlag=4&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&sname=necole.oreilly&orderBy=809&q=5y82s1&limit=10&page=1&description=f86cj6'
 ```
 **Response-fields:**
 
@@ -7986,9 +7986,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pmd8qt",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "lu0f05",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8048,18 +8048,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "priority": 74,
-    "delFlag": 7,
-    "description": "oaa0ru"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "priority": 873,
+    "delFlag": 4,
+    "description": "xybzc7"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8101,15 +8101,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "priority": 365,
-    "delFlag": 7,
-    "description": "zut669"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "priority": 932,
+    "delFlag": 4,
+    "description": "tb05ze"
   }
 }'
 ```
@@ -8130,9 +8130,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wntlob",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "umrx2k",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8174,15 +8174,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "priority": 27,
-    "delFlag": 7,
-    "description": "38ilcu"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "priority": 188,
+    "delFlag": 4,
+    "description": "v5dwqa"
   }
 }'
 ```
@@ -8203,9 +8203,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pyd6uy",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "34ykv0",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8255,9 +8255,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4twlja",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "i8xr42",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8311,7 +8311,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?q=cxnyor&type=t0fbog&providerId=149&startTime=2025-10-19 22:38:36&spare2=ixyiwm&status=318&subType=sfbea4&delFlag=7&appId=149&page=1&foreignId=149&content=6ajzkm&spare1=fsvr9f&organId=149&providerName=zona.sauer&creatorId=149&endTime=2025-10-19 22:38:36&description=zrzjgq&limit=10&orderBy=337&id=149&signature=zikfpm&name=zona.sauer
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?endTime=2025-10-20 01:15:40&status=564&subType=36arcc&content=l52lah&q=8edhrp&signature=b9mxde&description=f4zodf&type=ieoork&providerName=necole.oreilly&id=127&limit=10&organId=127&appId=127&foreignId=127&page=1&name=necole.oreilly&delFlag=4&orderBy=592&spare1=p1f49y&providerId=127&spare2=iwn07p&startTime=2025-10-20 01:15:40&creatorId=127
 ```
 **Response-fields:**
 
@@ -8352,30 +8352,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:51",
-      "lastTime": "2025-10-19 22:39:51",
-      "id": "149",
-      "appId": "149",
-      "organId": "149",
-      "providerId": "149",
-      "providerName": "zona.sauer",
-      "foreignId": "149",
-      "type": "shly7y",
-      "subType": "aqaxjg",
-      "name": "zona.sauer",
-      "signature": "n1w6aj",
-      "content": "60yusk",
-      "priority": 539,
-      "status": 438,
-      "delFlag": 7,
-      "description": "iyu5ft",
-      "spare1": "6vox7v",
-      "spare2": "mypjl6"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:57",
+      "lastTime": "2025-10-20 01:16:57",
+      "id": "127",
+      "appId": "127",
+      "organId": "127",
+      "providerId": "127",
+      "providerName": "necole.oreilly",
+      "foreignId": "127",
+      "type": "dqn17v",
+      "subType": "j76gum",
+      "name": "necole.oreilly",
+      "signature": "oxf26r",
+      "content": "bxlcue",
+      "priority": 284,
+      "status": 28,
+      "delFlag": 4,
+      "description": "zc39in",
+      "spare1": "kh8d1j",
+      "spare2": "qdl46j"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8446,29 +8446,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:51",
-    "lastTime": "2025-10-19 22:39:51",
-    "id": "149",
-    "appId": "149",
-    "organId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "type": "ddd5ao",
-    "subType": "090cax",
-    "name": "zona.sauer",
-    "signature": "viw8qc",
-    "content": "27fxo3",
-    "priority": 398,
-    "status": 341,
-    "delFlag": 7,
-    "description": "16sjma",
-    "spare1": "clvpd5",
-    "spare2": "9eam87"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "organId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "type": "in0npf",
+    "subType": "8h2asa",
+    "name": "necole.oreilly",
+    "signature": "fhxco8",
+    "content": "lzrc75",
+    "priority": 966,
+    "status": 837,
+    "delFlag": 4,
+    "description": "ba34a1",
+    "spare1": "uko30d",
+    "spare2": "yaspgd"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8521,26 +8521,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:51",
-    "lastTime": "2025-10-19 22:39:51",
-    "id": "149",
-    "appId": "149",
-    "organId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "type": "5oxwfa",
-    "subType": "p0v013",
-    "name": "zona.sauer",
-    "signature": "q7lhpm",
-    "content": "6cyzl0",
-    "priority": 662,
-    "status": 806,
-    "delFlag": 7,
-    "description": "mx5byw",
-    "spare1": "1r04vn",
-    "spare2": "y0gobb"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "organId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "type": "96x2cx",
+    "subType": "an45y3",
+    "name": "necole.oreilly",
+    "signature": "fio92d",
+    "content": "pcph4q",
+    "priority": 275,
+    "status": 665,
+    "delFlag": 4,
+    "description": "ulvzwu",
+    "spare1": "6wh7d1",
+    "spare2": "4ozi73"
   }
 }'
 ```
@@ -8561,9 +8561,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zm0dof",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "i2th9h",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8616,26 +8616,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:51",
-    "lastTime": "2025-10-19 22:39:51",
-    "id": "149",
-    "appId": "149",
-    "organId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "type": "1c8boa",
-    "subType": "0qc2dp",
-    "name": "zona.sauer",
-    "signature": "91jmro",
-    "content": "mrdz1t",
-    "priority": 142,
-    "status": 615,
-    "delFlag": 7,
-    "description": "54yab2",
-    "spare1": "rb4r0g",
-    "spare2": "zhnk1q"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "organId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "type": "o0js6h",
+    "subType": "7uuyvm",
+    "name": "necole.oreilly",
+    "signature": "vv42ed",
+    "content": "ic8irw",
+    "priority": 458,
+    "status": 405,
+    "delFlag": 4,
+    "description": "9f54hh",
+    "spare1": "lul6e3",
+    "spare2": "jxm2op"
   }
 }'
 ```
@@ -8656,9 +8656,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m9dbez",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "howxig",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8708,9 +8708,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lyqcb0",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "bnbiof",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8777,7 +8777,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?msgType=700&msgCreateTime=2025-10-19 22:39:50&msgUrl=www.aubrey-rice.net&orderBy=741&creatorId=149&msgUserId=149&msgContent=7fki3h&msgAbstract=tj5dzp&msgAccountId=149&msgOrganId=149&msgModuleName=zona.sauer&opOrganName=zona.sauer&description=a027z9&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&msgAccountName=zona.sauer&spare1=slapp7&q=tzclkn&id=149&page=1&appId=149&msgId=102&msgModuleId=149&msgLabels=z8fpa8&bizType=wpgrxr&status=spm4ve&foreignId=149&msgOrganName=zona.sauer&opUserId=149&opTime=2025-10-19 22:39:50&msgTitle=dnqyr1&spare2=zmxwqd&msgUserName=zona.sauer&opOrganId=149&type=cja9fu&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?opUserId=127&opTime=2025-10-20 01:16:56&limit=10&orderBy=485&description=jnwoic&appId=127&msgModuleId=127&id=127&creatorId=127&msgUrl=www.emanuel-bosco.biz&msgLabels=yd3qct&msgAccountName=necole.oreilly&msgModuleName=necole.oreilly&msgUserId=127&spare1=96a2kk&opOrganId=127&msgOrganName=necole.oreilly&msgContent=qyuutl&status=eec1ge&msgAccountId=127&q=5iw1rc&type=76g6nz&msgCreateTime=2025-10-20 01:16:56&msgAbstract=f7urg5&msgUserName=necole.oreilly&msgOrganId=127&bizType=6unh6l&msgType=316&page=1&opOrganName=necole.oreilly&msgId=833&endTime=2025-10-20 01:15:40&msgTitle=uci09s&spare2=2sfq3q&startTime=2025-10-20 01:15:40&foreignId=127
 ```
 **Response-fields:**
 
@@ -8830,42 +8830,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:50",
-      "lastTime": "2025-10-19 22:39:50",
-      "id": "149",
-      "appId": "149",
-      "foreignId": "149",
-      "type": "tnrl1a",
-      "bizType": "5sqr7o",
-      "msgCreateTime": "2025-10-19 22:39:50",
-      "msgId": 185,
-      "msgType": 125,
-      "msgTitle": "po9kpb",
-      "msgAbstract": "06fth0",
-      "msgAccountId": "149",
-      "msgAccountName": "zona.sauer",
-      "msgModuleId": "149",
-      "msgModuleName": "zona.sauer",
-      "msgUserId": "149",
-      "msgUserName": "zona.sauer",
-      "msgOrganId": "149",
-      "msgOrganName": "zona.sauer",
-      "msgUrl": "www.aubrey-rice.net",
-      "msgLabels": "g08c31",
-      "msgContent": "b8tu3m",
-      "status": "dt1zzm",
-      "opUserId": "149",
-      "opTime": "2025-10-19 22:39:50",
-      "opOrganId": "149",
-      "opOrganName": "zona.sauer",
-      "description": "q4umc1",
-      "spare1": "por7b6",
-      "spare2": "kq3ydk"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:56",
+      "lastTime": "2025-10-20 01:16:56",
+      "id": "127",
+      "appId": "127",
+      "foreignId": "127",
+      "type": "051kcb",
+      "bizType": "u4mnvv",
+      "msgCreateTime": "2025-10-20 01:16:56",
+      "msgId": 270,
+      "msgType": 347,
+      "msgTitle": "y25lkt",
+      "msgAbstract": "01ut3f",
+      "msgAccountId": "127",
+      "msgAccountName": "necole.oreilly",
+      "msgModuleId": "127",
+      "msgModuleName": "necole.oreilly",
+      "msgUserId": "127",
+      "msgUserName": "necole.oreilly",
+      "msgOrganId": "127",
+      "msgOrganName": "necole.oreilly",
+      "msgUrl": "www.emanuel-bosco.biz",
+      "msgLabels": "1okj6n",
+      "msgContent": "0035ut",
+      "status": "vuwqxh",
+      "opUserId": "127",
+      "opTime": "2025-10-20 01:16:56",
+      "opOrganId": "127",
+      "opOrganName": "necole.oreilly",
+      "description": "mtss18",
+      "spare1": "5fe9r0",
+      "spare2": "72fi3e"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -8931,7 +8931,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgUserName=zona.sauer&msgType=524&page=1&msgModuleId=149&opTime=2025-10-19 22:39:50&opOrganName=zona.sauer&q=g8lxge&orderBy=253&msgUserId=149&msgCreateTime=2025-10-19 22:39:50&msgAccountName=zona.sauer&msgModuleName=zona.sauer&status=wrl2ri&msgAbstract=4e0e23&appId=149&msgOrganName=zona.sauer&opUserId=149&msgLabels=kkxx0i&msgId=170&creatorId=149&endTime=2025-10-19 22:38:36&msgOrganId=149&startTime=2025-10-19 22:38:36&type=08zf8c&bizType=fcubrx&description=eoyqx3&spare1=voe95c&limit=10&id=149&msgAccountId=149&opOrganId=149&msgUrl=www.aubrey-rice.net&spare2=xb8k71&foreignId=149&msgContent=sb1fvk&msgTitle=ca8iml'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'appId=127&page=1&bizType=he9yps&creatorId=127&msgOrganId=127&orderBy=450&msgAbstract=irozut&msgAccountName=necole.oreilly&description=m4avkc&type=3us9pe&opOrganName=necole.oreilly&msgModuleId=127&endTime=2025-10-20 01:15:40&msgUserName=necole.oreilly&spare2=8qc2yp&startTime=2025-10-20 01:15:40&msgType=902&msgOrganName=necole.oreilly&msgLabels=ds0jhw&status=mfrugk&msgUrl=www.emanuel-bosco.biz&opUserId=127&spare1=8pl9pv&msgAccountId=127&limit=10&id=127&msgUserId=127&opTime=2025-10-20 01:16:56&opOrganId=127&msgId=424&q=hxhh1u&msgCreateTime=2025-10-20 01:16:56&msgModuleName=necole.oreilly&msgContent=hknwvr&foreignId=127&msgTitle=8v7jan'
 ```
 **Response-fields:**
 
@@ -8950,9 +8950,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uvm1bz",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "4efitv",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9035,41 +9035,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "m35vt1",
-    "bizType": "37y2if",
-    "msgCreateTime": "2025-10-19 22:39:50",
-    "msgId": 769,
-    "msgType": 384,
-    "msgTitle": "rvj5hx",
-    "msgAbstract": "al3ach",
-    "msgAccountId": "149",
-    "msgAccountName": "zona.sauer",
-    "msgModuleId": "149",
-    "msgModuleName": "zona.sauer",
-    "msgUserId": "149",
-    "msgUserName": "zona.sauer",
-    "msgOrganId": "149",
-    "msgOrganName": "zona.sauer",
-    "msgUrl": "www.aubrey-rice.net",
-    "msgLabels": "45fct3",
-    "msgContent": "zi8spu",
-    "status": "c4kse2",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "w2vmmq",
-    "spare1": "5befc7",
-    "spare2": "05509a"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "iy7tpm",
+    "bizType": "w67m2m",
+    "msgCreateTime": "2025-10-20 01:16:56",
+    "msgId": 892,
+    "msgType": 146,
+    "msgTitle": "c6ban8",
+    "msgAbstract": "4jtz2j",
+    "msgAccountId": "127",
+    "msgAccountName": "necole.oreilly",
+    "msgModuleId": "127",
+    "msgModuleName": "necole.oreilly",
+    "msgUserId": "127",
+    "msgUserName": "necole.oreilly",
+    "msgOrganId": "127",
+    "msgOrganName": "necole.oreilly",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "msgLabels": "lpfn68",
+    "msgContent": "l2limn",
+    "status": "uabkv8",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:56",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "kodd29",
+    "spare1": "q5cl0a",
+    "spare2": "zcvesj"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9134,38 +9134,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "cumdzb",
-    "bizType": "2c1nn2",
-    "msgCreateTime": "2025-10-19 22:39:50",
-    "msgId": 748,
-    "msgType": 19,
-    "msgTitle": "ykvhz1",
-    "msgAbstract": "jh8k51",
-    "msgAccountId": "149",
-    "msgAccountName": "zona.sauer",
-    "msgModuleId": "149",
-    "msgModuleName": "zona.sauer",
-    "msgUserId": "149",
-    "msgUserName": "zona.sauer",
-    "msgOrganId": "149",
-    "msgOrganName": "zona.sauer",
-    "msgUrl": "www.aubrey-rice.net",
-    "msgLabels": "ul3rae",
-    "msgContent": "kqzkha",
-    "status": "hbh2kz",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "fub1mo",
-    "spare1": "7ydls6",
-    "spare2": "y86dsg"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "62nso4",
+    "bizType": "0duf4e",
+    "msgCreateTime": "2025-10-20 01:16:56",
+    "msgId": 843,
+    "msgType": 656,
+    "msgTitle": "6yy0au",
+    "msgAbstract": "bkejzq",
+    "msgAccountId": "127",
+    "msgAccountName": "necole.oreilly",
+    "msgModuleId": "127",
+    "msgModuleName": "necole.oreilly",
+    "msgUserId": "127",
+    "msgUserName": "necole.oreilly",
+    "msgOrganId": "127",
+    "msgOrganName": "necole.oreilly",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "msgLabels": "ql8dex",
+    "msgContent": "9e1ti3",
+    "status": "fk4t5d",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:56",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "2ddtq1",
+    "spare1": "eytw9l",
+    "spare2": "9jt9mo"
   }
 }'
 ```
@@ -9186,9 +9186,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0xt4fb",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "yp0nwv",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9253,38 +9253,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "o0iqyq",
-    "bizType": "og57mh",
-    "msgCreateTime": "2025-10-19 22:39:50",
-    "msgId": 484,
-    "msgType": 763,
-    "msgTitle": "o3690t",
-    "msgAbstract": "kpy79i",
-    "msgAccountId": "149",
-    "msgAccountName": "zona.sauer",
-    "msgModuleId": "149",
-    "msgModuleName": "zona.sauer",
-    "msgUserId": "149",
-    "msgUserName": "zona.sauer",
-    "msgOrganId": "149",
-    "msgOrganName": "zona.sauer",
-    "msgUrl": "www.aubrey-rice.net",
-    "msgLabels": "0yg5d1",
-    "msgContent": "zytjns",
-    "status": "74zii6",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "w86zhp",
-    "spare1": "bmir3s",
-    "spare2": "7k4a7u"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:56",
+    "lastTime": "2025-10-20 01:16:56",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "epk30l",
+    "bizType": "jr6in9",
+    "msgCreateTime": "2025-10-20 01:16:56",
+    "msgId": 55,
+    "msgType": 871,
+    "msgTitle": "8s2gjr",
+    "msgAbstract": "e2so8m",
+    "msgAccountId": "127",
+    "msgAccountName": "necole.oreilly",
+    "msgModuleId": "127",
+    "msgModuleName": "necole.oreilly",
+    "msgUserId": "127",
+    "msgUserName": "necole.oreilly",
+    "msgOrganId": "127",
+    "msgOrganName": "necole.oreilly",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "msgLabels": "pg98i1",
+    "msgContent": "tkqdbw",
+    "status": "pux9hw",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:56",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "qhj7sg",
+    "spare1": "7aasfq",
+    "spare2": "1v1mn2"
   }
 }'
 ```
@@ -9305,9 +9305,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ysw2j4",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "wmdozx",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9357,9 +9357,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vaucja",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ywi11z",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9391,7 +9391,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/ueyvhf.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/xtquh7.do
 ```
 **Response-fields:**
 
@@ -9410,9 +9410,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p0e2ul",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "nic65n",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9459,7 +9459,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?q=ivrsr7&roleTypeId=149&limit=10&status=674&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&areaId=884&page=1&positionId=149&organId=149&orderBy=269&keyWords=221j8m&batchId=149&appId=149&groupId=443&type=9ekeo4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?positionId=127&status=68&startTime=2025-10-20 01:15:40&roleTypeId=127&batchId=127&keyWords=n574tk&type=nau97a&appId=127&page=1&limit=10&endTime=2025-10-20 01:15:40&q=iq5qm8&organId=127&orderBy=831&areaId=689&groupId=180
 ```
 **Response-fields:**
 
@@ -9533,66 +9533,66 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 465,
+    "totalCount": 29,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:42",
-        "lastTime": "2025-10-19 22:39:42",
-        "id": 688,
-        "appId": "149",
-        "saveSource": "0sat4q",
-        "unitName": "zona.sauer",
-        "name": "zona.sauer",
-        "idNum": "i5ffkp",
-        "duty": "5dla7i",
-        "telephone": "1-980-925-4411",
-        "mobile": "1-312-770-5203",
-        "extInfo1": "fnugn3",
-        "extInfo2": "vgf671",
-        "extInfo3": "alntiy",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:48",
+        "lastTime": "2025-10-20 01:16:48",
+        "id": 97,
+        "appId": "127",
+        "saveSource": "nhk9ej",
+        "unitName": "necole.oreilly",
+        "name": "necole.oreilly",
+        "idNum": "ntgkuq",
+        "duty": "zqaogr",
+        "telephone": "1-614-814-9478",
+        "mobile": "1-856-813-9551",
+        "extInfo1": "w4qyrx",
+        "extInfo2": "lkp17v",
+        "extInfo3": "9mqtds",
         "needInitUser": true,
-        "userId": "149",
+        "userId": "127",
         "needInitOrgan": true,
-        "organId": "149",
-        "type": "2uxj7z",
-        "foreignUrl": "www.aubrey-rice.net",
-        "bizType": 67,
-        "bizOrganId": "149",
-        "bizAreaId": 232,
-        "bizGroupId": 495,
-        "bizPower": "2za5ib",
-        "bizMultiInfo": "ej6z7w",
+        "organId": "127",
+        "type": "6aaf0k",
+        "foreignUrl": "www.emanuel-bosco.biz",
+        "bizType": 40,
+        "bizOrganId": "127",
+        "bizAreaId": 553,
+        "bizGroupId": 287,
+        "bizPower": "l0gc8u",
+        "bizMultiInfo": "dgx8tq",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "149",
-        "opOrganId": "149",
-        "opTime": "2025-10-19 22:39:42",
-        "opInfo": "oplo0j",
-        "priority": 840,
-        "status": 303,
-        "delFlag": 7,
-        "dataBatch": "9i7aef",
-        "dataVersion": 42,
-        "updateTime": "2025-10-19 22:39:42",
-        "syncMode": "ynvrs3",
-        "syncTime": "2025-10-19 22:39:42",
-        "description": "933u2u",
-        "groupName": "zona.sauer",
-        "positionName": "zona.sauer",
-        "bizPowerName": "zona.sauer",
-        "subdistrictName": "zona.sauer",
-        "communityName": "zona.sauer"
+        "opUserId": "127",
+        "opOrganId": "127",
+        "opTime": "2025-10-20 01:16:48",
+        "opInfo": "lh4xxk",
+        "priority": 634,
+        "status": 207,
+        "delFlag": 4,
+        "dataBatch": "0yjqdi",
+        "dataVersion": 608,
+        "updateTime": "2025-10-20 01:16:48",
+        "syncMode": "ng6xnc",
+        "syncTime": "2025-10-20 01:16:48",
+        "description": "lyk66k",
+        "groupName": "necole.oreilly",
+        "positionName": "necole.oreilly",
+        "bizPowerName": "necole.oreilly",
+        "subdistrictName": "necole.oreilly",
+        "communityName": "necole.oreilly"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9638,7 +9638,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'endTime=2025-10-19 22:38:36&page=1&type=91mou5&groupId=764&orderBy=393&positionId=149&startTime=2025-10-19 22:38:36&batchId=149&areaId=321&appId=149&q=blsbc4&keyWords=g9vzku&status=234&limit=10&roleTypeId=149&organId=149'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'startTime=2025-10-20 01:15:40&appId=127&q=czesiu&roleTypeId=127&batchId=127&orderBy=898&status=623&type=66vwud&organId=127&page=1&areaId=949&groupId=85&limit=10&positionId=127&keyWords=adznfa&endTime=2025-10-20 01:15:40'
 ```
 **Response-fields:**
 
@@ -9657,9 +9657,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dvygl4",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "6ddk0g",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9690,7 +9690,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/443.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/298.do
 ```
 **Response-fields:**
 
@@ -9759,58 +9759,58 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": 684,
-    "appId": "149",
-    "saveSource": "ihsphg",
-    "unitName": "zona.sauer",
-    "name": "zona.sauer",
-    "idNum": "zrr5cv",
-    "duty": "2wobel",
-    "telephone": "1-980-925-4411",
-    "mobile": "1-312-770-5203",
-    "extInfo1": "o5nkux",
-    "extInfo2": "38iut1",
-    "extInfo3": "iyrn0o",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": 155,
+    "appId": "127",
+    "saveSource": "1q650g",
+    "unitName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "idNum": "mkslsa",
+    "duty": "agt4wy",
+    "telephone": "1-614-814-9478",
+    "mobile": "1-856-813-9551",
+    "extInfo1": "ykoh49",
+    "extInfo2": "7y8zek",
+    "extInfo3": "0exuzd",
     "needInitUser": true,
-    "userId": "149",
+    "userId": "127",
     "needInitOrgan": true,
-    "organId": "149",
-    "type": "4dhdou",
-    "foreignUrl": "www.aubrey-rice.net",
-    "bizType": 301,
-    "bizOrganId": "149",
-    "bizAreaId": 801,
-    "bizGroupId": 598,
-    "bizPower": "n0n6ij",
-    "bizMultiInfo": "l6bx25",
+    "organId": "127",
+    "type": "zd9u6o",
+    "foreignUrl": "www.emanuel-bosco.biz",
+    "bizType": 622,
+    "bizOrganId": "127",
+    "bizAreaId": 787,
+    "bizGroupId": 706,
+    "bizPower": "tk6glt",
+    "bizMultiInfo": "s3rmo2",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "149",
-    "opOrganId": "149",
-    "opTime": "2025-10-19 22:39:42",
-    "opInfo": "axuzko",
-    "priority": 138,
-    "status": 82,
-    "delFlag": 7,
-    "dataBatch": "vrzr2n",
-    "dataVersion": 820,
-    "updateTime": "2025-10-19 22:39:42",
-    "syncMode": "b13ojr",
-    "syncTime": "2025-10-19 22:39:42",
-    "description": "u7pag4",
-    "groupName": "zona.sauer",
-    "positionName": "zona.sauer",
-    "bizPowerName": "zona.sauer",
-    "subdistrictName": "zona.sauer",
-    "communityName": "zona.sauer"
+    "opUserId": "127",
+    "opOrganId": "127",
+    "opTime": "2025-10-20 01:16:48",
+    "opInfo": "5a7own",
+    "priority": 797,
+    "status": 20,
+    "delFlag": 4,
+    "dataBatch": "8kl79w",
+    "dataVersion": 439,
+    "updateTime": "2025-10-20 01:16:48",
+    "syncMode": "jopjcx",
+    "syncTime": "2025-10-20 01:16:48",
+    "description": "kj3qu4",
+    "groupName": "necole.oreilly",
+    "positionName": "necole.oreilly",
+    "bizPowerName": "necole.oreilly",
+    "subdistrictName": "necole.oreilly",
+    "communityName": "necole.oreilly"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -9887,50 +9887,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": 87,
-    "appId": "149",
-    "saveSource": "w3ij0o",
-    "unitName": "zona.sauer",
-    "name": "zona.sauer",
-    "idNum": "wtd5n7",
-    "duty": "v4ignk",
-    "telephone": "1-980-925-4411",
-    "mobile": "1-312-770-5203",
-    "extInfo1": "6qwvvl",
-    "extInfo2": "msukzr",
-    "extInfo3": "tz9cct",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": 484,
+    "appId": "127",
+    "saveSource": "iqsa5s",
+    "unitName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "idNum": "grag97",
+    "duty": "x6f1ih",
+    "telephone": "1-614-814-9478",
+    "mobile": "1-856-813-9551",
+    "extInfo1": "enbq98",
+    "extInfo2": "kn43k0",
+    "extInfo3": "fzca0p",
     "needInitUser": true,
-    "userId": "149",
+    "userId": "127",
     "needInitOrgan": true,
-    "organId": "149",
-    "type": "k7ci1y",
-    "foreignUrl": "www.aubrey-rice.net",
-    "bizType": 145,
-    "bizOrganId": "149",
-    "bizAreaId": 523,
-    "bizGroupId": 467,
-    "bizPower": "itj9le",
-    "bizMultiInfo": "b2uwjc",
+    "organId": "127",
+    "type": "z7kky7",
+    "foreignUrl": "www.emanuel-bosco.biz",
+    "bizType": 630,
+    "bizOrganId": "127",
+    "bizAreaId": 995,
+    "bizGroupId": 499,
+    "bizPower": "0nhluo",
+    "bizMultiInfo": "k81ig0",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "149",
-    "opOrganId": "149",
-    "opTime": "2025-10-19 22:39:42",
-    "opInfo": "enl09f",
-    "priority": 798,
-    "status": 770,
-    "delFlag": 7,
-    "dataBatch": "pvi8f9",
-    "dataVersion": 132,
-    "updateTime": "2025-10-19 22:39:42",
-    "syncMode": "3iyjba",
-    "syncTime": "2025-10-19 22:39:42",
-    "description": "c3i05u"
+    "opUserId": "127",
+    "opOrganId": "127",
+    "opTime": "2025-10-20 01:16:48",
+    "opInfo": "najd3i",
+    "priority": 590,
+    "status": 853,
+    "delFlag": 4,
+    "dataBatch": "k1dcon",
+    "dataVersion": 500,
+    "updateTime": "2025-10-20 01:16:48",
+    "syncMode": "ycr0sd",
+    "syncTime": "2025-10-20 01:16:48",
+    "description": "bkc1cc"
   }
 }'
 ```
@@ -9951,9 +9951,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ctssts",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "srgeod",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10030,50 +10030,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": 550,
-    "appId": "149",
-    "saveSource": "jhx1na",
-    "unitName": "zona.sauer",
-    "name": "zona.sauer",
-    "idNum": "hzb00s",
-    "duty": "jmj5mu",
-    "telephone": "1-980-925-4411",
-    "mobile": "1-312-770-5203",
-    "extInfo1": "c6ej06",
-    "extInfo2": "4kwe3g",
-    "extInfo3": "vmwenc",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": 79,
+    "appId": "127",
+    "saveSource": "fie67d",
+    "unitName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "idNum": "77r1bj",
+    "duty": "nm51pr",
+    "telephone": "1-614-814-9478",
+    "mobile": "1-856-813-9551",
+    "extInfo1": "ktou7o",
+    "extInfo2": "dzldh4",
+    "extInfo3": "yexhpi",
     "needInitUser": true,
-    "userId": "149",
+    "userId": "127",
     "needInitOrgan": true,
-    "organId": "149",
-    "type": "8piauy",
-    "foreignUrl": "www.aubrey-rice.net",
-    "bizType": 286,
-    "bizOrganId": "149",
-    "bizAreaId": 486,
-    "bizGroupId": 121,
-    "bizPower": "7krskj",
-    "bizMultiInfo": "531cgr",
+    "organId": "127",
+    "type": "udgc8t",
+    "foreignUrl": "www.emanuel-bosco.biz",
+    "bizType": 372,
+    "bizOrganId": "127",
+    "bizAreaId": 764,
+    "bizGroupId": 404,
+    "bizPower": "bbpy4b",
+    "bizMultiInfo": "gbclh5",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "149",
-    "opOrganId": "149",
-    "opTime": "2025-10-19 22:39:42",
-    "opInfo": "2z6ywt",
-    "priority": 753,
-    "status": 50,
-    "delFlag": 7,
-    "dataBatch": "p2nabm",
-    "dataVersion": 150,
-    "updateTime": "2025-10-19 22:39:42",
-    "syncMode": "lactmb",
-    "syncTime": "2025-10-19 22:39:42",
-    "description": "5hrmmt"
+    "opUserId": "127",
+    "opOrganId": "127",
+    "opTime": "2025-10-20 01:16:48",
+    "opInfo": "iu3a6n",
+    "priority": 960,
+    "status": 785,
+    "delFlag": 4,
+    "dataBatch": "ys9ltr",
+    "dataVersion": 752,
+    "updateTime": "2025-10-20 01:16:48",
+    "syncMode": "b5l995",
+    "syncTime": "2025-10-20 01:16:48",
+    "description": "gn7n2u"
   }
 }'
 ```
@@ -10094,9 +10094,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "id1uek",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "50cj0a",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10146,9 +10146,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jja7ii",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "dbg560",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10192,9 +10192,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "370was",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ppjbzn",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10225,11 +10225,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "zona.sauer",
-    "password": "1xx6cd",
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "appId": "149"
+    "username": "necole.oreilly",
+    "password": "zxu55i",
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "appId": "127"
   }
 }'
 ```
@@ -10250,9 +10250,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dv47jo",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "hcnov5",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10297,7 +10297,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?ipaddr=zbug6x&orderBy=880&page=1&limit=10&browser=rvnkuk&infoId=807&q=j1e8v3&startTime=2025-10-19 22:38:36&status=tqcmxl&loginTime=2025-10-19 22:39:43&username=zona.sauer&os=q9qz48&msg=6f7vx8&endTime=2025-10-19 22:38:36
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?page=1&orderBy=934&infoId=596&os=21xuxi&username=necole.oreilly&status=y03mts&msg=ie8i3j&browser=037p98&endTime=2025-10-20 01:15:40&limit=10&ipaddr=rwekd3&startTime=2025-10-20 01:15:40&loginTime=2025-10-20 01:16:49&q=pne2zh
 ```
 **Response-fields:**
 
@@ -10332,27 +10332,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 220,
+    "totalCount": 24,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 358,
-        "username": "zona.sauer",
-        "status": "yk4kmu",
-        "ipaddr": "1zzp5w",
-        "loginLocation": "w98gn9",
-        "browser": "fuf7sh",
-        "os": "aff724",
-        "msg": "2vxi8f",
-        "loginTime": "2025-10-19 22:39:43",
-        "remark": "uau4nr"
+        "infoId": 360,
+        "username": "necole.oreilly",
+        "status": "t9juyw",
+        "ipaddr": "u5u1n7",
+        "loginLocation": "mr93yr",
+        "browser": "4dsdk3",
+        "os": "cs2jnm",
+        "msg": "2bm67u",
+        "loginTime": "2025-10-20 01:16:49",
+        "remark": "3bs3ri"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10396,7 +10396,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'os=wvxyaq&loginTime=2025-10-19 22:39:43&username=zona.sauer&infoId=605&ipaddr=v9960p&status=up07yy&browser=rf01xr&orderBy=788&startTime=2025-10-19 22:38:36&msg=ro4v2o&q=kg39ey&endTime=2025-10-19 22:38:36&limit=10&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'browser=h81sn5&endTime=2025-10-20 01:15:40&page=1&ipaddr=3x3m7o&startTime=2025-10-20 01:15:40&username=necole.oreilly&q=n2h7ep&os=kzaph4&orderBy=982&loginTime=2025-10-20 01:16:49&status=2m9n03&infoId=210&limit=10&msg=d08trs'
 ```
 **Response-fields:**
 
@@ -10415,9 +10415,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kcsqd8",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "1med22",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10467,9 +10467,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rldpht",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "g3upzj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10513,9 +10513,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ysu61s",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "u2jx17",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10546,7 +10546,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/zona.sauer.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -10565,9 +10565,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v7jc5q",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "0vrp1v",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10686,60 +10686,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 955,
-    "userId": "149",
-    "deptId": 4,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "1iddrm",
-    "password": "qupgco",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 834,
+    "userId": "127",
+    "deptId": 148,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "whd9ra",
+    "password": "sh9ms9",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 238,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:38",
-    "description": "6bhhn7",
+    "status": 270,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:44",
+    "description": "y13tmc",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:38",
-      "lastTime": "2025-10-19 22:39:38",
-      "id": 275,
-      "organId": "149",
-      "parentId": 185,
-      "appId": "149",
-      "depttypeId": 650,
-      "foreignId": "149",
-      "createType": 825,
-      "type": "y6kn5m",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "avv5ve",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:44",
+      "lastTime": "2025-10-20 01:16:44",
+      "id": 227,
+      "organId": "127",
+      "parentId": 630,
+      "appId": "127",
+      "depttypeId": 449,
+      "foreignId": "127",
+      "createType": 369,
+      "type": "n4xmbj",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "n5tp9k",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "5aptq3",
-      "priority": 687,
-      "status": 920,
-      "delFlag": 7,
-      "description": "a2mts8",
-      "spare1": "3za3bs",
-      "spare2": "xaxfsb",
+      "searchCode": "65412",
+      "imagePath": "gopmy1",
+      "priority": 549,
+      "status": 892,
+      "delFlag": 4,
+      "description": "810mjf",
+      "spare1": "aakyd7",
+      "spare2": "ueq19d",
       "children": [
         {
           "$ref": ".."
@@ -10748,44 +10748,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "id": 444,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 228,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "id": 675,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 128,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 180,
-        "description": "1fnob4",
-        "areaType": "axlj4w"
+        "status": 141,
+        "description": "4e6js4",
+        "areaType": "lo3pnj"
       }
     ],
     "roleIds": [
-      157
+      750
     ],
     "positionIds": [
-      "rm81hc"
+      "rg9kpz"
     ],
-    "roleId": 266,
+    "roleId": 954,
     "userRoleList": [
       {
-        "id": 136,
-        "deptId": 546,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 488,
-        "roleName": "zona.sauer",
-        "adminId": 944
+        "id": 972,
+        "deptId": 480,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 963,
+        "roleName": "necole.oreilly",
+        "adminId": 749
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -10806,9 +10806,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hc7w2e",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "a5hvx6",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -10926,60 +10926,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 961,
-    "userId": "149",
-    "deptId": 784,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "qo2ihn",
-    "password": "rapmlp",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 54,
+    "userId": "127",
+    "deptId": 53,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "x5n5p2",
+    "password": "49zjoy",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 847,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:38",
-    "description": "7qfc9f",
+    "status": 933,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:44",
+    "description": "kiizyp",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:38",
-      "lastTime": "2025-10-19 22:39:38",
-      "id": 47,
-      "organId": "149",
-      "parentId": 483,
-      "appId": "149",
-      "depttypeId": 618,
-      "foreignId": "149",
-      "createType": 657,
-      "type": "twdyf0",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "cdpov1",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:44",
+      "lastTime": "2025-10-20 01:16:44",
+      "id": 908,
+      "organId": "127",
+      "parentId": 986,
+      "appId": "127",
+      "depttypeId": 18,
+      "foreignId": "127",
+      "createType": 379,
+      "type": "grthte",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "d878hx",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "qwl81p",
-      "priority": 742,
-      "status": 595,
-      "delFlag": 7,
-      "description": "19505y",
-      "spare1": "9fn70s",
-      "spare2": "pcnmou",
+      "searchCode": "65412",
+      "imagePath": "oondaf",
+      "priority": 720,
+      "status": 373,
+      "delFlag": 4,
+      "description": "zsm2tg",
+      "spare1": "5buzcv",
+      "spare2": "tde9ew",
       "children": [
         {
           "$ref": ".."
@@ -10988,44 +10988,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "id": 597,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 934,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "id": 92,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 895,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 543,
-        "description": "ie1vwx",
-        "areaType": "ns6vrz"
+        "status": 302,
+        "description": "rvwjc4",
+        "areaType": "okwu9h"
       }
     ],
     "roleIds": [
-      941
+      313
     ],
     "positionIds": [
-      "qlaict"
+      "fa5ztl"
     ],
-    "roleId": 141,
+    "roleId": 414,
     "userRoleList": [
       {
-        "id": 924,
-        "deptId": 87,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 223,
-        "roleName": "zona.sauer",
-        "adminId": 177
+        "id": 539,
+        "deptId": 642,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 971,
+        "roleName": "necole.oreilly",
+        "adminId": 227
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -11046,9 +11046,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bg8aqc",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "42jclo",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11112,40 +11112,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 378,
-    "userId": "149",
-    "organId": "149",
-    "deptId": 83,
-    "createType": 626,
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "mobile": "1-312-770-5203",
-    "email": "chuck.adams@gmail.com",
-    "password": "h18v90",
-    "salt": "3purvx",
-    "imagePath": "k38f15",
-    "adminType": "aj8flx",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 545,
+    "userId": "127",
+    "organId": "127",
+    "deptId": 120,
+    "createType": 988,
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "mobile": "1-856-813-9551",
+    "email": "eugenia.howe@yahoo.com",
+    "password": "t02rfu",
+    "salt": "57s106",
+    "imagePath": "bfx3qx",
+    "adminType": "oem83g",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "kmo94l",
-    "adminPerms": "5c8l77",
-    "lastAppId": "149",
-    "lastLoginTime": "2025-10-19 22:39:38",
-    "lastLoginIp": "171.216.115.206",
-    "loginCount": 490,
-    "status": 343,
-    "delFlag": 7,
-    "spare1": "y5o90x",
-    "spare2": "vgauqr",
+    "adminRange": "y1pqij",
+    "adminPerms": "4o9dsx",
+    "lastAppId": "127",
+    "lastLoginTime": "2025-10-20 01:16:44",
+    "lastLoginIp": "148.144.89.250",
+    "loginCount": 340,
+    "status": 606,
+    "delFlag": 4,
+    "spare1": "l90mxi",
+    "spare2": "pxcwpj",
     "roleIds": [
-      311
+      410
     ],
     "positionIds": [
-      "y1lvh2"
+      "osv0g1"
     ]
   }
 }'
@@ -11167,9 +11167,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1syjj1",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ajyoxx",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11293,60 +11293,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 210,
-    "userId": "149",
-    "deptId": 950,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "2mrtgt",
-    "password": "11o238",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:45",
+    "lastTime": "2025-10-20 01:16:45",
+    "id": 826,
+    "userId": "127",
+    "deptId": 909,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "3p3172",
+    "password": "ig4s2h",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 542,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:38",
-    "description": "t2uoqw",
+    "status": 21,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:45",
+    "description": "6qyb0z",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:38",
-      "lastTime": "2025-10-19 22:39:38",
-      "id": 675,
-      "organId": "149",
-      "parentId": 216,
-      "appId": "149",
-      "depttypeId": 43,
-      "foreignId": "149",
-      "createType": 796,
-      "type": "1cphub",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "juigua",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 648,
+      "organId": "127",
+      "parentId": 693,
+      "appId": "127",
+      "depttypeId": 152,
+      "foreignId": "127",
+      "createType": 87,
+      "type": "105e20",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "851twz",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "1i9fib",
-      "priority": 23,
-      "status": 809,
-      "delFlag": 7,
-      "description": "74dvg0",
-      "spare1": "53n96t",
-      "spare2": "c033gj",
+      "searchCode": "65412",
+      "imagePath": "3mwc1j",
+      "priority": 917,
+      "status": 3,
+      "delFlag": 4,
+      "description": "9dsjdv",
+      "spare1": "koqv4x",
+      "spare2": "owm80o",
       "children": [
         {
           "$ref": ".."
@@ -11355,44 +11355,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "id": 59,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 504,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 656,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 625,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 380,
-        "description": "oxlh0r",
-        "areaType": "ojlggo"
+        "status": 228,
+        "description": "r6qypa",
+        "areaType": "3n1j1u"
       }
     ],
     "roleIds": [
-      36
+      316
     ],
     "positionIds": [
-      "ts4ics"
+      "ijhh56"
     ],
-    "roleId": 788,
+    "roleId": 78,
     "userRoleList": [
       {
-        "id": 946,
-        "deptId": 553,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 99,
-        "roleName": "zona.sauer",
-        "adminId": 586
+        "id": 207,
+        "deptId": 717,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 363,
+        "roleName": "necole.oreilly",
+        "adminId": 344
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -11413,9 +11413,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lmbqip",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "qbrf5g",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11465,9 +11465,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tx5pwf",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "8kh6fb",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11513,7 +11513,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'endTime=2025-10-19 22:38:36&page=1&organId=149&adminId=927&userId=149&mobile=1-312-770-5203&delFlag=7&q=41r8zh&email=chuck.adams@gmail.com&deptId=798&nickName=hilton.brown&orderBy=990&startTime=2025-10-19 22:38:36&username=zona.sauer&limit=10&status=v3fm4i'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'userId=127&adminId=386&limit=10&username=necole.oreilly&email=eugenia.howe@yahoo.com&status=sffmwn&organId=127&mobile=1-856-813-9551&page=1&deptId=781&orderBy=329&endTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&q=fiumo4&delFlag=4&nickName=ethyl.nitzsche'
 ```
 **Response-fields:**
 
@@ -11532,9 +11532,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "w87tma",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "hb453p",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11585,9 +11585,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "61vswq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ojocwz",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11631,9 +11631,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8jh4v1",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "jvgiw4",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11751,60 +11751,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:39",
-    "lastTime": "2025-10-19 22:39:39",
-    "id": 116,
-    "userId": "149",
-    "deptId": 286,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "5mot5j",
-    "password": "lt9zru",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:45",
+    "lastTime": "2025-10-20 01:16:45",
+    "id": 598,
+    "userId": "127",
+    "deptId": 627,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "jc057l",
+    "password": "pi0661",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 336,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:39",
-    "description": "wtn3ak",
+    "status": 416,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:45",
+    "description": "atck67",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "id": 184,
-      "organId": "149",
-      "parentId": 231,
-      "appId": "149",
-      "depttypeId": 616,
-      "foreignId": "149",
-      "createType": 552,
-      "type": "qeul6i",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "kobdor",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 600,
+      "organId": "127",
+      "parentId": 809,
+      "appId": "127",
+      "depttypeId": 786,
+      "foreignId": "127",
+      "createType": 262,
+      "type": "f8cv8j",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "cwtonc",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "ech8xf",
-      "priority": 718,
-      "status": 921,
-      "delFlag": 7,
-      "description": "bvou0a",
-      "spare1": "4mjozb",
-      "spare2": "l4uiz1",
+      "searchCode": "65412",
+      "imagePath": "kejxen",
+      "priority": 637,
+      "status": 434,
+      "delFlag": 4,
+      "description": "hm8fg5",
+      "spare1": "sw8n6s",
+      "spare2": "75wpni",
       "children": [
         {
           "$ref": ".."
@@ -11813,44 +11813,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:39",
-        "lastTime": "2025-10-19 22:39:39",
-        "id": 901,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 987,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 52,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 391,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 281,
-        "description": "39ogjp",
-        "areaType": "gum09q"
+        "status": 132,
+        "description": "xhnt0g",
+        "areaType": "fsvgan"
       }
     ],
     "roleIds": [
-      795
+      532
     ],
     "positionIds": [
-      "kd835n"
+      "ngf7f7"
     ],
-    "roleId": 446,
+    "roleId": 299,
     "userRoleList": [
       {
-        "id": 770,
-        "deptId": 674,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 155,
-        "roleName": "zona.sauer",
-        "adminId": 256
+        "id": 130,
+        "deptId": 254,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 463,
+        "roleName": "necole.oreilly",
+        "adminId": 878
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -11871,9 +11871,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iv58yn",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "blyhfs",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -11991,60 +11991,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:39",
-    "lastTime": "2025-10-19 22:39:39",
-    "id": 479,
-    "userId": "149",
-    "deptId": 382,
-    "deptName": "zona.sauer",
-    "organId": "149",
-    "organName": "zona.sauer",
-    "name": "zona.sauer",
-    "username": "zona.sauer",
-    "nickName": "hilton.brown",
-    "email": "chuck.adams@gmail.com",
-    "mobile": "1-312-770-5203",
-    "imagePath": "qz5a9q",
-    "password": "2zawm8",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:45",
+    "lastTime": "2025-10-20 01:16:45",
+    "id": 381,
+    "userId": "127",
+    "deptId": 891,
+    "deptName": "necole.oreilly",
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "name": "necole.oreilly",
+    "username": "necole.oreilly",
+    "nickName": "ethyl.nitzsche",
+    "email": "eugenia.howe@yahoo.com",
+    "mobile": "1-856-813-9551",
+    "imagePath": "o5vybo",
+    "password": "tj6xie",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 255,
-    "delFlag": 7,
-    "lastLoginIp": "171.216.115.206",
-    "lastLoginTime": "2025-10-19 22:39:39",
-    "description": "4njwm0",
+    "status": 237,
+    "delFlag": 4,
+    "lastLoginIp": "148.144.89.250",
+    "lastLoginTime": "2025-10-20 01:16:45",
+    "description": "guuv7f",
     "dept": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "id": 524,
-      "organId": "149",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 339,
+      "organId": "127",
       "parentId": 416,
-      "appId": "149",
-      "depttypeId": 605,
-      "foreignId": "149",
-      "createType": 921,
-      "type": "g1zv4y",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "jyflhc",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "appId": "127",
+      "depttypeId": 139,
+      "foreignId": "127",
+      "createType": 925,
+      "type": "34scvk",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "7vcisi",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "cvvkew",
-      "priority": 619,
-      "status": 821,
-      "delFlag": 7,
-      "description": "am8yg9",
-      "spare1": "1m9tl8",
-      "spare2": "rybc5n",
+      "searchCode": "65412",
+      "imagePath": "177c56",
+      "priority": 625,
+      "status": 981,
+      "delFlag": 4,
+      "description": "3ghu9l",
+      "spare1": "4lkxc5",
+      "spare2": "sljd2f",
       "children": [
         {
           "$ref": ".."
@@ -12053,44 +12053,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:39",
-        "lastTime": "2025-10-19 22:39:39",
-        "id": 493,
-        "roletypeId": "149",
-        "appId": "149",
-        "name": "zona.sauer",
-        "code": "62411",
-        "priority": 39,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 516,
+        "roletypeId": "127",
+        "appId": "127",
+        "name": "necole.oreilly",
+        "code": "65412",
+        "priority": 996,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 827,
-        "description": "pem00s",
-        "areaType": "tysqdj"
+        "status": 494,
+        "description": "mswpfi",
+        "areaType": "ubdjx1"
       }
     ],
     "roleIds": [
-      852
+      149
     ],
     "positionIds": [
-      "y3ulol"
+      "n6h4n0"
     ],
-    "roleId": 290,
+    "roleId": 864,
     "userRoleList": [
       {
-        "id": 315,
-        "deptId": 597,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleId": 428,
-        "roleName": "zona.sauer",
-        "adminId": 415
+        "id": 88,
+        "deptId": 230,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleId": 443,
+        "roleName": "necole.oreilly",
+        "adminId": 913
       }
     ],
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
   }
 }'
 ```
@@ -12111,9 +12111,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ks317f",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "pkglqe",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12144,7 +12144,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/73.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/642.do
 ```
 **Response-fields:**
 
@@ -12163,9 +12163,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lmomm3",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "bkz9fm",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12197,7 +12197,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=zmtpfw&roleIds=zmtpfw&adminId=654'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=wnznwi&roleIds=wnznwi&adminId=277'
 ```
 **Response-fields:**
 
@@ -12216,9 +12216,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u710mh",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "23ou8c",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12265,7 +12265,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?orderBy=333&userId=149&organId=149&page=1&deptId=284&nickName=hilton.brown&startTime=2025-10-19 22:38:36&email=chuck.adams@gmail.com&delFlag=7&limit=10&adminId=427&status=45195q&endTime=2025-10-19 22:38:36&q=72duct&username=zona.sauer&mobile=1-312-770-5203
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?deptId=281&organId=127&limit=10&delFlag=4&adminId=977&email=eugenia.howe@yahoo.com&status=wj864u&userId=127&q=lwdnpg&page=1&username=necole.oreilly&orderBy=425&nickName=ethyl.nitzsche&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&mobile=1-856-813-9551
 ```
 **Response-fields:**
 
@@ -12371,60 +12371,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:38",
-      "lastTime": "2025-10-19 22:39:38",
-      "id": 509,
-      "userId": "149",
-      "deptId": 669,
-      "deptName": "zona.sauer",
-      "organId": "149",
-      "organName": "zona.sauer",
-      "name": "zona.sauer",
-      "username": "zona.sauer",
-      "nickName": "hilton.brown",
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "0dezv9",
-      "password": "1ehmki",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:44",
+      "lastTime": "2025-10-20 01:16:44",
+      "id": 876,
+      "userId": "127",
+      "deptId": 533,
+      "deptName": "necole.oreilly",
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "name": "necole.oreilly",
+      "username": "necole.oreilly",
+      "nickName": "ethyl.nitzsche",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "6v2g9t",
+      "password": "wvjprm",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 417,
-      "delFlag": 7,
-      "lastLoginIp": "171.216.115.206",
-      "lastLoginTime": "2025-10-19 22:39:38",
-      "description": "cou2dy",
+      "status": 642,
+      "delFlag": 4,
+      "lastLoginIp": "148.144.89.250",
+      "lastLoginTime": "2025-10-20 01:16:44",
+      "description": "lpjbvn",
       "dept": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "id": 381,
-        "organId": "149",
-        "parentId": 450,
-        "appId": "149",
-        "depttypeId": 303,
-        "foreignId": "149",
-        "createType": 722,
-        "type": "7hiqqi",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "areaCode": "62411",
-        "organLeader": "hn6vmv",
-        "leaderId": "149",
-        "leaderMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "id": 425,
+        "organId": "127",
+        "parentId": 150,
+        "appId": "127",
+        "depttypeId": 166,
+        "foreignId": "127",
+        "createType": 352,
+        "type": "reeb3o",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "areaCode": "65412",
+        "organLeader": "0us999",
+        "leaderId": "127",
+        "leaderMobile": "1-856-813-9551",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "62411",
-        "imagePath": "xpyxpn",
-        "priority": 462,
-        "status": 192,
-        "delFlag": 7,
-        "description": "k251xh",
-        "spare1": "9qzy4p",
-        "spare2": "hfhc05",
+        "searchCode": "65412",
+        "imagePath": "ycwq7k",
+        "priority": 821,
+        "status": 961,
+        "delFlag": 4,
+        "description": "coppp3",
+        "spare1": "yv3zf0",
+        "spare2": "b7wpyt",
         "children": [
           {
             "$ref": ".."
@@ -12433,48 +12433,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:38",
-          "lastTime": "2025-10-19 22:39:38",
-          "id": 780,
-          "roletypeId": "149",
-          "appId": "149",
-          "name": "zona.sauer",
-          "code": "62411",
-          "priority": 272,
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:44",
+          "lastTime": "2025-10-20 01:16:44",
+          "id": 461,
+          "roletypeId": "127",
+          "appId": "127",
+          "name": "necole.oreilly",
+          "code": "65412",
+          "priority": 764,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 208,
-          "description": "nx38gw",
-          "areaType": "xfipd3"
+          "status": 759,
+          "description": "ial65l",
+          "areaType": "0cqd45"
         }
       ],
       "roleIds": [
-        161
+        85
       ],
       "positionIds": [
-        "86cm1c"
+        "te2eoe"
       ],
-      "roleId": 792,
+      "roleId": 198,
       "userRoleList": [
         {
-          "id": 634,
-          "deptId": 975,
-          "deptName": "zona.sauer",
-          "organId": "149",
-          "organName": "zona.sauer",
-          "roleId": 11,
-          "roleName": "zona.sauer",
-          "adminId": 238
+          "id": 448,
+          "deptId": 901,
+          "deptName": "necole.oreilly",
+          "organId": "127",
+          "organName": "necole.oreilly",
+          "roleId": 254,
+          "roleName": "necole.oreilly",
+          "adminId": 404
         }
       ],
-      "code": "62411",
-      "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+      "code": "65412",
+      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12505,7 +12505,7 @@ adminId|int64| 管理员ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/326].do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/516].do
 ```
 **Response-fields:**
 
@@ -12659,60 +12659,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:38",
-      "lastTime": "2025-10-19 22:39:38",
-      "id": 623,
-      "userId": "149",
-      "deptId": 45,
-      "deptName": "zona.sauer",
-      "organId": "149",
-      "organName": "zona.sauer",
-      "name": "zona.sauer",
-      "username": "zona.sauer",
-      "nickName": "hilton.brown",
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "hkh9hs",
-      "password": "dhm507",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:44",
+      "lastTime": "2025-10-20 01:16:44",
+      "id": 775,
+      "userId": "127",
+      "deptId": 855,
+      "deptName": "necole.oreilly",
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "name": "necole.oreilly",
+      "username": "necole.oreilly",
+      "nickName": "ethyl.nitzsche",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "63i1h8",
+      "password": "bh1sgw",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 874,
-      "delFlag": 7,
-      "lastLoginIp": "171.216.115.206",
-      "lastLoginTime": "2025-10-19 22:39:38",
-      "description": "y3llw1",
+      "status": 20,
+      "delFlag": 4,
+      "lastLoginIp": "148.144.89.250",
+      "lastLoginTime": "2025-10-20 01:16:44",
+      "description": "2lmb68",
       "dept": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "id": 81,
-        "organId": "149",
-        "parentId": 664,
-        "appId": "149",
-        "depttypeId": 637,
-        "foreignId": "149",
-        "createType": 335,
-        "type": "klc8g1",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "areaCode": "62411",
-        "organLeader": "auacl1",
-        "leaderId": "149",
-        "leaderMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "id": 226,
+        "organId": "127",
+        "parentId": 993,
+        "appId": "127",
+        "depttypeId": 119,
+        "foreignId": "127",
+        "createType": 365,
+        "type": "t0y55p",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "areaCode": "65412",
+        "organLeader": "ooer0y",
+        "leaderId": "127",
+        "leaderMobile": "1-856-813-9551",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "62411",
-        "imagePath": "y9bkoz",
-        "priority": 386,
-        "status": 140,
-        "delFlag": 7,
-        "description": "ft8yby",
-        "spare1": "42fkzt",
-        "spare2": "b6wy7g",
+        "searchCode": "65412",
+        "imagePath": "7s95td",
+        "priority": 317,
+        "status": 601,
+        "delFlag": 4,
+        "description": "uak20g",
+        "spare1": "a9iyu1",
+        "spare2": "q5vsrj",
         "children": [
           {
             "$ref": ".."
@@ -12721,116 +12721,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:38",
-          "lastTime": "2025-10-19 22:39:38",
-          "id": 199,
-          "roletypeId": "149",
-          "appId": "149",
-          "name": "zona.sauer",
-          "code": "62411",
-          "priority": 139,
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:44",
+          "lastTime": "2025-10-20 01:16:44",
+          "id": 205,
+          "roletypeId": "127",
+          "appId": "127",
+          "name": "necole.oreilly",
+          "code": "65412",
+          "priority": 862,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 739,
-          "description": "ky0ofw",
-          "areaType": "v3xe9h"
+          "status": 53,
+          "description": "nace84",
+          "areaType": "k64hem"
         }
       ],
       "roleIds": [
-        523
+        37
       ],
       "positionIds": [
-        "d18p0u"
+        "l6p57i"
       ],
-      "roleId": 926,
+      "roleId": 193,
       "userRoleList": [
         {
-          "id": 985,
-          "deptId": 96,
-          "deptName": "zona.sauer",
-          "organId": "149",
-          "organName": "zona.sauer",
-          "roleId": 833,
-          "roleName": "zona.sauer",
-          "adminId": 523
+          "id": 902,
+          "deptId": 965,
+          "deptName": "necole.oreilly",
+          "organId": "127",
+          "organName": "necole.oreilly",
+          "roleId": 89,
+          "roleName": "necole.oreilly",
+          "adminId": 417
         }
       ],
-      "code": "62411",
-      "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+      "code": "65412",
+      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
     },
     "roles": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "roleId": 468,
-        "roleName": "zona.sauer",
-        "roleKey": "kw148d",
-        "roleSort": 274,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "roleId": 793,
+        "roleName": "necole.oreilly",
+        "roleKey": "fd993p",
+        "roleSort": 727,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 814,
+        "status": 248,
         "flag": true,
         "menuIds": [
-          987
+          207
         ],
         "deptIds": [
-          247
+          880
         ],
         "permissions": [
-          "yjassw"
+          "exkt02"
         ],
-        "remark": "x97io0",
-        "parentName": "zona.sauer",
-        "appName": "zona.sauer",
-        "roletypeId": "149",
-        "roletypeName": "zona.sauer",
-        "priority": 176,
+        "remark": "u6fbpg",
+        "parentName": "necole.oreilly",
+        "appName": "necole.oreilly",
+        "roletypeId": "127",
+        "roletypeName": "necole.oreilly",
+        "priority": 666,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 433,
-        "roleId": 340,
-        "adminId": 566,
-        "deptId": 138,
-        "deptName": "zona.sauer",
-        "organId": "149",
-        "organName": "zona.sauer",
-        "roleName": "zona.sauer"
+        "id": 192,
+        "roleId": 36,
+        "adminId": 375,
+        "deptId": 229,
+        "deptName": "necole.oreilly",
+        "organId": "127",
+        "organName": "necole.oreilly",
+        "roleName": "necole.oreilly"
       }
     ],
     "positions": [
       {
-        "postId": "149",
-        "postCode": "62411",
-        "postName": "zona.sauer",
-        "postSort": 984,
-        "status": 234,
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:38",
-        "lastTime": "2025-10-19 22:39:38",
-        "delFlag": 7,
-        "remark": "phdkwe",
+        "postId": "127",
+        "postCode": "65412",
+        "postName": "necole.oreilly",
+        "postSort": 344,
+        "status": 142,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:44",
+        "lastTime": "2025-10-20 01:16:44",
+        "delFlag": 4,
+        "remark": "cjv5on",
         "ids": [
-          "ug4nok"
+          "boe6ca"
         ],
-        "positionId": "149",
+        "positionId": "127",
         "flag": true
       }
     ],
     "roleIds": [
-      927
+      416
     ],
     "positionIds": [
-      95
+      196
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12892,7 +12892,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?page=1&parentId=187&spare2=ovngwy&isLeaf=true&q=1060tp&createType=314&areaCode=62411&searchCode=62411&spare1=ce4g54&foreignId=149&isDisabled=true&depttypeId=650&organLeader=p23jm4&appId=149&delFlag=7&creatorId=149&startTime=2025-10-19 22:38:36&orderBy=611&limit=10&isVirtual=true&type=gnqfxr&sname=zona.sauer&organId=149&isOrganLevel=true&imagePath=miz0s5&description=tsw1k9&status=315&name=zona.sauer&leaderMobile=1-312-770-5203&deptId=77&leaderId=149&endTime=2025-10-19 22:38:36
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?leaderMobile=1-856-813-9551&startTime=2025-10-20 01:15:40&type=87rigk&isOrganLevel=true&depttypeId=810&creatorId=127&orderBy=847&appId=127&foreignId=127&endTime=2025-10-20 01:15:40&page=1&deptId=7&searchCode=65412&status=302&delFlag=4&createType=877&q=sr20id&sname=necole.oreilly&organId=127&imagePath=nh4oip&isVirtual=true&limit=10&organLeader=totj9v&description=m7ww4e&parentId=754&isDisabled=true&spare2=374ru3&spare1=fxrmiu&name=necole.oreilly&isLeaf=true&areaCode=65412&leaderId=127
 ```
 **Response-fields:**
 
@@ -12916,8 +12916,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 149,
-      "label": "g4c327",
+      "id": 654,
+      "label": "6svdug",
       "children": [
         {
           "$ref": ".."
@@ -12925,8 +12925,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -12984,7 +12984,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?officePhone=1-980-925-4411&page=1&positionId=149&groupId=149&postypeId=149&name=zona.sauer&mobilePhone=1-980-925-4411&code=62411&posFunction=jema25&limit=10&description=3y59fg&q=7h5q76&posRank=45&posType=iell71&status=588&sname=zona.sauer&roletypeId=149&startTime=2025-10-19 22:38:36&ids=0ekped&ids=0ekped&createTime=2025-10-19 22:38:36&roleTypeId=149&isPub=true&id=149&parentId=149&orderBy=404&oname=zona.sauer&endTime=2025-10-19 22:38:36&delFlag=7
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?isPub=true&posType=l7obt4&code=65412&postypeId=127&delFlag=4&q=wqehb0&limit=10&page=1&status=365&posFunction=m6dh64&id=127&roletypeId=127&ids=3vihqo&ids=3vihqo&sname=necole.oreilly&groupId=127&description=7bk5bq&parentId=127&mobilePhone=1-614-814-9478&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&orderBy=952&roleTypeId=127&posRank=748&name=necole.oreilly&officePhone=1-614-814-9478&createTime=2025-10-20 01:15:40&oname=necole.oreilly&positionId=127
 ```
 **Response-fields:**
 
@@ -13022,32 +13022,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 465,
+    "totalCount": 693,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "149",
-        "postCode": "62411",
-        "postName": "zona.sauer",
-        "postSort": 168,
-        "status": 956,
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:42",
-        "lastTime": "2025-10-19 22:39:42",
-        "delFlag": 7,
-        "remark": "k9vyn8",
+        "postId": "127",
+        "postCode": "65412",
+        "postName": "necole.oreilly",
+        "postSort": 531,
+        "status": 403,
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:48",
+        "lastTime": "2025-10-20 01:16:48",
+        "delFlag": 4,
+        "remark": "dd1tdl",
         "ids": [
-          "ydiad0"
+          "x7o32r"
         ],
-        "positionId": "149",
+        "positionId": "127",
         "flag": true
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13086,7 +13086,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'startTime=2025-10-19 22:38:36&status=843&q=m4eib8&limit=10&orderBy=14&postCode=62411&endTime=2025-10-19 22:38:36&page=1&postName=zona.sauer&delFlag=7'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'startTime=2025-10-20 01:15:40&limit=10&q=3exclf&page=1&status=379&delFlag=4&orderBy=432&endTime=2025-10-20 01:15:40&postName=necole.oreilly&postCode=65412'
 ```
 **Response-fields:**
 
@@ -13105,9 +13105,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mv8zmy",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "8ph39o",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13137,7 +13137,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/127.do
 ```
 **Response-fields:**
 
@@ -13198,50 +13198,50 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": "149",
-    "parentId": "149",
-    "postypeId": "149",
-    "roletypeId": "149",
-    "userId": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "code": "62411",
-    "oname": "zona.sauer",
-    "posFunction": "wj080o",
-    "posRank": 126,
-    "posType": "eu6b4k",
-    "editorType": "i4x9o5",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": "127",
+    "parentId": "127",
+    "postypeId": "127",
+    "roletypeId": "127",
+    "userId": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "code": "65412",
+    "oname": "necole.oreilly",
+    "posFunction": "yvlyog",
+    "posRank": 422,
+    "posType": "usbc2y",
+    "editorType": "l1vl7k",
     "isEditorCreate": true,
-    "status": 930,
+    "status": 928,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "149",
-    "manageDeptids": "he4nf4",
+    "leaderId": "127",
+    "manageDeptids": "1ali4j",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-980-925-4411",
-    "officePhone": "1-980-925-4411",
-    "buildingId": "149",
-    "roomNo": "8w7hkl",
-    "extQmType": "ji5xc0",
-    "extQmTypePhoto": "feyoqq",
-    "extPosName": "zona.sauer",
-    "extOrganName": "zona.sauer",
-    "priority": 990,
-    "priorityInOrgan": 825,
-    "priorityInDomain": 846,
-    "updaterId": "149",
-    "updateTime": "2025-10-19 22:39:42",
-    "delFlag": 7,
-    "description": "07cq33",
-    "remark": "e41fme"
+    "mobilePhone": "1-614-814-9478",
+    "officePhone": "1-614-814-9478",
+    "buildingId": "127",
+    "roomNo": "i8nq69",
+    "extQmType": "iq5330",
+    "extQmTypePhoto": "o8g2lo",
+    "extPosName": "necole.oreilly",
+    "extOrganName": "necole.oreilly",
+    "priority": 997,
+    "priorityInOrgan": 577,
+    "priorityInDomain": 66,
+    "updaterId": "127",
+    "updateTime": "2025-10-20 01:16:48",
+    "delFlag": 4,
+    "description": "bql5w4",
+    "remark": "mxoq3g"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13317,50 +13317,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": "149",
-    "parentId": "149",
-    "postypeId": "149",
-    "roletypeId": "149",
-    "userId": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "code": "62411",
-    "oname": "zona.sauer",
-    "posFunction": "9a0wfw",
-    "posRank": 146,
-    "posType": "s8e8yr",
-    "editorType": "auqggn",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": "127",
+    "parentId": "127",
+    "postypeId": "127",
+    "roletypeId": "127",
+    "userId": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "code": "65412",
+    "oname": "necole.oreilly",
+    "posFunction": "f6wy0u",
+    "posRank": 297,
+    "posType": "jhaxav",
+    "editorType": "3cyyev",
     "isEditorCreate": true,
-    "status": 239,
+    "status": 683,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "149",
-    "manageDeptids": "119swo",
+    "leaderId": "127",
+    "manageDeptids": "ok0r4u",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-980-925-4411",
-    "officePhone": "1-980-925-4411",
-    "buildingId": "149",
-    "roomNo": "87pvex",
-    "extQmType": "f3otqp",
-    "extQmTypePhoto": "mql1r1",
-    "extPosName": "zona.sauer",
-    "extOrganName": "zona.sauer",
-    "priority": 720,
-    "priorityInOrgan": 83,
-    "priorityInDomain": 815,
-    "updaterId": "149",
-    "updateTime": "2025-10-19 22:39:42",
-    "delFlag": 7,
-    "description": "3n8be6",
-    "remark": "6n1hia",
-    "parentName": "zona.sauer",
-    "roletypeName": "zona.sauer",
-    "postypeName": "zona.sauer"
+    "mobilePhone": "1-614-814-9478",
+    "officePhone": "1-614-814-9478",
+    "buildingId": "127",
+    "roomNo": "stafo4",
+    "extQmType": "t9iz4q",
+    "extQmTypePhoto": "f2yf5z",
+    "extPosName": "necole.oreilly",
+    "extOrganName": "necole.oreilly",
+    "priority": 758,
+    "priorityInOrgan": 142,
+    "priorityInDomain": 798,
+    "updaterId": "127",
+    "updateTime": "2025-10-20 01:16:48",
+    "delFlag": 4,
+    "description": "bpjhx7",
+    "remark": "066hmu",
+    "parentName": "necole.oreilly",
+    "roletypeName": "necole.oreilly",
+    "postypeName": "necole.oreilly"
   }
 }'
 ```
@@ -13381,9 +13381,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rhp2ml",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "7x7j7t",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13459,50 +13459,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "id": "149",
-    "parentId": "149",
-    "postypeId": "149",
-    "roletypeId": "149",
-    "userId": "149",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "code": "62411",
-    "oname": "zona.sauer",
-    "posFunction": "sewi95",
-    "posRank": 706,
-    "posType": "ise77j",
-    "editorType": "mdtmph",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:48",
+    "lastTime": "2025-10-20 01:16:48",
+    "id": "127",
+    "parentId": "127",
+    "postypeId": "127",
+    "roletypeId": "127",
+    "userId": "127",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "code": "65412",
+    "oname": "necole.oreilly",
+    "posFunction": "605npp",
+    "posRank": 795,
+    "posType": "5zg9dw",
+    "editorType": "cztdf1",
     "isEditorCreate": true,
-    "status": 282,
+    "status": 86,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "149",
-    "manageDeptids": "ygdi10",
+    "leaderId": "127",
+    "manageDeptids": "ux2fgk",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-980-925-4411",
-    "officePhone": "1-980-925-4411",
-    "buildingId": "149",
-    "roomNo": "qnx73k",
-    "extQmType": "hk1prr",
-    "extQmTypePhoto": "i9trgp",
-    "extPosName": "zona.sauer",
-    "extOrganName": "zona.sauer",
-    "priority": 984,
-    "priorityInOrgan": 333,
-    "priorityInDomain": 755,
-    "updaterId": "149",
-    "updateTime": "2025-10-19 22:39:42",
-    "delFlag": 7,
-    "description": "5csoas",
-    "remark": "xahxin",
-    "parentName": "zona.sauer",
-    "roletypeName": "zona.sauer",
-    "postypeName": "zona.sauer"
+    "mobilePhone": "1-614-814-9478",
+    "officePhone": "1-614-814-9478",
+    "buildingId": "127",
+    "roomNo": "z5zx11",
+    "extQmType": "o9m4md",
+    "extQmTypePhoto": "9kvgge",
+    "extPosName": "necole.oreilly",
+    "extOrganName": "necole.oreilly",
+    "priority": 971,
+    "priorityInOrgan": 312,
+    "priorityInDomain": 835,
+    "updaterId": "127",
+    "updateTime": "2025-10-20 01:16:48",
+    "delFlag": 4,
+    "description": "lv6t8q",
+    "remark": "ypqu7q",
+    "parentName": "necole.oreilly",
+    "roletypeName": "necole.oreilly",
+    "postypeName": "necole.oreilly"
   }
 }'
 ```
@@ -13523,9 +13523,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t04ezr",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "gdki8u",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13574,9 +13574,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a4hkpv",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "aw8wrv",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13621,20 +13621,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "149",
-    "postCode": "62411",
-    "postName": "zona.sauer",
-    "postSort": 801,
-    "status": 975,
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:42",
-    "lastTime": "2025-10-19 22:39:42",
-    "delFlag": 7,
-    "remark": "nsz3fv",
+    "postId": "127",
+    "postCode": "65412",
+    "postName": "necole.oreilly",
+    "postSort": 733,
+    "status": 354,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:49",
+    "lastTime": "2025-10-20 01:16:49",
+    "delFlag": 4,
+    "remark": "1jzbtr",
     "ids": [
-      "zr4h1p"
+      "jvrlz0"
     ],
-    "positionId": "149",
+    "positionId": "127",
     "flag": true
   }
 }'
@@ -13656,9 +13656,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1eo6na",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "rlhhns",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13696,12 +13696,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 623,
-    "roleId": 895,
-    "positionId": "149",
-    "status": 932,
-    "beginTime": "2025-10-19",
-    "endTime": "2025-10-19"
+    "id": 757,
+    "roleId": 93,
+    "positionId": "127",
+    "status": 988,
+    "beginTime": "2025-10-20",
+    "endTime": "2025-10-20"
   }
 }'
 ```
@@ -13722,9 +13722,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ue2819",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "jroad2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13782,25 +13782,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "149",
-      "postCode": "62411",
-      "postName": "zona.sauer",
-      "postSort": 931,
-      "status": 979,
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:42",
-      "lastTime": "2025-10-19 22:39:42",
-      "delFlag": 7,
-      "remark": "krp3c9",
+      "postId": "127",
+      "postCode": "65412",
+      "postName": "necole.oreilly",
+      "postSort": 852,
+      "status": 771,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:49",
+      "lastTime": "2025-10-20 01:16:49",
+      "delFlag": 4,
+      "remark": "6y57ca",
       "ids": [
-        "yedchh"
+        "0f5ywh"
       ],
-      "positionId": "149",
+      "positionId": "127",
       "flag": true
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13846,7 +13846,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?userId=149&method=8blwdz&q=ctnd53&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&limit=10&operation=h7113n&page=1&time=1760884716921&srcCode=275&category=408&ip=171.216.115.206&username=zona.sauer&createTime=2025-10-19 22:39:43&orderBy=133&appId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?q=wj83nt&startTime=2025-10-20 01:15:40&srcCode=718&username=necole.oreilly&category=853&endTime=2025-10-20 01:15:40&limit=10&appId=127&userId=127&createTime=2025-10-20 01:16:49&orderBy=234&ip=148.144.89.250&time=1760894140169&operation=gad0mr&page=1&method=d6jtsx
 ```
 **Response-fields:**
 
@@ -13891,39 +13891,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 603,
+    "totalCount": 141,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 104,
-        "title": "15s4u8",
-        "businessType": 959,
-        "businessTypeName": "zona.sauer",
+        "operId": 900,
+        "title": "cfv8at",
+        "businessType": 37,
+        "businessTypeName": "necole.oreilly",
         "businessTypes": [
-          365
+          303
         ],
-        "method": "8cr62t",
-        "requestMethod": "8xwbu6",
-        "operatorType": 670,
-        "operName": "zona.sauer",
-        "deptName": "zona.sauer",
-        "operUrl": "www.aubrey-rice.net",
-        "operIp": "171.216.115.206",
-        "operLocation": "9164z7",
-        "operParam": "5cx2gp",
-        "jsonResult": "l4a9gh",
-        "status": 737,
-        "errorMsg": "7y9141",
-        "operTime": "2025-10-19 22:39:43",
-        "costTime": 1760884716921,
-        "remark": "99olvi"
+        "method": "qslk1x",
+        "requestMethod": "m10qjy",
+        "operatorType": 500,
+        "operName": "necole.oreilly",
+        "deptName": "necole.oreilly",
+        "operUrl": "www.emanuel-bosco.biz",
+        "operIp": "148.144.89.250",
+        "operLocation": "8dii2r",
+        "operParam": "qn3a60",
+        "jsonResult": "o7qarg",
+        "status": 945,
+        "errorMsg": "94puav",
+        "operTime": "2025-10-20 01:16:49",
+        "costTime": 1760894140169,
+        "remark": "iosbbk"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -13968,7 +13968,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operId=384&operTime=2025-10-19 22:39:43&status=761&title=fzpo1i&operName=zona.sauer&deptName=zona.sauer&remark=5m6srz&startTime=2025-10-19 22:38:36&page=1&orderBy=755&businessType=909&q=f03mo4&operatorType=755&limit=10&operIp=171.216.115.206&endTime=2025-10-19 22:38:36'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operId=886&q=32cggf&endTime=2025-10-20 01:15:40&deptName=necole.oreilly&operIp=148.144.89.250&title=7y9gpd&operTime=2025-10-20 01:16:49&remark=s2nv51&limit=10&operName=necole.oreilly&page=1&status=389&businessType=429&operatorType=806&startTime=2025-10-20 01:15:40&orderBy=152'
 ```
 **Response-fields:**
 
@@ -13987,9 +13987,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z46g8w",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "qway9c",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14038,9 +14038,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "58oush",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "zc6fxp",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14081,7 +14081,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?page=1&q=70xaup&orderBy=306&limit=10&delFlag=7&organName=zona.sauer&organId=149&wlType=3dri21&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?startTime=2025-10-20 01:15:40&organName=necole.oreilly&limit=10&orderBy=928&page=1&wlType=pl1o4v&endTime=2025-10-20 01:15:40&q=68v6hh&delFlag=4&organId=127
 ```
 **Response-fields:**
 
@@ -14120,28 +14120,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "7hi3lk"
+        "0zj69r"
       ],
-      "organId": "149",
-      "organName": "zona.sauer",
-      "organSName": "zona.sauer",
-      "organCode": "62411",
-      "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-      "wlType": "31jlvz",
-      "wlTypeName": "zona.sauer",
-      "priority": 143,
-      "delFlag": 7,
-      "createTime": "2025-10-19 22:39:45",
-      "lastTime": "2025-10-19 22:39:45",
-      "contactName": "zona.sauer",
-      "contactEmail": "chuck.adams@gmail.com",
-      "contactMobile": "1-312-770-5203",
-      "description": "jhayu4",
-      "tel": "d1guqo"
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "organSName": "necole.oreilly",
+      "organCode": "65412",
+      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+      "wlType": "3rrvd6",
+      "wlTypeName": "necole.oreilly",
+      "priority": 322,
+      "delFlag": 4,
+      "createTime": "2025-10-20 01:16:52",
+      "lastTime": "2025-10-20 01:16:52",
+      "contactName": "necole.oreilly",
+      "contactEmail": "eugenia.howe@yahoo.com",
+      "contactMobile": "1-856-813-9551",
+      "description": "uxu5k4",
+      "tel": "kxi5wr"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14210,27 +14210,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "gjk899"
+      "1bc5zy"
     ],
-    "organId": "149",
-    "organName": "zona.sauer",
-    "organSName": "zona.sauer",
-    "organCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "wlType": "ehwx1z",
-    "wlTypeName": "zona.sauer",
-    "priority": 403,
-    "delFlag": 7,
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "contactName": "zona.sauer",
-    "contactEmail": "chuck.adams@gmail.com",
-    "contactMobile": "1-312-770-5203",
-    "description": "wj2kjy",
-    "tel": "ll1x8d"
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "organSName": "necole.oreilly",
+    "organCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "wlType": "9t0d0j",
+    "wlTypeName": "necole.oreilly",
+    "priority": 652,
+    "delFlag": 4,
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "contactName": "necole.oreilly",
+    "contactEmail": "eugenia.howe@yahoo.com",
+    "contactMobile": "1-856-813-9551",
+    "description": "ommxuk",
+    "tel": "s6lx5c"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14281,24 +14281,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "h6tuvp"
+      "8ivxy3"
     ],
-    "organId": "149",
-    "organName": "zona.sauer",
-    "organSName": "zona.sauer",
-    "organCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "wlType": "n14wjn",
-    "wlTypeName": "zona.sauer",
-    "priority": 542,
-    "delFlag": 7,
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "contactName": "zona.sauer",
-    "contactEmail": "chuck.adams@gmail.com",
-    "contactMobile": "1-312-770-5203",
-    "description": "q2f9eg",
-    "tel": "vtrolf"
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "organSName": "necole.oreilly",
+    "organCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "wlType": "pg7kvs",
+    "wlTypeName": "necole.oreilly",
+    "priority": 888,
+    "delFlag": 4,
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "contactName": "necole.oreilly",
+    "contactEmail": "eugenia.howe@yahoo.com",
+    "contactMobile": "1-856-813-9551",
+    "description": "y0vg80",
+    "tel": "ag5iqq"
   }
 }'
 ```
@@ -14319,9 +14319,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g0ulah",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "tadch7",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14372,24 +14372,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "5cljqg"
+      "8ttrn9"
     ],
-    "organId": "149",
-    "organName": "zona.sauer",
-    "organSName": "zona.sauer",
-    "organCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "wlType": "f3kxbg",
-    "wlTypeName": "zona.sauer",
-    "priority": 258,
-    "delFlag": 7,
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "contactName": "zona.sauer",
-    "contactEmail": "chuck.adams@gmail.com",
-    "contactMobile": "1-312-770-5203",
-    "description": "8ovyij",
-    "tel": "eimy4l"
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "organSName": "necole.oreilly",
+    "organCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "wlType": "c0y3kp",
+    "wlTypeName": "necole.oreilly",
+    "priority": 971,
+    "delFlag": 4,
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "contactName": "necole.oreilly",
+    "contactEmail": "eugenia.howe@yahoo.com",
+    "contactMobile": "1-856-813-9551",
+    "description": "2b9ch6",
+    "tel": "32n2l3"
   }
 }'
 ```
@@ -14410,9 +14410,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xib8kf",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "8u3n9q",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14462,9 +14462,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d8rpmp",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ojliaj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14515,24 +14515,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "4ik6yo"
+      "z83rk6"
     ],
-    "organId": "149",
-    "organName": "zona.sauer",
-    "organSName": "zona.sauer",
-    "organCode": "62411",
-    "address": "01408 Franklyn Rue， Laurynchester， PA 11972-0444",
-    "wlType": "lwqqgg",
-    "wlTypeName": "zona.sauer",
-    "priority": 905,
-    "delFlag": 7,
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "contactName": "zona.sauer",
-    "contactEmail": "chuck.adams@gmail.com",
-    "contactMobile": "1-312-770-5203",
-    "description": "tzwyhc",
-    "tel": "phfy5q"
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "organSName": "necole.oreilly",
+    "organCode": "65412",
+    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
+    "wlType": "uqivyn",
+    "wlTypeName": "necole.oreilly",
+    "priority": 866,
+    "delFlag": 4,
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "contactName": "necole.oreilly",
+    "contactEmail": "eugenia.howe@yahoo.com",
+    "contactMobile": "1-856-813-9551",
+    "description": "hsodjk",
+    "tel": "a5hmtr"
   }
 }'
 ```
@@ -14553,9 +14553,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p05hwa",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "elbo6i",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14619,35 +14619,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:37",
-    "lastTime": "2025-10-19 22:39:37",
-    "id": 352,
-    "organId": "149",
-    "parentId": 23,
-    "appId": "149",
-    "depttypeId": 798,
-    "foreignId": "149",
-    "createType": 40,
-    "type": "pmvkwb",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "areaCode": "62411",
-    "organLeader": "njm4nn",
-    "leaderId": "149",
-    "leaderMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 445,
+    "organId": "127",
+    "parentId": 376,
+    "appId": "127",
+    "depttypeId": 635,
+    "foreignId": "127",
+    "createType": 306,
+    "type": "n7udak",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "areaCode": "65412",
+    "organLeader": "7bu9he",
+    "leaderId": "127",
+    "leaderMobile": "1-856-813-9551",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "62411",
-    "imagePath": "fwsrx2",
-    "priority": 19,
-    "status": 538,
-    "delFlag": 7,
-    "description": "6l32m3",
-    "spare1": "d1xgto",
-    "spare2": "r2qeo9",
+    "searchCode": "65412",
+    "imagePath": "6qneqs",
+    "priority": 583,
+    "status": 822,
+    "delFlag": 4,
+    "description": "uk5ul7",
+    "spare1": "9zvfp9",
+    "spare2": "tzan6q",
     "children": [
       {
         "$ref": ".."
@@ -14673,9 +14673,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3gv6lm",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "otkyj5",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14738,35 +14738,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 880,
-    "organId": "149",
-    "parentId": 66,
-    "appId": "149",
-    "depttypeId": 62,
-    "foreignId": "149",
-    "createType": 527,
-    "type": "1o3o1c",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "areaCode": "62411",
-    "organLeader": "9i638o",
-    "leaderId": "149",
-    "leaderMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 940,
+    "organId": "127",
+    "parentId": 262,
+    "appId": "127",
+    "depttypeId": 40,
+    "foreignId": "127",
+    "createType": 799,
+    "type": "bo1upq",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "areaCode": "65412",
+    "organLeader": "plnqik",
+    "leaderId": "127",
+    "leaderMobile": "1-856-813-9551",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "62411",
-    "imagePath": "l90frm",
-    "priority": 752,
-    "status": 117,
-    "delFlag": 7,
-    "description": "8lhnj2",
-    "spare1": "k7828w",
-    "spare2": "hg0vis",
+    "searchCode": "65412",
+    "imagePath": "v7273s",
+    "priority": 997,
+    "status": 585,
+    "delFlag": 4,
+    "description": "xuwiyl",
+    "spare1": "s9ghkw",
+    "spare2": "2tf317",
     "children": [
       {
         "$ref": ".."
@@ -14792,9 +14792,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xec4y9",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "sfjjit",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14844,9 +14844,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ikamrq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "juh9a5",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -14909,35 +14909,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:38",
-    "lastTime": "2025-10-19 22:39:38",
-    "id": 288,
-    "organId": "149",
-    "parentId": 919,
-    "appId": "149",
-    "depttypeId": 549,
-    "foreignId": "149",
-    "createType": 358,
-    "type": "k6m3mx",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "areaCode": "62411",
-    "organLeader": "mzwawr",
-    "leaderId": "149",
-    "leaderMobile": "1-312-770-5203",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:44",
+    "lastTime": "2025-10-20 01:16:44",
+    "id": 331,
+    "organId": "127",
+    "parentId": 574,
+    "appId": "127",
+    "depttypeId": 723,
+    "foreignId": "127",
+    "createType": 660,
+    "type": "up7cr4",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "areaCode": "65412",
+    "organLeader": "a0rpei",
+    "leaderId": "127",
+    "leaderMobile": "1-856-813-9551",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "62411",
-    "imagePath": "7g1ln3",
-    "priority": 778,
-    "status": 258,
-    "delFlag": 7,
-    "description": "z9623s",
-    "spare1": "sexdm7",
-    "spare2": "qjeina",
+    "searchCode": "65412",
+    "imagePath": "ugrlo6",
+    "priority": 375,
+    "status": 615,
+    "delFlag": 4,
+    "description": "8dualu",
+    "spare1": "hlb646",
+    "spare2": "ce763x",
     "children": [
       {
         "$ref": ".."
@@ -14963,9 +14963,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "93wtr7",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "r4000p",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15028,7 +15028,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?organId=149&orderBy=246&description=9sa408&isOrganLevel=true&status=520&startTime=2025-10-19 22:38:36&isVirtual=true&areaCode=62411&delFlag=7&organLeader=1cke4e&page=1&creatorId=149&isLeaf=true&appId=149&deptId=268&parentId=850&imagePath=y0djnk&type=c9gv3j&leaderId=149&foreignId=149&endTime=2025-10-19 22:38:36&limit=10&leaderMobile=1-312-770-5203&spare2=23k33n&name=zona.sauer&spare1=irvc20&depttypeId=577&isDisabled=true&searchCode=62411&q=tdtlfz&createType=536&sname=zona.sauer
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?spare1=lusl38&creatorId=127&type=yo562d&foreignId=127&organLeader=ehtu9v&delFlag=4&sname=necole.oreilly&searchCode=65412&isLeaf=true&status=668&page=1&organId=127&appId=127&leaderMobile=1-856-813-9551&orderBy=942&deptId=949&isDisabled=true&createType=511&isVirtual=true&limit=10&startTime=2025-10-20 01:15:40&depttypeId=210&areaCode=65412&parentId=392&name=necole.oreilly&endTime=2025-10-20 01:15:40&description=chdmyk&isOrganLevel=true&leaderId=127&spare2=995m8k&imagePath=2g5nxt&q=b9jocd
 ```
 **Response-fields:**
 
@@ -15068,27 +15068,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "8ujzwr",
-    "pageNum": 358,
+    "stackTrace": "xlnj4r",
+    "pageNum": 158,
     "pageSize": 10,
-    "startRow": 344,
-    "endRow": 400,
-    "total": 114,
-    "pages": 193,
+    "startRow": 103,
+    "endRow": 157,
+    "total": 503,
+    "pages": 715,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "eas014",
-    "orderBy": "bd0esz",
+    "countColumn": "2nvizh",
+    "orderBy": "ukgc84",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "u9queq",
+    "dialectClass": "w9uu7d",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15150,7 +15150,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?isDisabled=true&endTime=2025-10-19 22:38:36&status=949&orderBy=783&delFlag=7&searchCode=62411&organLeader=uhp6oc&appId=149&organId=149&startTime=2025-10-19 22:38:36&isOrganLevel=true&creatorId=149&q=kax0uz&name=zona.sauer&limit=10&depttypeId=70&foreignId=149&spare2=ia8uiu&leaderMobile=1-312-770-5203&deptId=409&parentId=388&page=1&areaCode=62411&spare1=853noq&sname=zona.sauer&description=1q09rv&isVirtual=true&leaderId=149&imagePath=0mpc9l&type=1tj6pl&createType=3&isLeaf=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?creatorId=127&delFlag=4&parentId=35&isVirtual=true&imagePath=owldb2&status=260&isOrganLevel=true&organId=127&organLeader=pkzvjh&leaderMobile=1-856-813-9551&page=1&q=2rloqg&deptId=222&name=necole.oreilly&sname=necole.oreilly&startTime=2025-10-20 01:15:40&leaderId=127&foreignId=127&areaCode=65412&createType=111&isLeaf=true&isDisabled=true&appId=127&endTime=2025-10-20 01:15:40&spare1=6v9guc&orderBy=39&searchCode=65412&type=cyohn8&limit=10&description=ptazvg&spare2=tw7f4k&depttypeId=542
 ```
 **Response-fields:**
 
@@ -15190,27 +15190,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "01yec4",
-    "pageNum": 601,
+    "stackTrace": "qix1s4",
+    "pageNum": 110,
     "pageSize": 10,
-    "startRow": 380,
-    "endRow": 391,
-    "total": 42,
-    "pages": 621,
+    "startRow": 415,
+    "endRow": 745,
+    "total": 391,
+    "pages": 151,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "sh1p74",
-    "orderBy": "ezwvpi",
+    "countColumn": "xhez2q",
+    "orderBy": "fqhtru",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "ttixbm",
+    "dialectClass": "omp7ck",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15241,7 +15241,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/421.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/527.do
 ```
 **Response-fields:**
 
@@ -15294,42 +15294,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 475,
-      "organId": "149",
-      "organName": "zona.sauer",
-      "parentId": 135,
-      "appId": "149",
-      "depttypeId": 923,
-      "foreignId": "149",
-      "createType": 152,
-      "type": "zdortw",
-      "name": "zona.sauer",
-      "sname": "zona.sauer",
-      "areaCode": "62411",
-      "organLeader": "l1obla",
-      "leaderId": "149",
-      "leaderMobile": "1-312-770-5203",
+      "id": 799,
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "parentId": 313,
+      "appId": "127",
+      "depttypeId": 210,
+      "foreignId": "127",
+      "createType": 300,
+      "type": "2wfgds",
+      "name": "necole.oreilly",
+      "sname": "necole.oreilly",
+      "areaCode": "65412",
+      "organLeader": "m52ygk",
+      "leaderId": "127",
+      "leaderMobile": "1-856-813-9551",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "62411",
-      "imagePath": "h5wo87",
-      "priority": 177,
-      "status": 665,
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:37",
-      "lastTime": "2025-10-19 22:39:37",
-      "delFlag": 7,
-      "description": "3b37ax",
-      "spare1": "o693in",
-      "spare2": "4181bd",
-      "parentName": "zona.sauer",
-      "childNum": "rznqts"
+      "searchCode": "65412",
+      "imagePath": "p5vklq",
+      "priority": 897,
+      "status": 264,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:43",
+      "lastTime": "2025-10-20 01:16:43",
+      "delFlag": 4,
+      "description": "ubx22q",
+      "spare1": "5rs88f",
+      "spare2": "r3xi2k",
+      "parentName": "necole.oreilly",
+      "childNum": "2ytnsj"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15360,7 +15360,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/369.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/980.do
 ```
 **Response-fields:**
 
@@ -15412,41 +15412,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 777,
-    "organId": "149",
-    "organName": "zona.sauer",
-    "parentId": 963,
-    "appId": "149",
-    "depttypeId": 504,
-    "foreignId": "149",
-    "createType": 284,
-    "type": "k0tak0",
-    "name": "zona.sauer",
-    "sname": "zona.sauer",
-    "areaCode": "62411",
-    "organLeader": "uo4cnn",
-    "leaderId": "149",
-    "leaderMobile": "1-312-770-5203",
+    "id": 137,
+    "organId": "127",
+    "organName": "necole.oreilly",
+    "parentId": 387,
+    "appId": "127",
+    "depttypeId": 564,
+    "foreignId": "127",
+    "createType": 393,
+    "type": "gh3pwy",
+    "name": "necole.oreilly",
+    "sname": "necole.oreilly",
+    "areaCode": "65412",
+    "organLeader": "vxa1vz",
+    "leaderId": "127",
+    "leaderMobile": "1-856-813-9551",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "62411",
-    "imagePath": "96ei1x",
-    "priority": 633,
-    "status": 448,
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:37",
-    "lastTime": "2025-10-19 22:39:37",
-    "delFlag": 7,
-    "description": "vty287",
-    "spare1": "fioeva",
-    "spare2": "pg8vv7",
-    "parentName": "zona.sauer",
-    "childNum": "84tjv6"
+    "searchCode": "65412",
+    "imagePath": "wz9kgk",
+    "priority": 891,
+    "status": 261,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:43",
+    "lastTime": "2025-10-20 01:16:43",
+    "delFlag": 4,
+    "description": "vuciuz",
+    "spare1": "e6jmam",
+    "spare2": "0d2ln7",
+    "parentName": "necole.oreilly",
+    "childNum": "go3ow6"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15508,7 +15508,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?creatorId=149&imagePath=zvxcs9&endTime=2025-10-19 22:38:36&isOrganLevel=true&depttypeId=584&name=zona.sauer&deptId=830&page=1&foreignId=149&orderBy=724&isLeaf=true&leaderId=149&organId=149&status=226&limit=10&organLeader=pwjsxx&appId=149&createType=940&isDisabled=true&spare1=jz6gtt&isVirtual=true&spare2=eiu7nt&delFlag=7&leaderMobile=1-312-770-5203&q=h65q22&type=azyl1y&searchCode=62411&parentId=26&description=5m73mp&areaCode=62411&startTime=2025-10-19 22:38:36&sname=zona.sauer
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?spare2=2h7vdh&organId=127&isDisabled=true&startTime=2025-10-20 01:15:40&name=necole.oreilly&q=ah1npy&page=1&parentId=245&type=q53spb&appId=127&description=sq93ti&searchCode=65412&deptId=538&areaCode=65412&limit=10&organLeader=5gohsy&leaderId=127&isVirtual=true&createType=368&isOrganLevel=true&sname=necole.oreilly&orderBy=744&depttypeId=824&status=498&imagePath=iso3sn&spare1=0mu8oc&endTime=2025-10-20 01:15:40&leaderMobile=1-856-813-9551&isLeaf=true&delFlag=4&creatorId=127&foreignId=127
 ```
 **Response-fields:**
 
@@ -15538,11 +15538,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "hzshzu",
-      "id": "149",
-      "parentId": "149",
-      "extId": "149",
-      "href": "urmm6c",
+      "title": "trvpok",
+      "id": "127",
+      "parentId": "127",
+      "extId": "127",
+      "href": "cmjh4i",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -15553,14 +15553,14 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
 ## 系统登录验证
 ### 登录方法
-**URL:** https://linlan.net/eframe_backend/SecurityConstants.FORM_LOGIN.do
+**URL:** https://linlan.net/eframe_backend/login.do
 
 **Type:** POST
 
@@ -15583,13 +15583,13 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/SecurityConstants.FORM_LOGIN.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "zona.sauer",
-    "password": "xfgpyg",
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "appId": "149"
+    "username": "necole.oreilly",
+    "password": "6vtj91",
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "appId": "127"
   }
 }'
 ```
@@ -15615,13 +15615,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "149",
-    "token": "j07j26",
-    "updateTime": "2025-10-19 22:39:39",
-    "expireTime": "2025-10-19 22:39:39"
+    "userId": "127",
+    "token": "57calq",
+    "updateTime": "2025-10-20 01:16:45",
+    "expireTime": "2025-10-20 01:16:45"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15747,60 +15747,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:39",
-      "lastTime": "2025-10-19 22:39:39",
-      "id": 493,
-      "userId": "149",
-      "deptId": 243,
-      "deptName": "zona.sauer",
-      "organId": "149",
-      "organName": "zona.sauer",
-      "name": "zona.sauer",
-      "username": "zona.sauer",
-      "nickName": "hilton.brown",
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "na1p7u",
-      "password": "86zl3s",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:45",
+      "lastTime": "2025-10-20 01:16:45",
+      "id": 457,
+      "userId": "127",
+      "deptId": 975,
+      "deptName": "necole.oreilly",
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "name": "necole.oreilly",
+      "username": "necole.oreilly",
+      "nickName": "ethyl.nitzsche",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "3d0ipy",
+      "password": "a2r8jd",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 369,
-      "delFlag": 7,
-      "lastLoginIp": "171.216.115.206",
-      "lastLoginTime": "2025-10-19 22:39:39",
-      "description": "m02urc",
+      "status": 543,
+      "delFlag": 4,
+      "lastLoginIp": "148.144.89.250",
+      "lastLoginTime": "2025-10-20 01:16:45",
+      "description": "7a72z0",
       "dept": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:39",
-        "lastTime": "2025-10-19 22:39:39",
-        "id": 703,
-        "organId": "149",
-        "parentId": 782,
-        "appId": "149",
-        "depttypeId": 611,
-        "foreignId": "149",
-        "createType": 55,
-        "type": "1b03vg",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "areaCode": "62411",
-        "organLeader": "q6dqd9",
-        "leaderId": "149",
-        "leaderMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:45",
+        "lastTime": "2025-10-20 01:16:45",
+        "id": 48,
+        "organId": "127",
+        "parentId": 883,
+        "appId": "127",
+        "depttypeId": 604,
+        "foreignId": "127",
+        "createType": 757,
+        "type": "8qr8x1",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "areaCode": "65412",
+        "organLeader": "n53ibs",
+        "leaderId": "127",
+        "leaderMobile": "1-856-813-9551",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "62411",
-        "imagePath": "iu19at",
-        "priority": 806,
-        "status": 516,
-        "delFlag": 7,
-        "description": "hrmf80",
-        "spare1": "684yak",
-        "spare2": "rwf5bt",
+        "searchCode": "65412",
+        "imagePath": "jngndf",
+        "priority": 493,
+        "status": 778,
+        "delFlag": 4,
+        "description": "gw11o9",
+        "spare1": "oadeto",
+        "spare2": "lswmfg",
         "children": [
           {
             "$ref": ".."
@@ -15809,54 +15809,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:39",
-          "lastTime": "2025-10-19 22:39:39",
-          "id": 598,
-          "roletypeId": "149",
-          "appId": "149",
-          "name": "zona.sauer",
-          "code": "62411",
-          "priority": 976,
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:45",
+          "lastTime": "2025-10-20 01:16:45",
+          "id": 520,
+          "roletypeId": "127",
+          "appId": "127",
+          "name": "necole.oreilly",
+          "code": "65412",
+          "priority": 203,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 168,
-          "description": "554swh",
-          "areaType": "sn11kp"
+          "status": 425,
+          "description": "g2tyrc",
+          "areaType": "4m3ssi"
         }
       ],
       "roleIds": [
-        625
+        267
       ],
       "positionIds": [
-        "c9pdn2"
+        "utkwjr"
       ],
-      "roleId": 685,
+      "roleId": 639,
       "userRoleList": [
         {
-          "id": 895,
-          "deptId": 332,
-          "deptName": "zona.sauer",
-          "organId": "149",
-          "organName": "zona.sauer",
-          "roleId": 473,
-          "roleName": "zona.sauer",
-          "adminId": 700
+          "id": 760,
+          "deptId": 620,
+          "deptName": "necole.oreilly",
+          "organId": "127",
+          "organName": "necole.oreilly",
+          "roleId": 435,
+          "roleName": "necole.oreilly",
+          "adminId": 925
         }
       ],
-      "code": "62411",
-      "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+      "code": "65412",
+      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
     },
     "roles": [
-      "vp9nhi"
+      "8usaop"
     ],
     "permissions": [
-      "mck09h"
+      "xoamrz"
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -15914,33 +15914,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "149",
-    "areaId": 934,
-    "groupId": 128,
-    "positionId": "149",
-    "tplSolution": "w4zi1a",
+    "accountId": "127",
+    "areaId": 258,
+    "groupId": 936,
+    "positionId": "127",
+    "tplSolution": "s18vr2",
     "menuList": [
       {
-        "id": 335,
-        "parentId": 663,
-        "name": "zona.sauer",
-        "ename": "zona.sauer",
-        "type": "j8bl3u",
-        "perms": "yi22ac",
-        "menuLevel": 588,
-        "urlType": "bxmxkp",
-        "url": "www.aubrey-rice.net",
-        "menuSeq": "csycp4",
-        "icon": "6pi5mo",
-        "imagePath": "sbqegy",
-        "css": "nmqnk1",
-        "description": "ko5196",
-        "todoTotalApi": "xyqtjq"
+        "id": 109,
+        "parentId": 888,
+        "name": "necole.oreilly",
+        "ename": "necole.oreilly",
+        "type": "2s2mjl",
+        "perms": "rjnfza",
+        "menuLevel": 719,
+        "urlType": "uythhy",
+        "url": "www.emanuel-bosco.biz",
+        "menuSeq": "zt4jm7",
+        "icon": "nwejnn",
+        "imagePath": "xgc7yz",
+        "css": "l7clbg",
+        "description": "hh57nl",
+        "todoTotalApi": "99e2ag"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16003,40 +16003,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "149",
+    "id": "127",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "blfuu5",
-    "aesKey": "8nwpt1",
-    "clientId": "149",
-    "serverUrl": "www.aubrey-rice.net",
-    "serverConf1": "sc2jn1",
+    "publicKey": "vis24u",
+    "aesKey": "jt3dk8",
+    "clientId": "127",
+    "serverUrl": "www.emanuel-bosco.biz",
+    "serverConf1": "xmznus",
     "appConf": {
-      "siteId": 989,
-      "appId": "149",
-      "topXzqhId": "149",
+      "siteId": 515,
+      "appId": "127",
+      "topXzqhId": "127",
       "appConfJson": {
-        "mapKey": "xcy3e3"
+        "mapKey": "bu7wkc"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "4mth35",
+      "layout": "85yx47",
       "siteInfo": {
-        "id": 658,
-        "appId": "149",
-        "areaCode": "62411",
-        "path": "wgel9l",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "layout": "o6y1gb",
-        "logoUrl": "www.aubrey-rice.net",
-        "cdnUrl": "www.aubrey-rice.net"
+        "id": 945,
+        "appId": "127",
+        "areaCode": "65412",
+        "path": "vbzsou",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "layout": "dxa3z7",
+        "logoUrl": "www.emanuel-bosco.biz",
+        "cdnUrl": "www.emanuel-bosco.biz"
       }
     }
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16066,11 +16066,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/third/ecorgan/login.do --data '{
   "data": {
-    "username": "zona.sauer",
-    "password": "j3cis6",
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "appId": "149"
+    "username": "necole.oreilly",
+    "password": "xbp7xa",
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "appId": "127"
   }
 }'
 ```
@@ -16096,13 +16096,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "149",
-    "token": "l270lk",
-    "updateTime": "2025-10-19 22:39:40",
-    "expireTime": "2025-10-19 22:39:40"
+    "userId": "127",
+    "token": "pmbxeo",
+    "updateTime": "2025-10-20 01:16:46",
+    "expireTime": "2025-10-20 01:16:46"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16126,7 +16126,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=65cedf9a-15d0-495b-acec-3fd846bd3f50&code=62411
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=cdee007e-0d96-400e-830c-899570b52154&code=65412
 ```
 **Response-fields:**
 
@@ -16145,9 +16145,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sdqvu0",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "5231pr",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16197,8 +16197,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16247,14 +16247,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "zona.sauer",
-      "cacheKey": "qz1xmr",
-      "cacheValue": "xph3kn",
-      "remark": "53g3j3"
+      "cacheName": "necole.oreilly",
+      "cacheKey": "5cja4m",
+      "cacheValue": "qz2ys1",
+      "remark": "w9jjsg"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16284,7 +16284,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/zona.sauer.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -16306,8 +16306,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16338,7 +16338,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/zona.sauer/52c27n.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/necole.oreilly/3rr1yo.do
 ```
 **Response-fields:**
 
@@ -16362,13 +16362,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "zona.sauer",
-    "cacheKey": "4ca0r2",
-    "cacheValue": "ukqi6t",
-    "remark": "yd8pff"
+    "cacheName": "necole.oreilly",
+    "cacheKey": "z195vf",
+    "cacheValue": "2nbhd8",
+    "remark": "ny2egh"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16398,7 +16398,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/zona.sauer.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -16417,9 +16417,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "353czd",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ltvxsr",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16449,7 +16449,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/pkwfjj.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/ofwvn4.do
 ```
 **Response-fields:**
 
@@ -16468,9 +16468,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v6vtfq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ljrh8z",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16513,9 +16513,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0kahyt",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "rnjejk",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16559,7 +16559,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?menuId=231&menuType=foamap&parentId=259&visible=mmblhk&status=0as0bj&endTime=2025-10-19 22:38:36&page=1&menuName=zona.sauer&q=v2v9fa&delFlag=7fsbjb&orderBy=528&startTime=2025-10-19 22:38:36&limit=10&currAppId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?endTime=2025-10-20 01:15:40&status=1vgwal&delFlag=gp26uq&q=rgls4v&orderBy=189&visible=tyxrwf&currAppId=127&menuName=necole.oreilly&parentId=454&limit=10&menuId=751&page=1&menuType=w86w99&startTime=2025-10-20 01:15:40
 ```
 **Response-fields:**
 
@@ -16616,56 +16616,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 913,
-      "menuName": "zona.sauer",
-      "type": "i6k6f4",
-      "typeName": "zona.sauer",
-      "parentName": "zona.sauer",
-      "parentId": 626,
-      "priority": 195,
-      "path": "w35xgz",
-      "component": "829b8m",
-      "query": "c15l56",
-      "routeName": "zona.sauer",
-      "isFrame": "hv4p0w",
-      "isCache": "d0jd8s",
-      "menuType": "tomx3q",
-      "menuTypeName": "zona.sauer",
-      "visible": "m5iwfw",
-      "status": "sznm7t",
-      "perms": "4w2qah",
-      "icon": "q5rwww",
-      "imagePath": "v7ajgo",
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:40",
-      "lastTime": "2025-10-19 22:39:40",
+      "menuId": 852,
+      "menuName": "necole.oreilly",
+      "type": "1h9abg",
+      "typeName": "necole.oreilly",
+      "parentName": "necole.oreilly",
+      "parentId": 778,
+      "priority": 261,
+      "path": "m3kzdh",
+      "component": "itoa93",
+      "query": "vld41l",
+      "routeName": "necole.oreilly",
+      "isFrame": "zyg3ia",
+      "isCache": "rhx7pa",
+      "menuType": "gxkp06",
+      "menuTypeName": "necole.oreilly",
+      "visible": "jwkvg6",
+      "status": "mdbvbs",
+      "perms": "fojsmu",
+      "icon": "tuebov",
+      "imagePath": "3wuw0u",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:46",
+      "lastTime": "2025-10-20 01:16:46",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 601,
-      "description": "3501s2",
-      "listJson": "sip9c3",
-      "delFlag": 7,
+      "childNum": 787,
+      "description": "zm0saj",
+      "listJson": "b8d8dy",
+      "delFlag": 4,
       "permsList": [
         {
-          "permsName": "zona.sauer",
-          "permsStr": "whs6r9"
+          "permsName": "necole.oreilly",
+          "permsStr": "aatyl7"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "149",
-          "parentId": "149",
-          "code": "62411",
-          "name": "zona.sauer"
+          "id": "127",
+          "parentId": "127",
+          "code": "65412",
+          "name": "necole.oreilly"
         }
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16708,7 +16708,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?status=r1b11f&limit=10&menuName=zona.sauer&currAppId=149&delFlag=ax3xv2&endTime=2025-10-19 22:38:36&startTime=2025-10-19 22:38:36&parentId=362&menuType=g5huzm&visible=y1ck9k&menuId=862&q=cj8dj6&orderBy=526&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuId=934&menuType=0t9d3k&orderBy=40&page=1&menuName=necole.oreilly&delFlag=0pse2x&startTime=2025-10-20 01:15:40&q=88ow1o&endTime=2025-10-20 01:15:40&visible=ipf327&limit=10&currAppId=127&parentId=432&status=xjddp4
 ```
 **Response-fields:**
 
@@ -16748,27 +16748,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "c4jwgw",
-    "pageNum": 259,
+    "stackTrace": "o8loj8",
+    "pageNum": 33,
     "pageSize": 10,
-    "startRow": 74,
-    "endRow": 289,
-    "total": 238,
-    "pages": 555,
+    "startRow": 472,
+    "endRow": 963,
+    "total": 680,
+    "pages": 47,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "8m5mj6",
-    "orderBy": "dsah2a",
+    "countColumn": "7nz381",
+    "orderBy": "uv82fo",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "fbk6ol",
+    "dialectClass": "t9fgyi",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16798,7 +16798,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/806.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/224.do
 ```
 **Response-fields:**
 
@@ -16854,55 +16854,55 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 861,
-    "menuName": "zona.sauer",
-    "type": "5ni3gi",
-    "typeName": "zona.sauer",
-    "parentName": "zona.sauer",
-    "parentId": 582,
-    "priority": 720,
-    "path": "rprzca",
-    "component": "lb7kog",
-    "query": "277stm",
-    "routeName": "zona.sauer",
-    "isFrame": "mut95r",
-    "isCache": "aaqeb4",
-    "menuType": "1nfa2u",
-    "menuTypeName": "zona.sauer",
-    "visible": "uypkdp",
-    "status": "1jb7ka",
-    "perms": "d1cd4j",
-    "icon": "0mil11",
-    "imagePath": "3nwvvj",
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:40",
-    "lastTime": "2025-10-19 22:39:40",
+    "menuId": 155,
+    "menuName": "necole.oreilly",
+    "type": "ps97iq",
+    "typeName": "necole.oreilly",
+    "parentName": "necole.oreilly",
+    "parentId": 391,
+    "priority": 843,
+    "path": "85gx27",
+    "component": "hocdex",
+    "query": "bw4lrf",
+    "routeName": "necole.oreilly",
+    "isFrame": "6g8530",
+    "isCache": "igyz0g",
+    "menuType": "s39etx",
+    "menuTypeName": "necole.oreilly",
+    "visible": "upja3m",
+    "status": "gmssen",
+    "perms": "4euui6",
+    "icon": "vyhglm",
+    "imagePath": "yja24x",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:46",
+    "lastTime": "2025-10-20 01:16:46",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 182,
-    "description": "ljfhu0",
-    "listJson": "rkrby1",
-    "delFlag": 7,
+    "childNum": 558,
+    "description": "ag9q12",
+    "listJson": "u9scjb",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "zona.sauer",
-        "permsStr": "6amwqo"
+        "permsName": "necole.oreilly",
+        "permsStr": "8m97b8"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "149",
-        "parentId": "149",
-        "code": "62411",
-        "name": "zona.sauer"
+        "id": "127",
+        "parentId": "127",
+        "code": "65412",
+        "name": "necole.oreilly"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -16945,7 +16945,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&menuName=zona.sauer&menuId=799&orderBy=952&menuType=0qkz4y&page=1&delFlag=i3xd5c&status=fj71wu&visible=rne9i2&limit=10&parentId=292&q=pwjib5&currAppId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?startTime=2025-10-20 01:15:40&limit=10&menuId=378&currAppId=127&endTime=2025-10-20 01:15:40&delFlag=zp5j5w&menuType=e2nrl2&status=qzp1k9&orderBy=399&menuName=necole.oreilly&q=u406qk&page=1&visible=u5jhhr&parentId=991
 ```
 **Response-fields:**
 
@@ -16971,12 +16971,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      254
+      212
     ],
     "menus": [
       {
-        "id": 814,
-        "label": "yczc8r",
+        "id": 702,
+        "label": "cjcm1n",
         "children": [
           {
             "$ref": ".."
@@ -16985,8 +16985,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17050,7 +17050,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?appId=149&isProtect=true&limit=10&urlType=v9kymv&endTime=2025-10-19 22:38:36&isDisabled=true&orderBy=528&code=62411&icon=z92ry5&shortCut=awatxt&spare1=44canc&createTime=2025-10-19 22:38:36&menuLevel=417&popPosition=844&imagePath=82ra57&parentNull=pyk7h4&parentRoot=zextru&offset=1&appIds=hyl0oc&appIds=hyl0oc&page=1&startTime=2025-10-19 22:38:36&menuIds=c72eew&menuIds=c72eew&parentId=604&typeNoButton=594520&url=www.aubrey-rice.net&spare2=ylzhe0&subCount=703&isCheck=true&name=zona.sauer&delFlag=7&type=41j2vf&description=it52si&q=2tajrm&isMenuAll=h76gjg&isDisplay=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?createTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&isMenuAll=7isp29&isDisplay=true&urlType=bk8t4d&type=k3095l&menuIds=6ht8ot&menuIds=6ht8ot&isDisabled=true&orderBy=654&parentId=891&menuLevel=402&name=necole.oreilly&appId=127&q=vztx31&endTime=2025-10-20 01:15:40&code=65412&spare1=v17aho&delFlag=4&parentRoot=fxp8o9&isCheck=true&popPosition=100&imagePath=by79n8&shortCut=5ub9qp&offset=1&spare2=l81qvi&typeNoButton=by7xio&page=1&description=c7a21t&parentNull=al6rt8&limit=10&isProtect=true&url=www.emanuel-bosco.biz&appIds=o1nepb&appIds=o1nepb&subCount=813&icon=yf405w
 ```
 **Response-fields:**
 
@@ -17080,11 +17080,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "mojig8",
-      "id": "149",
-      "parentId": "149",
-      "extId": "149",
-      "href": "lhxima",
+      "title": "taeetx",
+      "id": "127",
+      "parentId": "127",
+      "extId": "127",
+      "href": "gwa2g5",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -17095,8 +17095,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17126,7 +17126,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/835.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/169.do
 ```
 **Response-fields:**
 
@@ -17152,12 +17152,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      827
+      127
     ],
     "menus": [
       {
-        "id": 725,
-        "label": "btcep1",
+        "id": 625,
+        "label": "d7c9un",
         "children": [
           {
             "$ref": ".."
@@ -17166,8 +17166,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17235,50 +17235,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save/single.do --data '{
   "data": {
-    "menuId": 714,
-    "menuName": "zona.sauer",
-    "type": "cu3bn2",
-    "typeName": "zona.sauer",
-    "parentName": "zona.sauer",
-    "parentId": 852,
-    "priority": 298,
-    "path": "twx8x2",
-    "component": "uivwzz",
-    "query": "y0ms2g",
-    "routeName": "zona.sauer",
-    "isFrame": "8j8kxt",
-    "isCache": "ez8w3y",
-    "menuType": "28t0gg",
-    "menuTypeName": "zona.sauer",
-    "visible": "o2ya2u",
-    "status": "u1mka0",
-    "perms": "7hk7n0",
-    "icon": "gyogju",
-    "imagePath": "2fzp64",
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:40",
-    "lastTime": "2025-10-19 22:39:40",
+    "menuId": 847,
+    "menuName": "necole.oreilly",
+    "type": "ni3bba",
+    "typeName": "necole.oreilly",
+    "parentName": "necole.oreilly",
+    "parentId": 136,
+    "priority": 595,
+    "path": "9s6bm2",
+    "component": "v18r3r",
+    "query": "cf6eym",
+    "routeName": "necole.oreilly",
+    "isFrame": "0rk69g",
+    "isCache": "jxev7c",
+    "menuType": "z6gbd5",
+    "menuTypeName": "necole.oreilly",
+    "visible": "13lfti",
+    "status": "mkhzc0",
+    "perms": "h12af2",
+    "icon": "ngmoxu",
+    "imagePath": "48vewg",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:46",
+    "lastTime": "2025-10-20 01:16:46",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 364,
-    "description": "asb1hg",
-    "listJson": "redsve",
-    "delFlag": 7,
+    "childNum": 64,
+    "description": "eki71m",
+    "listJson": "4z9hrb",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "zona.sauer",
-        "permsStr": "326xxc"
+        "permsName": "necole.oreilly",
+        "permsStr": "3b0jey"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "149",
-        "parentId": "149",
-        "code": "62411",
-        "name": "zona.sauer"
+        "id": "127",
+        "parentId": "127",
+        "code": "65412",
+        "name": "necole.oreilly"
       }
     ]
   }
@@ -17301,9 +17301,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a70d05",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ablrgw",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17371,50 +17371,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update/single.do --data '{
   "data": {
-    "menuId": 532,
-    "menuName": "zona.sauer",
-    "type": "ujry93",
-    "typeName": "zona.sauer",
-    "parentName": "zona.sauer",
-    "parentId": 335,
-    "priority": 43,
-    "path": "gvxw30",
-    "component": "vjf5rf",
-    "query": "n1295b",
-    "routeName": "zona.sauer",
-    "isFrame": "4a393e",
-    "isCache": "atrp4t",
-    "menuType": "7cyvpn",
-    "menuTypeName": "zona.sauer",
-    "visible": "5ouj36",
-    "status": "97pvmk",
-    "perms": "xmribm",
-    "icon": "b7senv",
-    "imagePath": "f9ama9",
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:40",
-    "lastTime": "2025-10-19 22:39:40",
+    "menuId": 232,
+    "menuName": "necole.oreilly",
+    "type": "y8f344",
+    "typeName": "necole.oreilly",
+    "parentName": "necole.oreilly",
+    "parentId": 521,
+    "priority": 267,
+    "path": "bzpuyb",
+    "component": "rbuyfj",
+    "query": "l6neoj",
+    "routeName": "necole.oreilly",
+    "isFrame": "otuy43",
+    "isCache": "xafz2v",
+    "menuType": "dx1ivf",
+    "menuTypeName": "necole.oreilly",
+    "visible": "nn34t8",
+    "status": "5ku4sj",
+    "perms": "lcfgop",
+    "icon": "6ip1t6",
+    "imagePath": "38r05t",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:46",
+    "lastTime": "2025-10-20 01:16:46",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 567,
-    "description": "lgogz3",
-    "listJson": "mgs62e",
-    "delFlag": 7,
+    "childNum": 193,
+    "description": "ovzg2e",
+    "listJson": "a8lblg",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "zona.sauer",
-        "permsStr": "peppnm"
+        "permsName": "necole.oreilly",
+        "permsStr": "1g5257"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "149",
-        "parentId": "149",
-        "code": "62411",
-        "name": "zona.sauer"
+        "id": "127",
+        "parentId": "127",
+        "code": "65412",
+        "name": "necole.oreilly"
       }
     ]
   }
@@ -17437,9 +17437,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rxfsih",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "risejt",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17507,50 +17507,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 521,
-    "menuName": "zona.sauer",
-    "type": "zs8w60",
-    "typeName": "zona.sauer",
-    "parentName": "zona.sauer",
-    "parentId": 3,
-    "priority": 289,
-    "path": "asijq9",
-    "component": "deeef8",
-    "query": "3wp921",
-    "routeName": "zona.sauer",
-    "isFrame": "i2og93",
-    "isCache": "gyz8p9",
-    "menuType": "j8bseb",
-    "menuTypeName": "zona.sauer",
-    "visible": "gnu42i",
-    "status": "m9omlb",
-    "perms": "dpg76b",
-    "icon": "u7mdvb",
-    "imagePath": "ulgozk",
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:40",
-    "lastTime": "2025-10-19 22:39:40",
+    "menuId": 366,
+    "menuName": "necole.oreilly",
+    "type": "3eh2e6",
+    "typeName": "necole.oreilly",
+    "parentName": "necole.oreilly",
+    "parentId": 449,
+    "priority": 252,
+    "path": "rmrz0s",
+    "component": "zna2ok",
+    "query": "jpojvk",
+    "routeName": "necole.oreilly",
+    "isFrame": "rdml85",
+    "isCache": "iehf0y",
+    "menuType": "h7un2m",
+    "menuTypeName": "necole.oreilly",
+    "visible": "kbxpb3",
+    "status": "qfyoop",
+    "perms": "um5ql0",
+    "icon": "jqbhpo",
+    "imagePath": "cdtnqf",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:46",
+    "lastTime": "2025-10-20 01:16:46",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 165,
-    "description": "qo03yh",
-    "listJson": "fsbwt1",
-    "delFlag": 7,
+    "childNum": 336,
+    "description": "u7jht4",
+    "listJson": "5s0el0",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "zona.sauer",
-        "permsStr": "rc6iqg"
+        "permsName": "necole.oreilly",
+        "permsStr": "2g6arq"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "149",
-        "parentId": "149",
-        "code": "62411",
-        "name": "zona.sauer"
+        "id": "127",
+        "parentId": "127",
+        "code": "65412",
+        "name": "necole.oreilly"
       }
     ]
   }
@@ -17573,9 +17573,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ubfx0z",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "m5vipg",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17643,50 +17643,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 463,
-    "menuName": "zona.sauer",
-    "type": "btlnea",
-    "typeName": "zona.sauer",
-    "parentName": "zona.sauer",
-    "parentId": 919,
-    "priority": 278,
-    "path": "rvmtjc",
-    "component": "mql0pd",
-    "query": "gv540q",
-    "routeName": "zona.sauer",
-    "isFrame": "x0y2ut",
-    "isCache": "x92106",
-    "menuType": "fs4l5f",
-    "menuTypeName": "zona.sauer",
-    "visible": "m2s4of",
-    "status": "96qlau",
-    "perms": "ukh9r2",
-    "icon": "2iepao",
-    "imagePath": "3md9mz",
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:40",
-    "lastTime": "2025-10-19 22:39:40",
+    "menuId": 499,
+    "menuName": "necole.oreilly",
+    "type": "pv1t25",
+    "typeName": "necole.oreilly",
+    "parentName": "necole.oreilly",
+    "parentId": 526,
+    "priority": 881,
+    "path": "c56k47",
+    "component": "cmdr4p",
+    "query": "s18l4q",
+    "routeName": "necole.oreilly",
+    "isFrame": "m4b2ng",
+    "isCache": "i6164q",
+    "menuType": "1uzn7r",
+    "menuTypeName": "necole.oreilly",
+    "visible": "zpaw70",
+    "status": "0shmqz",
+    "perms": "m6sycl",
+    "icon": "dhmdyl",
+    "imagePath": "qz9fhh",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 429,
-    "description": "6s6bg0",
-    "listJson": "cosski",
-    "delFlag": 7,
+    "childNum": 342,
+    "description": "872wsx",
+    "listJson": "6qjpp9",
+    "delFlag": 4,
     "permsList": [
       {
-        "permsName": "zona.sauer",
-        "permsStr": "b9jh06"
+        "permsName": "necole.oreilly",
+        "permsStr": "8m5u3x"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "149",
-        "parentId": "149",
-        "code": "62411",
-        "name": "zona.sauer"
+        "id": "127",
+        "parentId": "127",
+        "code": "65412",
+        "name": "necole.oreilly"
       }
     ]
   }
@@ -17709,9 +17709,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3wyn3p",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "c9dk62",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17760,9 +17760,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mar2q9",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "3qi0b2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17831,41 +17831,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "id": 289,
-    "parentId": 505,
-    "appId": "149",
-    "name": "zona.sauer",
-    "ename": "zona.sauer",
-    "sname": "zona.sauer",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "id": 365,
+    "parentId": 453,
+    "appId": "127",
+    "name": "necole.oreilly",
+    "ename": "necole.oreilly",
+    "sname": "necole.oreilly",
     "isProtect": true,
-    "type": "rfqqs0",
-    "userId": "149",
-    "code": "62411",
-    "menuLevel": 290,
-    "subCount": 197,
-    "perms": "gvjoz8",
-    "urlType": "ufa1cd",
-    "url": "www.aubrey-rice.net",
-    "icon": "u0fmi4",
-    "popPosition": 151,
-    "imagePath": "cfakeq",
-    "css": "22ivwd",
-    "jsEvent": "upl675",
-    "menuSeq": "cnr1tv",
-    "shortCut": "kqxiol",
+    "type": "gyb82p",
+    "userId": "127",
+    "code": "65412",
+    "menuLevel": 376,
+    "subCount": 420,
+    "perms": "0xsmn2",
+    "urlType": "5gbonz",
+    "url": "www.emanuel-bosco.biz",
+    "icon": "nal9dl",
+    "popPosition": 290,
+    "imagePath": "hybbyp",
+    "css": "jju9pu",
+    "jsEvent": "58t2d7",
+    "menuSeq": "88i1vu",
+    "shortCut": "7lwbng",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 259,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:41",
-    "description": "nk45qh",
-    "spare1": "l92dtt",
-    "spare2": "srn6i3",
+    "priority": 455,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:47",
+    "description": "r3zck1",
+    "spare1": "tlru1q",
+    "spare2": "fh843m",
     "open": true,
     "list": [
       {
@@ -17892,9 +17892,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xqf2mw",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "b2xu05",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -17934,7 +17934,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleId=539&page=1&orderBy=708&startTime=2025-10-19 22:38:36&status=485&endTime=2025-10-19 22:38:36&q=ji8gpv&roleKey=c87ep0&limit=10&roleName=zona.sauer
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleName=necole.oreilly&status=854&page=1&endTime=2025-10-20 01:15:40&orderBy=218&q=ubq89f&startTime=2025-10-20 01:15:40&roleId=37&limit=10&roleKey=ejzswl
 ```
 **Response-fields:**
 
@@ -17976,37 +17976,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:41",
-      "lastTime": "2025-10-19 22:39:41",
-      "roleId": 645,
-      "roleName": "zona.sauer",
-      "roleKey": "yl5364",
-      "roleSort": 376,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:47",
+      "lastTime": "2025-10-20 01:16:47",
+      "roleId": 36,
+      "roleName": "necole.oreilly",
+      "roleKey": "sqshy3",
+      "roleSort": 37,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 226,
+      "status": 724,
       "flag": true,
       "menuIds": [
-        925
+        1
       ],
       "deptIds": [
-        829
+        647
       ],
       "permissions": [
-        "d3skwo"
+        "keuhaq"
       ],
-      "remark": "t2udcs",
-      "parentName": "zona.sauer",
-      "appName": "zona.sauer",
-      "roletypeId": "149",
-      "roletypeName": "zona.sauer",
-      "priority": 701,
+      "remark": "6yjf1b",
+      "parentName": "necole.oreilly",
+      "appName": "necole.oreilly",
+      "roletypeId": "127",
+      "roletypeName": "necole.oreilly",
+      "priority": 55,
       "isSuper": true
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18045,7 +18045,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'startTime=2025-10-19 22:38:36&roleKey=u5y4ap&page=1&limit=10&roleId=517&roleName=zona.sauer&status=438&orderBy=644&endTime=2025-10-19 22:38:36&q=3afqbr'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'page=1&orderBy=460&endTime=2025-10-20 01:15:40&roleName=necole.oreilly&q=zz444f&roleId=22&startTime=2025-10-20 01:15:40&limit=10&roleKey=pzs0c5&status=940'
 ```
 **Response-fields:**
 
@@ -18064,9 +18064,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0s0urr",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "2920kt",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18096,7 +18096,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/984.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/314.do
 ```
 **Response-fields:**
 
@@ -18137,36 +18137,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 926,
-    "roleName": "zona.sauer",
-    "roleKey": "v7kqdt",
-    "roleSort": 247,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 930,
+    "roleName": "necole.oreilly",
+    "roleKey": "6tysbh",
+    "roleSort": 614,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 534,
+    "status": 928,
     "flag": true,
     "menuIds": [
-      583
+      278
     ],
     "deptIds": [
-      339
+      93
     ],
     "permissions": [
-      "e3bn9t"
+      "uvc70o"
     ],
-    "remark": "tad6lu",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 658,
+    "remark": "48c95u",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 154,
     "isSuper": true
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18219,32 +18219,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 419,
-    "roleName": "zona.sauer",
-    "roleKey": "drzv2e",
-    "roleSort": 313,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 269,
+    "roleName": "necole.oreilly",
+    "roleKey": "vkhw0n",
+    "roleSort": 64,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 97,
+    "status": 90,
     "flag": true,
     "menuIds": [
-      285
+      47
     ],
     "deptIds": [
-      804
+      27
     ],
     "permissions": [
-      "79x6gm"
+      "gz0b10"
     ],
-    "remark": "so3g7f",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 348,
+    "remark": "yev3gv",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 924,
     "isSuper": true
   }
 }'
@@ -18266,9 +18266,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "53wlno",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "le71gd",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18321,32 +18321,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 362,
-    "roleName": "zona.sauer",
-    "roleKey": "js1p2k",
-    "roleSort": 132,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 440,
+    "roleName": "necole.oreilly",
+    "roleKey": "mp3ccy",
+    "roleSort": 317,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 463,
+    "status": 954,
     "flag": true,
     "menuIds": [
-      953
+      882
     ],
     "deptIds": [
-      644
+      807
     ],
     "permissions": [
-      "z6q6r6"
+      "nurw3a"
     ],
-    "remark": "t0gu8o",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 23,
+    "remark": "wwitkj",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 3,
     "isSuper": true
   }
 }'
@@ -18368,9 +18368,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lg9u3f",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "ohtyrf",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18423,32 +18423,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save/all.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 968,
-    "roleName": "zona.sauer",
-    "roleKey": "lbpbt1",
-    "roleSort": 143,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 80,
+    "roleName": "necole.oreilly",
+    "roleKey": "x6743d",
+    "roleSort": 268,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 97,
+    "status": 912,
     "flag": true,
     "menuIds": [
-      604
+      911
     ],
     "deptIds": [
-      667
+      182
     ],
     "permissions": [
-      "sxl47w"
+      "53mm7m"
     ],
-    "remark": "w1ruau",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 754,
+    "remark": "jbxvu6",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 353,
     "isSuper": true
   }
 }'
@@ -18470,9 +18470,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lzvntn",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "okpmd7",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18525,32 +18525,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update/all.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 272,
-    "roleName": "zona.sauer",
-    "roleKey": "1ziye4",
-    "roleSort": 146,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 11,
+    "roleName": "necole.oreilly",
+    "roleKey": "ed5j8s",
+    "roleSort": 703,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 704,
+    "status": 95,
     "flag": true,
     "menuIds": [
-      831
+      946
     ],
     "deptIds": [
-      201
+      306
     ],
     "permissions": [
-      "xp73d8"
+      "jck2fs"
     ],
-    "remark": "boof45",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 59,
+    "remark": "35ulwr",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 102,
     "isSuper": true
   }
 }'
@@ -18572,9 +18572,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jfr4sl",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "zvgqc7",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18623,9 +18623,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ny9hyz",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "20rkrd",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18672,21 +18672,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "id": 436,
-    "roletypeId": "149",
-    "appId": "149",
-    "name": "zona.sauer",
-    "code": "62411",
-    "priority": 19,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "id": 250,
+    "roletypeId": "127",
+    "appId": "127",
+    "name": "necole.oreilly",
+    "code": "65412",
+    "priority": 533,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 821,
-    "description": "wed4cd",
-    "areaType": "ngxxe1"
+    "status": 195,
+    "description": "4qkpw6",
+    "areaType": "gr47dg"
   }
 }'
 ```
@@ -18707,9 +18707,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iolalk",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "7r7o2m",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18762,32 +18762,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 460,
-    "roleName": "zona.sauer",
-    "roleKey": "8i02hv",
-    "roleSort": 384,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 419,
+    "roleName": "necole.oreilly",
+    "roleKey": "yng5ko",
+    "roleSort": 8,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 2,
+    "status": 725,
     "flag": true,
     "menuIds": [
-      7
+      313
     ],
     "deptIds": [
-      650
+      319
     ],
     "permissions": [
-      "9p1tgu"
+      "ig7k2p"
     ],
-    "remark": "lrctju",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 603,
+    "remark": "8oophf",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 811,
     "isSuper": true
   }
 }'
@@ -18809,9 +18809,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nycrd0",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "22d5j2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18864,32 +18864,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:41",
-    "lastTime": "2025-10-19 22:39:41",
-    "roleId": 940,
-    "roleName": "zona.sauer",
-    "roleKey": "hyc3rd",
-    "roleSort": 628,
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:47",
+    "lastTime": "2025-10-20 01:16:47",
+    "roleId": 632,
+    "roleName": "necole.oreilly",
+    "roleKey": "v0w2yf",
+    "roleSort": 955,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 735,
+    "status": 388,
     "flag": true,
     "menuIds": [
-      741
+      317
     ],
     "deptIds": [
-      503
+      61
     ],
     "permissions": [
-      "vipno0"
+      "fqnbv6"
     ],
-    "remark": "qsfzv3",
-    "parentName": "zona.sauer",
-    "appName": "zona.sauer",
-    "roletypeId": "149",
-    "roletypeName": "zona.sauer",
-    "priority": 687,
+    "remark": "92era9",
+    "parentName": "necole.oreilly",
+    "appName": "necole.oreilly",
+    "roletypeId": "127",
+    "roletypeName": "necole.oreilly",
+    "priority": 548,
     "isSuper": true
   }
 }'
@@ -18911,9 +18911,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tgtvla",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "7jf22k",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -18979,37 +18979,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:41",
-      "lastTime": "2025-10-19 22:39:41",
-      "roleId": 928,
-      "roleName": "zona.sauer",
-      "roleKey": "56om5d",
-      "roleSort": 608,
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:47",
+      "lastTime": "2025-10-20 01:16:47",
+      "roleId": 151,
+      "roleName": "necole.oreilly",
+      "roleKey": "p8gauh",
+      "roleSort": 864,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 633,
+      "status": 112,
       "flag": true,
       "menuIds": [
-        851
+        661
       ],
       "deptIds": [
-        311
+        897
       ],
       "permissions": [
-        "olvc0o"
+        "bz43oh"
       ],
-      "remark": "bbsy4h",
-      "parentName": "zona.sauer",
-      "appName": "zona.sauer",
-      "roletypeId": "149",
-      "roletypeName": "zona.sauer",
-      "priority": 788,
+      "remark": "sp47r9",
+      "parentName": "necole.oreilly",
+      "appName": "necole.oreilly",
+      "roletypeId": "127",
+      "roletypeName": "necole.oreilly",
+      "priority": 984,
       "isSuper": true
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19054,7 +19054,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?userId=149&adminId=965&username=zona.sauer&delFlag=7&q=d09ebf&organId=149&orderBy=995&startTime=2025-10-19 22:38:36&nickName=hilton.brown&email=chuck.adams@gmail.com&page=1&mobile=1-312-770-5203&limit=10&status=kz1vvn&deptId=478&endTime=2025-10-19 22:38:36
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?deptId=777&q=pcgkze&limit=10&organId=127&mobile=1-856-813-9551&orderBy=703&startTime=2025-10-20 01:15:40&username=necole.oreilly&email=eugenia.howe@yahoo.com&endTime=2025-10-20 01:15:40&page=1&adminId=965&status=k3bc6v&delFlag=4&userId=127&nickName=ethyl.nitzsche
 ```
 **Response-fields:**
 
@@ -19160,60 +19160,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:41",
-      "lastTime": "2025-10-19 22:39:41",
-      "id": 879,
-      "userId": "149",
-      "deptId": 457,
-      "deptName": "zona.sauer",
-      "organId": "149",
-      "organName": "zona.sauer",
-      "name": "zona.sauer",
-      "username": "zona.sauer",
-      "nickName": "hilton.brown",
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "3wo45g",
-      "password": "mp9j9b",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:47",
+      "lastTime": "2025-10-20 01:16:47",
+      "id": 537,
+      "userId": "127",
+      "deptId": 393,
+      "deptName": "necole.oreilly",
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "name": "necole.oreilly",
+      "username": "necole.oreilly",
+      "nickName": "ethyl.nitzsche",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "i6ulgq",
+      "password": "6wlkc2",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 72,
-      "delFlag": 7,
-      "lastLoginIp": "171.216.115.206",
-      "lastLoginTime": "2025-10-19 22:39:41",
-      "description": "5df8en",
+      "status": 192,
+      "delFlag": 4,
+      "lastLoginIp": "148.144.89.250",
+      "lastLoginTime": "2025-10-20 01:16:47",
+      "description": "eczfwz",
       "dept": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:41",
-        "lastTime": "2025-10-19 22:39:41",
-        "id": 597,
-        "organId": "149",
-        "parentId": 662,
-        "appId": "149",
-        "depttypeId": 997,
-        "foreignId": "149",
-        "createType": 349,
-        "type": "mgl0w7",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "areaCode": "62411",
-        "organLeader": "e7xmi2",
-        "leaderId": "149",
-        "leaderMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:47",
+        "lastTime": "2025-10-20 01:16:47",
+        "id": 778,
+        "organId": "127",
+        "parentId": 133,
+        "appId": "127",
+        "depttypeId": 526,
+        "foreignId": "127",
+        "createType": 392,
+        "type": "mt76jl",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "areaCode": "65412",
+        "organLeader": "it38en",
+        "leaderId": "127",
+        "leaderMobile": "1-856-813-9551",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "62411",
-        "imagePath": "pq7ve2",
-        "priority": 283,
-        "status": 416,
-        "delFlag": 7,
-        "description": "8adh32",
-        "spare1": "9mm0e3",
-        "spare2": "aluptz",
+        "searchCode": "65412",
+        "imagePath": "keke22",
+        "priority": 326,
+        "status": 314,
+        "delFlag": 4,
+        "description": "bd1awx",
+        "spare1": "3jb293",
+        "spare2": "1q6yhc",
         "children": [
           {
             "$ref": ".."
@@ -19222,48 +19222,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:41",
-          "lastTime": "2025-10-19 22:39:41",
-          "id": 975,
-          "roletypeId": "149",
-          "appId": "149",
-          "name": "zona.sauer",
-          "code": "62411",
-          "priority": 193,
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:47",
+          "lastTime": "2025-10-20 01:16:47",
+          "id": 85,
+          "roletypeId": "127",
+          "appId": "127",
+          "name": "necole.oreilly",
+          "code": "65412",
+          "priority": 823,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 380,
-          "description": "k7r73e",
-          "areaType": "vbsjix"
+          "status": 144,
+          "description": "7qffdm",
+          "areaType": "hv038s"
         }
       ],
       "roleIds": [
-        368
+        768
       ],
       "positionIds": [
-        "f2ypdu"
+        "x98hxf"
       ],
-      "roleId": 749,
+      "roleId": 524,
       "userRoleList": [
         {
-          "id": 329,
-          "deptId": 353,
-          "deptName": "zona.sauer",
-          "organId": "149",
-          "organName": "zona.sauer",
-          "roleId": 638,
-          "roleName": "zona.sauer",
-          "adminId": 493
+          "id": 124,
+          "deptId": 838,
+          "deptName": "necole.oreilly",
+          "organId": "127",
+          "organName": "necole.oreilly",
+          "roleId": 839,
+          "roleName": "necole.oreilly",
+          "adminId": 409
         }
       ],
-      "code": "62411",
-      "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+      "code": "65412",
+      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19308,7 +19308,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?username=zona.sauer&nickName=hilton.brown&userId=149&endTime=2025-10-19 22:38:36&orderBy=80&status=6qfnr5&adminId=6&mobile=1-312-770-5203&email=chuck.adams@gmail.com&limit=10&organId=149&delFlag=7&startTime=2025-10-19 22:38:36&page=1&deptId=633&q=e6qupf
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?page=1&limit=10&adminId=627&mobile=1-856-813-9551&nickName=ethyl.nitzsche&endTime=2025-10-20 01:15:40&status=i5hv9n&orderBy=564&deptId=408&email=eugenia.howe@yahoo.com&delFlag=4&startTime=2025-10-20 01:15:40&userId=127&username=necole.oreilly&q=cn9c1r&organId=127
 ```
 **Response-fields:**
 
@@ -19414,60 +19414,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:41",
-      "lastTime": "2025-10-19 22:39:41",
-      "id": 411,
-      "userId": "149",
-      "deptId": 593,
-      "deptName": "zona.sauer",
-      "organId": "149",
-      "organName": "zona.sauer",
-      "name": "zona.sauer",
-      "username": "zona.sauer",
-      "nickName": "hilton.brown",
-      "email": "chuck.adams@gmail.com",
-      "mobile": "1-312-770-5203",
-      "imagePath": "ugmddh",
-      "password": "rzsbgj",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:47",
+      "lastTime": "2025-10-20 01:16:47",
+      "id": 369,
+      "userId": "127",
+      "deptId": 93,
+      "deptName": "necole.oreilly",
+      "organId": "127",
+      "organName": "necole.oreilly",
+      "name": "necole.oreilly",
+      "username": "necole.oreilly",
+      "nickName": "ethyl.nitzsche",
+      "email": "eugenia.howe@yahoo.com",
+      "mobile": "1-856-813-9551",
+      "imagePath": "v3syjv",
+      "password": "dugc7o",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 174,
-      "delFlag": 7,
-      "lastLoginIp": "171.216.115.206",
-      "lastLoginTime": "2025-10-19 22:39:41",
-      "description": "wfi0ob",
+      "status": 320,
+      "delFlag": 4,
+      "lastLoginIp": "148.144.89.250",
+      "lastLoginTime": "2025-10-20 01:16:47",
+      "description": "j926pq",
       "dept": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:41",
-        "lastTime": "2025-10-19 22:39:41",
-        "id": 461,
-        "organId": "149",
-        "parentId": 780,
-        "appId": "149",
-        "depttypeId": 847,
-        "foreignId": "149",
-        "createType": 294,
-        "type": "2ot3nd",
-        "name": "zona.sauer",
-        "sname": "zona.sauer",
-        "areaCode": "62411",
-        "organLeader": "aj2ng9",
-        "leaderId": "149",
-        "leaderMobile": "1-312-770-5203",
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:47",
+        "lastTime": "2025-10-20 01:16:47",
+        "id": 911,
+        "organId": "127",
+        "parentId": 472,
+        "appId": "127",
+        "depttypeId": 871,
+        "foreignId": "127",
+        "createType": 481,
+        "type": "0uhigg",
+        "name": "necole.oreilly",
+        "sname": "necole.oreilly",
+        "areaCode": "65412",
+        "organLeader": "se4fml",
+        "leaderId": "127",
+        "leaderMobile": "1-856-813-9551",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "62411",
-        "imagePath": "rynwwr",
-        "priority": 891,
-        "status": 628,
-        "delFlag": 7,
-        "description": "igw0lx",
-        "spare1": "x5gzgj",
-        "spare2": "gwca6n",
+        "searchCode": "65412",
+        "imagePath": "6lmvha",
+        "priority": 819,
+        "status": 83,
+        "delFlag": 4,
+        "description": "jpxfym",
+        "spare1": "miq9l2",
+        "spare2": "ybf00q",
         "children": [
           {
             "$ref": ".."
@@ -19476,48 +19476,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:41",
-          "lastTime": "2025-10-19 22:39:41",
-          "id": 793,
-          "roletypeId": "149",
-          "appId": "149",
-          "name": "zona.sauer",
-          "code": "62411",
-          "priority": 123,
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:47",
+          "lastTime": "2025-10-20 01:16:47",
+          "id": 674,
+          "roletypeId": "127",
+          "appId": "127",
+          "name": "necole.oreilly",
+          "code": "65412",
+          "priority": 130,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 105,
-          "description": "rbucgt",
-          "areaType": "antuzx"
+          "status": 342,
+          "description": "8tvt1t",
+          "areaType": "0jqjdt"
         }
       ],
       "roleIds": [
-        239
+        809
       ],
       "positionIds": [
-        "0kclj3"
+        "htjswc"
       ],
-      "roleId": 327,
+      "roleId": 62,
       "userRoleList": [
         {
-          "id": 973,
-          "deptId": 475,
-          "deptName": "zona.sauer",
-          "organId": "149",
-          "organName": "zona.sauer",
-          "roleId": 199,
-          "roleName": "zona.sauer",
-          "adminId": 184
+          "id": 599,
+          "deptId": 966,
+          "deptName": "necole.oreilly",
+          "organId": "127",
+          "organName": "necole.oreilly",
+          "roleId": 937,
+          "roleName": "necole.oreilly",
+          "adminId": 931
         }
       ],
-      "code": "62411",
-      "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50"
+      "code": "65412",
+      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19552,9 +19552,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 678,
-    "roleId": 240,
-    "adminId": 146
+    "id": 550,
+    "roleId": 410,
+    "adminId": 289
   }
 }'
 ```
@@ -19575,9 +19575,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "awaj5q",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "c8xtyn",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19608,7 +19608,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=124&adminIds=9e0js1&adminIds=9e0js1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=roo0jv&adminIds=roo0jv&roleId=415'
 ```
 **Response-fields:**
 
@@ -19627,9 +19627,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xjokmp",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "22poge",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19660,7 +19660,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=y123od&adminIds=y123od&roleId=355'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=195&adminIds=aszan9&adminIds=aszan9'
 ```
 **Response-fields:**
 
@@ -19679,9 +19679,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0liggb",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "av64hd",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19711,7 +19711,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/657.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/413.do
 ```
 **Response-fields:**
 
@@ -19737,12 +19737,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      103
+      789
     ],
     "depts": [
       {
-        "id": 233,
-        "label": "w3ixg7",
+        "id": 39,
+        "label": "scslmk",
         "children": [
           {
             "$ref": ".."
@@ -19751,8 +19751,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19824,7 +19824,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoId=149&todoNextInfo=s8mrzf&todoLabels=gq33dq&q=997o2n&todoUserName=zona.sauer&todoModuleName=zona.sauer&todoOrganId=149&opTime=2025-10-19 22:39:50&opOrganName=zona.sauer&spare2=9yq87o&creatorId=149&todoName=zona.sauer&bizType=7542w3&todoCreateTime=2025-10-19 22:39:50&todoUserId=149&endTime=2025-10-19 22:38:36&limit=10&foreignId=149&todoCurrInfo=y54y7f&todoUrl=www.aubrey-rice.net&todoProcessName=zona.sauer&appId=149&todoAccountId=149&opOrganId=149&orderBy=114&todoModuleId=149&todoContent=lpirqy&description=cblaa8&spare1=wt9ts9&id=149&page=1&todoType=rin30z&startTime=2025-10-19 22:38:36&type=ydodo6&todoAccountName=zona.sauer&todoOrganName=zona.sauer&todoProcessInfo=elk4m1&todoAbstract=pie8i2&status=oisuyo&todoProcessStatus=sxm2mj&opUserId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?type=amf8p0&todoLabels=70wmlt&orderBy=400&todoModuleId=127&todoCreateTime=2025-10-20 01:16:57&todoProcessInfo=m08ln3&todoProcessStatus=0pc2p3&todoOrganName=necole.oreilly&creatorId=127&status=wzj1pr&foreignId=127&opOrganId=127&appId=127&bizType=2m2d6t&todoAccountId=127&spare2=j77f5z&limit=10&todoUserName=necole.oreilly&opOrganName=necole.oreilly&todoModuleName=necole.oreilly&startTime=2025-10-20 01:15:40&description=w0wzhc&todoAccountName=necole.oreilly&opUserId=127&todoUserId=127&opTime=2025-10-20 01:16:57&id=127&todoAbstract=utiuu5&endTime=2025-10-20 01:15:40&todoType=t6z4u6&spare1=ap2s9f&page=1&todoProcessName=necole.oreilly&todoNextInfo=hkyh8j&todoId=127&todoName=necole.oreilly&todoUrl=www.emanuel-bosco.biz&todoCurrInfo=2d9dz3&todoOrganId=127&q=fivybk&todoContent=54womp
 ```
 **Response-fields:**
 
@@ -19882,47 +19882,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:50",
-      "lastTime": "2025-10-19 22:39:50",
-      "id": "149",
-      "appId": "149",
-      "foreignId": "149",
-      "type": "pjvbuf",
-      "bizType": "hgfl1z",
-      "todoCreateTime": "2025-10-19 22:39:50",
-      "todoId": "149",
-      "todoType": "w7sg7t",
-      "todoName": "zona.sauer",
-      "todoAbstract": "x2k3c0",
-      "todoAccountId": "149",
-      "todoAccountName": "zona.sauer",
-      "todoModuleId": "149",
-      "todoModuleName": "zona.sauer",
-      "todoUserId": "149",
-      "todoUserName": "zona.sauer",
-      "todoOrganId": "149",
-      "todoOrganName": "zona.sauer",
-      "todoProcessName": "zona.sauer",
-      "todoProcessStatus": "1rrcb5",
-      "todoProcessInfo": "lv036q",
-      "todoCurrInfo": "woqp69",
-      "todoNextInfo": "bjfktx",
-      "todoUrl": "www.aubrey-rice.net",
-      "todoLabels": "nw8ot9",
-      "todoContent": "8imtmp",
-      "status": "atbkt0",
-      "opUserId": "149",
-      "opTime": "2025-10-19 22:39:50",
-      "opOrganId": "149",
-      "opOrganName": "zona.sauer",
-      "description": "mn5xvm",
-      "spare1": "lbrdwt",
-      "spare2": "kzgo5t"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:57",
+      "lastTime": "2025-10-20 01:16:57",
+      "id": "127",
+      "appId": "127",
+      "foreignId": "127",
+      "type": "z09b10",
+      "bizType": "js2912",
+      "todoCreateTime": "2025-10-20 01:16:57",
+      "todoId": "127",
+      "todoType": "3ysfd3",
+      "todoName": "necole.oreilly",
+      "todoAbstract": "0nlrjv",
+      "todoAccountId": "127",
+      "todoAccountName": "necole.oreilly",
+      "todoModuleId": "127",
+      "todoModuleName": "necole.oreilly",
+      "todoUserId": "127",
+      "todoUserName": "necole.oreilly",
+      "todoOrganId": "127",
+      "todoOrganName": "necole.oreilly",
+      "todoProcessName": "necole.oreilly",
+      "todoProcessStatus": "ce3i1d",
+      "todoProcessInfo": "s44gvk",
+      "todoCurrInfo": "83uzcg",
+      "todoNextInfo": "74ecxh",
+      "todoUrl": "www.emanuel-bosco.biz",
+      "todoLabels": "ph6qd4",
+      "todoContent": "rwflmj",
+      "status": "6hlypo",
+      "opUserId": "127",
+      "opTime": "2025-10-20 01:16:57",
+      "opOrganId": "127",
+      "opOrganName": "necole.oreilly",
+      "description": "u2e7vq",
+      "spare1": "848iiy",
+      "spare2": "rqrorz"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -19993,7 +19993,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoAccountId=149&creatorId=149&spare1=ywoglv&todoId=149&todoContent=iwsqyb&todoCreateTime=2025-10-19 22:39:50&status=s8isj1&todoOrganId=149&limit=10&todoAbstract=vud3ii&opUserId=149&bizType=5l1n72&appId=149&todoModuleName=zona.sauer&foreignId=149&todoName=zona.sauer&q=c29yof&startTime=2025-10-19 22:38:36&todoOrganName=zona.sauer&todoProcessStatus=oi647s&opOrganId=149&opOrganName=zona.sauer&todoModuleId=149&opTime=2025-10-19 22:39:50&todoUserName=zona.sauer&todoCurrInfo=pqza4w&description=14so2v&endTime=2025-10-19 22:38:36&todoType=ghz3d6&todoProcessInfo=s8nkyp&todoNextInfo=nmhn5z&todoLabels=k9onvb&spare2=7w2i04&todoUserId=149&todoProcessName=zona.sauer&orderBy=89&page=1&id=149&todoUrl=www.aubrey-rice.net&todoAccountName=zona.sauer&type=tht3b2'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'description=ea2v50&q=p3c4v8&bizType=uxj3cu&todoProcessName=necole.oreilly&opOrganName=necole.oreilly&todoProcessInfo=5j9n00&opUserId=127&todoModuleName=necole.oreilly&appId=127&todoUserId=127&id=127&todoCreateTime=2025-10-20 01:16:57&todoContent=rrguha&opTime=2025-10-20 01:16:57&todoNextInfo=y4z2ft&spare1=ep7ra7&todoLabels=swhfyv&todoCurrInfo=baw79w&todoOrganId=127&todoAbstract=qawngi&todoUrl=www.emanuel-bosco.biz&foreignId=127&orderBy=173&todoType=ziidhn&spare2=i47fw9&page=1&status=903w2o&todoId=127&creatorId=127&todoUserName=necole.oreilly&limit=10&todoAccountId=127&todoAccountName=necole.oreilly&todoOrganName=necole.oreilly&todoProcessStatus=muw0gq&todoModuleId=127&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&type=eu3c69&todoName=necole.oreilly&opOrganId=127'
 ```
 **Response-fields:**
 
@@ -20012,9 +20012,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hpf9kq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "mzw5t7",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20102,46 +20102,46 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "nzipf9",
-    "bizType": "wdulgz",
-    "todoCreateTime": "2025-10-19 22:39:50",
-    "todoId": "149",
-    "todoType": "78fulq",
-    "todoName": "zona.sauer",
-    "todoAbstract": "ag5gzy",
-    "todoAccountId": "149",
-    "todoAccountName": "zona.sauer",
-    "todoModuleId": "149",
-    "todoModuleName": "zona.sauer",
-    "todoUserId": "149",
-    "todoUserName": "zona.sauer",
-    "todoOrganId": "149",
-    "todoOrganName": "zona.sauer",
-    "todoProcessName": "zona.sauer",
-    "todoProcessStatus": "if01c1",
-    "todoProcessInfo": "ivsrdl",
-    "todoCurrInfo": "c3dek7",
-    "todoNextInfo": "p618h4",
-    "todoUrl": "www.aubrey-rice.net",
-    "todoLabels": "j9w6gc",
-    "todoContent": "k8g70c",
-    "status": "ob7wf3",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "rxecix",
-    "spare1": "oqqxei",
-    "spare2": "sa066u"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "7aijmf",
+    "bizType": "px963f",
+    "todoCreateTime": "2025-10-20 01:16:57",
+    "todoId": "127",
+    "todoType": "a1qpld",
+    "todoName": "necole.oreilly",
+    "todoAbstract": "es3qw5",
+    "todoAccountId": "127",
+    "todoAccountName": "necole.oreilly",
+    "todoModuleId": "127",
+    "todoModuleName": "necole.oreilly",
+    "todoUserId": "127",
+    "todoUserName": "necole.oreilly",
+    "todoOrganId": "127",
+    "todoOrganName": "necole.oreilly",
+    "todoProcessName": "necole.oreilly",
+    "todoProcessStatus": "1yi4zr",
+    "todoProcessInfo": "soj3ds",
+    "todoCurrInfo": "nb8fis",
+    "todoNextInfo": "it3y1r",
+    "todoUrl": "www.emanuel-bosco.biz",
+    "todoLabels": "fm46hs",
+    "todoContent": "ubgf9m",
+    "status": "ep6x12",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:57",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "7oaoqn",
+    "spare1": "lpu4o2",
+    "spare2": "0rpsbk"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20211,43 +20211,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "dxwc5x",
-    "bizType": "x9fqzj",
-    "todoCreateTime": "2025-10-19 22:39:50",
-    "todoId": "149",
-    "todoType": "sogpsf",
-    "todoName": "zona.sauer",
-    "todoAbstract": "ixcnz4",
-    "todoAccountId": "149",
-    "todoAccountName": "zona.sauer",
-    "todoModuleId": "149",
-    "todoModuleName": "zona.sauer",
-    "todoUserId": "149",
-    "todoUserName": "zona.sauer",
-    "todoOrganId": "149",
-    "todoOrganName": "zona.sauer",
-    "todoProcessName": "zona.sauer",
-    "todoProcessStatus": "c26lt4",
-    "todoProcessInfo": "nefkks",
-    "todoCurrInfo": "t6ske1",
-    "todoNextInfo": "5bonme",
-    "todoUrl": "www.aubrey-rice.net",
-    "todoLabels": "8bcfo3",
-    "todoContent": "tlhafe",
-    "status": "qevoqn",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "e923eo",
-    "spare1": "67uhqj",
-    "spare2": "nd3vrc"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "7dom1p",
+    "bizType": "3befg4",
+    "todoCreateTime": "2025-10-20 01:16:57",
+    "todoId": "127",
+    "todoType": "jb7w3c",
+    "todoName": "necole.oreilly",
+    "todoAbstract": "xbi1vt",
+    "todoAccountId": "127",
+    "todoAccountName": "necole.oreilly",
+    "todoModuleId": "127",
+    "todoModuleName": "necole.oreilly",
+    "todoUserId": "127",
+    "todoUserName": "necole.oreilly",
+    "todoOrganId": "127",
+    "todoOrganName": "necole.oreilly",
+    "todoProcessName": "necole.oreilly",
+    "todoProcessStatus": "kddfqn",
+    "todoProcessInfo": "mbmx4m",
+    "todoCurrInfo": "nvu31p",
+    "todoNextInfo": "feqdny",
+    "todoUrl": "www.emanuel-bosco.biz",
+    "todoLabels": "zico2v",
+    "todoContent": "xagw3x",
+    "status": "kh1cn8",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:57",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "7uj3dy",
+    "spare1": "6zhxon",
+    "spare2": "zrarso"
   }
 }'
 ```
@@ -20268,9 +20268,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tjf9a4",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "uij4nr",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20340,43 +20340,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:50",
-    "lastTime": "2025-10-19 22:39:50",
-    "id": "149",
-    "appId": "149",
-    "foreignId": "149",
-    "type": "i2akhm",
-    "bizType": "ehv8ab",
-    "todoCreateTime": "2025-10-19 22:39:50",
-    "todoId": "149",
-    "todoType": "ep6ipj",
-    "todoName": "zona.sauer",
-    "todoAbstract": "u9v1dj",
-    "todoAccountId": "149",
-    "todoAccountName": "zona.sauer",
-    "todoModuleId": "149",
-    "todoModuleName": "zona.sauer",
-    "todoUserId": "149",
-    "todoUserName": "zona.sauer",
-    "todoOrganId": "149",
-    "todoOrganName": "zona.sauer",
-    "todoProcessName": "zona.sauer",
-    "todoProcessStatus": "e9aoi5",
-    "todoProcessInfo": "1mvbnv",
-    "todoCurrInfo": "t7krdj",
-    "todoNextInfo": "28xqiu",
-    "todoUrl": "www.aubrey-rice.net",
-    "todoLabels": "o2g4hq",
-    "todoContent": "9xw8pg",
-    "status": "7cj1m9",
-    "opUserId": "149",
-    "opTime": "2025-10-19 22:39:50",
-    "opOrganId": "149",
-    "opOrganName": "zona.sauer",
-    "description": "w3hojn",
-    "spare1": "7kob8p",
-    "spare2": "50tp9b"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:57",
+    "lastTime": "2025-10-20 01:16:57",
+    "id": "127",
+    "appId": "127",
+    "foreignId": "127",
+    "type": "3kpyyo",
+    "bizType": "mypc7b",
+    "todoCreateTime": "2025-10-20 01:16:57",
+    "todoId": "127",
+    "todoType": "251cxi",
+    "todoName": "necole.oreilly",
+    "todoAbstract": "0kne1h",
+    "todoAccountId": "127",
+    "todoAccountName": "necole.oreilly",
+    "todoModuleId": "127",
+    "todoModuleName": "necole.oreilly",
+    "todoUserId": "127",
+    "todoUserName": "necole.oreilly",
+    "todoOrganId": "127",
+    "todoOrganName": "necole.oreilly",
+    "todoProcessName": "necole.oreilly",
+    "todoProcessStatus": "tjej9d",
+    "todoProcessInfo": "0smbgt",
+    "todoCurrInfo": "opge7z",
+    "todoNextInfo": "w75igz",
+    "todoUrl": "www.emanuel-bosco.biz",
+    "todoLabels": "e1mncg",
+    "todoContent": "95pw2h",
+    "status": "ceesqv",
+    "opUserId": "127",
+    "opTime": "2025-10-20 01:16:57",
+    "opOrganId": "127",
+    "opOrganName": "necole.oreilly",
+    "description": "lctobq",
+    "spare1": "aknx9z",
+    "spare2": "zmdq2s"
   }
 }'
 ```
@@ -20397,9 +20397,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n0mv2a",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "mffgpj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20449,9 +20449,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dxxqsc",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "n4vthh",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20508,7 +20508,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?nameEn=ip2ong&name=zona.sauer&code=62411&isDisplay=true&likeQuery=ghwje5&orderBy=736&description=darixq&parentIds=7jgim3&parentIds=7jgim3&lft=19&sname=zona.sauer&searchCode=62411&page=1&areatypeId=149&hasContent=true&deleteTime=2025-10-19 22:38:36&areatypeIds=nt0hfz&areatypeIds=nt0hfz&q=9fjo35&delFlag=7&nameTotal=re8ht3&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&rgt=502&ids=6agl61&ids=6agl61&parentId=988&limit=10&countryId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?startTime=2025-10-20 01:15:40&name=necole.oreilly&countryId=127&nameEn=1odf4q&endTime=2025-10-20 01:15:40&page=1&lft=565&isDisplay=true&q=ce78f7&description=6lzmb5&delFlag=4&orderBy=730&rgt=667&deleteTime=2025-10-20 01:15:40&parentIds=en1ggc&parentIds=en1ggc&hasContent=true&sname=necole.oreilly&areatypeId=127&ids=x9ydym&ids=x9ydym&code=65412&likeQuery=gnkpv5&nameTotal=33rkcp&searchCode=65412&parentId=482&limit=10&areatypeIds=54wel0&areatypeIds=54wel0
 ```
 **Response-fields:**
 
@@ -20550,31 +20550,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:45",
-      "lastTime": "2025-10-19 22:39:45",
-      "id": 88,
-      "parentId": 570,
-      "countryId": "149",
-      "areatypeId": "149",
-      "lft": 403,
-      "rgt": 814,
-      "code": "62411",
-      "name": "zona.sauer",
-      "nameTotal": "br6vlk",
-      "sname": "zona.sauer",
-      "nameEn": "2lqztu",
-      "searchCode": "62411",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:51",
+      "lastTime": "2025-10-20 01:16:51",
+      "id": 853,
+      "parentId": 556,
+      "countryId": "127",
+      "areatypeId": "127",
+      "lft": 718,
+      "rgt": 390,
+      "code": "65412",
+      "name": "necole.oreilly",
+      "nameTotal": "wqkh43",
+      "sname": "necole.oreilly",
+      "nameEn": "o8f0ip",
+      "searchCode": "65412",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 579,
-      "delFlag": 7,
-      "deleteTime": "2025-10-19 22:39:45",
-      "description": "kirlcr"
+      "priority": 561,
+      "delFlag": 4,
+      "deleteTime": "2025-10-20 01:16:51",
+      "description": "qoryei"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20630,7 +20630,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'hasContent=true&delFlag=7&parentIds=0ao0yz&parentIds=0ao0yz&q=ovyver&startTime=2025-10-19 22:38:36&limit=10&page=1&sname=zona.sauer&ids=bfjxiv&ids=bfjxiv&nameEn=6xyj61&orderBy=502&rgt=303&description=ye4isw&parentId=880&deleteTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&lft=149&code=62411&name=zona.sauer&nameTotal=4u3w8z&countryId=149&isDisplay=true&searchCode=62411&areatypeIds=gxj9at&areatypeIds=gxj9at&areatypeId=149&likeQuery=pmzdwb'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'startTime=2025-10-20 01:15:40&code=65412&orderBy=256&limit=10&countryId=127&parentId=664&hasContent=true&page=1&deleteTime=2025-10-20 01:15:40&q=doloyi&searchCode=65412&parentIds=q0rvxr&parentIds=q0rvxr&rgt=302&ids=qyekbu&ids=qyekbu&nameEn=j5twh8&areatypeIds=me2ctc&areatypeIds=me2ctc&delFlag=4&nameTotal=x7bd1v&sname=necole.oreilly&areatypeId=127&description=aabkv0&likeQuery=8w0za2&lft=682&endTime=2025-10-20 01:15:40&isDisplay=true&name=necole.oreilly'
 ```
 **Response-fields:**
 
@@ -20649,9 +20649,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fhjd3p",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "u1gamh",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20723,30 +20723,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "id": 31,
-    "parentId": 702,
-    "countryId": "149",
-    "areatypeId": "149",
-    "lft": 687,
-    "rgt": 11,
-    "code": "62411",
-    "name": "zona.sauer",
-    "nameTotal": "6ix0e2",
-    "sname": "zona.sauer",
-    "nameEn": "14wmck",
-    "searchCode": "62411",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:51",
+    "lastTime": "2025-10-20 01:16:51",
+    "id": 795,
+    "parentId": 26,
+    "countryId": "127",
+    "areatypeId": "127",
+    "lft": 777,
+    "rgt": 768,
+    "code": "65412",
+    "name": "necole.oreilly",
+    "nameTotal": "7ti384",
+    "sname": "necole.oreilly",
+    "nameEn": "xruft1",
+    "searchCode": "65412",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 293,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:45",
-    "description": "f7pgi7"
+    "priority": 65,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:51",
+    "description": "aqaelx"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20800,27 +20800,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "id": 276,
-    "parentId": 420,
-    "countryId": "149",
-    "areatypeId": "149",
-    "lft": 868,
-    "rgt": 441,
-    "code": "62411",
-    "name": "zona.sauer",
-    "nameTotal": "0pnwt4",
-    "sname": "zona.sauer",
-    "nameEn": "646ng7",
-    "searchCode": "62411",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:51",
+    "lastTime": "2025-10-20 01:16:51",
+    "id": 484,
+    "parentId": 128,
+    "countryId": "127",
+    "areatypeId": "127",
+    "lft": 254,
+    "rgt": 270,
+    "code": "65412",
+    "name": "necole.oreilly",
+    "nameTotal": "al7vs9",
+    "sname": "necole.oreilly",
+    "nameEn": "3ig4yp",
+    "searchCode": "65412",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 523,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:45",
-    "description": "w21zbt"
+    "priority": 170,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:51",
+    "description": "4nxhz6"
   }
 }'
 ```
@@ -20841,9 +20841,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pl2ruv",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "j571e6",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20897,27 +20897,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:45",
-    "lastTime": "2025-10-19 22:39:45",
-    "id": 526,
-    "parentId": 84,
-    "countryId": "149",
-    "areatypeId": "149",
-    "lft": 341,
-    "rgt": 310,
-    "code": "62411",
-    "name": "zona.sauer",
-    "nameTotal": "kjgqu8",
-    "sname": "zona.sauer",
-    "nameEn": "h9ulmy",
-    "searchCode": "62411",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:51",
+    "lastTime": "2025-10-20 01:16:51",
+    "id": 251,
+    "parentId": 705,
+    "countryId": "127",
+    "areatypeId": "127",
+    "lft": 670,
+    "rgt": 906,
+    "code": "65412",
+    "name": "necole.oreilly",
+    "nameTotal": "1exjme",
+    "sname": "necole.oreilly",
+    "nameEn": "ps1gla",
+    "searchCode": "65412",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 783,
-    "delFlag": 7,
-    "deleteTime": "2025-10-19 22:39:45",
-    "description": "g44zyd"
+    "priority": 706,
+    "delFlag": 4,
+    "deleteTime": "2025-10-20 01:16:51",
+    "description": "2zk0vr"
   }
 }'
 ```
@@ -20938,9 +20938,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dygjdi",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "73zzyq",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -20990,9 +20990,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pqsnwe",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "2fh4oq",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21035,7 +21035,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?code=62411&existKey=djj3hg&delFlag=7&q=32j1s1&description=fg0gju&endTime=2025-10-19 22:38:36&orderBy=69&page=1&startTime=2025-10-19 22:38:36&limit=10&name=zona.sauer&type=n6d99t
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&existKey=2fpuwe&name=necole.oreilly&orderBy=922&page=1&limit=10&code=65412&description=u60huj&q=2etkep&type=swyqk6&delFlag=4
 ```
 **Response-fields:**
 
@@ -21066,20 +21066,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:46",
-      "lastTime": "2025-10-19 22:39:46",
-      "id": "149",
-      "name": "zona.sauer",
-      "type": "qo906f",
-      "code": "62411",
-      "priority": 795,
-      "delFlag": 7,
-      "description": "6nc38h"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:52",
+      "lastTime": "2025-10-20 01:16:52",
+      "id": "127",
+      "name": "necole.oreilly",
+      "type": "76j5sm",
+      "code": "65412",
+      "priority": 494,
+      "delFlag": 4,
+      "description": "4s6rqg"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21121,7 +21121,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'name=zona.sauer&orderBy=345&type=hxmvnt&existKey=pibfl0&limit=10&code=62411&q=6t6f5d&delFlag=7&page=1&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&description=rais1s'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'type=cp6otq&q=lwiwml&orderBy=609&description=8olhme&delFlag=4&startTime=2025-10-20 01:15:40&limit=10&name=necole.oreilly&page=1&code=65412&endTime=2025-10-20 01:15:40&existKey=l8yqik'
 ```
 **Response-fields:**
 
@@ -21140,9 +21140,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pqss6n",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "x4uxw1",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21203,19 +21203,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "type": "cfkfd3",
-    "code": "62411",
-    "priority": 369,
-    "delFlag": 7,
-    "description": "ax2mdd"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "type": "55e835",
+    "code": "65412",
+    "priority": 782,
+    "delFlag": 4,
+    "description": "x61hr6"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21258,16 +21258,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "type": "7f157v",
-    "code": "62411",
-    "priority": 599,
-    "delFlag": 7,
-    "description": "xajsod"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "type": "uae9ck",
+    "code": "65412",
+    "priority": 97,
+    "delFlag": 4,
+    "description": "we7cl1"
   }
 }'
 ```
@@ -21288,9 +21288,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jhhku6",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "zer0kz",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21333,16 +21333,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:46",
-    "lastTime": "2025-10-19 22:39:46",
-    "id": "149",
-    "name": "zona.sauer",
-    "type": "cchu3d",
-    "code": "62411",
-    "priority": 564,
-    "delFlag": 7,
-    "description": "v90o4n"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:52",
+    "lastTime": "2025-10-20 01:16:52",
+    "id": "127",
+    "name": "necole.oreilly",
+    "type": "m4quvf",
+    "code": "65412",
+    "priority": 446,
+    "delFlag": 4,
+    "description": "vlufku"
   }
 }'
 ```
@@ -21363,9 +21363,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dnznme",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "a8r25c",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21415,9 +21415,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "oh4z15",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "v3e7qu",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21456,7 +21456,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?q=wlo76s&endTime=2025-10-19 22:38:36&cfgValue=hwicar&ids=vqijyj&ids=vqijyj&startTime=2025-10-19 22:38:36&page=1&limit=10&cfgKey=m7hqpm&orderBy=806
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?cfgValue=u7a6ry&orderBy=138&ids=14hjpn&ids=14hjpn&cfgKey=8h5knk&q=7djcrk&startTime=2025-10-20 01:15:40&page=1&limit=10&endTime=2025-10-20 01:15:40
 ```
 **Response-fields:**
 
@@ -21483,19 +21483,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 461,
+    "totalCount": 807,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "k53z6p",
-        "cfgValue": "57hpfx"
+        "cfgKey": "djsoj1",
+        "cfgValue": "czwdxw"
       }
     ]
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21533,7 +21533,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'endTime=2025-10-19 22:38:36&page=1&ids=v3nuob&ids=v3nuob&q=rmyns6&startTime=2025-10-19 22:38:36&orderBy=759&limit=10&cfgValue=9qxcd8&cfgKey=nnqwj4'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'orderBy=263&q=nhlkov&cfgValue=8ynprn&page=1&limit=10&ids=jeo2nr&ids=jeo2nr&endTime=2025-10-20 01:15:40&cfgKey=5c9mpr&startTime=2025-10-20 01:15:40'
 ```
 **Response-fields:**
 
@@ -21552,9 +21552,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v4ik1d",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "l7ugqp",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21584,7 +21584,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/5fgva1.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/hi9e3b.do
 ```
 **Response-fields:**
 
@@ -21606,11 +21606,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "rpe44j",
-    "cfgValue": "cz3v2c"
+    "cfgKey": "wg27f9",
+    "cfgValue": "hgeft3"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21644,8 +21644,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "kdrzpr",
-    "cfgValue": "np11h9"
+    "cfgKey": "knnifz",
+    "cfgValue": "k36pt4"
   }
 }'
 ```
@@ -21666,9 +21666,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ocwrsp",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "vbi4wj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21702,8 +21702,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "qlt9m3",
-    "cfgValue": "5lp8i3"
+    "cfgKey": "fstro2",
+    "cfgValue": "oqsvf6"
   }
 }'
 ```
@@ -21724,9 +21724,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bl7p21",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "jb1fay",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21775,9 +21775,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3yphl2",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "vbwmk1",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21820,9 +21820,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zrtxnd",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "w6ox16",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21865,12 +21865,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "img": "1xy1qz",
-    "code": "62411"
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "img": "jvg0s4",
+    "code": "65412"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -21912,12 +21912,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "img": "mge141",
-    "code": "62411"
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "img": "n9bel0",
+    "code": "65412"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22022,7 +22022,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?tableName=zona.sauer&subTable.functionName=zona.sauer&subTable.columns[0].isQuery=qv36y6&subTable.columns[0].priority=570&tplCategory=1amdfq&subTable.columns[0].creatorId=149&subTable.parentMenuId=889&pkColumn.isIncrement=brfv3e&subTable.subTable.tableComment=ta3p2f&subTable.subTable.formColNum=877&pkColumn.javaField=jzxnsn&pkColumn.priority=372&pkColumn.columnComment=dq9urm&subTable.subTableName=zona.sauer&subTable.packageName=zona.sauer&pkColumn.tableId=655&subTable.pkColumn.isIncrement=h5lqix&columns[0].columnName=zona.sauer&columns[0].queryType=4mehfm&subTable.tableId=872&pkColumn.isInsert=f8pxxw&tableId=698&pkColumn.createTime=2025-10-19 22:39:51&createTime=2025-10-19 22:39:51&subTable.pkColumn.isList=oyohnz&Description=t23mmz&subTable.subTable.genPath=63egoc&pkColumn.creatorId=149&subTable.tableComment=88fgbm&subTable.subTable.createTime=2025-10-19 22:39:51&columns[0].createTime=2025-10-19 22:39:51&subTable.columns[0].javaField=hsbj8u&subTable.lastTime=2025-10-19 22:39:51&columns[0].isIncrement=hso17o&pkColumn.htmlType=b37kbn&lastTime=2025-10-19 22:39:51&subTable.parentMenuName=zona.sauer&subTable.pkColumn.htmlType=ft3wt4&subTable.pkColumn.queryType=0kffkl&subTable.pkColumn.columnType=7uu5i5&subTable.subTableFkName=zona.sauer&subTable.pkColumn.javaField=qoszyh&subTable.columns[0].columnComment=98amao&moduleName=zona.sauer&subTable.limit=10&subTable.functionAuthor=Yen Kreiger&columns[0].creatorId=149&subTable.pkColumn.lastTime=2025-10-19 22:39:51&subTable.creatorId=149&formColNum=401&subTable.pkColumn.isQuery=m8xtr3&pkColumn.isList=foms94&subTable.columns[0].isRequired=inw5xy&columns[0].isPk=5twyu0&subTable.tplWebType=pwd1tq&subTable.subTable.tplWebType=imoa8a&columns[0].isRequired=5n8rk3&columns[0].tableId=188&columns[0].htmlType=2tomg5&subTable.subTable.creatorId=149&pkColumn.dictType=6eslk9&subTable.columns[0].columnId=110&subTable.columns[0].dictType=dbwtp8&subTable.subTable.optionLists=h6ssam&subTable.treeName=zona.sauer&subTable.pkColumn.columnId=703&subTable.subTable.subTableFkName=zona.sauer&columns[0].columnComment=7m12cd&columns[0].priority=132&subTable.columns[0].isIncrement=06mzwj&subTable.tplCategory=1i37vv&subTable.pkColumn.isPk=4prvvn&subTable.subTable.functionAuthor=Yen Kreiger&subTable.treeCode=62411&subTable.subTable.page=1&subTable.subTable.tableId=783&creatorId=149&subTableName=zona.sauer&subTable.pkColumn.dictType=fslais&subTable.Description=g58nmp&columns[0].columnId=626&subTable.tableName=zona.sauer&treeParentCode=62411&optionLists=0eeqq8&tableComment=s5hprs&subTable.createTime=2025-10-19 22:39:51&subTable.subTable.className=zona.sauer&subTable.columns[0].createTime=2025-10-19 22:39:51&limit=10&tplWebType=im0o0t&columns[0].isInsert=zaddtl&subTable.subTable.treeName=zona.sauer&subTable.subTable.limit=10&parentMenuId=28&subTable.columns[0].columnName=zona.sauer&subTable.pkColumn.creatorId=149&subTable.pkColumn.tableId=39&functionAuthor=Yen Kreiger&subTable.formColNum=178&pkColumn.columnType=j04na2&subTable.subTable.subTableName=zona.sauer&pkColumn.isRequired=wdhyiq&subTable.columns[0].isEdit=3fzidh&columns[0].lastTime=2025-10-19 22:39:51&pkColumn.queryType=hiy2kd&subTable.columns[0].columnType=azvk3q&columns[0].dictType=7pm139&page=1&subTable.subTable.parentMenuId=638&subTable.className=zona.sauer&pkColumn.isEdit=2szrqm&subTable.columns[0].htmlType=clztl3&treeCode=62411&subTable.columns[0].tableId=231&columns[0].javaField=2tmqvn&subTable.subTable.tableName=zona.sauer&subTable.pkColumn.columnComment=79hfg7&subTable.page=1&pkColumn.columnName=zona.sauer&pkColumn.columnId=323&subTable.pkColumn.isRequired=yhduwm&subTable.columns[0].javaType=e10oqf&columns[0].isQuery=i7szdj&treeName=zona.sauer&columns[0].javaType=sq9rmk&subTable.businessName=zona.sauer&subTable.columns[0].queryType=fkap8e&subTable.pkColumn.columnName=zona.sauer&subTable.columns[0].lastTime=2025-10-19 22:39:51&subTable.optionLists=w4ova7&columns[0].columnType=zdo1hz&columns[0].isEdit=jwbjd5&parentMenuName=zona.sauer&subTable.subTable.lastTime=2025-10-19 22:39:51&subTable.moduleName=zona.sauer&subTable.subTable.moduleName=zona.sauer&subTable.genType=b092fj&subTableFkName=zona.sauer&genPath=1m3oh0&pkColumn.lastTime=2025-10-19 22:39:51&businessName=zona.sauer&subTable.pkColumn.createTime=2025-10-19 22:39:51&subTable.subTable.functionName=zona.sauer&subTable.subTable.treeParentCode=62411&subTable.subTable.Description=c88348&columns[0].isList=fzajuj&subTable.pkColumn.priority=86&pkColumn.isPk=rlleee&pkColumn.isQuery=npxl37&pkColumn.javaType=i7t5yq&subTable.pkColumn.isInsert=23925n&subTable.subTable.tplCategory=cd0gzz&subTable.subTable.genType=7u8aoy&subTable.columns[0].isPk=g74tvr&subTable.genPath=y2mtf5&functionName=zona.sauer&genType=p2grya&subTable.subTable.packageName=zona.sauer&subTable.subTable.businessName=zona.sauer&subTable.subTable.treeCode=62411&className=zona.sauer&subTable.columns[0].isList=b9upz6&subTable.pkColumn.javaType=ih6nh5&subTable.treeParentCode=62411&packageName=zona.sauer&subTable.subTable.parentMenuName=zona.sauer&subTable.pkColumn.isEdit=wm2cpz&subTable.columns[0].isInsert=mrbsv0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?creatorId=127&columns[0].isIncrement=p1n5pt&pkColumn.lastTime=2025-10-20 01:16:58&subTable.pkColumn.isEdit=3so4t2&Description=bg1vdv&subTable.pkColumn.isRequired=4l2y4k&subTable.columns[0].htmlType=ugyv6e&columns[0].javaType=jecr01&subTable.columns[0].isPk=kc18pq&pkColumn.isList=xd79ie&pkColumn.priority=149&subTable.pkColumn.lastTime=2025-10-20 01:16:58&subTable.genType=csgnb1&subTable.subTable.className=necole.oreilly&tableComment=ed6h8p&pkColumn.javaField=cemkhz&pkColumn.creatorId=127&subTable.pkColumn.isQuery=hmx14z&subTable.parentMenuId=587&subTable.parentMenuName=necole.oreilly&pkColumn.isInsert=pwemv4&lastTime=2025-10-20 01:16:58&packageName=necole.oreilly&subTable.genPath=vywhno&tplCategory=i3hl84&pkColumn.columnName=necole.oreilly&pkColumn.isIncrement=14p5ga&subTable.subTable.Description=lvcqtp&subTable.subTable.tplWebType=6jlb1r&subTable.creatorId=127&subTable.columns[0].lastTime=2025-10-20 01:16:58&subTable.columns[0].javaType=mioamv&subTable.columns[0].isEdit=vf3y93&subTable.columns[0].queryType=nysr27&pkColumn.isPk=vwrpmf&subTable.treeParentCode=65412&subTable.limit=10&columns[0].tableId=692&columns[0].javaField=zl3518&treeCode=65412&subTable.lastTime=2025-10-20 01:16:58&parentMenuId=208&columns[0].isInsert=9wrp6x&page=1&subTable.subTable.subTableName=necole.oreilly&subTable.subTable.tableName=necole.oreilly&limit=10&subTable.pkColumn.creatorId=127&subTable.subTable.treeName=necole.oreilly&subTable.subTable.packageName=necole.oreilly&subTable.pkColumn.columnName=necole.oreilly&columns[0].dictType=gozgxg&subTable.columns[0].columnName=necole.oreilly&subTable.treeName=necole.oreilly&subTable.subTable.businessName=necole.oreilly&subTable.pkColumn.priority=621&columns[0].columnName=necole.oreilly&subTable.columns[0].dictType=3u64u2&subTable.subTable.genType=f5fvsl&subTable.columns[0].tableId=282&subTable.pkColumn.dictType=qf5can&subTable.packageName=necole.oreilly&subTable.page=1&columns[0].columnId=815&columns[0].isEdit=a7otrh&columns[0].htmlType=cgtxp8&subTable.businessName=necole.oreilly&subTable.subTable.optionLists=vn9pyb&subTable.pkColumn.queryType=cjij57&subTable.formColNum=36&subTable.pkColumn.isList=qblml6&subTable.columns[0].columnComment=j23j0m&pkColumn.tableId=306&subTable.subTable.functionAuthor=Terina Veum&tplWebType=pxf0l4&treeParentCode=65412&subTable.functionAuthor=Terina Veum&subTableName=necole.oreilly&subTable.subTableName=necole.oreilly&subTable.subTable.treeCode=65412&subTable.columns[0].priority=607&subTable.subTable.subTableFkName=necole.oreilly&subTable.pkColumn.createTime=2025-10-20 01:16:58&subTable.pkColumn.tableId=865&subTable.className=necole.oreilly&subTable.subTable.treeParentCode=65412&columns[0].creatorId=127&tableId=484&columns[0].createTime=2025-10-20 01:16:58&subTable.pkColumn.htmlType=fdcspd&pkColumn.isQuery=1n7gdn&optionLists=yf8llt&subTable.pkColumn.isIncrement=m9gvsv&subTable.columns[0].javaField=7zszsq&subTable.columns[0].isQuery=k7l36c&subTable.pkColumn.isInsert=y3xvx3&subTable.columns[0].isRequired=ia3clf&genType=ht2kne&subTable.columns[0].isInsert=vjdxgx&columns[0].columnType=3bxc8u&pkColumn.columnType=sg0ddm&subTable.subTableFkName=necole.oreilly&subTable.subTable.parentMenuId=38&subTable.pkColumn.isPk=qa5uc2&subTable.subTable.parentMenuName=necole.oreilly&columns[0].isRequired=ctz7el&columns[0].isList=odyzh6&functionName=necole.oreilly&parentMenuName=necole.oreilly&subTable.createTime=2025-10-20 01:16:58&pkColumn.columnId=72&subTable.columns[0].columnId=306&columns[0].isQuery=6xy7bq&subTable.tableComment=3avaoc&columns[0].queryType=28h5pq&subTable.subTable.page=1&columns[0].isPk=r9t4mx&pkColumn.queryType=gdmux4&subTable.treeCode=65412&subTable.columns[0].createTime=2025-10-20 01:16:58&subTable.columns[0].isList=dka32b&treeName=necole.oreilly&pkColumn.isEdit=3mma8t&subTable.subTable.tableComment=70msed&subTable.subTable.creatorId=127&subTable.pkColumn.javaType=f4j2va&subTable.tableName=necole.oreilly&moduleName=necole.oreilly&pkColumn.javaType=ni7lk2&columns[0].priority=244&subTable.pkColumn.columnId=282&subTable.optionLists=zexr7b&subTable.columns[0].columnType=zbxdbb&subTable.subTable.tableId=170&pkColumn.createTime=2025-10-20 01:16:58&pkColumn.dictType=4ut34t&subTable.subTable.functionName=necole.oreilly&subTable.Description=soehen&pkColumn.columnComment=bs6ku8&subTable.subTable.genPath=3hykib&subTable.subTable.limit=10&pkColumn.isRequired=e8pxt4&tableName=necole.oreilly&subTable.subTable.formColNum=185&subTable.subTable.moduleName=necole.oreilly&columns[0].columnComment=fpqbcc&subTable.pkColumn.javaField=oexk0o&subTable.subTable.tplCategory=l8wvhg&subTable.columns[0].creatorId=127&genPath=zx5oto&subTable.tableId=168&subTableFkName=necole.oreilly&functionAuthor=Terina Veum&formColNum=735&subTable.tplWebType=t5576o&createTime=2025-10-20 01:16:58&subTable.pkColumn.columnType=tbudln&className=necole.oreilly&subTable.moduleName=necole.oreilly&subTable.columns[0].isIncrement=o97omp&columns[0].lastTime=2025-10-20 01:16:58&subTable.functionName=necole.oreilly&subTable.tplCategory=qpgcvj&businessName=necole.oreilly&subTable.subTable.lastTime=2025-10-20 01:16:58&subTable.pkColumn.columnComment=nzwoib&subTable.subTable.createTime=2025-10-20 01:16:58&pkColumn.htmlType=9yz5y0
 ```
 **Response-fields:**
 
@@ -22117,83 +22117,83 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:51",
-      "lastTime": "2025-10-19 22:39:51",
-      "tableId": 871,
-      "tableName": "zona.sauer",
-      "tableComment": "fwhd4x",
-      "subTableName": "zona.sauer",
-      "subTableFkName": "zona.sauer",
-      "className": "zona.sauer",
-      "tplCategory": "geinsi",
-      "tplWebType": "imk1ma",
-      "packageName": "zona.sauer",
-      "moduleName": "zona.sauer",
-      "businessName": "zona.sauer",
-      "functionName": "zona.sauer",
-      "functionAuthor": "Yen Kreiger",
-      "formColNum": 616,
-      "genType": "1u4hoj",
-      "genPath": "gujpkz",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:58",
+      "lastTime": "2025-10-20 01:16:58",
+      "tableId": 763,
+      "tableName": "necole.oreilly",
+      "tableComment": "630hfp",
+      "subTableName": "necole.oreilly",
+      "subTableFkName": "necole.oreilly",
+      "className": "necole.oreilly",
+      "tplCategory": "vmbr31",
+      "tplWebType": "p7h4mz",
+      "packageName": "necole.oreilly",
+      "moduleName": "necole.oreilly",
+      "businessName": "necole.oreilly",
+      "functionName": "necole.oreilly",
+      "functionAuthor": "Terina Veum",
+      "formColNum": 871,
+      "genType": "n11vby",
+      "genPath": "lmvgy1",
       "pkColumn": {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:51",
-        "lastTime": "2025-10-19 22:39:51",
-        "columnId": 219,
-        "tableId": 126,
-        "columnName": "zona.sauer",
-        "columnComment": "uoku5p",
-        "columnType": "m8up9q",
-        "javaType": "yajtt1",
-        "javaField": "0aptlp",
-        "isPk": "x8fjxb",
-        "isIncrement": "jkvftp",
-        "isRequired": "hsf7xa",
-        "isInsert": "ue2vxp",
-        "isEdit": "t23u09",
-        "isList": "ctz936",
-        "isQuery": "1b6hqa",
-        "queryType": "7yz6j2",
-        "htmlType": "0o7mas",
-        "dictType": "yvpo5q",
-        "priority": 489
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:58",
+        "lastTime": "2025-10-20 01:16:58",
+        "columnId": 432,
+        "tableId": 135,
+        "columnName": "necole.oreilly",
+        "columnComment": "hxf06g",
+        "columnType": "czohua",
+        "javaType": "zcy8q5",
+        "javaField": "x53da3",
+        "isPk": "ge0j3p",
+        "isIncrement": "qjul0l",
+        "isRequired": "iq1tdf",
+        "isInsert": "v4opgb",
+        "isEdit": "6y68jr",
+        "isList": "x442q5",
+        "isQuery": "ggce63",
+        "queryType": "bii8ge",
+        "htmlType": "qrkoh0",
+        "dictType": "utfj8a",
+        "priority": 470
       },
       "subTable": {
         "$ref": "..."
       },
       "columns": [
         {
-          "creatorId": "149",
-          "createTime": "2025-10-19 22:39:51",
-          "lastTime": "2025-10-19 22:39:51",
-          "columnId": 664,
-          "tableId": 692,
-          "columnName": "zona.sauer",
-          "columnComment": "sv553q",
-          "columnType": "puhodj",
-          "javaType": "6xfhqm",
-          "javaField": "b2cegm",
-          "isPk": "ul8gic",
-          "isIncrement": "3xyokr",
-          "isRequired": "4qg3gg",
-          "isInsert": "s5c9t1",
-          "isEdit": "fnf01q",
-          "isList": "7yvybi",
-          "isQuery": "2mw4rn",
-          "queryType": "mhvj5i",
-          "htmlType": "87zgwd",
-          "dictType": "vgoo8g",
-          "priority": 608
+          "creatorId": "127",
+          "createTime": "2025-10-20 01:16:58",
+          "lastTime": "2025-10-20 01:16:58",
+          "columnId": 997,
+          "tableId": 932,
+          "columnName": "necole.oreilly",
+          "columnComment": "6vkpk3",
+          "columnType": "rnct74",
+          "javaType": "h1frfn",
+          "javaField": "kzmng8",
+          "isPk": "rdcuy2",
+          "isIncrement": "abi04u",
+          "isRequired": "pdag8b",
+          "isInsert": "ygwc3o",
+          "isEdit": "eh3i1t",
+          "isList": "rhu7yo",
+          "isQuery": "dio5zf",
+          "queryType": "twv11j",
+          "htmlType": "js0ifi",
+          "dictType": "4kxuzo",
+          "priority": 264
         }
       ],
-      "optionLists": "6eci47",
-      "treeCode": "62411",
-      "treeParentCode": "62411",
-      "treeName": "zona.sauer",
-      "parentMenuId": 226,
-      "parentMenuName": "zona.sauer",
-      "Description": "7cq3u8",
+      "optionLists": "8nyh3k",
+      "treeCode": "65412",
+      "treeParentCode": "65412",
+      "treeName": "necole.oreilly",
+      "parentMenuId": 928,
+      "parentMenuName": "necole.oreilly",
+      "Description": "6wmo5z",
       "page": 1,
       "limit": 10,
       "params": {
@@ -22201,8 +22201,8 @@ timestamp|string|返回时间戳字符串|-
       }
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22232,7 +22232,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/532.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/348.do
 ```
 **Response-fields:**
 
@@ -22257,8 +22257,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22361,7 +22361,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?subTable.columns[0].columnType=ra6m7t&tableName=zona.sauer&subTable.functionName=zona.sauer&subTable.columns[0].isEdit=61fos7&subTable.limit=10&columns[0].columnId=753&columns[0].columnType=fghdwm&columns[0].isEdit=dr1d15&lastTime=2025-10-19 22:39:51&pkColumn.createTime=2025-10-19 22:39:51&subTable.createTime=2025-10-19 22:39:51&subTable.pkColumn.isRequired=b0wg8t&subTable.pkColumn.isList=ih7v2c&subTable.subTable.treeName=zona.sauer&tplWebType=o4h0xx&treeName=zona.sauer&subTable.subTable.functionAuthor=Yen Kreiger&subTable.subTable.page=1&subTable.businessName=zona.sauer&subTable.pkColumn.queryType=wuvvhr&subTable.subTable.Description=k4747x&subTable.columns[0].isIncrement=rmboyc&subTable.genPath=cwi1uo&subTable.subTable.treeParentCode=62411&treeCode=62411&subTableName=zona.sauer&subTable.optionLists=gfyv8y&subTable.subTable.parentMenuId=661&pkColumn.isList=kgmxc0&subTable.subTable.treeCode=62411&limit=10&creatorId=149&columns[0].priority=268&subTable.subTable.genType=zmkokp&subTable.columns[0].dictType=wfls5v&subTable.treeName=zona.sauer&formColNum=571&pkColumn.javaType=kkw2oq&subTable.pkColumn.columnType=rklu24&pkColumn.tableId=767&subTable.pkColumn.columnName=zona.sauer&pkColumn.columnName=zona.sauer&subTable.subTable.genPath=mzoge3&subTable.columns[0].queryType=cqy75a&pkColumn.isInsert=tw2i03&subTableFkName=zona.sauer&businessName=zona.sauer&subTable.tableName=zona.sauer&subTable.functionAuthor=Yen Kreiger&subTable.pkColumn.javaField=3wvewu&subTable.pkColumn.lastTime=2025-10-19 22:39:51&tplCategory=gdxglq&subTable.pkColumn.dictType=pue7fk&pkColumn.columnComment=rlkdy3&subTable.pkColumn.isQuery=bdm8kn&subTable.subTable.className=zona.sauer&Description=rwk7s6&subTable.columns[0].isRequired=cymeuu&createTime=2025-10-19 22:39:51&treeParentCode=62411&pkColumn.isEdit=te74gv&subTable.columns[0].createTime=2025-10-19 22:39:51&columns[0].createTime=2025-10-19 22:39:51&subTable.columns[0].creatorId=149&subTable.columns[0].isInsert=pwlly3&functionName=zona.sauer&subTable.subTable.tableName=zona.sauer&subTable.columns[0].isList=m7mlm3&subTable.subTable.creatorId=149&subTable.pkColumn.tableId=365&subTable.columns[0].lastTime=2025-10-19 22:39:51&subTable.parentMenuId=82&page=1&subTable.columns[0].htmlType=xzhat5&parentMenuId=752&parentMenuName=zona.sauer&subTable.columns[0].isQuery=h3kvf4&pkColumn.queryType=ij9tpn&subTable.page=1&columns[0].lastTime=2025-10-19 22:39:51&columns[0].dictType=paw23l&columns[0].javaType=jrditd&subTable.pkColumn.javaType=591uny&subTable.subTable.tableComment=fpazfm&pkColumn.columnType=yxil4k&subTable.subTable.subTableFkName=zona.sauer&pkColumn.isQuery=0avk9a&pkColumn.creatorId=149&subTable.subTable.tplCategory=8bxjll&subTable.columns[0].isPk=td9mqv&subTable.subTableFkName=zona.sauer&subTable.packageName=zona.sauer&subTable.moduleName=zona.sauer&subTable.treeParentCode=62411&pkColumn.htmlType=gqsiqy&columns[0].columnName=zona.sauer&columns[0].columnComment=2vlcta&columns[0].isIncrement=ilwzhr&columns[0].htmlType=zxp0z2&optionLists=r275ho&subTable.genType=8tzlof&subTable.parentMenuName=zona.sauer&subTable.subTable.businessName=zona.sauer&pkColumn.priority=446&subTable.columns[0].priority=106&columns[0].isList=c54eo1&pkColumn.isRequired=bkcvfz&subTable.subTable.parentMenuName=zona.sauer&columns[0].isRequired=k2paap&pkColumn.isPk=hbdkz6&columns[0].isInsert=pmzjo5&pkColumn.lastTime=2025-10-19 22:39:51&pkColumn.dictType=54mll1&subTable.subTable.subTableName=zona.sauer&subTable.subTable.packageName=zona.sauer&subTable.subTable.createTime=2025-10-19 22:39:51&subTable.tplCategory=heusiz&subTable.Description=wp87xs&packageName=zona.sauer&tableComment=1v9vvf&subTable.pkColumn.priority=351&subTable.columns[0].javaField=ciuoos&pkColumn.javaField=547otm&tableId=504&subTable.pkColumn.isEdit=bmc97m&columns[0].queryType=rncz1v&subTable.tableId=578&subTable.creatorId=149&genType=6fuxk0&pkColumn.columnId=683&subTable.pkColumn.isPk=8fa9en&subTable.tableComment=l0gbv1&subTable.pkColumn.columnId=24&subTable.pkColumn.htmlType=ljtvsb&subTable.subTable.formColNum=949&subTable.columns[0].javaType=z8mq37&subTable.pkColumn.isInsert=xn5b2y&genPath=mwe5mq&subTable.treeCode=62411&subTable.subTable.limit=10&columns[0].creatorId=149&subTable.subTableName=zona.sauer&subTable.className=zona.sauer&subTable.columns[0].columnId=476&columns[0].isPk=sssw3x&subTable.formColNum=955&subTable.pkColumn.creatorId=149&subTable.columns[0].columnComment=3koljz&subTable.subTable.tplWebType=lm5x2d&subTable.columns[0].columnName=zona.sauer&columns[0].tableId=924&columns[0].isQuery=jq9erh&pkColumn.isIncrement=r6jtnp&moduleName=zona.sauer&functionAuthor=Yen Kreiger&subTable.pkColumn.createTime=2025-10-19 22:39:51&subTable.subTable.tableId=34&subTable.columns[0].tableId=812&columns[0].javaField=j0gn5s&className=zona.sauer&subTable.lastTime=2025-10-19 22:39:51&subTable.subTable.moduleName=zona.sauer&subTable.pkColumn.columnComment=vh5zc6&subTable.pkColumn.isIncrement=m3nbvi&subTable.tplWebType=2j8o2q&subTable.subTable.lastTime=2025-10-19 22:39:51&subTable.subTable.functionName=zona.sauer&subTable.subTable.optionLists=lapc5c
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?packageName=necole.oreilly&subTable.subTableName=necole.oreilly&subTable.pkColumn.isIncrement=udjj81&subTable.subTable.lastTime=2025-10-20 01:16:58&subTable.columns[0].javaType=rbjb2y&subTable.columns[0].isIncrement=ryyeza&columns[0].columnName=necole.oreilly&subTable.pkColumn.isEdit=fd4f7g&treeCode=65412&columns[0].javaType=o868da&subTable.subTable.className=necole.oreilly&moduleName=necole.oreilly&pkColumn.isList=wodot2&subTable.pkColumn.columnName=necole.oreilly&subTable.subTable.Description=o43wzs&subTable.treeName=necole.oreilly&subTable.subTable.tplWebType=dmvgk0&subTable.tableComment=e37gqj&subTable.pkColumn.priority=601&tableId=379&subTableFkName=necole.oreilly&pkColumn.columnType=nbter0&subTable.columns[0].columnComment=srxpz0&subTable.tplWebType=gnwcil&subTable.pkColumn.isRequired=el52z9&subTable.subTable.moduleName=necole.oreilly&subTable.subTable.functionAuthor=Terina Veum&pkColumn.isEdit=0dfmyb&columns[0].javaField=stmkuf&subTable.limit=10&optionLists=h01rx2&parentMenuId=954&subTable.columns[0].tableId=227&columns[0].columnId=630&subTable.pkColumn.javaType=29j7bx&subTable.subTableFkName=necole.oreilly&subTable.columns[0].isEdit=p2ajxv&subTable.subTable.genPath=o2oz47&columns[0].createTime=2025-10-20 01:16:58&subTable.columns[0].columnType=3y61ny&columns[0].priority=532&subTable.subTable.tableComment=6nvdc9&subTable.subTable.treeName=necole.oreilly&pkColumn.isQuery=ssf46a&subTable.subTable.parentMenuId=850&pkColumn.priority=207&subTable.columns[0].htmlType=rar98w&subTable.columns[0].isInsert=qiw4av&columns[0].isPk=op556s&columns[0].creatorId=127&pkColumn.isIncrement=dpbxd9&subTable.tplCategory=5pd6t8&subTable.functionAuthor=Terina Veum&pkColumn.isPk=89bm50&subTable.pkColumn.isPk=z8j8lk&subTable.subTable.genType=mmx9cl&subTable.columns[0].isList=ej42r9&subTable.subTable.creatorId=127&subTable.tableId=846&columns[0].dictType=gpae81&subTable.pkColumn.queryType=8a4r8p&columns[0].isIncrement=gymdi8&subTable.columns[0].javaField=5pb7uh&columns[0].lastTime=2025-10-20 01:16:58&subTableName=necole.oreilly&subTable.businessName=necole.oreilly&subTable.subTable.optionLists=36q965&subTable.subTable.tableName=necole.oreilly&subTable.subTable.functionName=necole.oreilly&pkColumn.queryType=hbzzzr&pkColumn.htmlType=wat43m&subTable.genType=r1mlzr&functionAuthor=Terina Veum&pkColumn.columnComment=ita6wz&genPath=sange8&pkColumn.javaField=62uxqn&subTable.pkColumn.columnId=231&subTable.columns[0].isRequired=101f11&subTable.optionLists=verdsf&genType=aaz3x2&pkColumn.columnId=703&subTable.columns[0].lastTime=2025-10-20 01:16:58&subTable.columns[0].queryType=554ywc&subTable.pkColumn.htmlType=68vnfj&businessName=necole.oreilly&subTable.pkColumn.columnType=m95igb&subTable.columns[0].dictType=f43vfo&columns[0].isRequired=zbvs0j&columns[0].isList=ha9j7p&subTable.packageName=necole.oreilly&subTable.formColNum=793&subTable.pkColumn.tableId=833&subTable.genPath=15nafi&subTable.pkColumn.createTime=2025-10-20 01:16:58&subTable.subTable.subTableName=necole.oreilly&subTable.subTable.createTime=2025-10-20 01:16:58&subTable.columns[0].isQuery=d4dai8&subTable.pkColumn.isList=pvhbuw&subTable.Description=cgngnt&columns[0].columnType=e1febl&columns[0].queryType=tskrdw&subTable.subTable.parentMenuName=necole.oreilly&pkColumn.isInsert=1ut491&columns[0].isQuery=329lzr&columns[0].isInsert=1fqnwn&tplCategory=0mlp0k&className=necole.oreilly&page=1&tableComment=4jbiij&subTable.subTable.limit=10&subTable.columns[0].columnId=628&pkColumn.lastTime=2025-10-20 01:16:58&subTable.subTable.subTableFkName=necole.oreilly&functionName=necole.oreilly&columns[0].tableId=279&subTable.subTable.tableId=460&subTable.columns[0].columnName=necole.oreilly&subTable.functionName=necole.oreilly&columns[0].columnComment=ulo4ga&Description=pk2kna&subTable.pkColumn.columnComment=u0g6ql&createTime=2025-10-20 01:16:58&subTable.subTable.businessName=necole.oreilly&lastTime=2025-10-20 01:16:58&subTable.tableName=necole.oreilly&subTable.parentMenuName=necole.oreilly&pkColumn.tableId=138&pkColumn.isRequired=el6bf7&subTable.creatorId=127&subTable.subTable.packageName=necole.oreilly&subTable.createTime=2025-10-20 01:16:58&subTable.lastTime=2025-10-20 01:16:58&subTable.columns[0].createTime=2025-10-20 01:16:58&pkColumn.createTime=2025-10-20 01:16:58&subTable.pkColumn.javaField=7efgjx&subTable.columns[0].creatorId=127&subTable.treeParentCode=65412&subTable.treeCode=65412&subTable.page=1&columns[0].htmlType=dmdaqm&pkColumn.columnName=necole.oreilly&subTable.subTable.page=1&subTable.pkColumn.isQuery=n5vjpx&subTable.subTable.treeCode=65412&treeParentCode=65412&subTable.moduleName=necole.oreilly&parentMenuName=necole.oreilly&columns[0].isEdit=s8awn2&subTable.parentMenuId=366&subTable.columns[0].isPk=46j6c7&tplWebType=tp1zxy&subTable.pkColumn.dictType=9lf7kh&subTable.pkColumn.isInsert=k1jejz&subTable.subTable.formColNum=774&subTable.pkColumn.creatorId=127&subTable.subTable.tplCategory=xjflro&pkColumn.javaType=9x8frj&creatorId=127&pkColumn.dictType=lnduay&subTable.columns[0].priority=825&pkColumn.creatorId=127&treeName=necole.oreilly&limit=10&tableName=necole.oreilly&subTable.subTable.treeParentCode=65412&subTable.className=necole.oreilly&formColNum=311&subTable.pkColumn.lastTime=2025-10-20 01:16:58
 ```
 **Response-fields:**
 
@@ -22401,27 +22401,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "p12h9b",
-    "pageNum": 850,
+    "stackTrace": "tgf5fm",
+    "pageNum": 654,
     "pageSize": 10,
-    "startRow": 845,
-    "endRow": 497,
-    "total": 172,
-    "pages": 577,
+    "startRow": 817,
+    "endRow": 874,
+    "total": 566,
+    "pages": 818,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "4v8voz",
-    "orderBy": "nfzpa8",
+    "countColumn": "strn5h",
+    "orderBy": "b9t805",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "laak3n",
+    "dialectClass": "992bmv",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22451,7 +22451,7 @@ tableId|int64|表对象ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=844
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=498
 ```
 **Response-fields:**
 
@@ -22493,31 +22493,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:51",
-      "lastTime": "2025-10-19 22:39:51",
-      "columnId": 567,
-      "tableId": 139,
-      "columnName": "zona.sauer",
-      "columnComment": "wlljgl",
-      "columnType": "7g9svt",
-      "javaType": "8flevf",
-      "javaField": "gr8bg7",
-      "isPk": "af5xpk",
-      "isIncrement": "wsnqnu",
-      "isRequired": "mowleb",
-      "isInsert": "ffzy0k",
-      "isEdit": "8fxufb",
-      "isList": "ix9z4x",
-      "isQuery": "ugsp6t",
-      "queryType": "jiff7l",
-      "htmlType": "j21qmn",
-      "dictType": "v6eiqo",
-      "priority": 245
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:58",
+      "lastTime": "2025-10-20 01:16:58",
+      "columnId": 917,
+      "tableId": 444,
+      "columnName": "necole.oreilly",
+      "columnComment": "yuv8dc",
+      "columnType": "zyw0ow",
+      "javaType": "2l8nk5",
+      "javaField": "vlrjjb",
+      "isPk": "g719vn",
+      "isIncrement": "k7lhe7",
+      "isRequired": "j8xdsb",
+      "isInsert": "q4k8no",
+      "isEdit": "kmk2mk",
+      "isList": "0t2n10",
+      "isQuery": "f63d3g",
+      "queryType": "ddtj73",
+      "htmlType": "dwnkr0",
+      "dictType": "48mitn",
+      "priority": 926
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22547,7 +22547,7 @@ tables|string|表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=ek9rzw'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=qt6dfd'
 ```
 **Response-fields:**
 
@@ -22566,9 +22566,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ycz0f3",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "0vc9jx",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22598,7 +22598,7 @@ sql|string|  SQL脚本|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=ryiqb3'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=teu0v2'
 ```
 **Response-fields:**
 
@@ -22617,9 +22617,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wjkby2",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "3l6spm",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22725,83 +22725,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:51",
-    "lastTime": "2025-10-19 22:39:51",
-    "tableId": 107,
-    "tableName": "zona.sauer",
-    "tableComment": "7vii2v",
-    "subTableName": "zona.sauer",
-    "subTableFkName": "zona.sauer",
-    "className": "zona.sauer",
-    "tplCategory": "91rfb1",
-    "tplWebType": "8unez4",
-    "packageName": "zona.sauer",
-    "moduleName": "zona.sauer",
-    "businessName": "zona.sauer",
-    "functionName": "zona.sauer",
-    "functionAuthor": "Yen Kreiger",
-    "formColNum": 940,
-    "genType": "7g41g7",
-    "genPath": "2u9w9n",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:58",
+    "lastTime": "2025-10-20 01:16:58",
+    "tableId": 747,
+    "tableName": "necole.oreilly",
+    "tableComment": "lxxjnk",
+    "subTableName": "necole.oreilly",
+    "subTableFkName": "necole.oreilly",
+    "className": "necole.oreilly",
+    "tplCategory": "mgj2sp",
+    "tplWebType": "w7nb9w",
+    "packageName": "necole.oreilly",
+    "moduleName": "necole.oreilly",
+    "businessName": "necole.oreilly",
+    "functionName": "necole.oreilly",
+    "functionAuthor": "Terina Veum",
+    "formColNum": 850,
+    "genType": "24aq0t",
+    "genPath": "33gqxo",
     "pkColumn": {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:51",
-      "lastTime": "2025-10-19 22:39:51",
-      "columnId": 184,
-      "tableId": 970,
-      "columnName": "zona.sauer",
-      "columnComment": "9hp8x0",
-      "columnType": "eu2lpn",
-      "javaType": "t6ztvb",
-      "javaField": "7y208r",
-      "isPk": "qip4yj",
-      "isIncrement": "g7ymo4",
-      "isRequired": "chxb6x",
-      "isInsert": "6m6djm",
-      "isEdit": "pj9i5w",
-      "isList": "4rg3wy",
-      "isQuery": "y074f3",
-      "queryType": "uz6437",
-      "htmlType": "hgksfe",
-      "dictType": "bczrtt",
-      "priority": 101
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:58",
+      "lastTime": "2025-10-20 01:16:58",
+      "columnId": 164,
+      "tableId": 86,
+      "columnName": "necole.oreilly",
+      "columnComment": "ckqfbo",
+      "columnType": "i06b87",
+      "javaType": "n311yv",
+      "javaField": "g44qb7",
+      "isPk": "orwu6s",
+      "isIncrement": "rie0c1",
+      "isRequired": "onpw6s",
+      "isInsert": "bi9miy",
+      "isEdit": "2iy6tm",
+      "isList": "w6l72s",
+      "isQuery": "40oi86",
+      "queryType": "47zlxj",
+      "htmlType": "wc4xbd",
+      "dictType": "ge4ho0",
+      "priority": 277
     },
     "subTable": {
       "$ref": "..."
     },
     "columns": [
       {
-        "creatorId": "149",
-        "createTime": "2025-10-19 22:39:51",
-        "lastTime": "2025-10-19 22:39:51",
-        "columnId": 977,
-        "tableId": 502,
-        "columnName": "zona.sauer",
-        "columnComment": "gic1pe",
-        "columnType": "igv6yo",
-        "javaType": "ckxz2f",
-        "javaField": "8iy5h1",
-        "isPk": "qw1r9v",
-        "isIncrement": "6xegpt",
-        "isRequired": "ywlhke",
-        "isInsert": "aikuf9",
-        "isEdit": "9zztzc",
-        "isList": "0fjkcu",
-        "isQuery": "6khtae",
-        "queryType": "7441sg",
-        "htmlType": "jgfgv0",
-        "dictType": "opi5dg",
-        "priority": 338
+        "creatorId": "127",
+        "createTime": "2025-10-20 01:16:58",
+        "lastTime": "2025-10-20 01:16:58",
+        "columnId": 909,
+        "tableId": 553,
+        "columnName": "necole.oreilly",
+        "columnComment": "fc8kxb",
+        "columnType": "ak87ai",
+        "javaType": "fhlpea",
+        "javaField": "rhwdf8",
+        "isPk": "gobnw6",
+        "isIncrement": "jqdrqk",
+        "isRequired": "jziou1",
+        "isInsert": "wirhz2",
+        "isEdit": "gptd3m",
+        "isList": "ph6lhu",
+        "isQuery": "g0kq10",
+        "queryType": "9tj5qk",
+        "htmlType": "xrzspr",
+        "dictType": "bw6ua4",
+        "priority": 536
       }
     ],
-    "optionLists": "4tv54h",
-    "treeCode": "62411",
-    "treeParentCode": "62411",
-    "treeName": "zona.sauer",
-    "parentMenuId": 469,
-    "parentMenuName": "zona.sauer",
-    "Description": "jzoau5",
+    "optionLists": "yekkxr",
+    "treeCode": "65412",
+    "treeParentCode": "65412",
+    "treeName": "necole.oreilly",
+    "parentMenuId": 547,
+    "parentMenuName": "necole.oreilly",
+    "Description": "2ot6yc",
     "page": 1,
     "limit": 10,
     "params": {
@@ -22827,9 +22827,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9f65st",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "4txhvo",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22878,9 +22878,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dpjr4y",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "1apfmt",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22910,7 +22910,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/543.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/787.do
 ```
 **Response-fields:**
 
@@ -22930,11 +22930,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "d6jlhw",
-    "mapKey2": "omi3n2"
+    "mapKey1": "m2a7as",
+    "mapKey2": "700jrz"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -22964,7 +22964,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/zona.sauer.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -22983,9 +22983,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "782grm",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "89fza2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23015,7 +23015,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/zona.sauer.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -23034,9 +23034,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8lgl5f",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "pi79cz",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23066,7 +23066,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/zona.sauer.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/necole.oreilly.do
 ```
 **Response-fields:**
 
@@ -23085,9 +23085,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "trio2u",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "pyhxcs",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23117,7 +23117,7 @@ tables|string|   表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=1dnypm
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=vza5sa
 ```
 **Response-fields:**
 
@@ -23136,9 +23136,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "immgdt",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "49ftzz",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23196,7 +23196,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?receiverName=zona.sauer&returnInfo=77zwp7&bizSubtype=iwcai7&delFlag=7&sendStatus=6yj4dc&providerName=zona.sauer&orderBy=834&endTime=2025-10-19 22:38:36&spare2=obpg2y&description=sx13r3&appId=149&receiverMobile=1-312-770-5203&content=4g14ip&bizType=si6z3q&returnTime=2025-10-19 22:39:36&foreignId=149&status=3bkq07&creatorId=149&page=1&q=hssumd&id=846&startTime=2025-10-19 22:38:36&limit=10&sendTime=2025-10-19&msgUrl=www.aubrey-rice.net&spare1=34bqf8&providerId=149
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?bizSubtype=ol3c3a&orderBy=876&limit=10&returnTime=2025-10-20 01:16:42&page=1&endTime=2025-10-20 01:15:40&bizType=50mmo5&spare1=mbhnv3&status=2r90iq&description=a83m24&sendStatus=3kg3x9&id=275&providerId=127&content=o2o9zp&creatorId=127&receiverMobile=1-856-813-9551&sendTime=2025-10-20&delFlag=4&spare2=cfezyu&foreignId=127&msgUrl=www.emanuel-bosco.biz&q=o4ognc&appId=127&returnInfo=f2aded&startTime=2025-10-20 01:15:40&receiverName=necole.oreilly&providerName=necole.oreilly
 ```
 **Response-fields:**
 
@@ -23240,33 +23240,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:36",
-      "lastTime": "2025-10-19 22:39:36",
-      "id": 688,
-      "appId": "149",
-      "providerId": "149",
-      "providerName": "zona.sauer",
-      "foreignId": "149",
-      "receiverMobile": "1-312-770-5203",
-      "receiverName": "zona.sauer",
-      "bizType": "9diwgv",
-      "bizSubtype": "mc0svk",
-      "content": "ah3u9p",
-      "msgUrl": "www.aubrey-rice.net",
-      "status": "nhqvaw",
-      "sendTime": "2025-10-19",
-      "sendStatus": "dqchvf",
-      "returnTime": "2025-10-19 22:39:36",
-      "returnInfo": "5s7xxr",
-      "delFlag": 7,
-      "description": "nksabq",
-      "spare1": "80dyng",
-      "spare2": "ioji5z"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:42",
+      "lastTime": "2025-10-20 01:16:42",
+      "id": 524,
+      "appId": "127",
+      "providerId": "127",
+      "providerName": "necole.oreilly",
+      "foreignId": "127",
+      "receiverMobile": "1-856-813-9551",
+      "receiverName": "necole.oreilly",
+      "bizType": "v6ts2u",
+      "bizSubtype": "6mepyg",
+      "content": "5e96on",
+      "msgUrl": "www.emanuel-bosco.biz",
+      "status": "xaoop7",
+      "sendTime": "2025-10-20",
+      "sendStatus": "94zwwc",
+      "returnTime": "2025-10-20 01:16:42",
+      "returnInfo": "20b83y",
+      "delFlag": 4,
+      "description": "4u3lzk",
+      "spare1": "9mcia3",
+      "spare2": "5ob8om"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23340,32 +23340,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 314,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "receiverMobile": "1-312-770-5203",
-    "receiverName": "zona.sauer",
-    "bizType": "b25c5s",
-    "bizSubtype": "c00341",
-    "content": "q0meyx",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "2teid8",
-    "sendTime": "2025-10-19",
-    "sendStatus": "9a067s",
-    "returnTime": "2025-10-19 22:39:36",
-    "returnInfo": "85q1ws",
-    "delFlag": 7,
-    "description": "yiy5hy",
-    "spare1": "bcayo4",
-    "spare2": "papw0f"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 754,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "receiverMobile": "1-856-813-9551",
+    "receiverName": "necole.oreilly",
+    "bizType": "7hxodo",
+    "bizSubtype": "jvaj7h",
+    "content": "21mny6",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "obhc3p",
+    "sendTime": "2025-10-20",
+    "sendStatus": "81ffti",
+    "returnTime": "2025-10-20 01:16:42",
+    "returnInfo": "07zsng",
+    "delFlag": 4,
+    "description": "1wmhwn",
+    "spare1": "2qzn6x",
+    "spare2": "egtqze"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23421,29 +23421,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 933,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "receiverMobile": "1-312-770-5203",
-    "receiverName": "zona.sauer",
-    "bizType": "a6qbqf",
-    "bizSubtype": "l3kuea",
-    "content": "g930kq",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "4auun1",
-    "sendTime": "2025-10-19",
-    "sendStatus": "ag11or",
-    "returnTime": "2025-10-19 22:39:36",
-    "returnInfo": "l1w2z6",
-    "delFlag": 7,
-    "description": "ro3qf8",
-    "spare1": "ljs0dp",
-    "spare2": "azcpz4"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 857,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "receiverMobile": "1-856-813-9551",
+    "receiverName": "necole.oreilly",
+    "bizType": "9rzb20",
+    "bizSubtype": "9pnnxb",
+    "content": "i6b9tu",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "eda473",
+    "sendTime": "2025-10-20",
+    "sendStatus": "rkopcl",
+    "returnTime": "2025-10-20 01:16:42",
+    "returnInfo": "ig3psb",
+    "delFlag": 4,
+    "description": "2ff086",
+    "spare1": "eehorf",
+    "spare2": "godjn6"
   }
 }'
 ```
@@ -23464,9 +23464,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hxynbq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "91bj0w",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23522,29 +23522,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 396,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "receiverMobile": "1-312-770-5203",
-    "receiverName": "zona.sauer",
-    "bizType": "2yb951",
-    "bizSubtype": "3hfqbd",
-    "content": "7jrml5",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "b8i22g",
-    "sendTime": "2025-10-19",
-    "sendStatus": "sika12",
-    "returnTime": "2025-10-19 22:39:36",
-    "returnInfo": "0llyf0",
-    "delFlag": 7,
-    "description": "r7bhjq",
-    "spare1": "05iwgj",
-    "spare2": "nv0xii"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 617,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "receiverMobile": "1-856-813-9551",
+    "receiverName": "necole.oreilly",
+    "bizType": "ukzo0w",
+    "bizSubtype": "bvm0yl",
+    "content": "o9zi96",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "dudepj",
+    "sendTime": "2025-10-20",
+    "sendStatus": "h09v0x",
+    "returnTime": "2025-10-20 01:16:42",
+    "returnInfo": "n7nkgc",
+    "delFlag": 4,
+    "description": "vetykn",
+    "spare1": "cb5dcb",
+    "spare2": "cgeboc"
   }
 }'
 ```
@@ -23565,9 +23565,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "altnn3",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "usayce",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23617,15 +23617,15 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z7h5dc",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "yx15o5",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
 ## 短信邮箱登录验证
 ### 短信邮箱登录方法
-**URL:** https://linlan.net/eframe_backend/SecurityConstants.SMS_LOGIN.do
+**URL:** https://linlan.net/eframe_backend/login/sms.do
 
 **Type:** POST
 
@@ -23647,12 +23647,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/SecurityConstants.SMS_LOGIN.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/sms.do --data '{
   "data": {
-    "mobile": "1-312-770-5203",
-    "code": "62411",
-    "uuid": "65cedf9a-15d0-495b-acec-3fd846bd3f50",
-    "appId": "149"
+    "mobile": "1-856-813-9551",
+    "code": "65412",
+    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
+    "appId": "127"
   }
 }'
 ```
@@ -23678,18 +23678,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "149",
-    "token": "3u7rlc",
-    "updateTime": "2025-10-19 22:39:36",
-    "expireTime": "2025-10-19 22:39:36"
+    "userId": "127",
+    "token": "ajdh7r",
+    "updateTime": "2025-10-20 01:16:42",
+    "expireTime": "2025-10-20 01:16:42"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
 ### 登录发送短信验证码
-**URL:** https://linlan.net/eframe_backend/SecurityConstants.LOGIN_OTP_SEND.do
+**URL:** https://linlan.net/eframe_backend/login/otp/send.do
 
 **Type:** POST
 
@@ -23707,7 +23707,7 @@ mobile|string|手机号码|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -i https://linlan.net/eframe_backend/SecurityConstants.LOGIN_OTP_SEND.do --data 'mobile=1-312-770-5203'
+curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=1-856-813-9551'
 ```
 **Response-fields:**
 
@@ -23726,9 +23726,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xqp8fb",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "5b9onl",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23767,7 +23767,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?jobId=851&jobName=zona.sauer&status=141&misfirePolicy=i145p7&cronExpression=h67kd3&invokeTarget=3fbq6y&concurrent=5tla96&jobGroup=mzotlo&remark=77t25o
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?jobGroup=nepaxw&invokeTarget=4st2sv&jobName=necole.oreilly&concurrent=wthnyc&cronExpression=qpgqtq&jobId=349&remark=kxtoju&status=961&misfirePolicy=bycx62
 ```
 **Response-fields:**
 
@@ -23797,19 +23797,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "jobId": "149",
-      "jobName": "zona.sauer",
-      "jobGroup": "ifkkh4",
-      "invokeTarget": "hmgovo",
-      "cronExpression": "q6hvjf",
-      "misfirePolicy": "fnouls",
-      "concurrent": "va5b1y",
-      "status": 824,
-      "remark": "e5kevb"
+      "jobId": "127",
+      "jobName": "necole.oreilly",
+      "jobGroup": "19lh5s",
+      "invokeTarget": "54gonp",
+      "cronExpression": "gb42ko",
+      "misfirePolicy": "unyuir",
+      "concurrent": "8vpv4r",
+      "status": 872,
+      "remark": "uykls2"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23847,7 +23847,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'jobName=zona.sauer&invokeTarget=f0tf1v&jobId=368&concurrent=gxa83r&misfirePolicy=ttw643&jobGroup=3bb14n&status=357&remark=nh5b3o&cronExpression=y4n9zb'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'invokeTarget=123hnl&cronExpression=vagmm3&concurrent=yyud1j&remark=ck7bmn&jobId=535&status=449&jobGroup=cnlsbn&misfirePolicy=89l8vw&jobName=necole.oreilly'
 ```
 **Response-fields:**
 
@@ -23866,9 +23866,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9s1p73",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "3zz05y",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23898,7 +23898,7 @@ jobId|string|    任务ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/127.do
 ```
 **Response-fields:**
 
@@ -23927,18 +23927,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "jobId": "149",
-    "jobName": "zona.sauer",
-    "jobGroup": "sks0my",
-    "invokeTarget": "9lspku",
-    "cronExpression": "g7sr36",
-    "misfirePolicy": "2tqpk0",
-    "concurrent": "ojg3ku",
-    "status": 439,
-    "remark": "431pbs"
+    "jobId": "127",
+    "jobName": "necole.oreilly",
+    "jobGroup": "ud2aac",
+    "invokeTarget": "1zplgz",
+    "cronExpression": "s6bj2i",
+    "misfirePolicy": "y3cufp",
+    "concurrent": "lqur25",
+    "status": 747,
+    "remark": "20ptsb"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -23979,15 +23979,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/save.do --data '{
   "data": {
-    "jobId": "149",
-    "jobName": "zona.sauer",
-    "jobGroup": "znrgrf",
-    "invokeTarget": "yf9c7w",
-    "cronExpression": "sgzg75",
-    "misfirePolicy": "od6xcs",
-    "concurrent": "02edze",
-    "status": 577,
-    "remark": "hk4eg1"
+    "jobId": "127",
+    "jobName": "necole.oreilly",
+    "jobGroup": "1g4g3x",
+    "invokeTarget": "v2myhh",
+    "cronExpression": "ac28li",
+    "misfirePolicy": "oydte7",
+    "concurrent": "dsmri1",
+    "status": 661,
+    "remark": "axj68m"
   }
 }'
 ```
@@ -24008,9 +24008,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7wttti",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "0ufpje",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24051,15 +24051,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/update.do --data '{
   "data": {
-    "jobId": "149",
-    "jobName": "zona.sauer",
-    "jobGroup": "9o0j18",
-    "invokeTarget": "xmtyu6",
-    "cronExpression": "c5qukx",
-    "misfirePolicy": "ypg9bt",
-    "concurrent": "awxoqg",
-    "status": 969,
-    "remark": "aer4vy"
+    "jobId": "127",
+    "jobName": "necole.oreilly",
+    "jobGroup": "gu65rs",
+    "invokeTarget": "u0ooo4",
+    "cronExpression": "7lsn3z",
+    "misfirePolicy": "87avr8",
+    "concurrent": "62mfrc",
+    "status": 215,
+    "remark": "b4cvrc"
   }
 }'
 ```
@@ -24080,9 +24080,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "usz4ko",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "h7x0tt",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24123,15 +24123,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/changeStatus.do --data '{
   "data": {
-    "jobId": "149",
-    "jobName": "zona.sauer",
-    "jobGroup": "piotlj",
-    "invokeTarget": "gehkmk",
-    "cronExpression": "w34s6u",
-    "misfirePolicy": "fymaf8",
-    "concurrent": "l4vyo0",
-    "status": 442,
-    "remark": "4mxwzc"
+    "jobId": "127",
+    "jobName": "necole.oreilly",
+    "jobGroup": "vcttaq",
+    "invokeTarget": "y6b8gs",
+    "cronExpression": "aii7a8",
+    "misfirePolicy": "g5ebd0",
+    "concurrent": "mio8fw",
+    "status": 979,
+    "remark": "duqwqd"
   }
 }'
 ```
@@ -24152,9 +24152,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jc7t1z",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "wdfviu",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24195,15 +24195,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/run.do --data '{
   "data": {
-    "jobId": "149",
-    "jobName": "zona.sauer",
-    "jobGroup": "dtdrff",
-    "invokeTarget": "tozozg",
-    "cronExpression": "4wyalf",
-    "misfirePolicy": "guj6am",
-    "concurrent": "2q2gp8",
-    "status": 783,
-    "remark": "lm2c98"
+    "jobId": "127",
+    "jobName": "necole.oreilly",
+    "jobGroup": "jd2bmx",
+    "invokeTarget": "7w7u7r",
+    "cronExpression": "todtka",
+    "misfirePolicy": "ew8m2w",
+    "concurrent": "ebxdhm",
+    "status": 519,
+    "remark": "wfzkjf"
   }
 }'
 ```
@@ -24224,9 +24224,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "k06lls",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "yu46h4",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24275,9 +24275,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b73uzq",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "xx23hk",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24321,7 +24321,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?stopTime=2025-10-19 22:39:36&jobId=149&jobGroup=kyhqpg&status=761&exceptionInfo=utr07u&lastTime=2025-10-19 22:39:36&startTime=2025-10-19 22:39:36&createTime=2025-10-19 22:39:36&creatorId=149&jobName=zona.sauer&invokeTarget=o8v84p&jobLogId=785&jobMessage=success&remark=9mxvls
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?lastTime=2025-10-20 01:16:43&creatorId=127&jobGroup=1k56rz&exceptionInfo=185r5i&stopTime=2025-10-20 01:16:43&jobId=127&jobMessage=success&jobName=necole.oreilly&remark=frr4ih&createTime=2025-10-20 01:16:43&status=343&jobLogId=781&invokeTarget=gd6v3k&startTime=2025-10-20 01:16:43
 ```
 **Response-fields:**
 
@@ -24353,21 +24353,21 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:36",
-      "lastTime": "2025-10-19 22:39:36",
-      "jobLogId": "149",
-      "jobId": "149",
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:43",
+      "lastTime": "2025-10-20 01:16:43",
+      "jobLogId": "127",
+      "jobId": "127",
       "jobMessage": "success",
-      "status": 101,
-      "exceptionInfo": "otz1zp",
-      "startTime": "2025-10-19 22:39:36",
-      "stopTime": "2025-10-19 22:39:36",
-      "remark": "igiox2"
+      "status": 214,
+      "exceptionInfo": "s4n0wt",
+      "startTime": "2025-10-20 01:16:43",
+      "stopTime": "2025-10-20 01:16:43",
+      "remark": "0ca5o9"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24410,7 +24410,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'creatorId=149&createTime=2025-10-19 22:39:37&jobLogId=964&jobName=zona.sauer&invokeTarget=jj7owq&jobMessage=success&status=282&stopTime=2025-10-19 22:39:37&lastTime=2025-10-19 22:39:37&jobId=149&exceptionInfo=b64wsu&startTime=2025-10-19 22:39:37&remark=xykiof&jobGroup=kek5cc'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'startTime=2025-10-20 01:16:43&exceptionInfo=ghlepc&jobId=127&jobGroup=1udypt&createTime=2025-10-20 01:16:43&jobName=necole.oreilly&jobMessage=success&jobLogId=82&invokeTarget=y5qjab&creatorId=127&remark=6215at&lastTime=2025-10-20 01:16:43&status=542&stopTime=2025-10-20 01:16:43'
 ```
 **Response-fields:**
 
@@ -24429,9 +24429,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "byta0c",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "euxp6r",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24461,7 +24461,7 @@ jobLogId|string|    任务日志ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/149.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/127.do
 ```
 **Response-fields:**
 
@@ -24492,20 +24492,20 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:37",
-    "lastTime": "2025-10-19 22:39:37",
-    "jobLogId": "149",
-    "jobId": "149",
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:43",
+    "lastTime": "2025-10-20 01:16:43",
+    "jobLogId": "127",
+    "jobId": "127",
     "jobMessage": "success",
-    "status": 703,
-    "exceptionInfo": "ftggjn",
-    "startTime": "2025-10-19 22:39:37",
-    "stopTime": "2025-10-19 22:39:37",
-    "remark": "qeyf65"
+    "status": 972,
+    "exceptionInfo": "or9ksv",
+    "startTime": "2025-10-20 01:16:43",
+    "stopTime": "2025-10-20 01:16:43",
+    "remark": "odyk7z"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24554,9 +24554,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5mgn7i",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "czti8g",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24615,7 +24615,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?spare1=tfoh4l&bizType=a5pf6b&sendTime=2025-10-19&sendStatus=sckmm6&q=b3d2pw&senderName=zona.sauer&readTime=2025-10-19 22:39:35&delFlag=7&page=1&receiverName=zona.sauer&description=799801&receiverEmail=chuck.adams@gmail.com&creatorId=149&content=ynb8t0&appId=149&orderBy=286&id=900&spare2=hxiwf6&startTime=2025-10-19 22:38:36&endTime=2025-10-19 22:38:36&limit=10&title=gj9f3y&providerName=zona.sauer&msgUrl=www.aubrey-rice.net&status=kgecgf&providerId=149&foreignId=149&readStatus=xyhoty
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?providerId=127&status=iw6a4h&readStatus=zsepbf&id=361&startTime=2025-10-20 01:15:40&limit=10&senderName=necole.oreilly&sendTime=2025-10-20&receiverName=necole.oreilly&q=wzlk7m&content=emxizd&orderBy=702&readTime=2025-10-20 01:16:41&receiverEmail=eugenia.howe@yahoo.com&page=1&spare2=siggra&providerName=necole.oreilly&sendStatus=t80t64&delFlag=4&spare1=qgmbaf&appId=127&title=qbv9vy&foreignId=127&bizType=lcc0j4&msgUrl=www.emanuel-bosco.biz&description=612w9e&creatorId=127&endTime=2025-10-20 01:15:40
 ```
 **Response-fields:**
 
@@ -24660,34 +24660,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "149",
-      "createTime": "2025-10-19 22:39:35",
-      "lastTime": "2025-10-19 22:39:35",
-      "id": 844,
-      "appId": "149",
-      "providerId": "149",
-      "providerName": "zona.sauer",
-      "foreignId": "149",
-      "senderName": "zona.sauer",
-      "receiverEmail": "chuck.adams@gmail.com",
-      "receiverName": "zona.sauer",
-      "bizType": "834y0u",
-      "title": "8cwgtp",
-      "content": "azurx4",
-      "msgUrl": "www.aubrey-rice.net",
-      "status": "ewimk9",
-      "sendTime": "2025-10-19",
-      "sendStatus": "fvg7pu",
-      "readTime": "2025-10-19 22:39:35",
-      "readStatus": "n18ttk",
-      "delFlag": 7,
-      "description": "6uo15h",
-      "spare1": "sdoaef",
-      "spare2": "o7iyi4"
+      "creatorId": "127",
+      "createTime": "2025-10-20 01:16:41",
+      "lastTime": "2025-10-20 01:16:41",
+      "id": 397,
+      "appId": "127",
+      "providerId": "127",
+      "providerName": "necole.oreilly",
+      "foreignId": "127",
+      "senderName": "necole.oreilly",
+      "receiverEmail": "eugenia.howe@yahoo.com",
+      "receiverName": "necole.oreilly",
+      "bizType": "ria3k8",
+      "title": "w0g3hk",
+      "content": "qcmhyc",
+      "msgUrl": "www.emanuel-bosco.biz",
+      "status": "lmjmsu",
+      "sendTime": "2025-10-20",
+      "sendStatus": "y7chw1",
+      "readTime": "2025-10-20 01:16:41",
+      "readStatus": "yeo5co",
+      "delFlag": 4,
+      "description": "0nt029",
+      "spare1": "mtk1wg",
+      "spare2": "l3njb8"
     }
   ],
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24762,33 +24762,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 811,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "senderName": "zona.sauer",
-    "receiverEmail": "chuck.adams@gmail.com",
-    "receiverName": "zona.sauer",
-    "bizType": "3g433b",
-    "title": "4cuftr",
-    "content": "e1hjv8",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "fezqcq",
-    "sendTime": "2025-10-19",
-    "sendStatus": "1gwo6e",
-    "readTime": "2025-10-19 22:39:36",
-    "readStatus": "5ioy69",
-    "delFlag": 7,
-    "description": "47cjgp",
-    "spare1": "mao0qz",
-    "spare2": "tz5nfg"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 668,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "senderName": "necole.oreilly",
+    "receiverEmail": "eugenia.howe@yahoo.com",
+    "receiverName": "necole.oreilly",
+    "bizType": "ww030e",
+    "title": "mwgnrl",
+    "content": "qmuzrv",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "9u1t82",
+    "sendTime": "2025-10-20",
+    "sendStatus": "8kykas",
+    "readTime": "2025-10-20 01:16:42",
+    "readStatus": "scsv52",
+    "delFlag": 4,
+    "description": "tf0atx",
+    "spare1": "0xwr6b",
+    "spare2": "brh70t"
   },
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24845,30 +24845,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/save.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 231,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "senderName": "zona.sauer",
-    "receiverEmail": "chuck.adams@gmail.com",
-    "receiverName": "zona.sauer",
-    "bizType": "6ohncu",
-    "title": "1q6709",
-    "content": "fzjxtw",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "5z3rih",
-    "sendTime": "2025-10-19",
-    "sendStatus": "rp8qje",
-    "readTime": "2025-10-19 22:39:36",
-    "readStatus": "ng35be",
-    "delFlag": 7,
-    "description": "cf6k7u",
-    "spare1": "3m027y",
-    "spare2": "uf6m0i"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 611,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "senderName": "necole.oreilly",
+    "receiverEmail": "eugenia.howe@yahoo.com",
+    "receiverName": "necole.oreilly",
+    "bizType": "f5nsjv",
+    "title": "ctf1xu",
+    "content": "175bjh",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "yrc9z3",
+    "sendTime": "2025-10-20",
+    "sendStatus": "dm35e0",
+    "readTime": "2025-10-20 01:16:42",
+    "readStatus": "cwhrcd",
+    "delFlag": 4,
+    "description": "723y6d",
+    "spare1": "p7guj1",
+    "spare2": "v1iqqn"
   }
 }'
 ```
@@ -24889,9 +24889,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n3t88i",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "truruj",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -24948,30 +24948,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/update.do --data '{
   "data": {
-    "creatorId": "149",
-    "createTime": "2025-10-19 22:39:36",
-    "lastTime": "2025-10-19 22:39:36",
-    "id": 578,
-    "appId": "149",
-    "providerId": "149",
-    "providerName": "zona.sauer",
-    "foreignId": "149",
-    "senderName": "zona.sauer",
-    "receiverEmail": "chuck.adams@gmail.com",
-    "receiverName": "zona.sauer",
-    "bizType": "pjd81q",
-    "title": "r9qu52",
-    "content": "zf2601",
-    "msgUrl": "www.aubrey-rice.net",
-    "status": "9pq40p",
-    "sendTime": "2025-10-19",
-    "sendStatus": "d9gwor",
-    "readTime": "2025-10-19 22:39:36",
-    "readStatus": "o1suif",
-    "delFlag": 7,
-    "description": "sxdpmn",
-    "spare1": "w935z0",
-    "spare2": "hnkyex"
+    "creatorId": "127",
+    "createTime": "2025-10-20 01:16:42",
+    "lastTime": "2025-10-20 01:16:42",
+    "id": 246,
+    "appId": "127",
+    "providerId": "127",
+    "providerName": "necole.oreilly",
+    "foreignId": "127",
+    "senderName": "necole.oreilly",
+    "receiverEmail": "eugenia.howe@yahoo.com",
+    "receiverName": "necole.oreilly",
+    "bizType": "uspk41",
+    "title": "hmxywu",
+    "content": "diy4de",
+    "msgUrl": "www.emanuel-bosco.biz",
+    "status": "tkuqlz",
+    "sendTime": "2025-10-20",
+    "sendStatus": "5xlipl",
+    "readTime": "2025-10-20 01:16:42",
+    "readStatus": "909atq",
+    "delFlag": 4,
+    "description": "vhe327",
+    "spare1": "06pc0a",
+    "spare2": "9mhgdd"
   }
 }'
 ```
@@ -24992,9 +24992,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jifr75",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "4zety0",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 
@@ -25044,9 +25044,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f91r7q",
-  "requestId": "149",
-  "timestamp": "2025-10-19 22:38:36"
+  "data": "s54bv2",
+  "requestId": "127",
+  "timestamp": "2025-10-20 01:15:40"
 }
 ```
 

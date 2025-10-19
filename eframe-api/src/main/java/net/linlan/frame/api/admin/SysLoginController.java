@@ -58,7 +58,6 @@ import net.linlan.sys.web.RedisService;
 import net.linlan.utils.MessageUtils;
 import net.linlan.utils.constant.CacheConstants;
 import net.linlan.utils.constant.Constants;
-import net.linlan.utils.constant.SecurityConstants;
 import net.linlan.utils.exception.user.CaptchaException;
 import net.linlan.utils.exception.user.CaptchaExpireException;
 import static net.linlan.frame.web.SecurityUtils.getLoginUser;
@@ -96,7 +95,7 @@ public class SysLoginController {
      * @return 结果
      */
     @PlatLog(value = "登录方法", category = 10)
-    @PostMapping(SecurityConstants.FORM_LOGIN)
+    @PostMapping("/login")
     @Encrypt
     public ResponseResult<AppLoginInfo> login(@RequestBody LoginBody loginBody) {
         // 生成令牌

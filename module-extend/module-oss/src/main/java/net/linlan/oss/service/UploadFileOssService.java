@@ -71,12 +71,12 @@ public class UploadFileOssService {
     private CommFileService commFileService;
 
     /** 前台会员上传附件，会将前台动态的appId和用户Id传入
-     * @param file
-     * @param context
-     * @param appId
-     * @param userId
-     * @return
-     * @throws Exception
+     * @param file  文件
+     * @param context   上下文
+     * @param appId     应用ID
+     * @param userId    用户ID
+     * @return  文件对象
+     * @throws Exception    异常
      */
     public FileInfo uploadFileByMember(MultipartFile file, String context, String appId,
                                        String userId) throws Exception {
@@ -93,12 +93,12 @@ public class UploadFileOssService {
     }
 
     /** 前台Plat平台上传附件
-     * @param file
-     * @param context
-     * @param appId
-     * @param userId
-     * @return
-     * @throws Exception
+     * @param file  文件
+     * @param context   上下文
+     * @param appId     应用ID
+     * @param userId    用户ID
+     * @return  文件对象
+     * @throws Exception    异常
      */
     public FileInfo uploadFileByPlat(MultipartFile file, String context, String appId,
                                      String userId) throws Exception {
@@ -115,11 +115,11 @@ public class UploadFileOssService {
     }
 
     /** 后台管理上传附件
-     * @param file
-     * @param userId
-     * @param context
-     * @return
-     * @throws Exception
+     * @param file  文件
+     * @param context   上下文
+     * @param userId    用户ID
+     * @return  文件对象
+     * @throws Exception    异常
      */
     public FileInfo uploadFileByAdmin(MultipartFile file, String userId,
                                       String context) throws Exception {

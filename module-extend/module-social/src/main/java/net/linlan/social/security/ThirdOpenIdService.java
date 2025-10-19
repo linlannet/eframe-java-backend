@@ -25,7 +25,7 @@ import me.zhyd.oauth.model.AuthCallback;
 import me.zhyd.oauth.model.AuthResponse;
 import me.zhyd.oauth.model.AuthUser;
 import me.zhyd.oauth.request.AuthRequest;
-import net.linlan.social.service.ThirdLoginService;
+import net.linlan.social.third.service.ThirdMemberService;
 import net.linlan.social.vo.ThirdLoginBody;
 import net.linlan.utils.exception.CommonException;
 
@@ -39,7 +39,7 @@ import net.linlan.utils.exception.CommonException;
 public class ThirdOpenIdService {
 
     @Resource
-    private ThirdLoginService thirdLoginService;
+    private ThirdMemberService thirdMemberService;
 
     /**
      * 通过code，获取开放平台用户唯一标识
@@ -48,7 +48,7 @@ public class ThirdOpenIdService {
      * @return 开放平台用户唯一标识
      */
     public String getOpenId(ThirdLoginBody login) {
-        AuthRequest authRequest = thirdLoginService.getAuthRequest(login.getServerType());
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(login.getServerType());
         AuthCallback callback = AuthCallback.builder().code(login.getCode()).state(login.getState())
             .build();
 

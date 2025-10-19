@@ -24,12 +24,12 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.10</version>
+        <version>1.1.11</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>module-extend</artifactId>
-    <version>1.1.10</version>
+    <version>1.1.11</version>
     <packaging>pom</packaging>
     <name>module-extend</name>
     <description>

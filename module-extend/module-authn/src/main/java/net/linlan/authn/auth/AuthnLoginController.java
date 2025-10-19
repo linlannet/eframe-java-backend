@@ -29,7 +29,6 @@ import net.linlan.authn.vo.MobileLoginBody;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.frame.comm.vo.AppLoginInfo;
-import net.linlan.utils.constant.SecurityConstants;
 
 /**
  * 短信邮箱登录验证
@@ -48,7 +47,7 @@ public class AuthnLoginController {
      * @return 结果
      */
     @PlatLog(value = "短信邮箱登录方法", category = 10, srcCode = 11)
-    @PostMapping(SecurityConstants.SMS_LOGIN)
+    @PostMapping("/login/sms")
     @Encrypt
     public ResponseResult<AppLoginInfo> authnLogin(@RequestBody MobileLoginBody loginBody) {
         // 生成令牌
@@ -63,7 +62,7 @@ public class AuthnLoginController {
      * @return 短信发送状态
      */
     @PlatLog(value = "登录发送短信验证码", category = 10, srcCode = 11)
-    @PostMapping(SecurityConstants.LOGIN_OTP_SEND)
+    @PostMapping("/login/otp/send")
     public ResponseResult<String> sendCode(String mobile) {
         boolean flag = authnLoginService.sendCode(mobile);
         if (!flag) {
