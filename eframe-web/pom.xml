@@ -384,7 +384,7 @@
                         <include>net.linlan.eframe:module-generator</include>
                         <include>net.linlan.eframe:module-quartz</include>
                         <include>net.linlan.eframe:module-authn</include>
-                        <include>net.linlan.eframe:module-third</include>
+                        <include>net.linlan.eframe:module-social</include>
                     </includes>
                 </configuration>
                 <executions>
@@ -395,6 +395,7 @@
                             <!--smart-doc提供了html、openapi、markdown等goal，可按需配置-->
                             <goal>html</goal>
                             <goal>markdown</goal>
+                            <goal>openapi</goal>
                         </goals>
                     </execution>
                 </executions>

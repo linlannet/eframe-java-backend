@@ -1,10 +1,10 @@
 # 开发环境配置
 server:
-    # 服务器的HTTP端口，默认为8080
-    port: 8080
+    # 服务器的HTTP端口，默认为8310
+    port: 8310
     servlet:
         # 应用的访问路径
-        context-path: /
+        context-path: /eframe_backend
     tomcat:
         # tomcat的URI编码
         uri-encoding: UTF-8
@@ -22,7 +22,6 @@ logging:
         net.linlan: debug
         org.springframework: warn
 
-
 # 数据源配置
 spring:
     datasource:
@@ -30,9 +29,9 @@ spring:
         driverClassName: com.mysql.cj.jdbc.Driver
         druid:
             first: #数据源1-产品数据源
-                url: jdbc:mysql://localhost:3306/eframedb_1.0?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true&rewriteBatchedStatements=true
-                username: 'lldba'
-                password: 'DB_Lldba_2023!'
+                url: ENC(VtQCCE6cDu4s8PrtSVPfzsxKMb0QnCjYHFSwS/xRukWg4lJ5O66tBu/kyZxlHF/kpOlkeLmybXW9/Ax9V0uXCQ0IBypHD7S85Qf73wud8w9pRCKUG/uUI5Rqcr2a4w4LpU+2JkC+F/2KTgLh2e3tNv275qFzPJO1MpTOwP3C62pO0TMoqr2skhdqfTLwwHe5akMM1CGeuiPWeUM/WNg3NgetohKJ1ZrBbQkvuRsgkWHcKSohvKOfpUTbTQNl3hecEkGzs4vDin6oNLpTWtMZd7pH5906pI6c)
+                username: ENC(AFMlrHtGTsgv1996ntwDTw==)
+                password: ENC(RlZ72w8B5tePqOYBeIp6aNSctMB3d00C)
             h2: #数据源-H2本地数据库
                 url: jdbc:h2:~/H2Data/lldb;AUTO_SERVER=TRUE;LOG=0;UNDO_LOG=0
                 username: sa
@@ -88,11 +87,11 @@ spring:
     # redis 配置
     redis:
         # 地址
-        host: localhost
+        host: ENC(JhPS01GkvgppVXjOvqXeGiASep0iPwzD)
         # 端口，默认为6379
         port: 6379
         # 数据库索引
-        database: 0
+        database: 1
         # 密码
         password:
         # 连接超时时间
@@ -114,6 +113,6 @@ platform:
     prop:
         allowedOrigins: "*"
     database:
-        db_encrypt: false        #数据库敏感信息是否加密
-        db_key: encrypt_string        #数据库敏感字段加密值
-        db_key_out: encrypt_string_out        #数据库敏感字段对外提供加密值
+        db_encrypt: true        #数据库敏感信息是否加密
+        db_key: ENC(P6R+HqkSZbisYALF2cdM/2JIdlldfOs/)        #数据库敏感字段加密值
+        db_key_out: lldb_string_out        #数据库敏感字段对外提供加密值
