@@ -35,6 +35,8 @@ import org.springframework.util.StringUtils;
 
 import lombok.SneakyThrows;
 
+import net.linlan.commons.core.CharsetUtils;
+
 /**
  * Filename:AESUtil.java
  * Desc: AES非对称加密工具类
@@ -48,11 +50,14 @@ import lombok.SneakyThrows;
  */
 public class AESUtils {
 
-    private Logger              logger      = LoggerFactory.getLogger(getClass());
+    private Logger              logger               = LoggerFactory.getLogger(getClass());
 
-    private static final String ALGORITHM   = "AES";
-    private static final String DEFAULT_KEY = "sDx/XH3Aw9BIQClUSOdsjA==";
+    private static final String ALGORITHM            = "AES";
+    private static final String DEFAULT_KEY          = "sDx/XH3Aw9BIQClUSOdsjA==";
     private final String        KEY;
+    private static final String CBC_CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
+    public static final String  KEY_AES              = "AES";
+    private static final String ENCODING             = CharsetUtils.UTF_8;
 
     public AESUtils(String key) {
         this.KEY = key;
@@ -286,6 +291,72 @@ public class AESUtils {
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
         cipher.init(Cipher.DECRYPT_MODE, key, iv);
         return new String(cipher.doFinal(Base64.getDecoder().decode(cipherText)));
+    }
+
+    /**
+     * 解密
+     *
+     * @param data            待解密数据base64字符串
+     * @param secretKeyString aes密钥的base64字符串
+     * @param ivString        aes偏移量的base64字符串
+     * @return  加密后字符串
+     * @throws Exception    异常
+     */
+    public static String decrypt(String data, String secretKeyString,
+                                 String ivString) throws Exception {
+        byte[] secretKey = stringTransferToByteArray(secretKeyString);
+        byte[] iv = stringTransferToByteArray(ivString);
+        Cipher cipher = Cipher.getInstance(CBC_CIPHER_ALGORITHM);
+        SecretKeySpec secretKeySpec = new SecretKeySpec(secretKey, KEY_AES);
+        cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, new IvParameterSpec(iv));
+        String result = new String(cipher.doFinal(stringTransferToByteArray(data)));
+        return result;
+    }
+
+    /**
+     * 加密
+     *
+     * @param data            待加密数据的base64字符串
+     * @param secretKeyString aes密钥的base64字符串
+     * @param ivString        aes偏移量的base64字符串
+     * @return  解密后字符串
+     * @throws Exception    异常
+     */
+    public static String encrypt(String data, String secretKeyString,
+                                 String ivString) throws Exception {
+        byte[] secretKey = stringTransferToByteArray(secretKeyString);
+        byte[] iv = stringTransferToByteArray(ivString);
+        Cipher cipher = Cipher.getInstance(CBC_CIPHER_ALGORITHM);
+        SecretKeySpec secretKeySpec = new SecretKeySpec(secretKey, KEY_AES);
+        cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, new IvParameterSpec(iv));
+        String result = byteArrayTransferToString(cipher.doFinal(stringTransferToByteArray(data)));
+        return result;
+    }
+
+    /**
+     * byte[]转base64字符串
+     *
+     * @param bytes 输入流
+     * @return  转换后的字符串
+     */
+    public static String byteArrayTransferToString(byte[] bytes) {
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(bytes);
+    }
+
+    /**
+     * base64字符串转byte[]
+     * @param s 输入字符串
+     * @return  流数组
+     */
+    public static byte[] stringTransferToByteArray(String s) {
+        Base64.Decoder decoder = Base64.getDecoder();
+        try {
+            return decoder.decode(s.getBytes(ENCODING));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
