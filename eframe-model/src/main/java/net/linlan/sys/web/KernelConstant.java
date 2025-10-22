@@ -40,7 +40,7 @@ public class KernelConstant {
      * 超级管理员ID
      */
     public static final long    SUPER_ADMIN             = 1;
-    public static final String  SUPER_SYS               = "77f0shu0m3d110a1jiam03d23qi0001";
+    public static final String  SUPER_SYS               = "7890d4se-ae5x-11fb-b488-00163e4231ec";
 
     /**
      * default site id

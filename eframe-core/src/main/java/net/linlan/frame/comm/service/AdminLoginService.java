@@ -30,9 +30,7 @@ import org.springframework.stereotype.Component;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.constant.UserStatus;
 import net.linlan.frame.FrameUserDetails;
-import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.admin.service.InitialConfigService;
@@ -175,37 +173,6 @@ public class AdminLoginService {
                 loginUser.getAppId()));
         // 生成token
         return tokenService.createToken(loginUser);
-    }
-
-    /**
-     * 三方跳转登录认证方法
-     * @param username 系统用户名
-     * @param encodePwd 系统用户密码
-     * @param appId 应用ID
-     * @return  登录对象
-     */
-    public AppLoginInfo redirectLogin(String username, String encodePwd, String appId) {
-        AdminUserDto user = adminUserService.getByUsername(username);
-        if (ObjectUtils.isEmpty(user)) {
-            throw new CommonException("登录用户：" + username + " 不存在");
-        } else if (UserStatus.DELETED.getKey() == user.getDelFlag()) {
-            throw new CommonException("对不起，您的账号：" + username + " 已被删除");
-        } else if (UserStatus.DISABLE.getKey() == user.getStatus()) {
-            throw new CommonException("对不起，您的账号：" + username + " 已停用");
-        }
-        // 重写验证方法
-        sysPasswordService.socialValidate(user, encodePwd, appId);
-        org.springframework.security.core.userdetails.UserDetails userDetails = sysPermissionService
-            .createLoginUser(user);
-        FrameUserDetails loginUser = (FrameUserDetails) userDetails;
-        recordLoginInfo(null, loginUser.getUserId());
-        AsyncManager.me()
-            .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
-                loginUser.getAppId()));
-        // 生成token
-        return tokenService.createToken(loginUser);
-
     }
 
     /**

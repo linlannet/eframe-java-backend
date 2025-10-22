@@ -180,7 +180,7 @@ public class SecurityConfig {
                 // 对于登录login 注册register 和开放类接口api/open/等 允许匿名访问
                 requests
                     .antMatchers("/login", "/third/ecorgan/login", "/platLogin", "/register",
-                        "/api/app/third/user/register", "/api/open/**")
+                        "/api/open/**", "/login/**", "/register/**")
                     .permitAll()
                     // 静态资源，可匿名访问
                     .antMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css",

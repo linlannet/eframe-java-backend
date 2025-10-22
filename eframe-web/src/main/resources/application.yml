@@ -2,7 +2,7 @@
 spring:
     # 环境 dev开发环境|prod生产环境
     profiles:
-        active: dev
+        active: ver
     # 资源信息
     messages:
         # 国际化资源文件路径

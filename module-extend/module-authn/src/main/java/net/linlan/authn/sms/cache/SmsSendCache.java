@@ -17,6 +17,8 @@
  */
 package net.linlan.authn.sms.cache;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -32,7 +34,9 @@ import net.linlan.sys.web.RedisService;
 @Service
 @AllArgsConstructor
 public class SmsSendCache {
-    private final RedisService redisCache;
+
+    @Resource
+    private RedisService redisCache;
 
     /**
      * 获取发送手机短信验证码KEY
@@ -41,7 +45,7 @@ public class SmsSendCache {
      * @return KEY
      */
     private String getCodeKey(String mobile) {
-        return "module_ext:sms:code" + mobile;
+        return SmsConfigCache.SMS_CODE_PREFIX + mobile;
     }
 
     public void saveCode(String mobile, String code) {

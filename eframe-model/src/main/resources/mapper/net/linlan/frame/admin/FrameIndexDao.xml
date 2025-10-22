@@ -70,7 +70,7 @@
 
         SELECT A.TOTAL AS siteNum,B.TOTAL AS accountNum,C.TOTAL AS serviceOrganNum from
         (SELECT count(*) AS TOTAL from MANAGE_SITE) A,
-        (SELECT count(*) AS TOTAL from MEMBER_ACCOUNT ) B,
+        (SELECT count(*) AS TOTAL from CORE_ACCOUNT ) B,
         (SELECT count(*) AS TOTAL from CORE_ORGAN  WHERE ORGAN_PROPERTY ='三方服务商' ) C
 
     </select>

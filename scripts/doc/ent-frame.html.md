@@ -60,8 +60,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -98,8 +98,8 @@ code|string|返回状态码:正常状态为0|-
 msg|string|返回消息|-
 data|object|返回数据对象|-
 └─user|object|当前用户|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─authorities|array|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|所属应用ID|-
@@ -136,43 +136,43 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "username": "necole.oreilly",
-      "password": "e25yjo",
+      "password": "psrnie",
+      "username": "merle.larkin",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "userId": "127",
-      "appId": "127",
-      "deptId": 657,
-      "organId": "127",
-      "token": "hejhwm",
-      "viewName": "necole.oreilly",
+      "userId": "172",
+      "appId": "172",
+      "deptId": 700,
+      "organId": "172",
+      "token": "j0dvum",
+      "viewName": "merle.larkin",
       "needChangePassword": true,
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "zzwzm5",
-      "loginCount": 385,
-      "loginIp": "148.144.89.250",
-      "lastUpdatePasswordTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "foreignId": "127",
-      "expireTime": "2025-10-20 01:16:45",
-      "loginTime": "2025-10-20 01:16:45",
-      "userType": "vsb21e",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "w3cs79",
+      "loginCount": 258,
+      "loginIp": "137.119.212.174",
+      "lastUpdatePasswordTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "foreignId": "172",
+      "expireTime": "2025-10-20 18:25:57",
+      "loginTime": "2025-10-20 18:25:57",
+      "userType": "97jicz",
       "isSuperAdmin": true,
-      "loginBrowse": "seq58e",
-      "loginOs": "gp2hqw",
+      "loginBrowse": "nu52qh",
+      "loginOs": "1cw7az",
       "perms": [
-        "i4qy82"
+        "5oyysd"
       ]
     },
-    "roleGroup": "fm9fj2",
-    "positionGroup": "00a0id"
+    "roleGroup": "2pnu4o",
+    "positionGroup": "ctenby"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -301,60 +301,60 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:45",
-    "lastTime": "2025-10-20 01:16:45",
-    "id": 665,
-    "userId": "127",
-    "deptId": 648,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "wq3hmh",
-    "password": "htn92l",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:57",
+    "lastTime": "2025-10-20 18:25:57",
+    "id": 38,
+    "userId": "172",
+    "deptId": 527,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "yt9igo",
+    "password": "hh4qwf",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 883,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:45",
-    "description": "chqohi",
+    "status": 609,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:57",
+    "description": "feb3u7",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 416,
-      "organId": "127",
-      "parentId": 168,
-      "appId": "127",
-      "depttypeId": 435,
-      "foreignId": "127",
-      "createType": 175,
-      "type": "j3q8qt",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "jqsf4p",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "id": 16,
+      "organId": "172",
+      "parentId": 932,
+      "appId": "172",
+      "depttypeId": 170,
+      "foreignId": "172",
+      "createType": 413,
+      "type": "w5t9cl",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "onuo2s",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "d16802",
-      "priority": 409,
-      "status": 724,
-      "delFlag": 4,
-      "description": "zm3dbj",
-      "spare1": "r726om",
-      "spare2": "lub45u",
+      "searchCode": "81486",
+      "imagePath": "s4b9rl",
+      "priority": 734,
+      "status": 779,
+      "delFlag": 5,
+      "description": "r887dc",
+      "spare1": "mmuodd",
+      "spare2": "s8ihia",
       "children": [
         {
           "$ref": ".."
@@ -363,47 +363,47 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 215,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 158,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:57",
+        "lastTime": "2025-10-20 18:25:57",
+        "id": 429,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 278,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 643,
-        "description": "lmo58v",
-        "areaType": "0jrl7v"
+        "status": 347,
+        "description": "h98uxp",
+        "areaType": "1tt9gj"
       }
     ],
     "roleIds": [
-      418
+      921
     ],
     "positionIds": [
-      "oxr17d"
+      "apb65v"
     ],
-    "roleId": 466,
+    "roleId": 69,
     "userRoleList": [
       {
-        "id": 138,
-        "deptId": 262,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 278,
-        "roleName": "necole.oreilly",
-        "adminId": 613
+        "id": 124,
+        "deptId": 215,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 58,
+        "roleName": "merle.larkin",
+        "adminId": 339
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -520,60 +520,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:45",
-    "lastTime": "2025-10-20 01:16:45",
-    "id": 729,
-    "userId": "127",
-    "deptId": 816,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "jj8mev",
-    "password": "o23pt0",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:57",
+    "lastTime": "2025-10-20 18:25:57",
+    "id": 401,
+    "userId": "172",
+    "deptId": 22,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "1i0vpy",
+    "password": "yrh5v7",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 707,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:45",
-    "description": "exndgt",
+    "status": 281,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:57",
+    "description": "tttz5o",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 474,
-      "organId": "127",
-      "parentId": 971,
-      "appId": "127",
-      "depttypeId": 367,
-      "foreignId": "127",
-      "createType": 976,
-      "type": "v5k30t",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "28l3yv",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "id": 628,
+      "organId": "172",
+      "parentId": 37,
+      "appId": "172",
+      "depttypeId": 632,
+      "foreignId": "172",
+      "createType": 217,
+      "type": "29yjcg",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "kw6dnq",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "oro8rp",
-      "priority": 494,
-      "status": 445,
-      "delFlag": 4,
-      "description": "g5b3ky",
-      "spare1": "7msq3x",
-      "spare2": "2ji2qp",
+      "searchCode": "81486",
+      "imagePath": "ypzr9l",
+      "priority": 791,
+      "status": 866,
+      "delFlag": 5,
+      "description": "5vgp6t",
+      "spare1": "ojlb4x",
+      "spare2": "ndxj2j",
       "children": [
         {
           "$ref": ".."
@@ -582,44 +582,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 183,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 723,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:57",
+        "lastTime": "2025-10-20 18:25:57",
+        "id": 567,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 886,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 866,
-        "description": "ipjjmw",
-        "areaType": "kd7f81"
+        "status": 153,
+        "description": "um2loi",
+        "areaType": "gybwcv"
       }
     ],
     "roleIds": [
-      591
+      180
     ],
     "positionIds": [
-      "k7zdfb"
+      "rfzl0u"
     ],
-    "roleId": 768,
+    "roleId": 202,
     "userRoleList": [
       {
-        "id": 398,
-        "deptId": 632,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 717,
-        "roleName": "necole.oreilly",
-        "adminId": 762
+        "id": 334,
+        "deptId": 376,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 808,
+        "roleName": "merle.larkin",
+        "adminId": 104
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -641,8 +641,8 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": true,
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -676,8 +676,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
   "data": {
-    "oldPassword": "4lzz7v",
-    "newPassword": "dojz5w"
+    "oldPassword": "zp0tmo",
+    "newPassword": "n3x96c"
   }
 }'
 ```
@@ -701,8 +701,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -753,10 +753,10 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "imageUrl": "www.emanuel-bosco.biz"
+    "imageUrl": "www.ben-grant.info"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -802,7 +802,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?endTime=2025-10-20 01:15:40&refId=127&limit=10&refType=ge889d&startTime=2025-10-20 01:15:40&fileIsvalid=true&resclassId=127&fileSize=30&page=1&fileExtension=69jal1&fileName=necole.oreilly&appId=127&key=j1mg2s&orderBy=340&q=eqh4ao
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?key=zz6omw&page=1&fileIsvalid=true&fileSize=998&q=6ppw34&fileExtension=kpj5lg&resclassId=172&limit=10&endTime=2025-10-20 18:20:52&refId=172&orderBy=133&fileName=merle.larkin&appId=172&startTime=2025-10-20 18:20:52&refType=ih8bfd
 ```
 **Response-fields:**
 
@@ -834,26 +834,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 438,
+    "totalCount": 342,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "127",
-        "resclassId": "127",
-        "fileName": "necole.oreilly",
+        "id": "172",
+        "resclassId": "172",
+        "fileName": "merle.larkin",
         "fileIsvalid": true,
-        "createTime": "2025-10-20 01:16:51",
-        "fileExtension": "ec2y9p",
+        "createTime": "2025-10-20 18:26:03",
+        "fileExtension": "11z18g",
         "ids": [
-          "qpup37"
+          "ngo9eb"
         ]
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -898,7 +898,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileSize=262&appId=127&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&fileName=necole.oreilly&fileExtension=17oc08&refId=127&key=xgdxw8&q=yyki96&limit=10&refType=za7ruq&fileIsvalid=true&resclassId=127&orderBy=480&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'resclassId=172&page=1&refType=b5m2g9&fileSize=216&limit=10&key=nj8vej&appId=172&fileExtension=wgx5jo&q=s5szm2&orderBy=446&fileName=merle.larkin&fileIsvalid=true&startTime=2025-10-20 18:20:52&refId=172&endTime=2025-10-20 18:20:52'
 ```
 **Response-fields:**
 
@@ -917,9 +917,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "po450p",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "bazczz",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -950,7 +950,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=172
 ```
 **Response-fields:**
 
@@ -977,18 +977,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "127",
-    "resclassId": "127",
-    "fileName": "necole.oreilly",
+    "id": "172",
+    "resclassId": "172",
+    "fileName": "merle.larkin",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 01:16:51",
-    "fileExtension": "dsqmac",
+    "createTime": "2025-10-20 18:26:03",
+    "fileExtension": "5vh33x",
     "ids": [
-      "h3vbid"
+      "ww09li"
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1028,14 +1028,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "127",
-    "resclassId": "127",
-    "fileName": "necole.oreilly",
+    "id": "172",
+    "resclassId": "172",
+    "fileName": "merle.larkin",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 01:16:51",
-    "fileExtension": "o2pyk8",
+    "createTime": "2025-10-20 18:26:04",
+    "fileExtension": "khpov6",
     "ids": [
-      "so61a2"
+      "3vm2d7"
     ]
   }
 }'
@@ -1057,9 +1057,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l951d1",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "841y67",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1099,14 +1099,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "127",
-    "resclassId": "127",
-    "fileName": "necole.oreilly",
+    "id": "172",
+    "resclassId": "172",
+    "fileName": "merle.larkin",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 01:16:51",
-    "fileExtension": "xyneuh",
+    "createTime": "2025-10-20 18:26:04",
+    "fileExtension": "w1jxb6",
     "ids": [
-      "y1jx5m"
+      "xi6ipo"
     ]
   }
 }'
@@ -1128,9 +1128,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mqj4r4",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "2bmq1k",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1170,14 +1170,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "127",
-    "resclassId": "127",
-    "fileName": "necole.oreilly",
+    "id": "172",
+    "resclassId": "172",
+    "fileName": "merle.larkin",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 01:16:51",
-    "fileExtension": "697cfg",
+    "createTime": "2025-10-20 18:26:04",
+    "fileExtension": "4d83tj",
     "ids": [
-      "hapil2"
+      "gh80ol"
     ]
   }
 }'
@@ -1199,9 +1199,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "whi97k",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "1io9xx",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1245,9 +1245,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "e6zaok",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "rftw5r",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1279,7 +1279,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=necole.oreilly&delete=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=merle.larkin&delete=true
 ```
 **Response-fields:**
 
@@ -1298,9 +1298,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9aqoib",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "l1zfma",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1351,15 +1351,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "necole.oreilly",
-    "filename": "necole.oreilly",
-    "fileType": "t1podx",
-    "fileUrl": "www.emanuel-bosco.biz",
-    "fileHttpUrl": "www.emanuel-bosco.biz",
-    "statusCode": "65412"
+    "originFilename": "merle.larkin",
+    "filename": "merle.larkin",
+    "fileType": "6aup5y",
+    "fileUrl": "www.ben-grant.info",
+    "fileHttpUrl": "www.ben-grant.info",
+    "statusCode": "81486"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1417,16 +1417,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "necole.oreilly",
-      "filename": "necole.oreilly",
-      "fileType": "9apb90",
-      "fileUrl": "www.emanuel-bosco.biz",
-      "fileHttpUrl": "www.emanuel-bosco.biz",
-      "statusCode": "65412"
+      "originFilename": "merle.larkin",
+      "filename": "merle.larkin",
+      "fileType": "wu94z7",
+      "fileUrl": "www.ben-grant.info",
+      "fileHttpUrl": "www.ben-grant.info",
+      "statusCode": "81486"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1457,7 +1457,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=12blq9
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=su1pwa
 ```
 **Response-fields:**
 
@@ -1476,9 +1476,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ucdbmp",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ceipw4",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1518,7 +1518,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-10-20 01:15:40&limit=10&configKey=nqdxb4&isDisabled=true&page=1&configValue=0lu9oe&q=8dfxuc&endTime=2025-10-20 01:15:40&remark=s1p7ps&orderBy=352
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?configValue=sv6gos&limit=10&q=wu6k6r&orderBy=645&endTime=2025-10-20 18:20:52&remark=p9xoz9&page=1&startTime=2025-10-20 18:20:52&configKey=hab3d9&isDisabled=true
 ```
 **Response-fields:**
 
@@ -1548,22 +1548,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 126,
+    "totalCount": 700,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "127",
-        "configKey": "kgxkpk",
-        "configValue": "fi9y6c",
+        "configId": "172",
+        "configKey": "s0wwln",
+        "configValue": "1jdpki",
         "isDisabled": true,
-        "remark": "hesv4j"
+        "remark": "sxruzp"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1602,7 +1602,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'endTime=2025-10-20 01:15:40&page=1&orderBy=92&configKey=95wuhn&q=ysc4d1&startTime=2025-10-20 01:15:40&limit=10&configValue=azbzb5&isDisabled=true&remark=26138c'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'isDisabled=true&q=fh1c0u&limit=10&startTime=2025-10-20 18:20:52&remark=buh8ue&configKey=xgsbsw&orderBy=972&configValue=fubcmh&endTime=2025-10-20 18:20:52&page=1'
 ```
 **Response-fields:**
 
@@ -1621,9 +1621,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wekr16",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "cgleja",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1653,7 +1653,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/172.do
 ```
 **Response-fields:**
 
@@ -1678,14 +1678,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "127",
-    "configKey": "nhr7ja",
-    "configValue": "5mh3la",
+    "configId": "172",
+    "configKey": "50r1p1",
+    "configValue": "jsszfk",
     "isDisabled": true,
-    "remark": "kwhlks"
+    "remark": "oj76w7"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1715,7 +1715,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/et5f0m.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/41447l.do
 ```
 **Response-fields:**
 
@@ -1740,14 +1740,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "127",
-    "configKey": "4zbasv",
-    "configValue": "ji9uzi",
+    "configId": "172",
+    "configKey": "uhpy34",
+    "configValue": "9kwt0m",
     "isDisabled": true,
-    "remark": "lll2w6"
+    "remark": "kmmg15"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1784,11 +1784,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "127",
-    "configKey": "iozc39",
-    "configValue": "uvswtd",
+    "configId": "172",
+    "configKey": "2yo5eb",
+    "configValue": "8agu6i",
     "isDisabled": true,
-    "remark": "tn6cew"
+    "remark": "wgwizn"
   }
 }'
 ```
@@ -1809,9 +1809,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bdd6zn",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ausn4c",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1848,11 +1848,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "127",
-    "configKey": "xllvts",
-    "configValue": "1pcte1",
+    "configId": "172",
+    "configKey": "5e780d",
+    "configValue": "bdpv7m",
     "isDisabled": true,
-    "remark": "ppzea5"
+    "remark": "cwvlr6"
   }
 }'
 ```
@@ -1873,9 +1873,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "htwk2d",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "qwfg5t",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1924,9 +1924,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "85bol8",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "mzuhuq",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -1969,9 +1969,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "me2z2r",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "79r1n8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2003,7 +2003,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=necole.oreilly&ipaddr=vnqoy3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=merle.larkin&ipaddr=0bssbz
 ```
 **Response-fields:**
 
@@ -2032,18 +2032,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "127",
-      "deptName": "necole.oreilly",
-      "username": "necole.oreilly",
-      "ipaddr": "7ma4vw",
-      "loginLocation": "uu4y65",
-      "browser": "0jfkcc",
-      "os": "7ve499",
-      "loginTime": 1760894140169
+      "tokenId": "172",
+      "deptName": "merle.larkin",
+      "username": "merle.larkin",
+      "ipaddr": "tv82xt",
+      "loginLocation": "minmhr",
+      "browser": "exrfix",
+      "os": "iu1y1c",
+      "loginTime": 1760955652792
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2073,7 +2073,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/127.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/172.do
 ```
 **Response-fields:**
 
@@ -2092,9 +2092,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3b2tfy",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3yl4pb",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2160,7 +2160,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?namePy=07bf2a&idMobile=1-856-813-9551&spare3=8ital3&intro=9d2cew&address=752 Francene Creek， Gislasonstad， NM 46451-7250&q=rlcsxz&birthday=2025-10-20 01:16:55&endTime=2025-10-20 01:15:40&familyAddress=752 Francene Creek， Gislasonstad， NM 46451-7250&searchCode=65412&comefrom=8xxvqn&spare1=0c3yss&limit=10&spare4=6lzyac&idNum=0gdzhg&spareMobile=1-856-813-9551&ids=92xuoc&ids=92xuoc&page=1&emergencePhone=1-614-814-9478&idType=42whh3&nameEn=gkw8oe&isMobileConfirm=true&name=necole.oreilly&keywords=dxxigb&spare2=i2mznk&weixinId=127&startTime=2025-10-20 01:15:40&postCode=65412&nativePlace=vylndk&sname=necole.oreilly&sex=anyo11&qqNo=xkdets&orderBy=359&homeTel=bqd4k4&nickname=ethyl.nitzsche
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?spare4=40tbib&ids=k67ppr&ids=k67ppr&qqNo=q96edd&page=1&namePy=mpvyl6&keywords=823cpq&nameEn=vn3t5g&spare1=wc848k&spare2=oqkeb3&endTime=2025-10-20 18:20:52&spare3=fxgs3t&searchCode=81486&weixinId=172&homeTel=kd05o7&name=merle.larkin&idType=0l9595&orderBy=993&nickname=renna.dibbert&sex=w5m12w&idMobile=(415) 540-6962&startTime=2025-10-20 18:20:52&address=Apt. 410 14910 Erdman Heights， West Caroll， WI 86927&spareMobile=(415) 540-6962&limit=10&idNum=vpmhzq&emergencePhone=1-203-302-2484&intro=irdx33&q=w8d1ks&nativePlace=0bls1h&isMobileConfirm=true&comefrom=ybdyc6&familyAddress=Apt. 410 14910 Erdman Heights， West Caroll， WI 86927&birthday=2025-10-20 18:26:08&sname=merle.larkin&postCode=81486
 ```
 **Response-fields:**
 
@@ -2219,48 +2219,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:55",
-      "lastTime": "2025-10-20 01:16:55",
-      "id": "127",
-      "nickname": "ethyl.nitzsche",
-      "idName": "necole.oreilly",
-      "idNum": "y0w256",
-      "idMobile": "1-856-813-9551",
-      "idType": "o9um9j",
-      "namePy": "fhsr2m",
-      "sname": "necole.oreilly",
-      "nameEn": "sscwn3",
-      "searchCode": "65412",
-      "sex": "icm6dr",
-      "birthday": "2025-10-20 01:16:55",
-      "postCode": "65412",
-      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "nativePlace": "47r9g8",
-      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "homeTel": "onk44k",
-      "qqNo": "mrrmys",
-      "weixinId": "127",
-      "weiboId": "127",
-      "spareMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": "172",
+      "nickname": "renna.dibbert",
+      "idName": "merle.larkin",
+      "idNum": "zqipx6",
+      "idMobile": "(415) 540-6962",
+      "idType": "z6i0cb",
+      "namePy": "dghlhx",
+      "sname": "merle.larkin",
+      "nameEn": "icawjl",
+      "searchCode": "81486",
+      "sex": "ou4xq6",
+      "birthday": "2025-10-20 18:26:08",
+      "postCode": "81486",
+      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "nativePlace": "ijhrax",
+      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "homeTel": "o9769s",
+      "qqNo": "67uzac",
+      "weixinId": "172",
+      "weiboId": "172",
+      "spareMobile": "(415) 540-6962",
       "isMobileConfirm": true,
-      "emergencePhone": "1-614-814-9478",
-      "keywords": "7t2c65",
-      "intro": "n5p5z1",
-      "comefrom": "u050fn",
-      "imagePath": "5z2lti",
-      "userSignature": "m8pmy1",
-      "ipRange": "l90bf5",
-      "macCode": "65412",
-      "resume": "zpg73x",
-      "spare1": "x58y8a",
-      "spare2": "2unxsp",
-      "spare3": "oqbxfo",
-      "spare4": "fb5uhc"
+      "emergencePhone": "1-203-302-2484",
+      "keywords": "6nukzz",
+      "intro": "9194hu",
+      "comefrom": "shkuvs",
+      "imagePath": "np89c3",
+      "userSignature": "xp3lyj",
+      "ipRange": "phpjye",
+      "macCode": "81486",
+      "resume": "goqkcc",
+      "spare1": "i2zzxl",
+      "spare2": "sc2yj0",
+      "spare3": "9htdat",
+      "spare4": "hs14po"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2349,47 +2349,47 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "nickname": "ethyl.nitzsche",
-    "idName": "necole.oreilly",
-    "idNum": "yvknoj",
-    "idMobile": "1-856-813-9551",
-    "idType": "i5oreg",
-    "namePy": "p7qulg",
-    "sname": "necole.oreilly",
-    "nameEn": "lf3f4j",
-    "searchCode": "65412",
-    "sex": "jdzmz9",
-    "birthday": "2025-10-20 01:16:55",
-    "postCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "nativePlace": "3zqs98",
-    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "homeTel": "3t1o4c",
-    "qqNo": "k04131",
-    "weixinId": "127",
-    "weiboId": "127",
-    "spareMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "nickname": "renna.dibbert",
+    "idName": "merle.larkin",
+    "idNum": "nbvjdj",
+    "idMobile": "(415) 540-6962",
+    "idType": "hq72jj",
+    "namePy": "foppkl",
+    "sname": "merle.larkin",
+    "nameEn": "4adq8e",
+    "searchCode": "81486",
+    "sex": "978dvi",
+    "birthday": "2025-10-20 18:26:08",
+    "postCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "nativePlace": "ogze4w",
+    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "homeTel": "y8g2c8",
+    "qqNo": "gqgevv",
+    "weixinId": "172",
+    "weiboId": "172",
+    "spareMobile": "(415) 540-6962",
     "isMobileConfirm": true,
-    "emergencePhone": "1-614-814-9478",
-    "keywords": "o2lj2n",
-    "intro": "xu0fu5",
-    "comefrom": "50knhk",
-    "imagePath": "tzni8p",
-    "userSignature": "7olkqn",
-    "ipRange": "prbl6a",
-    "macCode": "65412",
-    "resume": "0k0q2b",
-    "spare1": "b5yyh1",
-    "spare2": "qj3prz",
-    "spare3": "kpl56y",
-    "spare4": "cl2dee"
+    "emergencePhone": "1-203-302-2484",
+    "keywords": "uqt9wq",
+    "intro": "666v1r",
+    "comefrom": "tmu6bv",
+    "imagePath": "d69v9n",
+    "userSignature": "x8gcrm",
+    "ipRange": "vz0wua",
+    "macCode": "81486",
+    "resume": "vxb5tr",
+    "spare1": "55r4dh",
+    "spare2": "1tw8h4",
+    "spare3": "rdqy8b",
+    "spare4": "llipfk"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2460,44 +2460,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "nickname": "ethyl.nitzsche",
-    "idName": "necole.oreilly",
-    "idNum": "7f1xy3",
-    "idMobile": "1-856-813-9551",
-    "idType": "e834oy",
-    "namePy": "yin0nx",
-    "sname": "necole.oreilly",
-    "nameEn": "9nvlzu",
-    "searchCode": "65412",
-    "sex": "f82xj1",
-    "birthday": "2025-10-20 01:16:55",
-    "postCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "nativePlace": "704ey7",
-    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "homeTel": "ffow7a",
-    "qqNo": "gx9cas",
-    "weixinId": "127",
-    "weiboId": "127",
-    "spareMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "nickname": "renna.dibbert",
+    "idName": "merle.larkin",
+    "idNum": "hbkj0n",
+    "idMobile": "(415) 540-6962",
+    "idType": "vijfpr",
+    "namePy": "8mv278",
+    "sname": "merle.larkin",
+    "nameEn": "8g346f",
+    "searchCode": "81486",
+    "sex": "agy4gw",
+    "birthday": "2025-10-20 18:26:08",
+    "postCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "nativePlace": "cfdsmg",
+    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "homeTel": "l77x60",
+    "qqNo": "7j94i1",
+    "weixinId": "172",
+    "weiboId": "172",
+    "spareMobile": "(415) 540-6962",
     "isMobileConfirm": true,
-    "emergencePhone": "1-614-814-9478",
-    "keywords": "ris4ep",
-    "intro": "8ll0m2",
-    "comefrom": "bwnl12",
-    "imagePath": "4guoaw",
-    "userSignature": "nyymfw",
-    "ipRange": "994epo",
-    "macCode": "65412",
-    "resume": "5xo19o",
-    "spare1": "79wmyy",
-    "spare2": "4vnyi3",
-    "spare3": "khs8zf",
-    "spare4": "kjx9v4"
+    "emergencePhone": "1-203-302-2484",
+    "keywords": "1uu9ev",
+    "intro": "7i6f30",
+    "comefrom": "ui6y0w",
+    "imagePath": "xa0ymg",
+    "userSignature": "t17d2i",
+    "ipRange": "xrqp45",
+    "macCode": "81486",
+    "resume": "1ce7pc",
+    "spare1": "8keeka",
+    "spare2": "2n1l1t",
+    "spare3": "mt4jbs",
+    "spare4": "l1uivd"
   }
 }'
 ```
@@ -2518,9 +2518,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a0gsd2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "iz6syg",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2591,44 +2591,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "nickname": "ethyl.nitzsche",
-    "idName": "necole.oreilly",
-    "idNum": "wvui63",
-    "idMobile": "1-856-813-9551",
-    "idType": "ixgex5",
-    "namePy": "md4mo2",
-    "sname": "necole.oreilly",
-    "nameEn": "z5fjn4",
-    "searchCode": "65412",
-    "sex": "32hb3t",
-    "birthday": "2025-10-20 01:16:55",
-    "postCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "nativePlace": "pyjrrb",
-    "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "homeTel": "lefoz4",
-    "qqNo": "vqx2rl",
-    "weixinId": "127",
-    "weiboId": "127",
-    "spareMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "nickname": "renna.dibbert",
+    "idName": "merle.larkin",
+    "idNum": "wnppgr",
+    "idMobile": "(415) 540-6962",
+    "idType": "50a7dd",
+    "namePy": "wb0ipk",
+    "sname": "merle.larkin",
+    "nameEn": "65pr2b",
+    "searchCode": "81486",
+    "sex": "77jjhj",
+    "birthday": "2025-10-20 18:26:08",
+    "postCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "nativePlace": "nd4uho",
+    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "homeTel": "jv1knd",
+    "qqNo": "amt0xi",
+    "weixinId": "172",
+    "weiboId": "172",
+    "spareMobile": "(415) 540-6962",
     "isMobileConfirm": true,
-    "emergencePhone": "1-614-814-9478",
-    "keywords": "h3gjjh",
-    "intro": "npqy6a",
-    "comefrom": "dqp33a",
-    "imagePath": "zkwxej",
-    "userSignature": "cf5f5i",
-    "ipRange": "ldkd7o",
-    "macCode": "65412",
-    "resume": "x1e82c",
-    "spare1": "pfvw5o",
-    "spare2": "v0qteu",
-    "spare3": "38z5zi",
-    "spare4": "9w1jf8"
+    "emergencePhone": "1-203-302-2484",
+    "keywords": "wvtulx",
+    "intro": "atp6i7",
+    "comefrom": "2frhnq",
+    "imagePath": "01ehfb",
+    "userSignature": "v64zj0",
+    "ipRange": "8uqphw",
+    "macCode": "81486",
+    "resume": "fjrdra",
+    "spare1": "khmrcv",
+    "spare2": "qbid44",
+    "spare3": "4l1xfv",
+    "spare4": "mij68y"
   }
 }'
 ```
@@ -2649,9 +2649,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t4nkz5",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "i6ocsg",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2701,9 +2701,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "966lwi",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "n6pzxj",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -2761,7 +2761,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?email=eugenia.howe@yahoo.com&source=615&startTime=2025-10-20 01:15:40&registerTime=2025-10-20 01:16:55&workUserId=127&xzqhId=649&username=necole.oreilly&orderBy=291&bindOrganType=jlfamo&bindOrganId=127&delFlag=4&limit=10&spare2=256qdf&endTime=2025-10-20 01:15:40&description=7w355u&createTime=2025-10-20 01:15:40&searchCode=65412&q=4414e0&srcCode=604&page=1&lastAppId=127&ids=7llgl6&ids=7llgl6&spare1=iyw412&isBindFrontUser=iad1gp&mobile=1-856-813-9551&key=aji0ez&createType=498
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?mobile=(415) 540-6962&xzqhId=705&ids=nvvm4d&ids=nvvm4d&spare1=651vsl&lastAppId=172&orderBy=62&q=zrfigw&delFlag=5&email=vivian.streich@hotmail.com&isBindFrontUser=ukdo02&key=yd79rc&registerTime=2025-10-20 18:26:07&description=jwlbmd&source=765&workUserId=172&searchCode=81486&limit=10&createType=322&spare2=h1m0uk&bindOrganId=172&startTime=2025-10-20 18:20:52&bindOrganType=5165qi&createTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&page=1&srcCode=752&username=merle.larkin
 ```
 **Response-fields:**
 
@@ -2859,88 +2859,88 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:55",
-      "lastTime": "2025-10-20 01:16:55",
-      "id": "127",
-      "xzqhId": 201,
-      "source": "41r9on",
-      "createType": 301,
-      "username": "necole.oreilly",
-      "mobile": "1-856-813-9551",
-      "email": "eugenia.howe@yahoo.com",
-      "password": "n3jqdb",
-      "salt": "4lhbid",
-      "srcCode": 414,
-      "registerTime": "2025-10-20 01:16:55",
-      "registerIp": "148.144.89.250",
-      "currentLoginTime": "2025-10-20 01:16:55",
-      "currentLoginIp": "148.144.89.250",
-      "lastAppId": "127",
-      "lastLoginTime": "2025-10-20 01:16:55",
-      "lastLoginIp": "148.144.89.250",
-      "lastLogoutTime": "2025-10-20 01:16:55",
-      "loginCount": 639,
-      "resetKey": "9rtp6q",
-      "resetPwd": "8f69mw",
-      "lastResetTime": "2025-10-20 01:16:55",
-      "errorTime": "2025-10-20 01:16:55",
-      "errorCount": 522,
-      "errorIp": "148.144.89.250",
-      "lockTime": "2025-10-20 01:16:55",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:07",
+      "lastTime": "2025-10-20 18:26:07",
+      "id": "172",
+      "xzqhId": 48,
+      "source": "ps6l02",
+      "createType": 356,
+      "username": "merle.larkin",
+      "mobile": "(415) 540-6962",
+      "email": "vivian.streich@hotmail.com",
+      "password": "dwh0os",
+      "salt": "cxo3dq",
+      "srcCode": 864,
+      "registerTime": "2025-10-20 18:26:07",
+      "registerIp": "137.119.212.174",
+      "currentLoginTime": "2025-10-20 18:26:07",
+      "currentLoginIp": "137.119.212.174",
+      "lastAppId": "172",
+      "lastLoginTime": "2025-10-20 18:26:07",
+      "lastLoginIp": "137.119.212.174",
+      "lastLogoutTime": "2025-10-20 18:26:07",
+      "loginCount": 191,
+      "resetKey": "q6jjzo",
+      "resetPwd": "yw7ea7",
+      "lastResetTime": "2025-10-20 18:26:07",
+      "errorTime": "2025-10-20 18:26:07",
+      "errorCount": 32,
+      "errorIp": "137.119.212.174",
+      "lockTime": "2025-10-20 18:26:07",
       "activation": true,
-      "activationCode": "65412",
-      "priority": 926,
-      "delFlag": 4,
-      "deleteTime": "2025-10-20 01:16:55",
-      "description": "yueh0x",
-      "spare1": "s0q1h0",
-      "spare2": "3tedeb",
-      "newPassword": "h2bmzv",
+      "activationCode": "81486",
+      "priority": 401,
+      "delFlag": 5,
+      "deleteTime": "2025-10-20 18:26:07",
+      "description": "598p3t",
+      "spare1": "x4mzek",
+      "spare2": "uu95py",
+      "newPassword": "18wsbe",
       "baseUserExt": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:55",
-        "lastTime": "2025-10-20 01:16:55",
-        "id": "127",
-        "nickname": "ethyl.nitzsche",
-        "idName": "necole.oreilly",
-        "idNum": "11ulcq",
-        "idMobile": "1-856-813-9551",
-        "idType": "nfubkm",
-        "namePy": "paq13g",
-        "sname": "necole.oreilly",
-        "nameEn": "pivg5c",
-        "searchCode": "65412",
-        "sex": "sd95o9",
-        "birthday": "2025-10-20 01:16:55",
-        "postCode": "65412",
-        "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-        "nativePlace": "n9vu8m",
-        "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-        "homeTel": "y6ug78",
-        "qqNo": "s0nvxx",
-        "weixinId": "127",
-        "weiboId": "127",
-        "spareMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:08",
+        "lastTime": "2025-10-20 18:26:08",
+        "id": "172",
+        "nickname": "renna.dibbert",
+        "idName": "merle.larkin",
+        "idNum": "dpdpn3",
+        "idMobile": "(415) 540-6962",
+        "idType": "pdvg9k",
+        "namePy": "9ob9ve",
+        "sname": "merle.larkin",
+        "nameEn": "gs634z",
+        "searchCode": "81486",
+        "sex": "ojxtla",
+        "birthday": "2025-10-20 18:26:08",
+        "postCode": "81486",
+        "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+        "nativePlace": "ffqyos",
+        "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+        "homeTel": "fzsjhw",
+        "qqNo": "589mu8",
+        "weixinId": "172",
+        "weiboId": "172",
+        "spareMobile": "(415) 540-6962",
         "isMobileConfirm": true,
-        "emergencePhone": "1-614-814-9478",
-        "keywords": "jf9rk7",
-        "intro": "hbmsm8",
-        "comefrom": "wp2o28",
-        "imagePath": "r0ntkz",
-        "userSignature": "vjet1n",
-        "ipRange": "csu2sf",
-        "macCode": "65412",
-        "resume": "ynr6cx",
-        "spare1": "rommvc",
-        "spare2": "zczbs7",
-        "spare3": "zz0q3p",
-        "spare4": "g3xp9w"
+        "emergencePhone": "1-203-302-2484",
+        "keywords": "snq2hb",
+        "intro": "kyo7u2",
+        "comefrom": "pga4xg",
+        "imagePath": "9mk4v5",
+        "userSignature": "1d8hqx",
+        "ipRange": "nw9asa",
+        "macCode": "81486",
+        "resume": "57vkdn",
+        "spare1": "b88q1s",
+        "spare2": "lecdt3",
+        "spare3": "3srcyb",
+        "spare4": "0mp1q1"
       }
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3068,87 +3068,87 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "xzqhId": 294,
-    "source": "nwojll",
-    "createType": 134,
-    "username": "necole.oreilly",
-    "mobile": "1-856-813-9551",
-    "email": "eugenia.howe@yahoo.com",
-    "password": "r0dqad",
-    "salt": "cki9v9",
-    "srcCode": 849,
-    "registerTime": "2025-10-20 01:16:55",
-    "registerIp": "148.144.89.250",
-    "currentLoginTime": "2025-10-20 01:16:55",
-    "currentLoginIp": "148.144.89.250",
-    "lastAppId": "127",
-    "lastLoginTime": "2025-10-20 01:16:55",
-    "lastLoginIp": "148.144.89.250",
-    "lastLogoutTime": "2025-10-20 01:16:55",
-    "loginCount": 936,
-    "resetKey": "osk3xr",
-    "resetPwd": "yzi52b",
-    "lastResetTime": "2025-10-20 01:16:55",
-    "errorTime": "2025-10-20 01:16:55",
-    "errorCount": 7,
-    "errorIp": "148.144.89.250",
-    "lockTime": "2025-10-20 01:16:55",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "xzqhId": 600,
+    "source": "0jzl2p",
+    "createType": 854,
+    "username": "merle.larkin",
+    "mobile": "(415) 540-6962",
+    "email": "vivian.streich@hotmail.com",
+    "password": "27l2pe",
+    "salt": "wf491o",
+    "srcCode": 511,
+    "registerTime": "2025-10-20 18:26:08",
+    "registerIp": "137.119.212.174",
+    "currentLoginTime": "2025-10-20 18:26:08",
+    "currentLoginIp": "137.119.212.174",
+    "lastAppId": "172",
+    "lastLoginTime": "2025-10-20 18:26:08",
+    "lastLoginIp": "137.119.212.174",
+    "lastLogoutTime": "2025-10-20 18:26:08",
+    "loginCount": 797,
+    "resetKey": "6jo409",
+    "resetPwd": "f6so9x",
+    "lastResetTime": "2025-10-20 18:26:08",
+    "errorTime": "2025-10-20 18:26:08",
+    "errorCount": 442,
+    "errorIp": "137.119.212.174",
+    "lockTime": "2025-10-20 18:26:08",
     "activation": true,
-    "activationCode": "65412",
-    "priority": 314,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:55",
-    "description": "l8dxu5",
-    "spare1": "ehlf0w",
-    "spare2": "kqu1zw",
-    "newPassword": "s6lsi0",
+    "activationCode": "81486",
+    "priority": 298,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:08",
+    "description": "vx0cep",
+    "spare1": "vm606f",
+    "spare2": "m1zkuk",
+    "newPassword": "uhaq10",
     "baseUserExt": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:55",
-      "lastTime": "2025-10-20 01:16:55",
-      "id": "127",
-      "nickname": "ethyl.nitzsche",
-      "idName": "necole.oreilly",
-      "idNum": "5phj3q",
-      "idMobile": "1-856-813-9551",
-      "idType": "by1ih9",
-      "namePy": "qhp8qp",
-      "sname": "necole.oreilly",
-      "nameEn": "2lb7yv",
-      "searchCode": "65412",
-      "sex": "geqmlf",
-      "birthday": "2025-10-20 01:16:55",
-      "postCode": "65412",
-      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "nativePlace": "puywrv",
-      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "homeTel": "xv9cz2",
-      "qqNo": "itnn4r",
-      "weixinId": "127",
-      "weiboId": "127",
-      "spareMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": "172",
+      "nickname": "renna.dibbert",
+      "idName": "merle.larkin",
+      "idNum": "y6jbgx",
+      "idMobile": "(415) 540-6962",
+      "idType": "wscqzx",
+      "namePy": "rktoio",
+      "sname": "merle.larkin",
+      "nameEn": "lqjr68",
+      "searchCode": "81486",
+      "sex": "cctzcw",
+      "birthday": "2025-10-20 18:26:08",
+      "postCode": "81486",
+      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "nativePlace": "0j6ntj",
+      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "homeTel": "zi7d4i",
+      "qqNo": "892pqd",
+      "weixinId": "172",
+      "weiboId": "172",
+      "spareMobile": "(415) 540-6962",
       "isMobileConfirm": true,
-      "emergencePhone": "1-614-814-9478",
-      "keywords": "4udi0c",
-      "intro": "iu117u",
-      "comefrom": "32pz14",
-      "imagePath": "g6mtcl",
-      "userSignature": "goc4hh",
-      "ipRange": "eis3ak",
-      "macCode": "65412",
-      "resume": "7tqlv0",
-      "spare1": "v5xm6e",
-      "spare2": "5ue4s5",
-      "spare3": "994tqy",
-      "spare4": "f1j28q"
+      "emergencePhone": "1-203-302-2484",
+      "keywords": "f2v3e8",
+      "intro": "13ne8t",
+      "comefrom": "c1pz43",
+      "imagePath": "vrnsgr",
+      "userSignature": "bkpn27",
+      "ipRange": "jcoxf8",
+      "macCode": "81486",
+      "resume": "4vhpf8",
+      "spare1": "ubtp3b",
+      "spare2": "smit7t",
+      "spare3": "o3xioy",
+      "spare4": "feoq4a"
     }
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3258,83 +3258,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "xzqhId": 745,
-    "source": "eir35c",
-    "createType": 517,
-    "username": "necole.oreilly",
-    "mobile": "1-856-813-9551",
-    "email": "eugenia.howe@yahoo.com",
-    "password": "gvuw0t",
-    "salt": "35w05o",
-    "srcCode": 620,
-    "registerTime": "2025-10-20 01:16:55",
-    "registerIp": "148.144.89.250",
-    "currentLoginTime": "2025-10-20 01:16:55",
-    "currentLoginIp": "148.144.89.250",
-    "lastAppId": "127",
-    "lastLoginTime": "2025-10-20 01:16:55",
-    "lastLoginIp": "148.144.89.250",
-    "lastLogoutTime": "2025-10-20 01:16:55",
-    "loginCount": 308,
-    "resetKey": "6vn60c",
-    "resetPwd": "p64yyq",
-    "lastResetTime": "2025-10-20 01:16:55",
-    "errorTime": "2025-10-20 01:16:55",
-    "errorCount": 621,
-    "errorIp": "148.144.89.250",
-    "lockTime": "2025-10-20 01:16:55",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "xzqhId": 70,
+    "source": "y85hla",
+    "createType": 66,
+    "username": "merle.larkin",
+    "mobile": "(415) 540-6962",
+    "email": "vivian.streich@hotmail.com",
+    "password": "xc2i5b",
+    "salt": "yqo6in",
+    "srcCode": 677,
+    "registerTime": "2025-10-20 18:26:08",
+    "registerIp": "137.119.212.174",
+    "currentLoginTime": "2025-10-20 18:26:08",
+    "currentLoginIp": "137.119.212.174",
+    "lastAppId": "172",
+    "lastLoginTime": "2025-10-20 18:26:08",
+    "lastLoginIp": "137.119.212.174",
+    "lastLogoutTime": "2025-10-20 18:26:08",
+    "loginCount": 696,
+    "resetKey": "aupdk0",
+    "resetPwd": "5k7ptm",
+    "lastResetTime": "2025-10-20 18:26:08",
+    "errorTime": "2025-10-20 18:26:08",
+    "errorCount": 662,
+    "errorIp": "137.119.212.174",
+    "lockTime": "2025-10-20 18:26:08",
     "activation": true,
-    "activationCode": "65412",
-    "priority": 340,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:55",
-    "description": "yircm0",
-    "spare1": "luy8es",
-    "spare2": "o5jerh",
-    "newPassword": "ia89ue",
+    "activationCode": "81486",
+    "priority": 286,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:08",
+    "description": "5tjwxh",
+    "spare1": "u4glel",
+    "spare2": "89bo3u",
+    "newPassword": "nj8dno",
     "baseUserExt": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:55",
-      "lastTime": "2025-10-20 01:16:55",
-      "id": "127",
-      "nickname": "ethyl.nitzsche",
-      "idName": "necole.oreilly",
-      "idNum": "4nn6tl",
-      "idMobile": "1-856-813-9551",
-      "idType": "ndajhu",
-      "namePy": "0utdzc",
-      "sname": "necole.oreilly",
-      "nameEn": "8f6wyq",
-      "searchCode": "65412",
-      "sex": "shuzkw",
-      "birthday": "2025-10-20 01:16:55",
-      "postCode": "65412",
-      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "nativePlace": "3nwf6l",
-      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "homeTel": "i93281",
-      "qqNo": "t3eys4",
-      "weixinId": "127",
-      "weiboId": "127",
-      "spareMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": "172",
+      "nickname": "renna.dibbert",
+      "idName": "merle.larkin",
+      "idNum": "myq959",
+      "idMobile": "(415) 540-6962",
+      "idType": "bojwu7",
+      "namePy": "f125ao",
+      "sname": "merle.larkin",
+      "nameEn": "q3uwe1",
+      "searchCode": "81486",
+      "sex": "gm1wx6",
+      "birthday": "2025-10-20 18:26:08",
+      "postCode": "81486",
+      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "nativePlace": "t6h2wq",
+      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "homeTel": "tf6a06",
+      "qqNo": "w0197k",
+      "weixinId": "172",
+      "weiboId": "172",
+      "spareMobile": "(415) 540-6962",
       "isMobileConfirm": true,
-      "emergencePhone": "1-614-814-9478",
-      "keywords": "eheq8l",
-      "intro": "rz49qq",
-      "comefrom": "55ze8n",
-      "imagePath": "in2haf",
-      "userSignature": "3vmcwe",
-      "ipRange": "dscgiz",
-      "macCode": "65412",
-      "resume": "noal8r",
-      "spare1": "ajlx8r",
-      "spare2": "5u70q8",
-      "spare3": "130965",
-      "spare4": "jr1nd4"
+      "emergencePhone": "1-203-302-2484",
+      "keywords": "ba90h8",
+      "intro": "u5hjvy",
+      "comefrom": "89b0ys",
+      "imagePath": "m94a9m",
+      "userSignature": "2oojb8",
+      "ipRange": "2y3lwd",
+      "macCode": "81486",
+      "resume": "65ppep",
+      "spare1": "ysn5bi",
+      "spare2": "rw2cbh",
+      "spare3": "g4rwu9",
+      "spare4": "qa5af7"
     }
   }
 }'
@@ -3356,9 +3356,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fved71",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "g85rkb",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3468,83 +3468,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:55",
-    "lastTime": "2025-10-20 01:16:55",
-    "id": "127",
-    "xzqhId": 523,
-    "source": "9hrt38",
-    "createType": 576,
-    "username": "necole.oreilly",
-    "mobile": "1-856-813-9551",
-    "email": "eugenia.howe@yahoo.com",
-    "password": "obe7ln",
-    "salt": "385s1d",
-    "srcCode": 671,
-    "registerTime": "2025-10-20 01:16:55",
-    "registerIp": "148.144.89.250",
-    "currentLoginTime": "2025-10-20 01:16:55",
-    "currentLoginIp": "148.144.89.250",
-    "lastAppId": "127",
-    "lastLoginTime": "2025-10-20 01:16:55",
-    "lastLoginIp": "148.144.89.250",
-    "lastLogoutTime": "2025-10-20 01:16:55",
-    "loginCount": 397,
-    "resetKey": "4lfrqw",
-    "resetPwd": "r379pt",
-    "lastResetTime": "2025-10-20 01:16:55",
-    "errorTime": "2025-10-20 01:16:55",
-    "errorCount": 806,
-    "errorIp": "148.144.89.250",
-    "lockTime": "2025-10-20 01:16:55",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": "172",
+    "xzqhId": 549,
+    "source": "g7pi0v",
+    "createType": 191,
+    "username": "merle.larkin",
+    "mobile": "(415) 540-6962",
+    "email": "vivian.streich@hotmail.com",
+    "password": "2s9536",
+    "salt": "p767a0",
+    "srcCode": 511,
+    "registerTime": "2025-10-20 18:26:08",
+    "registerIp": "137.119.212.174",
+    "currentLoginTime": "2025-10-20 18:26:08",
+    "currentLoginIp": "137.119.212.174",
+    "lastAppId": "172",
+    "lastLoginTime": "2025-10-20 18:26:08",
+    "lastLoginIp": "137.119.212.174",
+    "lastLogoutTime": "2025-10-20 18:26:08",
+    "loginCount": 592,
+    "resetKey": "h7gpnp",
+    "resetPwd": "hee53w",
+    "lastResetTime": "2025-10-20 18:26:08",
+    "errorTime": "2025-10-20 18:26:08",
+    "errorCount": 186,
+    "errorIp": "137.119.212.174",
+    "lockTime": "2025-10-20 18:26:08",
     "activation": true,
-    "activationCode": "65412",
-    "priority": 826,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:55",
-    "description": "o6n81f",
-    "spare1": "b3il3e",
-    "spare2": "y5e83m",
-    "newPassword": "w8obgr",
+    "activationCode": "81486",
+    "priority": 640,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:08",
+    "description": "b75c01",
+    "spare1": "ag1sfj",
+    "spare2": "5k9qfa",
+    "newPassword": "g1ov5p",
     "baseUserExt": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:55",
-      "lastTime": "2025-10-20 01:16:55",
-      "id": "127",
-      "nickname": "ethyl.nitzsche",
-      "idName": "necole.oreilly",
-      "idNum": "hahwsr",
-      "idMobile": "1-856-813-9551",
-      "idType": "giybt0",
-      "namePy": "7w657a",
-      "sname": "necole.oreilly",
-      "nameEn": "yjycxm",
-      "searchCode": "65412",
-      "sex": "udx2wn",
-      "birthday": "2025-10-20 01:16:55",
-      "postCode": "65412",
-      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "nativePlace": "lx9iyr",
-      "familyAddress": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "homeTel": "k58kil",
-      "qqNo": "vpar7j",
-      "weixinId": "127",
-      "weiboId": "127",
-      "spareMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": "172",
+      "nickname": "renna.dibbert",
+      "idName": "merle.larkin",
+      "idNum": "bzsdr7",
+      "idMobile": "(415) 540-6962",
+      "idType": "vh0u2e",
+      "namePy": "8z6qgw",
+      "sname": "merle.larkin",
+      "nameEn": "tvgm77",
+      "searchCode": "81486",
+      "sex": "fdx8ks",
+      "birthday": "2025-10-20 18:26:08",
+      "postCode": "81486",
+      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "nativePlace": "0v7v47",
+      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "homeTel": "hlmy08",
+      "qqNo": "bjx50o",
+      "weixinId": "172",
+      "weiboId": "172",
+      "spareMobile": "(415) 540-6962",
       "isMobileConfirm": true,
-      "emergencePhone": "1-614-814-9478",
-      "keywords": "np1lbf",
-      "intro": "36tsc2",
-      "comefrom": "r3yybi",
-      "imagePath": "cq4d1f",
-      "userSignature": "ydrai1",
-      "ipRange": "tojfo1",
-      "macCode": "65412",
-      "resume": "3ggkli",
-      "spare1": "z9yvmy",
-      "spare2": "m2pshq",
-      "spare3": "qtja60",
-      "spare4": "ksg1nj"
+      "emergencePhone": "1-203-302-2484",
+      "keywords": "n0kk95",
+      "intro": "t6g1vw",
+      "comefrom": "8c6vth",
+      "imagePath": "voaju3",
+      "userSignature": "jbjsor",
+      "ipRange": "7eu2fh",
+      "macCode": "81486",
+      "resume": "gbdiy0",
+      "spare1": "q63i4w",
+      "spare2": "2ncml1",
+      "spare3": "jqde3s",
+      "spare4": "pq1kx4"
     }
   }
 }'
@@ -3566,9 +3566,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "63if7r",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "psfpej",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3618,9 +3618,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gb6614",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "uv3u0l",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3678,7 +3678,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?type=753&updatorId=127&endTime=2025-10-20 01:15:40&iconStyle=u6q1x4&startTime=2025-10-20 01:15:40&status=162&recvOrganId=127&msgUrl=www.emanuel-bosco.biz&imagePath=evsqis&q=dji7b7&content=mots5t&recvGroupId=127&readStatus=wacuaj&foreignId=127&updateTime=2025-10-20 01:16:56&id=435&recvMemberId=127&description=tbgae4&organId=127&title=r38o3f&creatorId=127&page=1&bizType=wllece&recvTargetid=127&orderBy=235&appId=127&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?creatorId=172&bizType=79jb9i&title=mj8jeg&iconStyle=2mex50&startTime=2025-10-20 18:20:52&recvTargetid=172&description=9n6fp0&foreignId=172&q=nc90ph&limit=10&appId=172&page=1&endTime=2025-10-20 18:20:52&organId=172&recvMemberId=172&id=854&type=925&readStatus=rf64xb&imagePath=lulumt&orderBy=205&status=961&recvOrganId=172&msgUrl=www.ben-grant.info&updateTime=2025-10-20 18:26:08&recvGroupId=172&updatorId=172&content=nywa47
 ```
 **Response-fields:**
 
@@ -3721,32 +3721,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:56",
-      "lastTime": "2025-10-20 01:16:56",
-      "id": 227,
-      "appId": "127",
-      "organId": "127",
-      "bizType": "0oc473",
-      "type": 22,
-      "title": "7p6yb8",
-      "content": "35qgnf",
-      "msgUrl": "www.emanuel-bosco.biz",
-      "foreignId": "127",
-      "imagePath": "e3ipri",
-      "iconStyle": "g576tr",
-      "recvMemberId": "127",
-      "recvGroupId": "127",
-      "recvOrganId": "127",
-      "recvTargetid": "127",
-      "status": 279,
-      "updatorId": "127",
-      "updateTime": "2025-10-20 01:16:56",
-      "description": "u2zy1y"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": 611,
+      "appId": "172",
+      "organId": "172",
+      "bizType": "9wlne0",
+      "type": 408,
+      "title": "h7vgeg",
+      "content": "8vpcva",
+      "msgUrl": "www.ben-grant.info",
+      "foreignId": "172",
+      "imagePath": "e40huh",
+      "iconStyle": "l5zwti",
+      "recvMemberId": "172",
+      "recvGroupId": "172",
+      "recvOrganId": "172",
+      "recvTargetid": "172",
+      "status": 355,
+      "updatorId": "172",
+      "updateTime": "2025-10-20 18:26:08",
+      "description": "b8uvlu"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3803,7 +3803,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?creatorId=127&msgUrl=www.emanuel-bosco.biz&foreignId=127&orderBy=813&iconStyle=yyq6s8&page=1&readStatus=h3gstp&bizType=3xku4i&content=fcmbye&title=doq9ex&status=37&startTime=2025-10-20 01:15:40&limit=10&updateTime=2025-10-20 01:16:56&appId=127&q=1wrpyh&type=768&imagePath=w569pz&recvGroupId=127&endTime=2025-10-20 01:15:40&description=h17n0u&recvOrganId=127&recvTargetid=127&id=183&updatorId=127&recvMemberId=127&organId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?imagePath=snqwu2&readStatus=u9csqv&foreignId=172&updateTime=2025-10-20 18:26:08&description=driaut&appId=172&endTime=2025-10-20 18:20:52&limit=10&recvTargetid=172&organId=172&startTime=2025-10-20 18:20:52&recvMemberId=172&content=xbrkd5&updatorId=172&msgUrl=www.ben-grant.info&iconStyle=6mfg61&type=970&status=627&title=d8mnn9&orderBy=565&id=87&bizType=vd1be3&recvGroupId=172&page=1&q=ogva7l&recvOrganId=172&creatorId=172
 ```
 **Response-fields:**
 
@@ -3846,32 +3846,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:56",
-      "lastTime": "2025-10-20 01:16:56",
-      "id": 875,
-      "appId": "127",
-      "organId": "127",
-      "bizType": "f4ycsl",
-      "type": 872,
-      "title": "ggmdr5",
-      "content": "8lr1k2",
-      "msgUrl": "www.emanuel-bosco.biz",
-      "foreignId": "127",
-      "imagePath": "yuekyi",
-      "iconStyle": "9n3vwn",
-      "recvMemberId": "127",
-      "recvGroupId": "127",
-      "recvOrganId": "127",
-      "recvTargetid": "127",
-      "status": 728,
-      "updatorId": "127",
-      "updateTime": "2025-10-20 01:16:56",
-      "description": "9jspr5"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:08",
+      "lastTime": "2025-10-20 18:26:08",
+      "id": 478,
+      "appId": "172",
+      "organId": "172",
+      "bizType": "bijdq9",
+      "type": 684,
+      "title": "pb2w1s",
+      "content": "9js9uy",
+      "msgUrl": "www.ben-grant.info",
+      "foreignId": "172",
+      "imagePath": "k6j6y7",
+      "iconStyle": "xnzma2",
+      "recvMemberId": "172",
+      "recvGroupId": "172",
+      "recvOrganId": "172",
+      "recvTargetid": "172",
+      "status": 668,
+      "updatorId": "172",
+      "updateTime": "2025-10-20 18:26:08",
+      "description": "r1ss0t"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -3928,7 +3928,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'appId=127&organId=127&creatorId=127&updateTime=2025-10-20 01:16:56&msgUrl=www.emanuel-bosco.biz&iconStyle=qofjrc&readStatus=ob5kh3&recvTargetid=127&q=4vtqg9&content=qh3ecs&recvOrganId=127&startTime=2025-10-20 01:15:40&imagePath=zcy94g&title=43m6sd&page=1&id=488&foreignId=127&endTime=2025-10-20 01:15:40&bizType=qh3izz&recvMemberId=127&updatorId=127&orderBy=241&description=uzebk9&limit=10&recvGroupId=127&status=798&type=565'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'description=kxpxrn&msgUrl=www.ben-grant.info&foreignId=172&creatorId=172&imagePath=lqhvbg&q=qqbvb0&status=6&organId=172&readStatus=vpvo39&page=1&startTime=2025-10-20 18:20:52&updateTime=2025-10-20 18:26:08&orderBy=579&recvTargetid=172&bizType=bh2rf7&type=752&title=96lq46&endTime=2025-10-20 18:20:52&iconStyle=fqtdtu&id=153&updatorId=172&recvMemberId=172&content=57bo2z&appId=172&recvGroupId=172&recvOrganId=172&limit=10'
 ```
 **Response-fields:**
 
@@ -3947,9 +3947,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uaeq5p",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "fmvde7",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4022,31 +4022,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": 371,
-    "appId": "127",
-    "organId": "127",
-    "bizType": "xudv0w",
-    "type": 210,
-    "title": "o38eur",
-    "content": "iifrz8",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "foreignId": "127",
-    "imagePath": "z38oga",
-    "iconStyle": "qvo0cd",
-    "recvMemberId": "127",
-    "recvGroupId": "127",
-    "recvOrganId": "127",
-    "recvTargetid": "127",
-    "status": 199,
-    "updatorId": "127",
-    "updateTime": "2025-10-20 01:16:56",
-    "description": "3q2tul"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:08",
+    "lastTime": "2025-10-20 18:26:08",
+    "id": 689,
+    "appId": "172",
+    "organId": "172",
+    "bizType": "yhfumy",
+    "type": 743,
+    "title": "xud2sd",
+    "content": "p82eri",
+    "msgUrl": "www.ben-grant.info",
+    "foreignId": "172",
+    "imagePath": "ixpyo1",
+    "iconStyle": "pfljdh",
+    "recvMemberId": "172",
+    "recvGroupId": "172",
+    "recvOrganId": "172",
+    "recvTargetid": "172",
+    "status": 437,
+    "updatorId": "172",
+    "updateTime": "2025-10-20 18:26:08",
+    "description": "k261a7"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4101,28 +4101,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": 427,
-    "appId": "127",
-    "organId": "127",
-    "bizType": "ll71bb",
-    "type": 334,
-    "title": "e8ys10",
-    "content": "zybksd",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "foreignId": "127",
-    "imagePath": "j0cmen",
-    "iconStyle": "qec2ng",
-    "recvMemberId": "127",
-    "recvGroupId": "127",
-    "recvOrganId": "127",
-    "recvTargetid": "127",
-    "status": 226,
-    "updatorId": "127",
-    "updateTime": "2025-10-20 01:16:56",
-    "description": "aai9pw"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:09",
+    "lastTime": "2025-10-20 18:26:09",
+    "id": 684,
+    "appId": "172",
+    "organId": "172",
+    "bizType": "8tx2vj",
+    "type": 603,
+    "title": "60dffo",
+    "content": "yjd9fb",
+    "msgUrl": "www.ben-grant.info",
+    "foreignId": "172",
+    "imagePath": "qm0uw2",
+    "iconStyle": "t363bq",
+    "recvMemberId": "172",
+    "recvGroupId": "172",
+    "recvOrganId": "172",
+    "recvTargetid": "172",
+    "status": 354,
+    "updatorId": "172",
+    "updateTime": "2025-10-20 18:26:09",
+    "description": "7j9qa5"
   }
 }'
 ```
@@ -4143,9 +4143,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "95oq12",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "chn60x",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4200,28 +4200,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": 669,
-    "appId": "127",
-    "organId": "127",
-    "bizType": "35ca3a",
-    "type": 494,
-    "title": "iyftki",
-    "content": "0xw72i",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "foreignId": "127",
-    "imagePath": "bzwcgt",
-    "iconStyle": "jc36h3",
-    "recvMemberId": "127",
-    "recvGroupId": "127",
-    "recvOrganId": "127",
-    "recvTargetid": "127",
-    "status": 915,
-    "updatorId": "127",
-    "updateTime": "2025-10-20 01:16:56",
-    "description": "mkxmp1"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:09",
+    "lastTime": "2025-10-20 18:26:09",
+    "id": 830,
+    "appId": "172",
+    "organId": "172",
+    "bizType": "uz9sak",
+    "type": 113,
+    "title": "reyqyb",
+    "content": "brifil",
+    "msgUrl": "www.ben-grant.info",
+    "foreignId": "172",
+    "imagePath": "f1o5ut",
+    "iconStyle": "2xms3e",
+    "recvMemberId": "172",
+    "recvGroupId": "172",
+    "recvOrganId": "172",
+    "recvTargetid": "172",
+    "status": 174,
+    "updatorId": "172",
+    "updateTime": "2025-10-20 18:26:09",
+    "description": "bq7dv6"
   }
 }'
 ```
@@ -4242,9 +4242,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b4onho",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "5j2zxx",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4294,9 +4294,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bar1mm",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "umue8d",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4340,9 +4340,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a38ryu",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "8cxhky",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4392,9 +4392,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z2k3zq",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "honykp",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4444,9 +4444,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n2xfdu",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "6w38t1",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4491,11 +4491,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "93phbe",
-    "mapKey2": "ox8q6y"
+    "mapKey1": "k0uz5g",
+    "mapKey2": "vpze6f"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4559,7 +4559,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?isAdmin=true&inoutMode=387&type=805&serverType=022e4k&cname=necole.oreilly&clientSecret=t7illh&q=vbfzwl&serverUrl=www.emanuel-bosco.biz&clientId=127&aesIvKey=ab07gl&isSingle=true&serverConf3=6gmfat&orderBy=179&serverIp=148.144.89.250&aesKey=09vpcp&startTime=2025-10-20 01:15:40&spare2=a3ihrx&page=1&id=127&limit=10&isDisabled=true&spare1=ef4syc&serverConf1=q9bfdu&endTime=2025-10-20 01:15:40&organId=127&serverConf2=tv1diw&description=zw8us7&organName=necole.oreilly&appId=127&name=necole.oreilly&confLimit=10&currCount=455&status=781
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?currCount=973&description=mk5e3p&q=xj91pr&aesIvKey=agkkd4&startTime=2025-10-20 18:20:52&serverConf3=97qujg&limit=10&isAdmin=true&page=1&type=542&organId=172&name=merle.larkin&isSingle=true&id=172&isDisabled=true&serverType=52pas9&spare2=sz291n&aesKey=sn9v9v&serverConf2=ek6oq9&serverConf1=0gqaex&spare1=okw3xd&endTime=2025-10-20 18:20:52&serverIp=137.119.212.174&appId=172&clientId=172&clientSecret=mzpecv&organName=merle.larkin&serverUrl=www.ben-grant.info&cname=merle.larkin&inoutMode=313&orderBy=945&status=58&confLimit=10
 ```
 **Response-fields:**
 
@@ -4615,45 +4615,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:53",
-      "lastTime": "2025-10-20 01:16:53",
-      "id": "127",
-      "organId": "127",
-      "appId": "127",
-      "organName": "necole.oreilly",
-      "inoutMode": 148,
-      "name": "necole.oreilly",
-      "cname": "necole.oreilly",
-      "type": 989,
-      "clientId": "127",
-      "clientSecret": "ljfvsi",
-      "aesKey": "jryho9",
-      "aesIvKey": "cl2s3p",
-      "serverIp": "148.144.89.250",
-      "serverType": "r2u1f8",
-      "serverUrl": "www.emanuel-bosco.biz",
-      "serverConf1": "aqqip8",
-      "serverConf2": "xtq9s7",
-      "serverConf3": "h97n3k",
-      "currCount": 418,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:05",
+      "lastTime": "2025-10-20 18:26:05",
+      "id": "172",
+      "organId": "172",
+      "appId": "172",
+      "organName": "merle.larkin",
+      "inoutMode": 5,
+      "name": "merle.larkin",
+      "cname": "merle.larkin",
+      "type": 250,
+      "clientId": "172",
+      "clientSecret": "0hngib",
+      "aesKey": "t94ozb",
+      "aesIvKey": "siuxh2",
+      "serverIp": "137.119.212.174",
+      "serverType": "8k8w00",
+      "serverUrl": "www.ben-grant.info",
+      "serverConf1": "5pkow5",
+      "serverConf2": "55ehor",
+      "serverConf3": "lry4hq",
+      "currCount": 964,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 504,
-      "description": "4giy9q",
-      "spare1": "8da0k9",
-      "spare2": "4lk8hm",
-      "inOrganName": "necole.oreilly",
-      "userName": "necole.oreilly",
-      "appName": "necole.oreilly",
-      "inoutModeName": "necole.oreilly",
-      "typeName": "necole.oreilly"
+      "status": 327,
+      "description": "nl6iok",
+      "spare1": "7qx6fl",
+      "spare2": "p6qz5p",
+      "inOrganName": "merle.larkin",
+      "userName": "merle.larkin",
+      "appName": "merle.larkin",
+      "inoutModeName": "merle.larkin",
+      "typeName": "merle.larkin"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4684,7 +4684,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=172
 ```
 **Response-fields:**
 
@@ -4740,45 +4740,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:53",
-      "lastTime": "2025-10-20 01:16:53",
-      "id": "127",
-      "organId": "127",
-      "appId": "127",
-      "organName": "necole.oreilly",
-      "inoutMode": 410,
-      "name": "necole.oreilly",
-      "cname": "necole.oreilly",
-      "type": 665,
-      "clientId": "127",
-      "clientSecret": "zjzph2",
-      "aesKey": "y5izjy",
-      "aesIvKey": "w14m8z",
-      "serverIp": "148.144.89.250",
-      "serverType": "vl9jg6",
-      "serverUrl": "www.emanuel-bosco.biz",
-      "serverConf1": "su35ap",
-      "serverConf2": "itpujj",
-      "serverConf3": "tkcno0",
-      "currCount": 290,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:05",
+      "lastTime": "2025-10-20 18:26:05",
+      "id": "172",
+      "organId": "172",
+      "appId": "172",
+      "organName": "merle.larkin",
+      "inoutMode": 990,
+      "name": "merle.larkin",
+      "cname": "merle.larkin",
+      "type": 607,
+      "clientId": "172",
+      "clientSecret": "8fhxyl",
+      "aesKey": "8o3jox",
+      "aesIvKey": "aoq3p7",
+      "serverIp": "137.119.212.174",
+      "serverType": "6re4xd",
+      "serverUrl": "www.ben-grant.info",
+      "serverConf1": "z2f7mu",
+      "serverConf2": "eug3i1",
+      "serverConf3": "7qljo2",
+      "currCount": 965,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 106,
-      "description": "i5q83x",
-      "spare1": "odf3lz",
-      "spare2": "ngtq2t",
-      "inOrganName": "necole.oreilly",
-      "userName": "necole.oreilly",
-      "appName": "necole.oreilly",
-      "inoutModeName": "necole.oreilly",
-      "typeName": "necole.oreilly"
+      "status": 511,
+      "description": "nh2xw6",
+      "spare1": "nyuyl1",
+      "spare2": "2lnmbk",
+      "inOrganName": "merle.larkin",
+      "userName": "merle.larkin",
+      "appName": "merle.larkin",
+      "inoutModeName": "merle.larkin",
+      "typeName": "merle.larkin"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4809,7 +4809,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=172
 ```
 **Response-fields:**
 
@@ -4865,45 +4865,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:53",
-      "lastTime": "2025-10-20 01:16:53",
-      "id": "127",
-      "organId": "127",
-      "appId": "127",
-      "organName": "necole.oreilly",
-      "inoutMode": 612,
-      "name": "necole.oreilly",
-      "cname": "necole.oreilly",
-      "type": 399,
-      "clientId": "127",
-      "clientSecret": "dsvssx",
-      "aesKey": "yezhhh",
-      "aesIvKey": "44s7kr",
-      "serverIp": "148.144.89.250",
-      "serverType": "j5imo8",
-      "serverUrl": "www.emanuel-bosco.biz",
-      "serverConf1": "zovsze",
-      "serverConf2": "rhg5qd",
-      "serverConf3": "888opt",
-      "currCount": 996,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:05",
+      "lastTime": "2025-10-20 18:26:05",
+      "id": "172",
+      "organId": "172",
+      "appId": "172",
+      "organName": "merle.larkin",
+      "inoutMode": 291,
+      "name": "merle.larkin",
+      "cname": "merle.larkin",
+      "type": 627,
+      "clientId": "172",
+      "clientSecret": "0wogva",
+      "aesKey": "s384yd",
+      "aesIvKey": "k3cpj4",
+      "serverIp": "137.119.212.174",
+      "serverType": "0mxcip",
+      "serverUrl": "www.ben-grant.info",
+      "serverConf1": "4noehv",
+      "serverConf2": "lq0h9o",
+      "serverConf3": "jx7o4j",
+      "currCount": 639,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 748,
-      "description": "wkqlam",
-      "spare1": "obf8oq",
-      "spare2": "xlfn5g",
-      "inOrganName": "necole.oreilly",
-      "userName": "necole.oreilly",
-      "appName": "necole.oreilly",
-      "inoutModeName": "necole.oreilly",
-      "typeName": "necole.oreilly"
+      "status": 615,
+      "description": "ax2ctx",
+      "spare1": "4qa5d2",
+      "spare2": "n2b5lp",
+      "inOrganName": "merle.larkin",
+      "userName": "merle.larkin",
+      "appName": "merle.larkin",
+      "inoutModeName": "merle.larkin",
+      "typeName": "merle.larkin"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -4979,7 +4979,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"127","timestamp":"2025-10-20 01:15:40"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"172","timestamp":"2025-10-20 18:20:52"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5022,9 +5022,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "r10vuy",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "m4l9go",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5068,9 +5068,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1tuhxr",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "xdaqwm",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5120,9 +5120,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hwuotb",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3segf5",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5159,9 +5159,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1n2p86",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "9jabaa",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5196,7 +5196,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?page=1&endTime=2025-10-20 01:15:40&limit=10&startTime=2025-10-20 01:15:40&q=rh13kb&orderBy=832
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?page=1&limit=10&orderBy=145&q=71h4fq&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52
 ```
 **Response-fields:**
 
@@ -5225,18 +5225,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "6mq3xg",
-      "deptNum": "13fn9a",
-      "peopleNum": "sjmrbx",
-      "roleNum": "zsxo2o",
-      "dicTypeNum": "sarodd",
-      "appNum": "2i930u",
-      "fileNum": "yupkiv",
-      "paramNum": "gboe6k"
+      "organNum": "50dm8l",
+      "deptNum": "lurmoi",
+      "peopleNum": "p5ghs2",
+      "roleNum": "uyugtd",
+      "dicTypeNum": "f0w8i6",
+      "appNum": "j0izx3",
+      "fileNum": "8wqkc8",
+      "paramNum": "smmlgz"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5271,7 +5271,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?page=1&startTime=2025-10-20 01:15:40&limit=10&endTime=2025-10-20 01:15:40&q=etv27f&orderBy=812
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&q=9fc4gf&page=1&orderBy=999&limit=10
 ```
 **Response-fields:**
 
@@ -5294,12 +5294,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "bvnehk",
-      "modelNum": "iyzk2a"
+      "objectNum": "xc310m",
+      "modelNum": "ao89yp"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5334,7 +5334,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?endTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&orderBy=653&q=pr6sv9&page=1&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=5p6jqp&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&orderBy=494&limit=10&page=1
 ```
 **Response-fields:**
 
@@ -5358,13 +5358,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "14ptjs",
-      "accountNum": "h53xhy",
-      "serviceOrganNum": "ji92nh"
+      "siteNum": "j0lkqn",
+      "accountNum": "45mx52",
+      "serviceOrganNum": "rr5vs0"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5418,7 +5418,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?page=1&path=0khtfz&orderBy=246&description=tmowk0&domainId=127&q=858vjk&isDisabled=true&endTime=2025-10-20 01:15:40&delFlag=4&mode=753&startTime=2025-10-20 01:15:40&name=necole.oreilly&status=534&limit=10&isMobileApp=true&existKey=8t7ktc&sertypeId=127&isSite=true&ftpId=127&ids=x8x4rf&ids=x8x4rf&organId=127&appType=rtn7mf&xzqhId=928
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?name=merle.larkin&isDisabled=true&description=nwg17m&existKey=tca3l9&ftpId=172&q=wk39e3&endTime=2025-10-20 18:20:52&ids=9tgl9y&ids=9tgl9y&limit=10&mode=679&appType=4gawjs&status=110&page=1&domainId=172&sertypeId=172&delFlag=5&isMobileApp=true&xzqhId=456&orderBy=122&startTime=2025-10-20 18:20:52&path=t02zau&organId=172&isSite=true
 ```
 **Response-fields:**
 
@@ -5462,33 +5462,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:50",
-      "lastTime": "2025-10-20 01:16:50",
-      "id": "127",
-      "ftpId": "127",
-      "domainId": "127",
-      "organId": "127",
-      "xzqhId": 217,
-      "sertypeId": "127",
-      "name": "necole.oreilly",
-      "path": "sks16a",
-      "appType": "mp70sw",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:02",
+      "lastTime": "2025-10-20 18:26:02",
+      "id": "172",
+      "ftpId": "172",
+      "domainId": "172",
+      "organId": "172",
+      "xzqhId": 57,
+      "sertypeId": "172",
+      "name": "merle.larkin",
+      "path": "o5vpnm",
+      "appType": "h3yxwv",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 502,
-      "priority": 458,
-      "delFlag": 4,
-      "deleteTime": "2025-10-20 01:16:50",
-      "description": "zm6z50",
-      "spare1": "ex0bh4",
-      "spare2": "cx1d18",
-      "xzqhName": "necole.oreilly"
+      "status": 535,
+      "priority": 885,
+      "delFlag": 5,
+      "deleteTime": "2025-10-20 18:26:02",
+      "description": "xmcfzd",
+      "spare1": "8llbhh",
+      "spare2": "v2kxqr",
+      "xzqhName": "merle.larkin"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5542,7 +5542,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?isMobileApp=true&appType=gd76fq&description=pwpvq5&domainId=127&sertypeId=127&organId=127&status=445&endTime=2025-10-20 01:15:40&path=6was0c&existKey=5n58ok&startTime=2025-10-20 01:15:40&page=1&q=gmficn&mode=112&limit=10&orderBy=263&isDisabled=true&isSite=true&ftpId=127&name=necole.oreilly&ids=r4q8d4&ids=r4q8d4&xzqhId=229&delFlag=4&idArr=cf3144
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?appType=4x5nqw&idArr=zldcpp&isSite=true&mode=391&isDisabled=true&startTime=2025-10-20 18:20:52&organId=172&domainId=172&limit=10&page=1&existKey=10wbvq&name=merle.larkin&orderBy=892&ftpId=172&delFlag=5&ids=hchm8r&ids=hchm8r&path=7maqge&q=4klvwe&description=nt14oe&sertypeId=172&isMobileApp=true&status=343&endTime=2025-10-20 18:20:52&xzqhId=112
 ```
 **Response-fields:**
 
@@ -5590,40 +5590,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 841,
+    "totalCount": 5,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:50",
-        "lastTime": "2025-10-20 01:16:50",
-        "id": "127",
-        "ftpId": "127",
-        "domainId": "127",
-        "organId": "127",
-        "xzqhId": 410,
-        "sertypeId": "127",
-        "name": "necole.oreilly",
-        "path": "bmqk2a",
-        "appType": "sfngl0",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:02",
+        "lastTime": "2025-10-20 18:26:02",
+        "id": "172",
+        "ftpId": "172",
+        "domainId": "172",
+        "organId": "172",
+        "xzqhId": 738,
+        "sertypeId": "172",
+        "name": "merle.larkin",
+        "path": "l36pf5",
+        "appType": "x4ptvp",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 114,
-        "priority": 406,
-        "delFlag": 4,
-        "deleteTime": "2025-10-20 01:16:50",
-        "description": "t20axe",
-        "spare1": "a0alv7",
-        "spare2": "j1lql1",
-        "xzqhName": "necole.oreilly"
+        "status": 85,
+        "priority": 379,
+        "delFlag": 5,
+        "deleteTime": "2025-10-20 18:26:02",
+        "description": "u5ubgv",
+        "spare1": "1jj7fz",
+        "spare2": "bbdfge",
+        "xzqhName": "merle.larkin"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5677,7 +5677,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'q=kspmwo&xzqhId=982&existKey=beggdz&domainId=127&name=necole.oreilly&isMobileApp=true&appType=8dgxo1&status=784&limit=10&orderBy=17&endTime=2025-10-20 01:15:40&ftpId=127&path=33paze&organId=127&mode=245&isSite=true&delFlag=4&sertypeId=127&idArr=f1zdbz&description=m7bb3l&page=1&isDisabled=true&startTime=2025-10-20 01:15:40&ids=9ehgn5&ids=9ehgn5'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'startTime=2025-10-20 18:20:52&q=2sip52&idArr=hcn4t9&mode=387&xzqhId=58&organId=172&orderBy=672&page=1&isDisabled=true&limit=10&endTime=2025-10-20 18:20:52&isMobileApp=true&status=451&ftpId=172&domainId=172&path=9zeswt&existKey=6azfd8&description=qyjv4f&appType=wc8xil&ids=y2wrgi&ids=y2wrgi&name=merle.larkin&sertypeId=172&isSite=true&delFlag=5'
 ```
 **Response-fields:**
 
@@ -5696,9 +5696,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "97t4o2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "lpa9x9",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5729,7 +5729,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/172.do
 ```
 **Response-fields:**
 
@@ -5776,36 +5776,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:50",
-    "lastTime": "2025-10-20 01:16:50",
-    "id": "127",
-    "ftpId": "127",
-    "domainId": "127",
-    "organId": "127",
-    "xzqhId": 26,
-    "sertypeId": "127",
-    "name": "necole.oreilly",
-    "path": "vpe71u",
-    "appType": "yp6qo4",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:02",
+    "lastTime": "2025-10-20 18:26:02",
+    "id": "172",
+    "ftpId": "172",
+    "domainId": "172",
+    "organId": "172",
+    "xzqhId": 618,
+    "sertypeId": "172",
+    "name": "merle.larkin",
+    "path": "eyd3xs",
+    "appType": "l5u96g",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 772,
-    "priority": 684,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:50",
-    "description": "9vdpwt",
-    "spare1": "1ud1pw",
-    "spare2": "hkjeam",
-    "xzqhName": "necole.oreilly",
-    "ftpName": "necole.oreilly",
-    "sertypeName": "necole.oreilly",
-    "domainName": "necole.oreilly",
-    "organName": "necole.oreilly"
+    "status": 425,
+    "priority": 657,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:02",
+    "description": "ldo324",
+    "spare1": "n47owg",
+    "spare2": "0kvjae",
+    "xzqhName": "merle.larkin",
+    "ftpName": "merle.larkin",
+    "sertypeName": "merle.larkin",
+    "domainName": "merle.larkin",
+    "organName": "merle.larkin"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5862,31 +5862,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "127",
-    "ftpId": "127",
-    "ftpName": "necole.oreilly",
-    "domainId": "127",
-    "domainName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "xzqhId": 200,
-    "xzqhName": "necole.oreilly",
-    "sertypeId": "127",
-    "sertypeName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "path": "pvviq6",
-    "appType": "i7kl6p",
+    "id": "172",
+    "ftpId": "172",
+    "ftpName": "merle.larkin",
+    "domainId": "172",
+    "domainName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "xzqhId": 830,
+    "xzqhName": "merle.larkin",
+    "sertypeId": "172",
+    "sertypeName": "merle.larkin",
+    "name": "merle.larkin",
+    "path": "sggo7a",
+    "appType": "34plp3",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 408,
-    "statusName": "necole.oreilly",
-    "priority": 594,
-    "createTime": "2025-10-20 01:16:50",
-    "description": "6gfzyb",
-    "spare1": "if7s70",
+    "status": 61,
+    "statusName": "merle.larkin",
+    "priority": 112,
+    "createTime": "2025-10-20 18:26:02",
+    "description": "vvi26d",
+    "spare1": "7en5ji",
     "statusMap": {
-      "mapKey": "itkhhg"
+      "mapKey": "xvw2mv"
     }
   }
 }'
@@ -5908,9 +5908,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vrfqub",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "gb0bp8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -5967,31 +5967,31 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "127",
-    "ftpId": "127",
-    "ftpName": "necole.oreilly",
-    "domainId": "127",
-    "domainName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "xzqhId": 235,
-    "xzqhName": "necole.oreilly",
-    "sertypeId": "127",
-    "sertypeName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "path": "lmg7a8",
-    "appType": "40sj7g",
+    "id": "172",
+    "ftpId": "172",
+    "ftpName": "merle.larkin",
+    "domainId": "172",
+    "domainName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "xzqhId": 944,
+    "xzqhName": "merle.larkin",
+    "sertypeId": "172",
+    "sertypeName": "merle.larkin",
+    "name": "merle.larkin",
+    "path": "yqbxy0",
+    "appType": "9tdsm2",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 705,
-    "statusName": "necole.oreilly",
-    "priority": 569,
-    "createTime": "2025-10-20 01:16:50",
-    "description": "i9socq",
-    "spare1": "p6swjp",
+    "status": 324,
+    "statusName": "merle.larkin",
+    "priority": 304,
+    "createTime": "2025-10-20 18:26:02",
+    "description": "6grh2f",
+    "spare1": "m0usod",
     "statusMap": {
-      "mapKey": "mwc5xt"
+      "mapKey": "8z6lyt"
     }
   }
 }'
@@ -6013,9 +6013,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "18wlt1",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "syirib",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6065,9 +6065,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gtptqy",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "o7inva",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6111,16 +6111,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/127.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/172.do --data '{
   "data": {
-    "id": "127",
+    "id": "172",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "necole.oreilly",
-    "password": "h2vihe",
-    "initPath": "t8v8xh"
+    "username": "merle.larkin",
+    "password": "q22izs",
+    "initPath": "i77abu"
   }
 }'
 ```
@@ -6144,8 +6144,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6189,9 +6189,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yx0m4w",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "jqpq5c",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6247,7 +6247,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?orderBy=415&page=1&parentId=38&areatypeId=127&sname=necole.oreilly&name=necole.oreilly&ids=0nwzl0&ids=0nwzl0&isDisplay=true&limit=10&startTime=2025-10-20 01:15:40&searchCode=65412&areatypeIds=5qoq8j&areatypeIds=5qoq8j&lft=86&q=mt0cn7&countryId=127&delFlag=4&likeQuery=uvig8z&description=u3t98s&endTime=2025-10-20 01:15:40&code=65412&deleteTime=2025-10-20 01:15:40&nameEn=59gqqe&parentIds=rob41x&parentIds=rob41x&rgt=442&hasContent=true&nameTotal=taw4rr
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?description=hgbs5d&parentId=275&nameEn=pxx88h&parentIds=vptanw&parentIds=vptanw&lft=969&deleteTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&areatypeId=172&orderBy=521&rgt=69&delFlag=5&page=1&ids=5v321r&ids=5v321r&likeQuery=2i6ean&isDisplay=true&sname=merle.larkin&areatypeIds=b4iidv&areatypeIds=b4iidv&q=7zww6c&startTime=2025-10-20 18:20:52&limit=10&countryId=172&searchCode=81486&code=81486&name=merle.larkin&nameTotal=l0g996&hasContent=true
 ```
 **Response-fields:**
 
@@ -6296,41 +6296,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 405,
+    "totalCount": 66,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:51",
-        "lastTime": "2025-10-20 01:16:51",
-        "id": 756,
-        "parentId": 676,
-        "countryId": "127",
-        "areatypeId": "127",
-        "lft": 16,
-        "rgt": 531,
-        "code": "65412",
-        "name": "necole.oreilly",
-        "nameTotal": "g4hmg4",
-        "sname": "necole.oreilly",
-        "nameEn": "if4k53",
-        "searchCode": "65412",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:03",
+        "lastTime": "2025-10-20 18:26:03",
+        "id": 393,
+        "parentId": 988,
+        "countryId": "172",
+        "areatypeId": "172",
+        "lft": 273,
+        "rgt": 572,
+        "code": "81486",
+        "name": "merle.larkin",
+        "nameTotal": "4zss2h",
+        "sname": "merle.larkin",
+        "nameEn": "ngh7md",
+        "searchCode": "81486",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 161,
-        "delFlag": 4,
-        "deleteTime": "2025-10-20 01:16:51",
-        "description": "v4sehc",
-        "countryName": "necole.oreilly",
-        "parentName": "necole.oreilly",
-        "areatypeName": "necole.oreilly"
+        "priority": 179,
+        "delFlag": 5,
+        "deleteTime": "2025-10-20 18:26:03",
+        "description": "4mt87w",
+        "countryName": "merle.larkin",
+        "parentName": "merle.larkin",
+        "areatypeName": "merle.larkin"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6381,7 +6381,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?organCode=65412&spare2=j3w89k&ids=7zolav&ids=7zolav&organName=necole.oreilly&orderBy=557&delFlag=4&description=mu1go8&startTime=2025-10-20 01:15:40&source=69&key=jf0yz2&unionCode=65412&createType=369&page=1&endTime=2025-10-20 01:15:40&name=necole.oreilly&spare1=ww4do1&isOrganWork=p39w4k&limit=10&xzqhId=651&q=dwn2dp&orgtypeId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?spare2=y50yo6&spare1=jpbb4z&organName=merle.larkin&page=1&limit=10&name=merle.larkin&organCode=81486&startTime=2025-10-20 18:20:52&orderBy=539&xzqhId=864&unionCode=81486&key=55epwl&delFlag=5&description=iqh23d&ids=vqzexo&ids=vqzexo&source=476&endTime=2025-10-20 18:20:52&isOrganWork=ikuh48&createType=303&q=di0w3w&orgtypeId=172
 ```
 **Response-fields:**
 
@@ -6411,22 +6411,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 227,
+    "totalCount": 424,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:51",
-        "lastTime": "2025-10-20 01:16:51",
-        "cmsKey": "nkmr88",
-        "cmsValue": "n29nyy"
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:03",
+        "lastTime": "2025-10-20 18:26:03",
+        "cmsKey": "dbg5ca",
+        "cmsValue": "ag8syl"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6476,7 +6476,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddValue=yaftqh&key=y5rbff&dictLabel=z8rgdv&name=necole.oreilly&parentId=755&endTime=2025-10-20 01:15:40&dictSort=658&cddId=517&orderBy=513&listClass=drs5yd&remark=w1bnte&startTime=2025-10-20 01:15:40&searchCode=65412&q=qhzlph&typeCode=65412&page=1&limit=10&cssClass=eew5m7&status=qjhykp&isDefault=dfu641
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddValue=qkaard&orderBy=982&listClass=y5qby3&status=zh2qn2&dictLabel=egairw&parentId=107&endTime=2025-10-20 18:20:52&cddId=785&typeCode=81486&dictSort=386&cssClass=p9fk8e&remark=g226gh&isDefault=6xqgy9&name=merle.larkin&page=1&startTime=2025-10-20 18:20:52&searchCode=81486&limit=10&q=hy4pxd&key=isotuk
 ```
 **Response-fields:**
 
@@ -6514,30 +6514,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 776,
+    "totalCount": 807,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 280,
-        "typeCode": "65412",
-        "parentId": 463,
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "cddValue": "rqa9u5",
-        "searchCode": "65412",
-        "priority": 236,
-        "createTime": "2025-10-20 01:16:54",
-        "remark": "ftm8h7",
-        "dictLabel": "h2281t",
-        "typeCodeName": "necole.oreilly",
-        "parentName": "necole.oreilly"
+        "cddId": 509,
+        "typeCode": "81486",
+        "parentId": 551,
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "cddValue": "0o0bur",
+        "searchCode": "81486",
+        "priority": 519,
+        "createTime": "2025-10-20 18:26:06",
+        "remark": "tt0nxe",
+        "dictLabel": "uubcqh",
+        "typeCodeName": "merle.larkin",
+        "parentName": "merle.larkin"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6586,7 +6586,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'name=necole.oreilly&dictLabel=nlmpju&page=1&typeCode=65412&isDefault=zj452p&cssClass=ipjivd&status=kq0btu&key=duyexv&dictSort=309&searchCode=65412&cddId=919&remark=80lspo&parentId=639&cddValue=74th0p&listClass=w96qog&q=tt1mji&orderBy=884&endTime=2025-10-20 01:15:40&limit=10&startTime=2025-10-20 01:15:40'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'q=uvzshq&dictLabel=ceyeha&cddValue=782vi3&orderBy=396&limit=10&isDefault=pj6f9g&listClass=n7aqm1&parentId=666&cddId=662&page=1&remark=jsu342&dictSort=917&key=7e84bn&searchCode=81486&startTime=2025-10-20 18:20:52&typeCode=81486&endTime=2025-10-20 18:20:52&name=merle.larkin&cssClass=znsurs&status=8om0gi'
 ```
 **Response-fields:**
 
@@ -6605,9 +6605,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9ul5x3",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "cylshd",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6637,7 +6637,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/278.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/352.do
 ```
 **Response-fields:**
 
@@ -6670,22 +6670,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 969,
-    "typeCode": "65412",
-    "parentId": 762,
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "cddValue": "k15nr8",
-    "searchCode": "65412",
-    "priority": 161,
-    "createTime": "2025-10-20 01:16:54",
-    "remark": "988u2v",
-    "dictLabel": "nt18wt",
-    "typeCodeName": "necole.oreilly",
-    "parentName": "necole.oreilly"
+    "cddId": 987,
+    "typeCode": "81486",
+    "parentId": 745,
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "cddValue": "rjwed0",
+    "searchCode": "81486",
+    "priority": 342,
+    "createTime": "2025-10-20 18:26:06",
+    "remark": "gfofb0",
+    "dictLabel": "zm98xw",
+    "typeCodeName": "merle.larkin",
+    "parentName": "merle.larkin"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6724,7 +6724,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/qj1nkm.do?typeCode=65412&zparentId=127&roletypeId=127&parentId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/x1gydn.do?zparentId=172&roletypeId=172&typeCode=81486&parentId=172
 ```
 **Response-fields:**
 
@@ -6746,8 +6746,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6792,19 +6792,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 830,
-    "typeCode": "65412",
-    "parentId": 381,
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "cddValue": "paxzm9",
-    "searchCode": "65412",
-    "priority": 725,
-    "createTime": "2025-10-20 01:16:54",
-    "remark": "0flbrr",
-    "dictLabel": "cj5yn9",
-    "typeCodeName": "necole.oreilly",
-    "parentName": "necole.oreilly"
+    "cddId": 204,
+    "typeCode": "81486",
+    "parentId": 566,
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "cddValue": "n7imsg",
+    "searchCode": "81486",
+    "priority": 169,
+    "createTime": "2025-10-20 18:26:06",
+    "remark": "j9m9vl",
+    "dictLabel": "bpwdz2",
+    "typeCodeName": "merle.larkin",
+    "parentName": "merle.larkin"
   }
 }'
 ```
@@ -6825,9 +6825,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hvvkxi",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "n5j52j",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6872,19 +6872,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 140,
-    "typeCode": "65412",
-    "parentId": 440,
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "cddValue": "7ggmqp",
-    "searchCode": "65412",
-    "priority": 884,
-    "createTime": "2025-10-20 01:16:54",
-    "remark": "ugmcs4",
-    "dictLabel": "ctq898",
-    "typeCodeName": "necole.oreilly",
-    "parentName": "necole.oreilly"
+    "cddId": 329,
+    "typeCode": "81486",
+    "parentId": 913,
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "cddValue": "yozulx",
+    "searchCode": "81486",
+    "priority": 158,
+    "createTime": "2025-10-20 18:26:06",
+    "remark": "h51nx3",
+    "dictLabel": "i6uwna",
+    "typeCodeName": "merle.larkin",
+    "parentName": "merle.larkin"
   }
 }'
 ```
@@ -6905,9 +6905,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2r97vm",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "qt3zvv",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -6956,9 +6956,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "udahgj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ccv6sg",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7012,7 +7012,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?groupId=127&appId=127&organwId=127&parentId=127&startTime=2025-10-20 01:15:40&roleTypeId=127&q=vsi3eh&gnType=ud0mz3&showButton=kcokqn&roleId=127&refType=65c3bl&status=gh1q4h&roletypeId=127&subType=njtdjj&positionId=127&page=1&orderBy=873&type=3rygnz&metaId=127&endTime=2025-10-20 01:15:40&wlType=wjadk5&key=adl3by&refresh=efyon5&limit=10&positionType=oq05rc
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?gnType=ks7scb&positionType=krx9oi&groupId=172&refresh=7ul6cb&parentId=172&status=ap0sxa&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&type=7on81r&subType=s22mck&refType=lq3gq2&roletypeId=172&showButton=66v8pg&limit=10&appId=172&wlType=uwhezh&orderBy=990&organwId=172&key=fzqdk7&roleTypeId=172&q=dujl2o&positionId=172&metaId=172&page=1&roleId=172
 ```
 **Response-fields:**
 
@@ -7046,18 +7046,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "127",
-      "label": "a367me",
-      "shortName": "necole.oreilly",
-      "organId": "127",
-      "areaId": 616,
-      "searchCode": "65412",
-      "childNum": 244,
+      "id": "172",
+      "label": "zlk7w2",
+      "shortName": "merle.larkin",
+      "organId": "172",
+      "areaId": 863,
+      "searchCode": "81486",
+      "childNum": 341,
       "checked": true,
-      "entity": 498,
+      "entity": 425,
       "show": true,
       "showIcon": true,
-      "parentId": "127",
+      "parentId": "172",
       "children": [
         {
           "$ref": ".."
@@ -7065,8 +7065,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7117,7 +7117,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?dispFlag=pn7y4v&typeCodes=32ubtb&typeCodes=32ubtb&q=zm5fkq&startTime=2025-10-20 01:15:40&typeMode=6abm6f&description=s39d28&cddLevel=y3scgw&page=1&cddValue=pzhlfd&limit=10&parentId=130&isAllChild=eibh9e&name=necole.oreilly&key=6j02es&delFlag=4&ids=9896vh&ids=9896vh&sname=necole.oreilly&existKey=0fleyt&endTime=2025-10-20 01:15:40&typeCode=65412&orderBy=971&searchCode=65412
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?startTime=2025-10-20 18:20:52&typeMode=bhmc4g&page=1&existKey=v76318&key=yk5vdj&orderBy=182&delFlag=5&typeCodes=yglg04&typeCodes=yglg04&searchCode=81486&ids=raaj39&ids=raaj39&cddLevel=7k3c1v&cddValue=micac0&typeCode=81486&isAllChild=qmhc0h&description=qbzy6h&parentId=542&limit=10&name=merle.larkin&dispFlag=ejt3xl&endTime=2025-10-20 18:20:52&q=o79pel&sname=merle.larkin
 ```
 **Response-fields:**
 
@@ -7157,24 +7157,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:54",
-      "lastTime": "2025-10-20 01:16:54",
-      "id": 198,
-      "typeCode": "65412",
-      "parentId": 117,
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "cddValue": "300nqa",
-      "cddLevel": "v26f3g",
-      "searchCode": "65412",
-      "dispFlag": "xtzsu9",
-      "priority": 740,
-      "delFlag": 4,
-      "deleteTime": "2025-10-20 01:16:54",
-      "description": "p5ejtx",
-      "spare1": "qax2iz",
-      "spare2": "4b1pu9",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:07",
+      "lastTime": "2025-10-20 18:26:07",
+      "id": 33,
+      "typeCode": "81486",
+      "parentId": 885,
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "cddValue": "fvmou5",
+      "cddLevel": "n6nf1m",
+      "searchCode": "81486",
+      "dispFlag": "dad6fo",
+      "priority": 82,
+      "delFlag": 5,
+      "deleteTime": "2025-10-20 18:26:07",
+      "description": "opjkqi",
+      "spare1": "9p8afo",
+      "spare2": "5ca81b",
       "children": [
         {
           "$ref": ".."
@@ -7182,8 +7182,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7226,7 +7226,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2025-10-20 01:15:40&q=39dbyd&typeId=127&status=mfg1bc&remark=hv1q7p&typeMode=202&key=ocb2pk&limit=10&name=necole.oreilly&startTime=2025-10-20 01:15:40&page=1&typeClass=vvm448&orderBy=86
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?typeClass=a6odk4&name=merle.larkin&q=9f6agm&orderBy=296&page=1&key=l64jfz&typeMode=236&limit=10&status=jnfpli&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&typeId=172&remark=cr3c1j
 ```
 **Response-fields:**
 
@@ -7261,27 +7261,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 160,
+    "totalCount": 239,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "127",
-        "name": "necole.oreilly",
-        "typeClass": "llhhi6",
-        "typeRef": "2d5icq",
-        "typeMode": 995,
-        "searchCode": "65412",
-        "priority": 648,
-        "createTime": "2025-10-20 01:16:54",
-        "status": 415,
-        "remark": "s29uva"
+        "typeId": "172",
+        "name": "merle.larkin",
+        "typeClass": "3g1g4s",
+        "typeRef": "eudhc2",
+        "typeMode": 981,
+        "searchCode": "81486",
+        "priority": 255,
+        "createTime": "2025-10-20 18:26:07",
+        "status": 531,
+        "remark": "qdnp6y"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7323,7 +7323,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&q=1mjjwk&limit=10&typeMode=663&orderBy=173&typeId=127&key=u8x5fk&page=1&status=gfp0ky&remark=squzul&name=necole.oreilly&typeClass=rfsnbs'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'limit=10&orderBy=147&startTime=2025-10-20 18:20:52&page=1&typeClass=00qp6y&q=kjo21o&typeId=172&name=merle.larkin&status=i0wd4b&remark=9d2bge&endTime=2025-10-20 18:20:52&typeMode=368&key=ialtb5'
 ```
 **Response-fields:**
 
@@ -7342,9 +7342,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "elljaq",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "x9aizn",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7374,7 +7374,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/172.do
 ```
 **Response-fields:**
 
@@ -7404,19 +7404,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "127",
-    "name": "necole.oreilly",
-    "typeClass": "qp99sw",
-    "typeRef": "6fqvjl",
-    "typeMode": 463,
-    "searchCode": "65412",
-    "priority": 557,
-    "createTime": "2025-10-20 01:16:54",
-    "status": 298,
-    "remark": "bwymkc"
+    "typeId": "172",
+    "name": "merle.larkin",
+    "typeClass": "vste6k",
+    "typeRef": "e3909u",
+    "typeMode": 192,
+    "searchCode": "81486",
+    "priority": 502,
+    "createTime": "2025-10-20 18:26:07",
+    "status": 44,
+    "remark": "90hu61"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7458,16 +7458,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "127",
-    "name": "necole.oreilly",
-    "typeClass": "f65g73",
-    "typeRef": "6j8k74",
-    "typeMode": 504,
-    "searchCode": "65412",
-    "priority": 171,
-    "createTime": "2025-10-20 01:16:54",
-    "status": 868,
-    "remark": "00k131"
+    "typeId": "172",
+    "name": "merle.larkin",
+    "typeClass": "165o99",
+    "typeRef": "5s67v0",
+    "typeMode": 277,
+    "searchCode": "81486",
+    "priority": 625,
+    "createTime": "2025-10-20 18:26:07",
+    "status": 4,
+    "remark": "217oi9"
   }
 }'
 ```
@@ -7488,9 +7488,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zwn966",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "p0m5w8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7532,16 +7532,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "127",
-    "name": "necole.oreilly",
-    "typeClass": "5znnzo",
-    "typeRef": "njkmkc",
-    "typeMode": 577,
-    "searchCode": "65412",
-    "priority": 864,
-    "createTime": "2025-10-20 01:16:54",
-    "status": 344,
-    "remark": "ibx9xk"
+    "typeId": "172",
+    "name": "merle.larkin",
+    "typeClass": "k5utc4",
+    "typeRef": "6tpbx5",
+    "typeMode": 527,
+    "searchCode": "81486",
+    "priority": 569,
+    "createTime": "2025-10-20 18:26:07",
+    "status": 479,
+    "remark": "6oano6"
   }
 }'
 ```
@@ -7562,9 +7562,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pmv9xw",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "66sg60",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7613,9 +7613,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "eb8acz",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "xs8ze5",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7658,9 +7658,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ijajyo",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "6c2t3d",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7715,20 +7715,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "127",
-      "name": "necole.oreilly",
-      "typeClass": "atufo6",
-      "typeRef": "fens0g",
-      "typeMode": 733,
-      "searchCode": "65412",
-      "priority": 352,
-      "createTime": "2025-10-20 01:16:55",
-      "status": 68,
-      "remark": "69r9gm"
+      "typeId": "172",
+      "name": "merle.larkin",
+      "typeClass": "ypk8cb",
+      "typeRef": "jh7tgj",
+      "typeMode": 72,
+      "searchCode": "81486",
+      "priority": 0,
+      "createTime": "2025-10-20 18:26:07",
+      "status": 867,
+      "remark": "obiu2p"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7805,46 +7805,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 312,
-      "total": 62.63,
-      "sys": 44.67,
-      "used": 23.68,
-      "wait": 44.39,
-      "free": 63.87
+      "cpuNum": 468,
+      "total": 8.37,
+      "sys": 1.61,
+      "used": 8.42,
+      "wait": 85.10,
+      "free": 85.90
     },
     "mem": {
-      "total": 64.86,
-      "used": 63.68,
-      "free": 36.21
+      "total": 96.69,
+      "used": 99.70,
+      "free": 5.87
     },
     "jvm": {
-      "total": 82.02,
-      "max": 4.79,
-      "free": 37.56,
-      "version": "0.4.0",
-      "home": "aunm1v"
+      "total": 72.81,
+      "max": 40.75,
+      "free": 44.81,
+      "version": "0.38",
+      "home": "r226yl"
     },
     "sys": {
-      "computerName": "necole.oreilly",
-      "computerIp": "148.144.89.250",
-      "userDir": "bobkyq",
-      "osName": "necole.oreilly",
-      "osArch": "3mxszj"
+      "computerName": "merle.larkin",
+      "computerIp": "137.119.212.174",
+      "userDir": "5fk6bt",
+      "osName": "merle.larkin",
+      "osArch": "7r5fx0"
     },
     "sysFiles": [
       {
-        "dirName": "necole.oreilly",
-        "sysTypeName": "necole.oreilly",
-        "typeName": "necole.oreilly",
-        "total": "bfgucx",
-        "free": "znqsyc",
-        "used": "yjf3zy",
-        "usage": 95.23
+        "dirName": "merle.larkin",
+        "sysTypeName": "merle.larkin",
+        "typeName": "merle.larkin",
+        "total": "1l6his",
+        "free": "j8ln8d",
+        "used": "f1bn5p",
+        "usage": 98.21
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7885,7 +7885,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?orderBy=370&endTime=2025-10-20 01:15:40&page=1&description=co3y8i&name=necole.oreilly&limit=10&delFlag=4&sname=necole.oreilly&q=ugujrw&startTime=2025-10-20 01:15:40
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&q=1z1ebq&description=ks3o9h&limit=10&sname=merle.larkin&delFlag=5&orderBy=781&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&name=merle.larkin
 ```
 **Response-fields:**
 
@@ -7915,19 +7915,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:52",
-      "lastTime": "2025-10-20 01:16:52",
-      "id": "127",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "priority": 970,
-      "delFlag": 4,
-      "description": "bxq7ws"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:04",
+      "lastTime": "2025-10-20 18:26:04",
+      "id": "172",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "priority": 544,
+      "delFlag": 5,
+      "description": "80wvpp"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -7967,7 +7967,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'name=necole.oreilly&delFlag=4&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&sname=necole.oreilly&orderBy=809&q=5y82s1&limit=10&page=1&description=f86cj6'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'endTime=2025-10-20 18:20:52&description=xmaj4i&orderBy=815&delFlag=5&page=1&name=merle.larkin&sname=merle.larkin&limit=10&startTime=2025-10-20 18:20:52&q=jd204t'
 ```
 **Response-fields:**
 
@@ -7986,9 +7986,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lu0f05",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "pzbr1k",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8048,18 +8048,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "priority": 873,
-    "delFlag": 4,
-    "description": "xybzc7"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "id": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "priority": 57,
+    "delFlag": 5,
+    "description": "nhecri"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8101,15 +8101,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "priority": 932,
-    "delFlag": 4,
-    "description": "tb05ze"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "id": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "priority": 326,
+    "delFlag": 5,
+    "description": "xere9k"
   }
 }'
 ```
@@ -8130,9 +8130,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "umrx2k",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "sppnag",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8174,15 +8174,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "priority": 188,
-    "delFlag": 4,
-    "description": "v5dwqa"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "id": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "priority": 965,
+    "delFlag": 5,
+    "description": "dtfwxu"
   }
 }'
 ```
@@ -8203,9 +8203,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "34ykv0",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "tvymnx",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8255,9 +8255,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i8xr42",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "r14dl6",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8311,7 +8311,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?endTime=2025-10-20 01:15:40&status=564&subType=36arcc&content=l52lah&q=8edhrp&signature=b9mxde&description=f4zodf&type=ieoork&providerName=necole.oreilly&id=127&limit=10&organId=127&appId=127&foreignId=127&page=1&name=necole.oreilly&delFlag=4&orderBy=592&spare1=p1f49y&providerId=127&spare2=iwn07p&startTime=2025-10-20 01:15:40&creatorId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?subType=xffvho&description=i2hakc&providerId=172&creatorId=172&providerName=merle.larkin&limit=10&type=xzcm7q&endTime=2025-10-20 18:20:52&content=akihfz&delFlag=5&startTime=2025-10-20 18:20:52&spare2=8ra33g&spare1=lrpfwj&name=merle.larkin&appId=172&orderBy=364&q=vsy2wb&page=1&signature=swhoje&organId=172&foreignId=172&status=778&id=172
 ```
 **Response-fields:**
 
@@ -8352,30 +8352,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:57",
-      "lastTime": "2025-10-20 01:16:57",
-      "id": "127",
-      "appId": "127",
-      "organId": "127",
-      "providerId": "127",
-      "providerName": "necole.oreilly",
-      "foreignId": "127",
-      "type": "dqn17v",
-      "subType": "j76gum",
-      "name": "necole.oreilly",
-      "signature": "oxf26r",
-      "content": "bxlcue",
-      "priority": 284,
-      "status": 28,
-      "delFlag": 4,
-      "description": "zc39in",
-      "spare1": "kh8d1j",
-      "spare2": "qdl46j"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:10",
+      "lastTime": "2025-10-20 18:26:10",
+      "id": "172",
+      "appId": "172",
+      "organId": "172",
+      "providerId": "172",
+      "providerName": "merle.larkin",
+      "foreignId": "172",
+      "type": "q9t9a6",
+      "subType": "wiwfkt",
+      "name": "merle.larkin",
+      "signature": "j2dam2",
+      "content": "ofmga4",
+      "priority": 166,
+      "status": 859,
+      "delFlag": 5,
+      "description": "jzc3sj",
+      "spare1": "m19fum",
+      "spare2": "1x9sr4"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8446,29 +8446,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "organId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "type": "in0npf",
-    "subType": "8h2asa",
-    "name": "necole.oreilly",
-    "signature": "fhxco8",
-    "content": "lzrc75",
-    "priority": 966,
-    "status": 837,
-    "delFlag": 4,
-    "description": "ba34a1",
-    "spare1": "uko30d",
-    "spare2": "yaspgd"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "organId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "type": "midpp1",
+    "subType": "bzslnq",
+    "name": "merle.larkin",
+    "signature": "h3tfzb",
+    "content": "1ol9sy",
+    "priority": 602,
+    "status": 450,
+    "delFlag": 5,
+    "description": "odzmp1",
+    "spare1": "58ctai",
+    "spare2": "6xzjo4"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8521,26 +8521,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "organId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "type": "96x2cx",
-    "subType": "an45y3",
-    "name": "necole.oreilly",
-    "signature": "fio92d",
-    "content": "pcph4q",
-    "priority": 275,
-    "status": 665,
-    "delFlag": 4,
-    "description": "ulvzwu",
-    "spare1": "6wh7d1",
-    "spare2": "4ozi73"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "organId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "type": "isemit",
+    "subType": "5t6mep",
+    "name": "merle.larkin",
+    "signature": "93udue",
+    "content": "lofslk",
+    "priority": 148,
+    "status": 104,
+    "delFlag": 5,
+    "description": "r4ele3",
+    "spare1": "nmxajj",
+    "spare2": "5ntgnl"
   }
 }'
 ```
@@ -8561,9 +8561,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i2th9h",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "t6w55l",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8616,26 +8616,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "organId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "type": "o0js6h",
-    "subType": "7uuyvm",
-    "name": "necole.oreilly",
-    "signature": "vv42ed",
-    "content": "ic8irw",
-    "priority": 458,
-    "status": 405,
-    "delFlag": 4,
-    "description": "9f54hh",
-    "spare1": "lul6e3",
-    "spare2": "jxm2op"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "organId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "type": "9si6oz",
+    "subType": "wl2gp3",
+    "name": "merle.larkin",
+    "signature": "dhej14",
+    "content": "mwsyiq",
+    "priority": 926,
+    "status": 42,
+    "delFlag": 5,
+    "description": "1k8457",
+    "spare1": "g43mb7",
+    "spare2": "smblc0"
   }
 }'
 ```
@@ -8656,9 +8656,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "howxig",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ntpgxd",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8708,9 +8708,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bnbiof",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "nj645v",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8777,7 +8777,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?opUserId=127&opTime=2025-10-20 01:16:56&limit=10&orderBy=485&description=jnwoic&appId=127&msgModuleId=127&id=127&creatorId=127&msgUrl=www.emanuel-bosco.biz&msgLabels=yd3qct&msgAccountName=necole.oreilly&msgModuleName=necole.oreilly&msgUserId=127&spare1=96a2kk&opOrganId=127&msgOrganName=necole.oreilly&msgContent=qyuutl&status=eec1ge&msgAccountId=127&q=5iw1rc&type=76g6nz&msgCreateTime=2025-10-20 01:16:56&msgAbstract=f7urg5&msgUserName=necole.oreilly&msgOrganId=127&bizType=6unh6l&msgType=316&page=1&opOrganName=necole.oreilly&msgId=833&endTime=2025-10-20 01:15:40&msgTitle=uci09s&spare2=2sfq3q&startTime=2025-10-20 01:15:40&foreignId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?limit=10&opOrganId=172&appId=172&description=dyxpmd&msgAccountName=merle.larkin&creatorId=172&msgModuleName=merle.larkin&id=172&msgCreateTime=2025-10-20 18:26:09&msgContent=aukmfj&msgUserId=172&opUserId=172&startTime=2025-10-20 18:20:52&opOrganName=merle.larkin&q=dseudf&msgTitle=7xo2vy&msgUserName=merle.larkin&msgUrl=www.ben-grant.info&foreignId=172&msgAccountId=172&msgOrganName=merle.larkin&spare1=6egk3p&msgId=174&spare2=jc6h1q&msgType=32&msgOrganId=172&msgModuleId=172&page=1&endTime=2025-10-20 18:20:52&bizType=2ctb8k&msgLabels=1ae0ea&type=vwtvrv&orderBy=954&status=72ivwr&opTime=2025-10-20 18:26:09&msgAbstract=2l1i3j
 ```
 **Response-fields:**
 
@@ -8830,42 +8830,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:56",
-      "lastTime": "2025-10-20 01:16:56",
-      "id": "127",
-      "appId": "127",
-      "foreignId": "127",
-      "type": "051kcb",
-      "bizType": "u4mnvv",
-      "msgCreateTime": "2025-10-20 01:16:56",
-      "msgId": 270,
-      "msgType": 347,
-      "msgTitle": "y25lkt",
-      "msgAbstract": "01ut3f",
-      "msgAccountId": "127",
-      "msgAccountName": "necole.oreilly",
-      "msgModuleId": "127",
-      "msgModuleName": "necole.oreilly",
-      "msgUserId": "127",
-      "msgUserName": "necole.oreilly",
-      "msgOrganId": "127",
-      "msgOrganName": "necole.oreilly",
-      "msgUrl": "www.emanuel-bosco.biz",
-      "msgLabels": "1okj6n",
-      "msgContent": "0035ut",
-      "status": "vuwqxh",
-      "opUserId": "127",
-      "opTime": "2025-10-20 01:16:56",
-      "opOrganId": "127",
-      "opOrganName": "necole.oreilly",
-      "description": "mtss18",
-      "spare1": "5fe9r0",
-      "spare2": "72fi3e"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:09",
+      "lastTime": "2025-10-20 18:26:09",
+      "id": "172",
+      "appId": "172",
+      "foreignId": "172",
+      "type": "ky2jz1",
+      "bizType": "77ky20",
+      "msgCreateTime": "2025-10-20 18:26:09",
+      "msgId": 796,
+      "msgType": 65,
+      "msgTitle": "xdgs41",
+      "msgAbstract": "jv7cnp",
+      "msgAccountId": "172",
+      "msgAccountName": "merle.larkin",
+      "msgModuleId": "172",
+      "msgModuleName": "merle.larkin",
+      "msgUserId": "172",
+      "msgUserName": "merle.larkin",
+      "msgOrganId": "172",
+      "msgOrganName": "merle.larkin",
+      "msgUrl": "www.ben-grant.info",
+      "msgLabels": "dazhv9",
+      "msgContent": "doyqe0",
+      "status": "3t7li0",
+      "opUserId": "172",
+      "opTime": "2025-10-20 18:26:09",
+      "opOrganId": "172",
+      "opOrganName": "merle.larkin",
+      "description": "4mv7nw",
+      "spare1": "5hx7cu",
+      "spare2": "95l92v"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -8931,7 +8931,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'appId=127&page=1&bizType=he9yps&creatorId=127&msgOrganId=127&orderBy=450&msgAbstract=irozut&msgAccountName=necole.oreilly&description=m4avkc&type=3us9pe&opOrganName=necole.oreilly&msgModuleId=127&endTime=2025-10-20 01:15:40&msgUserName=necole.oreilly&spare2=8qc2yp&startTime=2025-10-20 01:15:40&msgType=902&msgOrganName=necole.oreilly&msgLabels=ds0jhw&status=mfrugk&msgUrl=www.emanuel-bosco.biz&opUserId=127&spare1=8pl9pv&msgAccountId=127&limit=10&id=127&msgUserId=127&opTime=2025-10-20 01:16:56&opOrganId=127&msgId=424&q=hxhh1u&msgCreateTime=2025-10-20 01:16:56&msgModuleName=necole.oreilly&msgContent=hknwvr&foreignId=127&msgTitle=8v7jan'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgType=171&description=nnsyg8&msgUserId=172&msgAbstract=m0vf0c&opUserId=172&foreignId=172&msgUrl=www.ben-grant.info&limit=10&q=zc8o5t&msgCreateTime=2025-10-20 18:26:09&msgUserName=merle.larkin&msgModuleName=merle.larkin&msgLabels=9hv7ia&opTime=2025-10-20 18:26:09&spare1=duvb4y&msgModuleId=172&status=ltdsz4&spare2=j9c936&msgId=455&page=1&msgAccountName=merle.larkin&type=o0pj50&bizType=59pgxe&creatorId=172&msgOrganId=172&orderBy=522&startTime=2025-10-20 18:20:52&id=172&msgTitle=j7u1a8&msgAccountId=172&opOrganName=merle.larkin&appId=172&msgOrganName=merle.larkin&msgContent=jqvyuc&opOrganId=172&endTime=2025-10-20 18:20:52'
 ```
 **Response-fields:**
 
@@ -8950,9 +8950,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4efitv",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "0moj41",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9035,41 +9035,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "iy7tpm",
-    "bizType": "w67m2m",
-    "msgCreateTime": "2025-10-20 01:16:56",
-    "msgId": 892,
-    "msgType": 146,
-    "msgTitle": "c6ban8",
-    "msgAbstract": "4jtz2j",
-    "msgAccountId": "127",
-    "msgAccountName": "necole.oreilly",
-    "msgModuleId": "127",
-    "msgModuleName": "necole.oreilly",
-    "msgUserId": "127",
-    "msgUserName": "necole.oreilly",
-    "msgOrganId": "127",
-    "msgOrganName": "necole.oreilly",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "msgLabels": "lpfn68",
-    "msgContent": "l2limn",
-    "status": "uabkv8",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:56",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "kodd29",
-    "spare1": "q5cl0a",
-    "spare2": "zcvesj"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:09",
+    "lastTime": "2025-10-20 18:26:09",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "0slaku",
+    "bizType": "ihanlw",
+    "msgCreateTime": "2025-10-20 18:26:09",
+    "msgId": 277,
+    "msgType": 876,
+    "msgTitle": "ife7wc",
+    "msgAbstract": "cbyw83",
+    "msgAccountId": "172",
+    "msgAccountName": "merle.larkin",
+    "msgModuleId": "172",
+    "msgModuleName": "merle.larkin",
+    "msgUserId": "172",
+    "msgUserName": "merle.larkin",
+    "msgOrganId": "172",
+    "msgOrganName": "merle.larkin",
+    "msgUrl": "www.ben-grant.info",
+    "msgLabels": "q2lpf5",
+    "msgContent": "ouygdl",
+    "status": "90ppbx",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:09",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "wbpp1f",
+    "spare1": "6um27j",
+    "spare2": "3ly340"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9134,38 +9134,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "62nso4",
-    "bizType": "0duf4e",
-    "msgCreateTime": "2025-10-20 01:16:56",
-    "msgId": 843,
-    "msgType": 656,
-    "msgTitle": "6yy0au",
-    "msgAbstract": "bkejzq",
-    "msgAccountId": "127",
-    "msgAccountName": "necole.oreilly",
-    "msgModuleId": "127",
-    "msgModuleName": "necole.oreilly",
-    "msgUserId": "127",
-    "msgUserName": "necole.oreilly",
-    "msgOrganId": "127",
-    "msgOrganName": "necole.oreilly",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "msgLabels": "ql8dex",
-    "msgContent": "9e1ti3",
-    "status": "fk4t5d",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:56",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "2ddtq1",
-    "spare1": "eytw9l",
-    "spare2": "9jt9mo"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:09",
+    "lastTime": "2025-10-20 18:26:09",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "3vwie7",
+    "bizType": "hsso98",
+    "msgCreateTime": "2025-10-20 18:26:09",
+    "msgId": 822,
+    "msgType": 21,
+    "msgTitle": "ak9ai0",
+    "msgAbstract": "avv3jy",
+    "msgAccountId": "172",
+    "msgAccountName": "merle.larkin",
+    "msgModuleId": "172",
+    "msgModuleName": "merle.larkin",
+    "msgUserId": "172",
+    "msgUserName": "merle.larkin",
+    "msgOrganId": "172",
+    "msgOrganName": "merle.larkin",
+    "msgUrl": "www.ben-grant.info",
+    "msgLabels": "v0yy1q",
+    "msgContent": "94ttw5",
+    "status": "d0ct8k",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:09",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "tc7tth",
+    "spare1": "og9qqp",
+    "spare2": "1c4chs"
   }
 }'
 ```
@@ -9186,9 +9186,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yp0nwv",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "xeo6kh",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9253,38 +9253,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:56",
-    "lastTime": "2025-10-20 01:16:56",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "epk30l",
-    "bizType": "jr6in9",
-    "msgCreateTime": "2025-10-20 01:16:56",
-    "msgId": 55,
-    "msgType": 871,
-    "msgTitle": "8s2gjr",
-    "msgAbstract": "e2so8m",
-    "msgAccountId": "127",
-    "msgAccountName": "necole.oreilly",
-    "msgModuleId": "127",
-    "msgModuleName": "necole.oreilly",
-    "msgUserId": "127",
-    "msgUserName": "necole.oreilly",
-    "msgOrganId": "127",
-    "msgOrganName": "necole.oreilly",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "msgLabels": "pg98i1",
-    "msgContent": "tkqdbw",
-    "status": "pux9hw",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:56",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "qhj7sg",
-    "spare1": "7aasfq",
-    "spare2": "1v1mn2"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:09",
+    "lastTime": "2025-10-20 18:26:09",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "m609fc",
+    "bizType": "s5o86g",
+    "msgCreateTime": "2025-10-20 18:26:09",
+    "msgId": 488,
+    "msgType": 317,
+    "msgTitle": "iqoego",
+    "msgAbstract": "9q131u",
+    "msgAccountId": "172",
+    "msgAccountName": "merle.larkin",
+    "msgModuleId": "172",
+    "msgModuleName": "merle.larkin",
+    "msgUserId": "172",
+    "msgUserName": "merle.larkin",
+    "msgOrganId": "172",
+    "msgOrganName": "merle.larkin",
+    "msgUrl": "www.ben-grant.info",
+    "msgLabels": "tefq0c",
+    "msgContent": "737y43",
+    "status": "y953bh",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:09",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "q82vsr",
+    "spare1": "c1dtz7",
+    "spare2": "hok1ks"
   }
 }'
 ```
@@ -9305,9 +9305,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wmdozx",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "fbp8gk",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9357,9 +9357,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ywi11z",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "j1o7mn",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9391,7 +9391,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/xtquh7.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/t1jvi5.do
 ```
 **Response-fields:**
 
@@ -9410,9 +9410,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nic65n",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "03qnzu",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9459,7 +9459,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?positionId=127&status=68&startTime=2025-10-20 01:15:40&roleTypeId=127&batchId=127&keyWords=n574tk&type=nau97a&appId=127&page=1&limit=10&endTime=2025-10-20 01:15:40&q=iq5qm8&organId=127&orderBy=831&areaId=689&groupId=180
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?batchId=172&keyWords=ukhukw&orderBy=940&startTime=2025-10-20 18:20:52&page=1&appId=172&status=789&groupId=812&positionId=172&endTime=2025-10-20 18:20:52&q=bagx4k&type=ioqu3u&roleTypeId=172&limit=10&organId=172&areaId=986
 ```
 **Response-fields:**
 
@@ -9539,60 +9539,60 @@ timestamp|string|返回时间戳字符串|-
     "currPage": 1,
     "list": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:48",
-        "lastTime": "2025-10-20 01:16:48",
-        "id": 97,
-        "appId": "127",
-        "saveSource": "nhk9ej",
-        "unitName": "necole.oreilly",
-        "name": "necole.oreilly",
-        "idNum": "ntgkuq",
-        "duty": "zqaogr",
-        "telephone": "1-614-814-9478",
-        "mobile": "1-856-813-9551",
-        "extInfo1": "w4qyrx",
-        "extInfo2": "lkp17v",
-        "extInfo3": "9mqtds",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:00",
+        "lastTime": "2025-10-20 18:26:00",
+        "id": 111,
+        "appId": "172",
+        "saveSource": "gzs2d8",
+        "unitName": "merle.larkin",
+        "name": "merle.larkin",
+        "idNum": "08fhct",
+        "duty": "51otuh",
+        "telephone": "1-203-302-2484",
+        "mobile": "(415) 540-6962",
+        "extInfo1": "8wxt2q",
+        "extInfo2": "3nv27f",
+        "extInfo3": "6hlu5k",
         "needInitUser": true,
-        "userId": "127",
+        "userId": "172",
         "needInitOrgan": true,
-        "organId": "127",
-        "type": "6aaf0k",
-        "foreignUrl": "www.emanuel-bosco.biz",
-        "bizType": 40,
-        "bizOrganId": "127",
-        "bizAreaId": 553,
-        "bizGroupId": 287,
-        "bizPower": "l0gc8u",
-        "bizMultiInfo": "dgx8tq",
+        "organId": "172",
+        "type": "9xe4v2",
+        "foreignUrl": "www.ben-grant.info",
+        "bizType": 263,
+        "bizOrganId": "172",
+        "bizAreaId": 461,
+        "bizGroupId": 172,
+        "bizPower": "xtjacw",
+        "bizMultiInfo": "9v594g",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "127",
-        "opOrganId": "127",
-        "opTime": "2025-10-20 01:16:48",
-        "opInfo": "lh4xxk",
-        "priority": 634,
-        "status": 207,
-        "delFlag": 4,
-        "dataBatch": "0yjqdi",
-        "dataVersion": 608,
-        "updateTime": "2025-10-20 01:16:48",
-        "syncMode": "ng6xnc",
-        "syncTime": "2025-10-20 01:16:48",
-        "description": "lyk66k",
-        "groupName": "necole.oreilly",
-        "positionName": "necole.oreilly",
-        "bizPowerName": "necole.oreilly",
-        "subdistrictName": "necole.oreilly",
-        "communityName": "necole.oreilly"
+        "opUserId": "172",
+        "opOrganId": "172",
+        "opTime": "2025-10-20 18:26:00",
+        "opInfo": "t10cmm",
+        "priority": 300,
+        "status": 890,
+        "delFlag": 5,
+        "dataBatch": "35wqoy",
+        "dataVersion": 149,
+        "updateTime": "2025-10-20 18:26:00",
+        "syncMode": "mxep30",
+        "syncTime": "2025-10-20 18:26:00",
+        "description": "lqtn26",
+        "groupName": "merle.larkin",
+        "positionName": "merle.larkin",
+        "bizPowerName": "merle.larkin",
+        "subdistrictName": "merle.larkin",
+        "communityName": "merle.larkin"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9638,7 +9638,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'startTime=2025-10-20 01:15:40&appId=127&q=czesiu&roleTypeId=127&batchId=127&orderBy=898&status=623&type=66vwud&organId=127&page=1&areaId=949&groupId=85&limit=10&positionId=127&keyWords=adznfa&endTime=2025-10-20 01:15:40'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'startTime=2025-10-20 18:20:52&batchId=172&roleTypeId=172&status=810&endTime=2025-10-20 18:20:52&page=1&orderBy=468&areaId=105&q=tmzb6q&groupId=851&type=0zu6nv&organId=172&limit=10&keyWords=c658q0&appId=172&positionId=172'
 ```
 **Response-fields:**
 
@@ -9657,9 +9657,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6ddk0g",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "q24xrx",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9690,7 +9690,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/298.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/914.do
 ```
 **Response-fields:**
 
@@ -9759,58 +9759,58 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": 155,
-    "appId": "127",
-    "saveSource": "1q650g",
-    "unitName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "idNum": "mkslsa",
-    "duty": "agt4wy",
-    "telephone": "1-614-814-9478",
-    "mobile": "1-856-813-9551",
-    "extInfo1": "ykoh49",
-    "extInfo2": "7y8zek",
-    "extInfo3": "0exuzd",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:00",
+    "lastTime": "2025-10-20 18:26:00",
+    "id": 317,
+    "appId": "172",
+    "saveSource": "m15pp8",
+    "unitName": "merle.larkin",
+    "name": "merle.larkin",
+    "idNum": "dr0r6x",
+    "duty": "3sawg4",
+    "telephone": "1-203-302-2484",
+    "mobile": "(415) 540-6962",
+    "extInfo1": "yvnjt8",
+    "extInfo2": "8y4mza",
+    "extInfo3": "y4105s",
     "needInitUser": true,
-    "userId": "127",
+    "userId": "172",
     "needInitOrgan": true,
-    "organId": "127",
-    "type": "zd9u6o",
-    "foreignUrl": "www.emanuel-bosco.biz",
-    "bizType": 622,
-    "bizOrganId": "127",
-    "bizAreaId": 787,
-    "bizGroupId": 706,
-    "bizPower": "tk6glt",
-    "bizMultiInfo": "s3rmo2",
+    "organId": "172",
+    "type": "37wvwe",
+    "foreignUrl": "www.ben-grant.info",
+    "bizType": 626,
+    "bizOrganId": "172",
+    "bizAreaId": 335,
+    "bizGroupId": 191,
+    "bizPower": "7i5wla",
+    "bizMultiInfo": "rr7mia",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "127",
-    "opOrganId": "127",
-    "opTime": "2025-10-20 01:16:48",
-    "opInfo": "5a7own",
-    "priority": 797,
-    "status": 20,
-    "delFlag": 4,
-    "dataBatch": "8kl79w",
-    "dataVersion": 439,
-    "updateTime": "2025-10-20 01:16:48",
-    "syncMode": "jopjcx",
-    "syncTime": "2025-10-20 01:16:48",
-    "description": "kj3qu4",
-    "groupName": "necole.oreilly",
-    "positionName": "necole.oreilly",
-    "bizPowerName": "necole.oreilly",
-    "subdistrictName": "necole.oreilly",
-    "communityName": "necole.oreilly"
+    "opUserId": "172",
+    "opOrganId": "172",
+    "opTime": "2025-10-20 18:26:00",
+    "opInfo": "abijyl",
+    "priority": 668,
+    "status": 501,
+    "delFlag": 5,
+    "dataBatch": "kjmaq5",
+    "dataVersion": 234,
+    "updateTime": "2025-10-20 18:26:00",
+    "syncMode": "1sqq4n",
+    "syncTime": "2025-10-20 18:26:00",
+    "description": "q5ax80",
+    "groupName": "merle.larkin",
+    "positionName": "merle.larkin",
+    "bizPowerName": "merle.larkin",
+    "subdistrictName": "merle.larkin",
+    "communityName": "merle.larkin"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -9887,50 +9887,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": 484,
-    "appId": "127",
-    "saveSource": "iqsa5s",
-    "unitName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "idNum": "grag97",
-    "duty": "x6f1ih",
-    "telephone": "1-614-814-9478",
-    "mobile": "1-856-813-9551",
-    "extInfo1": "enbq98",
-    "extInfo2": "kn43k0",
-    "extInfo3": "fzca0p",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:00",
+    "lastTime": "2025-10-20 18:26:00",
+    "id": 540,
+    "appId": "172",
+    "saveSource": "kga1tp",
+    "unitName": "merle.larkin",
+    "name": "merle.larkin",
+    "idNum": "nkaezs",
+    "duty": "1nzsgw",
+    "telephone": "1-203-302-2484",
+    "mobile": "(415) 540-6962",
+    "extInfo1": "lxsb0l",
+    "extInfo2": "14utbk",
+    "extInfo3": "nl2zcv",
     "needInitUser": true,
-    "userId": "127",
+    "userId": "172",
     "needInitOrgan": true,
-    "organId": "127",
-    "type": "z7kky7",
-    "foreignUrl": "www.emanuel-bosco.biz",
-    "bizType": 630,
-    "bizOrganId": "127",
-    "bizAreaId": 995,
-    "bizGroupId": 499,
-    "bizPower": "0nhluo",
-    "bizMultiInfo": "k81ig0",
+    "organId": "172",
+    "type": "ivq1rr",
+    "foreignUrl": "www.ben-grant.info",
+    "bizType": 476,
+    "bizOrganId": "172",
+    "bizAreaId": 986,
+    "bizGroupId": 989,
+    "bizPower": "u26axm",
+    "bizMultiInfo": "7prwox",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "127",
-    "opOrganId": "127",
-    "opTime": "2025-10-20 01:16:48",
-    "opInfo": "najd3i",
-    "priority": 590,
-    "status": 853,
-    "delFlag": 4,
-    "dataBatch": "k1dcon",
-    "dataVersion": 500,
-    "updateTime": "2025-10-20 01:16:48",
-    "syncMode": "ycr0sd",
-    "syncTime": "2025-10-20 01:16:48",
-    "description": "bkc1cc"
+    "opUserId": "172",
+    "opOrganId": "172",
+    "opTime": "2025-10-20 18:26:00",
+    "opInfo": "qhjv82",
+    "priority": 913,
+    "status": 171,
+    "delFlag": 5,
+    "dataBatch": "yrfhew",
+    "dataVersion": 702,
+    "updateTime": "2025-10-20 18:26:00",
+    "syncMode": "psacot",
+    "syncTime": "2025-10-20 18:26:00",
+    "description": "997rhb"
   }
 }'
 ```
@@ -9951,9 +9951,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "srgeod",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "0yesbr",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10030,50 +10030,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": 79,
-    "appId": "127",
-    "saveSource": "fie67d",
-    "unitName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "idNum": "77r1bj",
-    "duty": "nm51pr",
-    "telephone": "1-614-814-9478",
-    "mobile": "1-856-813-9551",
-    "extInfo1": "ktou7o",
-    "extInfo2": "dzldh4",
-    "extInfo3": "yexhpi",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:00",
+    "lastTime": "2025-10-20 18:26:00",
+    "id": 618,
+    "appId": "172",
+    "saveSource": "qgexw3",
+    "unitName": "merle.larkin",
+    "name": "merle.larkin",
+    "idNum": "gc3d9k",
+    "duty": "xyqxnh",
+    "telephone": "1-203-302-2484",
+    "mobile": "(415) 540-6962",
+    "extInfo1": "cyjn7k",
+    "extInfo2": "ah66q1",
+    "extInfo3": "5u9ibo",
     "needInitUser": true,
-    "userId": "127",
+    "userId": "172",
     "needInitOrgan": true,
-    "organId": "127",
-    "type": "udgc8t",
-    "foreignUrl": "www.emanuel-bosco.biz",
-    "bizType": 372,
-    "bizOrganId": "127",
-    "bizAreaId": 764,
-    "bizGroupId": 404,
-    "bizPower": "bbpy4b",
-    "bizMultiInfo": "gbclh5",
+    "organId": "172",
+    "type": "j6kfi2",
+    "foreignUrl": "www.ben-grant.info",
+    "bizType": 281,
+    "bizOrganId": "172",
+    "bizAreaId": 550,
+    "bizGroupId": 491,
+    "bizPower": "pmzap3",
+    "bizMultiInfo": "2lu1df",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "127",
-    "opOrganId": "127",
-    "opTime": "2025-10-20 01:16:48",
-    "opInfo": "iu3a6n",
-    "priority": 960,
-    "status": 785,
-    "delFlag": 4,
-    "dataBatch": "ys9ltr",
-    "dataVersion": 752,
-    "updateTime": "2025-10-20 01:16:48",
-    "syncMode": "b5l995",
-    "syncTime": "2025-10-20 01:16:48",
-    "description": "gn7n2u"
+    "opUserId": "172",
+    "opOrganId": "172",
+    "opTime": "2025-10-20 18:26:00",
+    "opInfo": "047s92",
+    "priority": 544,
+    "status": 403,
+    "delFlag": 5,
+    "dataBatch": "ew2tm5",
+    "dataVersion": 311,
+    "updateTime": "2025-10-20 18:26:00",
+    "syncMode": "jxqod6",
+    "syncTime": "2025-10-20 18:26:00",
+    "description": "86x172"
   }
 }'
 ```
@@ -10094,9 +10094,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "50cj0a",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "tu4hb8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10146,9 +10146,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dbg560",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "rujenz",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10192,9 +10192,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ppjbzn",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "frz69q",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10225,11 +10225,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "necole.oreilly",
-    "password": "zxu55i",
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "appId": "127"
+    "username": "merle.larkin",
+    "password": "47ydx1",
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "appId": "172"
   }
 }'
 ```
@@ -10250,9 +10250,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hcnov5",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "dd83w7",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10297,7 +10297,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?page=1&orderBy=934&infoId=596&os=21xuxi&username=necole.oreilly&status=y03mts&msg=ie8i3j&browser=037p98&endTime=2025-10-20 01:15:40&limit=10&ipaddr=rwekd3&startTime=2025-10-20 01:15:40&loginTime=2025-10-20 01:16:49&q=pne2zh
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?infoId=591&username=merle.larkin&q=evtjoz&orderBy=434&limit=10&endTime=2025-10-20 18:20:52&loginTime=2025-10-20 18:26:02&ipaddr=25b81w&status=s2t834&msg=z46ur8&browser=z2ykft&os=hqus8s&page=1&startTime=2025-10-20 18:20:52
 ```
 **Response-fields:**
 
@@ -10332,27 +10332,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 24,
+    "totalCount": 80,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 360,
-        "username": "necole.oreilly",
-        "status": "t9juyw",
-        "ipaddr": "u5u1n7",
-        "loginLocation": "mr93yr",
-        "browser": "4dsdk3",
-        "os": "cs2jnm",
-        "msg": "2bm67u",
-        "loginTime": "2025-10-20 01:16:49",
-        "remark": "3bs3ri"
+        "infoId": 536,
+        "username": "merle.larkin",
+        "status": "p7giel",
+        "ipaddr": "l2u0w3",
+        "loginLocation": "hbz086",
+        "browser": "h18tkz",
+        "os": "l1nbqb",
+        "msg": "5kuamn",
+        "loginTime": "2025-10-20 18:26:02",
+        "remark": "6wsy1k"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10396,7 +10396,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'browser=h81sn5&endTime=2025-10-20 01:15:40&page=1&ipaddr=3x3m7o&startTime=2025-10-20 01:15:40&username=necole.oreilly&q=n2h7ep&os=kzaph4&orderBy=982&loginTime=2025-10-20 01:16:49&status=2m9n03&infoId=210&limit=10&msg=d08trs'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'startTime=2025-10-20 18:20:52&limit=10&infoId=252&status=zqxmwn&browser=684nal&username=merle.larkin&orderBy=11&msg=9ya476&q=c2x8ss&endTime=2025-10-20 18:20:52&loginTime=2025-10-20 18:26:02&os=f6cgrn&page=1&ipaddr=kzidmz'
 ```
 **Response-fields:**
 
@@ -10415,9 +10415,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1med22",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "lrn9en",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10467,9 +10467,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g3upzj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "uc74go",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10513,9 +10513,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u2jx17",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "4bqup9",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10546,7 +10546,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/necole.oreilly.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -10565,9 +10565,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0vrp1v",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "l40al8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10686,60 +10686,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 834,
-    "userId": "127",
-    "deptId": 148,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "whd9ra",
-    "password": "sh9ms9",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:56",
+    "lastTime": "2025-10-20 18:25:56",
+    "id": 709,
+    "userId": "172",
+    "deptId": 31,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "iwox4b",
+    "password": "n3cg42",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 270,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:44",
-    "description": "y13tmc",
+    "status": 981,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:56",
+    "description": "3xdw2t",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:44",
-      "lastTime": "2025-10-20 01:16:44",
-      "id": 227,
-      "organId": "127",
-      "parentId": 630,
-      "appId": "127",
-      "depttypeId": 449,
-      "foreignId": "127",
-      "createType": 369,
-      "type": "n4xmbj",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "n5tp9k",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:56",
+      "lastTime": "2025-10-20 18:25:56",
+      "id": 755,
+      "organId": "172",
+      "parentId": 475,
+      "appId": "172",
+      "depttypeId": 878,
+      "foreignId": "172",
+      "createType": 97,
+      "type": "4736sb",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "6gnjjm",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "gopmy1",
-      "priority": 549,
-      "status": 892,
-      "delFlag": 4,
-      "description": "810mjf",
-      "spare1": "aakyd7",
-      "spare2": "ueq19d",
+      "searchCode": "81486",
+      "imagePath": "rt8v3a",
+      "priority": 755,
+      "status": 975,
+      "delFlag": 5,
+      "description": "l2epoc",
+      "spare1": "uuhlqu",
+      "spare2": "l72gtp",
       "children": [
         {
           "$ref": ".."
@@ -10748,44 +10748,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "id": 675,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 128,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "id": 992,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 332,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 141,
-        "description": "4e6js4",
-        "areaType": "lo3pnj"
+        "status": 509,
+        "description": "myq3y8",
+        "areaType": "hq0y12"
       }
     ],
     "roleIds": [
-      750
+      100
     ],
     "positionIds": [
-      "rg9kpz"
+      "54afr3"
     ],
-    "roleId": 954,
+    "roleId": 371,
     "userRoleList": [
       {
-        "id": 972,
-        "deptId": 480,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 963,
-        "roleName": "necole.oreilly",
-        "adminId": 749
+        "id": 26,
+        "deptId": 328,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 937,
+        "roleName": "merle.larkin",
+        "adminId": 309
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -10806,9 +10806,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a5hvx6",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ycinlt",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -10926,60 +10926,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 54,
-    "userId": "127",
-    "deptId": 53,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "x5n5p2",
-    "password": "49zjoy",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:56",
+    "lastTime": "2025-10-20 18:25:56",
+    "id": 580,
+    "userId": "172",
+    "deptId": 412,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "p1o4nt",
+    "password": "3ds2bj",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 933,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:44",
-    "description": "kiizyp",
+    "status": 519,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:56",
+    "description": "nhgpdv",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:44",
-      "lastTime": "2025-10-20 01:16:44",
-      "id": 908,
-      "organId": "127",
-      "parentId": 986,
-      "appId": "127",
-      "depttypeId": 18,
-      "foreignId": "127",
-      "createType": 379,
-      "type": "grthte",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "d878hx",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:56",
+      "lastTime": "2025-10-20 18:25:56",
+      "id": 317,
+      "organId": "172",
+      "parentId": 987,
+      "appId": "172",
+      "depttypeId": 203,
+      "foreignId": "172",
+      "createType": 744,
+      "type": "dwgah7",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "69cyel",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "oondaf",
-      "priority": 720,
-      "status": 373,
-      "delFlag": 4,
-      "description": "zsm2tg",
-      "spare1": "5buzcv",
-      "spare2": "tde9ew",
+      "searchCode": "81486",
+      "imagePath": "5hhxd1",
+      "priority": 320,
+      "status": 91,
+      "delFlag": 5,
+      "description": "b3rxwv",
+      "spare1": "fxtbwa",
+      "spare2": "emnf0t",
       "children": [
         {
           "$ref": ".."
@@ -10988,44 +10988,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "id": 92,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 895,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "id": 145,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 580,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 302,
-        "description": "rvwjc4",
-        "areaType": "okwu9h"
+        "status": 968,
+        "description": "ljqabc",
+        "areaType": "jvqesm"
       }
     ],
     "roleIds": [
-      313
+      179
     ],
     "positionIds": [
-      "fa5ztl"
+      "umedzp"
     ],
-    "roleId": 414,
+    "roleId": 667,
     "userRoleList": [
       {
-        "id": 539,
-        "deptId": 642,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 971,
-        "roleName": "necole.oreilly",
-        "adminId": 227
+        "id": 343,
+        "deptId": 437,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 470,
+        "roleName": "merle.larkin",
+        "adminId": 204
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -11046,9 +11046,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "42jclo",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "sifm7a",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11112,40 +11112,40 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 545,
-    "userId": "127",
-    "organId": "127",
-    "deptId": 120,
-    "createType": 988,
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "mobile": "1-856-813-9551",
-    "email": "eugenia.howe@yahoo.com",
-    "password": "t02rfu",
-    "salt": "57s106",
-    "imagePath": "bfx3qx",
-    "adminType": "oem83g",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:56",
+    "lastTime": "2025-10-20 18:25:56",
+    "id": 722,
+    "userId": "172",
+    "organId": "172",
+    "deptId": 289,
+    "createType": 442,
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "mobile": "(415) 540-6962",
+    "email": "vivian.streich@hotmail.com",
+    "password": "tb1r27",
+    "salt": "dcyx5h",
+    "imagePath": "ij6kvn",
+    "adminType": "9u9mn0",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "adminRange": "y1pqij",
-    "adminPerms": "4o9dsx",
-    "lastAppId": "127",
-    "lastLoginTime": "2025-10-20 01:16:44",
-    "lastLoginIp": "148.144.89.250",
-    "loginCount": 340,
-    "status": 606,
-    "delFlag": 4,
-    "spare1": "l90mxi",
-    "spare2": "pxcwpj",
+    "adminRange": "2aqyuu",
+    "adminPerms": "ixlx49",
+    "lastAppId": "172",
+    "lastLoginTime": "2025-10-20 18:25:56",
+    "lastLoginIp": "137.119.212.174",
+    "loginCount": 864,
+    "status": 876,
+    "delFlag": 5,
+    "spare1": "m0f6de",
+    "spare2": "235qam",
     "roleIds": [
-      410
+      204
     ],
     "positionIds": [
-      "osv0g1"
+      "uxdoc7"
     ]
   }
 }'
@@ -11167,9 +11167,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ajyoxx",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "2hmrx2",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11293,60 +11293,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:45",
-    "lastTime": "2025-10-20 01:16:45",
-    "id": 826,
-    "userId": "127",
-    "deptId": 909,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "3p3172",
-    "password": "ig4s2h",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:56",
+    "lastTime": "2025-10-20 18:25:56",
+    "id": 178,
+    "userId": "172",
+    "deptId": 511,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "e9dw24",
+    "password": "uru8em",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 21,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:45",
-    "description": "6qyb0z",
+    "status": 832,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:56",
+    "description": "d8zgds",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 648,
-      "organId": "127",
-      "parentId": 693,
-      "appId": "127",
-      "depttypeId": 152,
-      "foreignId": "127",
-      "createType": 87,
-      "type": "105e20",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "851twz",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:56",
+      "lastTime": "2025-10-20 18:25:56",
+      "id": 846,
+      "organId": "172",
+      "parentId": 584,
+      "appId": "172",
+      "depttypeId": 813,
+      "foreignId": "172",
+      "createType": 938,
+      "type": "6xc0lc",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "x2cj4w",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "3mwc1j",
-      "priority": 917,
-      "status": 3,
-      "delFlag": 4,
-      "description": "9dsjdv",
-      "spare1": "koqv4x",
-      "spare2": "owm80o",
+      "searchCode": "81486",
+      "imagePath": "h58ju9",
+      "priority": 218,
+      "status": 596,
+      "delFlag": 5,
+      "description": "jihkkn",
+      "spare1": "vzgr5q",
+      "spare2": "wo5q10",
       "children": [
         {
           "$ref": ".."
@@ -11355,44 +11355,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 656,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 625,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "id": 801,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 31,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 228,
-        "description": "r6qypa",
-        "areaType": "3n1j1u"
+        "status": 698,
+        "description": "13f8xm",
+        "areaType": "qs6a24"
       }
     ],
     "roleIds": [
-      316
+      173
     ],
     "positionIds": [
-      "ijhh56"
+      "7vxx5c"
     ],
-    "roleId": 78,
+    "roleId": 934,
     "userRoleList": [
       {
-        "id": 207,
-        "deptId": 717,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 363,
-        "roleName": "necole.oreilly",
-        "adminId": 344
+        "id": 396,
+        "deptId": 194,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 270,
+        "roleName": "merle.larkin",
+        "adminId": 144
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -11413,9 +11413,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qbrf5g",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "dvss2a",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11465,9 +11465,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8kh6fb",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "4kvh6f",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11513,7 +11513,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'userId=127&adminId=386&limit=10&username=necole.oreilly&email=eugenia.howe@yahoo.com&status=sffmwn&organId=127&mobile=1-856-813-9551&page=1&deptId=781&orderBy=329&endTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&q=fiumo4&delFlag=4&nickName=ethyl.nitzsche'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'startTime=2025-10-20 18:20:52&mobile=(415) 540-6962&q=42d78v&orderBy=974&page=1&userId=172&organId=172&email=vivian.streich@hotmail.com&deptId=118&nickName=renna.dibbert&username=merle.larkin&endTime=2025-10-20 18:20:52&adminId=46&status=ado2nr&delFlag=5&limit=10'
 ```
 **Response-fields:**
 
@@ -11532,9 +11532,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hb453p",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "0creh2",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11585,9 +11585,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ojocwz",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "1f2v32",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11631,9 +11631,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jvgiw4",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "5r1gdg",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11751,60 +11751,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:45",
-    "lastTime": "2025-10-20 01:16:45",
-    "id": 598,
-    "userId": "127",
-    "deptId": 627,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "jc057l",
-    "password": "pi0661",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:57",
+    "lastTime": "2025-10-20 18:25:57",
+    "id": 373,
+    "userId": "172",
+    "deptId": 307,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "nh9yz7",
+    "password": "mciyp0",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 416,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:45",
-    "description": "atck67",
+    "status": 83,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:57",
+    "description": "n62rlr",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 600,
-      "organId": "127",
-      "parentId": 809,
-      "appId": "127",
-      "depttypeId": 786,
-      "foreignId": "127",
-      "createType": 262,
-      "type": "f8cv8j",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "cwtonc",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "id": 566,
+      "organId": "172",
+      "parentId": 401,
+      "appId": "172",
+      "depttypeId": 354,
+      "foreignId": "172",
+      "createType": 970,
+      "type": "3h2f0v",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "ow66n4",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "kejxen",
-      "priority": 637,
-      "status": 434,
-      "delFlag": 4,
-      "description": "hm8fg5",
-      "spare1": "sw8n6s",
-      "spare2": "75wpni",
+      "searchCode": "81486",
+      "imagePath": "524tt6",
+      "priority": 185,
+      "status": 592,
+      "delFlag": 5,
+      "description": "1urh6b",
+      "spare1": "jz89k8",
+      "spare2": "rhk0cg",
       "children": [
         {
           "$ref": ".."
@@ -11813,44 +11813,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 52,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 391,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:57",
+        "lastTime": "2025-10-20 18:25:57",
+        "id": 275,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 136,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 132,
-        "description": "xhnt0g",
-        "areaType": "fsvgan"
+        "status": 773,
+        "description": "lir1bu",
+        "areaType": "bisi55"
       }
     ],
     "roleIds": [
-      532
+      356
     ],
     "positionIds": [
-      "ngf7f7"
+      "d80a46"
     ],
-    "roleId": 299,
+    "roleId": 741,
     "userRoleList": [
       {
-        "id": 130,
-        "deptId": 254,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 463,
-        "roleName": "necole.oreilly",
-        "adminId": 878
+        "id": 401,
+        "deptId": 615,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 618,
+        "roleName": "merle.larkin",
+        "adminId": 852
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -11871,9 +11871,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "blyhfs",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "6bt2vs",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -11991,60 +11991,60 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:45",
-    "lastTime": "2025-10-20 01:16:45",
-    "id": 381,
-    "userId": "127",
-    "deptId": 891,
-    "deptName": "necole.oreilly",
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "name": "necole.oreilly",
-    "username": "necole.oreilly",
-    "nickName": "ethyl.nitzsche",
-    "email": "eugenia.howe@yahoo.com",
-    "mobile": "1-856-813-9551",
-    "imagePath": "o5vybo",
-    "password": "tj6xie",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:57",
+    "lastTime": "2025-10-20 18:25:57",
+    "id": 592,
+    "userId": "172",
+    "deptId": 549,
+    "deptName": "merle.larkin",
+    "organId": "172",
+    "organName": "merle.larkin",
+    "name": "merle.larkin",
+    "username": "merle.larkin",
+    "nickName": "renna.dibbert",
+    "email": "vivian.streich@hotmail.com",
+    "mobile": "(415) 540-6962",
+    "imagePath": "b9a1qb",
+    "password": "j1urzi",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 237,
-    "delFlag": 4,
-    "lastLoginIp": "148.144.89.250",
-    "lastLoginTime": "2025-10-20 01:16:45",
-    "description": "guuv7f",
+    "status": 864,
+    "delFlag": 5,
+    "lastLoginIp": "137.119.212.174",
+    "lastLoginTime": "2025-10-20 18:25:57",
+    "description": "ri4yq7",
     "dept": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 339,
-      "organId": "127",
-      "parentId": 416,
-      "appId": "127",
-      "depttypeId": 139,
-      "foreignId": "127",
-      "createType": 925,
-      "type": "34scvk",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "7vcisi",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "id": 520,
+      "organId": "172",
+      "parentId": 195,
+      "appId": "172",
+      "depttypeId": 453,
+      "foreignId": "172",
+      "createType": 153,
+      "type": "lug5uq",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "ug3kk7",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "177c56",
-      "priority": 625,
-      "status": 981,
-      "delFlag": 4,
-      "description": "3ghu9l",
-      "spare1": "4lkxc5",
-      "spare2": "sljd2f",
+      "searchCode": "81486",
+      "imagePath": "eneyrh",
+      "priority": 315,
+      "status": 209,
+      "delFlag": 5,
+      "description": "u14kuj",
+      "spare1": "xdwx7i",
+      "spare2": "7y0i4j",
       "children": [
         {
           "$ref": ".."
@@ -12053,44 +12053,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 516,
-        "roletypeId": "127",
-        "appId": "127",
-        "name": "necole.oreilly",
-        "code": "65412",
-        "priority": 996,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:57",
+        "lastTime": "2025-10-20 18:25:57",
+        "id": 282,
+        "roletypeId": "172",
+        "appId": "172",
+        "name": "merle.larkin",
+        "code": "81486",
+        "priority": 253,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 494,
-        "description": "mswpfi",
-        "areaType": "ubdjx1"
+        "status": 268,
+        "description": "tpipu0",
+        "areaType": "8x61in"
       }
     ],
     "roleIds": [
-      149
+      731
     ],
     "positionIds": [
-      "n6h4n0"
+      "yqcvsy"
     ],
-    "roleId": 864,
+    "roleId": 891,
     "userRoleList": [
       {
-        "id": 88,
-        "deptId": 230,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleId": 443,
-        "roleName": "necole.oreilly",
-        "adminId": 913
+        "id": 609,
+        "deptId": 782,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleId": 797,
+        "roleName": "merle.larkin",
+        "adminId": 56
       }
     ],
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
   }
 }'
 ```
@@ -12111,9 +12111,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pkglqe",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "g4w2nq",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12144,7 +12144,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/642.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/112.do
 ```
 **Response-fields:**
 
@@ -12163,9 +12163,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bkz9fm",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "4pjvym",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12197,7 +12197,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=wnznwi&roleIds=wnznwi&adminId=277'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=fbos1z&roleIds=fbos1z&adminId=892'
 ```
 **Response-fields:**
 
@@ -12216,9 +12216,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "23ou8c",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "duvbne",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12265,7 +12265,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?deptId=281&organId=127&limit=10&delFlag=4&adminId=977&email=eugenia.howe@yahoo.com&status=wj864u&userId=127&q=lwdnpg&page=1&username=necole.oreilly&orderBy=425&nickName=ethyl.nitzsche&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&mobile=1-856-813-9551
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?endTime=2025-10-20 18:20:52&page=1&organId=172&nickName=renna.dibbert&adminId=630&email=vivian.streich@hotmail.com&limit=10&startTime=2025-10-20 18:20:52&userId=172&status=4qnpti&username=merle.larkin&orderBy=608&mobile=(415) 540-6962&delFlag=5&deptId=885&q=9wih8t
 ```
 **Response-fields:**
 
@@ -12371,60 +12371,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:44",
-      "lastTime": "2025-10-20 01:16:44",
-      "id": 876,
-      "userId": "127",
-      "deptId": 533,
-      "deptName": "necole.oreilly",
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "name": "necole.oreilly",
-      "username": "necole.oreilly",
-      "nickName": "ethyl.nitzsche",
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "6v2g9t",
-      "password": "wvjprm",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:56",
+      "lastTime": "2025-10-20 18:25:56",
+      "id": 53,
+      "userId": "172",
+      "deptId": 0,
+      "deptName": "merle.larkin",
+      "organId": "172",
+      "organName": "merle.larkin",
+      "name": "merle.larkin",
+      "username": "merle.larkin",
+      "nickName": "renna.dibbert",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "7bvlb9",
+      "password": "fgrire",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 642,
-      "delFlag": 4,
-      "lastLoginIp": "148.144.89.250",
-      "lastLoginTime": "2025-10-20 01:16:44",
-      "description": "lpjbvn",
+      "status": 987,
+      "delFlag": 5,
+      "lastLoginIp": "137.119.212.174",
+      "lastLoginTime": "2025-10-20 18:25:56",
+      "description": "4zdjaf",
       "dept": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "id": 425,
-        "organId": "127",
-        "parentId": 150,
-        "appId": "127",
-        "depttypeId": 166,
-        "foreignId": "127",
-        "createType": 352,
-        "type": "reeb3o",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "areaCode": "65412",
-        "organLeader": "0us999",
-        "leaderId": "127",
-        "leaderMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "id": 748,
+        "organId": "172",
+        "parentId": 129,
+        "appId": "172",
+        "depttypeId": 517,
+        "foreignId": "172",
+        "createType": 819,
+        "type": "vmadkp",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "areaCode": "81486",
+        "organLeader": "5rsnzm",
+        "leaderId": "172",
+        "leaderMobile": "(415) 540-6962",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "65412",
-        "imagePath": "ycwq7k",
-        "priority": 821,
-        "status": 961,
-        "delFlag": 4,
-        "description": "coppp3",
-        "spare1": "yv3zf0",
-        "spare2": "b7wpyt",
+        "searchCode": "81486",
+        "imagePath": "p33hye",
+        "priority": 807,
+        "status": 264,
+        "delFlag": 5,
+        "description": "mb74jz",
+        "spare1": "laogiv",
+        "spare2": "8e99jw",
         "children": [
           {
             "$ref": ".."
@@ -12433,48 +12433,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:44",
-          "lastTime": "2025-10-20 01:16:44",
-          "id": 461,
-          "roletypeId": "127",
-          "appId": "127",
-          "name": "necole.oreilly",
-          "code": "65412",
-          "priority": 764,
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:25:56",
+          "lastTime": "2025-10-20 18:25:56",
+          "id": 935,
+          "roletypeId": "172",
+          "appId": "172",
+          "name": "merle.larkin",
+          "code": "81486",
+          "priority": 866,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 759,
-          "description": "ial65l",
-          "areaType": "0cqd45"
+          "status": 705,
+          "description": "i505bo",
+          "areaType": "rqexlq"
         }
       ],
       "roleIds": [
-        85
+        36
       ],
       "positionIds": [
-        "te2eoe"
+        "0r4yaz"
       ],
-      "roleId": 198,
+      "roleId": 105,
       "userRoleList": [
         {
-          "id": 448,
-          "deptId": 901,
-          "deptName": "necole.oreilly",
-          "organId": "127",
-          "organName": "necole.oreilly",
-          "roleId": 254,
-          "roleName": "necole.oreilly",
-          "adminId": 404
+          "id": 418,
+          "deptId": 36,
+          "deptName": "merle.larkin",
+          "organId": "172",
+          "organName": "merle.larkin",
+          "roleId": 344,
+          "roleName": "merle.larkin",
+          "adminId": 294
         }
       ],
-      "code": "65412",
-      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+      "code": "81486",
+      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12505,7 +12505,7 @@ adminId|int64| 管理员ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/516].do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/467].do
 ```
 **Response-fields:**
 
@@ -12659,60 +12659,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:44",
-      "lastTime": "2025-10-20 01:16:44",
-      "id": 775,
-      "userId": "127",
-      "deptId": 855,
-      "deptName": "necole.oreilly",
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "name": "necole.oreilly",
-      "username": "necole.oreilly",
-      "nickName": "ethyl.nitzsche",
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "63i1h8",
-      "password": "bh1sgw",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:56",
+      "lastTime": "2025-10-20 18:25:56",
+      "id": 685,
+      "userId": "172",
+      "deptId": 804,
+      "deptName": "merle.larkin",
+      "organId": "172",
+      "organName": "merle.larkin",
+      "name": "merle.larkin",
+      "username": "merle.larkin",
+      "nickName": "renna.dibbert",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "h7fqnd",
+      "password": "6zve0q",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 20,
-      "delFlag": 4,
-      "lastLoginIp": "148.144.89.250",
-      "lastLoginTime": "2025-10-20 01:16:44",
-      "description": "2lmb68",
+      "status": 254,
+      "delFlag": 5,
+      "lastLoginIp": "137.119.212.174",
+      "lastLoginTime": "2025-10-20 18:25:56",
+      "description": "ms1366",
       "dept": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "id": 226,
-        "organId": "127",
-        "parentId": 993,
-        "appId": "127",
-        "depttypeId": 119,
-        "foreignId": "127",
-        "createType": 365,
-        "type": "t0y55p",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "areaCode": "65412",
-        "organLeader": "ooer0y",
-        "leaderId": "127",
-        "leaderMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "id": 504,
+        "organId": "172",
+        "parentId": 316,
+        "appId": "172",
+        "depttypeId": 126,
+        "foreignId": "172",
+        "createType": 769,
+        "type": "q08eab",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "areaCode": "81486",
+        "organLeader": "tkxhfi",
+        "leaderId": "172",
+        "leaderMobile": "(415) 540-6962",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "65412",
-        "imagePath": "7s95td",
-        "priority": 317,
-        "status": 601,
-        "delFlag": 4,
-        "description": "uak20g",
-        "spare1": "a9iyu1",
-        "spare2": "q5vsrj",
+        "searchCode": "81486",
+        "imagePath": "x7vp1z",
+        "priority": 556,
+        "status": 793,
+        "delFlag": 5,
+        "description": "migvho",
+        "spare1": "3tjt4q",
+        "spare2": "q85gdi",
         "children": [
           {
             "$ref": ".."
@@ -12721,116 +12721,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:44",
-          "lastTime": "2025-10-20 01:16:44",
-          "id": 205,
-          "roletypeId": "127",
-          "appId": "127",
-          "name": "necole.oreilly",
-          "code": "65412",
-          "priority": 862,
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:25:56",
+          "lastTime": "2025-10-20 18:25:56",
+          "id": 796,
+          "roletypeId": "172",
+          "appId": "172",
+          "name": "merle.larkin",
+          "code": "81486",
+          "priority": 841,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 53,
-          "description": "nace84",
-          "areaType": "k64hem"
+          "status": 830,
+          "description": "gzrili",
+          "areaType": "piwb1x"
         }
       ],
       "roleIds": [
-        37
+        225
       ],
       "positionIds": [
-        "l6p57i"
+        "vayyna"
       ],
-      "roleId": 193,
+      "roleId": 956,
       "userRoleList": [
         {
-          "id": 902,
-          "deptId": 965,
-          "deptName": "necole.oreilly",
-          "organId": "127",
-          "organName": "necole.oreilly",
-          "roleId": 89,
-          "roleName": "necole.oreilly",
-          "adminId": 417
+          "id": 621,
+          "deptId": 588,
+          "deptName": "merle.larkin",
+          "organId": "172",
+          "organName": "merle.larkin",
+          "roleId": 966,
+          "roleName": "merle.larkin",
+          "adminId": 841
         }
       ],
-      "code": "65412",
-      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+      "code": "81486",
+      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
     },
     "roles": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "roleId": 793,
-        "roleName": "necole.oreilly",
-        "roleKey": "fd993p",
-        "roleSort": 727,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "roleId": 37,
+        "roleName": "merle.larkin",
+        "roleKey": "udvx9a",
+        "roleSort": 871,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 248,
+        "status": 300,
         "flag": true,
         "menuIds": [
-          207
+          165
         ],
         "deptIds": [
-          880
+          418
         ],
         "permissions": [
-          "exkt02"
+          "v5xen5"
         ],
-        "remark": "u6fbpg",
-        "parentName": "necole.oreilly",
-        "appName": "necole.oreilly",
-        "roletypeId": "127",
-        "roletypeName": "necole.oreilly",
-        "priority": 666,
+        "remark": "w4uykz",
+        "parentName": "merle.larkin",
+        "appName": "merle.larkin",
+        "roletypeId": "172",
+        "roletypeName": "merle.larkin",
+        "priority": 490,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 192,
-        "roleId": 36,
-        "adminId": 375,
-        "deptId": 229,
-        "deptName": "necole.oreilly",
-        "organId": "127",
-        "organName": "necole.oreilly",
-        "roleName": "necole.oreilly"
+        "id": 111,
+        "roleId": 159,
+        "adminId": 10,
+        "deptId": 203,
+        "deptName": "merle.larkin",
+        "organId": "172",
+        "organName": "merle.larkin",
+        "roleName": "merle.larkin"
       }
     ],
     "positions": [
       {
-        "postId": "127",
-        "postCode": "65412",
-        "postName": "necole.oreilly",
-        "postSort": 344,
-        "status": 142,
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:44",
-        "lastTime": "2025-10-20 01:16:44",
-        "delFlag": 4,
-        "remark": "cjv5on",
+        "postId": "172",
+        "postCode": "81486",
+        "postName": "merle.larkin",
+        "postSort": 631,
+        "status": 113,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:56",
+        "lastTime": "2025-10-20 18:25:56",
+        "delFlag": 5,
+        "remark": "qt7efm",
         "ids": [
-          "boe6ca"
+          "tgrlzs"
         ],
-        "positionId": "127",
+        "positionId": "172",
         "flag": true
       }
     ],
     "roleIds": [
-      416
+      175
     ],
     "positionIds": [
-      196
+      557
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12892,7 +12892,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?leaderMobile=1-856-813-9551&startTime=2025-10-20 01:15:40&type=87rigk&isOrganLevel=true&depttypeId=810&creatorId=127&orderBy=847&appId=127&foreignId=127&endTime=2025-10-20 01:15:40&page=1&deptId=7&searchCode=65412&status=302&delFlag=4&createType=877&q=sr20id&sname=necole.oreilly&organId=127&imagePath=nh4oip&isVirtual=true&limit=10&organLeader=totj9v&description=m7ww4e&parentId=754&isDisabled=true&spare2=374ru3&spare1=fxrmiu&name=necole.oreilly&isLeaf=true&areaCode=65412&leaderId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?orderBy=848&areaCode=81486&startTime=2025-10-20 18:20:52&createType=563&sname=merle.larkin&leaderMobile=(415) 540-6962&organId=172&leaderId=172&depttypeId=640&spare2=vh9b3q&foreignId=172&status=386&appId=172&page=1&isOrganLevel=true&isVirtual=true&limit=10&name=merle.larkin&searchCode=81486&delFlag=5&description=8kbpis&q=dck15o&type=big50m&isLeaf=true&spare1=6ifxqg&creatorId=172&imagePath=vkrhnf&deptId=462&parentId=696&isDisabled=true&endTime=2025-10-20 18:20:52&organLeader=wmaimr
 ```
 **Response-fields:**
 
@@ -12916,8 +12916,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 654,
-      "label": "6svdug",
+      "id": 840,
+      "label": "hf2j2u",
       "children": [
         {
           "$ref": ".."
@@ -12925,8 +12925,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -12984,7 +12984,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?isPub=true&posType=l7obt4&code=65412&postypeId=127&delFlag=4&q=wqehb0&limit=10&page=1&status=365&posFunction=m6dh64&id=127&roletypeId=127&ids=3vihqo&ids=3vihqo&sname=necole.oreilly&groupId=127&description=7bk5bq&parentId=127&mobilePhone=1-614-814-9478&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&orderBy=952&roleTypeId=127&posRank=748&name=necole.oreilly&officePhone=1-614-814-9478&createTime=2025-10-20 01:15:40&oname=necole.oreilly&positionId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?startTime=2025-10-20 18:20:52&orderBy=645&groupId=172&parentId=172&roletypeId=172&posFunction=bubpve&description=9fjq49&createTime=2025-10-20 18:20:52&delFlag=5&name=merle.larkin&status=626&limit=10&mobilePhone=1-203-302-2484&endTime=2025-10-20 18:20:52&posRank=60&code=81486&ids=7k54lp&ids=7k54lp&posType=tz7ls6&postypeId=172&roleTypeId=172&page=1&isPub=true&q=r4uesa&positionId=172&id=172&sname=merle.larkin&officePhone=1-203-302-2484&oname=merle.larkin
 ```
 **Response-fields:**
 
@@ -13022,32 +13022,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 693,
+    "totalCount": 136,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "127",
-        "postCode": "65412",
-        "postName": "necole.oreilly",
-        "postSort": 531,
-        "status": 403,
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:48",
-        "lastTime": "2025-10-20 01:16:48",
-        "delFlag": 4,
-        "remark": "dd1tdl",
+        "postId": "172",
+        "postCode": "81486",
+        "postName": "merle.larkin",
+        "postSort": 84,
+        "status": 108,
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:00",
+        "lastTime": "2025-10-20 18:26:00",
+        "delFlag": 5,
+        "remark": "d7x45e",
         "ids": [
-          "x7o32r"
+          "p0phw5"
         ],
-        "positionId": "127",
+        "positionId": "172",
         "flag": true
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13086,7 +13086,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'startTime=2025-10-20 01:15:40&limit=10&q=3exclf&page=1&status=379&delFlag=4&orderBy=432&endTime=2025-10-20 01:15:40&postName=necole.oreilly&postCode=65412'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postName=merle.larkin&startTime=2025-10-20 18:20:52&q=8q3pdi&orderBy=415&page=1&limit=10&delFlag=5&endTime=2025-10-20 18:20:52&postCode=81486&status=604'
 ```
 **Response-fields:**
 
@@ -13105,9 +13105,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8ph39o",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "hw96ex",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13137,7 +13137,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/172.do
 ```
 **Response-fields:**
 
@@ -13198,50 +13198,50 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": "127",
-    "parentId": "127",
-    "postypeId": "127",
-    "roletypeId": "127",
-    "userId": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "code": "65412",
-    "oname": "necole.oreilly",
-    "posFunction": "yvlyog",
-    "posRank": 422,
-    "posType": "usbc2y",
-    "editorType": "l1vl7k",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:00",
+    "lastTime": "2025-10-20 18:26:00",
+    "id": "172",
+    "parentId": "172",
+    "postypeId": "172",
+    "roletypeId": "172",
+    "userId": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "code": "81486",
+    "oname": "merle.larkin",
+    "posFunction": "lw8krg",
+    "posRank": 337,
+    "posType": "do4gyj",
+    "editorType": "2dhc8l",
     "isEditorCreate": true,
-    "status": 928,
+    "status": 869,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "127",
-    "manageDeptids": "1ali4j",
+    "leaderId": "172",
+    "manageDeptids": "imo476",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-614-814-9478",
-    "officePhone": "1-614-814-9478",
-    "buildingId": "127",
-    "roomNo": "i8nq69",
-    "extQmType": "iq5330",
-    "extQmTypePhoto": "o8g2lo",
-    "extPosName": "necole.oreilly",
-    "extOrganName": "necole.oreilly",
-    "priority": 997,
-    "priorityInOrgan": 577,
-    "priorityInDomain": 66,
-    "updaterId": "127",
-    "updateTime": "2025-10-20 01:16:48",
-    "delFlag": 4,
-    "description": "bql5w4",
-    "remark": "mxoq3g"
+    "mobilePhone": "1-203-302-2484",
+    "officePhone": "1-203-302-2484",
+    "buildingId": "172",
+    "roomNo": "7ktr2n",
+    "extQmType": "i5ju24",
+    "extQmTypePhoto": "ry2c1r",
+    "extPosName": "merle.larkin",
+    "extOrganName": "merle.larkin",
+    "priority": 55,
+    "priorityInOrgan": 552,
+    "priorityInDomain": 661,
+    "updaterId": "172",
+    "updateTime": "2025-10-20 18:26:00",
+    "delFlag": 5,
+    "description": "92a67v",
+    "remark": "hu655y"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13317,50 +13317,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": "127",
-    "parentId": "127",
-    "postypeId": "127",
-    "roletypeId": "127",
-    "userId": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "code": "65412",
-    "oname": "necole.oreilly",
-    "posFunction": "f6wy0u",
-    "posRank": 297,
-    "posType": "jhaxav",
-    "editorType": "3cyyev",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:01",
+    "lastTime": "2025-10-20 18:26:01",
+    "id": "172",
+    "parentId": "172",
+    "postypeId": "172",
+    "roletypeId": "172",
+    "userId": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "code": "81486",
+    "oname": "merle.larkin",
+    "posFunction": "n8wjvu",
+    "posRank": 830,
+    "posType": "e6718v",
+    "editorType": "pfp631",
     "isEditorCreate": true,
-    "status": 683,
+    "status": 970,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "127",
-    "manageDeptids": "ok0r4u",
+    "leaderId": "172",
+    "manageDeptids": "5whxz4",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-614-814-9478",
-    "officePhone": "1-614-814-9478",
-    "buildingId": "127",
-    "roomNo": "stafo4",
-    "extQmType": "t9iz4q",
-    "extQmTypePhoto": "f2yf5z",
-    "extPosName": "necole.oreilly",
-    "extOrganName": "necole.oreilly",
-    "priority": 758,
-    "priorityInOrgan": 142,
-    "priorityInDomain": 798,
-    "updaterId": "127",
-    "updateTime": "2025-10-20 01:16:48",
-    "delFlag": 4,
-    "description": "bpjhx7",
-    "remark": "066hmu",
-    "parentName": "necole.oreilly",
-    "roletypeName": "necole.oreilly",
-    "postypeName": "necole.oreilly"
+    "mobilePhone": "1-203-302-2484",
+    "officePhone": "1-203-302-2484",
+    "buildingId": "172",
+    "roomNo": "bfkf16",
+    "extQmType": "rnqn3l",
+    "extQmTypePhoto": "pd8tl1",
+    "extPosName": "merle.larkin",
+    "extOrganName": "merle.larkin",
+    "priority": 729,
+    "priorityInOrgan": 665,
+    "priorityInDomain": 609,
+    "updaterId": "172",
+    "updateTime": "2025-10-20 18:26:01",
+    "delFlag": 5,
+    "description": "aqm0mn",
+    "remark": "jq4zje",
+    "parentName": "merle.larkin",
+    "roletypeName": "merle.larkin",
+    "postypeName": "merle.larkin"
   }
 }'
 ```
@@ -13381,9 +13381,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7x7j7t",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "0ugjai",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13459,50 +13459,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:48",
-    "lastTime": "2025-10-20 01:16:48",
-    "id": "127",
-    "parentId": "127",
-    "postypeId": "127",
-    "roletypeId": "127",
-    "userId": "127",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "code": "65412",
-    "oname": "necole.oreilly",
-    "posFunction": "605npp",
-    "posRank": 795,
-    "posType": "5zg9dw",
-    "editorType": "cztdf1",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:01",
+    "lastTime": "2025-10-20 18:26:01",
+    "id": "172",
+    "parentId": "172",
+    "postypeId": "172",
+    "roletypeId": "172",
+    "userId": "172",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "code": "81486",
+    "oname": "merle.larkin",
+    "posFunction": "7zb4sb",
+    "posRank": 556,
+    "posType": "5oaeau",
+    "editorType": "g7g9sr",
     "isEditorCreate": true,
-    "status": 86,
+    "status": 702,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "127",
-    "manageDeptids": "ux2fgk",
+    "leaderId": "172",
+    "manageDeptids": "v7te1f",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-614-814-9478",
-    "officePhone": "1-614-814-9478",
-    "buildingId": "127",
-    "roomNo": "z5zx11",
-    "extQmType": "o9m4md",
-    "extQmTypePhoto": "9kvgge",
-    "extPosName": "necole.oreilly",
-    "extOrganName": "necole.oreilly",
-    "priority": 971,
-    "priorityInOrgan": 312,
-    "priorityInDomain": 835,
-    "updaterId": "127",
-    "updateTime": "2025-10-20 01:16:48",
-    "delFlag": 4,
-    "description": "lv6t8q",
-    "remark": "ypqu7q",
-    "parentName": "necole.oreilly",
-    "roletypeName": "necole.oreilly",
-    "postypeName": "necole.oreilly"
+    "mobilePhone": "1-203-302-2484",
+    "officePhone": "1-203-302-2484",
+    "buildingId": "172",
+    "roomNo": "ps413i",
+    "extQmType": "vou411",
+    "extQmTypePhoto": "o76k4i",
+    "extPosName": "merle.larkin",
+    "extOrganName": "merle.larkin",
+    "priority": 12,
+    "priorityInOrgan": 799,
+    "priorityInDomain": 737,
+    "updaterId": "172",
+    "updateTime": "2025-10-20 18:26:01",
+    "delFlag": 5,
+    "description": "f6gf5c",
+    "remark": "6y1xcc",
+    "parentName": "merle.larkin",
+    "roletypeName": "merle.larkin",
+    "postypeName": "merle.larkin"
   }
 }'
 ```
@@ -13523,9 +13523,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gdki8u",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "79z2at",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13574,9 +13574,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "aw8wrv",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "vu571a",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13621,20 +13621,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "127",
-    "postCode": "65412",
-    "postName": "necole.oreilly",
-    "postSort": 733,
-    "status": 354,
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:49",
-    "lastTime": "2025-10-20 01:16:49",
-    "delFlag": 4,
-    "remark": "1jzbtr",
+    "postId": "172",
+    "postCode": "81486",
+    "postName": "merle.larkin",
+    "postSort": 100,
+    "status": 443,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:01",
+    "lastTime": "2025-10-20 18:26:01",
+    "delFlag": 5,
+    "remark": "698iua",
     "ids": [
-      "jvrlz0"
+      "786068"
     ],
-    "positionId": "127",
+    "positionId": "172",
     "flag": true
   }
 }'
@@ -13656,9 +13656,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rlhhns",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "w6dz4g",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13696,10 +13696,10 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 757,
-    "roleId": 93,
-    "positionId": "127",
-    "status": 988,
+    "id": 985,
+    "roleId": 732,
+    "positionId": "172",
+    "status": 201,
     "beginTime": "2025-10-20",
     "endTime": "2025-10-20"
   }
@@ -13722,9 +13722,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jroad2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "wwy24p",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13782,25 +13782,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "127",
-      "postCode": "65412",
-      "postName": "necole.oreilly",
-      "postSort": 852,
-      "status": 771,
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:49",
-      "lastTime": "2025-10-20 01:16:49",
-      "delFlag": 4,
-      "remark": "6y57ca",
+      "postId": "172",
+      "postCode": "81486",
+      "postName": "merle.larkin",
+      "postSort": 528,
+      "status": 568,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:01",
+      "lastTime": "2025-10-20 18:26:01",
+      "delFlag": 5,
+      "remark": "ukcsmj",
       "ids": [
-        "0f5ywh"
+        "x9rcgr"
       ],
-      "positionId": "127",
+      "positionId": "172",
       "flag": true
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13846,7 +13846,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?q=wj83nt&startTime=2025-10-20 01:15:40&srcCode=718&username=necole.oreilly&category=853&endTime=2025-10-20 01:15:40&limit=10&appId=127&userId=127&createTime=2025-10-20 01:16:49&orderBy=234&ip=148.144.89.250&time=1760894140169&operation=gad0mr&page=1&method=d6jtsx
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?time=1760955652792&startTime=2025-10-20 18:20:52&category=859&createTime=2025-10-20 18:26:01&orderBy=837&q=tslazr&appId=172&operation=ciunt0&ip=137.119.212.174&endTime=2025-10-20 18:20:52&page=1&method=4ge9f7&srcCode=196&username=merle.larkin&limit=10&userId=172
 ```
 **Response-fields:**
 
@@ -13891,39 +13891,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 141,
+    "totalCount": 27,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 900,
-        "title": "cfv8at",
-        "businessType": 37,
-        "businessTypeName": "necole.oreilly",
+        "operId": 936,
+        "title": "ty0z2y",
+        "businessType": 268,
+        "businessTypeName": "merle.larkin",
         "businessTypes": [
-          303
+          265
         ],
-        "method": "qslk1x",
-        "requestMethod": "m10qjy",
-        "operatorType": 500,
-        "operName": "necole.oreilly",
-        "deptName": "necole.oreilly",
-        "operUrl": "www.emanuel-bosco.biz",
-        "operIp": "148.144.89.250",
-        "operLocation": "8dii2r",
-        "operParam": "qn3a60",
-        "jsonResult": "o7qarg",
-        "status": 945,
-        "errorMsg": "94puav",
-        "operTime": "2025-10-20 01:16:49",
-        "costTime": 1760894140169,
-        "remark": "iosbbk"
+        "method": "9d6yus",
+        "requestMethod": "d8g7mv",
+        "operatorType": 652,
+        "operName": "merle.larkin",
+        "deptName": "merle.larkin",
+        "operUrl": "www.ben-grant.info",
+        "operIp": "137.119.212.174",
+        "operLocation": "z6rya1",
+        "operParam": "yktild",
+        "jsonResult": "1guot9",
+        "status": 212,
+        "errorMsg": "ocrfgo",
+        "operTime": "2025-10-20 18:26:01",
+        "costTime": 1760955652792,
+        "remark": "r3dv99"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -13968,7 +13968,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operId=886&q=32cggf&endTime=2025-10-20 01:15:40&deptName=necole.oreilly&operIp=148.144.89.250&title=7y9gpd&operTime=2025-10-20 01:16:49&remark=s2nv51&limit=10&operName=necole.oreilly&page=1&status=389&businessType=429&operatorType=806&startTime=2025-10-20 01:15:40&orderBy=152'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operTime=2025-10-20 18:26:01&operatorType=390&operName=merle.larkin&deptName=merle.larkin&q=rh4465&endTime=2025-10-20 18:20:52&status=836&startTime=2025-10-20 18:20:52&operId=946&limit=10&businessType=75&remark=3k3dg7&orderBy=531&title=dgmn6d&page=1&operIp=137.119.212.174'
 ```
 **Response-fields:**
 
@@ -13987,9 +13987,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qway9c",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "uhjgfc",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14038,9 +14038,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zc6fxp",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "6nbhbe",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14081,7 +14081,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?startTime=2025-10-20 01:15:40&organName=necole.oreilly&limit=10&orderBy=928&page=1&wlType=pl1o4v&endTime=2025-10-20 01:15:40&q=68v6hh&delFlag=4&organId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?orderBy=644&q=ht7txn&endTime=2025-10-20 18:20:52&limit=10&startTime=2025-10-20 18:20:52&page=1&organName=merle.larkin&wlType=twgtvs&delFlag=5&organId=172
 ```
 **Response-fields:**
 
@@ -14120,28 +14120,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "0zj69r"
+        "1l1ysh"
       ],
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "organSName": "necole.oreilly",
-      "organCode": "65412",
-      "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-      "wlType": "3rrvd6",
-      "wlTypeName": "necole.oreilly",
-      "priority": 322,
-      "delFlag": 4,
-      "createTime": "2025-10-20 01:16:52",
-      "lastTime": "2025-10-20 01:16:52",
-      "contactName": "necole.oreilly",
-      "contactEmail": "eugenia.howe@yahoo.com",
-      "contactMobile": "1-856-813-9551",
-      "description": "uxu5k4",
-      "tel": "kxi5wr"
+      "organId": "172",
+      "organName": "merle.larkin",
+      "organSName": "merle.larkin",
+      "organCode": "81486",
+      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+      "wlType": "onnegi",
+      "wlTypeName": "merle.larkin",
+      "priority": 821,
+      "delFlag": 5,
+      "createTime": "2025-10-20 18:26:04",
+      "lastTime": "2025-10-20 18:26:04",
+      "contactName": "merle.larkin",
+      "contactEmail": "vivian.streich@hotmail.com",
+      "contactMobile": "(415) 540-6962",
+      "description": "tjnwmc",
+      "tel": "pi96ns"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14210,27 +14210,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "1bc5zy"
+      "mqlazd"
     ],
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "organSName": "necole.oreilly",
-    "organCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "wlType": "9t0d0j",
-    "wlTypeName": "necole.oreilly",
-    "priority": 652,
-    "delFlag": 4,
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "contactName": "necole.oreilly",
-    "contactEmail": "eugenia.howe@yahoo.com",
-    "contactMobile": "1-856-813-9551",
-    "description": "ommxuk",
-    "tel": "s6lx5c"
+    "organId": "172",
+    "organName": "merle.larkin",
+    "organSName": "merle.larkin",
+    "organCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "wlType": "js11pi",
+    "wlTypeName": "merle.larkin",
+    "priority": 452,
+    "delFlag": 5,
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "contactName": "merle.larkin",
+    "contactEmail": "vivian.streich@hotmail.com",
+    "contactMobile": "(415) 540-6962",
+    "description": "cgyaei",
+    "tel": "iz8rxs"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14281,24 +14281,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "8ivxy3"
+      "skhohc"
     ],
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "organSName": "necole.oreilly",
-    "organCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "wlType": "pg7kvs",
-    "wlTypeName": "necole.oreilly",
-    "priority": 888,
-    "delFlag": 4,
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "contactName": "necole.oreilly",
-    "contactEmail": "eugenia.howe@yahoo.com",
-    "contactMobile": "1-856-813-9551",
-    "description": "y0vg80",
-    "tel": "ag5iqq"
+    "organId": "172",
+    "organName": "merle.larkin",
+    "organSName": "merle.larkin",
+    "organCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "wlType": "qg79q7",
+    "wlTypeName": "merle.larkin",
+    "priority": 719,
+    "delFlag": 5,
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "contactName": "merle.larkin",
+    "contactEmail": "vivian.streich@hotmail.com",
+    "contactMobile": "(415) 540-6962",
+    "description": "yvu8jp",
+    "tel": "lfra0c"
   }
 }'
 ```
@@ -14319,9 +14319,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tadch7",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "9gtbrc",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14372,24 +14372,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "8ttrn9"
+      "w7rklt"
     ],
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "organSName": "necole.oreilly",
-    "organCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "wlType": "c0y3kp",
-    "wlTypeName": "necole.oreilly",
-    "priority": 971,
-    "delFlag": 4,
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "contactName": "necole.oreilly",
-    "contactEmail": "eugenia.howe@yahoo.com",
-    "contactMobile": "1-856-813-9551",
-    "description": "2b9ch6",
-    "tel": "32n2l3"
+    "organId": "172",
+    "organName": "merle.larkin",
+    "organSName": "merle.larkin",
+    "organCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "wlType": "v192rj",
+    "wlTypeName": "merle.larkin",
+    "priority": 361,
+    "delFlag": 5,
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "contactName": "merle.larkin",
+    "contactEmail": "vivian.streich@hotmail.com",
+    "contactMobile": "(415) 540-6962",
+    "description": "j2awln",
+    "tel": "p3vhwh"
   }
 }'
 ```
@@ -14410,9 +14410,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8u3n9q",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "s1o47s",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14462,9 +14462,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ojliaj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "rd92zu",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14515,24 +14515,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "z83rk6"
+      "b11v9z"
     ],
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "organSName": "necole.oreilly",
-    "organCode": "65412",
-    "address": "752 Francene Creek， Gislasonstad， NM 46451-7250",
-    "wlType": "uqivyn",
-    "wlTypeName": "necole.oreilly",
-    "priority": 866,
-    "delFlag": 4,
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "contactName": "necole.oreilly",
-    "contactEmail": "eugenia.howe@yahoo.com",
-    "contactMobile": "1-856-813-9551",
-    "description": "hsodjk",
-    "tel": "a5hmtr"
+    "organId": "172",
+    "organName": "merle.larkin",
+    "organSName": "merle.larkin",
+    "organCode": "81486",
+    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
+    "wlType": "s0iydj",
+    "wlTypeName": "merle.larkin",
+    "priority": 686,
+    "delFlag": 5,
+    "createTime": "2025-10-20 18:26:04",
+    "lastTime": "2025-10-20 18:26:04",
+    "contactName": "merle.larkin",
+    "contactEmail": "vivian.streich@hotmail.com",
+    "contactMobile": "(415) 540-6962",
+    "description": "8ymlys",
+    "tel": "qd72d9"
   }
 }'
 ```
@@ -14553,9 +14553,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "elbo6i",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "rj14dl",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14619,35 +14619,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 445,
-    "organId": "127",
-    "parentId": 376,
-    "appId": "127",
-    "depttypeId": 635,
-    "foreignId": "127",
-    "createType": 306,
-    "type": "n7udak",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "areaCode": "65412",
-    "organLeader": "7bu9he",
-    "leaderId": "127",
-    "leaderMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:55",
+    "lastTime": "2025-10-20 18:25:55",
+    "id": 75,
+    "organId": "172",
+    "parentId": 808,
+    "appId": "172",
+    "depttypeId": 28,
+    "foreignId": "172",
+    "createType": 380,
+    "type": "1su5hv",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "areaCode": "81486",
+    "organLeader": "9rrli1",
+    "leaderId": "172",
+    "leaderMobile": "(415) 540-6962",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "65412",
-    "imagePath": "6qneqs",
-    "priority": 583,
-    "status": 822,
-    "delFlag": 4,
-    "description": "uk5ul7",
-    "spare1": "9zvfp9",
-    "spare2": "tzan6q",
+    "searchCode": "81486",
+    "imagePath": "5xkxrm",
+    "priority": 366,
+    "status": 620,
+    "delFlag": 5,
+    "description": "3xhxdh",
+    "spare1": "rhh9ec",
+    "spare2": "3laotv",
     "children": [
       {
         "$ref": ".."
@@ -14673,9 +14673,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "otkyj5",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "8jlre2",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14738,35 +14738,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 940,
-    "organId": "127",
-    "parentId": 262,
-    "appId": "127",
-    "depttypeId": 40,
-    "foreignId": "127",
-    "createType": 799,
-    "type": "bo1upq",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "areaCode": "65412",
-    "organLeader": "plnqik",
-    "leaderId": "127",
-    "leaderMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:55",
+    "lastTime": "2025-10-20 18:25:55",
+    "id": 174,
+    "organId": "172",
+    "parentId": 297,
+    "appId": "172",
+    "depttypeId": 351,
+    "foreignId": "172",
+    "createType": 5,
+    "type": "l14k0d",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "areaCode": "81486",
+    "organLeader": "gpmg6d",
+    "leaderId": "172",
+    "leaderMobile": "(415) 540-6962",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "65412",
-    "imagePath": "v7273s",
-    "priority": 997,
-    "status": 585,
-    "delFlag": 4,
-    "description": "xuwiyl",
-    "spare1": "s9ghkw",
-    "spare2": "2tf317",
+    "searchCode": "81486",
+    "imagePath": "cp6ov2",
+    "priority": 395,
+    "status": 651,
+    "delFlag": 5,
+    "description": "hfuljl",
+    "spare1": "2ro69f",
+    "spare2": "lfji67",
     "children": [
       {
         "$ref": ".."
@@ -14792,9 +14792,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sfjjit",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "hp942h",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14844,9 +14844,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "juh9a5",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "q5hyot",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -14909,35 +14909,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:44",
-    "lastTime": "2025-10-20 01:16:44",
-    "id": 331,
-    "organId": "127",
-    "parentId": 574,
-    "appId": "127",
-    "depttypeId": 723,
-    "foreignId": "127",
-    "createType": 660,
-    "type": "up7cr4",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "areaCode": "65412",
-    "organLeader": "a0rpei",
-    "leaderId": "127",
-    "leaderMobile": "1-856-813-9551",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:55",
+    "lastTime": "2025-10-20 18:25:55",
+    "id": 814,
+    "organId": "172",
+    "parentId": 734,
+    "appId": "172",
+    "depttypeId": 257,
+    "foreignId": "172",
+    "createType": 249,
+    "type": "mx5wjb",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "areaCode": "81486",
+    "organLeader": "n3mt8j",
+    "leaderId": "172",
+    "leaderMobile": "(415) 540-6962",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "65412",
-    "imagePath": "ugrlo6",
-    "priority": 375,
-    "status": 615,
-    "delFlag": 4,
-    "description": "8dualu",
-    "spare1": "hlb646",
-    "spare2": "ce763x",
+    "searchCode": "81486",
+    "imagePath": "zqsbrg",
+    "priority": 880,
+    "status": 196,
+    "delFlag": 5,
+    "description": "4lkcfh",
+    "spare1": "2gnc4k",
+    "spare2": "j6ov1l",
     "children": [
       {
         "$ref": ".."
@@ -14963,9 +14963,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "r4000p",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "yxux0z",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15028,7 +15028,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?spare1=lusl38&creatorId=127&type=yo562d&foreignId=127&organLeader=ehtu9v&delFlag=4&sname=necole.oreilly&searchCode=65412&isLeaf=true&status=668&page=1&organId=127&appId=127&leaderMobile=1-856-813-9551&orderBy=942&deptId=949&isDisabled=true&createType=511&isVirtual=true&limit=10&startTime=2025-10-20 01:15:40&depttypeId=210&areaCode=65412&parentId=392&name=necole.oreilly&endTime=2025-10-20 01:15:40&description=chdmyk&isOrganLevel=true&leaderId=127&spare2=995m8k&imagePath=2g5nxt&q=b9jocd
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?delFlag=5&creatorId=172&createType=823&appId=172&description=ujdkpg&q=z2ezv1&orderBy=936&leaderId=172&status=279&depttypeId=455&isDisabled=true&areaCode=81486&parentId=40&page=1&organId=172&sname=merle.larkin&imagePath=gzpyul&leaderMobile=(415) 540-6962&organLeader=olgt3i&isVirtual=true&limit=10&spare2=jlhgq7&name=merle.larkin&type=2mkjav&isLeaf=true&searchCode=81486&deptId=648&startTime=2025-10-20 18:20:52&foreignId=172&spare1=ypjx9y&isOrganLevel=true&endTime=2025-10-20 18:20:52
 ```
 **Response-fields:**
 
@@ -15068,27 +15068,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "xlnj4r",
-    "pageNum": 158,
+    "stackTrace": "5f9deb",
+    "pageNum": 766,
     "pageSize": 10,
-    "startRow": 103,
-    "endRow": 157,
-    "total": 503,
-    "pages": 715,
+    "startRow": 675,
+    "endRow": 712,
+    "total": 206,
+    "pages": 480,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "2nvizh",
-    "orderBy": "ukgc84",
+    "countColumn": "hrpiwx",
+    "orderBy": "ybphym",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "w9uu7d",
+    "dialectClass": "kgny1m",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15150,7 +15150,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?creatorId=127&delFlag=4&parentId=35&isVirtual=true&imagePath=owldb2&status=260&isOrganLevel=true&organId=127&organLeader=pkzvjh&leaderMobile=1-856-813-9551&page=1&q=2rloqg&deptId=222&name=necole.oreilly&sname=necole.oreilly&startTime=2025-10-20 01:15:40&leaderId=127&foreignId=127&areaCode=65412&createType=111&isLeaf=true&isDisabled=true&appId=127&endTime=2025-10-20 01:15:40&spare1=6v9guc&orderBy=39&searchCode=65412&type=cyohn8&limit=10&description=ptazvg&spare2=tw7f4k&depttypeId=542
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?parentId=611&leaderId=172&page=1&appId=172&name=merle.larkin&foreignId=172&delFlag=5&type=bht8e5&organId=172&deptId=949&areaCode=81486&sname=merle.larkin&searchCode=81486&q=83rlqn&depttypeId=436&isOrganLevel=true&leaderMobile=(415) 540-6962&isVirtual=true&imagePath=1n4q7j&createType=600&organLeader=ksrvrw&isLeaf=true&isDisabled=true&orderBy=774&status=532&spare2=rr3xbf&spare1=zqg0jw&limit=10&creatorId=172&description=iuwpst&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52
 ```
 **Response-fields:**
 
@@ -15190,27 +15190,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "qix1s4",
-    "pageNum": 110,
+    "stackTrace": "gpaa7z",
+    "pageNum": 793,
     "pageSize": 10,
-    "startRow": 415,
-    "endRow": 745,
-    "total": 391,
-    "pages": 151,
+    "startRow": 621,
+    "endRow": 734,
+    "total": 583,
+    "pages": 240,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "xhez2q",
-    "orderBy": "fqhtru",
+    "countColumn": "1hatnt",
+    "orderBy": "vk40h2",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "omp7ck",
+    "dialectClass": "c1eu1y",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15241,7 +15241,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/527.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/301.do
 ```
 **Response-fields:**
 
@@ -15294,42 +15294,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 799,
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "parentId": 313,
-      "appId": "127",
-      "depttypeId": 210,
-      "foreignId": "127",
-      "createType": 300,
-      "type": "2wfgds",
-      "name": "necole.oreilly",
-      "sname": "necole.oreilly",
-      "areaCode": "65412",
-      "organLeader": "m52ygk",
-      "leaderId": "127",
-      "leaderMobile": "1-856-813-9551",
+      "id": 382,
+      "organId": "172",
+      "organName": "merle.larkin",
+      "parentId": 982,
+      "appId": "172",
+      "depttypeId": 837,
+      "foreignId": "172",
+      "createType": 481,
+      "type": "7fucmi",
+      "name": "merle.larkin",
+      "sname": "merle.larkin",
+      "areaCode": "81486",
+      "organLeader": "6mp6go",
+      "leaderId": "172",
+      "leaderMobile": "(415) 540-6962",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "65412",
-      "imagePath": "p5vklq",
-      "priority": 897,
-      "status": 264,
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:43",
-      "lastTime": "2025-10-20 01:16:43",
-      "delFlag": 4,
-      "description": "ubx22q",
-      "spare1": "5rs88f",
-      "spare2": "r3xi2k",
-      "parentName": "necole.oreilly",
-      "childNum": "2ytnsj"
+      "searchCode": "81486",
+      "imagePath": "5vz2we",
+      "priority": 589,
+      "status": 652,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:55",
+      "lastTime": "2025-10-20 18:25:55",
+      "delFlag": 5,
+      "description": "qorwfr",
+      "spare1": "0bcotz",
+      "spare2": "47t4oy",
+      "parentName": "merle.larkin",
+      "childNum": "gpr9pv"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15360,7 +15360,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/980.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/503.do
 ```
 **Response-fields:**
 
@@ -15412,41 +15412,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": 137,
-    "organId": "127",
-    "organName": "necole.oreilly",
-    "parentId": 387,
-    "appId": "127",
-    "depttypeId": 564,
-    "foreignId": "127",
-    "createType": 393,
-    "type": "gh3pwy",
-    "name": "necole.oreilly",
-    "sname": "necole.oreilly",
-    "areaCode": "65412",
-    "organLeader": "vxa1vz",
-    "leaderId": "127",
-    "leaderMobile": "1-856-813-9551",
+    "id": 463,
+    "organId": "172",
+    "organName": "merle.larkin",
+    "parentId": 278,
+    "appId": "172",
+    "depttypeId": 273,
+    "foreignId": "172",
+    "createType": 724,
+    "type": "ukl0nm",
+    "name": "merle.larkin",
+    "sname": "merle.larkin",
+    "areaCode": "81486",
+    "organLeader": "6gg32i",
+    "leaderId": "172",
+    "leaderMobile": "(415) 540-6962",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "65412",
-    "imagePath": "wz9kgk",
-    "priority": 891,
-    "status": 261,
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:43",
-    "lastTime": "2025-10-20 01:16:43",
-    "delFlag": 4,
-    "description": "vuciuz",
-    "spare1": "e6jmam",
-    "spare2": "0d2ln7",
-    "parentName": "necole.oreilly",
-    "childNum": "go3ow6"
+    "searchCode": "81486",
+    "imagePath": "3t9t9h",
+    "priority": 130,
+    "status": 210,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:55",
+    "lastTime": "2025-10-20 18:25:55",
+    "delFlag": 5,
+    "description": "dfxdq9",
+    "spare1": "lej5ps",
+    "spare2": "zlqzuh",
+    "parentName": "merle.larkin",
+    "childNum": "z1xce2"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15508,7 +15508,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?spare2=2h7vdh&organId=127&isDisabled=true&startTime=2025-10-20 01:15:40&name=necole.oreilly&q=ah1npy&page=1&parentId=245&type=q53spb&appId=127&description=sq93ti&searchCode=65412&deptId=538&areaCode=65412&limit=10&organLeader=5gohsy&leaderId=127&isVirtual=true&createType=368&isOrganLevel=true&sname=necole.oreilly&orderBy=744&depttypeId=824&status=498&imagePath=iso3sn&spare1=0mu8oc&endTime=2025-10-20 01:15:40&leaderMobile=1-856-813-9551&isLeaf=true&delFlag=4&creatorId=127&foreignId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?startTime=2025-10-20 18:20:52&spare2=75lzm6&page=1&parentId=162&isVirtual=true&name=merle.larkin&orderBy=822&leaderMobile=(415) 540-6962&limit=10&isLeaf=true&description=zbwtuz&foreignId=172&isDisabled=true&q=34y81v&createType=967&leaderId=172&isOrganLevel=true&spare1=tvxas9&searchCode=81486&sname=merle.larkin&type=33fjki&depttypeId=963&endTime=2025-10-20 18:20:52&organId=172&areaCode=81486&status=408&deptId=32&appId=172&delFlag=5&creatorId=172&imagePath=e679kw&organLeader=leiv1r
 ```
 **Response-fields:**
 
@@ -15538,11 +15538,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "trvpok",
-      "id": "127",
-      "parentId": "127",
-      "extId": "127",
-      "href": "cmjh4i",
+      "title": "smc21u",
+      "id": "172",
+      "parentId": "172",
+      "extId": "172",
+      "href": "4nbbzm",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -15553,8 +15553,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15585,11 +15585,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "necole.oreilly",
-    "password": "6vtj91",
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "appId": "127"
+    "username": "merle.larkin",
+    "password": "7u4tak",
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "appId": "172"
   }
 }'
 ```
@@ -15615,13 +15615,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "127",
-    "token": "57calq",
-    "updateTime": "2025-10-20 01:16:45",
-    "expireTime": "2025-10-20 01:16:45"
+    "userId": "172",
+    "token": "bfja9g",
+    "updateTime": "2025-10-20 18:25:57",
+    "expireTime": "2025-10-20 18:25:57"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15747,60 +15747,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:45",
-      "lastTime": "2025-10-20 01:16:45",
-      "id": 457,
-      "userId": "127",
-      "deptId": 975,
-      "deptName": "necole.oreilly",
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "name": "necole.oreilly",
-      "username": "necole.oreilly",
-      "nickName": "ethyl.nitzsche",
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "3d0ipy",
-      "password": "a2r8jd",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:57",
+      "lastTime": "2025-10-20 18:25:57",
+      "id": 461,
+      "userId": "172",
+      "deptId": 312,
+      "deptName": "merle.larkin",
+      "organId": "172",
+      "organName": "merle.larkin",
+      "name": "merle.larkin",
+      "username": "merle.larkin",
+      "nickName": "renna.dibbert",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "gi2spd",
+      "password": "1bpzcs",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 543,
-      "delFlag": 4,
-      "lastLoginIp": "148.144.89.250",
-      "lastLoginTime": "2025-10-20 01:16:45",
-      "description": "7a72z0",
+      "status": 602,
+      "delFlag": 5,
+      "lastLoginIp": "137.119.212.174",
+      "lastLoginTime": "2025-10-20 18:25:57",
+      "description": "zgerj1",
       "dept": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:45",
-        "lastTime": "2025-10-20 01:16:45",
-        "id": 48,
-        "organId": "127",
-        "parentId": 883,
-        "appId": "127",
-        "depttypeId": 604,
-        "foreignId": "127",
-        "createType": 757,
-        "type": "8qr8x1",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "areaCode": "65412",
-        "organLeader": "n53ibs",
-        "leaderId": "127",
-        "leaderMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:57",
+        "lastTime": "2025-10-20 18:25:57",
+        "id": 561,
+        "organId": "172",
+        "parentId": 663,
+        "appId": "172",
+        "depttypeId": 854,
+        "foreignId": "172",
+        "createType": 367,
+        "type": "cw3quo",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "areaCode": "81486",
+        "organLeader": "tphdle",
+        "leaderId": "172",
+        "leaderMobile": "(415) 540-6962",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "65412",
-        "imagePath": "jngndf",
-        "priority": 493,
-        "status": 778,
-        "delFlag": 4,
-        "description": "gw11o9",
-        "spare1": "oadeto",
-        "spare2": "lswmfg",
+        "searchCode": "81486",
+        "imagePath": "nuaier",
+        "priority": 906,
+        "status": 372,
+        "delFlag": 5,
+        "description": "szwmc7",
+        "spare1": "r59ko8",
+        "spare2": "v7unqw",
         "children": [
           {
             "$ref": ".."
@@ -15809,54 +15809,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:45",
-          "lastTime": "2025-10-20 01:16:45",
-          "id": 520,
-          "roletypeId": "127",
-          "appId": "127",
-          "name": "necole.oreilly",
-          "code": "65412",
-          "priority": 203,
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:25:57",
+          "lastTime": "2025-10-20 18:25:57",
+          "id": 816,
+          "roletypeId": "172",
+          "appId": "172",
+          "name": "merle.larkin",
+          "code": "81486",
+          "priority": 653,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 425,
-          "description": "g2tyrc",
-          "areaType": "4m3ssi"
+          "status": 829,
+          "description": "xj7rp3",
+          "areaType": "6mppc5"
         }
       ],
       "roleIds": [
-        267
+        399
       ],
       "positionIds": [
-        "utkwjr"
+        "xtkswx"
       ],
-      "roleId": 639,
+      "roleId": 449,
       "userRoleList": [
         {
-          "id": 760,
-          "deptId": 620,
-          "deptName": "necole.oreilly",
-          "organId": "127",
-          "organName": "necole.oreilly",
-          "roleId": 435,
-          "roleName": "necole.oreilly",
-          "adminId": 925
+          "id": 401,
+          "deptId": 881,
+          "deptName": "merle.larkin",
+          "organId": "172",
+          "organName": "merle.larkin",
+          "roleId": 270,
+          "roleName": "merle.larkin",
+          "adminId": 279
         }
       ],
-      "code": "65412",
-      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+      "code": "81486",
+      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
     },
     "roles": [
-      "8usaop"
+      "ln5idl"
     ],
     "permissions": [
-      "xoamrz"
+      "8i8kff"
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15914,33 +15914,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "127",
-    "areaId": 258,
-    "groupId": 936,
-    "positionId": "127",
-    "tplSolution": "s18vr2",
+    "accountId": "172",
+    "areaId": 154,
+    "groupId": 449,
+    "positionId": "172",
+    "tplSolution": "r9r4hp",
     "menuList": [
       {
-        "id": 109,
-        "parentId": 888,
-        "name": "necole.oreilly",
-        "ename": "necole.oreilly",
-        "type": "2s2mjl",
-        "perms": "rjnfza",
-        "menuLevel": 719,
-        "urlType": "uythhy",
-        "url": "www.emanuel-bosco.biz",
-        "menuSeq": "zt4jm7",
-        "icon": "nwejnn",
-        "imagePath": "xgc7yz",
-        "css": "l7clbg",
-        "description": "hh57nl",
-        "todoTotalApi": "99e2ag"
+        "id": 849,
+        "parentId": 515,
+        "name": "merle.larkin",
+        "ename": "merle.larkin",
+        "type": "75qzhv",
+        "perms": "f24vx1",
+        "menuLevel": 337,
+        "urlType": "hxif5n",
+        "url": "www.ben-grant.info",
+        "menuSeq": "w0v7e7",
+        "icon": "jdto25",
+        "imagePath": "x57bki",
+        "css": "0w9p0i",
+        "description": "1aehoj",
+        "todoTotalApi": "12gpk6"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -15980,7 +15980,7 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|APPID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─topXzqhId|string|BASE_APP内的XZQH_ID|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appConfJson|object|PublicSiteConf.CONF_KEY :PublicSiteConf.CONF_VALUE|-
-└─isWork|boolean|通过MEMBER_ACCOUNT内的TYPE为1，则isWork为true，workConfig返回信息|-
+└─isWork|boolean|通过CORE_ACCOUNT内的TYPE为1，则isWork为true，workConfig返回信息|-
 └─workConfig|object|workInit，通过请求的url路径，匹配MANAGE_SITE内的PATH，输出site对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─layout|string|默认缺省|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─siteInfo|object|站点基本对象|-
@@ -16003,40 +16003,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "127",
+    "id": "172",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "vis24u",
-    "aesKey": "jt3dk8",
-    "clientId": "127",
-    "serverUrl": "www.emanuel-bosco.biz",
-    "serverConf1": "xmznus",
+    "publicKey": "yyg8wy",
+    "aesKey": "4ktk65",
+    "clientId": "172",
+    "serverUrl": "www.ben-grant.info",
+    "serverConf1": "9g4oxa",
     "appConf": {
-      "siteId": 515,
-      "appId": "127",
-      "topXzqhId": "127",
+      "siteId": 601,
+      "appId": "172",
+      "topXzqhId": "172",
       "appConfJson": {
-        "mapKey": "bu7wkc"
+        "mapKey": "5y38qv"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "85yx47",
+      "layout": "hi0ti0",
       "siteInfo": {
-        "id": 945,
-        "appId": "127",
-        "areaCode": "65412",
-        "path": "vbzsou",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "layout": "dxa3z7",
-        "logoUrl": "www.emanuel-bosco.biz",
-        "cdnUrl": "www.emanuel-bosco.biz"
+        "id": 858,
+        "appId": "172",
+        "areaCode": "81486",
+        "path": "np57oh",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "layout": "ys76mf",
+        "logoUrl": "www.ben-grant.info",
+        "cdnUrl": "www.ben-grant.info"
       }
     }
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16066,11 +16066,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/third/ecorgan/login.do --data '{
   "data": {
-    "username": "necole.oreilly",
-    "password": "xbp7xa",
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "appId": "127"
+    "username": "merle.larkin",
+    "password": "frvxlj",
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "appId": "172"
   }
 }'
 ```
@@ -16096,13 +16096,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "127",
-    "token": "pmbxeo",
-    "updateTime": "2025-10-20 01:16:46",
-    "expireTime": "2025-10-20 01:16:46"
+    "userId": "172",
+    "token": "zsy0ov",
+    "updateTime": "2025-10-20 18:25:58",
+    "expireTime": "2025-10-20 18:25:58"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16126,7 +16126,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=cdee007e-0d96-400e-830c-899570b52154&code=65412
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=9bbea0fa-1409-4914-9b7e-342924ed57ad&code=81486
 ```
 **Response-fields:**
 
@@ -16145,9 +16145,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5231pr",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "4y5edo",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16197,8 +16197,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16247,14 +16247,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "necole.oreilly",
-      "cacheKey": "5cja4m",
-      "cacheValue": "qz2ys1",
-      "remark": "w9jjsg"
+      "cacheName": "merle.larkin",
+      "cacheKey": "kxvgxf",
+      "cacheValue": "698pi8",
+      "remark": "ku5igi"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16284,7 +16284,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/necole.oreilly.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -16306,8 +16306,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16338,7 +16338,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/necole.oreilly/3rr1yo.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/merle.larkin/erzz2z.do
 ```
 **Response-fields:**
 
@@ -16362,13 +16362,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "necole.oreilly",
-    "cacheKey": "z195vf",
-    "cacheValue": "2nbhd8",
-    "remark": "ny2egh"
+    "cacheName": "merle.larkin",
+    "cacheKey": "q49y0k",
+    "cacheValue": "i41r39",
+    "remark": "x79mra"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16398,7 +16398,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/necole.oreilly.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -16417,9 +16417,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ltvxsr",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "vhup1n",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16449,7 +16449,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/ofwvn4.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/s7dh7k.do
 ```
 **Response-fields:**
 
@@ -16468,9 +16468,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ljrh8z",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "18vbt3",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16513,9 +16513,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rnjejk",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "x9klo0",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16559,7 +16559,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?endTime=2025-10-20 01:15:40&status=1vgwal&delFlag=gp26uq&q=rgls4v&orderBy=189&visible=tyxrwf&currAppId=127&menuName=necole.oreilly&parentId=454&limit=10&menuId=751&page=1&menuType=w86w99&startTime=2025-10-20 01:15:40
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?visible=ewitfn&startTime=2025-10-20 18:20:52&menuId=388&q=uoh5s5&menuType=zi73rh&endTime=2025-10-20 18:20:52&delFlag=w34i1a&limit=10&parentId=354&orderBy=183&page=1&currAppId=172&status=qzph7x&menuName=merle.larkin
 ```
 **Response-fields:**
 
@@ -16616,56 +16616,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 852,
-      "menuName": "necole.oreilly",
-      "type": "1h9abg",
-      "typeName": "necole.oreilly",
-      "parentName": "necole.oreilly",
-      "parentId": 778,
-      "priority": 261,
-      "path": "m3kzdh",
-      "component": "itoa93",
-      "query": "vld41l",
-      "routeName": "necole.oreilly",
-      "isFrame": "zyg3ia",
-      "isCache": "rhx7pa",
-      "menuType": "gxkp06",
-      "menuTypeName": "necole.oreilly",
-      "visible": "jwkvg6",
-      "status": "mdbvbs",
-      "perms": "fojsmu",
-      "icon": "tuebov",
-      "imagePath": "3wuw0u",
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:46",
-      "lastTime": "2025-10-20 01:16:46",
+      "menuId": 46,
+      "menuName": "merle.larkin",
+      "type": "i8trsg",
+      "typeName": "merle.larkin",
+      "parentName": "merle.larkin",
+      "parentId": 844,
+      "priority": 628,
+      "path": "u6gnm3",
+      "component": "gcj2l0",
+      "query": "5p2dvz",
+      "routeName": "merle.larkin",
+      "isFrame": "23f8fh",
+      "isCache": "6dvwu3",
+      "menuType": "90y3hb",
+      "menuTypeName": "merle.larkin",
+      "visible": "evkb1f",
+      "status": "bhomxv",
+      "perms": "46kmvz",
+      "icon": "1nn0x1",
+      "imagePath": "4nqyhb",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:58",
+      "lastTime": "2025-10-20 18:25:58",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 787,
-      "description": "zm0saj",
-      "listJson": "b8d8dy",
-      "delFlag": 4,
+      "childNum": 200,
+      "description": "jjp2my",
+      "listJson": "9aelz9",
+      "delFlag": 5,
       "permsList": [
         {
-          "permsName": "necole.oreilly",
-          "permsStr": "aatyl7"
+          "permsName": "merle.larkin",
+          "permsStr": "m1otfp"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "127",
-          "parentId": "127",
-          "code": "65412",
-          "name": "necole.oreilly"
+          "id": "172",
+          "parentId": "172",
+          "code": "81486",
+          "name": "merle.larkin"
         }
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16708,7 +16708,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuId=934&menuType=0t9d3k&orderBy=40&page=1&menuName=necole.oreilly&delFlag=0pse2x&startTime=2025-10-20 01:15:40&q=88ow1o&endTime=2025-10-20 01:15:40&visible=ipf327&limit=10&currAppId=127&parentId=432&status=xjddp4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuId=735&menuType=ooou1t&status=rf770u&menuName=merle.larkin&visible=m0b0ab&startTime=2025-10-20 18:20:52&q=xzgf1u&endTime=2025-10-20 18:20:52&delFlag=n5l9ey&page=1&parentId=485&currAppId=172&orderBy=164&limit=10
 ```
 **Response-fields:**
 
@@ -16748,27 +16748,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "o8loj8",
-    "pageNum": 33,
+    "stackTrace": "8cbqgv",
+    "pageNum": 385,
     "pageSize": 10,
-    "startRow": 472,
-    "endRow": 963,
-    "total": 680,
-    "pages": 47,
+    "startRow": 596,
+    "endRow": 481,
+    "total": 496,
+    "pages": 180,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "7nz381",
-    "orderBy": "uv82fo",
+    "countColumn": "pmp4d8",
+    "orderBy": "jb6cly",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "t9fgyi",
+    "dialectClass": "a1mrdy",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16798,7 +16798,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/224.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/690.do
 ```
 **Response-fields:**
 
@@ -16854,55 +16854,55 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 155,
-    "menuName": "necole.oreilly",
-    "type": "ps97iq",
-    "typeName": "necole.oreilly",
-    "parentName": "necole.oreilly",
-    "parentId": 391,
-    "priority": 843,
-    "path": "85gx27",
-    "component": "hocdex",
-    "query": "bw4lrf",
-    "routeName": "necole.oreilly",
-    "isFrame": "6g8530",
-    "isCache": "igyz0g",
-    "menuType": "s39etx",
-    "menuTypeName": "necole.oreilly",
-    "visible": "upja3m",
-    "status": "gmssen",
-    "perms": "4euui6",
-    "icon": "vyhglm",
-    "imagePath": "yja24x",
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:46",
-    "lastTime": "2025-10-20 01:16:46",
+    "menuId": 357,
+    "menuName": "merle.larkin",
+    "type": "kh412f",
+    "typeName": "merle.larkin",
+    "parentName": "merle.larkin",
+    "parentId": 979,
+    "priority": 255,
+    "path": "yon0sy",
+    "component": "2pc1ln",
+    "query": "7pnliq",
+    "routeName": "merle.larkin",
+    "isFrame": "khsu2j",
+    "isCache": "tqchcv",
+    "menuType": "yhpc3i",
+    "menuTypeName": "merle.larkin",
+    "visible": "eo4khp",
+    "status": "ec4gck",
+    "perms": "sl3d6s",
+    "icon": "7hfqz4",
+    "imagePath": "0akj8z",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:58",
+    "lastTime": "2025-10-20 18:25:58",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 558,
-    "description": "ag9q12",
-    "listJson": "u9scjb",
-    "delFlag": 4,
+    "childNum": 568,
+    "description": "82mtne",
+    "listJson": "ujdvwo",
+    "delFlag": 5,
     "permsList": [
       {
-        "permsName": "necole.oreilly",
-        "permsStr": "8m97b8"
+        "permsName": "merle.larkin",
+        "permsStr": "7v2ni8"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "127",
-        "parentId": "127",
-        "code": "65412",
-        "name": "necole.oreilly"
+        "id": "172",
+        "parentId": "172",
+        "code": "81486",
+        "name": "merle.larkin"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -16945,7 +16945,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?startTime=2025-10-20 01:15:40&limit=10&menuId=378&currAppId=127&endTime=2025-10-20 01:15:40&delFlag=zp5j5w&menuType=e2nrl2&status=qzp1k9&orderBy=399&menuName=necole.oreilly&q=u406qk&page=1&visible=u5jhhr&parentId=991
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?status=qwgk06&visible=zaiydf&startTime=2025-10-20 18:20:52&currAppId=172&orderBy=518&page=1&endTime=2025-10-20 18:20:52&q=qylztw&limit=10&menuName=merle.larkin&delFlag=qy9vy6&menuId=378&menuType=5j0fwq&parentId=870
 ```
 **Response-fields:**
 
@@ -16971,12 +16971,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      212
+      646
     ],
     "menus": [
       {
-        "id": 702,
-        "label": "cjcm1n",
+        "id": 641,
+        "label": "9azss9",
         "children": [
           {
             "$ref": ".."
@@ -16985,8 +16985,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17050,7 +17050,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?createTime=2025-10-20 01:15:40&startTime=2025-10-20 01:15:40&isMenuAll=7isp29&isDisplay=true&urlType=bk8t4d&type=k3095l&menuIds=6ht8ot&menuIds=6ht8ot&isDisabled=true&orderBy=654&parentId=891&menuLevel=402&name=necole.oreilly&appId=127&q=vztx31&endTime=2025-10-20 01:15:40&code=65412&spare1=v17aho&delFlag=4&parentRoot=fxp8o9&isCheck=true&popPosition=100&imagePath=by79n8&shortCut=5ub9qp&offset=1&spare2=l81qvi&typeNoButton=by7xio&page=1&description=c7a21t&parentNull=al6rt8&limit=10&isProtect=true&url=www.emanuel-bosco.biz&appIds=o1nepb&appIds=o1nepb&subCount=813&icon=yf405w
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?parentRoot=edkzcj&appIds=mmob6t&appIds=mmob6t&subCount=22&icon=0kkbh7&parentId=163&startTime=2025-10-20 18:20:52&createTime=2025-10-20 18:20:52&typeNoButton=hzyc03&imagePath=vis2tu&page=1&urlType=14vdz3&description=d3vqeo&menuLevel=791&spare1=z308mr&parentNull=pxxaei&isDisabled=true&isCheck=true&appId=172&limit=10&code=81486&isDisplay=true&shortCut=h7yvcl&isMenuAll=yhdbc3&isProtect=true&delFlag=5&q=r1n6yr&popPosition=187&type=cd255x&url=www.ben-grant.info&orderBy=939&endTime=2025-10-20 18:20:52&menuIds=n563j8&menuIds=n563j8&spare2=jq6kox&offset=1&name=merle.larkin
 ```
 **Response-fields:**
 
@@ -17080,11 +17080,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "taeetx",
-      "id": "127",
-      "parentId": "127",
-      "extId": "127",
-      "href": "gwa2g5",
+      "title": "ji8o4g",
+      "id": "172",
+      "parentId": "172",
+      "extId": "172",
+      "href": "ymvbrp",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -17095,8 +17095,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17126,7 +17126,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/169.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/243.do
 ```
 **Response-fields:**
 
@@ -17152,12 +17152,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      127
+      956
     ],
     "menus": [
       {
-        "id": 625,
-        "label": "d7c9un",
+        "id": 682,
+        "label": "65rsr5",
         "children": [
           {
             "$ref": ".."
@@ -17166,8 +17166,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17235,50 +17235,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save/single.do --data '{
   "data": {
-    "menuId": 847,
-    "menuName": "necole.oreilly",
-    "type": "ni3bba",
-    "typeName": "necole.oreilly",
-    "parentName": "necole.oreilly",
-    "parentId": 136,
-    "priority": 595,
-    "path": "9s6bm2",
-    "component": "v18r3r",
-    "query": "cf6eym",
-    "routeName": "necole.oreilly",
-    "isFrame": "0rk69g",
-    "isCache": "jxev7c",
-    "menuType": "z6gbd5",
-    "menuTypeName": "necole.oreilly",
-    "visible": "13lfti",
-    "status": "mkhzc0",
-    "perms": "h12af2",
-    "icon": "ngmoxu",
-    "imagePath": "48vewg",
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:46",
-    "lastTime": "2025-10-20 01:16:46",
+    "menuId": 776,
+    "menuName": "merle.larkin",
+    "type": "gbytnq",
+    "typeName": "merle.larkin",
+    "parentName": "merle.larkin",
+    "parentId": 921,
+    "priority": 319,
+    "path": "0ogao8",
+    "component": "mkrcm3",
+    "query": "0mkxtb",
+    "routeName": "merle.larkin",
+    "isFrame": "p6n09e",
+    "isCache": "0ovddp",
+    "menuType": "w1gejm",
+    "menuTypeName": "merle.larkin",
+    "visible": "tem6t4",
+    "status": "2pjeka",
+    "perms": "5l9s6z",
+    "icon": "gygkb6",
+    "imagePath": "mrcmp9",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:58",
+    "lastTime": "2025-10-20 18:25:58",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 64,
-    "description": "eki71m",
-    "listJson": "4z9hrb",
-    "delFlag": 4,
+    "childNum": 555,
+    "description": "rc0ges",
+    "listJson": "d5h1sq",
+    "delFlag": 5,
     "permsList": [
       {
-        "permsName": "necole.oreilly",
-        "permsStr": "3b0jey"
+        "permsName": "merle.larkin",
+        "permsStr": "38pyym"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "127",
-        "parentId": "127",
-        "code": "65412",
-        "name": "necole.oreilly"
+        "id": "172",
+        "parentId": "172",
+        "code": "81486",
+        "name": "merle.larkin"
       }
     ]
   }
@@ -17301,9 +17301,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ablrgw",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "z0xkfz",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17371,50 +17371,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update/single.do --data '{
   "data": {
-    "menuId": 232,
-    "menuName": "necole.oreilly",
-    "type": "y8f344",
-    "typeName": "necole.oreilly",
-    "parentName": "necole.oreilly",
-    "parentId": 521,
-    "priority": 267,
-    "path": "bzpuyb",
-    "component": "rbuyfj",
-    "query": "l6neoj",
-    "routeName": "necole.oreilly",
-    "isFrame": "otuy43",
-    "isCache": "xafz2v",
-    "menuType": "dx1ivf",
-    "menuTypeName": "necole.oreilly",
-    "visible": "nn34t8",
-    "status": "5ku4sj",
-    "perms": "lcfgop",
-    "icon": "6ip1t6",
-    "imagePath": "38r05t",
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:46",
-    "lastTime": "2025-10-20 01:16:46",
+    "menuId": 464,
+    "menuName": "merle.larkin",
+    "type": "9ubv48",
+    "typeName": "merle.larkin",
+    "parentName": "merle.larkin",
+    "parentId": 543,
+    "priority": 482,
+    "path": "74pz4x",
+    "component": "y0v2rg",
+    "query": "bgjacb",
+    "routeName": "merle.larkin",
+    "isFrame": "kw08rk",
+    "isCache": "creomm",
+    "menuType": "s2yfbw",
+    "menuTypeName": "merle.larkin",
+    "visible": "ukjwhd",
+    "status": "nrsggm",
+    "perms": "szag4p",
+    "icon": "ofg7sn",
+    "imagePath": "a00x59",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:58",
+    "lastTime": "2025-10-20 18:25:58",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 193,
-    "description": "ovzg2e",
-    "listJson": "a8lblg",
-    "delFlag": 4,
+    "childNum": 470,
+    "description": "c0wmfv",
+    "listJson": "fg2xrk",
+    "delFlag": 5,
     "permsList": [
       {
-        "permsName": "necole.oreilly",
-        "permsStr": "1g5257"
+        "permsName": "merle.larkin",
+        "permsStr": "7wm9su"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "127",
-        "parentId": "127",
-        "code": "65412",
-        "name": "necole.oreilly"
+        "id": "172",
+        "parentId": "172",
+        "code": "81486",
+        "name": "merle.larkin"
       }
     ]
   }
@@ -17437,9 +17437,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "risejt",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "vek6fy",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17507,50 +17507,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 366,
-    "menuName": "necole.oreilly",
-    "type": "3eh2e6",
-    "typeName": "necole.oreilly",
-    "parentName": "necole.oreilly",
-    "parentId": 449,
-    "priority": 252,
-    "path": "rmrz0s",
-    "component": "zna2ok",
-    "query": "jpojvk",
-    "routeName": "necole.oreilly",
-    "isFrame": "rdml85",
-    "isCache": "iehf0y",
-    "menuType": "h7un2m",
-    "menuTypeName": "necole.oreilly",
-    "visible": "kbxpb3",
-    "status": "qfyoop",
-    "perms": "um5ql0",
-    "icon": "jqbhpo",
-    "imagePath": "cdtnqf",
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:46",
-    "lastTime": "2025-10-20 01:16:46",
+    "menuId": 790,
+    "menuName": "merle.larkin",
+    "type": "uer3s0",
+    "typeName": "merle.larkin",
+    "parentName": "merle.larkin",
+    "parentId": 60,
+    "priority": 866,
+    "path": "vipgzx",
+    "component": "lsa41r",
+    "query": "kw8hft",
+    "routeName": "merle.larkin",
+    "isFrame": "la4qzq",
+    "isCache": "l9v726",
+    "menuType": "cm8s1c",
+    "menuTypeName": "merle.larkin",
+    "visible": "d5youn",
+    "status": "02brjy",
+    "perms": "d33ae1",
+    "icon": "3up236",
+    "imagePath": "4lvf8w",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:58",
+    "lastTime": "2025-10-20 18:25:58",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 336,
-    "description": "u7jht4",
-    "listJson": "5s0el0",
-    "delFlag": 4,
+    "childNum": 676,
+    "description": "kkx953",
+    "listJson": "uphkzp",
+    "delFlag": 5,
     "permsList": [
       {
-        "permsName": "necole.oreilly",
-        "permsStr": "2g6arq"
+        "permsName": "merle.larkin",
+        "permsStr": "ofe7fb"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "127",
-        "parentId": "127",
-        "code": "65412",
-        "name": "necole.oreilly"
+        "id": "172",
+        "parentId": "172",
+        "code": "81486",
+        "name": "merle.larkin"
       }
     ]
   }
@@ -17573,9 +17573,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m5vipg",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "bm2d72",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17643,50 +17643,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 499,
-    "menuName": "necole.oreilly",
-    "type": "pv1t25",
-    "typeName": "necole.oreilly",
-    "parentName": "necole.oreilly",
-    "parentId": 526,
-    "priority": 881,
-    "path": "c56k47",
-    "component": "cmdr4p",
-    "query": "s18l4q",
-    "routeName": "necole.oreilly",
-    "isFrame": "m4b2ng",
-    "isCache": "i6164q",
-    "menuType": "1uzn7r",
-    "menuTypeName": "necole.oreilly",
-    "visible": "zpaw70",
-    "status": "0shmqz",
-    "perms": "m6sycl",
-    "icon": "dhmdyl",
-    "imagePath": "qz9fhh",
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
+    "menuId": 480,
+    "menuName": "merle.larkin",
+    "type": "mh374a",
+    "typeName": "merle.larkin",
+    "parentName": "merle.larkin",
+    "parentId": 864,
+    "priority": 665,
+    "path": "6z94c7",
+    "component": "3q1ucf",
+    "query": "jmgsv1",
+    "routeName": "merle.larkin",
+    "isFrame": "3pjgee",
+    "isCache": "io75c3",
+    "menuType": "h77meq",
+    "menuTypeName": "merle.larkin",
+    "visible": "eaul1u",
+    "status": "xsaya4",
+    "perms": "3exvci",
+    "icon": "jdkiv6",
+    "imagePath": "4n30cl",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:58",
+    "lastTime": "2025-10-20 18:25:58",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 342,
-    "description": "872wsx",
-    "listJson": "6qjpp9",
-    "delFlag": 4,
+    "childNum": 615,
+    "description": "tjwyqa",
+    "listJson": "aen47i",
+    "delFlag": 5,
     "permsList": [
       {
-        "permsName": "necole.oreilly",
-        "permsStr": "8m5u3x"
+        "permsName": "merle.larkin",
+        "permsStr": "ixras5"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "127",
-        "parentId": "127",
-        "code": "65412",
-        "name": "necole.oreilly"
+        "id": "172",
+        "parentId": "172",
+        "code": "81486",
+        "name": "merle.larkin"
       }
     ]
   }
@@ -17709,9 +17709,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c9dk62",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "35m940",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17760,9 +17760,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3qi0b2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "f29rxo",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17831,41 +17831,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "id": 365,
-    "parentId": 453,
-    "appId": "127",
-    "name": "necole.oreilly",
-    "ename": "necole.oreilly",
-    "sname": "necole.oreilly",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "id": 84,
+    "parentId": 113,
+    "appId": "172",
+    "name": "merle.larkin",
+    "ename": "merle.larkin",
+    "sname": "merle.larkin",
     "isProtect": true,
-    "type": "gyb82p",
-    "userId": "127",
-    "code": "65412",
-    "menuLevel": 376,
-    "subCount": 420,
-    "perms": "0xsmn2",
-    "urlType": "5gbonz",
-    "url": "www.emanuel-bosco.biz",
-    "icon": "nal9dl",
-    "popPosition": 290,
-    "imagePath": "hybbyp",
-    "css": "jju9pu",
-    "jsEvent": "58t2d7",
-    "menuSeq": "88i1vu",
-    "shortCut": "7lwbng",
+    "type": "0758pl",
+    "userId": "172",
+    "code": "81486",
+    "menuLevel": 518,
+    "subCount": 741,
+    "perms": "89p9u7",
+    "urlType": "m2fv33",
+    "url": "www.ben-grant.info",
+    "icon": "vfsu6z",
+    "popPosition": 464,
+    "imagePath": "v8lzou",
+    "css": "nffgqu",
+    "jsEvent": "s0es2z",
+    "menuSeq": "ijjwf0",
+    "shortCut": "73kdnc",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 455,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:47",
-    "description": "r3zck1",
-    "spare1": "tlru1q",
-    "spare2": "fh843m",
+    "priority": 814,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:25:59",
+    "description": "fa8vo9",
+    "spare1": "vskx5g",
+    "spare2": "ft0xbo",
     "open": true,
     "list": [
       {
@@ -17892,9 +17892,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b2xu05",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ap6fx1",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -17934,7 +17934,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleName=necole.oreilly&status=854&page=1&endTime=2025-10-20 01:15:40&orderBy=218&q=ubq89f&startTime=2025-10-20 01:15:40&roleId=37&limit=10&roleKey=ejzswl
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?orderBy=500&roleName=merle.larkin&roleId=531&roleKey=3mi6bc&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&status=583&page=1&q=y48eib&limit=10
 ```
 **Response-fields:**
 
@@ -17976,37 +17976,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:47",
-      "lastTime": "2025-10-20 01:16:47",
-      "roleId": 36,
-      "roleName": "necole.oreilly",
-      "roleKey": "sqshy3",
-      "roleSort": 37,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:59",
+      "lastTime": "2025-10-20 18:25:59",
+      "roleId": 953,
+      "roleName": "merle.larkin",
+      "roleKey": "qvfbu5",
+      "roleSort": 518,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 724,
+      "status": 961,
       "flag": true,
       "menuIds": [
-        1
+        655
       ],
       "deptIds": [
-        647
+        514
       ],
       "permissions": [
-        "keuhaq"
+        "fdx6wg"
       ],
-      "remark": "6yjf1b",
-      "parentName": "necole.oreilly",
-      "appName": "necole.oreilly",
-      "roletypeId": "127",
-      "roletypeName": "necole.oreilly",
-      "priority": 55,
+      "remark": "lu2e8b",
+      "parentName": "merle.larkin",
+      "appName": "merle.larkin",
+      "roletypeId": "172",
+      "roletypeName": "merle.larkin",
+      "priority": 505,
       "isSuper": true
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18045,7 +18045,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'page=1&orderBy=460&endTime=2025-10-20 01:15:40&roleName=necole.oreilly&q=zz444f&roleId=22&startTime=2025-10-20 01:15:40&limit=10&roleKey=pzs0c5&status=940'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleName=merle.larkin&endTime=2025-10-20 18:20:52&page=1&startTime=2025-10-20 18:20:52&limit=10&roleId=362&roleKey=60vyu7&orderBy=47&status=185&q=30gyvm'
 ```
 **Response-fields:**
 
@@ -18064,9 +18064,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2920kt",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "o1dcof",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18096,7 +18096,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/314.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/172.do
 ```
 **Response-fields:**
 
@@ -18137,36 +18137,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 930,
-    "roleName": "necole.oreilly",
-    "roleKey": "6tysbh",
-    "roleSort": 614,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 609,
+    "roleName": "merle.larkin",
+    "roleKey": "zv4t19",
+    "roleSort": 72,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 928,
+    "status": 306,
     "flag": true,
     "menuIds": [
-      278
+      746
     ],
     "deptIds": [
-      93
+      601
     ],
     "permissions": [
-      "uvc70o"
+      "4kvsze"
     ],
-    "remark": "48c95u",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 154,
+    "remark": "si8wdx",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 981,
     "isSuper": true
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18219,32 +18219,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 269,
-    "roleName": "necole.oreilly",
-    "roleKey": "vkhw0n",
-    "roleSort": 64,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 353,
+    "roleName": "merle.larkin",
+    "roleKey": "zqzpun",
+    "roleSort": 332,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 90,
+    "status": 273,
     "flag": true,
     "menuIds": [
-      47
+      775
     ],
     "deptIds": [
-      27
+      913
     ],
     "permissions": [
-      "gz0b10"
+      "5rsqpc"
     ],
-    "remark": "yev3gv",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 924,
+    "remark": "9a5cqi",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 237,
     "isSuper": true
   }
 }'
@@ -18266,9 +18266,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "le71gd",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "urgogt",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18321,32 +18321,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 440,
-    "roleName": "necole.oreilly",
-    "roleKey": "mp3ccy",
-    "roleSort": 317,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 222,
+    "roleName": "merle.larkin",
+    "roleKey": "hgj8ju",
+    "roleSort": 876,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 954,
+    "status": 15,
     "flag": true,
     "menuIds": [
-      882
+      611
     ],
     "deptIds": [
-      807
+      403
     ],
     "permissions": [
-      "nurw3a"
+      "9z3t4g"
     ],
-    "remark": "wwitkj",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 3,
+    "remark": "yaqhz7",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 614,
     "isSuper": true
   }
 }'
@@ -18368,9 +18368,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ohtyrf",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "13ar7r",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18423,32 +18423,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save/all.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 80,
-    "roleName": "necole.oreilly",
-    "roleKey": "x6743d",
-    "roleSort": 268,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 802,
+    "roleName": "merle.larkin",
+    "roleKey": "sumdvv",
+    "roleSort": 742,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 912,
+    "status": 223,
     "flag": true,
     "menuIds": [
-      911
+      694
     ],
     "deptIds": [
-      182
+      838
     ],
     "permissions": [
-      "53mm7m"
+      "s1ywk8"
     ],
-    "remark": "jbxvu6",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 353,
+    "remark": "0o2oam",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 212,
     "isSuper": true
   }
 }'
@@ -18470,9 +18470,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "okpmd7",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "to4e4y",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18525,32 +18525,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update/all.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 11,
-    "roleName": "necole.oreilly",
-    "roleKey": "ed5j8s",
-    "roleSort": 703,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 544,
+    "roleName": "merle.larkin",
+    "roleKey": "2bsqs0",
+    "roleSort": 601,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 95,
+    "status": 734,
     "flag": true,
     "menuIds": [
-      946
+      805
     ],
     "deptIds": [
-      306
+      35
     ],
     "permissions": [
-      "jck2fs"
+      "f65ipn"
     ],
-    "remark": "35ulwr",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 102,
+    "remark": "nq1m1w",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 166,
     "isSuper": true
   }
 }'
@@ -18572,9 +18572,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zvgqc7",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "hln0vn",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18623,9 +18623,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "20rkrd",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "p1q2zq",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18672,21 +18672,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "id": 250,
-    "roletypeId": "127",
-    "appId": "127",
-    "name": "necole.oreilly",
-    "code": "65412",
-    "priority": 533,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "id": 555,
+    "roletypeId": "172",
+    "appId": "172",
+    "name": "merle.larkin",
+    "code": "81486",
+    "priority": 824,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 195,
-    "description": "4qkpw6",
-    "areaType": "gr47dg"
+    "status": 756,
+    "description": "vsnoj0",
+    "areaType": "us98xc"
   }
 }'
 ```
@@ -18707,9 +18707,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7r7o2m",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "ef2ai3",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18762,32 +18762,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 419,
-    "roleName": "necole.oreilly",
-    "roleKey": "yng5ko",
-    "roleSort": 8,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 390,
+    "roleName": "merle.larkin",
+    "roleKey": "py5p1f",
+    "roleSort": 241,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 725,
+    "status": 385,
     "flag": true,
     "menuIds": [
-      313
+      847
     ],
     "deptIds": [
-      319
+      608
     ],
     "permissions": [
-      "ig7k2p"
+      "tv6mu1"
     ],
-    "remark": "8oophf",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 811,
+    "remark": "uo33l7",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 36,
     "isSuper": true
   }
 }'
@@ -18809,9 +18809,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "22d5j2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "wev9zc",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18864,32 +18864,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:47",
-    "lastTime": "2025-10-20 01:16:47",
-    "roleId": 632,
-    "roleName": "necole.oreilly",
-    "roleKey": "v0w2yf",
-    "roleSort": 955,
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:59",
+    "lastTime": "2025-10-20 18:25:59",
+    "roleId": 308,
+    "roleName": "merle.larkin",
+    "roleKey": "4yki1k",
+    "roleSort": 633,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 388,
+    "status": 420,
     "flag": true,
     "menuIds": [
-      317
+      580
     ],
     "deptIds": [
-      61
+      233
     ],
     "permissions": [
-      "fqnbv6"
+      "37r7uu"
     ],
-    "remark": "92era9",
-    "parentName": "necole.oreilly",
-    "appName": "necole.oreilly",
-    "roletypeId": "127",
-    "roletypeName": "necole.oreilly",
-    "priority": 548,
+    "remark": "xeqbdq",
+    "parentName": "merle.larkin",
+    "appName": "merle.larkin",
+    "roletypeId": "172",
+    "roletypeName": "merle.larkin",
+    "priority": 596,
     "isSuper": true
   }
 }'
@@ -18911,9 +18911,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "7jf22k",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "03yf6w",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -18979,37 +18979,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:47",
-      "lastTime": "2025-10-20 01:16:47",
-      "roleId": 151,
-      "roleName": "necole.oreilly",
-      "roleKey": "p8gauh",
-      "roleSort": 864,
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:59",
+      "lastTime": "2025-10-20 18:25:59",
+      "roleId": 945,
+      "roleName": "merle.larkin",
+      "roleKey": "bnq6ry",
+      "roleSort": 644,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 112,
+      "status": 606,
       "flag": true,
       "menuIds": [
-        661
+        22
       ],
       "deptIds": [
-        897
+        165
       ],
       "permissions": [
-        "bz43oh"
+        "jccxwa"
       ],
-      "remark": "sp47r9",
-      "parentName": "necole.oreilly",
-      "appName": "necole.oreilly",
-      "roletypeId": "127",
-      "roletypeName": "necole.oreilly",
-      "priority": 984,
+      "remark": "lq1cyn",
+      "parentName": "merle.larkin",
+      "appName": "merle.larkin",
+      "roletypeId": "172",
+      "roletypeName": "merle.larkin",
+      "priority": 677,
       "isSuper": true
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19054,7 +19054,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?deptId=777&q=pcgkze&limit=10&organId=127&mobile=1-856-813-9551&orderBy=703&startTime=2025-10-20 01:15:40&username=necole.oreilly&email=eugenia.howe@yahoo.com&endTime=2025-10-20 01:15:40&page=1&adminId=965&status=k3bc6v&delFlag=4&userId=127&nickName=ethyl.nitzsche
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?deptId=441&endTime=2025-10-20 18:20:52&adminId=458&nickName=renna.dibbert&orderBy=161&startTime=2025-10-20 18:20:52&q=49omlc&status=hs73vi&organId=172&userId=172&username=merle.larkin&limit=10&delFlag=5&mobile=(415) 540-6962&email=vivian.streich@hotmail.com&page=1
 ```
 **Response-fields:**
 
@@ -19160,60 +19160,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:47",
-      "lastTime": "2025-10-20 01:16:47",
-      "id": 537,
-      "userId": "127",
-      "deptId": 393,
-      "deptName": "necole.oreilly",
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "name": "necole.oreilly",
-      "username": "necole.oreilly",
-      "nickName": "ethyl.nitzsche",
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "i6ulgq",
-      "password": "6wlkc2",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:59",
+      "lastTime": "2025-10-20 18:25:59",
+      "id": 366,
+      "userId": "172",
+      "deptId": 658,
+      "deptName": "merle.larkin",
+      "organId": "172",
+      "organName": "merle.larkin",
+      "name": "merle.larkin",
+      "username": "merle.larkin",
+      "nickName": "renna.dibbert",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "um4l9x",
+      "password": "0r0p15",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 192,
-      "delFlag": 4,
-      "lastLoginIp": "148.144.89.250",
-      "lastLoginTime": "2025-10-20 01:16:47",
-      "description": "eczfwz",
+      "status": 418,
+      "delFlag": 5,
+      "lastLoginIp": "137.119.212.174",
+      "lastLoginTime": "2025-10-20 18:25:59",
+      "description": "l2rmlx",
       "dept": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:47",
-        "lastTime": "2025-10-20 01:16:47",
-        "id": 778,
-        "organId": "127",
-        "parentId": 133,
-        "appId": "127",
-        "depttypeId": 526,
-        "foreignId": "127",
-        "createType": 392,
-        "type": "mt76jl",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "areaCode": "65412",
-        "organLeader": "it38en",
-        "leaderId": "127",
-        "leaderMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:59",
+        "lastTime": "2025-10-20 18:25:59",
+        "id": 996,
+        "organId": "172",
+        "parentId": 0,
+        "appId": "172",
+        "depttypeId": 465,
+        "foreignId": "172",
+        "createType": 221,
+        "type": "ioevz0",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "areaCode": "81486",
+        "organLeader": "2dvff9",
+        "leaderId": "172",
+        "leaderMobile": "(415) 540-6962",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "65412",
-        "imagePath": "keke22",
-        "priority": 326,
-        "status": 314,
-        "delFlag": 4,
-        "description": "bd1awx",
-        "spare1": "3jb293",
-        "spare2": "1q6yhc",
+        "searchCode": "81486",
+        "imagePath": "74bj5t",
+        "priority": 946,
+        "status": 426,
+        "delFlag": 5,
+        "description": "vnq3i7",
+        "spare1": "7hayki",
+        "spare2": "qu8ws0",
         "children": [
           {
             "$ref": ".."
@@ -19222,48 +19222,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:47",
-          "lastTime": "2025-10-20 01:16:47",
-          "id": 85,
-          "roletypeId": "127",
-          "appId": "127",
-          "name": "necole.oreilly",
-          "code": "65412",
-          "priority": 823,
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:25:59",
+          "lastTime": "2025-10-20 18:25:59",
+          "id": 743,
+          "roletypeId": "172",
+          "appId": "172",
+          "name": "merle.larkin",
+          "code": "81486",
+          "priority": 713,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 144,
-          "description": "7qffdm",
-          "areaType": "hv038s"
+          "status": 581,
+          "description": "7es5th",
+          "areaType": "wg0pk9"
         }
       ],
       "roleIds": [
-        768
+        818
       ],
       "positionIds": [
-        "x98hxf"
+        "0jplgf"
       ],
-      "roleId": 524,
+      "roleId": 605,
       "userRoleList": [
         {
-          "id": 124,
-          "deptId": 838,
-          "deptName": "necole.oreilly",
-          "organId": "127",
-          "organName": "necole.oreilly",
-          "roleId": 839,
-          "roleName": "necole.oreilly",
-          "adminId": 409
+          "id": 292,
+          "deptId": 578,
+          "deptName": "merle.larkin",
+          "organId": "172",
+          "organName": "merle.larkin",
+          "roleId": 183,
+          "roleName": "merle.larkin",
+          "adminId": 952
         }
       ],
-      "code": "65412",
-      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+      "code": "81486",
+      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19308,7 +19308,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?page=1&limit=10&adminId=627&mobile=1-856-813-9551&nickName=ethyl.nitzsche&endTime=2025-10-20 01:15:40&status=i5hv9n&orderBy=564&deptId=408&email=eugenia.howe@yahoo.com&delFlag=4&startTime=2025-10-20 01:15:40&userId=127&username=necole.oreilly&q=cn9c1r&organId=127
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?limit=10&deptId=6&mobile=(415) 540-6962&email=vivian.streich@hotmail.com&delFlag=5&endTime=2025-10-20 18:20:52&orderBy=71&page=1&startTime=2025-10-20 18:20:52&userId=172&username=merle.larkin&adminId=728&q=bvekqm&nickName=renna.dibbert&status=j0m4hz&organId=172
 ```
 **Response-fields:**
 
@@ -19414,60 +19414,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:47",
-      "lastTime": "2025-10-20 01:16:47",
-      "id": 369,
-      "userId": "127",
-      "deptId": 93,
-      "deptName": "necole.oreilly",
-      "organId": "127",
-      "organName": "necole.oreilly",
-      "name": "necole.oreilly",
-      "username": "necole.oreilly",
-      "nickName": "ethyl.nitzsche",
-      "email": "eugenia.howe@yahoo.com",
-      "mobile": "1-856-813-9551",
-      "imagePath": "v3syjv",
-      "password": "dugc7o",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:59",
+      "lastTime": "2025-10-20 18:25:59",
+      "id": 726,
+      "userId": "172",
+      "deptId": 750,
+      "deptName": "merle.larkin",
+      "organId": "172",
+      "organName": "merle.larkin",
+      "name": "merle.larkin",
+      "username": "merle.larkin",
+      "nickName": "renna.dibbert",
+      "email": "vivian.streich@hotmail.com",
+      "mobile": "(415) 540-6962",
+      "imagePath": "7hulz6",
+      "password": "ya4646",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 320,
-      "delFlag": 4,
-      "lastLoginIp": "148.144.89.250",
-      "lastLoginTime": "2025-10-20 01:16:47",
-      "description": "j926pq",
+      "status": 952,
+      "delFlag": 5,
+      "lastLoginIp": "137.119.212.174",
+      "lastLoginTime": "2025-10-20 18:25:59",
+      "description": "ltj4mt",
       "dept": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:47",
-        "lastTime": "2025-10-20 01:16:47",
-        "id": 911,
-        "organId": "127",
-        "parentId": 472,
-        "appId": "127",
-        "depttypeId": 871,
-        "foreignId": "127",
-        "createType": 481,
-        "type": "0uhigg",
-        "name": "necole.oreilly",
-        "sname": "necole.oreilly",
-        "areaCode": "65412",
-        "organLeader": "se4fml",
-        "leaderId": "127",
-        "leaderMobile": "1-856-813-9551",
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:25:59",
+        "lastTime": "2025-10-20 18:25:59",
+        "id": 421,
+        "organId": "172",
+        "parentId": 106,
+        "appId": "172",
+        "depttypeId": 637,
+        "foreignId": "172",
+        "createType": 316,
+        "type": "dav7k0",
+        "name": "merle.larkin",
+        "sname": "merle.larkin",
+        "areaCode": "81486",
+        "organLeader": "4drq8i",
+        "leaderId": "172",
+        "leaderMobile": "(415) 540-6962",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "65412",
-        "imagePath": "6lmvha",
-        "priority": 819,
-        "status": 83,
-        "delFlag": 4,
-        "description": "jpxfym",
-        "spare1": "miq9l2",
-        "spare2": "ybf00q",
+        "searchCode": "81486",
+        "imagePath": "7vnjy0",
+        "priority": 9,
+        "status": 654,
+        "delFlag": 5,
+        "description": "8sogbq",
+        "spare1": "ovm3ed",
+        "spare2": "ngz7vs",
         "children": [
           {
             "$ref": ".."
@@ -19476,48 +19476,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:47",
-          "lastTime": "2025-10-20 01:16:47",
-          "id": 674,
-          "roletypeId": "127",
-          "appId": "127",
-          "name": "necole.oreilly",
-          "code": "65412",
-          "priority": 130,
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:25:59",
+          "lastTime": "2025-10-20 18:25:59",
+          "id": 272,
+          "roletypeId": "172",
+          "appId": "172",
+          "name": "merle.larkin",
+          "code": "81486",
+          "priority": 19,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 342,
-          "description": "8tvt1t",
-          "areaType": "0jqjdt"
+          "status": 376,
+          "description": "i53f7m",
+          "areaType": "tvrjn1"
         }
       ],
       "roleIds": [
-        809
+        909
       ],
       "positionIds": [
-        "htjswc"
+        "7xjat8"
       ],
-      "roleId": 62,
+      "roleId": 782,
       "userRoleList": [
         {
-          "id": 599,
-          "deptId": 966,
-          "deptName": "necole.oreilly",
-          "organId": "127",
-          "organName": "necole.oreilly",
-          "roleId": 937,
-          "roleName": "necole.oreilly",
-          "adminId": 931
+          "id": 262,
+          "deptId": 356,
+          "deptName": "merle.larkin",
+          "organId": "172",
+          "organName": "merle.larkin",
+          "roleId": 100,
+          "roleName": "merle.larkin",
+          "adminId": 159
         }
       ],
-      "code": "65412",
-      "uuid": "cdee007e-0d96-400e-830c-899570b52154"
+      "code": "81486",
+      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19552,9 +19552,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 550,
-    "roleId": 410,
-    "adminId": 289
+    "id": 328,
+    "roleId": 0,
+    "adminId": 614
   }
 }'
 ```
@@ -19575,9 +19575,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c8xtyn",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "nd1ksk",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19608,7 +19608,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=roo0jv&adminIds=roo0jv&roleId=415'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=838&adminIds=cz0lyo&adminIds=cz0lyo'
 ```
 **Response-fields:**
 
@@ -19627,9 +19627,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "22poge",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "g73k6m",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19660,7 +19660,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=195&adminIds=aszan9&adminIds=aszan9'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=590&adminIds=l8b2b2&adminIds=l8b2b2'
 ```
 **Response-fields:**
 
@@ -19679,9 +19679,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "av64hd",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "10b0a2",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19711,7 +19711,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/413.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/481.do
 ```
 **Response-fields:**
 
@@ -19737,12 +19737,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      789
+      305
     ],
     "depts": [
       {
-        "id": 39,
-        "label": "scslmk",
+        "id": 549,
+        "label": "2poloe",
         "children": [
           {
             "$ref": ".."
@@ -19751,8 +19751,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19824,7 +19824,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?type=amf8p0&todoLabels=70wmlt&orderBy=400&todoModuleId=127&todoCreateTime=2025-10-20 01:16:57&todoProcessInfo=m08ln3&todoProcessStatus=0pc2p3&todoOrganName=necole.oreilly&creatorId=127&status=wzj1pr&foreignId=127&opOrganId=127&appId=127&bizType=2m2d6t&todoAccountId=127&spare2=j77f5z&limit=10&todoUserName=necole.oreilly&opOrganName=necole.oreilly&todoModuleName=necole.oreilly&startTime=2025-10-20 01:15:40&description=w0wzhc&todoAccountName=necole.oreilly&opUserId=127&todoUserId=127&opTime=2025-10-20 01:16:57&id=127&todoAbstract=utiuu5&endTime=2025-10-20 01:15:40&todoType=t6z4u6&spare1=ap2s9f&page=1&todoProcessName=necole.oreilly&todoNextInfo=hkyh8j&todoId=127&todoName=necole.oreilly&todoUrl=www.emanuel-bosco.biz&todoCurrInfo=2d9dz3&todoOrganId=127&q=fivybk&todoContent=54womp
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoCurrInfo=3568f2&todoId=172&q=dyhp6w&todoProcessName=merle.larkin&todoOrganId=172&page=1&todoLabels=9vda3c&spare1=k1qpxa&todoType=bppnsx&creatorId=172&todoUserId=172&status=a667lb&todoAccountId=172&todoModuleId=172&todoAccountName=merle.larkin&opTime=2025-10-20 18:26:10&bizType=diucl5&foreignId=172&opOrganId=172&orderBy=561&todoUserName=merle.larkin&startTime=2025-10-20 18:20:52&todoProcessInfo=gxn55o&opOrganName=merle.larkin&todoOrganName=merle.larkin&id=172&todoProcessStatus=gqmqy6&spare2=jnxr7w&todoModuleName=merle.larkin&limit=10&endTime=2025-10-20 18:20:52&todoCreateTime=2025-10-20 18:26:10&todoUrl=www.ben-grant.info&opUserId=172&type=29huh6&todoName=merle.larkin&description=4vhd62&appId=172&todoNextInfo=x7788k&todoContent=hgpu4r&todoAbstract=scynp0
 ```
 **Response-fields:**
 
@@ -19882,47 +19882,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:57",
-      "lastTime": "2025-10-20 01:16:57",
-      "id": "127",
-      "appId": "127",
-      "foreignId": "127",
-      "type": "z09b10",
-      "bizType": "js2912",
-      "todoCreateTime": "2025-10-20 01:16:57",
-      "todoId": "127",
-      "todoType": "3ysfd3",
-      "todoName": "necole.oreilly",
-      "todoAbstract": "0nlrjv",
-      "todoAccountId": "127",
-      "todoAccountName": "necole.oreilly",
-      "todoModuleId": "127",
-      "todoModuleName": "necole.oreilly",
-      "todoUserId": "127",
-      "todoUserName": "necole.oreilly",
-      "todoOrganId": "127",
-      "todoOrganName": "necole.oreilly",
-      "todoProcessName": "necole.oreilly",
-      "todoProcessStatus": "ce3i1d",
-      "todoProcessInfo": "s44gvk",
-      "todoCurrInfo": "83uzcg",
-      "todoNextInfo": "74ecxh",
-      "todoUrl": "www.emanuel-bosco.biz",
-      "todoLabels": "ph6qd4",
-      "todoContent": "rwflmj",
-      "status": "6hlypo",
-      "opUserId": "127",
-      "opTime": "2025-10-20 01:16:57",
-      "opOrganId": "127",
-      "opOrganName": "necole.oreilly",
-      "description": "u2e7vq",
-      "spare1": "848iiy",
-      "spare2": "rqrorz"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:10",
+      "lastTime": "2025-10-20 18:26:10",
+      "id": "172",
+      "appId": "172",
+      "foreignId": "172",
+      "type": "0umv3v",
+      "bizType": "nl2ljr",
+      "todoCreateTime": "2025-10-20 18:26:10",
+      "todoId": "172",
+      "todoType": "jcb46p",
+      "todoName": "merle.larkin",
+      "todoAbstract": "4n76as",
+      "todoAccountId": "172",
+      "todoAccountName": "merle.larkin",
+      "todoModuleId": "172",
+      "todoModuleName": "merle.larkin",
+      "todoUserId": "172",
+      "todoUserName": "merle.larkin",
+      "todoOrganId": "172",
+      "todoOrganName": "merle.larkin",
+      "todoProcessName": "merle.larkin",
+      "todoProcessStatus": "yeda3d",
+      "todoProcessInfo": "rxqg2l",
+      "todoCurrInfo": "7m63kw",
+      "todoNextInfo": "iwr7mn",
+      "todoUrl": "www.ben-grant.info",
+      "todoLabels": "3vhvg3",
+      "todoContent": "ibbwub",
+      "status": "kv1on0",
+      "opUserId": "172",
+      "opTime": "2025-10-20 18:26:10",
+      "opOrganId": "172",
+      "opOrganName": "merle.larkin",
+      "description": "pvup08",
+      "spare1": "5s2ubl",
+      "spare2": "vz9wf1"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -19993,7 +19993,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'description=ea2v50&q=p3c4v8&bizType=uxj3cu&todoProcessName=necole.oreilly&opOrganName=necole.oreilly&todoProcessInfo=5j9n00&opUserId=127&todoModuleName=necole.oreilly&appId=127&todoUserId=127&id=127&todoCreateTime=2025-10-20 01:16:57&todoContent=rrguha&opTime=2025-10-20 01:16:57&todoNextInfo=y4z2ft&spare1=ep7ra7&todoLabels=swhfyv&todoCurrInfo=baw79w&todoOrganId=127&todoAbstract=qawngi&todoUrl=www.emanuel-bosco.biz&foreignId=127&orderBy=173&todoType=ziidhn&spare2=i47fw9&page=1&status=903w2o&todoId=127&creatorId=127&todoUserName=necole.oreilly&limit=10&todoAccountId=127&todoAccountName=necole.oreilly&todoOrganName=necole.oreilly&todoProcessStatus=muw0gq&todoModuleId=127&startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&type=eu3c69&todoName=necole.oreilly&opOrganId=127'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoName=merle.larkin&id=172&todoNextInfo=u8nzju&todoType=o503zl&opOrganId=172&todoAccountId=172&creatorId=172&todoProcessName=merle.larkin&spare1=p0iz5a&type=7zv4hb&foreignId=172&todoId=172&todoCurrInfo=p5t7zq&appId=172&todoLabels=052d0k&todoUserName=merle.larkin&todoOrganId=172&todoProcessInfo=2b635v&todoContent=2qlvg8&todoOrganName=merle.larkin&todoCreateTime=2025-10-20 18:26:10&orderBy=717&limit=10&todoUserId=172&todoUrl=www.ben-grant.info&opOrganName=merle.larkin&todoModuleName=merle.larkin&opUserId=172&startTime=2025-10-20 18:20:52&todoAbstract=6peyzm&todoAccountName=merle.larkin&spare2=7kcd3q&page=1&todoProcessStatus=uhfw7p&status=h1hhu4&q=g8rhcm&todoModuleId=172&description=7feo5q&bizType=qvhjfv&opTime=2025-10-20 18:26:10&endTime=2025-10-20 18:20:52'
 ```
 **Response-fields:**
 
@@ -20012,9 +20012,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mzw5t7",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3fwdgp",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20102,46 +20102,46 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "7aijmf",
-    "bizType": "px963f",
-    "todoCreateTime": "2025-10-20 01:16:57",
-    "todoId": "127",
-    "todoType": "a1qpld",
-    "todoName": "necole.oreilly",
-    "todoAbstract": "es3qw5",
-    "todoAccountId": "127",
-    "todoAccountName": "necole.oreilly",
-    "todoModuleId": "127",
-    "todoModuleName": "necole.oreilly",
-    "todoUserId": "127",
-    "todoUserName": "necole.oreilly",
-    "todoOrganId": "127",
-    "todoOrganName": "necole.oreilly",
-    "todoProcessName": "necole.oreilly",
-    "todoProcessStatus": "1yi4zr",
-    "todoProcessInfo": "soj3ds",
-    "todoCurrInfo": "nb8fis",
-    "todoNextInfo": "it3y1r",
-    "todoUrl": "www.emanuel-bosco.biz",
-    "todoLabels": "fm46hs",
-    "todoContent": "ubgf9m",
-    "status": "ep6x12",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:57",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "7oaoqn",
-    "spare1": "lpu4o2",
-    "spare2": "0rpsbk"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "hrppjv",
+    "bizType": "538qu9",
+    "todoCreateTime": "2025-10-20 18:26:10",
+    "todoId": "172",
+    "todoType": "zh1kj6",
+    "todoName": "merle.larkin",
+    "todoAbstract": "22y5e8",
+    "todoAccountId": "172",
+    "todoAccountName": "merle.larkin",
+    "todoModuleId": "172",
+    "todoModuleName": "merle.larkin",
+    "todoUserId": "172",
+    "todoUserName": "merle.larkin",
+    "todoOrganId": "172",
+    "todoOrganName": "merle.larkin",
+    "todoProcessName": "merle.larkin",
+    "todoProcessStatus": "d2j9rn",
+    "todoProcessInfo": "v896vt",
+    "todoCurrInfo": "8dnh7g",
+    "todoNextInfo": "zp0r0u",
+    "todoUrl": "www.ben-grant.info",
+    "todoLabels": "4woa3e",
+    "todoContent": "kqmlxo",
+    "status": "dbzstl",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:10",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "a4i739",
+    "spare1": "7piw7v",
+    "spare2": "mi87e8"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20211,43 +20211,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "7dom1p",
-    "bizType": "3befg4",
-    "todoCreateTime": "2025-10-20 01:16:57",
-    "todoId": "127",
-    "todoType": "jb7w3c",
-    "todoName": "necole.oreilly",
-    "todoAbstract": "xbi1vt",
-    "todoAccountId": "127",
-    "todoAccountName": "necole.oreilly",
-    "todoModuleId": "127",
-    "todoModuleName": "necole.oreilly",
-    "todoUserId": "127",
-    "todoUserName": "necole.oreilly",
-    "todoOrganId": "127",
-    "todoOrganName": "necole.oreilly",
-    "todoProcessName": "necole.oreilly",
-    "todoProcessStatus": "kddfqn",
-    "todoProcessInfo": "mbmx4m",
-    "todoCurrInfo": "nvu31p",
-    "todoNextInfo": "feqdny",
-    "todoUrl": "www.emanuel-bosco.biz",
-    "todoLabels": "zico2v",
-    "todoContent": "xagw3x",
-    "status": "kh1cn8",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:57",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "7uj3dy",
-    "spare1": "6zhxon",
-    "spare2": "zrarso"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "ycpq9b",
+    "bizType": "ey8edf",
+    "todoCreateTime": "2025-10-20 18:26:10",
+    "todoId": "172",
+    "todoType": "upi0e3",
+    "todoName": "merle.larkin",
+    "todoAbstract": "28kh5p",
+    "todoAccountId": "172",
+    "todoAccountName": "merle.larkin",
+    "todoModuleId": "172",
+    "todoModuleName": "merle.larkin",
+    "todoUserId": "172",
+    "todoUserName": "merle.larkin",
+    "todoOrganId": "172",
+    "todoOrganName": "merle.larkin",
+    "todoProcessName": "merle.larkin",
+    "todoProcessStatus": "ysahtg",
+    "todoProcessInfo": "mn6qoq",
+    "todoCurrInfo": "gwwhco",
+    "todoNextInfo": "rxo8nz",
+    "todoUrl": "www.ben-grant.info",
+    "todoLabels": "im55kt",
+    "todoContent": "7a66ln",
+    "status": "4onqyf",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:10",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "k1eonb",
+    "spare1": "o03nmy",
+    "spare2": "rqbjno"
   }
 }'
 ```
@@ -20268,9 +20268,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uij4nr",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "g0ut5e",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20340,43 +20340,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:57",
-    "lastTime": "2025-10-20 01:16:57",
-    "id": "127",
-    "appId": "127",
-    "foreignId": "127",
-    "type": "3kpyyo",
-    "bizType": "mypc7b",
-    "todoCreateTime": "2025-10-20 01:16:57",
-    "todoId": "127",
-    "todoType": "251cxi",
-    "todoName": "necole.oreilly",
-    "todoAbstract": "0kne1h",
-    "todoAccountId": "127",
-    "todoAccountName": "necole.oreilly",
-    "todoModuleId": "127",
-    "todoModuleName": "necole.oreilly",
-    "todoUserId": "127",
-    "todoUserName": "necole.oreilly",
-    "todoOrganId": "127",
-    "todoOrganName": "necole.oreilly",
-    "todoProcessName": "necole.oreilly",
-    "todoProcessStatus": "tjej9d",
-    "todoProcessInfo": "0smbgt",
-    "todoCurrInfo": "opge7z",
-    "todoNextInfo": "w75igz",
-    "todoUrl": "www.emanuel-bosco.biz",
-    "todoLabels": "e1mncg",
-    "todoContent": "95pw2h",
-    "status": "ceesqv",
-    "opUserId": "127",
-    "opTime": "2025-10-20 01:16:57",
-    "opOrganId": "127",
-    "opOrganName": "necole.oreilly",
-    "description": "lctobq",
-    "spare1": "aknx9z",
-    "spare2": "zmdq2s"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:10",
+    "lastTime": "2025-10-20 18:26:10",
+    "id": "172",
+    "appId": "172",
+    "foreignId": "172",
+    "type": "rq3fg8",
+    "bizType": "83xx7i",
+    "todoCreateTime": "2025-10-20 18:26:10",
+    "todoId": "172",
+    "todoType": "ffgbcl",
+    "todoName": "merle.larkin",
+    "todoAbstract": "k8im0d",
+    "todoAccountId": "172",
+    "todoAccountName": "merle.larkin",
+    "todoModuleId": "172",
+    "todoModuleName": "merle.larkin",
+    "todoUserId": "172",
+    "todoUserName": "merle.larkin",
+    "todoOrganId": "172",
+    "todoOrganName": "merle.larkin",
+    "todoProcessName": "merle.larkin",
+    "todoProcessStatus": "o9ew21",
+    "todoProcessInfo": "3huy3f",
+    "todoCurrInfo": "drfq9p",
+    "todoNextInfo": "sia5xt",
+    "todoUrl": "www.ben-grant.info",
+    "todoLabels": "cqjkys",
+    "todoContent": "rq95eb",
+    "status": "0tsh4h",
+    "opUserId": "172",
+    "opTime": "2025-10-20 18:26:10",
+    "opOrganId": "172",
+    "opOrganName": "merle.larkin",
+    "description": "2lhkdg",
+    "spare1": "svpwlf",
+    "spare2": "gvceg8"
   }
 }'
 ```
@@ -20397,9 +20397,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mffgpj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "s9of1e",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20449,9 +20449,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n4vthh",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "jmbd4g",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20508,7 +20508,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?startTime=2025-10-20 01:15:40&name=necole.oreilly&countryId=127&nameEn=1odf4q&endTime=2025-10-20 01:15:40&page=1&lft=565&isDisplay=true&q=ce78f7&description=6lzmb5&delFlag=4&orderBy=730&rgt=667&deleteTime=2025-10-20 01:15:40&parentIds=en1ggc&parentIds=en1ggc&hasContent=true&sname=necole.oreilly&areatypeId=127&ids=x9ydym&ids=x9ydym&code=65412&likeQuery=gnkpv5&nameTotal=33rkcp&searchCode=65412&parentId=482&limit=10&areatypeIds=54wel0&areatypeIds=54wel0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?limit=10&code=81486&rgt=483&startTime=2025-10-20 18:20:52&likeQuery=7vs2yx&countryId=172&hasContent=true&areatypeId=172&nameTotal=zq0s1a&page=1&endTime=2025-10-20 18:20:52&nameEn=vktshn&parentIds=34i048&parentIds=34i048&description=vbemcg&deleteTime=2025-10-20 18:20:52&q=snzwkq&ids=dmn1n8&ids=dmn1n8&searchCode=81486&lft=529&delFlag=5&orderBy=960&sname=merle.larkin&isDisplay=true&name=merle.larkin&parentId=81&areatypeIds=8ugecz&areatypeIds=8ugecz
 ```
 **Response-fields:**
 
@@ -20550,31 +20550,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:51",
-      "lastTime": "2025-10-20 01:16:51",
-      "id": 853,
-      "parentId": 556,
-      "countryId": "127",
-      "areatypeId": "127",
-      "lft": 718,
-      "rgt": 390,
-      "code": "65412",
-      "name": "necole.oreilly",
-      "nameTotal": "wqkh43",
-      "sname": "necole.oreilly",
-      "nameEn": "o8f0ip",
-      "searchCode": "65412",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:03",
+      "lastTime": "2025-10-20 18:26:03",
+      "id": 606,
+      "parentId": 325,
+      "countryId": "172",
+      "areatypeId": "172",
+      "lft": 218,
+      "rgt": 729,
+      "code": "81486",
+      "name": "merle.larkin",
+      "nameTotal": "4t27rt",
+      "sname": "merle.larkin",
+      "nameEn": "58vdi4",
+      "searchCode": "81486",
       "isDisplay": true,
       "hasContent": true,
       "priority": 561,
-      "delFlag": 4,
-      "deleteTime": "2025-10-20 01:16:51",
-      "description": "qoryei"
+      "delFlag": 5,
+      "deleteTime": "2025-10-20 18:26:03",
+      "description": "90iudb"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20630,7 +20630,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'startTime=2025-10-20 01:15:40&code=65412&orderBy=256&limit=10&countryId=127&parentId=664&hasContent=true&page=1&deleteTime=2025-10-20 01:15:40&q=doloyi&searchCode=65412&parentIds=q0rvxr&parentIds=q0rvxr&rgt=302&ids=qyekbu&ids=qyekbu&nameEn=j5twh8&areatypeIds=me2ctc&areatypeIds=me2ctc&delFlag=4&nameTotal=x7bd1v&sname=necole.oreilly&areatypeId=127&description=aabkv0&likeQuery=8w0za2&lft=682&endTime=2025-10-20 01:15:40&isDisplay=true&name=necole.oreilly'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'isDisplay=true&limit=10&q=7yrcn4&delFlag=5&orderBy=857&areatypeId=172&description=mecpas&name=merle.larkin&parentIds=34xn4n&parentIds=34xn4n&areatypeIds=m53ul4&areatypeIds=m53ul4&parentId=542&hasContent=true&deleteTime=2025-10-20 18:20:52&nameTotal=sf4uj1&page=1&lft=278&rgt=371&code=81486&sname=merle.larkin&ids=kab7zu&ids=kab7zu&searchCode=81486&countryId=172&likeQuery=o8tzwb&nameEn=5031f6&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52'
 ```
 **Response-fields:**
 
@@ -20649,9 +20649,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "u1gamh",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "f40zyd",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20723,30 +20723,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:51",
-    "lastTime": "2025-10-20 01:16:51",
-    "id": 795,
-    "parentId": 26,
-    "countryId": "127",
-    "areatypeId": "127",
-    "lft": 777,
-    "rgt": 768,
-    "code": "65412",
-    "name": "necole.oreilly",
-    "nameTotal": "7ti384",
-    "sname": "necole.oreilly",
-    "nameEn": "xruft1",
-    "searchCode": "65412",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:03",
+    "lastTime": "2025-10-20 18:26:03",
+    "id": 578,
+    "parentId": 393,
+    "countryId": "172",
+    "areatypeId": "172",
+    "lft": 850,
+    "rgt": 814,
+    "code": "81486",
+    "name": "merle.larkin",
+    "nameTotal": "ic7h0z",
+    "sname": "merle.larkin",
+    "nameEn": "2k171h",
+    "searchCode": "81486",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 65,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:51",
-    "description": "aqaelx"
+    "priority": 393,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:03",
+    "description": "aty2b1"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20800,27 +20800,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:51",
-    "lastTime": "2025-10-20 01:16:51",
-    "id": 484,
-    "parentId": 128,
-    "countryId": "127",
-    "areatypeId": "127",
-    "lft": 254,
-    "rgt": 270,
-    "code": "65412",
-    "name": "necole.oreilly",
-    "nameTotal": "al7vs9",
-    "sname": "necole.oreilly",
-    "nameEn": "3ig4yp",
-    "searchCode": "65412",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:03",
+    "lastTime": "2025-10-20 18:26:03",
+    "id": 364,
+    "parentId": 398,
+    "countryId": "172",
+    "areatypeId": "172",
+    "lft": 287,
+    "rgt": 672,
+    "code": "81486",
+    "name": "merle.larkin",
+    "nameTotal": "zs88y0",
+    "sname": "merle.larkin",
+    "nameEn": "yfh6cr",
+    "searchCode": "81486",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 170,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:51",
-    "description": "4nxhz6"
+    "priority": 556,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:03",
+    "description": "eo4h3i"
   }
 }'
 ```
@@ -20841,9 +20841,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "j571e6",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "d3xsvv",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20897,27 +20897,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:51",
-    "lastTime": "2025-10-20 01:16:51",
-    "id": 251,
-    "parentId": 705,
-    "countryId": "127",
-    "areatypeId": "127",
-    "lft": 670,
-    "rgt": 906,
-    "code": "65412",
-    "name": "necole.oreilly",
-    "nameTotal": "1exjme",
-    "sname": "necole.oreilly",
-    "nameEn": "ps1gla",
-    "searchCode": "65412",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:03",
+    "lastTime": "2025-10-20 18:26:03",
+    "id": 233,
+    "parentId": 68,
+    "countryId": "172",
+    "areatypeId": "172",
+    "lft": 45,
+    "rgt": 91,
+    "code": "81486",
+    "name": "merle.larkin",
+    "nameTotal": "jcawbf",
+    "sname": "merle.larkin",
+    "nameEn": "7ahdqb",
+    "searchCode": "81486",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 706,
-    "delFlag": 4,
-    "deleteTime": "2025-10-20 01:16:51",
-    "description": "2zk0vr"
+    "priority": 512,
+    "delFlag": 5,
+    "deleteTime": "2025-10-20 18:26:03",
+    "description": "yrtu2j"
   }
 }'
 ```
@@ -20938,9 +20938,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "73zzyq",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "no1hny",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -20990,9 +20990,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2fh4oq",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "4rgaq8",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21035,7 +21035,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?startTime=2025-10-20 01:15:40&endTime=2025-10-20 01:15:40&existKey=2fpuwe&name=necole.oreilly&orderBy=922&page=1&limit=10&code=65412&description=u60huj&q=2etkep&type=swyqk6&delFlag=4
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?delFlag=5&orderBy=805&name=merle.larkin&code=81486&startTime=2025-10-20 18:20:52&description=zuijw5&existKey=ttqxtz&q=im6u3f&page=1&limit=10&type=1luhfx&endTime=2025-10-20 18:20:52
 ```
 **Response-fields:**
 
@@ -21066,20 +21066,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:52",
-      "lastTime": "2025-10-20 01:16:52",
-      "id": "127",
-      "name": "necole.oreilly",
-      "type": "76j5sm",
-      "code": "65412",
-      "priority": 494,
-      "delFlag": 4,
-      "description": "4s6rqg"
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:05",
+      "lastTime": "2025-10-20 18:26:05",
+      "id": "172",
+      "name": "merle.larkin",
+      "type": "evh2g2",
+      "code": "81486",
+      "priority": 124,
+      "delFlag": 5,
+      "description": "dcfdpi"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21121,7 +21121,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'type=cp6otq&q=lwiwml&orderBy=609&description=8olhme&delFlag=4&startTime=2025-10-20 01:15:40&limit=10&name=necole.oreilly&page=1&code=65412&endTime=2025-10-20 01:15:40&existKey=l8yqik'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'type=tcp6u1&startTime=2025-10-20 18:20:52&code=81486&endTime=2025-10-20 18:20:52&orderBy=322&existKey=9zubgz&q=mspimc&delFlag=5&name=merle.larkin&limit=10&description=8auh5y&page=1'
 ```
 **Response-fields:**
 
@@ -21140,9 +21140,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x4uxw1",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3ecifh",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21203,19 +21203,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "type": "55e835",
-    "code": "65412",
-    "priority": 782,
-    "delFlag": 4,
-    "description": "x61hr6"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:05",
+    "lastTime": "2025-10-20 18:26:05",
+    "id": "172",
+    "name": "merle.larkin",
+    "type": "u6qxx4",
+    "code": "81486",
+    "priority": 371,
+    "delFlag": 5,
+    "description": "u13tly"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21258,16 +21258,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "type": "uae9ck",
-    "code": "65412",
-    "priority": 97,
-    "delFlag": 4,
-    "description": "we7cl1"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:05",
+    "lastTime": "2025-10-20 18:26:05",
+    "id": "172",
+    "name": "merle.larkin",
+    "type": "4upvcg",
+    "code": "81486",
+    "priority": 861,
+    "delFlag": 5,
+    "description": "ylrqgx"
   }
 }'
 ```
@@ -21288,9 +21288,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zer0kz",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3v1ya5",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21333,16 +21333,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:52",
-    "lastTime": "2025-10-20 01:16:52",
-    "id": "127",
-    "name": "necole.oreilly",
-    "type": "m4quvf",
-    "code": "65412",
-    "priority": 446,
-    "delFlag": 4,
-    "description": "vlufku"
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:05",
+    "lastTime": "2025-10-20 18:26:05",
+    "id": "172",
+    "name": "merle.larkin",
+    "type": "hmb51q",
+    "code": "81486",
+    "priority": 986,
+    "delFlag": 5,
+    "description": "8smvr8"
   }
 }'
 ```
@@ -21363,9 +21363,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "a8r25c",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "793ri0",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21415,9 +21415,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v3e7qu",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "d1k2e3",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21456,7 +21456,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?cfgValue=u7a6ry&orderBy=138&ids=14hjpn&ids=14hjpn&cfgKey=8h5knk&q=7djcrk&startTime=2025-10-20 01:15:40&page=1&limit=10&endTime=2025-10-20 01:15:40
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?endTime=2025-10-20 18:20:52&page=1&cfgKey=eh6pd2&startTime=2025-10-20 18:20:52&ids=4yvc98&ids=4yvc98&limit=10&q=7f93d5&orderBy=814&cfgValue=8aj99h
 ```
 **Response-fields:**
 
@@ -21483,19 +21483,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 807,
+    "totalCount": 964,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "djsoj1",
-        "cfgValue": "czwdxw"
+        "cfgKey": "zlysnm",
+        "cfgValue": "8d3h9a"
       }
     ]
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21533,7 +21533,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'orderBy=263&q=nhlkov&cfgValue=8ynprn&page=1&limit=10&ids=jeo2nr&ids=jeo2nr&endTime=2025-10-20 01:15:40&cfgKey=5c9mpr&startTime=2025-10-20 01:15:40'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'startTime=2025-10-20 18:20:52&limit=10&orderBy=301&q=3kycht&cfgValue=disjza&cfgKey=hyzjmk&endTime=2025-10-20 18:20:52&page=1&ids=m8betg&ids=m8betg'
 ```
 **Response-fields:**
 
@@ -21552,9 +21552,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l7ugqp",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3duhme",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21584,7 +21584,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/hi9e3b.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/23dzh1.do
 ```
 **Response-fields:**
 
@@ -21606,11 +21606,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "wg27f9",
-    "cfgValue": "hgeft3"
+    "cfgKey": "f34w4j",
+    "cfgValue": "a26kk1"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21644,8 +21644,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "knnifz",
-    "cfgValue": "k36pt4"
+    "cfgKey": "k3y2l7",
+    "cfgValue": "562wge"
   }
 }'
 ```
@@ -21666,9 +21666,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vbi4wj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "avmcf9",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21702,8 +21702,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "fstro2",
-    "cfgValue": "oqsvf6"
+    "cfgKey": "lzyfxf",
+    "cfgValue": "ktcalz"
   }
 }'
 ```
@@ -21724,9 +21724,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jb1fay",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "zre70g",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21775,9 +21775,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vbwmk1",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "q6g0wl",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21820,9 +21820,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "w6ox16",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "kf07su",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21865,12 +21865,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "img": "jvg0s4",
-    "code": "65412"
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "img": "g2u1ej",
+    "code": "81486"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -21912,12 +21912,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "img": "n9bel0",
-    "code": "65412"
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "img": "nw3l6i",
+    "code": "81486"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22022,7 +22022,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?creatorId=127&columns[0].isIncrement=p1n5pt&pkColumn.lastTime=2025-10-20 01:16:58&subTable.pkColumn.isEdit=3so4t2&Description=bg1vdv&subTable.pkColumn.isRequired=4l2y4k&subTable.columns[0].htmlType=ugyv6e&columns[0].javaType=jecr01&subTable.columns[0].isPk=kc18pq&pkColumn.isList=xd79ie&pkColumn.priority=149&subTable.pkColumn.lastTime=2025-10-20 01:16:58&subTable.genType=csgnb1&subTable.subTable.className=necole.oreilly&tableComment=ed6h8p&pkColumn.javaField=cemkhz&pkColumn.creatorId=127&subTable.pkColumn.isQuery=hmx14z&subTable.parentMenuId=587&subTable.parentMenuName=necole.oreilly&pkColumn.isInsert=pwemv4&lastTime=2025-10-20 01:16:58&packageName=necole.oreilly&subTable.genPath=vywhno&tplCategory=i3hl84&pkColumn.columnName=necole.oreilly&pkColumn.isIncrement=14p5ga&subTable.subTable.Description=lvcqtp&subTable.subTable.tplWebType=6jlb1r&subTable.creatorId=127&subTable.columns[0].lastTime=2025-10-20 01:16:58&subTable.columns[0].javaType=mioamv&subTable.columns[0].isEdit=vf3y93&subTable.columns[0].queryType=nysr27&pkColumn.isPk=vwrpmf&subTable.treeParentCode=65412&subTable.limit=10&columns[0].tableId=692&columns[0].javaField=zl3518&treeCode=65412&subTable.lastTime=2025-10-20 01:16:58&parentMenuId=208&columns[0].isInsert=9wrp6x&page=1&subTable.subTable.subTableName=necole.oreilly&subTable.subTable.tableName=necole.oreilly&limit=10&subTable.pkColumn.creatorId=127&subTable.subTable.treeName=necole.oreilly&subTable.subTable.packageName=necole.oreilly&subTable.pkColumn.columnName=necole.oreilly&columns[0].dictType=gozgxg&subTable.columns[0].columnName=necole.oreilly&subTable.treeName=necole.oreilly&subTable.subTable.businessName=necole.oreilly&subTable.pkColumn.priority=621&columns[0].columnName=necole.oreilly&subTable.columns[0].dictType=3u64u2&subTable.subTable.genType=f5fvsl&subTable.columns[0].tableId=282&subTable.pkColumn.dictType=qf5can&subTable.packageName=necole.oreilly&subTable.page=1&columns[0].columnId=815&columns[0].isEdit=a7otrh&columns[0].htmlType=cgtxp8&subTable.businessName=necole.oreilly&subTable.subTable.optionLists=vn9pyb&subTable.pkColumn.queryType=cjij57&subTable.formColNum=36&subTable.pkColumn.isList=qblml6&subTable.columns[0].columnComment=j23j0m&pkColumn.tableId=306&subTable.subTable.functionAuthor=Terina Veum&tplWebType=pxf0l4&treeParentCode=65412&subTable.functionAuthor=Terina Veum&subTableName=necole.oreilly&subTable.subTableName=necole.oreilly&subTable.subTable.treeCode=65412&subTable.columns[0].priority=607&subTable.subTable.subTableFkName=necole.oreilly&subTable.pkColumn.createTime=2025-10-20 01:16:58&subTable.pkColumn.tableId=865&subTable.className=necole.oreilly&subTable.subTable.treeParentCode=65412&columns[0].creatorId=127&tableId=484&columns[0].createTime=2025-10-20 01:16:58&subTable.pkColumn.htmlType=fdcspd&pkColumn.isQuery=1n7gdn&optionLists=yf8llt&subTable.pkColumn.isIncrement=m9gvsv&subTable.columns[0].javaField=7zszsq&subTable.columns[0].isQuery=k7l36c&subTable.pkColumn.isInsert=y3xvx3&subTable.columns[0].isRequired=ia3clf&genType=ht2kne&subTable.columns[0].isInsert=vjdxgx&columns[0].columnType=3bxc8u&pkColumn.columnType=sg0ddm&subTable.subTableFkName=necole.oreilly&subTable.subTable.parentMenuId=38&subTable.pkColumn.isPk=qa5uc2&subTable.subTable.parentMenuName=necole.oreilly&columns[0].isRequired=ctz7el&columns[0].isList=odyzh6&functionName=necole.oreilly&parentMenuName=necole.oreilly&subTable.createTime=2025-10-20 01:16:58&pkColumn.columnId=72&subTable.columns[0].columnId=306&columns[0].isQuery=6xy7bq&subTable.tableComment=3avaoc&columns[0].queryType=28h5pq&subTable.subTable.page=1&columns[0].isPk=r9t4mx&pkColumn.queryType=gdmux4&subTable.treeCode=65412&subTable.columns[0].createTime=2025-10-20 01:16:58&subTable.columns[0].isList=dka32b&treeName=necole.oreilly&pkColumn.isEdit=3mma8t&subTable.subTable.tableComment=70msed&subTable.subTable.creatorId=127&subTable.pkColumn.javaType=f4j2va&subTable.tableName=necole.oreilly&moduleName=necole.oreilly&pkColumn.javaType=ni7lk2&columns[0].priority=244&subTable.pkColumn.columnId=282&subTable.optionLists=zexr7b&subTable.columns[0].columnType=zbxdbb&subTable.subTable.tableId=170&pkColumn.createTime=2025-10-20 01:16:58&pkColumn.dictType=4ut34t&subTable.subTable.functionName=necole.oreilly&subTable.Description=soehen&pkColumn.columnComment=bs6ku8&subTable.subTable.genPath=3hykib&subTable.subTable.limit=10&pkColumn.isRequired=e8pxt4&tableName=necole.oreilly&subTable.subTable.formColNum=185&subTable.subTable.moduleName=necole.oreilly&columns[0].columnComment=fpqbcc&subTable.pkColumn.javaField=oexk0o&subTable.subTable.tplCategory=l8wvhg&subTable.columns[0].creatorId=127&genPath=zx5oto&subTable.tableId=168&subTableFkName=necole.oreilly&functionAuthor=Terina Veum&formColNum=735&subTable.tplWebType=t5576o&createTime=2025-10-20 01:16:58&subTable.pkColumn.columnType=tbudln&className=necole.oreilly&subTable.moduleName=necole.oreilly&subTable.columns[0].isIncrement=o97omp&columns[0].lastTime=2025-10-20 01:16:58&subTable.functionName=necole.oreilly&subTable.tplCategory=qpgcvj&businessName=necole.oreilly&subTable.subTable.lastTime=2025-10-20 01:16:58&subTable.pkColumn.columnComment=nzwoib&subTable.subTable.createTime=2025-10-20 01:16:58&pkColumn.htmlType=9yz5y0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?businessName=merle.larkin&pkColumn.createTime=2025-10-20 18:26:11&subTable.columns[0].isEdit=6ngzlj&subTable.columns[0].priority=726&columns[0].isQuery=fdx4wp&parentMenuName=merle.larkin&subTable.optionLists=zwywgs&subTable.subTable.subTableFkName=merle.larkin&pkColumn.javaField=ohm2rc&subTable.columns[0].htmlType=oros42&subTable.subTable.Description=7m1zze&subTable.tplWebType=ejncfb&subTable.treeName=merle.larkin&columns[0].columnName=merle.larkin&columns[0].isIncrement=l5ccr4&subTable.subTable.lastTime=2025-10-20 18:26:11&pkColumn.tableId=580&subTable.subTable.parentMenuName=merle.larkin&pkColumn.columnType=lfryix&subTable.subTable.functionAuthor=Glendora Flatley&subTable.createTime=2025-10-20 18:26:11&subTable.subTable.className=merle.larkin&subTable.subTable.packageName=merle.larkin&limit=10&Description=wddj7c&subTable.pkColumn.queryType=29g9xo&pkColumn.columnName=merle.larkin&optionLists=l2l41o&parentMenuId=348&subTable.subTable.limit=10&pkColumn.isRequired=aetjwe&subTable.pkColumn.columnType=q8mwpb&subTable.columns[0].javaType=4zoce1&subTable.pkColumn.priority=127&columns[0].htmlType=kjzoti&subTable.genPath=j92bmv&pkColumn.lastTime=2025-10-20 18:26:11&pkColumn.isIncrement=8yv2lm&subTable.tableComment=phuy29&subTable.pkColumn.htmlType=4d8v3o&subTable.pkColumn.isRequired=1590nk&creatorId=172&subTable.tableName=merle.larkin&subTable.subTable.functionName=merle.larkin&subTable.pkColumn.isIncrement=umbcdn&subTable.creatorId=172&subTable.subTable.optionLists=4jfrt2&subTable.columns[0].isInsert=e02512&subTable.subTable.tableId=906&columns[0].isRequired=dn5etb&subTable.pkColumn.creatorId=172&columns[0].columnComment=0ti83b&subTable.columns[0].columnId=309&subTable.pkColumn.lastTime=2025-10-20 18:26:11&pkColumn.isInsert=x2cyv4&columns[0].queryType=ojbk6b&subTable.genType=sswle6&subTable.subTable.genType=glq3wg&subTable.pkColumn.isEdit=w5neoa&subTable.columns[0].columnType=4marg0&subTable.columns[0].tableId=300&pkColumn.queryType=yzwxe2&subTable.subTable.moduleName=merle.larkin&subTable.columns[0].lastTime=2025-10-20 18:26:11&subTable.subTable.formColNum=526&subTable.columns[0].isList=hfei53&subTable.pkColumn.javaField=hc3h1u&columns[0].creatorId=172&columns[0].tableId=391&subTable.className=merle.larkin&columns[0].isInsert=ka2b1l&columns[0].dictType=i2o65f&genType=41em9v&tplCategory=5g0x3i&tableName=merle.larkin&subTableFkName=merle.larkin&subTable.pkColumn.tableId=648&className=merle.larkin&subTable.subTable.treeCode=81486&subTable.pkColumn.isList=b4ymx2&subTable.subTable.createTime=2025-10-20 18:26:11&pkColumn.priority=298&subTable.subTable.treeName=merle.larkin&subTable.subTable.creatorId=172&formColNum=949&subTable.subTable.subTableName=merle.larkin&subTable.columns[0].javaField=fw3ag0&columns[0].lastTime=2025-10-20 18:26:11&columns[0].isEdit=1fqsa9&subTable.columns[0].isQuery=ffdohm&treeCode=81486&treeParentCode=81486&subTable.pkColumn.columnComment=p14uax&subTable.subTableFkName=merle.larkin&pkColumn.isPk=i9yf43&subTable.subTable.tableName=merle.larkin&subTable.columns[0].isRequired=hrn1xr&treeName=merle.larkin&subTable.pkColumn.columnName=merle.larkin&pkColumn.isQuery=qeudll&subTable.limit=10&columns[0].javaType=8q5ikz&subTable.subTable.page=1&columns[0].javaField=y9sjmy&subTable.functionName=merle.larkin&subTable.Description=zrvumx&subTable.columns[0].dictType=jvrmoc&subTable.parentMenuName=merle.larkin&subTable.pkColumn.dictType=oapf38&subTable.columns[0].columnName=merle.larkin&subTable.functionAuthor=Glendora Flatley&subTable.columns[0].queryType=d87n2l&packageName=merle.larkin&subTable.parentMenuId=259&subTable.tplCategory=ken4et&subTable.subTable.parentMenuId=463&subTable.pkColumn.createTime=2025-10-20 18:26:11&columns[0].columnId=31&pkColumn.javaType=r8vhc9&functionAuthor=Glendora Flatley&subTable.subTable.businessName=merle.larkin&moduleName=merle.larkin&subTable.subTableName=merle.larkin&tplWebType=kcdgz0&subTable.columns[0].createTime=2025-10-20 18:26:11&subTable.columns[0].columnComment=dxlp39&columns[0].priority=416&tableId=504&page=1&subTable.subTable.treeParentCode=81486&subTable.lastTime=2025-10-20 18:26:11&pkColumn.htmlType=zcz1e9&columns[0].isList=uoy3fd&subTable.columns[0].creatorId=172&subTable.packageName=merle.larkin&columns[0].columnType=c56xrz&pkColumn.columnId=695&subTable.businessName=merle.larkin&pkColumn.isEdit=nu4cgu&subTable.pkColumn.isQuery=6qls34&functionName=merle.larkin&pkColumn.columnComment=5vi1fd&subTable.tableId=142&subTable.pkColumn.isPk=is6jdv&subTable.subTable.tplCategory=2z086t&subTable.subTable.tplWebType=3z5jtr&pkColumn.creatorId=172&tableComment=5e1gg9&subTable.treeParentCode=81486&subTable.page=1&subTable.subTable.genPath=1uo9sn&columns[0].createTime=2025-10-20 18:26:11&lastTime=2025-10-20 18:26:11&subTable.subTable.tableComment=izcciu&pkColumn.isList=rbc483&subTable.columns[0].isPk=hnmg29&genPath=t2hr4r&pkColumn.dictType=4pnx7k&subTable.columns[0].isIncrement=i78idn&columns[0].isPk=hvyxdf&subTable.moduleName=merle.larkin&subTable.treeCode=81486&subTable.pkColumn.columnId=383&subTable.pkColumn.javaType=zu4dj2&subTable.pkColumn.isInsert=aujh2n&subTableName=merle.larkin&subTable.formColNum=719&createTime=2025-10-20 18:26:11
 ```
 **Response-fields:**
 
@@ -22117,83 +22117,83 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:58",
-      "lastTime": "2025-10-20 01:16:58",
-      "tableId": 763,
-      "tableName": "necole.oreilly",
-      "tableComment": "630hfp",
-      "subTableName": "necole.oreilly",
-      "subTableFkName": "necole.oreilly",
-      "className": "necole.oreilly",
-      "tplCategory": "vmbr31",
-      "tplWebType": "p7h4mz",
-      "packageName": "necole.oreilly",
-      "moduleName": "necole.oreilly",
-      "businessName": "necole.oreilly",
-      "functionName": "necole.oreilly",
-      "functionAuthor": "Terina Veum",
-      "formColNum": 871,
-      "genType": "n11vby",
-      "genPath": "lmvgy1",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:11",
+      "lastTime": "2025-10-20 18:26:11",
+      "tableId": 865,
+      "tableName": "merle.larkin",
+      "tableComment": "nbxc2i",
+      "subTableName": "merle.larkin",
+      "subTableFkName": "merle.larkin",
+      "className": "merle.larkin",
+      "tplCategory": "0otyxz",
+      "tplWebType": "ndlhb1",
+      "packageName": "merle.larkin",
+      "moduleName": "merle.larkin",
+      "businessName": "merle.larkin",
+      "functionName": "merle.larkin",
+      "functionAuthor": "Glendora Flatley",
+      "formColNum": 382,
+      "genType": "f99ll0",
+      "genPath": "k5zll7",
       "pkColumn": {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:58",
-        "lastTime": "2025-10-20 01:16:58",
-        "columnId": 432,
-        "tableId": 135,
-        "columnName": "necole.oreilly",
-        "columnComment": "hxf06g",
-        "columnType": "czohua",
-        "javaType": "zcy8q5",
-        "javaField": "x53da3",
-        "isPk": "ge0j3p",
-        "isIncrement": "qjul0l",
-        "isRequired": "iq1tdf",
-        "isInsert": "v4opgb",
-        "isEdit": "6y68jr",
-        "isList": "x442q5",
-        "isQuery": "ggce63",
-        "queryType": "bii8ge",
-        "htmlType": "qrkoh0",
-        "dictType": "utfj8a",
-        "priority": 470
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:11",
+        "lastTime": "2025-10-20 18:26:11",
+        "columnId": 953,
+        "tableId": 142,
+        "columnName": "merle.larkin",
+        "columnComment": "x19fvj",
+        "columnType": "xg6oag",
+        "javaType": "yroyde",
+        "javaField": "topju2",
+        "isPk": "6xpiqq",
+        "isIncrement": "75972x",
+        "isRequired": "3sgqhi",
+        "isInsert": "ve7rqh",
+        "isEdit": "t6uyh0",
+        "isList": "zehneb",
+        "isQuery": "vxnoq1",
+        "queryType": "wg5ago",
+        "htmlType": "e96fvm",
+        "dictType": "uh8ymf",
+        "priority": 220
       },
       "subTable": {
         "$ref": "..."
       },
       "columns": [
         {
-          "creatorId": "127",
-          "createTime": "2025-10-20 01:16:58",
-          "lastTime": "2025-10-20 01:16:58",
-          "columnId": 997,
-          "tableId": 932,
-          "columnName": "necole.oreilly",
-          "columnComment": "6vkpk3",
-          "columnType": "rnct74",
-          "javaType": "h1frfn",
-          "javaField": "kzmng8",
-          "isPk": "rdcuy2",
-          "isIncrement": "abi04u",
-          "isRequired": "pdag8b",
-          "isInsert": "ygwc3o",
-          "isEdit": "eh3i1t",
-          "isList": "rhu7yo",
-          "isQuery": "dio5zf",
-          "queryType": "twv11j",
-          "htmlType": "js0ifi",
-          "dictType": "4kxuzo",
-          "priority": 264
+          "creatorId": "172",
+          "createTime": "2025-10-20 18:26:11",
+          "lastTime": "2025-10-20 18:26:11",
+          "columnId": 699,
+          "tableId": 769,
+          "columnName": "merle.larkin",
+          "columnComment": "fhnbce",
+          "columnType": "hvqc16",
+          "javaType": "8k2d6x",
+          "javaField": "zfpyjk",
+          "isPk": "mf49ke",
+          "isIncrement": "dma1sc",
+          "isRequired": "pq0wiw",
+          "isInsert": "cahqr3",
+          "isEdit": "3jxpe8",
+          "isList": "rc7t2i",
+          "isQuery": "7u4gvq",
+          "queryType": "wlfzhl",
+          "htmlType": "26f28m",
+          "dictType": "6r0gjx",
+          "priority": 395
         }
       ],
-      "optionLists": "8nyh3k",
-      "treeCode": "65412",
-      "treeParentCode": "65412",
-      "treeName": "necole.oreilly",
-      "parentMenuId": 928,
-      "parentMenuName": "necole.oreilly",
-      "Description": "6wmo5z",
+      "optionLists": "lpbtb9",
+      "treeCode": "81486",
+      "treeParentCode": "81486",
+      "treeName": "merle.larkin",
+      "parentMenuId": 148,
+      "parentMenuName": "merle.larkin",
+      "Description": "iizmhg",
       "page": 1,
       "limit": 10,
       "params": {
@@ -22201,8 +22201,8 @@ timestamp|string|返回时间戳字符串|-
       }
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22232,7 +22232,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/348.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/407.do
 ```
 **Response-fields:**
 
@@ -22257,8 +22257,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22361,7 +22361,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?packageName=necole.oreilly&subTable.subTableName=necole.oreilly&subTable.pkColumn.isIncrement=udjj81&subTable.subTable.lastTime=2025-10-20 01:16:58&subTable.columns[0].javaType=rbjb2y&subTable.columns[0].isIncrement=ryyeza&columns[0].columnName=necole.oreilly&subTable.pkColumn.isEdit=fd4f7g&treeCode=65412&columns[0].javaType=o868da&subTable.subTable.className=necole.oreilly&moduleName=necole.oreilly&pkColumn.isList=wodot2&subTable.pkColumn.columnName=necole.oreilly&subTable.subTable.Description=o43wzs&subTable.treeName=necole.oreilly&subTable.subTable.tplWebType=dmvgk0&subTable.tableComment=e37gqj&subTable.pkColumn.priority=601&tableId=379&subTableFkName=necole.oreilly&pkColumn.columnType=nbter0&subTable.columns[0].columnComment=srxpz0&subTable.tplWebType=gnwcil&subTable.pkColumn.isRequired=el52z9&subTable.subTable.moduleName=necole.oreilly&subTable.subTable.functionAuthor=Terina Veum&pkColumn.isEdit=0dfmyb&columns[0].javaField=stmkuf&subTable.limit=10&optionLists=h01rx2&parentMenuId=954&subTable.columns[0].tableId=227&columns[0].columnId=630&subTable.pkColumn.javaType=29j7bx&subTable.subTableFkName=necole.oreilly&subTable.columns[0].isEdit=p2ajxv&subTable.subTable.genPath=o2oz47&columns[0].createTime=2025-10-20 01:16:58&subTable.columns[0].columnType=3y61ny&columns[0].priority=532&subTable.subTable.tableComment=6nvdc9&subTable.subTable.treeName=necole.oreilly&pkColumn.isQuery=ssf46a&subTable.subTable.parentMenuId=850&pkColumn.priority=207&subTable.columns[0].htmlType=rar98w&subTable.columns[0].isInsert=qiw4av&columns[0].isPk=op556s&columns[0].creatorId=127&pkColumn.isIncrement=dpbxd9&subTable.tplCategory=5pd6t8&subTable.functionAuthor=Terina Veum&pkColumn.isPk=89bm50&subTable.pkColumn.isPk=z8j8lk&subTable.subTable.genType=mmx9cl&subTable.columns[0].isList=ej42r9&subTable.subTable.creatorId=127&subTable.tableId=846&columns[0].dictType=gpae81&subTable.pkColumn.queryType=8a4r8p&columns[0].isIncrement=gymdi8&subTable.columns[0].javaField=5pb7uh&columns[0].lastTime=2025-10-20 01:16:58&subTableName=necole.oreilly&subTable.businessName=necole.oreilly&subTable.subTable.optionLists=36q965&subTable.subTable.tableName=necole.oreilly&subTable.subTable.functionName=necole.oreilly&pkColumn.queryType=hbzzzr&pkColumn.htmlType=wat43m&subTable.genType=r1mlzr&functionAuthor=Terina Veum&pkColumn.columnComment=ita6wz&genPath=sange8&pkColumn.javaField=62uxqn&subTable.pkColumn.columnId=231&subTable.columns[0].isRequired=101f11&subTable.optionLists=verdsf&genType=aaz3x2&pkColumn.columnId=703&subTable.columns[0].lastTime=2025-10-20 01:16:58&subTable.columns[0].queryType=554ywc&subTable.pkColumn.htmlType=68vnfj&businessName=necole.oreilly&subTable.pkColumn.columnType=m95igb&subTable.columns[0].dictType=f43vfo&columns[0].isRequired=zbvs0j&columns[0].isList=ha9j7p&subTable.packageName=necole.oreilly&subTable.formColNum=793&subTable.pkColumn.tableId=833&subTable.genPath=15nafi&subTable.pkColumn.createTime=2025-10-20 01:16:58&subTable.subTable.subTableName=necole.oreilly&subTable.subTable.createTime=2025-10-20 01:16:58&subTable.columns[0].isQuery=d4dai8&subTable.pkColumn.isList=pvhbuw&subTable.Description=cgngnt&columns[0].columnType=e1febl&columns[0].queryType=tskrdw&subTable.subTable.parentMenuName=necole.oreilly&pkColumn.isInsert=1ut491&columns[0].isQuery=329lzr&columns[0].isInsert=1fqnwn&tplCategory=0mlp0k&className=necole.oreilly&page=1&tableComment=4jbiij&subTable.subTable.limit=10&subTable.columns[0].columnId=628&pkColumn.lastTime=2025-10-20 01:16:58&subTable.subTable.subTableFkName=necole.oreilly&functionName=necole.oreilly&columns[0].tableId=279&subTable.subTable.tableId=460&subTable.columns[0].columnName=necole.oreilly&subTable.functionName=necole.oreilly&columns[0].columnComment=ulo4ga&Description=pk2kna&subTable.pkColumn.columnComment=u0g6ql&createTime=2025-10-20 01:16:58&subTable.subTable.businessName=necole.oreilly&lastTime=2025-10-20 01:16:58&subTable.tableName=necole.oreilly&subTable.parentMenuName=necole.oreilly&pkColumn.tableId=138&pkColumn.isRequired=el6bf7&subTable.creatorId=127&subTable.subTable.packageName=necole.oreilly&subTable.createTime=2025-10-20 01:16:58&subTable.lastTime=2025-10-20 01:16:58&subTable.columns[0].createTime=2025-10-20 01:16:58&pkColumn.createTime=2025-10-20 01:16:58&subTable.pkColumn.javaField=7efgjx&subTable.columns[0].creatorId=127&subTable.treeParentCode=65412&subTable.treeCode=65412&subTable.page=1&columns[0].htmlType=dmdaqm&pkColumn.columnName=necole.oreilly&subTable.subTable.page=1&subTable.pkColumn.isQuery=n5vjpx&subTable.subTable.treeCode=65412&treeParentCode=65412&subTable.moduleName=necole.oreilly&parentMenuName=necole.oreilly&columns[0].isEdit=s8awn2&subTable.parentMenuId=366&subTable.columns[0].isPk=46j6c7&tplWebType=tp1zxy&subTable.pkColumn.dictType=9lf7kh&subTable.pkColumn.isInsert=k1jejz&subTable.subTable.formColNum=774&subTable.pkColumn.creatorId=127&subTable.subTable.tplCategory=xjflro&pkColumn.javaType=9x8frj&creatorId=127&pkColumn.dictType=lnduay&subTable.columns[0].priority=825&pkColumn.creatorId=127&treeName=necole.oreilly&limit=10&tableName=necole.oreilly&subTable.subTable.treeParentCode=65412&subTable.className=necole.oreilly&formColNum=311&subTable.pkColumn.lastTime=2025-10-20 01:16:58
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?genPath=p7yu8n&subTable.formColNum=583&subTable.columns[0].priority=257&subTable.subTable.tplWebType=ag9k02&subTable.pkColumn.columnName=merle.larkin&subTable.subTable.treeParentCode=81486&subTable.genType=wq0cgk&subTable.columns[0].isIncrement=9iztac&subTable.columns[0].htmlType=smwc3k&subTable.page=1&columns[0].isPk=rhy0mf&columns[0].isIncrement=zw0b8v&columns[0].dictType=yhtnbo&subTable.columns[0].isEdit=g5fgol&subTable.subTable.moduleName=merle.larkin&subTable.subTable.functionAuthor=Glendora Flatley&subTable.columns[0].javaField=738t2p&pkColumn.createTime=2025-10-20 18:26:11&tplCategory=1zltsy&subTable.pkColumn.priority=985&columns[0].priority=715&Description=km2vt3&subTable.pkColumn.isQuery=4isq95&subTable.subTable.tableId=310&subTable.subTable.businessName=merle.larkin&subTable.tableName=merle.larkin&subTable.columns[0].columnId=792&subTable.columns[0].dictType=4atw38&subTable.pkColumn.columnId=623&columns[0].columnType=9eid5w&pkColumn.isInsert=mpv9fk&columns[0].isQuery=bdttwm&parentMenuName=merle.larkin&pkColumn.columnId=292&subTable.subTable.subTableName=merle.larkin&subTable.columns[0].isRequired=768eg3&pkColumn.priority=978&subTable.moduleName=merle.larkin&subTable.tplWebType=ocjse2&subTable.pkColumn.isRequired=f47ma8&pkColumn.tableId=13&pkColumn.isQuery=uz1z7o&pkColumn.creatorId=172&subTable.pkColumn.tableId=197&subTable.subTable.formColNum=309&subTable.tableComment=tb19rp&columns[0].isEdit=nb3elh&subTable.columns[0].queryType=i8tfjk&createTime=2025-10-20 18:26:11&className=merle.larkin&subTable.subTable.creatorId=172&moduleName=merle.larkin&subTable.pkColumn.isList=z8kpab&subTable.treeName=merle.larkin&pkColumn.isIncrement=u1pr80&subTable.columns[0].tableId=370&treeName=merle.larkin&columns[0].isInsert=zr42tr&genType=26b3di&subTable.pkColumn.isPk=i9pvfl&subTable.subTable.tplCategory=r5d6gk&columns[0].htmlType=xnqrjy&parentMenuId=780&subTable.subTable.className=merle.larkin&subTable.pkColumn.isIncrement=ma1jib&limit=10&pkColumn.javaType=9vkhgh&subTable.createTime=2025-10-20 18:26:11&subTable.businessName=merle.larkin&subTable.columns[0].isInsert=ojirzi&subTable.parentMenuName=merle.larkin&subTable.subTable.subTableFkName=merle.larkin&columns[0].columnComment=cidtp9&columns[0].isRequired=vlewvd&subTable.columns[0].creatorId=172&subTable.columns[0].columnName=merle.larkin&subTable.subTable.createTime=2025-10-20 18:26:11&subTable.subTable.tableComment=3mg9ym&subTable.functionName=merle.larkin&subTable.genPath=3951a3&formColNum=850&pkColumn.isRequired=309i5i&subTable.subTable.lastTime=2025-10-20 18:26:11&columns[0].columnId=803&columns[0].isList=mjvacv&subTable.treeCode=81486&tableComment=u71k4d&subTable.columns[0].lastTime=2025-10-20 18:26:11&subTable.pkColumn.createTime=2025-10-20 18:26:11&businessName=merle.larkin&subTable.columns[0].isList=mqwcxn&subTable.pkColumn.lastTime=2025-10-20 18:26:11&subTable.pkColumn.javaField=wgk7x6&subTable.functionAuthor=Glendora Flatley&packageName=merle.larkin&subTable.creatorId=172&subTable.pkColumn.creatorId=172&subTable.columns[0].javaType=uoze2z&subTable.subTable.parentMenuId=76&pkColumn.columnComment=luzdga&subTable.pkColumn.javaType=xbju61&subTable.columns[0].columnComment=i19q1z&pkColumn.dictType=mypvlv&subTable.columns[0].isQuery=cjykw1&subTable.columns[0].columnType=o1axsa&columns[0].lastTime=2025-10-20 18:26:11&subTable.subTable.treeName=merle.larkin&subTable.packageName=merle.larkin&subTable.pkColumn.columnComment=8eyde9&subTableFkName=merle.larkin&subTable.subTable.optionLists=74371r&subTable.className=merle.larkin&functionName=merle.larkin&functionAuthor=Glendora Flatley&pkColumn.isPk=3zfb19&subTable.pkColumn.columnType=cn2pl1&subTable.pkColumn.isInsert=16o4ip&subTable.tplCategory=e89yzl&columns[0].javaField=lbnzja&lastTime=2025-10-20 18:26:11&subTable.subTable.Description=mywff4&subTable.subTable.tableName=merle.larkin&columns[0].queryType=uxhlbo&pkColumn.queryType=47fm8j&pkColumn.htmlType=4hptno&pkColumn.columnType=5j1h3f&subTable.pkColumn.isEdit=85gyqz&subTable.subTable.page=1&page=1&columns[0].javaType=ww273s&subTable.optionLists=01hcxj&treeParentCode=81486&creatorId=172&columns[0].creatorId=172&tableId=273&subTable.subTable.genPath=bccowt&subTable.limit=10&treeCode=81486&columns[0].createTime=2025-10-20 18:26:11&subTable.lastTime=2025-10-20 18:26:11&pkColumn.columnName=merle.larkin&pkColumn.isEdit=0jnguk&pkColumn.lastTime=2025-10-20 18:26:11&subTable.Description=levkls&subTable.tableId=545&subTable.columns[0].createTime=2025-10-20 18:26:11&subTable.subTableName=merle.larkin&subTable.pkColumn.dictType=pbf3y7&pkColumn.javaField=7vjiqg&subTable.parentMenuId=696&columns[0].tableId=275&subTable.pkColumn.htmlType=mi1v3h&subTable.subTable.packageName=merle.larkin&tplWebType=monlgb&subTable.subTable.genType=1dwk3w&subTable.subTable.parentMenuName=merle.larkin&subTable.subTable.limit=10&subTable.treeParentCode=81486&columns[0].columnName=merle.larkin&optionLists=164nf1&subTable.subTable.functionName=merle.larkin&subTable.subTable.treeCode=81486&tableName=merle.larkin&pkColumn.isList=baifrw&subTable.pkColumn.queryType=o8squb&subTableName=merle.larkin&subTable.columns[0].isPk=4q9dax&subTable.subTableFkName=merle.larkin
 ```
 **Response-fields:**
 
@@ -22401,27 +22401,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "tgf5fm",
-    "pageNum": 654,
+    "stackTrace": "8lix4m",
+    "pageNum": 810,
     "pageSize": 10,
-    "startRow": 817,
-    "endRow": 874,
-    "total": 566,
-    "pages": 818,
+    "startRow": 458,
+    "endRow": 139,
+    "total": 220,
+    "pages": 658,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "strn5h",
-    "orderBy": "b9t805",
+    "countColumn": "397phv",
+    "orderBy": "q5rtjm",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "992bmv",
+    "dialectClass": "bu6uue",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22451,7 +22451,7 @@ tableId|int64|表对象ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=498
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=446
 ```
 **Response-fields:**
 
@@ -22493,31 +22493,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:58",
-      "lastTime": "2025-10-20 01:16:58",
-      "columnId": 917,
-      "tableId": 444,
-      "columnName": "necole.oreilly",
-      "columnComment": "yuv8dc",
-      "columnType": "zyw0ow",
-      "javaType": "2l8nk5",
-      "javaField": "vlrjjb",
-      "isPk": "g719vn",
-      "isIncrement": "k7lhe7",
-      "isRequired": "j8xdsb",
-      "isInsert": "q4k8no",
-      "isEdit": "kmk2mk",
-      "isList": "0t2n10",
-      "isQuery": "f63d3g",
-      "queryType": "ddtj73",
-      "htmlType": "dwnkr0",
-      "dictType": "48mitn",
-      "priority": 926
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:11",
+      "lastTime": "2025-10-20 18:26:11",
+      "columnId": 406,
+      "tableId": 69,
+      "columnName": "merle.larkin",
+      "columnComment": "j48gu4",
+      "columnType": "txeima",
+      "javaType": "190rwb",
+      "javaField": "ske92j",
+      "isPk": "f9evsa",
+      "isIncrement": "u8mxiy",
+      "isRequired": "yz33jo",
+      "isInsert": "sqsmc6",
+      "isEdit": "himpdh",
+      "isList": "jab3lx",
+      "isQuery": "xr4ynv",
+      "queryType": "djpeoo",
+      "htmlType": "rj4ius",
+      "dictType": "v4r1gn",
+      "priority": 187
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22547,7 +22547,7 @@ tables|string|表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=qt6dfd'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=fl2a6a'
 ```
 **Response-fields:**
 
@@ -22566,9 +22566,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0vc9jx",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "8xeu3p",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22598,7 +22598,7 @@ sql|string|  SQL脚本|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=teu0v2'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=kqgty4'
 ```
 **Response-fields:**
 
@@ -22617,9 +22617,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3l6spm",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "qq2w2o",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22725,83 +22725,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:58",
-    "lastTime": "2025-10-20 01:16:58",
-    "tableId": 747,
-    "tableName": "necole.oreilly",
-    "tableComment": "lxxjnk",
-    "subTableName": "necole.oreilly",
-    "subTableFkName": "necole.oreilly",
-    "className": "necole.oreilly",
-    "tplCategory": "mgj2sp",
-    "tplWebType": "w7nb9w",
-    "packageName": "necole.oreilly",
-    "moduleName": "necole.oreilly",
-    "businessName": "necole.oreilly",
-    "functionName": "necole.oreilly",
-    "functionAuthor": "Terina Veum",
-    "formColNum": 850,
-    "genType": "24aq0t",
-    "genPath": "33gqxo",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:26:11",
+    "lastTime": "2025-10-20 18:26:11",
+    "tableId": 53,
+    "tableName": "merle.larkin",
+    "tableComment": "f8p6oj",
+    "subTableName": "merle.larkin",
+    "subTableFkName": "merle.larkin",
+    "className": "merle.larkin",
+    "tplCategory": "ffzssv",
+    "tplWebType": "edbozp",
+    "packageName": "merle.larkin",
+    "moduleName": "merle.larkin",
+    "businessName": "merle.larkin",
+    "functionName": "merle.larkin",
+    "functionAuthor": "Glendora Flatley",
+    "formColNum": 206,
+    "genType": "drzhr1",
+    "genPath": "9gff0f",
     "pkColumn": {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:58",
-      "lastTime": "2025-10-20 01:16:58",
-      "columnId": 164,
-      "tableId": 86,
-      "columnName": "necole.oreilly",
-      "columnComment": "ckqfbo",
-      "columnType": "i06b87",
-      "javaType": "n311yv",
-      "javaField": "g44qb7",
-      "isPk": "orwu6s",
-      "isIncrement": "rie0c1",
-      "isRequired": "onpw6s",
-      "isInsert": "bi9miy",
-      "isEdit": "2iy6tm",
-      "isList": "w6l72s",
-      "isQuery": "40oi86",
-      "queryType": "47zlxj",
-      "htmlType": "wc4xbd",
-      "dictType": "ge4ho0",
-      "priority": 277
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:26:11",
+      "lastTime": "2025-10-20 18:26:11",
+      "columnId": 526,
+      "tableId": 754,
+      "columnName": "merle.larkin",
+      "columnComment": "fnq2hg",
+      "columnType": "8ipskh",
+      "javaType": "vz1usm",
+      "javaField": "6vdbyj",
+      "isPk": "8ss98u",
+      "isIncrement": "da3qo5",
+      "isRequired": "7ams35",
+      "isInsert": "c7t8zd",
+      "isEdit": "dezjrh",
+      "isList": "cxarp8",
+      "isQuery": "18myj8",
+      "queryType": "9dcdtj",
+      "htmlType": "afd460",
+      "dictType": "witdhh",
+      "priority": 97
     },
     "subTable": {
       "$ref": "..."
     },
     "columns": [
       {
-        "creatorId": "127",
-        "createTime": "2025-10-20 01:16:58",
-        "lastTime": "2025-10-20 01:16:58",
-        "columnId": 909,
-        "tableId": 553,
-        "columnName": "necole.oreilly",
-        "columnComment": "fc8kxb",
-        "columnType": "ak87ai",
-        "javaType": "fhlpea",
-        "javaField": "rhwdf8",
-        "isPk": "gobnw6",
-        "isIncrement": "jqdrqk",
-        "isRequired": "jziou1",
-        "isInsert": "wirhz2",
-        "isEdit": "gptd3m",
-        "isList": "ph6lhu",
-        "isQuery": "g0kq10",
-        "queryType": "9tj5qk",
-        "htmlType": "xrzspr",
-        "dictType": "bw6ua4",
-        "priority": 536
+        "creatorId": "172",
+        "createTime": "2025-10-20 18:26:11",
+        "lastTime": "2025-10-20 18:26:11",
+        "columnId": 532,
+        "tableId": 239,
+        "columnName": "merle.larkin",
+        "columnComment": "rfq9rv",
+        "columnType": "pri4fl",
+        "javaType": "fbsmov",
+        "javaField": "7o7jdb",
+        "isPk": "vnl8kv",
+        "isIncrement": "hu1wky",
+        "isRequired": "j8f1c9",
+        "isInsert": "7gry0o",
+        "isEdit": "49g4k5",
+        "isList": "cs644w",
+        "isQuery": "6pfqyp",
+        "queryType": "tlb7oy",
+        "htmlType": "aaix0r",
+        "dictType": "56x5qj",
+        "priority": 123
       }
     ],
-    "optionLists": "yekkxr",
-    "treeCode": "65412",
-    "treeParentCode": "65412",
-    "treeName": "necole.oreilly",
-    "parentMenuId": 547,
-    "parentMenuName": "necole.oreilly",
-    "Description": "2ot6yc",
+    "optionLists": "qpzln1",
+    "treeCode": "81486",
+    "treeParentCode": "81486",
+    "treeName": "merle.larkin",
+    "parentMenuId": 78,
+    "parentMenuName": "merle.larkin",
+    "Description": "fzkws1",
     "page": 1,
     "limit": 10,
     "params": {
@@ -22827,9 +22827,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4txhvo",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "akqx33",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22878,9 +22878,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1apfmt",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "b7ga45",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22910,7 +22910,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/787.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/894.do
 ```
 **Response-fields:**
 
@@ -22930,11 +22930,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "m2a7as",
-    "mapKey2": "700jrz"
+    "mapKey1": "vqeeum",
+    "mapKey2": "y20r6d"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -22964,7 +22964,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/necole.oreilly.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -22983,9 +22983,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "89fza2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "sz4b4f",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23015,7 +23015,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/necole.oreilly.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -23034,9 +23034,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pi79cz",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "6wrcvj",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23066,7 +23066,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/necole.oreilly.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/merle.larkin.do
 ```
 **Response-fields:**
 
@@ -23085,9 +23085,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pyhxcs",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "x19i8d",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23117,7 +23117,7 @@ tables|string|   表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=vza5sa
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=bng9j3
 ```
 **Response-fields:**
 
@@ -23136,9 +23136,154 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "49ftzz",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "lrmn4z",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+## 会员用户令牌读写控制类
+### Get ThirdMemberToken list. 获取会员用户令牌列表或分页, 返回ThirdMemberToken对象.
+**URL:** https://linlan.net/eframe_backend/api/third/token/list.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** Get ThirdMemberToken list. 获取会员用户令牌列表或分页, 返回ThirdMemberToken对象.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+id|int64|主键ID|false|-
+token|string|令牌TOKEN|false|-
+foreignId|string|前台应用或站点ID|false|-
+username|string|用户名|false|-
+loginIp|string|登录IP|false|-
+updateTime|string|更新时间|false|-
+expireTime|string|过期时间|false|-
+description|string|备注|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/list.do?q=dleqvk&foreignId=172&id=127&expireTime=2025-10-20 18:25:53&endTime=2025-10-20 18:20:52&limit=10&description=nqvs3q&page=1&orderBy=502&startTime=2025-10-20 18:20:52&username=merle.larkin&updateTime=2025-10-20 18:25:53&loginIp=137.119.212.174&token=9kt1ga
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|int64|主键ID|-
+└─userId|string|用户ID|-
+└─token|string|令牌TOKEN|-
+└─foreignId|string|前台应用或站点ID|-
+└─username|string|用户名|-
+└─loginIp|string|登录IP|-
+└─updateTime|string|更新时间|-
+└─expireTime|string|过期时间|-
+└─description|string|备注|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:53",
+      "lastTime": "2025-10-20 18:25:53",
+      "id": 806,
+      "userId": "172",
+      "token": "40yaac",
+      "foreignId": "172",
+      "username": "merle.larkin",
+      "loginIp": "137.119.212.174",
+      "updateTime": "2025-10-20 18:25:53",
+      "expireTime": "2025-10-20 18:25:53",
+      "description": "wx78no"
+    }
+  ],
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMemberToken Operation. 删除会员用户令牌数据操作逻辑，根据操作类型，执行删除操作.
+**URL:** https://linlan.net/eframe_backend/api/third/token/delete/{ids}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** ThirdMemberToken Operation. 删除会员用户令牌数据操作逻辑，根据操作类型，执行删除操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+ids|array|主键ID:null;1;1,2,3,[array of int64]|true|
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/delete/.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "lv1n2i",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23196,7 +23341,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?bizSubtype=ol3c3a&orderBy=876&limit=10&returnTime=2025-10-20 01:16:42&page=1&endTime=2025-10-20 01:15:40&bizType=50mmo5&spare1=mbhnv3&status=2r90iq&description=a83m24&sendStatus=3kg3x9&id=275&providerId=127&content=o2o9zp&creatorId=127&receiverMobile=1-856-813-9551&sendTime=2025-10-20&delFlag=4&spare2=cfezyu&foreignId=127&msgUrl=www.emanuel-bosco.biz&q=o4ognc&appId=127&returnInfo=f2aded&startTime=2025-10-20 01:15:40&receiverName=necole.oreilly&providerName=necole.oreilly
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?q=5nv2ay&receiverMobile=(415) 540-6962&bizType=vzb3fy&creatorId=172&id=967&sendTime=2025-10-20&endTime=2025-10-20 18:20:52&orderBy=539&receiverName=merle.larkin&providerId=172&spare2=kgt2fv&delFlag=5&providerName=merle.larkin&content=gke713&limit=10&returnTime=2025-10-20 18:25:52&foreignId=172&appId=172&returnInfo=modptn&description=c83t4o&spare1=l1ubdh&page=1&startTime=2025-10-20 18:20:52&msgUrl=www.ben-grant.info&status=o7m5n9&bizSubtype=ggo9zi&sendStatus=t27d1n
 ```
 **Response-fields:**
 
@@ -23240,33 +23385,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:42",
-      "lastTime": "2025-10-20 01:16:42",
-      "id": 524,
-      "appId": "127",
-      "providerId": "127",
-      "providerName": "necole.oreilly",
-      "foreignId": "127",
-      "receiverMobile": "1-856-813-9551",
-      "receiverName": "necole.oreilly",
-      "bizType": "v6ts2u",
-      "bizSubtype": "6mepyg",
-      "content": "5e96on",
-      "msgUrl": "www.emanuel-bosco.biz",
-      "status": "xaoop7",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:52",
+      "lastTime": "2025-10-20 18:25:52",
+      "id": 438,
+      "appId": "172",
+      "providerId": "172",
+      "providerName": "merle.larkin",
+      "foreignId": "172",
+      "receiverMobile": "(415) 540-6962",
+      "receiverName": "merle.larkin",
+      "bizType": "wzp7px",
+      "bizSubtype": "5yfnyn",
+      "content": "4uqbi3",
+      "msgUrl": "www.ben-grant.info",
+      "status": "vv0t4z",
       "sendTime": "2025-10-20",
-      "sendStatus": "94zwwc",
-      "returnTime": "2025-10-20 01:16:42",
-      "returnInfo": "20b83y",
-      "delFlag": 4,
-      "description": "4u3lzk",
-      "spare1": "9mcia3",
-      "spare2": "5ob8om"
+      "sendStatus": "m2g6sv",
+      "returnTime": "2025-10-20 18:25:52",
+      "returnInfo": "covbtf",
+      "delFlag": 5,
+      "description": "67kh0f",
+      "spare1": "0vm6qu",
+      "spare2": "isucvy"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23340,32 +23485,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 754,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "receiverMobile": "1-856-813-9551",
-    "receiverName": "necole.oreilly",
-    "bizType": "7hxodo",
-    "bizSubtype": "jvaj7h",
-    "content": "21mny6",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "obhc3p",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 553,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "receiverMobile": "(415) 540-6962",
+    "receiverName": "merle.larkin",
+    "bizType": "jbyejq",
+    "bizSubtype": "e113zk",
+    "content": "kisp8h",
+    "msgUrl": "www.ben-grant.info",
+    "status": "i2gs7y",
     "sendTime": "2025-10-20",
-    "sendStatus": "81ffti",
-    "returnTime": "2025-10-20 01:16:42",
-    "returnInfo": "07zsng",
-    "delFlag": 4,
-    "description": "1wmhwn",
-    "spare1": "2qzn6x",
-    "spare2": "egtqze"
+    "sendStatus": "7dv2h2",
+    "returnTime": "2025-10-20 18:25:52",
+    "returnInfo": "u4zo6w",
+    "delFlag": 5,
+    "description": "t1bfpq",
+    "spare1": "8x6j0s",
+    "spare2": "y3bvkl"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23421,29 +23566,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 857,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "receiverMobile": "1-856-813-9551",
-    "receiverName": "necole.oreilly",
-    "bizType": "9rzb20",
-    "bizSubtype": "9pnnxb",
-    "content": "i6b9tu",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "eda473",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 888,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "receiverMobile": "(415) 540-6962",
+    "receiverName": "merle.larkin",
+    "bizType": "h3881m",
+    "bizSubtype": "mbxltg",
+    "content": "c8d7li",
+    "msgUrl": "www.ben-grant.info",
+    "status": "8sxp2g",
     "sendTime": "2025-10-20",
-    "sendStatus": "rkopcl",
-    "returnTime": "2025-10-20 01:16:42",
-    "returnInfo": "ig3psb",
-    "delFlag": 4,
-    "description": "2ff086",
-    "spare1": "eehorf",
-    "spare2": "godjn6"
+    "sendStatus": "oqaa37",
+    "returnTime": "2025-10-20 18:25:52",
+    "returnInfo": "3wc59w",
+    "delFlag": 5,
+    "description": "pu06ao",
+    "spare1": "84k8zm",
+    "spare2": "rnsp4b"
   }
 }'
 ```
@@ -23464,9 +23609,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "91bj0w",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "s7chbl",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23522,29 +23667,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 617,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "receiverMobile": "1-856-813-9551",
-    "receiverName": "necole.oreilly",
-    "bizType": "ukzo0w",
-    "bizSubtype": "bvm0yl",
-    "content": "o9zi96",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "dudepj",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 953,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "receiverMobile": "(415) 540-6962",
+    "receiverName": "merle.larkin",
+    "bizType": "1a2lbq",
+    "bizSubtype": "uemetf",
+    "content": "wfqxfx",
+    "msgUrl": "www.ben-grant.info",
+    "status": "ms3ssv",
     "sendTime": "2025-10-20",
-    "sendStatus": "h09v0x",
-    "returnTime": "2025-10-20 01:16:42",
-    "returnInfo": "n7nkgc",
-    "delFlag": 4,
-    "description": "vetykn",
-    "spare1": "cb5dcb",
-    "spare2": "cgeboc"
+    "sendStatus": "rg5tin",
+    "returnTime": "2025-10-20 18:25:52",
+    "returnInfo": "bxvvzj",
+    "delFlag": 5,
+    "description": "ev2gq7",
+    "spare1": "1gfs5f",
+    "spare2": "hl25zd"
   }
 }'
 ```
@@ -23565,9 +23710,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "usayce",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "fkqcxv",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23617,9 +23762,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yx15o5",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "89y2lu",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23649,10 +23794,10 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/sms.do --data '{
   "data": {
-    "mobile": "1-856-813-9551",
-    "code": "65412",
-    "uuid": "cdee007e-0d96-400e-830c-899570b52154",
-    "appId": "127"
+    "mobile": "(415) 540-6962",
+    "code": "81486",
+    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
+    "appId": "172"
   }
 }'
 ```
@@ -23678,13 +23823,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "127",
-    "token": "ajdh7r",
-    "updateTime": "2025-10-20 01:16:42",
-    "expireTime": "2025-10-20 01:16:42"
+    "userId": "172",
+    "token": "6zngnj",
+    "updateTime": "2025-10-20 18:25:53",
+    "expireTime": "2025-10-20 18:25:53"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23707,7 +23852,7 @@ mobile|string|手机号码|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=1-856-813-9551'
+curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=(415) 540-6962'
 ```
 **Response-fields:**
 
@@ -23726,9 +23871,1135 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5b9onl",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "1x9n86",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+## 第三方用户读写控制类
+### Get ThirdMember list. 获取第三方用户列表或分页, 返回ThirdMember对象.
+**URL:** https://linlan.net/eframe_backend/api/third/member/list.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** Get ThirdMember list. 获取第三方用户列表或分页, 返回ThirdMember对象.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+id|int64|主键ID|false|-
+organId|string|机构ID|false|-
+foreignId|string|外键ID，人口库ID|false|-
+accountId|string|身份提供商ID|false|-
+serverType|string|开放平台认证平台类型|false|-
+unionId|string|三方全局D|false|-
+openId|string|开放平台ID|false|-
+email|string|邮箱|false|-
+areaCode|string|手机号对应的国家号|false|-
+mobile|string|电话号码|false|-
+nickName|string|昵称|false|-
+avatarUrl|string|头像|false|-
+additionInfo|string|附加信息|false|-
+creatorId|string|创建人ID|false|-
+delFlag|int32|删除标记，0未删除1已删除|false|-
+description|string|备注|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/list.do?creatorId=172&spare1=jntzs9&spare2=7xdt0w&delFlag=5&additionInfo=d02jrr&unionId=172&email=vivian.streich@hotmail.com&page=1&accountId=172&serverType=pk83en&limit=10&avatarUrl=www.ben-grant.info&areaCode=81486&mobile=(415) 540-6962&nickName=renna.dibbert&id=660&description=eby0cg&organId=172&foreignId=172&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&openId=172&q=5q0l26&orderBy=529
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|int64|主键ID|-
+└─userId|string|用户ID|-
+└─organId|string|机构ID|-
+└─foreignId|string|外键ID，人口库ID|-
+└─accountId|string|身份提供商ID|-
+└─serverType|string|开放平台认证平台类型|-
+└─unionId|string|三方全局D|-
+└─openId|string|开放平台ID|-
+└─email|string|邮箱|-
+└─areaCode|string|手机号对应的国家号|-
+└─mobile|string|电话号码|-
+└─nickName|string|昵称|-
+└─avatarUrl|string|头像|-
+└─additionInfo|string|附加信息|-
+└─delFlag|int32|删除标记，0未删除1已删除|-
+└─description|string|备注|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:53",
+      "lastTime": "2025-10-20 18:25:53",
+      "id": 916,
+      "userId": "172",
+      "organId": "172",
+      "foreignId": "172",
+      "accountId": "172",
+      "serverType": "4dyp0o",
+      "unionId": "172",
+      "openId": "172",
+      "email": "vivian.streich@hotmail.com",
+      "areaCode": "81486",
+      "mobile": "(415) 540-6962",
+      "nickName": "renna.dibbert",
+      "avatarUrl": "www.ben-grant.info",
+      "additionInfo": "ymubnd",
+      "delFlag": 5,
+      "description": "wn0o0z",
+      "spare1": "pojlv4",
+      "spare2": "z2ypil"
+    }
+  ],
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### Get ThirdMember by id. 主键获取第三方用户详细信息.
+**URL:** https://linlan.net/eframe_backend/api/third/member/{id}.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** Get ThirdMember by id. 主键获取第三方用户详细信息.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+id|int64|主键ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/1.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|int64|主键ID|-
+└─userId|string|用户ID|-
+└─organId|string|机构ID|-
+└─foreignId|string|外键ID，人口库ID|-
+└─accountId|string|身份提供商ID|-
+└─serverType|string|开放平台认证平台类型|-
+└─unionId|string|三方全局D|-
+└─openId|string|开放平台ID|-
+└─email|string|邮箱|-
+└─areaCode|string|手机号对应的国家号|-
+└─mobile|string|电话号码|-
+└─nickName|string|昵称|-
+└─avatarUrl|string|头像|-
+└─additionInfo|string|附加信息|-
+└─delFlag|int32|删除标记，0未删除1已删除|-
+└─description|string|备注|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": 399,
+    "userId": "172",
+    "organId": "172",
+    "foreignId": "172",
+    "accountId": "172",
+    "serverType": "8c2am7",
+    "unionId": "172",
+    "openId": "172",
+    "email": "vivian.streich@hotmail.com",
+    "areaCode": "81486",
+    "mobile": "(415) 540-6962",
+    "nickName": "renna.dibbert",
+    "avatarUrl": "www.ben-grant.info",
+    "additionInfo": "ts5es0",
+    "delFlag": 5,
+    "description": "zjf0uz",
+    "spare1": "lbd03c",
+    "spare2": "mnbcqj"
+  },
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMember Operation. 新增第三方用户数据操作逻辑，根据操作类型，执行新增操作.
+**URL:** https://linlan.net/eframe_backend/api/third/member/save.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** ThirdMember Operation. 新增第三方用户数据操作逻辑，根据操作类型，执行新增操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|主键ID|false|-
+└─userId|string|用户ID|false|-
+└─organId|string|机构ID|false|-
+└─foreignId|string|外键ID，人口库ID|false|-
+└─accountId|string|身份提供商ID|false|-
+└─serverType|string|开放平台认证平台类型|false|-
+└─unionId|string|三方全局D|false|-
+└─openId|string|开放平台ID|false|-
+└─email|string|邮箱|false|-
+└─areaCode|string|手机号对应的国家号|false|-
+└─mobile|string|电话号码|false|-
+└─nickName|string|昵称|false|-
+└─avatarUrl|string|头像|false|-
+└─additionInfo|string|附加信息|false|-
+└─delFlag|int32|删除标记，0未删除1已删除|false|-
+└─description|string|备注|false|-
+└─spare1|string|备用1|false|-
+└─spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/save.do --data '{
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": 689,
+    "userId": "172",
+    "organId": "172",
+    "foreignId": "172",
+    "accountId": "172",
+    "serverType": "a679cn",
+    "unionId": "172",
+    "openId": "172",
+    "email": "vivian.streich@hotmail.com",
+    "areaCode": "81486",
+    "mobile": "(415) 540-6962",
+    "nickName": "renna.dibbert",
+    "avatarUrl": "www.ben-grant.info",
+    "additionInfo": "2fc9kk",
+    "delFlag": 5,
+    "description": "ifizr9",
+    "spare1": "lmwvvm",
+    "spare2": "cpd39r"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "gw19sh",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMember Operation. 修改第三方用户数据操作逻辑，根据操作类型，执行修改操作.
+**URL:** https://linlan.net/eframe_backend/api/third/member/update.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** ThirdMember Operation. 修改第三方用户数据操作逻辑，根据操作类型，执行修改操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|主键ID|false|-
+└─userId|string|用户ID|false|-
+└─organId|string|机构ID|false|-
+└─foreignId|string|外键ID，人口库ID|false|-
+└─accountId|string|身份提供商ID|false|-
+└─serverType|string|开放平台认证平台类型|false|-
+└─unionId|string|三方全局D|false|-
+└─openId|string|开放平台ID|false|-
+└─email|string|邮箱|false|-
+└─areaCode|string|手机号对应的国家号|false|-
+└─mobile|string|电话号码|false|-
+└─nickName|string|昵称|false|-
+└─avatarUrl|string|头像|false|-
+└─additionInfo|string|附加信息|false|-
+└─delFlag|int32|删除标记，0未删除1已删除|false|-
+└─description|string|备注|false|-
+└─spare1|string|备用1|false|-
+└─spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/update.do --data '{
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": 470,
+    "userId": "172",
+    "organId": "172",
+    "foreignId": "172",
+    "accountId": "172",
+    "serverType": "uso9lb",
+    "unionId": "172",
+    "openId": "172",
+    "email": "vivian.streich@hotmail.com",
+    "areaCode": "81486",
+    "mobile": "(415) 540-6962",
+    "nickName": "renna.dibbert",
+    "avatarUrl": "www.ben-grant.info",
+    "additionInfo": "87on7d",
+    "delFlag": 5,
+    "description": "4743bq",
+    "spare1": "q7408o",
+    "spare2": "2nr4wc"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "c3skqk",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMember Operation. 删除第三方用户数据操作逻辑，根据操作类型，执行删除操作.
+**URL:** https://linlan.net/eframe_backend/api/third/member/delete/{ids}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** ThirdMember Operation. 删除第三方用户数据操作逻辑，根据操作类型，执行删除操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+ids|array|主键ID:null;1;1,2,3,[array of int64]|true|
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/delete/.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "3tnmfv",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+## 第三方用户身份提供商绑定读写控制类
+### Get ThirdMemberBind list. 获取用户身份提供商绑定列表或分页, 返回ThirdMemberBind对象.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/list.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** Get ThirdMemberBind list. 获取用户身份提供商绑定列表或分页, 返回ThirdMemberBind对象.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+id|string|主键ID|false|-
+memberId|int64|会员ID|false|-
+username|string|系统用户名，手机号|false|-
+accountId|string|身份提供商ID|false|-
+accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|false|-
+bindTime|string|绑定时间|false|-
+additionInfo|string|附加信息|false|-
+creatorId|string|创建人ID|false|-
+delFlag|int32|删除标记，0未删除1已删除|false|-
+description|string|备注|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/list.do?creatorId=172&limit=10&id=172&orderBy=573&username=merle.larkin&accountKey=rfdmjx&memberId=816&bindTime=2025-10-20 18:25:53&page=1&delFlag=5&description=9zsxd2&endTime=2025-10-20 18:20:52&accountId=172&additionInfo=63ylb2&spare2=1bnb62&spare1=1il6p0&q=ymv8rb&startTime=2025-10-20 18:20:52
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|string|主键ID|-
+└─memberId|int64|会员ID|-
+└─userId|string|用户ID|-
+└─username|string|系统用户名，手机号|-
+└─accountId|string|身份提供商ID|-
+└─accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|-
+└─bindTime|string|绑定时间|-
+└─additionInfo|string|附加信息|-
+└─delFlag|int32|删除标记，0未删除1已删除|-
+└─description|string|备注|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:53",
+      "lastTime": "2025-10-20 18:25:53",
+      "id": "172",
+      "memberId": 872,
+      "userId": "172",
+      "username": "merle.larkin",
+      "accountId": "172",
+      "accountKey": "6vo95p",
+      "bindTime": "2025-10-20 18:25:53",
+      "additionInfo": "9gaa21",
+      "delFlag": 5,
+      "description": "ng5x07",
+      "spare1": "f1yngy",
+      "spare2": "yz4j5s"
+    }
+  ],
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### Get ThirdMemberBind by id. 主键获取用户身份提供商绑定详细信息.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/{id}.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** Get ThirdMemberBind by id. 主键获取用户身份提供商绑定详细信息.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+id|string|主键ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/1.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|string|主键ID|-
+└─memberId|int64|会员ID|-
+└─userId|string|用户ID|-
+└─username|string|系统用户名，手机号|-
+└─accountId|string|身份提供商ID|-
+└─accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|-
+└─bindTime|string|绑定时间|-
+└─additionInfo|string|附加信息|-
+└─delFlag|int32|删除标记，0未删除1已删除|-
+└─description|string|备注|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": "172",
+    "memberId": 336,
+    "userId": "172",
+    "username": "merle.larkin",
+    "accountId": "172",
+    "accountKey": "t01gfa",
+    "bindTime": "2025-10-20 18:25:53",
+    "additionInfo": "bkp677",
+    "delFlag": 5,
+    "description": "ly6rmt",
+    "spare1": "d1jk3k",
+    "spare2": "w5inow"
+  },
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMemberBind Operation. 新增用户身份提供商绑定数据操作逻辑，根据操作类型，执行新增操作.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/save.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** ThirdMemberBind Operation. 新增用户身份提供商绑定数据操作逻辑，根据操作类型，执行新增操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|string|主键ID|false|-
+└─memberId|int64|会员ID|false|-
+└─userId|string|用户ID|false|-
+└─username|string|系统用户名，手机号|false|-
+└─accountId|string|身份提供商ID|false|-
+└─accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|false|-
+└─bindTime|string|绑定时间|false|-
+└─additionInfo|string|附加信息|false|-
+└─delFlag|int32|删除标记，0未删除1已删除|false|-
+└─description|string|备注|false|-
+└─spare1|string|备用1|false|-
+└─spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/save.do --data '{
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": "172",
+    "memberId": 480,
+    "userId": "172",
+    "username": "merle.larkin",
+    "accountId": "172",
+    "accountKey": "q6xx8w",
+    "bindTime": "2025-10-20 18:25:53",
+    "additionInfo": "c5h9bu",
+    "delFlag": 5,
+    "description": "a602le",
+    "spare1": "hwcuih",
+    "spare2": "uv5ocg"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "v372n4",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### ThirdMemberBind Operation. 修改用户身份提供商绑定数据操作逻辑，根据操作类型，执行修改操作.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/update.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** ThirdMemberBind Operation. 修改用户身份提供商绑定数据操作逻辑，根据操作类型，执行修改操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|string|主键ID|false|-
+└─memberId|int64|会员ID|false|-
+└─userId|string|用户ID|false|-
+└─username|string|系统用户名，手机号|false|-
+└─accountId|string|身份提供商ID|false|-
+└─accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|false|-
+└─bindTime|string|绑定时间|false|-
+└─additionInfo|string|附加信息|false|-
+└─delFlag|int32|删除标记，0未删除1已删除|false|-
+└─description|string|备注|false|-
+└─spare1|string|备用1|false|-
+└─spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/update.do --data '{
+  "data": {
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:53",
+    "lastTime": "2025-10-20 18:25:53",
+    "id": "172",
+    "memberId": 678,
+    "userId": "172",
+    "username": "merle.larkin",
+    "accountId": "172",
+    "accountKey": "rbykbr",
+    "bindTime": "2025-10-20 18:25:53",
+    "additionInfo": "4ug1rp",
+    "delFlag": 5,
+    "description": "gxooi2",
+    "spare1": "0swuvu",
+    "spare2": "y83lmp"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "3r39w2",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### 删除用户身份提供商绑定数据操作逻辑，根据操作类型，执行删除操作.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/delete/{ids}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 删除用户身份提供商绑定数据操作逻辑，根据操作类型，执行删除操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+ids|array|主键ID:null;1;1,2,3,[array of string]|true|
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/delete/.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "cjk8zd",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+## 第三方社交平台登录验证
+### 社交平台登录方法
+**URL:** https://linlan.net/eframe_backend/login/social.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 社交平台登录方法
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─serverType|string|开放平台类型|false|-
+└─code|string|开放平台Code|false|-
+└─state|string|state|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social.do --data '{
+  "data": {
+    "serverType": "ei7oc4",
+    "code": "81486",
+    "state": "hg1jic"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─userId|string|用户ID|-
+└─token|string|令牌TOKEN|-
+└─updateTime|string|更新时间|-
+└─expireTime|string|过期时间|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "userId": "172",
+    "token": "y7qjyo",
+    "updateTime": "2025-10-20 18:25:54",
+    "expireTime": "2025-10-20 18:25:54"
+  },
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### 根据类型，获取授权请求
+**URL:** https://linlan.net/eframe_backend/login/social/render/{source}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据类型，获取授权请求
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，alipay|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/render/其他.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "su6l0g",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### 根据类型，获取授权请求
+**URL:** https://linlan.net/eframe_backend/login/social/callback/{source}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据类型，获取授权请求
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，alipay|true|-
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+code|string|No comments found.|false|-
+auth_code|string|No comments found.|false|-
+state|string|No comments found.|false|-
+authorization_code|string|No comments found.|false|-
+oauth_token|string|No comments found.|false|-
+oauth_verifier|string|No comments found.|false|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/callback/其他.do?oauth_token=jezs6x&code=81486&oauth_verifier=0xe6t7&auth_code=81486&authorization_code=81486&state=cqmrp1
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─view|object|No comments found.|-
+└─model|object|No comments found.|-
+└─status|enum|null<br/>CONTINUE<br/>SWITCHING_PROTOCOLS<br/>PROCESSING<br/>CHECKPOINT<br/>OK<br/>CREATED<br/>ACCEPTED<br/>NON_AUTHORITATIVE_INFORMATION<br/>NO_CONTENT<br/>RESET_CONTENT<br/>PARTIAL_CONTENT<br/>MULTI_STATUS<br/>ALREADY_REPORTED<br/>IM_USED<br/>MULTIPLE_CHOICES<br/>MOVED_PERMANENTLY<br/>FOUND<br/>MOVED_TEMPORARILY<br/>SEE_OTHER<br/>NOT_MODIFIED<br/>USE_PROXY<br/>TEMPORARY_REDIRECT<br/>PERMANENT_REDIRECT<br/>BAD_REQUEST<br/>UNAUTHORIZED<br/>PAYMENT_REQUIRED<br/>FORBIDDEN<br/>NOT_FOUND<br/>METHOD_NOT_ALLOWED<br/>NOT_ACCEPTABLE<br/>PROXY_AUTHENTICATION_REQUIRED<br/>REQUEST_TIMEOUT<br/>CONFLICT<br/>GONE<br/>LENGTH_REQUIRED<br/>PRECONDITION_FAILED<br/>PAYLOAD_TOO_LARGE<br/>REQUEST_ENTITY_TOO_LARGE<br/>URI_TOO_LONG<br/>REQUEST_URI_TOO_LONG<br/>UNSUPPORTED_MEDIA_TYPE<br/>REQUESTED_RANGE_NOT_SATISFIABLE<br/>EXPECTATION_FAILED<br/>I_AM_A_TEAPOT<br/>INSUFFICIENT_SPACE_ON_RESOURCE<br/>METHOD_FAILURE<br/>DESTINATION_LOCKED<br/>UNPROCESSABLE_ENTITY<br/>LOCKED<br/>FAILED_DEPENDENCY<br/>TOO_EARLY<br/>UPGRADE_REQUIRED<br/>PRECONDITION_REQUIRED<br/>TOO_MANY_REQUESTS<br/>REQUEST_HEADER_FIELDS_TOO_LARGE<br/>UNAVAILABLE_FOR_LEGAL_REASONS<br/>INTERNAL_SERVER_ERROR<br/>NOT_IMPLEMENTED<br/>BAD_GATEWAY<br/>SERVICE_UNAVAILABLE<br/>GATEWAY_TIMEOUT<br/>HTTP_VERSION_NOT_SUPPORTED<br/>VARIANT_ALSO_NEGOTIATES<br/>INSUFFICIENT_STORAGE<br/>LOOP_DETECTED<br/>BANDWIDTH_LIMIT_EXCEEDED<br/>NOT_EXTENDED<br/>NETWORK_AUTHENTICATION_REQUIRED<br/>|-
+└─cleared|boolean|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{"success":true,"code":"0","msg":"正常","data":Forward or redirect to a page view.,"requestId":"172","timestamp":"2025-10-20 18:20:52"}
+```
+
+### 第三方社交平台账号绑定
+**URL:** https://linlan.net/eframe_backend/login/member/bind.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 第三方社交平台账号绑定
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─platformType|string|开放平台类型|false|-
+└─code|string|开放平台Code|false|-
+└─state|string|state|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/member/bind.do --data '{
+  "data": {
+    "platformType": "2u6q5q",
+    "code": "81486",
+    "state": "hl7iw3"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "rk2xuv",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
+}
+```
+
+### 第三方社交平台账号解绑
+**URL:** https://linlan.net/eframe_backend/login/member/bind/{platformType}.do
+
+**Type:** PUT
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 第三方社交平台账号解绑
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+platformType|string|   平台类型|true|-
+
+**Request-example:**
+```
+curl -X PUT -k -i https://linlan.net/eframe_backend/login/member/bind/jhbvq8.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "1gd50l",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23767,7 +25038,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?jobGroup=nepaxw&invokeTarget=4st2sv&jobName=necole.oreilly&concurrent=wthnyc&cronExpression=qpgqtq&jobId=349&remark=kxtoju&status=961&misfirePolicy=bycx62
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?jobId=693&jobGroup=4nf0ey&concurrent=upvpwk&invokeTarget=uyv0b1&status=432&remark=5d4s5c&misfirePolicy=6r814u&jobName=merle.larkin&cronExpression=h60r0f
 ```
 **Response-fields:**
 
@@ -23797,19 +25068,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "jobId": "127",
-      "jobName": "necole.oreilly",
-      "jobGroup": "19lh5s",
-      "invokeTarget": "54gonp",
-      "cronExpression": "gb42ko",
-      "misfirePolicy": "unyuir",
-      "concurrent": "8vpv4r",
-      "status": 872,
-      "remark": "uykls2"
+      "jobId": "172",
+      "jobName": "merle.larkin",
+      "jobGroup": "k4wqwk",
+      "invokeTarget": "jtqog4",
+      "cronExpression": "q32uga",
+      "misfirePolicy": "qj53pv",
+      "concurrent": "pr4d7y",
+      "status": 366,
+      "remark": "4ou2c4"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23847,7 +25118,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'invokeTarget=123hnl&cronExpression=vagmm3&concurrent=yyud1j&remark=ck7bmn&jobId=535&status=449&jobGroup=cnlsbn&misfirePolicy=89l8vw&jobName=necole.oreilly'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'jobId=656&cronExpression=hw5l3a&jobName=merle.larkin&misfirePolicy=et5jlx&jobGroup=f6kewi&remark=kkca0k&status=105&invokeTarget=4n89l2&concurrent=yjteri'
 ```
 **Response-fields:**
 
@@ -23866,9 +25137,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3zz05y",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "5526k7",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23898,7 +25169,7 @@ jobId|string|    任务ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/172.do
 ```
 **Response-fields:**
 
@@ -23927,18 +25198,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "jobId": "127",
-    "jobName": "necole.oreilly",
-    "jobGroup": "ud2aac",
-    "invokeTarget": "1zplgz",
-    "cronExpression": "s6bj2i",
-    "misfirePolicy": "y3cufp",
-    "concurrent": "lqur25",
-    "status": 747,
-    "remark": "20ptsb"
+    "jobId": "172",
+    "jobName": "merle.larkin",
+    "jobGroup": "95bnwy",
+    "invokeTarget": "cxaxza",
+    "cronExpression": "r09y3b",
+    "misfirePolicy": "16rb6y",
+    "concurrent": "gbqnxy",
+    "status": 936,
+    "remark": "a7o2mm"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -23979,15 +25250,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/save.do --data '{
   "data": {
-    "jobId": "127",
-    "jobName": "necole.oreilly",
-    "jobGroup": "1g4g3x",
-    "invokeTarget": "v2myhh",
-    "cronExpression": "ac28li",
-    "misfirePolicy": "oydte7",
-    "concurrent": "dsmri1",
-    "status": 661,
-    "remark": "axj68m"
+    "jobId": "172",
+    "jobName": "merle.larkin",
+    "jobGroup": "h7re02",
+    "invokeTarget": "04wiee",
+    "cronExpression": "e10kuz",
+    "misfirePolicy": "fmxjsp",
+    "concurrent": "00rd1p",
+    "status": 128,
+    "remark": "r7baes"
   }
 }'
 ```
@@ -24008,9 +25279,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0ufpje",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "048xd3",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24051,15 +25322,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/update.do --data '{
   "data": {
-    "jobId": "127",
-    "jobName": "necole.oreilly",
-    "jobGroup": "gu65rs",
-    "invokeTarget": "u0ooo4",
-    "cronExpression": "7lsn3z",
-    "misfirePolicy": "87avr8",
-    "concurrent": "62mfrc",
-    "status": 215,
-    "remark": "b4cvrc"
+    "jobId": "172",
+    "jobName": "merle.larkin",
+    "jobGroup": "4nprv9",
+    "invokeTarget": "3rla3m",
+    "cronExpression": "yv53tz",
+    "misfirePolicy": "qp5qt0",
+    "concurrent": "moepsi",
+    "status": 795,
+    "remark": "k98m0q"
   }
 }'
 ```
@@ -24080,9 +25351,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "h7x0tt",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "er16hf",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24123,15 +25394,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/changeStatus.do --data '{
   "data": {
-    "jobId": "127",
-    "jobName": "necole.oreilly",
-    "jobGroup": "vcttaq",
-    "invokeTarget": "y6b8gs",
-    "cronExpression": "aii7a8",
-    "misfirePolicy": "g5ebd0",
-    "concurrent": "mio8fw",
-    "status": 979,
-    "remark": "duqwqd"
+    "jobId": "172",
+    "jobName": "merle.larkin",
+    "jobGroup": "i9pz40",
+    "invokeTarget": "6safn6",
+    "cronExpression": "wcqjbu",
+    "misfirePolicy": "9f4sm4",
+    "concurrent": "hh3dkv",
+    "status": 280,
+    "remark": "mctvkb"
   }
 }'
 ```
@@ -24152,9 +25423,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wdfviu",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "nlfj2b",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24195,15 +25466,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/run.do --data '{
   "data": {
-    "jobId": "127",
-    "jobName": "necole.oreilly",
-    "jobGroup": "jd2bmx",
-    "invokeTarget": "7w7u7r",
-    "cronExpression": "todtka",
-    "misfirePolicy": "ew8m2w",
-    "concurrent": "ebxdhm",
-    "status": 519,
-    "remark": "wfzkjf"
+    "jobId": "172",
+    "jobName": "merle.larkin",
+    "jobGroup": "g7dvn1",
+    "invokeTarget": "f7g8mk",
+    "cronExpression": "1gsyb3",
+    "misfirePolicy": "qykpok",
+    "concurrent": "8fd98y",
+    "status": 158,
+    "remark": "uewp95"
   }
 }'
 ```
@@ -24224,9 +25495,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yu46h4",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "isu9nr",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24275,9 +25546,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xx23hk",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "hd997s",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24321,7 +25592,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?lastTime=2025-10-20 01:16:43&creatorId=127&jobGroup=1k56rz&exceptionInfo=185r5i&stopTime=2025-10-20 01:16:43&jobId=127&jobMessage=success&jobName=necole.oreilly&remark=frr4ih&createTime=2025-10-20 01:16:43&status=343&jobLogId=781&invokeTarget=gd6v3k&startTime=2025-10-20 01:16:43
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?exceptionInfo=wq0la3&startTime=2025-10-20 18:25:54&jobGroup=wca06p&invokeTarget=ft13e8&createTime=2025-10-20 18:25:54&remark=3f80kn&status=928&stopTime=2025-10-20 18:25:54&lastTime=2025-10-20 18:25:54&jobId=172&creatorId=172&jobLogId=509&jobName=merle.larkin&jobMessage=success
 ```
 **Response-fields:**
 
@@ -24353,21 +25624,21 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:43",
-      "lastTime": "2025-10-20 01:16:43",
-      "jobLogId": "127",
-      "jobId": "127",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:54",
+      "lastTime": "2025-10-20 18:25:54",
+      "jobLogId": "172",
+      "jobId": "172",
       "jobMessage": "success",
-      "status": 214,
-      "exceptionInfo": "s4n0wt",
-      "startTime": "2025-10-20 01:16:43",
-      "stopTime": "2025-10-20 01:16:43",
-      "remark": "0ca5o9"
+      "status": 419,
+      "exceptionInfo": "qa174n",
+      "startTime": "2025-10-20 18:25:54",
+      "stopTime": "2025-10-20 18:25:54",
+      "remark": "ciax7k"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24410,7 +25681,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'startTime=2025-10-20 01:16:43&exceptionInfo=ghlepc&jobId=127&jobGroup=1udypt&createTime=2025-10-20 01:16:43&jobName=necole.oreilly&jobMessage=success&jobLogId=82&invokeTarget=y5qjab&creatorId=127&remark=6215at&lastTime=2025-10-20 01:16:43&status=542&stopTime=2025-10-20 01:16:43'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'jobGroup=dpbl11&lastTime=2025-10-20 18:25:54&jobName=merle.larkin&jobId=172&createTime=2025-10-20 18:25:54&stopTime=2025-10-20 18:25:54&status=236&startTime=2025-10-20 18:25:54&invokeTarget=ez4aaw&jobLogId=945&exceptionInfo=wxkr28&jobMessage=success&remark=uzcmgq&creatorId=172'
 ```
 **Response-fields:**
 
@@ -24429,9 +25700,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "euxp6r",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "pp3q3z",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24461,7 +25732,7 @@ jobLogId|string|    任务日志ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/127.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/172.do
 ```
 **Response-fields:**
 
@@ -24492,20 +25763,20 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:43",
-    "lastTime": "2025-10-20 01:16:43",
-    "jobLogId": "127",
-    "jobId": "127",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:54",
+    "lastTime": "2025-10-20 18:25:54",
+    "jobLogId": "172",
+    "jobId": "172",
     "jobMessage": "success",
-    "status": 972,
-    "exceptionInfo": "or9ksv",
-    "startTime": "2025-10-20 01:16:43",
-    "stopTime": "2025-10-20 01:16:43",
-    "remark": "odyk7z"
+    "status": 275,
+    "exceptionInfo": "fy5huz",
+    "startTime": "2025-10-20 18:25:54",
+    "stopTime": "2025-10-20 18:25:54",
+    "remark": "jargfy"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24554,9 +25825,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "czti8g",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "mplz6k",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24615,7 +25886,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?providerId=127&status=iw6a4h&readStatus=zsepbf&id=361&startTime=2025-10-20 01:15:40&limit=10&senderName=necole.oreilly&sendTime=2025-10-20&receiverName=necole.oreilly&q=wzlk7m&content=emxizd&orderBy=702&readTime=2025-10-20 01:16:41&receiverEmail=eugenia.howe@yahoo.com&page=1&spare2=siggra&providerName=necole.oreilly&sendStatus=t80t64&delFlag=4&spare1=qgmbaf&appId=127&title=qbv9vy&foreignId=127&bizType=lcc0j4&msgUrl=www.emanuel-bosco.biz&description=612w9e&creatorId=127&endTime=2025-10-20 01:15:40
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?content=vbyf2s&spare1=qgiqsr&sendTime=2025-10-20&endTime=2025-10-20 18:20:52&page=1&readTime=2025-10-20 18:25:52&startTime=2025-10-20 18:20:52&receiverEmail=vivian.streich@hotmail.com&providerName=merle.larkin&receiverName=merle.larkin&providerId=172&title=3f0vha&spare2=bcaczj&q=os0u8n&foreignId=172&sendStatus=ir004v&orderBy=662&appId=172&id=947&msgUrl=www.ben-grant.info&status=4la440&description=gdv61j&readStatus=8ijml6&creatorId=172&limit=10&senderName=merle.larkin&delFlag=5&bizType=s0tnsi
 ```
 **Response-fields:**
 
@@ -24660,34 +25931,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "127",
-      "createTime": "2025-10-20 01:16:41",
-      "lastTime": "2025-10-20 01:16:41",
-      "id": 397,
-      "appId": "127",
-      "providerId": "127",
-      "providerName": "necole.oreilly",
-      "foreignId": "127",
-      "senderName": "necole.oreilly",
-      "receiverEmail": "eugenia.howe@yahoo.com",
-      "receiverName": "necole.oreilly",
-      "bizType": "ria3k8",
-      "title": "w0g3hk",
-      "content": "qcmhyc",
-      "msgUrl": "www.emanuel-bosco.biz",
-      "status": "lmjmsu",
+      "creatorId": "172",
+      "createTime": "2025-10-20 18:25:52",
+      "lastTime": "2025-10-20 18:25:52",
+      "id": 185,
+      "appId": "172",
+      "providerId": "172",
+      "providerName": "merle.larkin",
+      "foreignId": "172",
+      "senderName": "merle.larkin",
+      "receiverEmail": "vivian.streich@hotmail.com",
+      "receiverName": "merle.larkin",
+      "bizType": "uw7zvj",
+      "title": "re59vp",
+      "content": "daxlb3",
+      "msgUrl": "www.ben-grant.info",
+      "status": "76593c",
       "sendTime": "2025-10-20",
-      "sendStatus": "y7chw1",
-      "readTime": "2025-10-20 01:16:41",
-      "readStatus": "yeo5co",
-      "delFlag": 4,
-      "description": "0nt029",
-      "spare1": "mtk1wg",
-      "spare2": "l3njb8"
+      "sendStatus": "0gop7b",
+      "readTime": "2025-10-20 18:25:52",
+      "readStatus": "fsp8mn",
+      "delFlag": 5,
+      "description": "qrljxs",
+      "spare1": "7dofcs",
+      "spare2": "lslo1g"
     }
   ],
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24762,33 +26033,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 668,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "senderName": "necole.oreilly",
-    "receiverEmail": "eugenia.howe@yahoo.com",
-    "receiverName": "necole.oreilly",
-    "bizType": "ww030e",
-    "title": "mwgnrl",
-    "content": "qmuzrv",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "9u1t82",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 605,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "senderName": "merle.larkin",
+    "receiverEmail": "vivian.streich@hotmail.com",
+    "receiverName": "merle.larkin",
+    "bizType": "vdt1yb",
+    "title": "o5o18l",
+    "content": "s4kmat",
+    "msgUrl": "www.ben-grant.info",
+    "status": "503d53",
     "sendTime": "2025-10-20",
-    "sendStatus": "8kykas",
-    "readTime": "2025-10-20 01:16:42",
-    "readStatus": "scsv52",
-    "delFlag": 4,
-    "description": "tf0atx",
-    "spare1": "0xwr6b",
-    "spare2": "brh70t"
+    "sendStatus": "02lpia",
+    "readTime": "2025-10-20 18:25:52",
+    "readStatus": "fpi6ua",
+    "delFlag": 5,
+    "description": "yoskak",
+    "spare1": "upq5y0",
+    "spare2": "lgutns"
   },
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24845,30 +26116,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/save.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 611,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "senderName": "necole.oreilly",
-    "receiverEmail": "eugenia.howe@yahoo.com",
-    "receiverName": "necole.oreilly",
-    "bizType": "f5nsjv",
-    "title": "ctf1xu",
-    "content": "175bjh",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "yrc9z3",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 167,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "senderName": "merle.larkin",
+    "receiverEmail": "vivian.streich@hotmail.com",
+    "receiverName": "merle.larkin",
+    "bizType": "ehibbe",
+    "title": "9k9c49",
+    "content": "jippbw",
+    "msgUrl": "www.ben-grant.info",
+    "status": "bk9xxf",
     "sendTime": "2025-10-20",
-    "sendStatus": "dm35e0",
-    "readTime": "2025-10-20 01:16:42",
-    "readStatus": "cwhrcd",
-    "delFlag": 4,
-    "description": "723y6d",
-    "spare1": "p7guj1",
-    "spare2": "v1iqqn"
+    "sendStatus": "mvi1zt",
+    "readTime": "2025-10-20 18:25:52",
+    "readStatus": "o4m5em",
+    "delFlag": 5,
+    "description": "a2ihu3",
+    "spare1": "bmsiwh",
+    "spare2": "858f37"
   }
 }'
 ```
@@ -24889,9 +26160,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "truruj",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "sralah",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -24948,30 +26219,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/update.do --data '{
   "data": {
-    "creatorId": "127",
-    "createTime": "2025-10-20 01:16:42",
-    "lastTime": "2025-10-20 01:16:42",
-    "id": 246,
-    "appId": "127",
-    "providerId": "127",
-    "providerName": "necole.oreilly",
-    "foreignId": "127",
-    "senderName": "necole.oreilly",
-    "receiverEmail": "eugenia.howe@yahoo.com",
-    "receiverName": "necole.oreilly",
-    "bizType": "uspk41",
-    "title": "hmxywu",
-    "content": "diy4de",
-    "msgUrl": "www.emanuel-bosco.biz",
-    "status": "tkuqlz",
+    "creatorId": "172",
+    "createTime": "2025-10-20 18:25:52",
+    "lastTime": "2025-10-20 18:25:52",
+    "id": 972,
+    "appId": "172",
+    "providerId": "172",
+    "providerName": "merle.larkin",
+    "foreignId": "172",
+    "senderName": "merle.larkin",
+    "receiverEmail": "vivian.streich@hotmail.com",
+    "receiverName": "merle.larkin",
+    "bizType": "kppe50",
+    "title": "zyqrh6",
+    "content": "j6bdm9",
+    "msgUrl": "www.ben-grant.info",
+    "status": "hc44nz",
     "sendTime": "2025-10-20",
-    "sendStatus": "5xlipl",
-    "readTime": "2025-10-20 01:16:42",
-    "readStatus": "909atq",
-    "delFlag": 4,
-    "description": "vhe327",
-    "spare1": "06pc0a",
-    "spare2": "9mhgdd"
+    "sendStatus": "cechxr",
+    "readTime": "2025-10-20 18:25:52",
+    "readStatus": "qdv0kb",
+    "delFlag": 5,
+    "description": "qug6rs",
+    "spare1": "68kzph",
+    "spare2": "jfoqza"
   }
 }'
 ```
@@ -24992,9 +26263,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4zety0",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "jdwjsy",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 
@@ -25044,9 +26315,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s54bv2",
-  "requestId": "127",
-  "timestamp": "2025-10-20 01:15:40"
+  "data": "3ljoav",
+  "requestId": "172",
+  "timestamp": "2025-10-20 18:20:52"
 }
 ```
 

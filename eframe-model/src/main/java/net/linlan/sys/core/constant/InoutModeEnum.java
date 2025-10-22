@@ -17,16 +17,32 @@
  */
 package net.linlan.sys.core.constant;
 
+import net.linlan.utils.enums.BaseEnumInteger;
+
 /**
  * 对接模式枚举类
  */
-public enum InoutModeEnum {
-                           INOUT_MODE_INNER_IN(0,
-                                               "内部接入"), INOUT_MODE_INNER_OUT(1,
-                                                                             "内部接出"), INOUT_MODE_OUTER_IN(11,
-                                                                                                          "外部接入"), INOUT_MODE_TWO_WAY(20,
-                                                                                                                                      "双向接出接入"), INOUT_MODE_SMY_SMS(40,
-                                                                                                                                                                    "市民云对接类短信平台"),;
+public enum InoutModeEnum implements BaseEnumInteger {
+                                                      /**
+                                                       * 内部接入
+                                                       */
+                                                      INOUT_MODE_INNER_IN(0, "内部接入"),
+                                                      /**
+                                                       * 内部接出
+                                                       */
+                                                      INOUT_MODE_INNER_OUT(1, "内部接出"),
+                                                      /**
+                                                       * 外部接入
+                                                       */
+                                                      INOUT_MODE_OUTER_IN(11, "外部接入"),
+                                                      /**
+                                                       * 双向接出接入
+                                                       */
+                                                      INOUT_MODE_TWO_WAY(20, "双向接出接入"),
+                                                      /**
+                                                       * 城市平台对接类短信平台
+                                                       */
+                                                      INOUT_MODE_SMY_SMS(40, "城市平台对接类短信平台"),;
 
     private int    key;
 

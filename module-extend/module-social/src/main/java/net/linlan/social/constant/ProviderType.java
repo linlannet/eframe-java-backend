@@ -22,6 +22,7 @@ import org.springframework.util.Assert;
 import net.linlan.utils.enums.BaseEnumString;
 
 /**
+ * 实名授权认证源
  * @author Linlan
  */
 public final class ProviderType implements BaseEnumString {

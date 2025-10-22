@@ -71,7 +71,7 @@ public class ThirdLoginController {
     }
 
     /** 根据类型，获取授权请求
-     * @param source 来源类型，alipay|wechat|其他
+     * @param source 来源类型，dingtalk|feishu|wechat_work|wechat|其他
      * @param response 响应
      * @throws IOException  异常
      */
@@ -86,7 +86,7 @@ public class ThirdLoginController {
     }
 
     /** 根据类型，获取授权请求
-     * @param source 来源类型，alipay|wechat|其他
+     * @param source 来源类型，dingtalk|feishu|wechat_work|wechat|其他
      * @param callback 回调渲染
      * @return 页面跳转
      */

@@ -42,6 +42,7 @@ public class SmsConfigCache {
      */
     private final String       SMS_ROUND_KEY      = "module_ext:sms:round";
     private final String       SMS_ROUND_CODE_KEY = "module_ext:sms:round:code";
+    public static String       SMS_CODE_PREFIX    = "module_ext:sms:code:";
 
     /**
      * 短信平台列表KEY

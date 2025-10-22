@@ -17,15 +17,23 @@
  */
 package net.linlan.social.security;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import javax.annotation.Resource;
 
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
+import net.linlan.constant.AdminType;
 import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.comm.service.SysPasswordService;
+import net.linlan.frame.comm.service.SysPermissionService;
 import net.linlan.social.third.entity.ThirdMember;
 import net.linlan.social.third.service.ThirdMemberService;
+import net.linlan.sys.base.dto.BaseUserDto;
 import net.linlan.sys.base.entity.BaseUser;
 import net.linlan.sys.base.service.BaseUserService;
 
@@ -38,9 +46,13 @@ import net.linlan.sys.base.service.BaseUserService;
 @Service
 public class ThirdUserDetailsService {
     @Resource
-    private ThirdMemberService thirdMemberService;
+    private ThirdMemberService   thirdMemberService;
     @Resource
-    private BaseUserService    baseUserService;
+    private BaseUserService      baseUserService;
+    @Resource
+    private SysPasswordService   sysPasswordService;
+    @Resource
+    private SysPermissionService sysPermissionService;
 
     /**
      * 通过开放平台类型和唯一标识，加载用户信息
@@ -57,11 +69,43 @@ public class ThirdUserDetailsService {
             throw new UsernameNotFoundException("绑定的系统用户，不存在");
 
         }
-        BaseUser baseUser = baseUserService.getDtoById(thirdMember.getUserId());
+        BaseUserDto baseUser = baseUserService.getDtoById(thirdMember.getUserId());
         if (baseUser == null) {
             throw new UsernameNotFoundException("绑定的系统用户，不存在");
         }
 
-        return null;
+        validateSocial(baseUser);
+
+        return createLoginUser(baseUser);
+    }
+
+    public void validateSocial(BaseUserDto baseUser) {
+        //TODO
+    }
+
+    public FrameUserDetails createLoginUser(BaseUser user) {
+        // 用户权限列表
+        Set<String> perms = null;
+        FrameUserDetails frameUserDetails = new FrameUserDetails(user.getId(), perms);
+        frameUserDetails.setUserId(user.getId());
+        frameUserDetails.setUsername(user.getUsername());
+        frameUserDetails.setPassword(user.getPassword());
+        frameUserDetails.setViewName(user.getUsername());
+        frameUserDetails.setMobile(user.getMobile());
+        frameUserDetails.setEmail(user.getEmail());
+        frameUserDetails.setImagePath(user.getBaseUserExt().getImagePath());
+        frameUserDetails.setUserType(AdminType.USER.getType());
+        frameUserDetails.setLoginIp(user.getLastLoginIp());
+        frameUserDetails.setLoginTime(user.getLastLoginTime());
+        frameUserDetails.setLoginCount(user.getLoginCount());
+        // 数据权限范围关联机构部门或地域层级，TODO
+        List<Long> deptIds = new ArrayList<>();
+
+        // 用户角色编码列表
+        Set<String> roleCodeList = null;
+        roleCodeList.forEach(roleCode -> perms.add("ROLE_" + roleCode));
+
+        frameUserDetails.setPerms(perms);
+        return frameUserDetails;
     }
 }

@@ -69,7 +69,7 @@ public class WebLayoutDto implements Serializable {
      */
     private AppConfigDto      appConf;
     /**
-     * 通过MEMBER_ACCOUNT内的TYPE为1，则isWork为true，workConfig返回信息
+     * 通过CORE_ACCOUNT内的TYPE为1，则isWork为true，workConfig返回信息
      */
     private Boolean           isWork;
     /**

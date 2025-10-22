@@ -34,7 +34,6 @@ import me.zhyd.oauth.request.*;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
-import net.linlan.social.constant.ProviderType;
 import net.linlan.social.third.dao.ThirdMemberDao;
 import net.linlan.social.third.dto.ThirdMemberDto;
 import net.linlan.social.third.entity.ThirdMember;
@@ -51,8 +50,7 @@ import net.linlan.sys.core.service.CoreAccountService;
 import net.linlan.utils.ServletUtils;
 import net.linlan.utils.exception.CommonException;
 import net.linlan.utils.ip.IPUtils;
-import static net.linlan.social.constant.ProviderType.*;
-import static net.linlan.social.constant.ProviderType.WECHAT_OAUTH;
+import static net.linlan.social.constant.ProviderSource.*;
 
 /**
  *
@@ -218,26 +216,24 @@ public class ThirdMemberService {
         }
 
         AuthRequest authRequest;
-        ProviderType providerType = ProviderType.fromType(serverType);
 
-        if (WECHAT_WORK_OAUTH.equals(providerType)) {
+        if (WECHAT_WORK.getKey().equals(serverType)) {
             authRequest = new AuthWeChatEnterpriseQrcodeRequest(AuthConfig.builder()
                 .clientId(config.getClientId()).clientSecret(config.getClientSecret())
                 .redirectUri(config.getServerUrl()).agentId(config.getServerConf1()).build());
-        } else if (DINGTALK_OAUTH.equals(providerType)) {
+        } else if (DINGTALK.getKey().equals(serverType)) {
             authRequest = new AuthDingTalkRequest(AuthConfig.builder()
                 .clientId(config.getClientId()).clientSecret(config.getClientSecret())
                 .redirectUri(config.getServerUrl()).build());
-        } else if (FEISHU_OAUTH.equals(providerType)) {
+        } else if (FEISHU.getKey().equals(serverType)) {
             authRequest = new AuthFeishuRequest(AuthConfig.builder().clientId(config.getClientId())
                 .clientSecret(config.getClientSecret()).redirectUri(config.getServerUrl()).build());
-        } else if (WECHAT_OAUTH.equals(providerType)) {
+        } else if (WECHAT_OPEN.getKey().equals(serverType)) {
             authRequest = new AuthWeChatOpenRequest(AuthConfig.builder()
                 .clientId(config.getClientId()).clientSecret(config.getClientSecret())
                 .redirectUri(config.getServerUrl()).build());
         } else {
-            throw new IllegalArgumentException(
-                "Unsupported identity provider type: " + providerType);
+            throw new IllegalArgumentException("Unsupported identity provider type: " + serverType);
         }
 
         return authRequest;

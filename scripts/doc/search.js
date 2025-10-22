@@ -1,3 +1,20 @@
+/*
+ * eframe-java-backend - JAVA开发的企业级后端框架，基于Springboot，采用支持 JAVA 1.8最高版本的framework、security，后端数据访问采用Mybatis框架，支持多种数据库一套代码适配，提供脚手架可快速生成Mapper等，借鉴若依框架，实现最基础的管理员、机构、角色、权限、分组、消息管理，为各类企业级应用提供框架支撑应用扩展。
+ * Copyright © 2020-2025 Linlan (open@linlan.net)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 let api = [];
 const apiDocListSize = 6
 api.push({
@@ -1744,37 +1761,56 @@ api[3].list[0].list.push({
     desc: '批量生成代码',
 });
 api[3].list.push({
-    alias: 'SmsSendRecordController',
+    alias: 'ThirdMemberTokenController',
     order: '2',
-    link: '短信发送记录读写控制类',
-    desc: '短信发送记录读写控制类',
+    link: '会员用户令牌读写控制类',
+    desc: '会员用户令牌读写控制类',
     list: []
 })
 api[3].list[1].list.push({
     order: '1',
     deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/token/list.do',
+    desc: 'GetThirdMemberTokenlist.获取会员用户令牌列表或分页,返回ThirdMemberToken对象.',
+});
+api[3].list[1].list.push({
+    order: '2',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/token/delete/{ids}.do',
+    desc: 'ThirdMemberTokenOperation.删除会员用户令牌数据操作逻辑，根据操作类型，执行删除操作.',
+});
+api[3].list.push({
+    alias: 'SmsSendRecordController',
+    order: '3',
+    link: '短信发送记录读写控制类',
+    desc: '短信发送记录读写控制类',
+    list: []
+})
+api[3].list[2].list.push({
+    order: '1',
+    deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/smssendrecord/list.do',
     desc: 'GetSmsSendRecordlist.获取短信发送记录列表或分页,返回SmsSendRecord对象.',
 });
-api[3].list[1].list.push({
+api[3].list[2].list.push({
     order: '2',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/smssendrecord/{id}.do',
     desc: 'GetSmsSendRecordbyid.主键获取短信发送记录详细信息.',
 });
-api[3].list[1].list.push({
+api[3].list[2].list.push({
     order: '3',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/smssendrecord/save.do',
     desc: 'SmsSendRecordOperation.新增短信发送记录数据操作逻辑，根据操作类型，执行新增操作.',
 });
-api[3].list[1].list.push({
+api[3].list[2].list.push({
     order: '4',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/smssendrecord/update.do',
     desc: 'SmsSendRecordOperation.修改短信发送记录数据操作逻辑，根据操作类型，执行修改操作.',
 });
-api[3].list[1].list.push({
+api[3].list[2].list.push({
     order: '5',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/smssendrecord/delete/{ids}.do',
@@ -1782,73 +1818,184 @@ api[3].list[1].list.push({
 });
 api[3].list.push({
     alias: 'AuthnLoginController',
-    order: '3',
+    order: '4',
     link: '短信邮箱登录验证',
     desc: '短信邮箱登录验证',
     list: []
 })
-api[3].list[2].list.push({
+api[3].list[3].list.push({
     order: '1',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/login/sms.do',
     desc: '短信邮箱登录方法',
 });
-api[3].list[2].list.push({
+api[3].list[3].list.push({
     order: '2',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/login/otp/send.do',
     desc: '登录发送短信验证码',
 });
 api[3].list.push({
-    alias: 'SysJobController',
+    alias: 'ThirdMemberController',
+    order: '5',
+    link: '第三方用户读写控制类',
+    desc: '第三方用户读写控制类',
+    list: []
+})
+api[3].list[4].list.push({
+    order: '1',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/member/list.do',
+    desc: 'GetThirdMemberlist.获取第三方用户列表或分页,返回ThirdMember对象.',
+});
+api[3].list[4].list.push({
+    order: '2',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/member/{id}.do',
+    desc: 'GetThirdMemberbyid.主键获取第三方用户详细信息.',
+});
+api[3].list[4].list.push({
+    order: '3',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/member/save.do',
+    desc: 'ThirdMemberOperation.新增第三方用户数据操作逻辑，根据操作类型，执行新增操作.',
+});
+api[3].list[4].list.push({
     order: '4',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/member/update.do',
+    desc: 'ThirdMemberOperation.修改第三方用户数据操作逻辑，根据操作类型，执行修改操作.',
+});
+api[3].list[4].list.push({
+    order: '5',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/member/delete/{ids}.do',
+    desc: 'ThirdMemberOperation.删除第三方用户数据操作逻辑，根据操作类型，执行删除操作.',
+});
+api[3].list.push({
+    alias: 'ThirdMemberBindController',
+    order: '6',
+    link: '第三方用户身份提供商绑定读写控制类',
+    desc: '第三方用户身份提供商绑定读写控制类',
+    list: []
+})
+api[3].list[5].list.push({
+    order: '1',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/memberbind/list.do',
+    desc: 'GetThirdMemberBindlist.获取用户身份提供商绑定列表或分页,返回ThirdMemberBind对象.',
+});
+api[3].list[5].list.push({
+    order: '2',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/memberbind/{id}.do',
+    desc: 'GetThirdMemberBindbyid.主键获取用户身份提供商绑定详细信息.',
+});
+api[3].list[5].list.push({
+    order: '3',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/memberbind/save.do',
+    desc: 'ThirdMemberBindOperation.新增用户身份提供商绑定数据操作逻辑，根据操作类型，执行新增操作.',
+});
+api[3].list[5].list.push({
+    order: '4',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/memberbind/update.do',
+    desc: 'ThirdMemberBindOperation.修改用户身份提供商绑定数据操作逻辑，根据操作类型，执行修改操作.',
+});
+api[3].list[5].list.push({
+    order: '5',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/api/third/memberbind/delete/{ids}.do',
+    desc: '删除用户身份提供商绑定数据操作逻辑，根据操作类型，执行删除操作.',
+});
+api[3].list.push({
+    alias: 'ThirdLoginController',
+    order: '7',
+    link: '第三方社交平台登录验证',
+    desc: '第三方社交平台登录验证',
+    list: []
+})
+api[3].list[6].list.push({
+    order: '1',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/login/social.do',
+    desc: '社交平台登录方法',
+});
+api[3].list[6].list.push({
+    order: '2',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/login/social/render/{source}.do',
+    desc: '根据类型，获取授权请求',
+});
+api[3].list[6].list.push({
+    order: '3',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/login/social/callback/{source}.do',
+    desc: '根据类型，获取授权请求',
+});
+api[3].list[6].list.push({
+    order: '4',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/login/member/bind.do',
+    desc: '第三方社交平台账号绑定',
+});
+api[3].list[6].list.push({
+    order: '5',
+    deprecated: 'false',
+    url: 'https://linlan.net/eframe_backend/login/member/bind/{platformType}.do',
+    desc: '第三方社交平台账号解绑',
+});
+api[3].list.push({
+    alias: 'SysJobController',
+    order: '8',
     link: '调度任务信息操作处理',
     desc: '调度任务信息操作处理',
     list: []
 })
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '1',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/list.do',
     desc: '查询定时任务列表',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '2',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/export.do',
     desc: '导出定时任务列表',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '3',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/{jobId}.do',
     desc: '获取定时任务详细信息',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '4',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/save.do',
     desc: '新增定时任务',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '5',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/update.do',
     desc: '修改定时任务',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '6',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/changeStatus.do',
     desc: '定时任务状态修改',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '7',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/run.do',
     desc: '定时任务立即执行一次',
 });
-api[3].list[3].list.push({
+api[3].list[7].list.push({
     order: '8',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/job/{jobIds}.do',
@@ -1856,30 +2003,30 @@ api[3].list[3].list.push({
 });
 api[3].list.push({
     alias: 'SysJobLogController',
-    order: '5',
+    order: '9',
     link: '调度日志操作处理',
     desc: '调度日志操作处理',
     list: []
 })
-api[3].list[4].list.push({
+api[3].list[8].list.push({
     order: '1',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/joblog/list.do',
     desc: '查询定时任务调度日志列表',
 });
-api[3].list[4].list.push({
+api[3].list[8].list.push({
     order: '2',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/joblog/export.do',
     desc: '导出定时任务调度日志列表',
 });
-api[3].list[4].list.push({
+api[3].list[8].list.push({
     order: '3',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/joblog/{jobLogId}.do',
     desc: '根据调度编号获取详细信息',
 });
-api[3].list[4].list.push({
+api[3].list[8].list.push({
     order: '4',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/monitor/joblog/{jobLogIds}.do',
@@ -1887,36 +2034,36 @@ api[3].list[4].list.push({
 });
 api[3].list.push({
     alias: 'MailSendRecordController',
-    order: '6',
+    order: '10',
     link: '邮件发送记录读写控制类',
     desc: '邮件发送记录读写控制类',
     list: []
 })
-api[3].list[5].list.push({
+api[3].list[9].list.push({
     order: '1',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do',
     desc: 'GetMailSendRecordlist.获取邮件发送记录列表或分页,返回MailSendRecord对象.',
 });
-api[3].list[5].list.push({
+api[3].list[9].list.push({
     order: '2',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/mailsendrecord/{id}.do',
     desc: 'GetMailSendRecordbyid.主键获取邮件发送记录详细信息.',
 });
-api[3].list[5].list.push({
+api[3].list[9].list.push({
     order: '3',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/mailsendrecord/save.do',
     desc: 'MailSendRecordOperation.新增邮件发送记录数据操作逻辑，根据操作类型，执行新增操作.',
 });
-api[3].list[5].list.push({
+api[3].list[9].list.push({
     order: '4',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/mailsendrecord/update.do',
     desc: 'MailSendRecordOperation.修改邮件发送记录数据操作逻辑，根据操作类型，执行修改操作.',
 });
-api[3].list[5].list.push({
+api[3].list[9].list.push({
     order: '5',
     deprecated: 'false',
     url: 'https://linlan.net/eframe_backend/api/store/mailsendrecord/delete/{ids}.do',

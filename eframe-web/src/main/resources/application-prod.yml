@@ -109,10 +109,10 @@ spring:
 # 文件路径配置
 platform:
     file:
-        dir: /www/api/eframe/
+        dir: /data/files/eframe
     prop:
         allowedOrigins: "*"
     database:
         db_encrypt: true        #数据库敏感信息是否加密
-        db_key: ENC(P6R+HqkSZbisYALF2cdM/2JIdlldfOs/)        #数据库敏感字段加密值
+        db_key: Linlan_@!DB_Key        #数据库敏感字段加密值
         db_key_out: lldb_string_out        #数据库敏感字段对外提供加密值

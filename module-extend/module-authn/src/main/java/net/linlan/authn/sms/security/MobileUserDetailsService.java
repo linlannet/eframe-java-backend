@@ -70,7 +70,7 @@ public class MobileUserDetailsService {
             throw new CommonException(MessageUtils.message("user.blocked"));
         }
 
-        sysPasswordService.validate(user);
+        sysPasswordService.validateSms(user);
 
         return sysPermissionService.createLoginUser(user);
 

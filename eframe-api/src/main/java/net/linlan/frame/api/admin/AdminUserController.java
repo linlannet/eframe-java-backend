@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,44 +35,130 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.admin.dao.AdminUserRoleDao;
 import net.linlan.frame.admin.dto.AdminUserDto;
+import net.linlan.frame.admin.dto.AdminUserRoleDto;
 import net.linlan.frame.admin.entity.AdminUser;
+import net.linlan.frame.admin.param.AdminDeptParam;
 import net.linlan.frame.admin.service.AdminDeptService;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.admin.service.InitialConfigService;
 import net.linlan.frame.api.BaseController;
+import net.linlan.frame.comm.service.TokenService;
 import net.linlan.frame.mbiz.ApiIntfConfig;
 import net.linlan.frame.view.admin.manager.AdminMenuRolePosEntryManager;
 import net.linlan.frame.view.admin.manager.AdminUserOpManager;
 import net.linlan.frame.view.admin.param.AdminUserVoParam;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
-import net.linlan.frame.view.admin.vo.AdminUserVo;
-import net.linlan.frame.view.admin.vo.LoginUserRolesVo;
-import net.linlan.frame.view.admin.vo.SysRoleVo;
+import net.linlan.frame.view.admin.vo.*;
 import net.linlan.frame.web.SecurityUtils;
+import net.linlan.frame.web.model.TreeSelect;
+import net.linlan.sys.comm.dto.FileInfo;
+import net.linlan.sys.comm.service.UploadFileService;
+import net.linlan.sys.role.entity.SysRole;
+import net.linlan.utils.constant.Constants;
 import net.linlan.utils.crypt.ShaUtils;
 
 /**
  *
- * 管理用户增删改操作控制类
+ * 管理用户查询读取控制类
  * @author Linlan
  * CreateTime 2024-10-02 23:27:08
  *
  */
 @RestController
-@RequestMapping("api/admin")
-public class AdminUserOpController extends BaseController {
+@RequestMapping("api/admin/")
+public class AdminUserController extends BaseController {
 
+    @Resource
+    private AdminMenuRolePosEntryManager PositionEntryManager;
+    @Resource
+    private AdminUserService             adminUserService;
+    @Resource
+    private AdminDeptService             adminDeptService;
+    @Resource
+    private AdminUserRoleDao             adminUserRoleDao;
     @Resource
     private AdminUserOpManager           adminUserOpManager;
     @Resource
     private AdminMenuRolePosEntryManager adminMenuRolePosEntryManager;
     @Resource
-    private AdminDeptService             adminDeptService;
-    @Resource
-    private AdminUserService             adminUserService;
-    @Resource
     private InitialConfigService         initialConfigService;
+    @Resource
+    private TokenService                 tokenService;
+    @Resource
+    private UploadFileService            uploadFileService;
+
+    /**
+     * 获取用户列表
+     * @param param  查询条件
+     * @return  返回对象
+     */
+    @PlatLog(value = "获取用户列表")
+    @PreAuthorize("@ss.hasPerms('admin:user:list')")
+    @GetMapping("user/list")
+    @Encrypt
+    public ResponseResult<List<AdminUserVo>> list(AdminUserVoParam param) {
+        if (ObjectUtils.isEmpty(param)) {
+            return failure();
+        }
+        Page<AdminUserDto> adminUserDtoList = adminUserService.getPageDto(param.toModelParam());
+        if (adminUserDtoList == null) {
+            return empty();
+        }
+        List<AdminUserVo> vos = Lists.transform(adminUserDtoList.getResult(), AdminUserVo.DTO);
+        return successPage(vos, adminUserDtoList.getPageSize(), adminUserDtoList.getPageNum(),
+            adminUserDtoList.getTotal());
+    }
+
+    /**
+     * 根据用户编号获取详细信息
+     * @param adminId  管理员ID
+     * @return  返回对象
+     */
+    @PlatLog(value = "根据用户编号获取详细信息")
+    @PreAuthorize("@ss.hasPerms('admin:user:detail')")
+    @GetMapping(value = { "user/{adminId}" })
+    @Encrypt
+    public ResponseResult<LoginUserRolesPosVo> getInfo(@PathVariable(value = "adminId", required = false) Long adminId) {
+        LoginUserRolesPosVo loginUserRolesPosVo = new LoginUserRolesPosVo();
+        if (ObjectUtils.isNotEmpty(adminId)) {
+            adminUserService.checkUserDataScope(adminId);
+            AdminUserDto dto = adminUserService.getMoreById(adminId);
+            AdminUserVo vo = null;
+            if (ObjectUtils.isNotEmpty(dto)) {
+                vo = (AdminUserVo) AdminUserVo.DTO.apply(dto);
+            }
+            loginUserRolesPosVo.setUser(vo);
+            loginUserRolesPosVo.setPositionIds(adminUserService.selectPostListByAdminId(adminId));
+            if (vo != null && vo.getRoles() != null) {
+                loginUserRolesPosVo.setRoleIds(
+                    vo.getRoles().stream().map(SysRole::getId).collect(Collectors.toList()));
+            }
+        }
+        List<SysRoleVo> roles = PositionEntryManager.selectRoleAll();
+        loginUserRolesPosVo.setRoles(AdminUserVo.isAdmin(adminId) ? roles
+            : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+        List<SysPositionVo> positions = PositionEntryManager.selectPositionAll();
+        loginUserRolesPosVo.setPositions(positions);
+        List<AdminUserRoleDto> roleDtoList = adminUserRoleDao.selectUserRoleListByAdminId(adminId);
+        loginUserRolesPosVo.setRoleList(roleDtoList);
+        return success(loginUserRolesPosVo);
+    }
+
+    /**
+     * 获取用户部门树列表
+     * @param param  查询条件
+     * @return  返回对象
+     */
+    @PlatLog(value = "获取用户部门树列表")
+    @PreAuthorize("@ss.hasPerms('admin:user:list')")
+    @GetMapping("user/deptTree")
+    @Encrypt
+    public ResponseResult<List<TreeSelect>> deptTree(AdminDeptParam param) {
+        return success(adminDeptService.selectDeptTreeList(param));
+    }
 
     /** AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行新增操作.
      * @param input 对象信息，输入Vo对象
@@ -323,6 +410,141 @@ public class AdminUserOpController extends BaseController {
         adminMenuRolePosEntryManager.checkRoleDataScope(roleIds);
         adminUserService.insertUserAuth(adminId, roleIds);
         return success();
+    }
+
+    /**
+     * 个人资料信息
+     * @return  个人资料信息
+     */
+    @PlatLog(value = "个人资料信息查询")
+    @GetMapping("/user/profile")
+    @Encrypt
+    public ResponseResult<LoginUserProfileVo> profile() {
+        FrameUserDetails loginUser = getLoginUser();
+        LoginUserProfileVo loginUserProfileVo = new LoginUserProfileVo();
+        loginUserProfileVo.setUser(loginUser);
+        loginUserProfileVo
+            .setRoleGroup(adminUserService.selectUserRoleGroup(loginUser.getUsername()));
+        loginUserProfileVo
+            .setPositionGroup(adminUserService.selectUserPostGroup(loginUser.getUsername()));
+        return ResponseResult.ok(loginUserProfileVo);
+    }
+
+    /**
+     * 个人信息
+     * @return  个人信息
+     */
+    @PlatLog(value = "个人信息查询")
+    @GetMapping("/user/info")
+    @Encrypt
+    public ResponseResult<AdminUserVo> info() {
+        FrameUserDetails loginUser = getLoginUser();
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
+
+        AdminUserVo userVo = (AdminUserVo) AdminUserVo.DTO.apply(currentUser);
+
+        return ResponseResult.ok(userVo);
+    }
+
+    /**
+     * 修改用户个人信息
+     * @param   input   当前输入对象
+     * @return  修改状态
+     */
+    @PlatLog(value = "修改用户个人信息", category = 20)
+    @PostMapping("/user/profile")
+    @Encrypt
+    public ResponseResult<Boolean> updateProfile(@RequestBody AdminUserVo input) {
+        FrameUserDetails loginUser = getLoginUser();
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
+        if (!currentUser.getMobile().equals(input.getMobile())) {
+            if (ObjectUtils.isNotEmpty(input.getMobile())
+                && !adminUserService.checkMobileUnique(input.getMobile(), input.getId())) {
+                return error("修改用户'" + loginUser.getUsername() + "'失败，手机号码已存在");
+            }
+            currentUser.setMobile(input.getMobile());
+        }
+        if (!currentUser.getEmail().equals(input.getEmail())) {
+            if (ObjectUtils.isNotEmpty(input.getEmail())
+                && !adminUserService.checkEmailUnique(input.getEmail(), input.getId())) {
+                return error("修改用户'" + loginUser.getUsername() + "'失败，邮箱账号已存在");
+            }
+            currentUser.setEmail(input.getEmail());
+        }
+        currentUser.setUsername(input.getUsername());
+        currentUser.setName(input.getName());
+        currentUser.setIsAuditAdmin(input.getIsAuditAdmin());
+
+        if (adminUserService.updateUserProfile(currentUser) > 0) {
+            loginUser.setUsername(input.getUsername());
+            // 更新缓存用户信息
+            tokenService.setLoginUser(loginUser);
+            return success(Boolean.TRUE);
+        }
+        return error("修改个人信息异常，请联系管理员");
+    }
+
+    /**
+     * 个人修改密码
+     * @param vo    当前更新密码对象
+     * @return  更新结果
+     */
+    @PlatLog(value = "个人修改密码", category = 20)
+    @PostMapping("/user/updatePwd")
+    @Encrypt
+    public ResponseResult updatePwd(@RequestBody PasswordVo vo) {
+        FrameUserDetails loginUser = getLoginUser();
+        String username = loginUser.getUsername();
+        AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
+
+        String oldPassword = vo.getOldPassword();
+        String newPassword = vo.getNewPassword();
+
+        if (!ShaUtils.matchesPassword(oldPassword, currentUser.getPassword())) {
+            return error("修改密码失败，旧密码错误");
+        }
+        if (ShaUtils.matchesPassword(newPassword, currentUser.getPassword())) {
+            return error("新密码不能与旧密码相同");
+        }
+
+        newPassword = ShaUtils.encryptPassword(newPassword);
+        if (adminUserService.resetUserPwd(username, newPassword) > 0) {
+            // 更新缓存用户密码
+            loginUser.setPassword(newPassword);
+            tokenService.setLoginUser(loginUser);
+            return success();
+        }
+        return error("修改密码异常，请联系管理员");
+    }
+
+    /**
+     * 用户头像上传
+     * @param file  文件
+     * @param request     请求
+     * @return 上传结果
+     * @throws Exception    异常
+     */
+    @PlatLog(value = "用户头像上传", category = 20)
+    @PostMapping("/user/imagePath")
+    @Encrypt
+    public ResponseResult<UserImagePathVo> imagePath(@RequestParam("file") MultipartFile file,
+                                                     HttpServletRequest request) throws Exception {
+        if (!file.isEmpty()) {
+            FrameUserDetails loginUser = getLoginUser();
+            String context = request.getContextPath();
+            FileInfo fileInfo = uploadFileService.uploadFileByMember(file, context,
+                Constants.ENT_APP_ID, loginUser.getUserId());
+            String imagePath = fileInfo.getFileUrl();
+            if (adminUserService.updateUserImagePath(loginUser.getUsername(), imagePath)) {
+                UserImagePathVo userImagePathVo = new UserImagePathVo();
+                userImagePathVo.setImageUrl(imagePath);
+                // 更新缓存用户头像
+                loginUser.setImagePath(imagePath);
+                tokenService.setLoginUser(loginUser);
+                return success(userImagePathVo);
+            }
+        }
+        return error("上传图片异常，请联系管理员");
     }
 
 }

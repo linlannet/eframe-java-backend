@@ -17,15 +17,28 @@
  */
 package net.linlan.sys.core.constant;
 
+import net.linlan.utils.enums.BaseEnumInteger;
+
 /**
  * 账户类型枚举类
  */
-public enum AccountTypeEnum {
-
-                             WORK(1, "平台WEB类型"), APP(2,
-                                                     "移动APP类型"), AUTH(3,
-                                                                      "身份源AUTH类型"), OTHER(9,
-                                                                                          "外部类型");
+public enum AccountTypeEnum implements BaseEnumInteger {
+                                                        /**
+                                                         * 平台WEB类型
+                                                         */
+                                                        WORK(1, "平台WEB类型"),
+                                                        /**
+                                                         * 移动APP类型
+                                                         */
+                                                        APP(2, "移动APP类型"),
+                                                        /**
+                                                         * 身份源AUTH类型
+                                                         */
+                                                        AUTH(3, "身份源AUTH类型"),
+                                                        /**
+                                                         * 外部类型
+                                                         */
+                                                        OTHER(9, "外部类型");
 
     /**
      * 配置项名称

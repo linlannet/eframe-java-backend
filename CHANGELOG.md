@@ -1,8 +1,11 @@
 ### 版本号：1.1.11
-- 更新日期：2025-10-20
+- 更新日期：2025-10-22
 - 更新内容：
 1. 解决循环引用的BUG
 2. 调整doc文档内controller上无法解析static文件中路径的问题
+3. 合并AdminDeptController文件
+4. 合并AdminUserController文件
+5. 新增ProviderSource文件，重新定义提供商来源
 
 ### 版本号：1.1.10
 - 更新日期：2025-10-19

@@ -19,22 +19,25 @@ package net.linlan.authn.service;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
+import net.linlan.authn.sms.cache.SmsSendCache;
 import net.linlan.authn.sms.security.MobileAuthenticationToken;
 import net.linlan.authn.sms.service.SmsSendService;
 import net.linlan.authn.vo.MobileLoginBody;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.admin.dto.AdminUserDto;
+import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
+import net.linlan.frame.comm.service.AdminLoginService;
 import net.linlan.frame.comm.service.TokenService;
 import net.linlan.frame.comm.vo.AppLoginInfo;
-import net.linlan.sys.base.entity.BaseUser;
-import net.linlan.sys.base.service.BaseUserService;
 import net.linlan.utils.MessageUtils;
 import net.linlan.utils.constant.Constants;
 import net.linlan.utils.exception.SupportException;
@@ -46,15 +49,21 @@ import net.linlan.utils.exception.SupportException;
  */
 @Component
 public class AuthnLoginService {
+    @Value("${spring.profiles.active}")
+    private String                activeMode;
 
     @Resource
     private TokenService          tokenService;
     @Resource
     private AuthenticationManager authenticationManager;
     @Resource
-    private BaseUserService       baseUserService;
+    private AdminUserService      adminUserService;
+    @Resource
+    private AdminLoginService     adminLoginService;
     @Resource
     private SmsSendService        smsSendService;
+    @Resource
+    private SmsSendCache          smsSendCache;
 
     public AppLoginInfo loginByMobile(MobileLoginBody login) {
         Authentication authentication;
@@ -67,7 +76,7 @@ public class AuthnLoginService {
         }
 
         FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
-        baseUserService.recordLoginInfo(loginUser.getUserId());
+        adminLoginService.recordLoginInfo(null, loginUser.getUserId());
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), loginUser.getUsername(),
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.authn.login.success"),
@@ -80,12 +89,16 @@ public class AuthnLoginService {
         // 生成6位验证码
         String code = RandomUtils.randomNumbers(6);
 
-        BaseUser user = baseUserService.getByMobile(mobile);
+        AdminUserDto user = adminUserService.getByMobile(mobile);
         if (user == null) {
             throw new SupportException("手机号未注册");
         }
 
         // 发送短信
+        if (activeMode.contains("dev") || activeMode.contains("ver")) {
+            smsSendCache.saveCode(mobile, "251021");
+            return true;
+        }
         return smsSendService.sendCode(mobile, "code", code);
     }
 

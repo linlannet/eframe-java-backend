@@ -58,7 +58,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="coreAccountMap">
         SELECT B.*
-        FROM MEMBER_ACCOUNT B
+        FROM CORE_ACCOUNT B
         WHERE ACCOUNT_ID = #{value}
     </select>
 
@@ -76,7 +76,7 @@
                 <!-- mysql为limit函数进行处理 -->
                 <choose>
                     <when test='_databaseId == "mysql" or _databaseId == "xg"'>
-                        (SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName from MEMBER_ACCOUNT B
+                        (SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                         WHERE 1 = 1
                         <include refid="commonList"></include>
@@ -89,7 +89,7 @@
                             <include refid="getListOrderBy"></include>
                         ) AS RN, A.* FROM (
                             SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName FROM
-                            MEMBER_ACCOUNT B
+                            CORE_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                             WHERE 1 = 1
                             <include refid="commonList"></include>
@@ -99,7 +99,7 @@
                 </choose>
             </when>
             <otherwise>
-                ( select B.*,ORG.NAME as inOrganName, APP.NAME as appName from MEMBER_ACCOUNT B
+                ( select B.*,ORG.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
                 <include refid="commonUnionJoin"></include>
                 WHERE 1 = 1
                 <include refid="commonList"></include>
@@ -231,7 +231,7 @@
 
     <!-- save object，保存对象信息 -->
     <insert id="save" parameterType="net.linlan.sys.core.entity.CoreAccount">
-        INSERT INTO MEMBER_ACCOUNT
+        INSERT INTO CORE_ACCOUNT
         (
         ACCOUNT_ID,
         ORGAN_ID, APP_ID, ORGAN_NAME, INOUT_MODE, NAME, CNAME, TYPE, CLIENT_ID, CLIENT_SECRET, AES_KEY, AES_IV_KEY, SERVER_IP, SERVER_TYPE, SERVER_URL, SERVER_CONF1, SERVER_CONF2, SERVER_CONF3,CURR_COUNT, CONF_LIMIT, IS_ADMIN, IS_SINGLE, IS_DISABLED, STATUS, CREATOR_ID, CREATE_TIME, LAST_TIME, DESCRIPTION    )
@@ -243,7 +243,7 @@
 
     <!-- update object，更新对象信息 -->
     <update id="update" parameterType="net.linlan.sys.core.entity.CoreAccount">
-        UPDATE MEMBER_ACCOUNT
+        UPDATE CORE_ACCOUNT
         <set>
             <if test="organId != null">ORGAN_ID = #{organId}, </if>
             <if test="appId != null">APP_ID = #{appId}, </if>
@@ -278,13 +278,13 @@
 
     <!-- delete by id，通过主键删除对象 -->
     <delete id="deleteById">
-        DELETE FROM MEMBER_ACCOUNT
+        DELETE FROM CORE_ACCOUNT
         WHERE ACCOUNT_ID = #{value}
     </delete>
 
     <!-- delete by ids，通过主键数组批量删除对象 -->
     <delete id="deleteByIds">
-        DELETE FROM MEMBER_ACCOUNT
+        DELETE FROM CORE_ACCOUNT
         WHERE ACCOUNT_ID IN
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
@@ -294,7 +294,7 @@
     <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
     <select id="getCount" resultType="int">
         SELECT COUNT(ACCOUNT_ID) FROM
-        MEMBER_ACCOUNT B
+        CORE_ACCOUNT B
         <include refid="commonUnionJoin"></include>
         WHERE 1 = 1
         <include refid="commonList"></include>
@@ -310,7 +310,7 @@
     <select id="getPageDto" resultMap="coreAccountDtoMap">
         SELECT
         B.ACCOUNT_ID, B.ORGAN_ID, B.APP_ID, B.ORGAN_NAME, B.INOUT_MODE, B.NAME, B.CNAME, B.TYPE, B.CLIENT_ID, B.CLIENT_SECRET, B.AES_KEY, B.AES_IV_KEY, B.SERVER_IP, B.SERVER_TYPE, B.SERVER_URL, B.SERVER_CONF1, B.SERVER_CONF2, B.SERVER_CONF3, B.CURR_COUNT, B.CONF_LIMIT, B.IS_ADMIN, B.IS_SINGLE, B.IS_DISABLED, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION
-        FROM MEMBER_ACCOUNT B
+        FROM CORE_ACCOUNT B
         WHERE 1=1
         <include refid="commonList"></include>
         <include refid="getListOrderBy"></include>
@@ -321,7 +321,7 @@
     <select id="getDtoById" resultMap="coreAccountDtoMap">
 
         SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName
-        FROM MEMBER_ACCOUNT B
+        FROM CORE_ACCOUNT B
                  LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
                  LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE ACCOUNT_ID = #{value}
@@ -329,7 +329,7 @@
 
     <!-- 以下为新增特定的操作 -->
     <select id="getByParams" resultMap="coreAccountMap">
-        select B.* from MEMBER_ACCOUNT B
+        select B.* from CORE_ACCOUNT B
         WHERE 1 = 1
         and B.IS_DISABLED = 0
         and B.STATUS = 1
@@ -350,7 +350,7 @@
 
     <!-- 单独更新Count和ConfLimit -->
     <update id="updateCurrCountOrConfLimit" parameterType="net.linlan.sys.core.entity.CoreAccount">
-        UPDATE MEMBER_ACCOUNT
+        UPDATE CORE_ACCOUNT
         <set>
             <if test="currCount != null">CURR_COUNT = #{currCount}, </if>
             <if test="confLimit != null">CONF_LIMIT = #{confLimit}</if>
@@ -366,7 +366,7 @@
     </resultMap>
 
     <select id="getKeyValueList" resultMap="coreAccountKvMap">
-        SELECT B.ACCOUNT_ID AS cmsKey, B.NAME as cmsValue from MEMBER_ACCOUNT B
+        SELECT B.ACCOUNT_ID AS cmsKey, B.NAME as cmsValue from CORE_ACCOUNT B
         LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
         LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE 1 = 1

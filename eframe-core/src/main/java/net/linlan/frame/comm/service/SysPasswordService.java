@@ -24,14 +24,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 import net.linlan.frame.admin.dto.AdminUserDto;
-import net.linlan.frame.comm.manager.AsyncManager;
-import net.linlan.frame.comm.manager.factory.AsyncFactory;
 import net.linlan.frame.comm.security.context.AuthenticationContextHolder;
-import net.linlan.sys.web.KernelConstant;
 import net.linlan.sys.web.RedisService;
-import net.linlan.utils.MessageUtils;
 import net.linlan.utils.constant.CacheConstants;
-import net.linlan.utils.constant.Constants;
 import net.linlan.utils.crypt.ShaUtils;
 import net.linlan.utils.exception.user.UserPasswordNotMatchException;
 import net.linlan.utils.exception.user.UserPasswordRetryLimitExceedException;
@@ -62,7 +57,7 @@ public class SysPasswordService {
         return CacheConstants.PWD_ERR_CNT_KEY + username;
     }
 
-    public void validate(AdminUserDto user) {
+    public void validateUsernamePassword(AdminUserDto user) {
         Authentication usernamePasswordAuthenticationToken = AuthenticationContextHolder
             .getContext();
         String username = usernamePasswordAuthenticationToken.getName();
@@ -87,37 +82,6 @@ public class SysPasswordService {
         }
     }
 
-    public void socialValidate(AdminUserDto user, String encodePwd, String appId) {
-        String username = user.getUsername();
-        String password = user.getPassword();
-
-        Integer retryCount = (Integer) redisService.get(getCacheKey(username));
-
-        if (retryCount == null) {
-            retryCount = 0;
-        }
-
-        if (retryCount >= Integer.valueOf(maxRetryCount).intValue()) {
-            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                username, Constants.LOGIN_FAIL,
-                MessageUtils.message("user.password.retry.limit.exceed", maxRetryCount, lockTime),
-                appId));
-            throw new UserPasswordRetryLimitExceedException(maxRetryCount, lockTime);
-        }
-
-        if (!password.equals(encodePwd)) {
-            retryCount = retryCount + 1;
-            AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                    Constants.LOGIN_FAIL,
-                    MessageUtils.message("user.password.retry.limit.count", retryCount), appId));
-            redisService.set(getCacheKey(username), retryCount, lockTime * 60);
-            throw new UserPasswordNotMatchException();
-        } else {
-            clearLoginRecordCache(username);
-        }
-    }
-
     public boolean matches(AdminUserDto user, String rawPassword) {
         return ShaUtils.matchesPassword(rawPassword, user.getPassword());
     }
@@ -127,4 +91,10 @@ public class SysPasswordService {
             redisService.delete(getCacheKey(loginName));
         }
     }
+
+    public void validateSms(AdminUserDto user) {
+        //TODO
+
+    }
+
 }
