@@ -283,6 +283,25 @@ B.TEMPLATE_ID, B.APP_ID, B.ORGAN_ID, B.PROVIDER_ID, B.PROVIDER_NAME, B.FOREIGN_I
     </select>
 
     <!-- 以下为新增特定的操作 -->
+    <select id="getConfigByAppId" resultMap="publicTemplateInfoDtoMap">
+        SELECT
+        B.TPL_ID, B.APP_ID, B.ORGAN_ID, B.FOREIGN_ID, B.TYPE, B.SUB_TYPE, B.NAME, B.USE_LEVEL, B.IF_OPEN_DESIGN, B.IS_CONN_COMPS, B.COMPS_ID, B.COMPS_NAME, B.IMAGE_PATH, B.CSS_STYLE, B.CONTENT, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_TEMPLATE_INFO B
+        inner join BASE_APP BA
+        on B.APP_ID = BA.APP_ID
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+    <select id="getConfigByOrganId" resultMap="publicTemplateInfoDtoMap">
+        SELECT
+        B.TPL_ID, B.APP_ID, B.ORGAN_ID, B.FOREIGN_ID, B.TYPE, B.SUB_TYPE, B.NAME, B.USE_LEVEL, B.IF_OPEN_DESIGN, B.IS_CONN_COMPS, B.COMPS_ID, B.COMPS_NAME, B.IMAGE_PATH, B.CSS_STYLE, B.CONTENT, B.PRIORITY, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        FROM PUBLIC_TEMPLATE_INFO B
+        inner join BASE_ORGAN BO
+        on B.ORGAN_ID = BO.ORGAN_ID
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
 
 
 </mapper>

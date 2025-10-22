@@ -17,6 +17,8 @@
  */
 package net.linlan.frame.config.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.github.pagehelper.Page;
@@ -53,4 +55,7 @@ public interface PublicTemplateInfoDao extends MybatisBaseDao<PublicTemplateInfo
      */
     PublicTemplateInfoDto getDtoById(String id);
 
+    List<PublicTemplateInfoDto> getConfigByAppId(PublicTemplateInfoParam param);
+
+    List<PublicTemplateInfoDto> getConfigByOrganId(PublicTemplateInfoParam param);
 }

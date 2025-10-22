@@ -154,4 +154,24 @@ public class PublicTemplateInfoService {
         return dao.getDtoById(id);
     }
 
+    public PublicTemplateInfoDto getConfigEmailByAppId(String appId, String type, String subType) {
+        PublicTemplateInfoParam param = new PublicTemplateInfoParam();
+        param.setAppId(appId);
+        param.setType(type);
+        param.setSubType(subType);
+        List<PublicTemplateInfoDto> list = getConfigByAppId(param);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    public List<PublicTemplateInfoDto> getConfigByAppId(PublicTemplateInfoParam param) {
+        return dao.getConfigByAppId(param);
+    }
+
+    public List<PublicTemplateInfoDto> getConfigByOrganId(PublicTemplateInfoParam param) {
+        return dao.getConfigByOrganId(param);
+    }
+
 }
