@@ -1,3 +1,12 @@
+### 版本号：1.1.12
+- 更新日期：2025-10-27
+- 更新内容：
+1. social内新增revoke和refresh方法
+2. resources内新增error.html和users.html
+3. resources内新增images目录，增加对接的第三方平台logo
+4. 
+
+
 ### 版本号：1.1.11
 - 更新日期：2025-10-22
 - 更新内容：
@@ -6,6 +15,7 @@
 3. 合并AdminDeptController文件
 4. 合并AdminUserController文件
 5. 新增ProviderSource文件，重新定义提供商来源
+6. PublicTemplateInfoService内新增三个方法
 
 ### 版本号：1.1.10
 - 更新日期：2025-10-19

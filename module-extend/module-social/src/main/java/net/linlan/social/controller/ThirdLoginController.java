@@ -21,9 +21,19 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import me.zhyd.oauth.exception.AuthException;
+import me.zhyd.oauth.model.AuthToken;
+import net.linlan.social.service.JustAuthUserService;
+import net.linlan.sys.web.RedisService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.BoundHashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -48,12 +58,17 @@ import net.linlan.social.vo.ThirdLoginBody;
  * 
  * @author Linlan
  */
+@Slf4j
 @RestController
 public class ThirdLoginController {
+
+
     @Resource
     private ThirdLoginService  thirdLoginService;
     @Resource
     private ThirdMemberService thirdMemberService;
+    @Resource
+    private JustAuthUserService justAuthUserService;
 
     /**
      * 社交平台登录方法
@@ -94,12 +109,91 @@ public class ThirdLoginController {
     @RequestMapping("/login/social/callback/{source}")
     @Encrypt
     public ModelAndView login(@PathVariable("source") String source, AuthCallback callback) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("platformType", source);
-        map.put("state", callback.getState());
-        map.put("code", callback.getCode());
+        log.info("进入callback：" + source + " callback params：" + JSONObject.toJSONString(callback));
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(source);
+        AuthResponse<AuthUser> response = authRequest.login(callback);
+        log.info(JSONObject.toJSONString(response));
 
-        return new ModelAndView("third_login", map);
+        if (response.ok()) {
+            justAuthUserService.save(response.getData());
+            Map<String, Object> map = new HashMap<>();
+            map.put("platformType", source);
+            map.put("state", callback.getState());
+            map.put("code", callback.getCode());
+            return new ModelAndView("third_login", map);
+        }
+        Map<String, Object> map = new HashMap<>(1);
+        map.put("errorMsg", response.getMsg());
+        return new ModelAndView("error", map);
+    }
+
+    /** 根据来源类型，回收授权信息
+     * @param source 来源类型，dingtalk|feishu|wechat_work|wechat|其他
+     * @param uuid 第三方用户ID
+     * @return 回收结果
+     */
+    @PlatLog(value = "根据来源类型，回收授权信息", category = 40)
+    @RequestMapping("/login/social/revoke/{source}/{uuid}")
+    @ResponseBody
+    @Encrypt
+    public ResponseResult revokeAuth(@PathVariable("source") String source, @PathVariable("uuid") String uuid) throws IOException {
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(source.toLowerCase());
+
+        AuthUser user = justAuthUserService.getByUuid(uuid);
+        if (null == user) {
+            return ResponseResult.error("用户不存在");
+        }
+        AuthResponse<AuthToken> response = null;
+        try {
+            response = authRequest.revoke(user.getToken());
+            if (response.ok()) {
+                justAuthUserService.remove(user.getUuid());
+                return ResponseResult.ok("用户 [" + user.getUsername() + "] 的 授权状态 已收回！");
+            }
+            return ResponseResult.error("用户 [" + user.getUsername() + "] 的 授权状态 收回失败！" + response.getMsg());
+        } catch (AuthException e) {
+            return ResponseResult.error(e.getErrorMsg());
+        }
+    }
+
+    /** 根据来源类型，刷新access_token信息
+     * @param source 来源类型，dingtalk|feishu|wechat_work|wechat|其他
+     * @param uuid 第三方用户ID
+     * @return access_token信息
+     */
+    @PlatLog(value = "根据来源类型，刷新access_token信息", category = 40)
+    @RequestMapping("/login/social/refresh/{source}/{uuid}")
+    @ResponseBody
+    public Object refreshAuth(@PathVariable("source") String source, @PathVariable("uuid") String uuid) {
+        AuthRequest authRequest = thirdMemberService.getAuthRequest(source.toLowerCase());
+
+        AuthUser user = justAuthUserService.getByUuid(uuid);
+        if (null == user) {
+            return ResponseResult.error("用户不存在");
+        }
+        AuthResponse<AuthToken> response = null;
+        try {
+            response = authRequest.refresh(user.getToken());
+            if (response.ok()) {
+                user.setToken(response.getData());
+                justAuthUserService.save(user);
+                return ResponseResult.ok("用户 [" + user.getUsername() + "] 的 access token 已刷新！新的 accessToken: " + response.getData().getAccessToken());
+            }
+            return ResponseResult.error("用户 [" + user.getUsername() + "] 的 access token 刷新失败！" + response.getMsg());
+        } catch (AuthException e) {
+            return ResponseResult.error(e.getErrorMsg());
+        }
+    }
+
+    /** 查看当前第三方授权用户列表
+     * @return 第三方授权用户列表
+     */
+    @PlatLog(value = "查看当前第三方授权用户列表", category = 40)
+    @RequestMapping("/login/social/users")
+    public ModelAndView users() {
+        Map<String, Object> map = new HashMap<>(1);
+        map.put("users", justAuthUserService.listAll());
+        return new ModelAndView("users", map);
     }
 
     /** 第三方社交平台账号绑定

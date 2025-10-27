@@ -24,7 +24,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.util.Assert;
 
 /**
- * 第三方登录 AuthenticationToken
+ * 第三方登录 ThirdAuthenticationToken
  *
  * @author Linlan
  * 

@@ -17,6 +17,7 @@
  */
 package net.linlan.social.security;
 
+import net.linlan.frame.FrameUserDetails;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.MessageSource;
 import org.springframework.context.MessageSourceAware;
@@ -35,7 +36,7 @@ import org.springframework.util.Assert;
 import net.linlan.social.vo.ThirdLoginBody;
 
 /**
- * 第三方登录 AuthenticationProvider
+ * 第三方登录 ThirdAuthenticationProvider
  *
  * @author Linlan
  * 
@@ -67,13 +68,13 @@ public class ThirdAuthenticationProvider implements AuthenticationProvider, Init
             // 获取用户 openId
             String openId = thirdOpenIdService.getOpenId(thirdLoginBody);
             // 获取用户信息
-            UserDetails userDetails = thirdUserDetailsService
+            FrameUserDetails frameUserDetails = thirdUserDetailsService
                 .loadUserByThirdParams(thirdLoginBody.getServerType(), openId);
-            if (userDetails == null) {
+            if (frameUserDetails == null) {
                 throw new BadCredentialsException("Bad credentials");
             }
 
-            return createSuccessAuthentication(authentication, userDetails);
+            return createSuccessAuthentication(authentication, frameUserDetails);
         } catch (UsernameNotFoundException ex) {
             throw new BadCredentialsException(this.messages
                 .getMessage("ThirdAuthenticationProvider.badCredentials", "Bad credentials"));
