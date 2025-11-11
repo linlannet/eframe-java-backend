@@ -67,7 +67,7 @@ public interface AdminUserPositionDao extends MybatisBaseDao<AdminUserPosition> 
      */
     public int batchUserPosition(List<AdminUserPosition> userPostList);
 
-    List<Long> selectPostListByAdminId(Long adminId);
+    List<String> selectPostListByAdminId(Long adminId);
 
     /**
      * 查询用户所属岗位组

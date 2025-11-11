@@ -511,8 +511,8 @@
         <if test="posRank != null and posRank != ''">
             AND B.POS_RANK = #{posRank}
         </if>
-        <if test="roleTypeId != null and roleTypeId != ''">
-            AND B.ROLETYPE_ID = #{roleTypeId}
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
         </if>
         <if test="createTime != null and createTime != ''">
             AND B.CREATE_TIME like  concat('%', #{createTime},'%')
@@ -537,8 +537,8 @@
         <if test="posRank != null and posRank != ''">
             AND B.POS_RANK = #{posRank}
         </if>
-        <if test="roleTypeId != null and roleTypeId != ''">
-            AND B.ROLETYPE_ID = #{roleTypeId}
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
         </if>
         <if test="createTime != null and createTime != ''">
             AND B.CREATE_TIME like  concat('%', #{createTime},'%')
@@ -567,8 +567,8 @@
         <if test="posRank != null and posRank != ''">
             AND POS.POS_RANK = #{posRank}
         </if>
-        <if test="roleTypeId != null and roleTypeId != ''">
-            AND POS.ROLETYPE_ID = #{roleTypeId}
+        <if test="roletypeId != null and roletypeId != ''">
+            AND POS.ROLETYPE_ID = #{roletypeId}
         </if>
         <if test="createTime != null and createTime != ''">
             AND POS.CREATE_TIME like  concat('%', #{createTime},'%')
@@ -596,8 +596,8 @@
         <if test="posRank != null and posRank != ''">
             AND B.POS_RANK = #{posRank}
         </if>
-        <if test="roleTypeId != null and roleTypeId != ''">
-            AND B.ROLETYPE_ID = #{roleTypeId}
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
         </if>
         <if test="createTime != null and createTime != ''">
             AND B.CREATE_TIME like  concat('%', #{createTime},'%')

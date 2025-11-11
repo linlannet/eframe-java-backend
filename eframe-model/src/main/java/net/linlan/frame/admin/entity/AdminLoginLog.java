@@ -55,7 +55,7 @@ public class AdminLoginLog extends BaseEntity {
     private String  appId;
 
     /**
-     * 日志类型，1登录2登出
+     * 日志类型
      */
     private Integer category;
 

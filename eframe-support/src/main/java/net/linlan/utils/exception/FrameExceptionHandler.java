@@ -19,8 +19,6 @@ package net.linlan.utils.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -29,6 +27,8 @@ import org.springframework.web.bind.MissingPathVariableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+
+import lombok.extern.slf4j.Slf4j;
 
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
@@ -41,9 +41,9 @@ import net.linlan.utils.text.Convert;
  * 
  * @author Linlan
  */
+@Slf4j
 @RestControllerAdvice
-public class ExceptionEntHandler {
-    private static final Logger log = LoggerFactory.getLogger(ExceptionEntHandler.class);
+public class FrameExceptionHandler {
 
     /**
      * 权限校验异常

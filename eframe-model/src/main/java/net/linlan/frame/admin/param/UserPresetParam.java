@@ -47,7 +47,7 @@ public class UserPresetParam extends BaseParam {
      * 角色类型，R31 WEB，R32移动
      * 对应字段：SYNC_MODE
      */
-    private String  roleTypeId;
+    private String  syncMode;
     /**
      * 组id
      */

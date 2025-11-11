@@ -45,7 +45,7 @@ import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUserRole;
 import net.linlan.frame.admin.param.AdminDeptParam;
 import net.linlan.frame.admin.service.AdminDeptService;
-import net.linlan.frame.admin.service.AdminRoleVoService;
+import net.linlan.frame.admin.service.AdminRoleService;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.comm.service.SysPermissionService;
@@ -75,7 +75,7 @@ public class SysRoleController extends BaseController {
     @Resource
     private SysRoleService               sysRoleService;
     @Resource
-    private AdminRoleVoService           adminRoleVoService;
+    private AdminRoleService             adminRoleService;
     @Resource
     private TokenService                 tokenService;
     @Resource
@@ -412,7 +412,7 @@ public class SysRoleController extends BaseController {
     @Encrypt
     @LimitScope(name = "sysRoleCancel", key = "sysRoleCancel")
     public ResponseResult<String> cancelAuthUser(@RequestBody AdminUserRole input) {
-        return returnRow(adminRoleVoService.deleteAuthUser(input.getRoleId(), input.getAdminId()));
+        return returnRow(adminRoleService.deleteAuthUser(input.getRoleId(), input.getAdminId()));
     }
 
     /**
@@ -427,7 +427,7 @@ public class SysRoleController extends BaseController {
     @Encrypt
     @LimitScope(name = "sysRoleCancelAll", key = "sysRoleCancelAll")
     public ResponseResult<String> cancelAuthUserAll(Long roleId, Long[] adminIds) {
-        return returnRow(adminRoleVoService.deleteAuthUsers(roleId, adminIds));
+        return returnRow(adminRoleService.deleteAuthUsers(roleId, adminIds));
     }
 
     /**
@@ -443,7 +443,7 @@ public class SysRoleController extends BaseController {
     @LimitScope(name = "sysRoleSelectAll", key = "sysRoleSelectAll")
     public ResponseResult<String> selectAuthUserAll(Long roleId, Long[] adminIds) {
         adminMenuRolePosEntryManager.checkRoleDataScope(roleId);
-        return returnRow(adminRoleVoService.insertAuthUsers(roleId, adminIds));
+        return returnRow(adminRoleService.insertAuthUsers(roleId, adminIds));
     }
 
     /**

@@ -76,7 +76,7 @@
                 <!-- mysql为limit函数进行处理 -->
                 <choose>
                     <when test='_databaseId == "mysql" or _databaseId == "xg"'>
-                        (SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
+                        (SELECT B.*,org.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                         WHERE 1 = 1
                         <include refid="commonList"></include>
@@ -88,7 +88,7 @@
                         ( SELECT ROW_NUMBER() OVER (
                             <include refid="getListOrderBy"></include>
                         ) AS RN, A.* FROM (
-                            SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName FROM
+                            SELECT B.*,org.NAME as inOrganName, APP.NAME as appName FROM
                             CORE_ACCOUNT B
                         <include refid="commonUnionJoin"></include>
                             WHERE 1 = 1
@@ -99,7 +99,7 @@
                 </choose>
             </when>
             <otherwise>
-                ( select B.*,ORG.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
+                ( select B.*,org.NAME as inOrganName, APP.NAME as appName from CORE_ACCOUNT B
                 <include refid="commonUnionJoin"></include>
                 WHERE 1 = 1
                 <include refid="commonList"></include>
@@ -153,7 +153,7 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-    LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+    LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
     LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
     </sql>
     <!-- sql commonList 通过输入的条件，获取返回的list列表对象
@@ -187,7 +187,9 @@
         <if test="serverIp != null and serverIp.trim() != ''">
             and B.SERVER_IP = #{serverIp}
         </if>
-
+        <if test="serverType != null and serverType.trim() != ''">
+            and B.SERVER_TYPE = #{serverType}
+        </if>
         <if test="description != null and description.trim() != ''">
             and B.DESCRIPTION like concat('%',concat(#{description},'%'))
         </if>
@@ -320,9 +322,9 @@
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="coreAccountDtoMap">
 
-        SELECT B.*,ORG.NAME as inOrganName, APP.NAME as appName
+        SELECT B.*,org.NAME as inOrganName, APP.NAME as appName
         FROM CORE_ACCOUNT B
-                 LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+                 LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
                  LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE ACCOUNT_ID = #{value}
     </select>
@@ -344,6 +346,9 @@
         </if>
         <if test="serverIp != null and serverIp.trim() != ''">
             and B.SERVER_IP = #{serverIp}
+        </if>
+        <if test="serverType != null and serverType.trim() != ''">
+            and B.SERVER_TYPE = #{serverType}
         </if>
 
     </select>
@@ -367,7 +372,7 @@
 
     <select id="getKeyValueList" resultMap="coreAccountKvMap">
         SELECT B.ACCOUNT_ID AS cmsKey, B.NAME as cmsValue from CORE_ACCOUNT B
-        LEFT JOIN BASE_ORGAN ORG ON B.ORGAN_ID = ORG.ORGAN_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
         LEFT JOIN BASE_APP APP on B.APP_ID = APP.APP_ID
         WHERE 1 = 1
         <!-- 公共查询条件-->

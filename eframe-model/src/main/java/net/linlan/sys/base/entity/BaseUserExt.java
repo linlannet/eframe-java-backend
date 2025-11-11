@@ -22,8 +22,8 @@ import java.util.Date;
 import lombok.Data;
 
 import net.linlan.commons.core.RandomUtils;
+import net.linlan.sys.base.constant.IdTypeEnum;
 import net.linlan.utils.entity.BaseEntity;
-import static net.linlan.sys.web.KernelConstant.DEFAULT_ID_TYPE;
 
 /**
  *
@@ -218,7 +218,7 @@ public class BaseUserExt extends BaseEntity {
             setId(RandomUtils.randomSid());
         }
         if (getIdType() == null) {
-            setIdType(DEFAULT_ID_TYPE);
+            setIdType(IdTypeEnum.SHENFENZHENG.getKey());
         }
     }
 

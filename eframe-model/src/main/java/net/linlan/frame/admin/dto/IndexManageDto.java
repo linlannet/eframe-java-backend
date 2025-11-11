@@ -30,9 +30,9 @@ import lombok.Data;
 public class IndexManageDto {
 
     /**
-     * 站点数
+     * 应用数
      */
-    private String siteNum;
+    private String appNum;
     /**
      * 平台账户数
      */

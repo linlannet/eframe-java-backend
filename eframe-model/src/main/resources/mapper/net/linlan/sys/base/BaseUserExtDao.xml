@@ -40,7 +40,7 @@
         <result property="address" column="ADDRESS"/>
         <result property="nativePlace" column="NATIVE_PLACE"/>
         <result property="familyAddress" column="FAMILY_ADDRESS"/>
-        <result property="homeTel" column="HOME_ID_MOBILE"/>
+        <result property="homeTel" column="HOME_TEL"/>
         <result property="qqNo" column="QQ_NO"/>
         <result property="weixinId" column="WEIXIN_ID"/>
         <result property="weiboId" column="WEIBO_ID"/>
@@ -66,16 +66,16 @@
         SELECT
         B.USER_ID, B.NICKNAME,
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                AES_DECRYPT(UNHEX(B.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
-                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
-                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_MOBILE,
             </when>
             <otherwise>
                 B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
             </otherwise>
         </choose>
-        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_TEL, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
         FROM BASE_USER_EXT B
         WHERE USER_ID = #{value}
     </select>
@@ -85,16 +85,16 @@
         SELECT
         B.USER_ID, B.NICKNAME,
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                AES_DECRYPT(UNHEX(B.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
-                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
-                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_MOBILE,
             </when>
             <otherwise>
                 B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
             </otherwise>
         </choose>
-        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_TEL, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
         FROM BASE_USER_EXT B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -121,8 +121,8 @@
         <if test="nickname != null and nickname != ''">
             and B.NICKNAME = #{nickname}
         </if>
-        <if test="name != null and name != ''">
-            and B.ID_NAME = #{name}
+        <if test="idName != null and idName != ''">
+            and B.ID_NAME = #{idName}
         </if>
         <if test="idNum != null and idNum != ''">
             and B.ID_NUM = #{idNum}
@@ -164,7 +164,7 @@
             and B.FAMILY_ADDRESS = #{familyAddress}
         </if>
         <if test="homeTel != null and homeTel != ''">
-            and B.HOME_ID_MOBILE = #{homeTel}
+            and B.HOME_TEL = #{homeTel}
         </if>
         <if test="qqNo != null and qqNo != ''">
             and B.QQ_NO = #{qqNo}
@@ -227,19 +227,19 @@
     <insert id="save" parameterType="net.linlan.sys.base.entity.BaseUserExt">
         INSERT INTO BASE_USER_EXT
         (
-        USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+        USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_TEL, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
         )
         VALUES
         (
         #{id}, #{nickname},
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                HEX(AES_ENCRYPT(#{name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                HEX(AES_ENCRYPT(#{idName}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
             </when>
             <otherwise>
-                #{name}, #{idNum}, #{idMobile},
+                #{idName}, #{idNum}, #{idMobile},
             </otherwise>
         </choose>
         #{idType}, #{namePy}, #{sname}, #{nameEn}, #{searchCode}, #{sex}, #{birthday}, #{postCode}, #{address}, #{nativePlace}, #{familyAddress}, #{homeTel}, #{qqNo}, #{weixinId}, #{weiboId}, #{spareMobile}, #{isMobileConfirm}, #{emergencePhone}, #{keywords}, #{intro}, #{comefrom}, #{imagePath}, #{userSignature}, #{ipRange}, #{macCode}, #{resume}, #{spare1}, #{spare2}, #{idType}, #{spare4}
@@ -251,20 +251,20 @@
             <when test='_databaseId == "mysql"'>
                 INSERT INTO BASE_USER_EXT
                 (
-                USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+                USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_TEL, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
                 )
                 VALUES
                 <foreach collection="list" index="index" item="item" separator=",">
                     (
                     #{item.id}, #{item.nickname},
                     <choose>
-                        <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                            HEX(AES_ENCRYPT(#{item.name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                        <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                            HEX(AES_ENCRYPT(#{item.idName}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
                         </when>
                         <otherwise>
-                            #{item.name}, #{item.idNum}, #{item.idMobile},
+                            #{item.idName}, #{item.idNum}, #{item.idMobile},
                         </otherwise>
                     </choose>
                     #{item.idType}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.sex}, #{item.birthday}, #{item.postCode}, #{item.address}, #{item.nativePlace}, #{item.familyAddress}, #{item.homeTel}, #{item.qqNo}, #{item.weixinId}, #{item.weiboId}, #{item.spareMobile}, #{item.isMobileConfirm}, #{item.emergencePhone}, #{item.keywords}, #{item.intro}, #{item.comefrom}, #{item.imagePath}, #{item.userSignature}, #{item.ipRange}, #{item.macCode}, #{item.resume}, #{item.spare1}, #{item.spare2}, #{item.spare3}, #{item.spare4}
@@ -275,19 +275,19 @@
                 <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
                     INSERT INTO BASE_USER_EXT
                     (
-                    USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_ID_MOBILE, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
+                    USER_ID, NICKNAME, ID_NAME, ID_NUM, ID_MOBILE, ID_TYPE, NAME_PY, SNAME, NAME_EN, SEARCH_CODE, SEX, BIRTHDAY, POST_CODE, ADDRESS, NATIVE_PLACE, FAMILY_ADDRESS, HOME_TEL, QQ_NO, WEIXIN_ID, WEIBO_ID, SPARE_MOBILE, IS_MOBILE_CONFIRM, EMERGENCE_PHONE, KEYWORDS, INTRO, COMEFROM, IMAGE_PATH, USER_SIGNATURE, IP_RANGE, MAC_CODE, RESUME, SPARE1, SPARE2, SPARE3, SPARE4
                     )
                     VALUES
                     (
                     #{item.id}, #{item.nickname},
                     <choose>
-                        <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                            HEX(AES_ENCRYPT(#{item.name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
-                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')),
+                        <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                            HEX(AES_ENCRYPT(#{item.idName}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idNum}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
+                            HEX(AES_ENCRYPT(#{item.idMobile}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')),
                         </when>
                         <otherwise>
-                            #{item.name}, #{item.idNum}, #{item.idMobile},
+                            #{item.idName}, #{item.idNum}, #{item.idMobile},
                         </otherwise>
                     </choose>
                     #{item.idType}, #{item.namePy}, #{item.sname}, #{item.nameEn}, #{item.searchCode}, #{item.sex}, #{item.birthday}, #{item.postCode}, #{item.address}, #{item.nativePlace}, #{item.familyAddress}, #{item.homeTel}, #{item.qqNo}, #{item.weixinId}, #{item.weiboId}, #{item.spareMobile}, #{item.isMobileConfirm}, #{item.emergencePhone}, #{item.keywords}, #{item.intro}, #{item.comefrom}, #{item.imagePath}, #{item.userSignature}, #{item.ipRange}, #{item.macCode}, #{item.resume}, #{item.spare1}, #{item.spare2}, #{item.spare3}, #{item.spare4}
@@ -313,7 +313,7 @@
             <if test="address != null">ADDRESS = #{address}, </if>
             <if test="nativePlace != null">NATIVE_PLACE = #{nativePlace}, </if>
             <if test="familyAddress != null">FAMILY_ADDRESS = #{familyAddress}, </if>
-            <if test="homeTel != null">HOME_ID_MOBILE = #{homeTel}, </if>
+            <if test="homeTel != null">HOME_TEL = #{homeTel}, </if>
             <if test="qqNo != null">QQ_NO = #{qqNo}, </if>
             <if test="weixinId != null">WEIXIN_ID = #{weixinId}, </if>
             <if test="weiboId != null">WEIBO_ID = #{weiboId}, </if>
@@ -370,16 +370,16 @@
         SELECT
         B.USER_ID, B.NICKNAME,
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
-                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
-                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_MOBILE,
             </when>
             <otherwise>
                 B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
             </otherwise>
         </choose>
-        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_TEL, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
         FROM BASE_USER_EXT B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -392,16 +392,16 @@
         SELECT
         B.USER_ID, B.NICKNAME,
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NAME,
-                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_NUM,
-                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') AS ID_MOBILE,
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                AES_DECRYPT(UNHEX(B.ID_NAME), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NAME,
+                AES_DECRYPT(UNHEX(B.ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_NUM,
+                AES_DECRYPT(UNHEX(B.ID_MOBILE), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') AS ID_MOBILE,
             </when>
             <otherwise>
                 B.ID_NAME, B.ID_NUM, B.ID_MOBILE,
             </otherwise>
         </choose>
-        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_ID_MOBILE, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
+        B.NAME_PY, B.SNAME, B.NAME_EN, B.SEARCH_CODE, B.SEX, B.BIRTHDAY, B.POST_CODE, B.ADDRESS, B.NATIVE_PLACE, B.FAMILY_ADDRESS, B.HOME_TEL, B.QQ_NO, B.WEIXIN_ID, B.WEIBO_ID, B.SPARE_MOBILE, B.IS_MOBILE_CONFIRM, B.EMERGENCE_PHONE, B.KEYWORDS, B.INTRO, B.COMEFROM, B.IMAGE_PATH, B.USER_SIGNATURE, B.IP_RANGE, B.MAC_CODE, B.RESUME, B.SPARE1, B.SPARE2, B.SPARE3, B.SPARE4
         FROM BASE_USER_EXT B
         WHERE USER_ID = #{value}
     </select>
@@ -411,8 +411,8 @@
         select USER_ID AS userId from BASE_USER_EXT  WHERE 1=1
         <if test='lessAge != null and lessAge !=""'>
             <choose>
-                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'), 7, 8),curdate()) > #{lessAge}]]>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}'), 7, 8),curdate()) > #{lessAge}]]>
                 </when>
                 <otherwise>
                     <![CDATA[ and timestampdiff(year, substring(ID_NUM,7,8),curdate()) > #{lessAge}]]>
@@ -421,8 +421,8 @@
         </if>
         <if test='moreAge != null and moreAge !=""'>
             <choose>
-                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'), 7, 8),curdate()) <= #{moreAge}]]>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    <![CDATA[ and timestampdiff(year, substring(HEX(AES_ENCRYPT(ID_NUM), '${@net.linlan.config.PlatformSecurityConfig@dbKey}'), 7, 8),curdate()) <= #{moreAge}]]>
                 </when>
                 <otherwise>
                     <![CDATA[ and timestampdiff(year, substring(ID_NUM,7,8),curdate()) <= #{moreAge}]]>
@@ -462,13 +462,13 @@
     <!-- update object，更新对象信息 -->
     <update id="updateSensitiveInfo" parameterType="net.linlan.sys.base.entity.BaseUserExt">
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
                 UPDATE BASE_USER_EXT
                 <set>
-                    <if test="idNum != null">ID_NUM = HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')), </if>
+                    <if test="idNum != null">ID_NUM = HEX(AES_ENCRYPT(#{idNum}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')), </if>
                     <if test="idType != null">ID_TYPE = #{idType}, </if>
-                    <if test="name != null">ID_NAME = HEX(AES_ENCRYPT(#{name}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')), </if>
-                    <if test="idMobile != null">ID_MOBILE = HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}')) </if>
+                    <if test="idName != null">ID_NAME = HEX(AES_ENCRYPT(#{idName}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')), </if>
+                    <if test="idMobile != null">ID_MOBILE = HEX(AES_ENCRYPT(#{idMobile}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')) </if>
                 </set>
                 WHERE USER_ID = #{id}
             </when>
@@ -477,7 +477,7 @@
                 <set>
                     <if test="idNum != null">ID_NUM = #{idNum}, </if>
                     <if test="idType != null">ID_TYPE = #{idType}, </if>
-                    <if test="name != null">ID_NAME = #{name}, </if>
+                    <if test="idName != null">ID_NAME = #{idName}, </if>
                     <if test="idMobile != null">ID_MOBILE = #{idMobile} </if>
                 </set>
                 WHERE USER_ID = #{id}

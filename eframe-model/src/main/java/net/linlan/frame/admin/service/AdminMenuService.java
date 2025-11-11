@@ -27,7 +27,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.frame.admin.dao.AdminMenuVoDao;
+import net.linlan.frame.admin.dao.AdminMenuDao;
 import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.param.AdminMenuVoParam;
@@ -41,10 +41,10 @@ import net.linlan.sys.role.service.SysRoleService;
  * @author Linlan
  */
 @Service
-public class AdminMenuVoService {
+public class AdminMenuService {
 
     @Resource
-    private AdminMenuVoDao   adminMenuDao;
+    private AdminMenuDao     adminMenuDao;
     @Resource
     private SysRoleService   sysRoleService;
     @Resource
@@ -65,24 +65,24 @@ public class AdminMenuVoService {
     /**
      * 根据用户查询系统菜单列表
      * 
-     * @param userId 用户ID
+     * @param adminId 用户LID
      * @return 菜单列表
      */
-    public List<AdminMenuVo> selectMenuList(String userId) {
-        return selectMenuList(new AdminMenuVoParam(), userId);
+    public List<AdminMenuVo> selectMenuList(Long adminId) {
+        return selectMenuList(new AdminMenuVoParam(), adminId);
     }
 
     /**
      * 查询系统菜单列表
      * 
      * @param menu 菜单信息
-     * @param userId 用户ID
+     * @param adminId 用户LID
      * @return 菜单列表
      */
-    public List<AdminMenuVo> selectMenuList(AdminMenuVoParam menu, String userId) {
+    public List<AdminMenuVo> selectMenuList(AdminMenuVoParam menu, Long adminId) {
         List<AdminMenuVo> menuList = null;
         // 管理员显示所有菜单信息
-        AdminUser adminUser = adminUserService.findByUserId(userId);
+        AdminUser adminUser = adminUserService.findById(adminId);
         if (adminUser.isAdmin()) {
             menuList = adminMenuDao.selectMenuList(menu);
         } else {

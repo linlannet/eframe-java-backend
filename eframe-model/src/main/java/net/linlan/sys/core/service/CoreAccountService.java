@@ -39,6 +39,9 @@ import net.linlan.sys.core.dto.OrganBaseInfoDto;
 import net.linlan.sys.core.entity.CoreAccount;
 import net.linlan.sys.core.param.CoreAccountParam;
 import net.linlan.sys.core.param.OrganAccountParam;
+import net.linlan.sys.web.KernelConstant;
+import net.linlan.sys.web.RedisService;
+import net.linlan.utils.constant.CacheConstants;
 
 /**
  *
@@ -53,6 +56,8 @@ public class CoreAccountService {
 
     @Resource
     private CoreAccountDao dao;
+    @Resource
+    private RedisService   redisService;
 
     /** get the list of entity CoreAccount
      * 列表方法，返回列表的平台账户数据 {@link List} 对象，包含 {@link CoreAccount} 列表
@@ -258,11 +263,28 @@ public class CoreAccountService {
         if (StringUtils.isBlank(serverType)) {
             return null;
         }
-        List<CoreAccount> coreAccountList = getByParams(
-            new StringMap().put("serverType", serverType).map());
-        if (null != coreAccountList && coreAccountList.size() > 0) {
-            return coreAccountList.get(0);
+        //增加缓存方法
+        CoreAccount coreAccount = redisService.get(getCacheKey(serverType));
+        if (ObjectUtils.isEmpty(coreAccount)) {
+            List<CoreAccount> coreAccountList = getByParams(
+                new StringMap().put("serverType", serverType).map());
+            if (null != coreAccountList && coreAccountList.size() > 0) {
+                coreAccount = coreAccountList.get(0);
+                redisService.set(getCacheKey(serverType), coreAccount,
+                    KernelConstant.ONE_MINUTE_EXPIRE * 5);
+            }
         }
-        return null;
+        return coreAccount;
     }
+
+    /**
+     * 设置cache key
+     *
+     * @param configKey 参数键
+     * @return 缓存键key
+     */
+    private String getCacheKey(String configKey) {
+        return CacheConstants.CORE_ACCOUNT_KEY + configKey;
+    }
+
 }

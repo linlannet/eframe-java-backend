@@ -21,14 +21,34 @@ package net.linlan.sys.role.constant;
  * 菜单类型枚举类
  */
 public enum MenuTypeEnum {
-                          ADMIN("ADMIN",
-                                "管理类"), APP("APP",
-                                            "移动端类"), WORK("WORK",
-                                                          "工作端类"), SCREEN("SCREEN",
-                                                                          "大屏端类"), MEMBER("MEMBER",
-                                                                                          "会员类"), AUDIT("AUDIT",
-                                                                                                        "审计类"), OTHER("OTHER",
-                                                                                                                      "其他类"),;
+                          /**
+                           * 管理类
+                           */
+                          ADMIN("ADMIN", "管理类"),
+                          /**
+                           * 移动端类
+                           */
+                          APP("APP", "移动端类"),
+                          /**
+                           * 工作端类
+                           */
+                          WORK("WORK", "工作端类"),
+                          /**
+                           * 大屏端类
+                           */
+                          SCREEN("SCREEN", "大屏端类"),
+                          /**
+                           * 会员类
+                           */
+                          MEMBER("MEMBER", "会员类"),
+                          /**
+                           * 审计类
+                           */
+                          AUDIT("AUDIT", "审计类"),
+                          /**
+                           * 其他类
+                           */
+                          OTHER("OTHER", "其他类"),;
 
     /**
      * 配置项名称

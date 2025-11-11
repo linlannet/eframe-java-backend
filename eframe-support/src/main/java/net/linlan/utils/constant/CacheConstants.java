@@ -77,4 +77,30 @@ public class CacheConstants {
      * redis 字典缓存前缀
      */
     public static final String BASE_XZQH_KEY        = "base_xzqh:";
+
+    /**
+     * 平台用户的ID，对平台信息（前台工程访问信息）进行缓存处理使用的KEY，缓存10分钟
+     */
+    public static final String CORE_ACCOUNT_KEY     = "core_account:";
+
+    /**
+     * third 第三方缓存前缀
+     */
+    public static final String THIRD_KEY            = "third:";
+
+    /**
+     * 微信登录用户状态
+     */
+    public static final String WX_LOGIN_USER_CODE   = "wechat:login_user_status:";
+
+    /**
+     * 微信登录用户信息
+     */
+    public static final String WX_LOGIN_USER        = "wechat:login_user:";
+
+    /**
+     * 微信登录用户信息
+     */
+    public static final String WX_MP_USER           = "wechat:mp_user:";
+
 }

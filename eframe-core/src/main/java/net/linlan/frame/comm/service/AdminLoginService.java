@@ -31,6 +31,7 @@ import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.admin.service.InitialConfigService;
@@ -62,22 +63,14 @@ import net.linlan.utils.ip.IPUtils;
 public class AdminLoginService {
     @Resource
     private TokenService          tokenService;
-
     @Resource
     private AuthenticationManager authenticationManager;
-
     @Resource
     private RedisService          redisService;
-
     @Resource
     private AdminUserService      adminUserService;
-
     @Resource
     private InitialConfigService  initialConfigService;
-    @Resource
-    private SysPasswordService    sysPasswordService;
-    @Resource
-    private SysPermissionService  sysPermissionService;
 
     /**
      * 登录验证
@@ -108,11 +101,13 @@ public class AdminLoginService {
                 AsyncManager.me()
                     .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
-                        appId));
+                        appId, KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
                 throw new UserPasswordNotMatchException();
             } else {
-                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
+                AsyncManager.me()
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                        Constants.LOGIN_FAIL, e.getMessage(), appId, KernelConstant.SUPER_ADMIN,
+                        LogCategoryEnum.ADMIN.getKey()));
                 throw new CommonException(e.getMessage());
             }
         } finally {
@@ -123,9 +118,10 @@ public class AdminLoginService {
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
-                loginUser.getAppId()));
+                loginUser.getAppId(), KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
         // 生成token
-        return tokenService.createToken(loginUser);
+        AppLoginInfo appLoginInfo = tokenService.createToken(loginUser);
+        return appLoginInfo;
     }
 
     /**
@@ -155,11 +151,13 @@ public class AdminLoginService {
                 AsyncManager.me()
                     .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
                         Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"),
-                        appId));
+                        appId, KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
                 throw new UserPasswordNotMatchException();
             } else {
-                AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                    username, Constants.LOGIN_FAIL, e.getMessage(), appId));
+                AsyncManager.me()
+                    .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                        Constants.LOGIN_FAIL, e.getMessage(), appId, KernelConstant.SUPER_ADMIN,
+                        LogCategoryEnum.ADMIN.getKey()));
                 throw new CommonException(e.getMessage());
             }
         } finally {
@@ -170,9 +168,10 @@ public class AdminLoginService {
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
-                loginUser.getAppId()));
+                loginUser.getAppId(), KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
         // 生成token
-        return tokenService.createToken(loginUser);
+        AppLoginInfo appLoginInfo = tokenService.createToken(loginUser);
+        return appLoginInfo;
     }
 
     /**
@@ -191,14 +190,16 @@ public class AdminLoginService {
             if (captcha == null) {
                 AsyncManager.me()
                     .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                        Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.expire"), appId));
+                        Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.expire"), appId,
+                        KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
                 throw new CaptchaExpireException();
             }
             redisService.delete(verifyKey);
             if (!code.equalsIgnoreCase(captcha)) {
                 AsyncManager.me()
                     .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                        Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.error"), appId));
+                        Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.error"), appId,
+                        KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
                 throw new CaptchaException();
             }
         }
@@ -213,8 +214,10 @@ public class AdminLoginService {
     public void loginPreCheck(String username, String password, String appId) {
         // 用户名或密码为空 错误
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
-            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                username, Constants.LOGIN_FAIL, MessageUtils.message("not.null"), appId));
+            AsyncManager.me()
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                    Constants.LOGIN_FAIL, MessageUtils.message("not.null"), appId,
+                    KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
             throw new UserNotExistsException();
         }
         // 密码如果不在指定范围内 错误
@@ -222,7 +225,8 @@ public class AdminLoginService {
             || password.length() > UserConstants.PASSWORD_MAX_LENGTH) {
             AsyncManager.me()
                 .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                    Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId));
+                    Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId,
+                    KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
             throw new UserPasswordNotMatchException();
         }
         // 用户名不在指定范围内 错误
@@ -230,14 +234,17 @@ public class AdminLoginService {
             || username.length() > UserConstants.USERNAME_MAX_LENGTH) {
             AsyncManager.me()
                 .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
-                    Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId));
+                    Constants.LOGIN_FAIL, MessageUtils.message("user.password.not.match"), appId,
+                    KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
             throw new UserPasswordNotMatchException();
         }
         // IP黑名单校验
         String blackStr = initialConfigService.selectConfigByKey("sys.login.blackIPList");
         if (IPUtils.isMatchedIp(blackStr, IPUtils.getIpAddr(ServletUtils.getRequest()))) {
-            AsyncManager.me().execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS,
-                username, Constants.LOGIN_FAIL, MessageUtils.message("login.blocked"), appId));
+            AsyncManager.me()
+                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                    Constants.LOGIN_FAIL, MessageUtils.message("login.blocked"), appId,
+                    KernelConstant.SUPER_ADMIN, LogCategoryEnum.ADMIN.getKey()));
             throw new BlackListException();
         }
     }

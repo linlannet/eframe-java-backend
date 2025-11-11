@@ -223,11 +223,6 @@ public class KernelConstant {
      */
     public static final int     ERROR_COUNT_LIMIT       = 6;
 
-    /**
-     * 默认证件类型，身份证为1908
-     */
-    public static final String  DEFAULT_ID_TYPE         = "shenfenzheng";
-
     //--------------------各种配置项的key值---------------------------------
 
     public static void main(String[] args) {

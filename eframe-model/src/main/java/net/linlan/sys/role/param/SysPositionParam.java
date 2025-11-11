@@ -111,10 +111,6 @@ public class SysPositionParam extends BaseParam {
      */
     private String   id;
     /**
-     * 角色类型编号
-     */
-    private String   roleTypeId;
-    /**
      * 创建时间
      */
     private String   createTime;

@@ -59,7 +59,7 @@ public interface BaseUserExtDao extends MybatisBaseDao<BaseUserExt> {
 
     /** 通过身份证号码的中间位数查询用户年龄段
      * @param map
-     * @return
+     * @return    返回列表
      */
     List<Map<String, Object>> getUserAgeList(Map<String, Object> map);
 

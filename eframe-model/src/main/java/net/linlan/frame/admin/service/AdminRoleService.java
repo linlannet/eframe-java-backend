@@ -28,7 +28,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.frame.admin.dao.AdminRoleVoDao;
+import net.linlan.frame.admin.dao.AdminRoleDao;
 import net.linlan.frame.admin.dao.AdminUserRoleDao;
 import net.linlan.frame.admin.entity.AdminUserRole;
 
@@ -38,9 +38,9 @@ import net.linlan.frame.admin.entity.AdminUserRole;
  * @author Linlan
  */
 @Service
-public class AdminRoleVoService {
+public class AdminRoleService {
     @Resource
-    private AdminRoleVoDao   frameAdminRoleDao;
+    private AdminRoleDao     adminRoleDao;
 
     @Resource
     private AdminUserRoleDao adminUserRoleDao;
@@ -52,7 +52,7 @@ public class AdminRoleVoService {
      * @return 选中角色ID列表
      */
     public List<Long> selectRoleListByAdminId(Long adminId) {
-        return frameAdminRoleDao.selectRoleListByAdminId(adminId);
+        return adminRoleDao.selectRoleListByAdminId(adminId);
     }
 
     /**
@@ -62,7 +62,7 @@ public class AdminRoleVoService {
      * @return 权限列表
      */
     public Set<String> selectRoleCodeByAdminId(Long adminId) {
-        List<String> perms = frameAdminRoleDao.selectRoleCodeByAdminId(adminId);
+        List<String> perms = adminRoleDao.selectRoleCodeByAdminId(adminId);
         Set<String> permsSet = new HashSet<>();
         for (String perm : perms) {
             if (ObjectUtils.isNotEmpty(perm)) {

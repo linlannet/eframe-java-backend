@@ -50,7 +50,10 @@ public class FrameUserDetails implements UserDetails {
      * 用户UUID
      */
     private String            userId;
-
+    /**
+     * 用户LID
+     */
+    private Long              userLid;
     /**
      * 所属应用ID
      */

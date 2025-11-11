@@ -68,19 +68,14 @@ public class TreeParam extends BaseParam {
      * 岗位ID
      */
     private String positionId;
-
-    /**
-     * 角色类型id，注意大小写
-     */
-    private String roleTypeId;
     /**
      * 标签类型过滤
      */
     private String refType;
     /**
-     * 如果传入parentId为空，则通过organwId查自身所属机构节点
+     * 如果传入parentId为空，则通过organId查自身所属机构节点
      */
-    private String organwId;
+    private String organId;
     /**
      * 用于资源目录管理的字段
      */

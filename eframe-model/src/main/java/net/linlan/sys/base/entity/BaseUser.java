@@ -39,181 +39,176 @@ public class BaseUser extends BaseEntity {
     /**
      * 用户ID
      */
-    private String      id;
+    private String  id;
 
     /**
      * 行政区划编号，用户来源地
      */
-    private Long        xzqhId;
+    private Long    xzqhId;
 
     /**
      * 创建来源类型
      */
-    private String      source;
+    private String  source;
 
     /**
      * 创建方式0导入1录入2授权
      */
-    private Integer     createType;
+    private Integer createType;
 
     /**
      * 用户名，城市APP市民云的用户名
      */
-    private String      username;
+    private String  username;
 
     /**
      * 手机号码
      */
-    private String      mobile;
+    private String  mobile;
 
     /**
      * 电子邮箱
      */
-    private String      email;
+    private String  email;
 
     /**
      * 密码
      */
-    private String      password;
+    private String  password;
 
     /**
      * 混淆字符
      */
-    private String      salt;
+    private String  salt;
 
     /**
      * 当前来源0缺省1:WEB或PC,2APP21:AndroidAPP,22:IOSAPP,3WAP,4MINI
      */
-    private Integer     srcCode;
+    private Integer srcCode;
 
     /**
      * 注册时间
      */
-    private Date        registerTime;
+    private Date    registerTime;
 
     /**
      * 注册IP
      */
-    private String      registerIp;
+    private String  registerIp;
 
     /**
      * 当前登录时间
      */
-    private Date        currentLoginTime;
+    private Date    currentLoginTime;
 
     /**
      * 当前登录IP
      */
-    private String      currentLoginIp;
+    private String  currentLoginIp;
 
     /**
      * 最后登录的应用ID
      */
-    private String      lastAppId;
+    private String  lastAppId;
 
     /**
      * 最后登录时间
      */
-    private Date        lastLoginTime;
+    private Date    lastLoginTime;
 
     /**
      * 最后登录IP
      */
-    private String      lastLoginIp;
+    private String  lastLoginIp;
 
     /**
      * 最后一次退出时间
      */
-    private Date        lastLogoutTime;
+    private Date    lastLogoutTime;
 
     /**
      * 登录次数
      */
-    private Integer     loginCount;
+    private Integer loginCount;
 
     /**
      * 重置密码KEY
      */
-    private String      resetKey;
+    private String  resetKey;
 
     /**
      * 重置密码VALUE
      */
-    private String      resetPwd;
+    private String  resetPwd;
 
     /**
      * 上次修改密码时间，最后一次修改密码时间
      */
-    private Date        lastResetTime;
+    private Date    lastResetTime;
 
     /**
      * 出错时间
      */
-    private Date        errorTime;
+    private Date    errorTime;
 
     /**
      * 出错数量
      */
-    private Integer     errorCount;
+    private Integer errorCount;
 
     /**
      * 出错IP
      */
-    private String      errorIp;
+    private String  errorIp;
 
     /**
      * 锁定时间
      */
-    private Date        lockTime;
+    private Date    lockTime;
 
     /**
      * 是否激活0否1是
      */
-    private Boolean     activation;
+    private Boolean activation;
 
     /**
      * 激活代码
      */
-    private String      activationCode;
+    private String  activationCode;
 
     /**
      * 排序
      */
-    private Integer     priority;
+    private Integer priority;
 
     /**
      * 删除标记0正常1已删除2应用内受限3回收站
      */
-    private Integer     delFlag;
+    private Integer delFlag;
 
     /**
      * 删除时间
      */
-    private Date        deleteTime;
+    private Date    deleteTime;
 
     /**
      * 描述
      */
-    private String      description;
+    private String  description;
 
     /**
-     * 备用1，第三方的平台的用户名，如随申办统一身份体系的用户名，微信UNIONID
+     * 备用1，头像
      */
-    private String      spare1;
+    private String  spare1;
 
     /**
      * 备用2，第三方用户ID，OpenId
      */
-    private String      spare2;
+    private String  spare2;
     /**
      * 新密码
      */
-    private String      newPassword;
-
-    /**
-     * 全局用户扩展类
-     */
-    private BaseUserExt baseUserExt;
+    private String  newPassword;
 
     /**
      * 初始化方法
@@ -240,9 +235,6 @@ public class BaseUser extends BaseEntity {
         }
         if (getLastLoginIp() == null) {
             setLastLoginIp("127.0.0.1");
-        }
-        if (getBaseUserExt() == null) {
-            setBaseUserExt(new BaseUserExt());
         }
         if (getSrcCode() == null) {
             setSrcCode(KernelConstant.SRC_CODE_DEFAULT);

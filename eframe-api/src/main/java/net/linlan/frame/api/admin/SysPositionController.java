@@ -67,7 +67,7 @@ public class SysPositionController extends BaseController {
     @Resource
     private AdminMenuRolePosEntryManager adminPositionEntryManager;
     @Resource
-    private SysPositionService           adminPositionService;
+    private SysPositionService           sysPositionService;
 
     /**
      * 获取岗位列表
@@ -103,7 +103,7 @@ public class SysPositionController extends BaseController {
         if (ObjectUtils.isEmpty(param)) {
             return;
         }
-        Page<SysPositionDto> result = adminPositionService.getPageDto(param.toModelParam());
+        Page<SysPositionDto> result = sysPositionService.getPageDto(param.toModelParam());
         if (result == null) {
             return;
         }
@@ -125,7 +125,7 @@ public class SysPositionController extends BaseController {
         if (ObjectUtils.isEmpty(postId)) {
             return failure();
         }
-        SysPosition entity = adminPositionService.findById(postId);
+        SysPosition entity = sysPositionService.findById(postId);
         return success(entity);
     }
 

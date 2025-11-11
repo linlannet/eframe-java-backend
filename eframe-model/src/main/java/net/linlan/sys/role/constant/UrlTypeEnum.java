@@ -21,17 +21,46 @@ package net.linlan.sys.role.constant;
  * 菜单地址类型枚举类
  */
 public enum UrlTypeEnum {
-                         CATALOG("CATALOG",
-                                 "类别"), MENU("MENU",
-                                             "菜单"), BUTTON("BUTTON",
-                                                           "按钮"), OUTLINK("OUTLINK",
-                                                                          "外链"), COMPOS("COMPOS",
-                                                                                        "组件"), CHANNEL("CHANNEL",
-                                                                                                       "栏目"), SCENES("SCENES",
-                                                                                                                     "场景"), RECOMMEND("RECOMMEND",
-                                                                                                                                      "推荐"), FOLLOW("FOLLOW",
-                                                                                                                                                    "互动"), OTHER("OTHER",
-                                                                                                                                                                 "其他类"),;
+                         /**
+                          * 目录类
+                          */
+                         CATALOG("CATALOG", "目录类"),
+                         /**
+                          * 菜单类
+                          */
+                         MENU("MENU", "菜单类"),
+                         /**
+                          * 按钮类
+                          */
+                         BUTTON("BUTTON", "按钮类"),
+                         /**
+                          * 外链类
+                          */
+                         OUTLINK("OUTLINK", "外链类"),
+                         /**
+                          * 组件类
+                          */
+                         COMPOS("COMPOS", "组件类"),
+                         /**
+                          * 栏目类
+                          */
+                         CHANNEL("CHANNEL", "栏目类"),
+                         /**
+                          * 场景类
+                          */
+                         SCENES("SCENES", "场景类"),
+                         /**
+                          * 推荐类
+                          */
+                         RECOMMEND("RECOMMEND", "推荐类"),
+                         /**
+                          * 互动类
+                          */
+                         FOLLOW("FOLLOW", "互动类"),
+                         /**
+                          * 其他类
+                          */
+                         OTHER("OTHER", "其他类"),;
 
     /**
      * 配置项名称

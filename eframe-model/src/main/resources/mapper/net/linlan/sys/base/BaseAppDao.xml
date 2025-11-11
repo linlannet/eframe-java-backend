@@ -326,20 +326,18 @@
     <!-- 获取包含外键名称的Dto对象 -->
     <resultMap id="baseAppInfoDtoMap" extends="baseAppDtoMap" type="net.linlan.sys.base.dto.BaseAppInfoDto">
         <result property="ftpName" column="ftpName"/>
-        <result property="sertypeName" column="sertypeName"/>
         <result property="domainName" column="domainName"/>
         <result property="organName" column="organName"/>
     </resultMap>
 
     <select id="getBaseAppInfoDto" resultMap="baseAppInfoDtoMap">
         SELECT B.APP_ID,B. FTP_ID,B. DOMAIN_ID,B. ORGAN_ID,B. XZQH_ID,B. SERTYPE_ID,B. NAME,B. PATH,B. APP_TYPE,B. IS_SITE,B. IS_DISABLED,B. IS_MOBILE_APP,B. STATUS,B. PRIORITY,B. DESCRIPTION
-        , FTP.NAME as ftpName , SERTYPE.NAME as sertypeName , XZQH.NAME as xzqhName, DOMA.NAME as domainName , ORG.NAME as organName
+        , FTP.NAME as ftpName, XZQH.NAME as xzqhName, DOMA.NAME as domainName , org.NAME as organName
         FROM BASE_APP B
         left join BASE_FTP FTP on B.FTP_ID = FTP.FTP_ID
-        left join BASE_SERTYPE SERTYPE on B.SERTYPE_ID = SERTYPE.SERTYPE_ID
         left join BASE_XZQH XZQH  on B.XZQH_ID = XZQH.XZQH_ID
         left join BASE_DOMAIN DOMA  on B.DOMAIN_ID = DOMA.DOMAIN_ID
-        left join BASE_ORGAN ORG  on B.ORGAN_ID = ORG.ORGAN_ID
+        left join BASE_ORGAN org  on B.ORGAN_ID = org.ORGAN_ID
         WHERE B.APP_ID = #{id}
     </select>
 

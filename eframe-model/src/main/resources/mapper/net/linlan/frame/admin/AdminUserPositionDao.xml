@@ -34,7 +34,7 @@
         <result property="createTime" column="CREATE_TIME"/>
     </resultMap>
 
-    <select id="selectPostListByAdminId" parameterType="Long" resultType="Long">
+    <select id="selectPostListByAdminId" parameterType="Long" resultType="java.lang.String">
         select B.POSITION_ID
         from SYS_POSITION B
                  left join ADMIN_USER_POSITION up on up.POSITION_ID = B.POSITION_ID

@@ -277,12 +277,8 @@ public class AdminUserController extends BaseController {
     @Encrypt
     @LimitScope(name = "adminUserDelete", key = "adminUserDelete")
     public ResponseResult<String> delete(@PathVariable Long[] adminIds) {
-        String userId = SecurityUtils.getUserId();
-        AdminUser adminUser = adminUserService.findByUserId(userId);
-        if (adminUser == null) {
-            return error("系统未登录");
-        }
-        if (ArrayUtils.contains(adminIds, adminUser.getId())) {
+        Long adminId = SecurityUtils.getUserLid();
+        if (ArrayUtils.contains(adminIds, adminId)) {
             return error("当前用户不能删除");
         }
         adminUserService.deleteByIdsWithRelation(adminIds);

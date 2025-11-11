@@ -95,7 +95,7 @@
     <sql id="commonList">
         <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
         <if test='id != null and id != ""'>
-            AND (B.SYSORGAN_ID = #{id} or ORG.ORGAN_ID =  #{id})
+            AND (B.SYSORGAN_ID = #{id} or org.ORGAN_ID =  #{id})
         </if>
         <if test="orgtypeId != null and orgtypeId != ''">
             and B.ORGTYPE_ID = #{orgtypeId}
@@ -153,15 +153,15 @@
         <if test='key != null and key !=""'>
             AND (
             B.ORGAN_LEVEL in (select AREATYPE_ID from BASE_AREATYPE where NAME like concat('%',concat(#{key},'%')))
-            OR (ORG.NAME like concat('%',concat(#{key},'%')))
+            OR (org.NAME like concat('%',concat(#{key},'%')))
             )
         </if>
         <if test='q != null and q != ""'>
-            AND B.CREATOR_ID IN (SELECT GU.USER_ID
-            FROM BASE_USER GU where
-            GU.USERNAME like concat('%',concat(#{key},'%'))
-            or GU.MOBILE like concat('%',concat(#{key},'%'))
-            or GU.EMAIL like concat('%',concat(#{key},'%')))
+            AND B.CREATOR_ID IN (SELECT bu.USER_ID
+            FROM BASE_USER bu where
+            bu.USERNAME like concat('%',concat(#{key},'%'))
+            or bu.MOBILE like concat('%',concat(#{key},'%'))
+            or bu.EMAIL like concat('%',concat(#{key},'%')))
         </if>
 
         <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
@@ -316,9 +316,9 @@
         B.SYSORGAN_ID, B.ORGTYPE_ID, B.ORGAN_OCODE, B.ORGAN_GROUP, B.ORGAN_LEVEL, B.APPROVAL_NUMBER, B.IS_STATION_ORG, B.ORGAN_TYPE, B.ORGAN_PROPERTY, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.IS_ADMIN, B.IS_MEMBER, B.IS_DISABLED, B.IS_VIRTUAL, B.IS_PUB, B.IS_GRID_ORGAN, B.IS_VILLAGE_ORGAN, B.IS_PARTY_ORGAN, B.PRIORITY, B.LAST_TIME, B.DEL_FLAG
         , ORGTYPE.NAME as orgtypeName
         , AREATYPE.NAME as organLevelName
-        , ORG.NAME as name
-        , ORG.UNION_CODE as unionCode
-        , ORG.ORGAN_CODE as organCode
+        , org.NAME as name
+        , org.UNION_CODE as unionCode
+        , org.ORGAN_CODE as organCode
         FROM CORE_ORGAN B
         <include refid="commonUnionJoin"></include>
         WHERE 1=1
@@ -329,7 +329,7 @@
 
     <!-- 关联表 -->
     <sql id="commonUnionJoin">
-        LEFT JOIN BASE_ORGAN ORG ON ORG.ORGAN_ID = B.SYSORGAN_ID
+        LEFT JOIN BASE_ORGAN org ON org.ORGAN_ID = B.SYSORGAN_ID
         LEFT JOIN CORE_ORGTYPE ORGTYPE ON ORGTYPE.ORGTYPE_ID = B.ORGTYPE_ID
         LEFT JOIN BASE_AREATYPE AREATYPE ON AREATYPE.AREATYPE_ID = B.ORGAN_LEVEL
     </sql>
@@ -340,9 +340,9 @@
         SELECT B.SYSORGAN_ID, B.ORGTYPE_ID, B.ORGAN_OCODE, B.ORGAN_GROUP, B.ORGAN_LEVEL, B.APPROVAL_NUMBER, B.IS_STATION_ORG, B.ORGAN_TYPE, B.ORGAN_PROPERTY, B.CREATE_TIME, B.CREATOR_ID, B.UPDATOR_ID, B.UPDATE_TIME, B.IS_ADMIN, B.IS_MEMBER, B.IS_DISABLED, B.IS_VIRTUAL, B.IS_PUB, B.IS_GRID_ORGAN, B.IS_VILLAGE_ORGAN, B.IS_PARTY_ORGAN, B.PRIORITY, B.LAST_TIME, B.DEL_FLAG
         , ORGTYPE.NAME as orgtypeName
         , AREATYPE.NAME as organLevelName
-        , ORG.NAME as name
-        , ORG.UNION_CODE as unionCode
-        , ORG.ORGAN_CODE as organCode
+        , org.NAME as name
+        , org.UNION_CODE as unionCode
+        , org.ORGAN_CODE as organCode
         FROM CORE_ORGAN B
         <include refid="commonUnionJoin"></include>
         WHERE B.SYSORGAN_ID = #{value}

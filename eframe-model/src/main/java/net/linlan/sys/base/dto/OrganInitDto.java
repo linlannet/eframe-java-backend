@@ -31,7 +31,7 @@ public class OrganInitDto implements Serializable {
     /**
      * 机构树id
      */
-    private String            organwId;
+    private String            id;
     /**
      * 机构ID
      */

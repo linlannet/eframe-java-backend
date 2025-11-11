@@ -405,8 +405,8 @@
         <if test="status != null and status != ''">
             AND B.STATUS=#{status}
         </if>
-        <if test="roleTypeId != null and roleTypeId != ''">
-            AND B.SYNC_MODE=#{roleTypeId}
+        <if test="syncMode != null and syncMode != ''">
+            AND B.SYNC_MODE=#{syncMode}
         </if>
         <if test="status != null">
             AND B.STATUS=#{status}

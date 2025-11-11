@@ -33,6 +33,7 @@ import com.alibaba.fastjson2.JSON;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.ResponseResult;
 import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.comm.manager.AsyncManager;
 import net.linlan.frame.comm.manager.factory.AsyncFactory;
 import net.linlan.frame.comm.service.TokenService;
@@ -63,7 +64,7 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
             AsyncManager.me()
                 .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                     Constants.LOGOUT, MessageUtils.message("user.logout.success"),
-                    loginUser.getAppId()));
+                    loginUser.getAppId(), loginUser.getUserLid(), LogCategoryEnum.ADMIN.getKey()));
         }
         ServletUtils.renderString(response,
             JSON.toJSONString(ResponseResult.ok(MessageUtils.message("user.logout.success"))));

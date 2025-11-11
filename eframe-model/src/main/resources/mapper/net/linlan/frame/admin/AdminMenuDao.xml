@@ -20,7 +20,7 @@
 -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="net.linlan.frame.admin.dao.AdminMenuVoDao">
+<mapper namespace="net.linlan.frame.admin.dao.AdminMenuDao">
 
 	<resultMap type="net.linlan.frame.admin.dto.AdminMenuVo" id="adminMenuMap">
 		<id     property="menuId"         column="MENU_ID"        />

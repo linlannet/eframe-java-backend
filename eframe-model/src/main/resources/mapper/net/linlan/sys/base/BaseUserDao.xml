@@ -62,13 +62,9 @@
         <result property="spare2" column="SPARE2"/>
     </resultMap>
 
-    <!-- 增加扩展类的BaseUser对象 -->
-    <resultMap type="net.linlan.sys.base.entity.BaseUser" id="baseUserMoreMap" extends="baseUserMap">
-        <association property="baseUserExt" column="{value=USER_ID}" select="net.linlan.sys.base.dao.BaseUserExtDao.findById"></association>
-    </resultMap>
 
     <!-- find by id，通过主键获取对象 -->
-    <select id="findById" resultMap="baseUserMoreMap">
+    <select id="findById" resultMap="baseUserMap">
         SELECT
         USER_ID, XZQH_ID, SOURCE, CREATE_TYPE, USERNAME, MOBILE, EMAIL, PASSWORD, SALT, SRC_CODE, REGISTER_TIME, REGISTER_IP, CURRENT_LOGIN_TIME, CURRENT_LOGIN_IP, LAST_APP_ID, LAST_LOGIN_TIME, LAST_LOGIN_IP, LAST_LOGOUT_TIME, LOGIN_COUNT, RESET_KEY, RESET_PWD, LAST_RESET_TIME, ERROR_TIME, ERROR_COUNT, ERROR_IP, LOCK_TIME, ACTIVATION, ACTIVATION_CODE, PRIORITY, CREATE_TIME, LAST_TIME, DEL_FLAG, DELETE_TIME, DESCRIPTION, SPARE1, SPARE2
         FROM BASE_USER
@@ -148,38 +144,19 @@
 
         <if test='q != null and q.trim() != ""'>
             <choose>
-                <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
                     AND  (B.MOBILE like concat('%',concat(#{q},'%'))
-                    OR   B.USER_ID in (SELECT GUE.USER_ID FROM BASE_USER_EXT GUE WHERE AES_DECRYPT(UNHEX(GUE.NAME), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}') = #{q})
+                    OR   B.USER_ID in (SELECT bue.USER_ID FROM BASE_USER_EXT bue WHERE AES_DECRYPT(UNHEX(bue.ID_NAME), '${@net.linlan.config.PlatformSecurityConfig@dbKey}') = #{q})
                     OR   B.USERNAME like concat('%',concat(#{q},'%')))
                 </when>
                 <otherwise>
                     AND  (B.MOBILE like concat('%',concat(#{q},'%'))
-                    OR   B.USER_ID in (SELECT GUE.USER_ID FROM BASE_USER_EXT GUE WHERE GUE.NAME like concat('%',concat(#{q},'%')))
+                    OR   B.USER_ID in (SELECT bue.USER_ID FROM BASE_USER_EXT bue WHERE bue.ID_NAME like concat('%',concat(#{q},'%')))
                     OR   B.USERNAME like concat('%',concat(#{q},'%')))
                 </otherwise>
             </choose>
         </if>
-        <if test='bindOrganId != null and bindOrganId.trim() != ""'>
-            <choose>
-                <when test='bindOrganType != null and bindOrganType == 1'>
-                    AND B.USER_ID IN (SELECT SURO.USER_ID FROM USER_RANGE_ORGAN SURO WHERE SURO.ORGAN_ID = #{bindOrganId})
-                </when>
-                <otherwise>
-                    AND B.USER_ID NOT IN (SELECT SURO.USER_ID FROM USER_RANGE_ORGAN SURO WHERE SURO.ORGAN_ID = #{bindOrganId})
-                </otherwise>
-            </choose>
-        </if>
-        <if test='isBindFrontUser == 1'>
-            AND B.USERNAME IN ( SELECT NAME FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
-            AND B.MOBILE IN ( SELECT TELEPHONE FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
-        </if>
-        <if test='isBindFrontUser == 0'>
-            AND (
-            B.USERNAME NOT IN ( SELECT NAME FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
-            OR B.MOBILE NOT IN ( SELECT TELEPHONE FROM MANAGE_SITE_USER_BIND FSUB WHERE FSUB.USER_ID = #{workUserId})
-            )
-        </if>
+
         <if test="ids != null ">
             and B.USER_ID IN
             <foreach item="item" collection="ids" open="(" separator="," close=")">
@@ -491,14 +468,14 @@
     <!-- get by email，通过email获取对象 -->
     <select id="getByIdNum" resultMap="baseUserMap">
         select B.* from BASE_USER B
-        LEFT JOIN BASE_USER_EXT GUE ON B.USER_ID = GUE.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
         WHERE 1=1
         <choose>
-            <when test='@net.linlan.stage.webconfig.DbKeyConfig@dbEncrypt == "true"'>
-                AND GUE.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{idNum}), '${@net.linlan.stage.webconfig.DbKeyConfig@dbKey}'))
+            <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                AND bue.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{idNum}), '${@net.linlan.config.PlatformSecurityConfig@dbKey}'))
             </when>
             <otherwise>
-                AND GUE.ID_NUM = #{idNum}
+                AND bue.ID_NUM = #{idNum}
             </otherwise>
         </choose>
         ORDER BY B.CREATE_TIME ASC

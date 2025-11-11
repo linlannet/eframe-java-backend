@@ -19,11 +19,9 @@ package net.linlan.frame.comm.manager.factory;
 
 import java.util.TimerTask;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import eu.bitwalker.useragentutils.UserAgent;
-import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.admin.entity.AdminLoginLog;
 import net.linlan.frame.admin.service.AdminLoginLogService;
 import net.linlan.utils.LogUtils;
@@ -38,8 +36,8 @@ import net.linlan.utils.ip.IPUtils;
  * 
  * @author Linlan
  */
+@Slf4j
 public class AsyncFactory {
-    private static final Logger LOGGER = LoggerFactory.getLogger("admin-user");
 
     /**
      * 记录登录信息
@@ -49,12 +47,15 @@ public class AsyncFactory {
      * @param status 状态
      * @param message 消息
      * @param appId 应用ID
+     * @param userLid 用户LID
+     * @param category 日志类型
      * @param args 列表
      * @return 任务task
      */
     public static TimerTask saveAdminLoginLog(final String userId, final String username,
                                               final String status, final String message,
-                                              final String appId, final Object... args) {
+                                              final String appId, final Long userLid,
+                                              final Integer category, final Object... args) {
         final UserAgent userAgent = UserAgent
             .parseUserAgentString(ServletUtils.getRequest().getHeader("User-Agent"));
         final String ip = IPUtils.getIpAddr(ServletUtils.getRequest());
@@ -63,14 +64,14 @@ public class AsyncFactory {
             @Override
             public void run() {
                 String address = IPAddressUtils.getRealAddressByIP(ip);
-                StringBuilder s = new StringBuilder();
-                s.append("IP:" + LogUtils.getBlock(ip));
-                s.append("ADDRESS:" + LogUtils.getBlock(address));
-                s.append("USERNAME:" + LogUtils.getBlock(username));
-                s.append("STATUS:" + LogUtils.getBlock(status));
-                s.append("MESSAGE:" + LogUtils.getBlock(message));
+                StringBuilder sb = new StringBuilder();
+                sb.append("IP:" + LogUtils.getBlock(ip));
+                sb.append("ADDRESS:" + LogUtils.getBlock(address));
+                sb.append("USERNAME:" + LogUtils.getBlock(username));
+                sb.append("STATUS:" + LogUtils.getBlock(status));
+                sb.append("MESSAGE:" + LogUtils.getBlock(message));
                 // 打印信息到日志
-                LOGGER.info(s.toString(), args);
+                log.info(sb.toString(), args);
                 // 获取客户端操作系统
                 String os = userAgent.getOperatingSystem().getName();
                 // 获取客户端浏览器
@@ -78,26 +79,21 @@ public class AsyncFactory {
                 // 封装对象
                 AdminLoginLog adminLoginLog = new AdminLoginLog();
                 adminLoginLog.setUserId(userId);
-                adminLoginLog.setUserId(username);
+                adminLoginLog.setAdminId(userLid);
                 adminLoginLog.setAppId(appId);
                 adminLoginLog.setLogIp(ip);
                 adminLoginLog.setLogBrowse(browser);
                 adminLoginLog.setLogOs(os);
                 adminLoginLog.setTitle(message);
                 // 日志状态
-                if (StringUtils.equalsAny(status, Constants.LOGIN_SUCCESS)) {
-                    adminLoginLog.setStatus(Constants.SUCCESS);
-                    adminLoginLog.setCategory(1);
-                } else if (StringUtils.equalsAny(status, Constants.LOGOUT)) {
-                    adminLoginLog.setStatus(Constants.SUCCESS);
-                    adminLoginLog.setCategory(2);
-                }
+                adminLoginLog.setStatus(Constants.SUCCESS);
+                adminLoginLog.setCategory(category);
                 if (Constants.LOGIN_FAIL.equals(status)) {
                     adminLoginLog.setStatus(Constants.FAIL);
                     adminLoginLog.setCategory(1);
                 }
                 adminLoginLog.setLogUrl(url);
-                adminLoginLog.setContent(s.toString());
+                adminLoginLog.setContent(sb.toString());
                 // 插入数据
                 SpringContextUtils.getBean(AdminLoginLogService.class).save(adminLoginLog);
             }

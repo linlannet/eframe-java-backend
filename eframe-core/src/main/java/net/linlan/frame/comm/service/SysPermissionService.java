@@ -29,8 +29,8 @@ import org.springframework.util.CollectionUtils;
 
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
-import net.linlan.frame.admin.service.AdminMenuVoService;
-import net.linlan.frame.admin.service.AdminRoleVoService;
+import net.linlan.frame.admin.service.AdminMenuService;
+import net.linlan.frame.admin.service.AdminRoleService;
 import net.linlan.sys.role.entity.SysRole;
 import net.linlan.sys.web.KernelConstant;
 
@@ -42,10 +42,10 @@ import net.linlan.sys.web.KernelConstant;
 @Component
 public class SysPermissionService {
     @Resource
-    private AdminRoleVoService frameAdminRoleService;
+    private AdminRoleService adminRoleService;
 
     @Resource
-    private AdminMenuVoService frameAdminMenuService;
+    private AdminMenuService adminMenuService;
 
     /**
      * 获取角色数据权限
@@ -59,7 +59,7 @@ public class SysPermissionService {
         if (user.isAdmin()) {
             roles.add("admin");
         } else {
-            roles.addAll(frameAdminRoleService.selectRoleCodeByAdminId(user.getId()));
+            roles.addAll(adminRoleService.selectRoleCodeByAdminId(user.getId()));
         }
         return roles;
     }
@@ -83,14 +83,14 @@ public class SysPermissionService {
                     //status 0正常1停用2已删除
                     if (role.getStatus() != null
                         && role.getStatus() == KernelConstant.DEFAULT_INT) {
-                        Set<String> rolePerms = frameAdminMenuService
+                        Set<String> rolePerms = adminMenuService
                             .selectMenuPermsByRoleId(role.getId());
                         perms.addAll(rolePerms);
                     }
                 }
 
             } else {
-                perms.addAll(frameAdminMenuService.selectMenuPermsByAdminId(user.getId()));
+                perms.addAll(adminMenuService.selectMenuPermsByAdminId(user.getId()));
             }
         }
         return perms;
@@ -101,6 +101,7 @@ public class SysPermissionService {
         Set<String> perms = getMenuPermission(user);
         FrameUserDetails frameUserDetails = new FrameUserDetails(user.getUserId(), perms);
         frameUserDetails.setUserId(user.getUserId());
+        frameUserDetails.setUserLid(user.getId());
         frameUserDetails.setUsername(user.getUsername());
         frameUserDetails.setPassword(user.getPassword());
         frameUserDetails.setViewName(user.getName());

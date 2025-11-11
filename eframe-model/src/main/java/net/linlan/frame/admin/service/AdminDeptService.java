@@ -265,8 +265,8 @@ public class AdminDeptService {
      * @param deptId 部门id
      */
     public void checkDeptDataScope(Long deptId) {
-        String userId = SecurityUtils.getUserId();
-        AdminUser adminUser = adminUserService.findByUserId(userId);
+        Long adminId = SecurityUtils.getUserLid();
+        AdminUser adminUser = adminUserService.findById(adminId);
         if (adminUser == null) {
             return;
         }

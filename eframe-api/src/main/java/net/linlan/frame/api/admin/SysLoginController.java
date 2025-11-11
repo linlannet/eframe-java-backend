@@ -32,6 +32,7 @@ import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.dto.WebLayoutDto;
 import net.linlan.frame.admin.service.AdminUserService;
@@ -185,7 +186,7 @@ public class SysLoginController {
      * @param loginBody 登录信息
      * @return 结果
      */
-    @PlatLog(value = "第三方服务商登录方法", category = 10, srcCode = 11)
+    @PlatLog(value = "第三方服务商登录方法", category = 10, srcCode = 1)
     @PostMapping("/third/ecorgan/login")
     @Encrypt
     public ResponseResult<AppLoginInfo> thirdEcorganLogin(@RequestBody LoginBody loginBody) {
@@ -214,16 +215,16 @@ public class SysLoginController {
         String captcha = (String) redisService.get(verifyKey);
         if (captcha == null) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.expire"),
-                    loginUser.getAppId()));
+                    loginUser.getAppId(), loginUser.getUserLid(), LogCategoryEnum.ADMIN.getKey()));
             throw new CaptchaExpireException();
         }
         if (!code.equalsIgnoreCase(captcha)) {
             AsyncManager.me()
-                .execute(AsyncFactory.saveAdminLoginLog(KernelConstant.SUPER_SYS, username,
+                .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                     Constants.LOGIN_FAIL, MessageUtils.message("user.jcaptcha.error"),
-                    loginUser.getAppId()));
+                    loginUser.getAppId(), loginUser.getUserLid(), LogCategoryEnum.ADMIN.getKey()));
             throw new CaptchaException();
         }
 

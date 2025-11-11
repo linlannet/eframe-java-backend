@@ -40,6 +40,7 @@ import net.linlan.sys.base.dao.BaseUserDao;
 import net.linlan.sys.base.dto.BaseUserDto;
 import net.linlan.sys.base.dto.BaseUserSelect;
 import net.linlan.sys.base.entity.BaseUser;
+import net.linlan.sys.base.entity.BaseUserExt;
 import net.linlan.sys.base.param.BaseUserParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.ServletUtils;
@@ -112,9 +113,10 @@ public class BaseUserService {
             baseUser.setId(id);
         }
         dao.save(baseUser);
-        baseUser.getBaseUserExt().setId(id);
-        baseUser.getBaseUserExt().setNamePy(ShaUtils.encryptPassword(bcryptPassword));
-        baseUserExtService.save(baseUser.getBaseUserExt());
+        BaseUserExt baseUserExt = new BaseUserExt();
+        baseUserExt.setId(id);
+        baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
+        baseUserExtService.save(baseUserExt);
     }
 
     /** save the entity with input list
@@ -143,10 +145,18 @@ public class BaseUserService {
         }
         baseUser.setLastTime(new Timestamp(System.currentTimeMillis()));
         dao.update(baseUser);
-        if (!ObjectUtils.fieldIsNull(baseUser.getBaseUserExt())) {//判断子表信息是否为空
-            baseUser.getBaseUserExt().setNamePy(ShaUtils.encryptPassword(bcryptPassword));
-            baseUserExtService.update(baseUser.getBaseUserExt());
+        BaseUserExt baseUserExt = baseUserExtService.findById(baseUser.getId());
+        if (ObjectUtils.isEmpty(baseUserExt)) {
+            baseUserExt = new BaseUserExt();
+            baseUserExt.setId(baseUser.getId());
+            baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
+            baseUserExtService.save(baseUserExt);
+        } else {
+            baseUserExt.setId(baseUser.getId());
+            baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
+            baseUserExtService.update(baseUserExt);
         }
+
     }
 
     /** delete the entity by input id

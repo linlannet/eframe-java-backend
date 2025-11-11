@@ -35,7 +35,7 @@ import net.linlan.sys.role.dto.SysMenuButtonDto;
  * @author Linlan
  */
 @Mapper
-public interface AdminMenuVoDao extends MybatisBaseDao<AdminMenuVo> {
+public interface AdminMenuDao extends MybatisBaseDao<AdminMenuVo> {
     /**
      * 查询系统菜单列表
      *

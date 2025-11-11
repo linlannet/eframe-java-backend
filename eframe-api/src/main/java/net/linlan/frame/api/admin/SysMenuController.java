@@ -41,7 +41,7 @@ import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.dto.PermsDto;
 import net.linlan.frame.admin.param.AdminMenuVoParam;
-import net.linlan.frame.admin.service.AdminMenuVoService;
+import net.linlan.frame.admin.service.AdminMenuService;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.manager.AdminMenuManager;
 import net.linlan.frame.view.admin.vo.MenuTreeRoleVo;
@@ -68,7 +68,7 @@ public class SysMenuController extends BaseController {
     @Resource
     private SysMenuService         sysMenuService;
     @Resource
-    private AdminMenuVoService     adminMenuEntService;
+    private AdminMenuService       adminMenuService;
     @Resource
     private AdminMenuManager       adminMenuManager;
     @Resource
@@ -84,8 +84,8 @@ public class SysMenuController extends BaseController {
     @GetMapping("menu/list")
     @Encrypt
     public ResponseResult<List<AdminMenuVo>> list(AdminMenuVoParam param) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param,
-            SecurityUtils.getUserId());
+        List<AdminMenuVo> menus = adminMenuService.selectMenuList(param,
+            SecurityUtils.getUserLid());
         return success(menus);
     }
 
@@ -99,7 +99,7 @@ public class SysMenuController extends BaseController {
     @GetMapping("menu/page")
     @Encrypt
     public ResponseResult<Page<AdminMenuVo>> page(AdminMenuVoParam param) {
-        Page<AdminMenuVo> result = adminMenuEntService.selectMenuListPage(param);
+        Page<AdminMenuVo> result = adminMenuService.selectMenuListPage(param);
         Map<String, String> typeNameMap = frameDictionaryService
             .getDictionaryList("ADMIN_MENU_TYPE");
         Map<String, String> menuTypeNameMap = frameDictionaryService
@@ -136,7 +136,7 @@ public class SysMenuController extends BaseController {
             vo.setTypeName(typeNameMap.get(vo.getType()));
             vo.setMenuTypeName(menuTypeNameMap.get(vo.getMenuType()));
             //查询子菜单按钮
-            List<SysMenuButtonDto> buttons = adminMenuEntService.getButtons(menuId);
+            List<SysMenuButtonDto> buttons = adminMenuService.getButtons(menuId);
             vo.setButtonMenuList(buttons);
         }
         return success(vo);
@@ -151,8 +151,8 @@ public class SysMenuController extends BaseController {
     @GetMapping("menu/treeselect")
     @Encrypt
     public ResponseResult<MenuTreeRoleVo> treeselect(AdminMenuVoParam param) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(param,
-            SecurityUtils.getUserId());
+        List<AdminMenuVo> menus = adminMenuService.selectMenuList(param,
+            SecurityUtils.getUserLid());
         List<TreeSelect> treeSelects = adminMenuManager.buildMenuTreeSelect(menus);
         MenuTreeRoleVo menuTreeRoleVo = new MenuTreeRoleVo();
         menuTreeRoleVo.setMenus(treeSelects);
@@ -203,9 +203,9 @@ public class SysMenuController extends BaseController {
     @GetMapping(value = "menu/roleMenuTreeselect/{roleId}")
     @Encrypt
     public ResponseResult<MenuTreeRoleVo> roleMenuTreeselect(@PathVariable("roleId") Long roleId) {
-        List<AdminMenuVo> menus = adminMenuEntService.selectMenuList(SecurityUtils.getUserId());
+        List<AdminMenuVo> menus = adminMenuService.selectMenuList(SecurityUtils.getUserLid());
         MenuTreeRoleVo menuTreeVo = new MenuTreeRoleVo();
-        menuTreeVo.setCheckedKeys(adminMenuEntService.selectMenuListByRoleId(roleId));
+        menuTreeVo.setCheckedKeys(adminMenuService.selectMenuListByRoleId(roleId));
         menuTreeVo.setMenus(adminMenuManager.buildMenuTreeSelect(menus));
         return ResponseResult.ok(menuTreeVo);
     }
@@ -344,7 +344,7 @@ public class SysMenuController extends BaseController {
         adminMenu.setPerms(input.getPerms());
         sysMenuService.update(adminMenu);
         //更新菜单按钮配置
-        adminMenuEntService.deleteByParentId(input.getMenuId());
+        adminMenuService.deleteByParentId(input.getMenuId());
         if (StringUtils.isNotBlank(input.getPerms()) && input.getPermsList().size() > 0) {
             List<SysMenu> buttonMenuList = new ArrayList<>();
             getButtonMenuList(input, input.getMenuId(), buttonMenuList);
@@ -370,10 +370,10 @@ public class SysMenuController extends BaseController {
     @LimitScope(name = "sysMenuDelete", key = "sysMenuDelete")
     public ResponseResult<String> delete(@PathVariable("menuIds") Long[] menuIds) {
         for (Long menuId : menuIds) {
-            if (adminMenuEntService.hasChildByParentId(menuId) > 0) {
+            if (adminMenuService.hasChildByParentId(menuId) > 0) {
                 return warn("存在未删除的子菜单,不允许删除");
             }
-            if (adminMenuEntService.checkMenuExistRole(menuId)) {
+            if (adminMenuService.checkMenuExistRole(menuId)) {
                 return warn("菜单已分配,不允许删除");
             }
             SysMenu menu = new SysMenu();
@@ -396,7 +396,7 @@ public class SysMenuController extends BaseController {
     @LimitScope(name = "sysMenuDelete", key = "sysMenuDelete")
     public ResponseResult<String> delete(@RequestBody SysMenu input) {
         Long menuId = input.getId();
-        if (adminMenuEntService.hasChildByParentId(menuId) > 0) {
+        if (adminMenuService.hasChildByParentId(menuId) > 0) {
             return error("该部门包含未停用的子菜单！");
         }
         sysMenuService.update(input);

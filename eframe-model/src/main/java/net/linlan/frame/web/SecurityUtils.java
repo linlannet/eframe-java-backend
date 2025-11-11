@@ -19,8 +19,6 @@ package net.linlan.frame.web;
 
 import java.util.Collection;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.PatternMatchUtils;
@@ -37,17 +35,32 @@ import net.linlan.utils.http.HttpStatus;
  * @author Linlan
  */
 public class SecurityUtils {
-    private static final Logger logger = LoggerFactory.getLogger(SecurityUtils.class);
 
     /**
      * 用户UUID
-     * @return 管理用户ID
+     * @return 全局用户ID
      **/
     public static String getUserId() {
         try {
             FrameUserDetails frameUserDetails = getLoginUser();
             if (frameUserDetails != null) {
                 return getLoginUser().getUserId();
+            }
+        } catch (Exception e) {
+            throw new CommonException("获取用户UUID异常", HttpStatus.UNAUTHORIZED);
+        }
+        return null;
+    }
+
+    /**
+     * 用户LID
+     * @return 管理用户ID
+     **/
+    public static Long getUserLid() {
+        try {
+            FrameUserDetails frameUserDetails = getLoginUser();
+            if (frameUserDetails != null) {
+                return getLoginUser().getUserLid();
             }
         } catch (Exception e) {
             throw new CommonException("获取用户LID异常", HttpStatus.UNAUTHORIZED);
@@ -131,8 +144,8 @@ public class SecurityUtils {
      * @param permission 权限字符串
      * @return 用户是否具备某权限
      */
-    public static boolean hasPermi(String permission) {
-        return hasPermi(getLoginUser().getPerms(), permission);
+    public static boolean hasPermission(String permission) {
+        return hasPermission(getLoginUser().getPerms(), permission);
     }
 
     /**
@@ -142,7 +155,7 @@ public class SecurityUtils {
      * @param permission 权限字符串
      * @return 用户是否具备某权限
      */
-    public static boolean hasPermi(Collection<String> authorities, String permission) {
+    public static boolean hasPermission(Collection<String> authorities, String permission) {
         return authorities.stream().filter(StringUtils::hasText)
             .anyMatch(x -> Constants.ALL_PERMISSION.equals(x)
                            || PatternMatchUtils.simpleMatch(x, permission));

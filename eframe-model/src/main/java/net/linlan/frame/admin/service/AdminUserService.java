@@ -42,7 +42,6 @@ import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.entity.AdminUserPosition;
 import net.linlan.frame.admin.entity.AdminUserRole;
 import net.linlan.frame.admin.param.AdminUserParam;
-import net.linlan.frame.web.SecurityUtils;
 import net.linlan.sys.role.entity.SysPosition;
 import net.linlan.sys.role.entity.SysRole;
 import net.linlan.utils.constant.UserConstants;
@@ -63,7 +62,7 @@ public class AdminUserService {
     private AdminUserDao         dao;
 
     @Resource
-    private AdminRoleVoDao       frameAdminRoleDao;
+    private AdminRoleDao         adminRoleDao;
 
     @Resource
     private AdminUserRoleDao     adminUserRoleDao;
@@ -194,7 +193,7 @@ public class AdminUserService {
      * @param adminId 用户LID
      * @return 选中岗位ID列表
      */
-    public List<Long> selectPostListByAdminId(Long adminId) {
+    public List<String> selectPostListByAdminId(Long adminId) {
         return adminUserPositionDao.selectPostListByAdminId(adminId);
     }
 
@@ -267,7 +266,7 @@ public class AdminUserService {
      * @return 结果
      */
     public String selectUserRoleGroup(String username) {
-        List<SysRole> list = frameAdminRoleDao.selectRolesByUsername(username);
+        List<SysRole> list = adminRoleDao.selectRolesByUsername(username);
         if (CollectionUtils.isEmpty(list)) {
             return StringUtils.EMPTY;
         }
@@ -354,8 +353,7 @@ public class AdminUserService {
      * @param adminId 用户LID
      */
     public void checkUserDataScope(Long adminId) {
-        String userId = SecurityUtils.getUserId();
-        AdminUser adminUser = findByUserId(userId);
+        AdminUser adminUser = findById(adminId);
         if (adminUser == null) {
             return;
         }

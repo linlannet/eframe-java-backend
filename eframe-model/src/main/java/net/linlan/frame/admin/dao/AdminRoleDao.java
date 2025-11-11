@@ -30,7 +30,7 @@ import net.linlan.sys.role.entity.SysRole;
  * @author Linlan
  */
 @Mapper
-public interface AdminRoleVoDao extends MybatisBaseDao<SysRole> {
+public interface AdminRoleDao extends MybatisBaseDao<SysRole> {
 
     /**
      * 根据用户LID查询角色
