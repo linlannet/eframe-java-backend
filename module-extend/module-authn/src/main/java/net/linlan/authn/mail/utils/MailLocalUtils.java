@@ -59,6 +59,7 @@ public class MailLocalUtils {
      * @param tos     收件人邮箱列表，多个收件人逗号隔开
      * @param subject 邮件主题
      * @param content 邮件内容
+     * @param isHtml   是否为html类型
      * @param files   附件列表
      * @return message-id
      */

@@ -15,30 +15,29 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.constant;
+package net.linlan.authn.manage.constant;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import lombok.Getter;
 
-import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
 /**
- * 消息主状态
+ * 消息发送状态
  *
  * @author Linlan
  */
 @Getter
-public enum MessageStatus implements BaseEnumString {
-                                                     /**
-                                                      * 成功
-                                                      */
-                                                     SUCCESS("success", "成功"),
-                                                     /**
-                                                      * 失败
-                                                      */
-                                                     FAIL("fail", "失败");
+public enum MessageSendStatus {
+                               /**
+                                * 已发送
+                                */
+                               SEND("send", "已发送"),
+                               /**
+                                * 草稿
+                                */
+                               DRAFT("draft", "草稿");
 
     /**
      * 键
@@ -50,7 +49,7 @@ public enum MessageStatus implements BaseEnumString {
      */
     private final String value;
 
-    MessageStatus(String key, String value) {
+    MessageSendStatus(String key, String value) {
         this.key = key;
         this.value = value;
     }
@@ -59,12 +58,12 @@ public enum MessageStatus implements BaseEnumString {
      * 获取类型
      *
      * @param key {@link String}
-     * @return {@link MessageStatus}
+     * @return {@link MessageSendStatus}
      */
     @EnumConvert
-    public static MessageStatus fromType(String key) {
-        MessageStatus[] values = values();
-        for (MessageStatus status : values) {
+    public static MessageSendStatus fromType(String key) {
+        MessageSendStatus[] values = values();
+        for (MessageSendStatus status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {
                 return status;
             }

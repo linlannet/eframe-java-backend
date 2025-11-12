@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.constant;
+package net.linlan.authn.manage.constant;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -23,19 +23,19 @@ import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
 /**
- * 消息分类
+ * 消息类型
  *
  * @author Linlan
  */
-public enum MessageCategory implements BaseEnumString {
-                                                       /**
-                                                        * 验证码
-                                                        */
-                                                       CODE("key", "验证码"),
-                                                       /**
-                                                        * 通知
-                                                        */
-                                                       NOTICE("notice", "通知");
+public enum MessageType implements BaseEnumString {
+                                                   /**
+                                                    * 邮件
+                                                    */
+                                                   MAIL("mail", "邮件"),
+                                                   /**
+                                                    * 短信
+                                                    */
+                                                   SMS("sms", "短信");
 
     /**
      * 键
@@ -47,7 +47,7 @@ public enum MessageCategory implements BaseEnumString {
      */
     private final String value;
 
-    MessageCategory(String key, String value) {
+    MessageType(String key, String value) {
         this.key = key;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public enum MessageCategory implements BaseEnumString {
      * 获取类型
      *
      * @param key {@link String}
-     * @return {@link MessageCategory}
+     * @return {@link String}
      */
     @EnumConvert
-    public static MessageCategory fromType(String key) {
-        MessageCategory[] values = values();
-        for (MessageCategory status : values) {
+    public static MessageType fromType(String key) {
+        MessageType[] values = values();
+        for (MessageType status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {
                 return status;
             }

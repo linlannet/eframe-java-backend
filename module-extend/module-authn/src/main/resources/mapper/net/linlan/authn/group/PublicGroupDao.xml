@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-authn - 动态认证对接模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.authn.group.dao.PublicGroupDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.authn.group.entity.PublicGroup" id="publicGroupMap">
+        <id property="id" column="GROUP_ID"/>
+        <result property="roleId" column="ROLE_ID"/>
+        <result property="mgroupId" column="MGROUP_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="code" column="CODE"/>
+        <result property="iconStyle" column="ICON_STYLE"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="tplSolution" column="TPL_SOLUTION"/>
+        <result property="isCommonGroup" column="IS_COMMON_GROUP"/>
+        <result property="isLeaderGroup" column="IS_LEADER_GROUP"/>
+        <result property="leaderLevel" column="LEADER_LEVEL"/>
+        <result property="isWorkGroup" column="IS_WORK_GROUP"/>
+        <result property="isGridGroup" column="IS_GRID_GROUP"/>
+        <result property="isPartyGroup" column="IS_PARTY_GROUP"/>
+        <result property="isVillageGroup" column="IS_VILLAGE_GROUP"/>
+        <result property="isDisabled" column="IS_DISABLED"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>      
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="publicGroupMap">
+        SELECT
+        GROUP_ID, ROLE_ID, MGROUP_ID, NAME, CODE, ICON_STYLE, IMAGE_PATH, TPL_SOLUTION, IS_COMMON_GROUP, IS_LEADER_GROUP, LEADER_LEVEL, IS_WORK_GROUP, IS_GRID_GROUP, IS_PARTY_GROUP, IS_VILLAGE_GROUP, IS_DISABLED, PRIORITY, CREATOR_ID, CREATE_TIME, DESCRIPTION
+        FROM PUBLIC_GROUP
+        WHERE GROUP_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="publicGroupMap">
+        SELECT
+        B.GROUP_ID, B.ROLE_ID, B.MGROUP_ID, B.NAME, B.CODE, B.ICON_STYLE, B.IMAGE_PATH, B.TPL_SOLUTION, B.IS_COMMON_GROUP, B.IS_LEADER_GROUP, B.LEADER_LEVEL, B.IS_WORK_GROUP, B.IS_GRID_GROUP, B.IS_PARTY_GROUP, B.IS_VILLAGE_GROUP, B.IS_DISABLED, B.PRIORITY, B.CREATOR_ID, B.CREATE_TIME, B.DESCRIPTION
+        FROM PUBLIC_GROUP B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.GROUP_ID DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.GROUP_ID ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.PRIORITY DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.PRIORITY ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY GROUP_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY GROUP_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="roleId != null and roleId != ''">
+            and B.ROLE_ID = #{roleId}
+        </if>
+        <if test="mgroupId != null and mgroupId != ''">
+            and B.MGROUP_ID = #{mgroupId}
+        </if>
+        <if test="name != null and name != ''">
+            and B.NAME = #{name}
+        </if>
+        <if test="code != null and code != ''">
+            and B.CODE = #{code}
+        </if>
+        <if test="iconStyle != null and iconStyle != ''">
+            and B.ICON_STYLE = #{iconStyle}
+        </if>
+        <if test="imagePath != null and imagePath != ''">
+            and B.IMAGE_PATH = #{imagePath}
+        </if>
+        <if test="tplSolution != null and tplSolution != ''">
+            and B.TPL_SOLUTION = #{tplSolution}
+        </if>
+        <if test="isCommonGroup != null and isCommonGroup != ''">
+            and B.IS_COMMON_GROUP = #{isCommonGroup}
+        </if>
+        <if test="isLeaderGroup != null and isLeaderGroup != ''">
+            and B.IS_LEADER_GROUP = #{isLeaderGroup}
+        </if>
+        <if test="leaderLevel != null and leaderLevel != ''">
+            and B.LEADER_LEVEL = #{leaderLevel}
+        </if>
+        <if test="isWorkGroup != null and isWorkGroup != ''">
+            and B.IS_WORK_GROUP = #{isWorkGroup}
+        </if>
+        <if test="isGridGroup != null and isGridGroup != ''">
+            and B.IS_GRID_GROUP = #{isGridGroup}
+        </if>
+        <if test="isPartyGroup != null and isPartyGroup != ''">
+            and B.IS_PARTY_GROUP = #{isPartyGroup}
+        </if>
+        <if test="isVillageGroup != null and isVillageGroup != ''">
+            and B.IS_VILLAGE_GROUP = #{isVillageGroup}
+        </if>
+        <if test="isDisabled != null and isDisabled != ''">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+
+        <if test="description != null and description != ''">
+            and B.DESCRIPTION = #{description}
+        </if>
+        <if test='q != null and q.trim() != ""'>
+            and (B.NAME like concat('%',concat(#{q},'%'))
+            or B.CODE LIKE concat(#{q},'%')
+            )
+        </if>
+        <if test="groupCode != null">
+            and B.CODE = #{groupCode}
+        </if>
+        <if test="residentialGroupCode != null">
+            and B.CODE LIKE concat(#{residentialGroupCode},'%')
+        </if>
+        <if test='ids != null and ids != ""'>
+            AND GROUP_ID IN
+            <foreach item="id" collection="ids" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+        <if test="ids != null ">
+            and B.GROUP_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.authn.group.entity.PublicGroup">
+        INSERT INTO PUBLIC_GROUP
+        (
+        GROUP_ID, ROLE_ID, MGROUP_ID, NAME, CODE, ICON_STYLE, IMAGE_PATH, TPL_SOLUTION, IS_COMMON_GROUP, IS_LEADER_GROUP, LEADER_LEVEL, IS_WORK_GROUP, IS_GRID_GROUP, IS_PARTY_GROUP, IS_VILLAGE_GROUP, IS_DISABLED, PRIORITY, CREATOR_ID, CREATE_TIME, DESCRIPTION
+        )
+        VALUES
+        (
+        #{id}, #{roleId}, #{mgroupId}, #{name}, #{code}, #{iconStyle}, #{imagePath}, #{tplSolution}, #{isCommonGroup}, #{isLeaderGroup}, #{leaderLevel}, #{isWorkGroup}, #{isGridGroup}, #{isPartyGroup}, #{isVillageGroup}, #{isDisabled}, #{priority}, #{creatorId}, #{createTime}, #{description}
+        )
+    </insert>
+
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO PUBLIC_GROUP
+                (
+                GROUP_ID, ROLE_ID, MGROUP_ID, NAME, CODE, ICON_STYLE, IMAGE_PATH, TPL_SOLUTION, IS_COMMON_GROUP, IS_LEADER_GROUP, LEADER_LEVEL, IS_WORK_GROUP, IS_GRID_GROUP, IS_PARTY_GROUP, IS_VILLAGE_GROUP, IS_DISABLED, PRIORITY, CREATOR_ID, CREATE_TIME, DESCRIPTION
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.roleId}, #{item.mgroupId}, #{item.name}, #{item.code}, #{item.iconStyle}, #{item.imagePath}, #{item.tplSolution}, #{item.isCommonGroup}, #{item.isLeaderGroup}, #{item.leaderLevel}, #{item.isWorkGroup}, #{item.isGridGroup}, #{item.isPartyGroup}, #{item.isVillageGroup}, #{item.isDisabled}, #{item.priority}, #{item.creatorId}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </when>
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO PUBLIC_GROUP
+                    (
+                    GROUP_ID, ROLE_ID, MGROUP_ID, NAME, CODE, ICON_STYLE, IMAGE_PATH, TPL_SOLUTION, IS_COMMON_GROUP, IS_LEADER_GROUP, LEADER_LEVEL, IS_WORK_GROUP, IS_GRID_GROUP, IS_PARTY_GROUP, IS_VILLAGE_GROUP, IS_DISABLED, PRIORITY, CREATOR_ID, CREATE_TIME, DESCRIPTION
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.roleId}, #{item.mgroupId}, #{item.name}, #{item.code}, #{item.iconStyle}, #{item.imagePath}, #{item.tplSolution}, #{item.isCommonGroup}, #{item.isLeaderGroup}, #{item.leaderLevel}, #{item.isWorkGroup}, #{item.isGridGroup}, #{item.isPartyGroup}, #{item.isVillageGroup}, #{item.isDisabled}, #{item.priority}, #{item.creatorId}, #{item.createTime}, #{item.description}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.authn.group.entity.PublicGroup">
+        UPDATE PUBLIC_GROUP
+        <set>
+            <if test="roleId != null">ROLE_ID = #{roleId}, </if>
+            <if test="mgroupId != null">MGROUP_ID = #{mgroupId}, </if>
+            <if test="name != null">NAME = #{name}, </if>
+            <if test="code != null">CODE = #{code}, </if>
+            <if test="iconStyle != null">ICON_STYLE = #{iconStyle}, </if>
+            <if test="imagePath != null">IMAGE_PATH = #{imagePath}, </if>
+            <if test="tplSolution != null">TPL_SOLUTION = #{tplSolution}, </if>
+            <if test="isCommonGroup != null">IS_COMMON_GROUP = #{isCommonGroup}, </if>
+            <if test="isLeaderGroup != null">IS_LEADER_GROUP = #{isLeaderGroup}, </if>
+            <if test="leaderLevel != null">LEADER_LEVEL = #{leaderLevel}, </if>
+            <if test="isWorkGroup != null">IS_WORK_GROUP = #{isWorkGroup}, </if>
+            <if test="isGridGroup != null">IS_GRID_GROUP = #{isGridGroup}, </if>
+            <if test="isPartyGroup != null">IS_PARTY_GROUP = #{isPartyGroup}, </if>
+            <if test="isVillageGroup != null">IS_VILLAGE_GROUP = #{isVillageGroup}, </if>
+            <if test="isDisabled != null">IS_DISABLED = #{isDisabled}, </if>
+            <if test="priority != null">PRIORITY = #{priority}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="description != null">DESCRIPTION = #{description}</if>
+        </set>
+        WHERE GROUP_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM PUBLIC_GROUP
+        WHERE GROUP_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM PUBLIC_GROUP
+        WHERE GROUP_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM PUBLIC_GROUP B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.authn.group.dto.PublicGroupDto" extends="publicGroupMap" id="publicGroupDtoMap">
+        <result property="roleName" column="roleName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="publicGroupDtoMap">
+        SELECT
+        B.GROUP_ID, B.ROLE_ID, B.MGROUP_ID, B.NAME, B.CODE, B.ICON_STYLE, B.IMAGE_PATH, B.TPL_SOLUTION, B.IS_COMMON_GROUP, B.IS_LEADER_GROUP, B.LEADER_LEVEL, B.IS_WORK_GROUP, B.IS_GRID_GROUP, B.IS_PARTY_GROUP, B.IS_VILLAGE_GROUP, B.IS_DISABLED, B.PRIORITY, B.CREATOR_ID, B.CREATE_TIME, B.DESCRIPTION
+        , sr.NAME as roleName
+        FROM PUBLIC_GROUP B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        left join SYS_ROLE sr on B.ROLE_ID =sr.ROLE_ID
+        <if test="appId != null and appId.trim() != ''">
+            and sr.APP_ID = #{appId}
+        </if>
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="publicGroupDtoMap">
+        SELECT
+        B.GROUP_ID, B.ROLE_ID, B.MGROUP_ID, B.NAME, B.CODE, B.ICON_STYLE, B.IMAGE_PATH, B.TPL_SOLUTION, B.IS_COMMON_GROUP, B.IS_LEADER_GROUP, B.LEADER_LEVEL, B.IS_WORK_GROUP, B.IS_GRID_GROUP, B.IS_PARTY_GROUP, B.IS_VILLAGE_GROUP, B.IS_DISABLED, B.PRIORITY, B.CREATOR_ID, B.CREATE_TIME, B.DESCRIPTION
+        , sr.NAME as roleName
+        FROM PUBLIC_GROUP B
+        <include refid="commonUnionJoin"></include>
+        WHERE GROUP_ID = #{value}
+    </select>
+
+
+    <select id="getListByApp" resultMap="publicGroupMap">
+        select B.* from PUBLIC_GROUP B, SYS_ROLE AR
+        where B.ROLE_ID=sr.ROLE_ID
+        <if test='appId != null and appId != ""'>
+            AND  sr.APP_ID = #{appId}
+        </if>
+        <if test="roletypeId != null and roletypeId!= ''">
+            and sr.ROLETYPE_ID in
+            <foreach collection="roletypeId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="isDisabled != null">
+            and IS_DISABLED = #{isDisabled}
+        </if>
+    </select>
+
+    <!-- 根据 用户id和组获取用户的菜单列表 -->
+    <!-- 菜单信息map -->
+    <resultMap type="net.linlan.sys.role.entity.SysMenu" id="sysMenuMap">
+        <id property="id" column="MENU_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="appId" column="APP_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="ename" column="ENAME"/>
+        <result property="type" column="TYPE"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="code" column="CODE"/>
+        <result property="menuLevel" column="MENU_LEVEL"/>
+        <result property="subCount" column="SUB_COUNT"/>
+        <result property="perms" column="PERMS"/>
+        <result property="urlType" column="URL_TYPE"/>
+        <result property="url" column="URL"/>
+        <result property="icon" column="ICON"/>
+        <result property="popPosition" column="POP_POSITION"/>
+        <result property="imagePath" column="IMAGE_PATH"/>
+        <result property="css" column="CSS"/>
+        <result property="jsEvent" column="JS_EVENT"/>
+        <result property="menuSeq" column="MENU_SEQ"/>
+        <result property="shortCut" column="SHORT_CUT"/>
+        <result property="isLeaf" column="IS_LEAF"/>
+        <result property="isDisplay" column="IS_DISPLAY"/>
+        <result property="isProtect" column="IS_PROTECT"/>
+        <result property="isDisabled" column="IS_DISABLED"/>
+        <result property="isCheck" column="IS_CHECK"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="deleteTime" column="DELETE_TIME"/>
+        <result property="description" column="ASCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+
+    <select id="getGroupByCode" resultMap="publicGroupMap">
+        select *
+        FROM PUBLIC_GROUP
+        where CODE=#{code} and IS_DISABLED=0
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="getRoletypeId" resultType="java.lang.String">
+        select R.ROLETYPE_ID from   PUBLIC_GROUP B
+        left join SYS_ROLE R on R.ROLE_ID = B.ROLE_ID
+        where B.GROUP_ID=#{groupId}
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="dictionaryInitGroupMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="searchCode"/>
+    </resultMap>
+
+    <select id="getPublicGroupSelect" resultMap="dictionaryInitGroupMap">
+        SELECT NAME AS name, GROUP_ID as cddValue FROM
+            PUBLIC_GROUP B
+    </select>
+
+    <resultMap id="groupTreeMap" type="net.linlan.sys.base.dto.TreeNode">
+        <id property="id" column="id"/>
+        <result property="label" column="label"/>
+    </resultMap>
+
+    <select id="getGroupList" resultMap="groupTreeMap">
+        select B.GROUP_ID as id,B.NAME as label from PUBLIC_GROUP B
+        LEFT JOIN SYS_ROLE sr ON B.ROLE_ID=sr.ROLE_ID
+        where 1=1
+        AND  sr.APP_ID = #{appId}
+        <if test="roletypeId!='' and roletypeId != null">
+            AND sr.ROLETYPE_ID = #{roletypeId}
+        </if>
+        AND  B.IS_DISABLED = 0
+    </select>
+
+    <select id="getPositionListByGroupId" resultMap="groupTreeMap">
+        select sp.POSITION_ID as id,sp.NAME AS label
+        from PUBLIC_GROUP_POSITION B
+        LEFT JOIN SYS_POSITION sp ON sp.POSITION_ID=B.POSITION_ID
+        LEFT JOIN PUBLIC_GROUP G ON B.GROUP_ID = G.GROUP_ID
+        LEFT JOIN SYS_ROLE sr ON G.ROLE_ID=sr.ROLE_ID
+        where 1=1
+        <if test="roletypeId!='' and roletypeId != null">
+            AND sr.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="groupId!='' and groupId != null">
+            AND  B.GROUP_ID = #{groupId}
+        </if>
+        AND sp.DEL_FLAG=0
+        ORDER BY sp.PRIORITY asc
+    </select>
+
+    <resultMap type="net.linlan.sys.base.dto.DictionaryInitDto" id="baseDictionarySmgMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="cddValue" column="cddValue"/>
+        <result property="searchCode" column="searchCode"/>
+    </resultMap>
+    <select id="getForSelect" resultMap="baseDictionarySmgMap">
+        SELECT NAME AS name, GROUP_ID as cddValue
+        FROM PUBLIC_GROUP B
+        WHERE B.DEL_FLAG = 0
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+    <select id="getPositionListByRole" resultType="net.linlan.authn.group.dto.PositionSimpleDto">
+        SELECT  sp.POSITION_ID as id,sp.PARENT_ID,sp.NAME,sp.POS_RANK,sp.CREATE_TIME,sp.PRIORITY
+        , SR.NAME as roletypeName,pgP.GROUP_ID as groupId
+        FROM SYS_ROLE_POSITION B
+        LEFT JOIN SYS_POSITION sp ON B.POSITION_ID = sp.POSITION_ID
+        LEFT JOIN CORE_ROLETYPE SR ON sp.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join PUBLIC_GROUP_POSITION pgP on pgP.POSITION_ID = B.POSITION_ID
+        where 1=1
+        <if test="name != null and name != ''">
+            AND sp.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND sp.POS_RANK = #{posRank}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            AND sp.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND sp.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.ROLE_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <select id="getPositionListByPosition" resultType="net.linlan.authn.group.dto.PositionSimpleDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName,pgP.GROUP_ID as groupId,B.CODE AS wlType
+        FROM
+        SYS_POSITION B
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join PUBLIC_GROUP_POSITION pgP on pgP.POSITION_ID = B.POSITION_ID
+        where 1 = 1
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.PARENT_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+    <select id="getMemberGroupList" resultType="net.linlan.authn.group.dto.PublicGroupListDto">
+        SELECT B.GROUP_ID as id,B.NAME,B.IS_DISABLED,B.PRIORITY
+             ,SR.NAME as roleTypeName,sr.NAME as roleName
+        FROM  PUBLIC_GROUP B
+        LEFT JOIN  SYS_ROLE sr ON B.ROLE_ID = sr.ROLE_ID
+        LEFT JOIN  CORE_ROLETYPE SR ON sr.ROLETYPE_ID = SR.ROLETYPE_ID
+        where 1=1
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="isDisabled != null and isDisabled != ''">
+            AND B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            AND SR.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="roleId != null and roleId != ''">
+            AND sr.ROLE_ID = #{roleId}
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+    <select id="groupBindPosition">
+        insert into PUBLIC_GROUP_POSITION
+        (GROUPPOS_ID, GROUP_ID, POSITION_ID) values
+        <foreach collection="list" item="publicGroupPositionDto" separator=",">
+            (#{publicGroupPositionDto.id}, #{publicGroupPositionDto.groupId}, #{publicGroupPositionDto.positionId})
+        </foreach>
+    </select>
+
+    <delete id="groupUnBindPosition">
+        delete from PUBLIC_GROUP_POSITION where GROUP_ID = #{id}
+    </delete>
+
+    <delete id="groupUnBindPositionId">
+        delete from PUBLIC_GROUP_POSITION where GROUP_ID = #{groupId}
+        AND POSITION_ID IN
+        <foreach collection="ids" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="getPositionList" resultType="net.linlan.authn.group.dto.PositionSimpleDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName,pgP.GROUP_ID as groupId
+        FROM
+        SYS_POSITION B
+        left join SYS_POSITION sp on B.PARENT_ID = sp.POSITION_ID
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join CORE_POSTYPE SP on B.POSTYPE_ID =SP.POSTYPE_ID
+        left join PUBLIC_GROUP_POSITION pgP on pgP.POSITION_ID = B.POSITION_ID
+        where 1 = 1
+        <if test="parentId = null or parentId = ''">
+            AND B.PARENT_ID is null
+        </if>
+        <if test="parentId != null and parentId != ''">
+            AND B.PARENT_ID =#{parentId}
+        </if>
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+        AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+    <select id="getPositionListByRoleType" resultType="net.linlan.authn.group.dto.PositionSimpleDto">
+        SELECT B.POSITION_ID as id,B.PARENT_ID,B.NAME,B.POS_RANK,B.ROLETYPE_ID,B.CREATE_TIME,B.PRIORITY
+        , SR.NAME as roletypeName,pgP.GROUP_ID as groupId
+        FROM
+        SYS_POSITION B
+        left join CORE_ROLETYPE SR on B.ROLETYPE_ID = SR.ROLETYPE_ID
+        left join PUBLIC_GROUP_POSITION pgP on pgP.POSITION_ID = B.POSITION_ID
+        where 1 = 1
+        <if test="name != null and name != ''">
+            AND B.NAME like  concat('%', #{name},'%')
+        </if>
+        <if test="posRank != null and posRank != ''">
+            AND B.POS_RANK = #{posRank}
+        </if>
+        <if test="roletypeId != null and roletypeId != ''">
+            AND B.ROLETYPE_ID = #{roletypeId}
+        </if>
+        <if test="createTime != null and createTime != ''">
+            AND B.CREATE_TIME like  concat('%', #{createTime},'%')
+        </if>
+        <if test="parentId != null and parentId != ''">
+            and  B.ROLETYPE_ID=#{parentId}
+        </if>
+        <if test="startTime != null and startTime.trim() != ''and endTime != null and endTime.trim() != ''">
+            <![CDATA[ AND date_format(B.CREATE_TIME,'%Y-%m-%d') >= #{startTime}
+            AND date_format(B.CREATE_TIME,'%Y-%m-%d') <= #{endTime} ]]>
+        </if>
+        ORDER BY PRIORITY ASC
+    </select>
+
+
+
+</mapper>

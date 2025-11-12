@@ -15,32 +15,38 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.vo;
+package net.linlan.authn.group.dto;
 
 import lombok.Data;
 
-/**
- * 手机号登录
- *
- * @author Linlan
- *
- */
+import net.linlan.utils.param.BaseParam;
+
 @Data
-public class MobileLoginBody {
+public class PositionCommParam extends BaseParam {
+
     /**
-     * 手机号码
+     * 编号id
      */
-    private String mobile;
+    private String id;
     /**
-     * 验证码
+     * 岗位名称
      */
-    private String code;
+    private String name;
     /**
-     * 唯一标识
+     * 岗位级别
      */
-    private String uuid;
+    private String posRank;
     /**
-     * 所在应用ID
+     * 角色类型编号
      */
-    private String appId;
+    private String roletypeId;
+    /**
+     * 创建时间
+     */
+    private String createTime;
+    /**
+     * 父节点ID
+     */
+    private String parentId;
+
 }

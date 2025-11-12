@@ -28,8 +28,8 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
-import net.linlan.authn.constant.MessageSendStatus;
-import net.linlan.authn.constant.MessageStatus;
+import net.linlan.authn.manage.constant.MessageSendStatus;
+import net.linlan.authn.manage.constant.MessageStatus;
 import net.linlan.authn.sms.dao.SmsSendRecordDao;
 import net.linlan.authn.sms.dto.SmsSendRecordDto;
 import net.linlan.authn.sms.entity.SmsSendRecord;

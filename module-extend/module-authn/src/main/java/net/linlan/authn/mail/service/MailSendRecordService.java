@@ -28,13 +28,13 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
-import net.linlan.authn.constant.MessageSendStatus;
-import net.linlan.authn.constant.MessageStatus;
 import net.linlan.authn.mail.dao.MailSendRecordDao;
 import net.linlan.authn.mail.dto.MailSendRecordDto;
 import net.linlan.authn.mail.entity.MailSendRecord;
 import net.linlan.authn.mail.param.MailSendRecordParam;
 import net.linlan.authn.mail.vo.MailConfigVo;
+import net.linlan.authn.manage.constant.MessageSendStatus;
+import net.linlan.authn.manage.constant.MessageStatus;
 import net.linlan.commons.core.ObjectUtils;
 
 /**

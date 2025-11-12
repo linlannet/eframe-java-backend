@@ -21,7 +21,7 @@ import java.util.Date;
 
 import lombok.Data;
 
-import net.linlan.authn.constant.MessageSendStatus;
+import net.linlan.authn.manage.constant.MessageSendStatus;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.utils.entity.BaseEntity;

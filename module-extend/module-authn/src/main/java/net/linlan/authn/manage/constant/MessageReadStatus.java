@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.constant;
+package net.linlan.authn.manage.constant;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

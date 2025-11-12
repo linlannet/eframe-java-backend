@@ -15,27 +15,30 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.constant;
+package net.linlan.authn.manage.constant;
 
 import com.fasterxml.jackson.annotation.JsonValue;
+
+import lombok.Getter;
 
 import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
 /**
- * 消息类型
+ * 消息主状态
  *
  * @author Linlan
  */
-public enum MessageType implements BaseEnumString {
-                                                   /**
-                                                    * 邮件
-                                                    */
-                                                   MAIL("mail", "邮件"),
-                                                   /**
-                                                    * 短信
-                                                    */
-                                                   SMS("sms", "短信");
+@Getter
+public enum MessageStatus implements BaseEnumString {
+                                                     /**
+                                                      * 成功
+                                                      */
+                                                     SUCCESS("success", "成功"),
+                                                     /**
+                                                      * 失败
+                                                      */
+                                                     FAIL("fail", "失败");
 
     /**
      * 键
@@ -47,41 +50,25 @@ public enum MessageType implements BaseEnumString {
      */
     private final String value;
 
-    MessageType(String key, String value) {
+    MessageStatus(String key, String value) {
         this.key = key;
         this.value = value;
-    }
-
-    @Override
-    public String getKey() {
-        return key;
-    }
-
-    @Override
-    public String getValue() {
-        return value;
     }
 
     /**
      * 获取类型
      *
      * @param key {@link String}
-     * @return {@link String}
+     * @return {@link MessageStatus}
      */
     @EnumConvert
-    public static MessageType fromType(String key) {
-        MessageType[] values = values();
-        for (MessageType status : values) {
+    public static MessageStatus fromType(String key) {
+        MessageStatus[] values = values();
+        for (MessageStatus status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {
                 return status;
             }
         }
         return null;
     }
-
-    @Override
-    public String toString() {
-        return this.key;
-    }
-
 }

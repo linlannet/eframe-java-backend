@@ -15,29 +15,27 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.authn.constant;
+package net.linlan.authn.manage.constant;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-import lombok.Getter;
-
+import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
 /**
- * 消息发送状态
+ * 消息分类
  *
  * @author Linlan
  */
-@Getter
-public enum MessageSendStatus {
-                               /**
-                                * 已发送
-                                */
-                               SEND("send", "已发送"),
-                               /**
-                                * 草稿
-                                */
-                               DRAFT("draft", "草稿");
+public enum MessageCategory implements BaseEnumString {
+                                                       /**
+                                                        * 验证码
+                                                        */
+                                                       CODE("key", "验证码"),
+                                                       /**
+                                                        * 通知
+                                                        */
+                                                       NOTICE("notice", "通知");
 
     /**
      * 键
@@ -49,25 +47,41 @@ public enum MessageSendStatus {
      */
     private final String value;
 
-    MessageSendStatus(String key, String value) {
+    MessageCategory(String key, String value) {
         this.key = key;
         this.value = value;
+    }
+
+    @Override
+    public String getKey() {
+        return key;
+    }
+
+    @Override
+    public String getValue() {
+        return value;
     }
 
     /**
      * 获取类型
      *
      * @param key {@link String}
-     * @return {@link MessageSendStatus}
+     * @return {@link MessageCategory}
      */
     @EnumConvert
-    public static MessageSendStatus fromType(String key) {
-        MessageSendStatus[] values = values();
-        for (MessageSendStatus status : values) {
+    public static MessageCategory fromType(String key) {
+        MessageCategory[] values = values();
+        for (MessageCategory status : values) {
             if (String.valueOf(status.getKey()).equals(key)) {
                 return status;
             }
         }
         return null;
     }
+
+    @Override
+    public String toString() {
+        return this.key;
+    }
+
 }

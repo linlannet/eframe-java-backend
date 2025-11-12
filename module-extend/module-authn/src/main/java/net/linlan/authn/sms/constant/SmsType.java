@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import lombok.Getter;
 
-import net.linlan.authn.constant.MessageCategory;
+import net.linlan.authn.manage.constant.MessageCategory;
 import net.linlan.utils.enums.BaseEnumString;
 import net.linlan.utils.enums.EnumConvert;
 
