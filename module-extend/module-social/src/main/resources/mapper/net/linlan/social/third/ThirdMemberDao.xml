@@ -29,7 +29,7 @@
         <result property="organId" column="ORGAN_ID"/>
         <result property="foreignId" column="FOREIGN_ID"/>
         <result property="accountId" column="ACCOUNT_ID"/>
-        <result property="serverType" column="SERVER_TYPE"/>
+        <result property="accountType" column="ACCOUNT_TYPE"/>
         <result property="unionId" column="UNION_ID"/>
         <result property="openId" column="OPEN_ID"/>
         <result property="email" column="EMAIL"/>
@@ -50,7 +50,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="thirdMemberMap">
         SELECT
-MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
         WHERE B.MEMBER_ID = #{value}
     </select>
@@ -58,7 +58,7 @@ MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPE
     <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
     <select id="getList" resultMap="thirdMemberMap">
         SELECT
-B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM THIRD_MEMBER B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -108,8 +108,8 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B
         <if test="accountId != null and accountId != ''">
             and B.ACCOUNT_ID = #{accountId}
         </if>
-        <if test="serverType != null and serverType != ''">
-            and B.SERVER_TYPE = #{serverType}
+        <if test="accountType != null and accountType != ''">
+            and B.ACCOUNT_TYPE = #{accountType}
         </if>
         <if test="unionId != null and unionId != ''">
             and B.UNION_ID = #{unionId}
@@ -175,11 +175,11 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B
     <insert id="save" parameterType="net.linlan.social.third.entity.ThirdMember">
         INSERT INTO THIRD_MEMBER
         (
-MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         )
         VALUES
         (
-#{id}, #{userId}, #{organId}, #{foreignId}, #{accountId}, #{serverType}, #{unionId}, #{openId}, #{email}, #{areaCode}, #{mobile}, #{nickName}, #{avatarUrl}, #{additionInfo}, #{creatorId}, #{createTime}, #{lastTime}, #{delFlag}, #{description}, #{spare1}, #{spare2}
+#{id}, #{userId}, #{organId}, #{foreignId}, #{accountId}, #{accountType}, #{unionId}, #{openId}, #{email}, #{areaCode}, #{mobile}, #{nickName}, #{avatarUrl}, #{additionInfo}, #{creatorId}, #{createTime}, #{lastTime}, #{delFlag}, #{description}, #{spare1}, #{spare2}
         )
     </insert>
 
@@ -188,12 +188,12 @@ MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPE
             <when test='_databaseId == "mysql"'>
                 INSERT INTO THIRD_MEMBER
                 (
-MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
                 )
                 VALUES
                 <foreach collection="list" index="index" item="item" separator=",">
                     (
-#{item.id}, #{item.userId}, #{item.organId}, #{item.foreignId}, #{item.accountId}, #{item.serverType}, #{item.unionId}, #{item.openId}, #{item.email}, #{item.areaCode}, #{item.mobile}, #{item.nickName}, #{item.avatarUrl}, #{item.additionInfo}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.userId}, #{item.organId}, #{item.foreignId}, #{item.accountId}, #{item.accountType}, #{item.unionId}, #{item.openId}, #{item.email}, #{item.areaCode}, #{item.mobile}, #{item.nickName}, #{item.avatarUrl}, #{item.additionInfo}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </when>
@@ -201,11 +201,11 @@ MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPE
                 <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
                     INSERT INTO THIRD_MEMBER
                     (
-MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
                     )
                     VALUES
                     (
-#{item.id}, #{item.userId}, #{item.organId}, #{item.foreignId}, #{item.accountId}, #{item.serverType}, #{item.unionId}, #{item.openId}, #{item.email}, #{item.areaCode}, #{item.mobile}, #{item.nickName}, #{item.avatarUrl}, #{item.additionInfo}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
+#{item.id}, #{item.userId}, #{item.organId}, #{item.foreignId}, #{item.accountId}, #{item.accountType}, #{item.unionId}, #{item.openId}, #{item.email}, #{item.areaCode}, #{item.mobile}, #{item.nickName}, #{item.avatarUrl}, #{item.additionInfo}, #{item.creatorId}, #{item.createTime}, #{item.lastTime}, #{item.delFlag}, #{item.description}, #{item.spare1}, #{item.spare2}
                     )
                 </foreach>
             </otherwise>
@@ -220,7 +220,7 @@ MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPE
             <if test="organId != null">ORGAN_ID = #{organId}, </if>
             <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
             <if test="accountId != null">ACCOUNT_ID = #{accountId}, </if>
-            <if test="serverType != null">SERVER_TYPE = #{serverType}, </if>
+            <if test="accountType != null">ACCOUNT_TYPE = #{accountType}, </if>
             <if test="unionId != null">UNION_ID = #{unionId}, </if>
             <if test="openId != null">OPEN_ID = #{openId}, </if>
             <if test="email != null">EMAIL = #{email}, </if>
@@ -271,7 +271,7 @@ MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPE
     <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <select id="getPageDto" resultMap="thirdMemberDtoMap">
         SELECT
-B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM THIRD_MEMBER B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -282,7 +282,7 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="thirdMemberDtoMap">
         SELECT
-B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM THIRD_MEMBER B
         WHERE MEMBER_ID = #{value}
     </select>
@@ -290,28 +290,28 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B
     <!-- 以下为新增特定的操作 -->
     <select id="findByUserId" resultMap="thirdMemberMap">
         SELECT
-            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
         WHERE B.USER_ID = #{value}
     </select>
 
     <select id="findByAccountIdOpenId" resultMap="thirdMemberMap">
         SELECT
-            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
         WHERE B.ACCOUNT_ID = #{accountId} AND B.OPEN_ID = #{openId} AND B.DEL_FLAG = 0
     </select>
 
     <select id="findByUserIdOpenId" resultMap="thirdMemberMap">
         SELECT
-            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
         WHERE B.USER_ID = #{userId} AND B.OPEN_ID = #{openId} AND B.DEL_FLAG = 0
     </select>
 
     <select id="findByUserIdAccountId" resultMap="thirdMemberMap">
         SELECT
-            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, SERVER_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
         WHERE B.USER_ID = #{userId} AND B.ACCOUNT_ID = #{accountId} AND B.DEL_FLAG = 0
     </select>
@@ -320,6 +320,42 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.SERVER_TYPE, B
         select B.* from THIRD_MEMBER B
         WHERE 1 = 1
         <include refid="commonList"></include>
+    </select>
+
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.social.third.dto.ThirdUserDto" extends="thirdMemberMap" id="thirdUserDtoMap">
+        <association property="baseUser" column="{value=USER_ID}" select="net.linlan.sys.base.dao.BaseUserDao.findById"></association>
+        <association property="baseUserExt" column="{value=USER_ID}" select="net.linlan.sys.base.dao.BaseUserExtDao.findById"></association>
+    </resultMap>
+
+    <select id="getThirdUserById" resultMap="thirdUserDtoMap">
+        SELECT
+            B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+            , BU.*, BUE.*
+        FROM THIRD_MEMBER B
+        LEFT JOIN BASE_USER BU ON B.USER_ID = BU.USER_ID
+        LEFT JOIN BASE_USER_EXT BUE ON B.USER_ID = BUE.USER_ID
+        WHERE B.MEMBER_ID = #{value}
+    </select>
+
+    <select id="getThirdUserByUserId" resultMap="thirdUserDtoMap">
+        SELECT
+            B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+             , BU.*, BUE.*
+        FROM THIRD_MEMBER B
+                 LEFT JOIN BASE_USER BU ON B.USER_ID = BU.USER_ID
+                 LEFT JOIN BASE_USER_EXT BUE ON B.USER_ID = BUE.USER_ID
+        WHERE B.USER_ID = #{value}
+    </select>
+
+    <select id="getThirdUserByOpenId" resultMap="thirdUserDtoMap">
+        SELECT
+            B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+             , BU.*, BUE.*
+        FROM THIRD_MEMBER B
+                 LEFT JOIN BASE_USER BU ON B.USER_ID = BU.USER_ID
+                 LEFT JOIN BASE_USER_EXT BUE ON B.USER_ID = BUE.USER_ID
+        WHERE B.OPEN_ID = #{openId} and B.ACCOUNT_TYPE = #{source}
     </select>
 
 </mapper>

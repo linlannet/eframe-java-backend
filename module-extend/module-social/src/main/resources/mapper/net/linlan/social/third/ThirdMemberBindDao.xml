@@ -44,7 +44,7 @@
     <!-- find by id，通过主键获取对象 -->
     <select id="findById" resultMap="thirdMemberBindMap">
         SELECT
-BIND_ID, MEMBER_ID, USER_ID, USERNAME, ACCOUNT_ID, ACCOUNT_KEY, BIND_TIME, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+        BIND_ID, MEMBER_ID, USER_ID, USERNAME, ACCOUNT_ID, ACCOUNT_KEY, BIND_TIME, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER_BIND B
         WHERE B.BIND_ID = #{value}
     </select>
@@ -52,7 +52,7 @@ BIND_ID, MEMBER_ID, USER_ID, USERNAME, ACCOUNT_ID, ACCOUNT_KEY, BIND_TIME, ADDIT
     <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
     <select id="getList" resultMap="thirdMemberBindMap">
         SELECT
-B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
         FROM THIRD_MEMBER_BIND B
         WHERE 1=1
         <include refid="commonList"></include>
@@ -95,6 +95,9 @@ B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BI
         </if>
         <if test="memberId != null and memberId != ''">
             and B.MEMBER_ID = #{memberId}
+        </if>
+        <if test="userId != null and userId != ''">
+            and B.USER_ID = #{userId}
         </if>
         <if test="username != null and username != ''">
             and B.USERNAME = #{username}
@@ -235,14 +238,17 @@ BIND_ID, MEMBER_ID, USER_ID, USERNAME, ACCOUNT_ID, ACCOUNT_KEY, BIND_TIME, ADDIT
 
     <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <resultMap type="net.linlan.social.third.dto.ThirdMemberBindDto" extends="thirdMemberBindMap" id="thirdMemberBindDtoMap">
+        <result property="openType" column="openType"/>
 
     </resultMap>
 
     <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
     <select id="getPageDto" resultMap="thirdMemberBindDtoMap">
         SELECT
-B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        , ca.SERVER_TYPE AS openType
         FROM THIRD_MEMBER_BIND B
+        LEFT JOIN CORE_ACCOUNT ca on B.ACCOUNT_ID = ca.ACCOUNT_ID
         WHERE 1=1
         <include refid="commonList"></include>
         <include refid="getListOrderBy"></include>
@@ -252,8 +258,10 @@ B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BI
     <!-- get dto with input id，通过ID，查询dto对象 -->
     <select id="getDtoById" resultMap="thirdMemberBindDtoMap">
         SELECT
-B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+        B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+         , ca.SERVER_TYPE AS openType
         FROM THIRD_MEMBER_BIND B
+        LEFT JOIN CORE_ACCOUNT ca on B.ACCOUNT_ID = ca.ACCOUNT_ID
         WHERE BIND_ID = #{value}
     </select>
 
@@ -271,5 +279,15 @@ B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BI
         FROM THIRD_MEMBER_BIND B
         WHERE B.USER_ID = #{userId} and B.ACCOUNT_ID = #{accountId}
     </select>
+
+    <select id="findByUserIdOpenType" resultMap="thirdMemberBindMap">
+        SELECT
+            B.BIND_ID, B.MEMBER_ID, B.USER_ID, B.USERNAME, B.ACCOUNT_ID, B.ACCOUNT_KEY, B.BIND_TIME, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+            , ca.SERVER_TYPE AS openType
+        FROM THIRD_MEMBER_BIND B
+        LEFT JOIN CORE_ACCOUNT ca on B.ACCOUNT_ID = ca.ACCOUNT_ID
+        WHERE B.USER_ID = #{userId} and ca.SERVER_TYPE = #{openType}
+    </select>
+
 
 </mapper>

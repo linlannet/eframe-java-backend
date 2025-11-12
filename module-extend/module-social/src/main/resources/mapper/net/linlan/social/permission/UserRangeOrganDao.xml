@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-social - 社交平台对接模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.social.permission.dao.UserRangeOrganDao">
+
+    <!-- 采用别名使用类成员变量，可根据需求，确定是否启用 -->
+    <resultMap type="net.linlan.social.permission.entity.UserRangeOrgan" id="userRangeOrganMap">
+        <id property="id" column="RELATION_ID"/>
+        <result property="organId" column="ORGAN_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="userlId" column="USERL_ID"/>
+        <result property="groupId" column="GROUP_ID"/>
+        <result property="positionId" column="POSITION_ID"/>
+        <result property="deptId" column="DEPT_ID"/>
+        <result property="foreignId" column="FOREIGN_ID"/>
+        <result property="isMember" column="IS_MEMBER"/>
+        <result property="type" column="TYPE"/>
+        <result property="power" column="POWER"/>
+        <result property="isDef" column="IS_DEF"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="status" column="STATUS"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updatorId" column="UPDATOR_ID"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <!-- find by id，通过主键获取对象 -->
+    <select id="findById" resultMap="userRangeOrganMap">
+        SELECT
+        RELATION_ID, ORGAN_ID, USER_ID, USERL_ID, GROUP_ID, POSITION_ID, DEPT_ID, FOREIGN_ID, IS_MEMBER, TYPE, POWER, IS_DEF, DEL_FLAG, STATUS, CREATOR_ID, CREATE_TIME, UPDATOR_ID, UPDATE_TIME, SPARE1, SPARE2
+        FROM USER_RANGE_ORGAN
+        WHERE RELATION_ID = #{value}
+    </select>
+
+    <!-- get list，通过输入的条件，获取返回的list列表对象，采用相应的分页规则进行分页处理 -->
+    <select id="getList" resultMap="userRangeOrganMap">
+        SELECT
+        B.RELATION_ID, B.ORGAN_ID, B.USER_ID, B.USERL_ID, B.GROUP_ID, B.POSITION_ID, B.DEPT_ID, B.FOREIGN_ID, B.IS_MEMBER, B.TYPE, B.POWER, B.IS_DEF, B.DEL_FLAG, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.UPDATOR_ID, B.UPDATE_TIME, B.SPARE1, B.SPARE2
+        FROM USER_RANGE_ORGAN B
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+    </select>
+
+
+    <!-- 通用排序SQL，如果传入参数按照参数排序，如果未传入参数，按照主键排序 -->
+    <sql id="getListOrderBy">
+        <choose>
+            <when test='orderBy != null and orderBy != ""'>
+                <choose>
+                    <when test='orderBy == 0'>
+                        ORDER BY B.CREATE_TIME DESC
+                    </when>
+                    <when test='orderBy == 1'>
+                        ORDER BY B.CREATE_TIME ASC
+                    </when>
+                    <when test='orderBy == 2'>
+                        ORDER BY B.ORGAN_ID DESC
+                    </when>
+                    <when test='orderBy == 3'>
+                        ORDER BY B.ORGAN_ID ASC
+                    </when>
+                    <otherwise>
+                        ORDER BY RELATION_ID ASC
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                ORDER BY RELATION_ID DESC
+            </otherwise>
+        </choose>
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList">
+        <!--  只允许默认的本表的字段查询，查询条件可通过Param定义，默认全部字段，后续根据Param内的定义，可删除不需要的查询字段 -->
+        <if test="organId != null and organId != ''">
+            and B.ORGAN_ID = #{organId}
+        </if>
+        <if test="userId != null and userId != ''">
+            and B.USER_ID = #{userId}
+        </if>
+        <if test="userlId != null and userlId != ''">
+            and B.USERL_ID = #{userlId}
+        </if>
+        <if test="groupId != null and groupId != ''">
+            and B.GROUP_ID = #{groupId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            and B.POSITION_ID = #{positionId}
+        </if>
+        <if test="deptId != null and deptId != ''">
+            and B.DEPT_ID = #{deptId}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{foreignId}
+        </if>
+        <if test="isMember != null and isMember != ''">
+            and B.IS_MEMBER = #{isMember}
+        </if>
+        <if test="type != null and type != ''">
+            and B.TYPE = #{type}
+        </if>
+        <if test="power != null and power != ''">
+            and B.POWER = #{power}
+        </if>
+        <if test="isDef != null and isDef != ''">
+            and B.IS_DEF = #{isDef}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="status != null and status != ''">
+            and B.STATUS = #{status}
+        </if>
+        <if test="wlType != null">
+            and exists (select 1 from ORGAN_WORK Z where B.ORGAN_ID = Z.ORGAN_ID and WL_TYPE = #{wlType} )
+        </if>
+        <if test="q != null and q != ''">
+            and B.USER_ID in (select bue.USER_ID from BASE_USER_EXT bue where bue.ID_NAME LIKE concat('%',concat(#{q},'%')))
+            or B.ORGAN_ID in (select org.ORGAN_ID from BASE_ORGAN org where org.NAME LIKE concat('%',concat(#{q},'%')))
+        </if>
+        <if test="ids != null ">
+            and B.RELATION_ID IN
+            <foreach item="item" collection="ids" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= date_format(#{startTime},'%Y-%m-%d %H:%i:%S')
+                and B.CREATE_TIME <= date_format(#{endTime},'%Y-%m-%d %H:%i:%S') ]]>
+                </if>
+            </when>
+            <otherwise>
+                <if test='startTime != null and  startTime.trim() != "" and endTime != null and  endTime.trim() != "" '>
+                    <![CDATA[ and B.CREATE_TIME >= to_date(#{startTime},'YYYY-MM-DD HH24:MI:SS')
+                and B.CREATE_TIME <= to_date(#{endTime},'YYYY-MM-DD HH24:MI:SS') ]]>
+                </if>
+            </otherwise>
+        </choose>
+
+    </sql>
+
+    <!-- save object，保存对象信息 -->
+    <insert id="save" parameterType="net.linlan.social.permission.entity.UserRangeOrgan">
+        INSERT INTO USER_RANGE_ORGAN
+        (
+        RELATION_ID, ORGAN_ID, USER_ID, USERL_ID, GROUP_ID, POSITION_ID, DEPT_ID, FOREIGN_ID, IS_MEMBER, TYPE, POWER, IS_DEF, DEL_FLAG, STATUS, CREATOR_ID, CREATE_TIME, UPDATOR_ID, UPDATE_TIME, SPARE1, SPARE2
+        )
+        VALUES
+        (
+        #{id}, #{organId}, #{userId}, #{userlId}, #{groupId}, #{positionId}, #{deptId}, #{foreignId}, #{isMember}, #{type}, #{power}, #{isDef}, #{delFlag}, #{status}, #{creatorId}, #{createTime}, #{updatorId}, #{updateTime}, #{spare1}, #{spare2}
+        )
+    </insert>
+
+    <!-- update object，更新对象信息 -->
+    <update id="update" parameterType="net.linlan.social.permission.entity.UserRangeOrgan">
+        UPDATE USER_RANGE_ORGAN
+        <set>
+            <if test="organId != null">ORGAN_ID = #{organId}, </if>
+            <if test="userId != null">USER_ID = #{userId}, </if>
+            <if test="userlId != null">USERL_ID = #{userlId}, </if>
+            <if test="groupId != null">GROUP_ID = #{groupId}, </if>
+            <if test="positionId != null">POSITION_ID = #{positionId}, </if>
+            <if test="deptId != null">DEPT_ID = #{deptId}, </if>
+            <if test="foreignId != null">FOREIGN_ID = #{foreignId}, </if>
+            <if test="isMember != null">IS_MEMBER = #{isMember}, </if>
+            <if test="type != null">TYPE = #{type}, </if>
+            <if test="power != null">POWER = #{power}, </if>
+            <if test="isDef != null">IS_DEF = #{isDef}, </if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag}, </if>
+            <if test="status != null">STATUS = #{status}, </if>
+            <if test="creatorId != null">CREATOR_ID = #{creatorId}, </if>
+            <if test="createTime != null">CREATE_TIME = #{createTime}, </if>
+            <if test="updatorId != null">UPDATOR_ID = #{updatorId}, </if>
+            <if test="updateTime != null">UPDATE_TIME = #{updateTime}, </if>
+            <if test="spare1 != null">SPARE1 = #{spare1}, </if>
+            <if test="spare2 != null">SPARE2 = #{spare2}</if>
+        </set>
+        WHERE RELATION_ID = #{id}
+    </update>
+
+    <!-- delete by id，通过主键删除对象 -->
+    <delete id="deleteById">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE RELATION_ID = #{value}
+    </delete>
+
+    <!-- delete by ids，通过主键数组批量删除对象 -->
+    <delete id="deleteByIds">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE RELATION_ID IN
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- query total，通过输入的条件，查询返回结果的数量，返回值为int -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1)
+        FROM USER_RANGE_ORGAN B
+        WHERE 1 = 1
+        <include refid="commonList"></include>
+    </select>
+
+    <!-- 以下为新增特定的操作 -->
+    <!-- get list with dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <resultMap type="net.linlan.social.permission.dto.UserRangeOrganDto" extends="userRangeOrganMap" id="userRangeOrganDtoMap">
+        <result property="name" column="name"/>
+        <result property="organName" column="organName"/>
+    </resultMap>
+
+    <!-- get page with param input dto result，通过输入的条件，返回查询结果信息，返回值为dto对象 -->
+    <select id="getPageDto" resultMap="userRangeOrganDtoMap">
+        SELECT
+        B.RELATION_ID, B.ORGAN_ID, B.USER_ID, B.USERL_ID, B.GROUP_ID, B.POSITION_ID, B.DEPT_ID, B.FOREIGN_ID, B.IS_MEMBER, B.TYPE, B.POWER, B.IS_DEF, B.DEL_FLAG, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.UPDATOR_ID, B.UPDATE_TIME, B.SPARE1, B.SPARE2
+        , bue.ID_NAME AS name, org.NAME organName
+        FROM USER_RANGE_ORGAN B
+        <include refid="commonUnionJoin"></include>
+        WHERE 1=1
+        <include refid="commonList"></include>
+        <include refid="getListOrderBy"></include>
+
+    </select>
+
+    <!-- 关联表 -->
+    <sql id="commonUnionJoin">
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+    </sql>
+
+    <!-- get dto with input id，通过ID，查询dto对象 -->
+    <select id="getDtoById" resultMap="userRangeOrganDtoMap">
+        SELECT
+        B.RELATION_ID, B.ORGAN_ID, B.USER_ID, B.USERL_ID, B.GROUP_ID, B.POSITION_ID, B.DEPT_ID, B.FOREIGN_ID, B.IS_MEMBER, B.TYPE, B.POWER, B.IS_DEF, B.DEL_FLAG, B.STATUS, B.CREATOR_ID, B.CREATE_TIME, B.UPDATOR_ID, B.UPDATE_TIME, B.SPARE1, B.SPARE2
+        , bue.ID_NAME AS name, org.NAME organName
+        FROM USER_RANGE_ORGAN B
+        <include refid="commonUnionJoin"></include>
+        WHERE RELATION_ID = #{value}
+    </select>
+
+    <!--获取用户对应的组织-->
+    <select id="getUserRangeOrgan" resultType="java.util.Map">
+        select uro.ORGAN_ID, organ.NAME from USER_RANGE_ORGAN uro
+        left join BASE_ORGAN organ
+        on uro.ORGAN_ID = organ.ORGAN_ID
+        where uro.DEL_FLAG <![CDATA[ <> ]]> 1 and uro.POWER = #{power}
+        and uro.TYPE = #{type} and uro.STATUS= 1 and uro.USER_ID = #{userId}
+    </select>
+    <!-- 根据部门绑定用户 -->
+    <insert id="bindUserByDept" parameterType="java.util.Map">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO USER_RANGE_ORGAN(RELATION_ID,ORGAN_ID,IS_MEMBER,TYPE,POWER,IS_DEF,DEL_FLAG,STATUS,CREATE_TIME,SPARE1,SPARE2,CREATOR_ID,USER_ID)
+                SELECT LAST_INSERT_ID(), #{organId},0,30,20,0,0,1,SYSDATE(),null,null, #{creatorId},A.* FROM
+                (
+                <foreach collection="userIds" item="item" index="index" separator="UNION ALL" >
+                    SELECT #{item}
+                </foreach>
+                ) A
+            </when>
+            <otherwise>
+                INSERT INTO USER_RANGE_ORGAN(RELATION_ID,ORGAN_ID,IS_MEMBER,TYPE,POWER,IS_DEF,DEL_FLAG,STATUS,CREATE_TIME,SPARE1,SPARE2,CREATOR_ID,USER_ID)
+                SELECT S_USER_RANGE_ORGAN.nextval,#{organId},0,30,20,0,0,1,SYSDATE(),null,null,#{creatorId}, A.* FROM
+                (
+                <foreach collection="userIds" item="item" index="index" separator="UNION ALL" >
+                    SELECT #{item}
+                </foreach>
+                ) A
+            </otherwise>
+        </choose>
+    </insert>
+    <!-- 根据部门解绑用户 -->
+    <delete id="unBindUserByDept" parameterType="java.util.HashMap">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE ORGAN_ID = #{organId} AND USER_ID IN
+        <foreach item="userId" collection="userIds" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+    <sql id="residentialCommonList">
+        <if test="power != null and power != ''">
+            and uro.POWER = #{power}
+        </if>
+        <if test="districtId != null and districtId != ''">
+            and AXR.DISTRICT_ID = #{districtId}
+        </if>
+        <if test="subdistrictId != null and subdistrictId != ''">
+            and AXR.SUBDISTRICT_ID = #{subdistrictId}
+        </if>
+        <if test="residentialId != null and residentialId != ''">
+            and AXR.RESIDENTIAL_ID = #{residentialId}
+        </if>
+        <if test="q != null and q != ''">
+            AND  ( bue.ID_NAME LIKE concat('%',concat(#{q},'%'))
+            or AXR.RESIDENTIAL_NAME LIKE concat('%',concat(#{q},'%')))
+        </if>
+    </sql>
+
+    <!--获取用户对应的小区角色列表-->
+    <select id="getUserOrganRole" resultType="java.util.Map">
+        select uro.ORGAN_ID RESIDENTIALID,GOE.SNAME RESIDENTIALNAME,pg.GROUP_ID GROUPID,pg.NAME GROUPNAME,pg.CODE GROUPCODE
+        from USER_RANGE_ORGAN uro
+                 left join BASE_ORGAN_EXT GOE on uro.ORGAN_ID = GOE.ORGAN_ID
+                 left join PUBLIC_GROUP pg on uro.SPARE1 = pg.GROUP_ID
+        where uro.DEL_FLAG <![CDATA[ <> ]]> 1 and uro.POWER = #{power}
+          and uro.TYPE = #{type} and uro.STATUS= 1 and uro.USER_ID = #{userId}
+    </select>
+
+
+    <!-- 根据绑定组获取不同条件的会员ID -->
+    <select id="getMemberIdsByGroupAndOrganId">
+        select B.MEMBER_ID from THIRD_MEMBER B where
+        B.USER_ID IN (SELECT t.USER_ID
+        FROM USER_RANGE_ORGAN t
+        where 1 = 1
+        <if test="bindGroupId != null">
+            and t.GROUP_ID = #{bindGroupId}
+        </if>
+        <if test="organId != null">
+            and t.ORGAN_ID = #{organId}
+        </if>
+        )
+    </select>
+    <select id="exist" resultType="java.lang.Integer">
+        select count(*) from USER_RANGE_ORGAN where USER_ID=#{userId} and ORGAN_ID=#{organId} AND TYPE=#{type} and DEL_FLAG=0
+    </select>
+
+    <delete id="deleteByUserId">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE USER_ID = #{userId}
+    </delete>
+
+    <delete id="deleteByUserIds">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE USER_ID IN
+        <foreach item="userId" collection="array" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+
+
+    <!-- 根据岗位绑定用户 -->
+    <insert id="bindUserByPosition" parameterType="java.util.Map">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                insert into USER_RANGE_ORGAN  ( RELATION_ID,POSITION_ID,DEL_FLAG,CREATE_TIME, TYPE,USERL_ID,IS_DEF,USER_ID)
+                SELECT
+                CONCAT(date_format(SYSDATE(),'%Y%m%d%H%i'),CEILING(RAND()*90000+10000)),#{positionId},0,SYSDATE(), 50, A.* FROM
+                (
+                <foreach collection="userInfos" item="user" index="index" separator="UNION ALL" >
+                    SELECT #{user.memberId},0,#{user.userId} FROM dual
+                </foreach>
+                ) A
+            </when>
+            <otherwise>
+                insert into USER_RANGE_ORGAN
+                (
+                RELATION_ID,POSITION_ID,DEL_FLAG,CREATE_TIME, USERL_ID,TYPE,IS_DEF,USER_ID)
+                SELECT
+                CONCAT(to_char(SYSDATE,'YYYYMMDDHHmm'),CEIL(DBMS_RANDOM.VALUE()*90000+10000)),
+                #{positionId},0,sysdate(), A.* FROM
+                (
+                <foreach collection="userInfos" item="user" index="index" separator="UNION ALL" >
+                    SELECT #{user.memberId},decode(#{user.type}, null, 11, #{user.type}),#{user.isDef},#{user.userId} FROM dual
+                </foreach>
+                ) A
+            </otherwise>
+        </choose>
+    </insert>
+
+    <!-- 根据岗位解绑用户 -->
+    <delete id="unBindUserByPosition" parameterType="java.util.Map">
+        DELETE  FROM USER_RANGE_ORGAN
+        WHERE POSITION_ID = #{positionId} AND USERL_ID IN
+        <foreach item="user" collection="userInfos" open="(" separator="," close=")">
+            #{user.memberId}
+        </foreach>
+    </delete>
+
+    <!-- 绑定主岗位和类型 -->
+    <update id="bindIsDefOrType" parameterType="java.util.Map">
+        UPDATE USER_RANGE_ORGAN
+        SET
+        <if test="type != null">TYPE = #{type} </if>
+        <if test="isDef != null">IS_DEF = #{isDef}</if>
+        WHERE RELATION_ID = #{posUserId}
+    </update>
+
+    <resultMap id="positionBindUserDtoMap" type="net.linlan.social.permission.dto.PositionBindUserDto">
+        <result property="memberId" column="memberId"/>
+        <result property="type" column="TYPE"/>
+        <result property="positionId" column="POSITION_ID"/>
+        <result property="isDef" column="IS_DEF"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="name" column="name"/>
+        <result property="mobile" column="mobile"/>
+    </resultMap>
+
+    <select id="getListFromSasUserPosition" resultMap="positionBindUserDtoMap">
+        SELECT B.*
+        FROM
+        <choose>
+            <when test="offset != null and limit != null">
+                <!-- mysql为limit函数进行处理 -->
+                <choose>
+                    <when test='_databaseId == "mysql" or _databaseId == "xg"'>
+                        (select B.NICK_NAME as name,B.MEMBER_ID AS memberId ,bu.mobile as mobile ,SPU.RELATION_ID,SPU.IS_DEF,SPU.TYPE,B.USER_ID
+                        from THIRD_MEMBER B
+                        left join USER_RANGE_ORGAN SPU on B.MEMBER_ID = SPU.USERL_ID
+                        and SPU.DEL_FLAG =0
+                        <if test="bindPositionId != null">
+                            and SPU.POSITION_ID = #{bindPositionId}
+                        </if>
+                        <include refid="commonUnionJoin1"></include>
+                        WHERE 1 = 1
+                        <include refid="commonList1"></include>
+                        ORDER BY B.CREATE_TIME DESC
+                        ) B
+                        LIMIT #{offset}, #{limit}
+                    </when>
+                    <otherwise>    <!-- 其他数据库为通用的分页处理，包括Oracle，DM达梦数据库等统一 -->
+                        ( SELECT ROW_NUMBER() OVER (
+                        <include refid="getListOrderBy"></include>
+                        ) AS RN, A.* FROM (
+                        select B.NAME as name,B.MEMBER_ID AS memberId ,bu.mobile as mobile ,SPU.RELATION_ID,SPU.IS_DEF,SPU.TYPE,B.USER_ID
+                        from THIRD_MEMBER B
+                        left join USER_RANGE_ORGAN SPU on B.MEMBER_ID = SPU.USERL_ID
+                        and SPU.DEL_FLAG =0
+                        <if test="bindPositionId != null">
+                            and SPU.POSITION_ID = #{bindPositionId}
+                        </if>
+                        <include refid="commonUnionJoin1"></include>
+                        WHERE 1 = 1
+                        <include refid="commonList1"></include>
+                        ) A ) B
+                        <![CDATA[ where RN <= (#{offset} + #{limit}) AND RN > #{offset} ]]>
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                (select B.NAME as name,B.MEMBER_ID AS memberId ,bu.mobile as mobile ,SPU.RELATION_ID,SPU.IS_DEF,SPU.TYPE,B.USER_ID
+                from THIRD_MEMBER B
+                left join USER_RANGE_ORGAN SPU on B.MEMBER_ID = SPU.USERL_ID
+                and SPU.DEL_FLAG =0
+                <if test="bindPositionId != null">
+                    and SPU.POSITION_ID = #{bindPositionId}
+                </if>
+                <include refid="commonUnionJoin1"></include>
+                WHERE 1 = 1
+                <include refid="commonList1"></include>
+                ORDER BY B.CREATE_TIME DESC
+                ) B
+            </otherwise>
+        </choose>
+    </select>
+
+    <sql id="commonUnionJoin1">
+        left join BASE_USER bu on B.USER_ID = bu.USER_ID
+        left join BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+    </sql>
+
+    <!-- sql commonList 通过输入的条件，获取返回的list列表对象
+    -->
+    <sql id="commonList1">
+        <!-- 公共查询条件-->
+        <if test='id != null and id != ""'> AND B.MEMBER_ID = #{id} </if>
+        <if test='name != null and name != ""'> AND B.NAME = #{name} </if>
+        <if test='userId != null and userId != ""'> AND B.USER_ID = #{userId} </if>
+        <if test='groupId != null and groupId != ""'> AND B.GROUP_ID = #{groupId} </if>
+        <if test='status != null'> AND B.STATUS = #{status} </if>
+        <if test='key != null and key.trim() != ""'>
+            and (B.NAME like concat('%',concat(#{key},'%'))
+            or bu.USERNAME like concat('%',concat(#{key},'%'))
+            or bu.MOBILE like concat('%',concat(#{key},'%'))
+            or bue.RESUME like concat('%',concat(#{key},'%'))
+            or bue.NICKNAME like concat('%',concat(#{key},'%')))
+        </if>
+        <if test='bindGroupStatus != null and bindGroupStatus == "binded"'>
+            <if test='bindGroupId != null and bindGroupId != ""'> AND B.GROUP_ID = #{bindGroupId} </if>
+        </if>
+        <if test='bindGroupStatus != null and bindGroupStatus == "unbinded"'>
+            <if test='bindGroupId != null and bindGroupId != ""'>
+             AND (B.GROUP_ID !=  #{bindGroupId} OR B.GROUP_ID IS NULL)
+             </if>
+        </if>
+        <if test='bindType != null and bindType == "true"'>
+            AND B.GROUP_ID = #{bindGroupId}
+        </if>
+
+        <!-- 岗位绑定状态 -->
+        <if test='positionBindStatus != null and positionBindStatus == "binded"'>
+            AND MEMBER_ID IN (SELECT t.USERL_ID
+            FROM USER_RANGE_ORGAN t
+            where 1 = 1
+            and t.DEL_FLAG =0
+            and t.USERL_ID is not null
+            <choose>
+                <when test="bindPositionId != null">
+                    and t.POSITION_ID = #{bindPositionId}
+                </when>
+                <otherwise>
+                    and 1 != 1
+                </otherwise>
+            </choose>
+            )
+        </if>
+
+        <if test='positionBindStatus != null and positionBindStatus == "unbinded"'>
+            AND MEMBER_ID not IN (SELECT t.USERL_ID
+            FROM USER_RANGE_ORGAN t
+            where 1 = 1
+            and t.DEL_FLAG =0
+            and t.USERL_ID is not null
+            <choose>
+                <when test="bindPositionId != null">
+                    and t.POSITION_ID = #{bindPositionId}
+                </when>
+                <otherwise>
+                    and 1 != 1
+                </otherwise>
+            </choose>
+            )
+        </if>
+        <!-- 各个数据库差异化的查询条件处理，如时间字段 -->
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+    </sql>
+
+    <select id="queryPositionUserTotal" resultType="int">
+        SELECT COUNT(MEMBER_ID) FROM
+        THIRD_MEMBER B
+        left join USER_RANGE_ORGAN F on B.MEMBER_ID = F.USERL_ID
+        and F.DEL_FLAG =0
+        <if test="bindPositionId != null">
+            and F.POSITION_ID = #{bindPositionId}
+        </if>
+        <include refid="commonUnionJoin1"></include>
+        WHERE 1 = 1
+        <include refid="commonList1"></include>
+    </select>
+
+    <select id="getUserPosition" resultMap="userRangeOrganMap">
+        SELECT * FROM USER_RANGE_ORGAN WHERE USERL_ID = #{memberId} and POSITION_ID = #{positionId}
+    </select>
+
+    <select id="getPositionId" resultType="java.lang.String">
+        select A.POSITION_ID from PUBLIC_GROUP_POSITION B
+        left join SYS_POSITION A on A.POSITION_ID = B.POSITION_ID
+        where B.GROUP_ID=#{groupId} AND A.NAME=#{positionName} limit 1
+    </select>
+
+    <!-- 根据岗位ID查询岗位人员 -->
+    <select id="getPositionUserList" resultType="map">
+        SELECT bue.USER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE,
+        B.POSITION_ID,B.ORGAN_ID,org.NAME AS ORGAN_NAME
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+        WHERE 1=1 AND bue.ID_NAME IS NOT NULL
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID = #{positionId}
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='key != null and key != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{key},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{key},'%')))
+        </if>
+    </select>
+
+    <!-- 根据机构和分组查询人员列表 organ_id(area_id),groupId -->
+    <select id="getUserByGroup" resultType="map">
+        SELECT DISTINCT bue.USER_ID,tm.MEMBER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = tm.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE 1=1
+        <if test="groupId != null and groupId != ''">
+            AND B.GROUP_ID = #{groupId}
+        </if>
+        <if test="areaId != null and areaId != ''">
+            AND B.ORGAN_ID IN (SELECT ORGAN_ID FROM ORGAN_WORK WHERE WL_TYPE LIKE '%DYJG%' AND AREA_ID = #{areaId})
+        </if>
+        <if test="areaIdLike != null and areaIdLike != ''">
+            AND B.ORGAN_ID IN (SELECT ORGAN_ID FROM ORGAN_WORK WHERE WL_TYPE LIKE '%DYJG%' AND AREA_ID LIKE concat('%',concat(#{areaIdLike},'%')) )
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='key != null and key != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{key},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{key},'%')))
+        </if>
+    </select>
+
+    <!-- 根据机构、岗位查询人员列表的方法 organ_id,position_id-->
+    <select id="getUserByOrganIdAndPositionId" resultType="map">
+        SELECT DISTINCT bue.USER_ID,tm.MEMBER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = MU.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE 1=1
+        AND B.ORGAN_ID = #{organId}
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID IN
+            <foreach collection="positionId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test='q != null and q != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{q},'%'))
+            OR bu.MOBILE LIKE concat('%',concat(#{q},'%')))
+        </if>
+    </select>
+
+    <!-- 根据机构、分组、岗位查询人员列表 organ_id,position_id,group_id，允许部分null -->
+    <select id="getUserByGidAndOidAndPidAllowNull" resultType="map">
+        SELECT DISTINCT bue.USER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE,
+        B.POSITION_ID,B.GROUP_ID,B.ORGAN_ID,org.NAME AS ORGAN_NAME
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+        WHERE 1=1 AND B.DEL_FLAG=0
+        <if test="groupId != null and groupId != ''">
+            AND B.GROUP_ID = #{groupId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID = #{positionId}
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='userId != null and userId != ""'>
+            AND B.USER_ID = #{userId}
+        </if>
+        <if test='key != null and key != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{key},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{key},'%')))
+        </if>
+    </select>
+
+    <!-- 根据机构、分组、岗位查询人员列表 organ_id,position_id,group_id-->
+    <select id="getUserByGidAndOidAndPid" resultType="map">
+        SELECT DISTINCT bue.USER_ID,tm.MEMBER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = tm.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE 1=1
+        AND B.ORGAN_ID = #{organId}
+        AND B.GROUP_ID = #{groupId}
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID IN
+            <foreach collection="positionId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test='q != null and q != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{q},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{q},'%')))
+        </if>
+    </select>
+
+    <!-- 人员机构管理列表  姓名 机构 地域  分组  岗位-->
+    <resultMap type="net.linlan.social.permission.dto.UserOrganManageListDto" id="userOrganManageListMap">
+        <id property="id" column="RELATION_ID"></id>
+        <result property="userId" column="USER_ID"></result>
+        <result property="name" column="NAME"></result>
+        <result property="organId" column="ORGAN_ID"></result>
+        <result property="organName" column="ORGAN_NAME"></result>
+        <result property="areaId" column="AREA_ID"></result>
+        <result property="areaName" column="AREA_NAME"></result>
+        <result property="positionId" column="POSITION_ID"></result>
+        <result property="positionName" column="POSITION_NAME"></result>
+        <result property="groupId" column="GROUP_ID"></result>
+        <result property="groupName" column="GROUP_NAME"></result>
+    </resultMap>
+
+    <select id="getUserOrganManageList" resultMap="userOrganManageListMap">
+        SELECT B.RELATION_ID,
+        B.USER_ID,bue.ID_NAME AS NAME,
+        B.ORGAN_ID,org.NAME AS ORGAN_NAME,
+        B.FOREIGN_ID AS AREA_ID,GX.NAME AS AREA_NAME,
+        B.POSITION_ID,sp.NAME AS POSITION_NAME,
+        pg.GROUP_ID,pg.NAME AS GROUP_NAME
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+        LEFT JOIN BASE_XZQH GX ON B.FOREIGN_ID = GX.XZQH_ID
+        LEFT JOIN SYS_POSITION sp ON B.POSITION_ID = sp.POSITION_ID
+        LEFT JOIN PUBLIC_GROUP_POSITION pgP ON sp.POSITION_ID = pgP.POSITION_ID
+        LEFT JOIN PUBLIC_GROUP pg ON B.GROUP_ID = pg.GROUP_ID
+        WHERE 1 = 1 AND B.TYPE=30
+        <!-- 20240505 添加树条件进行筛选 -->
+        <if test='organwId != null and organwId != ""'>
+            AND B.ORGAN_ID IN (select distinct(OW.ORGAN_ID) from ORGAN_WORK OW where
+            <if test="onlyCurrent != null and 'Y'.toString()==onlyCurrent">
+                OW.PARENT_ID = #{organwId}
+            </if>
+            <if test="onlyCurrent != null and 'N'.toString()==onlyCurrent">
+                OW.SEARCH_CODE like CONCAT('%',CONCAT(#{organwId},'%'))
+            </if>
+            )
+        </if>
+
+        <if test='name != null and name != ""'>
+            AND bue.ID_NAME LIKE concat('%',concat(#{name},'%'))
+        </if>
+        <if test='postCode != null and postCode != ""'>
+            AND bue.POST_CODE = #{postCode}
+        </if>
+        <if test='organName != null and organName != ""'>
+            AND org.NAME LIKE concat('%',concat(#{organName},'%'))
+        </if>
+        <if test='userId != null and userId != ""'>
+            AND B.USER_ID = #{userId}
+        </if>
+        <if test='organId != null and organId != ""'>
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='positionId != null and positionId != ""'>
+            AND B.POSITION_ID = #{positionId}
+        </if>
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                <if test='createTime != null and createTime != ""'>
+                    AND date_format(B.CREATE_TIME,'%Y-%m-%d') = #{createTime}
+                </if>
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                <if test='createTime != null and createTime != ""'>
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD')= #{createTime}
+                </if>
+            </when>
+            <otherwise>
+                <if test='createTime != null and createTime != ""'>
+                    AND to_char(B.CREATE_TIME,'YYYY-MM-DD')= #{createTime}
+                </if>
+            </otherwise>
+        </choose>
+        <if test='groupIds != null and groupIds != ""'>
+            AND B.GROUP_ID IN
+            <foreach collection="groupIds.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        ORDER BY B.CREATE_TIME DESC
+    </select>
+
+    <!-- 人员通讯录列表  用户名 姓名 机构 手机 电话 -->
+    <resultMap type="net.linlan.social.permission.dto.UserTelListDto" id="userBookListMap">
+        <result property="id" column="RELATION_ID"></result>
+        <result property="userId" column="USER_ID"></result>
+        <result property="username" column="USERNAME"></result>
+        <result property="name" column="NAME"></result>
+        <result property="mobile" column="MOBILE"></result>
+        <result property="organId" column="ORGAN_ID"></result>
+        <result property="organName" column="ORGAN_NAME"></result>
+        <result property="labels" column="KEYWORDS"></result>
+    </resultMap>
+    <select id="getUserBookList" resultMap="userBookListMap">
+        SELECT B.RELATION_ID,
+        B.USER_ID,bu.USERNAME,bue.ID_NAME AS NAME, bue.ID_MOBILE AS MOBILE,
+        B.ORGAN_ID,org.NAME AS ORGAN_NAME
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+        LEFT JOIN ORGAN_WORK W on B.ORGAN_ID = W.ORGAN_ID
+        LEFT JOIN ORGAN_WORK SOW on SOW.ORGANW_ID = #{organwId}
+        WHERE 1 = 1
+        AND bue.NICKNAME is not null AND B.TYPE=10
+        <if test='name != null and name != ""'>
+            AND bue.ID_NAME LIKE concat('%',concat(#{name},'%'))
+        </if>
+        <if test="onlyCurrent != null and 'Y'.toString()==onlyCurrent">
+            AND  W.PARENT_ID=#{organwId}
+        </if>
+        <if test="onlyCurrent != null and 'N'.toString()==onlyCurrent">
+            AND W.SEARCH_CODE like CONCAT('%',CONCAT(SOW.SEARCH_CODE,'%'))
+        </if>
+        <if test='organName != null and organName != ""'>
+            AND org.NAME LIKE concat('%',concat(#{organName},'%'))
+        </if>
+        <if test='userId != null and userId != ""'>
+            AND B.USER_ID = #{userId}
+        </if>
+        <if test='organId != null and organId != ""'>
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='q != null and q != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{q},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{q},'%'))
+            OR bu.MOBILE LIKE concat('%',concat(#{q},'%'))
+            OR org.NAME LIKE concat('%',concat(#{q},'%')))
+        </if>
+        <choose>
+            <when test='_databaseId == "mysql"'>
+
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+
+            </when>
+            <otherwise>
+
+            </otherwise>
+        </choose>
+        ORDER BY B.CREATE_TIME DESC
+    </select>
+    <delete id="deleteByPositionIds">
+        DELETE FROM USER_RANGE_ORGAN
+        WHERE USERL_ID IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        AND POSITION_ID=#{positionId}
+    </delete>
+
+    <select id="getAlreadyBindUsers" resultMap="userRangeOrganMap">
+        select * from USER_RANGE_ORGAN where 1=1
+        AND ORGAN_ID=#{organId} AND TYPE=10 AND DEL_FLAG=0
+        AND USER_ID IN
+        <foreach collection="userIds" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="existRelation" resultType="java.lang.Integer">
+        select count(*) from USER_RANGE_ORGAN where USER_ID=#{userId} and ORGAN_ID=#{organId} and Type = #{type} and DEL_FLAG=0
+    </select>
+
+    <select id="existRelationTotal" resultType="java.lang.Integer">
+        SELECT COUNT(DISTINCT(B.USER_ID)) from USER_RANGE_ORGAN B
+        WHERE 1 = 1
+          AND B.TYPE = 10
+          AND B.ORGAN_ID=#{organId}  and B.DEL_FLAG=0
+    </select>
+
+
+    <update id="logicalDeleteById" >
+        UPDATE  USER_RANGE_ORGAN B
+        SET B.DEL_FLAG = 1
+        where B.RELATION_ID = #{id}
+    </update>
+
+    <!-- 根据机构ID查询机构人员 -->
+    <select id="getUserListByOrganId" resultMap="userBookListMap">
+        SELECT DISTINCT bue.USER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE,
+        bue.KEYWORDS,B.ORGAN_ID,org.NAME AS ORGAN_NAME
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
+        WHERE 1=1 AND bue.ID_NAME IS NOT NULL
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test='organIds != null and organIds.size()>0 '>
+            AND B.ORGAN_ID IN
+            <foreach collection="organIds" item="item" separator="," open="(" close=")" >
+                #{item}
+            </foreach>
+        </if>
+        <if test='q != null and q != ""'>
+            AND (bue.ID_NAME LIKE concat('%',concat(#{q},'%'))
+            OR bue.ID_MOBILE LIKE concat('%',concat(#{q},'%'))
+            OR bue.KEYWORDS LIKE concat('%',concat(#{q},'%'))
+                )
+        </if>
+    </select>
+
+
+    <resultMap type="net.linlan.sys.role.entity.SysPosition" id="sysPositionUserMap">
+        <id property="id" column="POSITION_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="postypeId" column="POSTYPE_ID"/>
+        <result property="roletypeId" column="ROLETYPE_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="sname" column="SNAME"/>
+        <result property="code" column="CODE"/>
+        <result property="oname" column="ONAME"/>
+        <result property="posFunction" column="POS_FUNCTION"/>
+        <result property="posRank" column="POS_RANK"/>
+        <result property="posType" column="POS_TYPE"/>
+        <result property="editorType" column="EDITOR_TYPE"/>
+        <result property="isEditorCreate" column="IS_EDITOR_CREATE"/>
+        <result property="status" column="POS_NATURE"/>
+        <result property="isPub" column="IS_PUB"/>
+        <result property="isAgent" column="IS_AGENT"/>
+        <result property="isLeader" column="IS_LEADER"/>
+        <result property="leaderId" column="LEADER_ID"/>
+        <result property="manageDeptids" column="MANAGE_DEPTIDS"/>
+        <result property="isBigContact" column="IS_BIG_CONTACT"/>
+        <result property="isSmallContact" column="IS_SMALL_CONTACT"/>
+        <result property="mobilePhone" column="MOBILE_PHONE"/>
+        <result property="officePhone" column="OFFICE_PHONE"/>
+        <result property="buildingId" column="BUILDING_ID"/>
+        <result property="roomNo" column="ROOM_NO"/>
+        <result property="extQmType" column="EXT_QM_TYPE"/>
+        <result property="extQmTypePhoto" column="EXT_QM_TYPE_PHOTO"/>
+        <result property="extPosName" column="EXT_POS_NAME"/>
+        <result property="extOrganName" column="EXT_ORGAN_NAME"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="priorityInOrgan" column="PRIORITY_IN_ORGAN"/>
+        <result property="priorityInDomain" column="PRIORITY_IN_DOMAIN"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="updaterId" column="UPDATER_ID"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="remark" column="REMARK"/>
+    </resultMap>
+    <select id="getListByUserId" resultMap="sysPositionUserMap">
+        SELECT * FROM SYS_POSITION B
+        where 1=1
+          AND EXISTS (SELECT POSITION_ID FROM USER_RANGE_ORGAN C where B.POSITION_ID = C.POSITION_ID AND C.USER_ID = #{userId}
+            )
+    </select>
+
+    <resultMap id="positionSearchCodeMap" type="net.linlan.sys.role.dto.PositionSearchCodeDto">
+        <result property="positionId" column="POSITION_ID"></result>
+        <result property="parentId" column="PARENT_ID"></result>
+        <result property="name" column="NAME"></result>
+        <result property="roleId" column="ROLE_ID"></result>
+        <result property="roletypeId" column="ROLETYPE_ID"></result>
+    </resultMap>
+
+    <select id="getPositionListByUserId" resultMap="positionSearchCodeMap">
+        SELECT B.POSITION_ID,B.PARENT_ID,B.NAME,E.ROLE_ID,F.ROLETYPE_ID
+        FROM SYS_POSITION B
+                 LEFT JOIN SYS_ROLE_POSITION D ON B.POSITION_ID = D.POSITION_ID
+                 LEFT JOIN SYS_ROLE E ON E.ROLE_ID = D.ROLE_ID
+                 LEFT JOIN CORE_ROLETYPE F ON F.ROLETYPE_ID = E.ROLETYPE_ID
+        where 1=1
+          AND EXISTS (SELECT * FROM USER_RANGE_ORGAN C where B.POSITION_ID = C.POSITION_ID AND C.USER_ID = #{userId} )
+    </select>
+
+    <!-- 根据机构ID和ROLETYPE_ID查询机构人员(区分移动端和管理端) -->
+    <select id="getUserByOrganIdAndRoletypeId" resultMap="userBookListMap">
+        SELECT DISTINCT B.USER_ID,bue.ID_NAME AS NAME,bue.ID_MOBILE AS MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN SYS_POSITION sp ON B.POSITION_ID = sp.POSITION_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE  bue.ID_MOBILE IS NOT NULL
+        AND B.ORGAN_ID = #{organId}
+        AND sp.ROLETYPE_ID = #{roletypeId}
+    </select>
+
+    <select id="getGroupByMemberPosition" resultMap="net.linlan.authn.group.dao.PublicGroupDao.publicGroupMap">
+        SELECT B.*
+        FROM PUBLIC_GROUP B where GROUP_ID IN (
+        select DISTINCT(GROUP_ID) from PUBLIC_GROUP_POSITION PGP
+        LEFT JOIN USER_RANGE_ORGAN uro ON uro.POSITION_ID = PGP.POSITION_ID
+        LEFT JOIN SYS_ROLE_POSITION srp ON uro.POSITION_ID = srp.POSITION_ID
+        LEFT JOIN SYS_ROLE SR ON srp.ROLE_ID = SR.ROLE_ID
+        WHERE 1 = 1
+        and uro.USERL_ID = #{memberId}
+        <if test="appId != null and appId.trim() != ''">
+            and SR.APP_ID = #{appId}
+        </if>
+        <if test="roletypeId != null and roletypeId!= ''">
+            and SR.ROLETYPE_ID in
+            <foreach collection="roletypeId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="groupId != null">
+            and B.GROUP_ID = #{groupId}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="groupCode != null">
+            and B.CODE = #{groupCode}
+        </if>
+        )
+        order by B.PRIORITY asc
+    </select>
+
+    <!-- 获取会员用户菜单  APP_ID，member_id -->
+    <select id="getMenuByMemberUser" resultMap="net.linlan.sys.role.dao.SysMenuDao.sysMenuMap">
+        SELECT M.*
+        FROM (SELECT T.*, R.ROLE_ID
+        FROM SYS_MENU T, SYS_ROLE_MENU R
+        WHERE T.APP_ID = #{appId}
+        AND T.TYPE = #{type}
+        AND T.MENU_ID = R.MENU_ID) M,
+        (SELECT distinct T.ROLE_ID
+        FROM PUBLIC_GROUP T, USER_RANGE_ORGAN U
+        WHERE T.GROUP_ID = U.GROUP_ID
+        <if test="isDisabled != null">
+            and T.IS_DISABLED = #{isDisabled}
+        </if>
+        AND U.USERL_ID = #{memberId}) U
+        WHERE M.ROLE_ID = U.ROLE_ID
+        <choose>
+            <when test='isProtect != null'>
+                AND M.IS_PROTECT = #{isProtect}
+            </when>
+            <otherwise>
+                AND M.IS_PROTECT = 1
+            </otherwise>
+        </choose>
+        ORDER BY M.PRIORITY
+    </select>
+
+    <!-- 获取会员用户菜单  APP_ID，member_id -->
+    <select id="getMergeMenuByMemberUser" resultMap="net.linlan.sys.role.dao.SysMenuDao.sysMenuMap">
+        SELECT distinct T.*
+        FROM SYS_MENU T, SYS_ROLE_MENU R
+        WHERE T.APP_ID = #{appId} AND T.TYPE = #{type} AND T.MENU_ID = R.MENU_ID
+        AND T.DEL_FLAG = 0
+        AND R.ROLE_ID IN
+        (
+        SELECT distinct T.ROLE_ID
+        FROM PUBLIC_GROUP T, USER_RANGE_ORGAN U
+        WHERE T.GROUP_ID = U.GROUP_ID
+        <if test="isDisabled != null">
+            and T.IS_DISABLED = #{isDisabled}
+        </if>
+        AND U.USERL_ID = #{memberId}
+        )
+        <choose>
+            <when test='isProtect != null'>
+                AND T.IS_PROTECT = #{isProtect}
+            </when>
+            <otherwise>
+                AND T.IS_PROTECT = 1
+            </otherwise>
+        </choose>
+        ORDER BY T.PRIORITY
+    </select>
+
+    <select id="hasGroup" resultMap="net.linlan.authn.group.dao.PublicGroupDao.publicGroupMap">
+        SELECT B.GROUP_ID
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN THIRD_MEMBER tm ON B.USERL_ID = tm.MEMBER_ID
+        where B.GROUP_ID=#{groupId} and tm.USER_ID = #{userId}
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="hasGroupByName" resultMap="net.linlan.authn.group.dao.PublicGroupDao.publicGroupMap">
+        SELECT B.GROUP_ID
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN THIRD_MEMBER tm ON B.USERL_ID = tm.MEMBER_ID
+        LEFT JOIN PUBLIC_GROUP pg ON B.GROUP_ID = pg.GROUP_ID
+        where tm.USER_ID = #{userId} and pg.NAME LIKE concat('%',concat(#{name},'%'))
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum&lt;=1
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="getGroupByMember" resultMap="net.linlan.authn.group.dao.PublicGroupDao.publicGroupMap">
+        SELECT B.*
+        FROM PUBLIC_GROUP B
+        LEFT JOIN USER_RANGE_ORGAN uro ON B.GROUP_ID = uro.GROUP_ID
+        LEFT JOIN THIRD_MEMBER tm ON uro.USERL_ID = tm.MEMBER_ID
+        LEFT JOIN SYS_ROLE sr ON B.ROLE_ID = sr.ROLE_ID
+        WHERE 1 = 1
+        <if test="appId != null and appId.trim() != ''">
+            and sr.APP_ID = #{appId}
+        </if>
+        <if test="roletypeId != null and roletypeId!= ''">
+            and sr.ROLETYPE_ID in
+            <foreach collection="roletypeId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="memberId != null">
+            and uro.USERL_ID = #{memberId}
+        </if>
+        <if test="groupId != null">
+            and B.GROUP_ID = #{groupId}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="groupCode != null">
+            and B.CODE = #{groupCode}
+        </if>
+        order by B.PRIORITY asc
+    </select>
+
+    <select id="getPublicGroupList" resultMap="net.linlan.authn.group.dao.PublicGroupDao.publicGroupMap">
+        SELECT B.*
+        FROM PUBLIC_GROUP B
+        LEFT JOIN SYS_ROLE sr ON B.ROLE_ID = sr.ROLE_ID
+        LEFT JOIN USER_RANGE_ORGAN uro ON B.GROUP_ID= uro.GROUP_ID
+        LEFT JOIN THIRD_MEMBER_TOKEN tmt ON tmt.MEMBER_ID= uro.USERL_ID
+        LEFT JOIN IDENTITY_ORGAN ideno ON B.GROUP_ID= ideno.GROUP_ID
+        WHERE 1=1
+        <if test="appId != null and appId.trim() != ''">
+            and sr.APP_ID = #{appId}
+        </if>
+        <if test="roletypeId != null and roletypeId!= ''">
+            and sr.ROLETYPE_ID in
+            <foreach collection="roletypeId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="memberId != null">
+            and uro.USERL_ID = #{memberId}
+        </if>
+        <if test="groupId != null">
+            and B.GROUP_ID = #{groupId}
+        </if>
+        <if test="siteId != null and siteId.trim() != ''">
+            AND tmt.SITE_ID = #{siteId}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="groupCode != null">
+            and B.CODE = #{groupCode}
+        </if>
+        order by B.PRIORITY asc
+    </select>
+
+
+    <!-- 对传入的memberIds进行分割，批量保存管理组和管理员关联信息 -->
+    <insert id="saveMemberById" parameterType="java.util.Map">
+        insert into USER_RANGE_ORGAN
+        (GROUP_ID, USERL_ID)
+        A.* FROM
+        (
+        <foreach collection="memberIds" item="item" index="index" separator="UNION ALL" >
+            SELECT #{item} FROM dual
+        </foreach>
+        ) A
+    </insert>
+
+    <!-- 根据管理组删除单个用户的关联关系 -->
+    <delete id="deleteMemberById">
+        delete from USER_RANGE_ORGAN
+        WHERE GROUP_ID = #{id} AND USERL_ID in
+        <foreach item="memberId" collection="memberIds" open="(" separator="," close=")">
+            #{memberId}
+        </foreach>
+    </delete>
+
+    <!-- 删除管理组就删除该管理组下的所有用户的关联关系 -->
+    <delete id="deleteGroupById">
+        delete from USER_RANGE_ORGAN
+        WHERE GROUP_ID in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getUserByIdAndGroupId" resultMap="userRangeOrganMap">
+        SELECT * FROM USER_RANGE_ORGAN B
+        WHERE B.IS_MEMBER = 1 and B.POWER = #{power}
+          AND B.USERL_ID = #{memberId} and B.GROUP_ID = #{groupId}
+    </select>
+
+    <select id="getRoleIdsByMemberId" resultType="Long">
+        SELECT distinct sr.ROLE_ID
+        FROM PUBLIC_GROUP B
+        LEFT JOIN USER_RANGE_ORGAN uro ON B.GROUP_ID = uro.GROUP_ID
+        LEFT JOIN THIRD_MEMBER tm ON uro.USERL_ID = tm.MEMBER_ID
+        LEFT JOIN SYS_ROLE sr ON B.ROLE_ID = sr.ROLE_ID
+        WHERE 1 = 1
+        <if test="appId != null and appId.trim() != ''">
+            and sr.APP_ID = #{appId}
+        </if>
+        <if test="roletypeId != null and roletypeId!= ''">
+            and sr.ROLETYPE_ID in
+            <foreach collection="roletypeId.split(',')" index="index" item="item" separator="," open="(" close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="memberId != null">
+            and uro.USERL_ID = #{memberId}
+        </if>
+        <if test="groupId != null">
+            and B.GROUP_ID = #{groupId}
+        </if>
+        <if test="isDisabled != null">
+            and B.IS_DISABLED = #{isDisabled}
+        </if>
+        <if test="groupCode != null">
+            and B.CODE = #{groupCode}
+        </if>
+        order by B.PRIORITY asc
+    </select>
+
+    <select id="getUserByIdAndRoleIdPositionId" resultMap="userRangeOrganMap">
+        SELECT * FROM USER_RANGE_ORGAN B
+        WHERE B.IS_MEMBER = 0 and B.POWER = #{power}
+        AND B.USERL_ID = #{memberId}
+        <if test="positionId != null and positionId != ''">
+            and B.POSITION_ID = #{positionId}
+        </if>
+        <if test="foreignId != null and foreignId != ''">
+            and B.FOREIGN_ID = #{roleId}
+        </if>
+    </select>
+
+</mapper>

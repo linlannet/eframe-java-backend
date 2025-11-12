@@ -29,7 +29,7 @@
                     <td th:text="${user.uuid}" style="word-break: break-all;"></td>
                     <td><img th:src="${user.avatar}" width="20" alt=""></td>
                     <td th:text="${user.username}"></td>
-                    <td><img th:src="${'/templates/images/' + #strings.toLowerCase(user.source) + '.png'}" th:title="${#strings.toLowerCase(user.source)}" width="20" alt=""></td>
+                    <td><img th:src="${'https://linlan.net/files/public/images/logo/' + #strings.toLowerCase(user.source) + '.png'}" th:title="${#strings.toLowerCase(user.source)}" width="20" alt=""></td>
                     <td><a href="javascript:;;" data-toggle="modal" data-target="#modal-show">查看详情</a><span th:text="${user.token.accessToken}" class="" style="display: none;"></span></td>
                     <td><a href="javascript:;;" data-toggle="modal" data-target="#modal-show">查看详情</a><span th:text="${user.rawUserInfo}" class="rawUserInfo" style="display: none;"></span></td>
                     <td><a href="javascript:;;" class="btn-refresh-token" th:data-uuid="${user.uuid}" th:data-source="${user.source}">refresh</a></td>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    module-social - 社交平台对接模块
+    Copyright © 2020-2025 Linlan (open@linlan.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.linlan.social.permission.dao.PublicPermissionDao">
+
+    <resultMap type="net.linlan.frame.admin.dto.AdminMenuVo" id="memberMenuMap">
+        <id     property="menuId"         column="MENU_ID"        />
+        <result property="menuName"       column="NAME"      />
+        <result property="type"       column="TYPE"      />
+        <result property="parentName"     column="PARENT_NAME"    />
+        <result property="parentId"       column="PARENT_ID"      />
+        <result property="priority"       column="PRIORITY"      />
+        <result property="path"           column="ENAME"           />
+        <result property="component"      column="MENU_SEQ"      />
+        <result property="query"          column="JS_EVENT"          />
+        <result property="routeName"      column="URL"     />
+        <result property="isFrame"        column="IS_CHECK"       />
+        <result property="isCache"        column="SPARE2"       />
+        <result property="menuType"       column="URL_TYPE"      />
+        <result property="visible"        column="IS_DISPLAY"        />
+        <result property="status"         column="IS_DISABLED"         />
+        <result property="perms"          column="PERMS"          />
+        <result property="icon"           column="ICON"           />
+        <result property="imagePath"           column="ICON"           />
+        <result property="creatorId"       column="creatorId"      />
+        <result property="createTime"     column="CREATE_TIME"    />
+        <result property="lastTime"     column="LAST_TIME"    />
+        <result property="description"         column="DESCRIPTION"         />
+        <result property="delFlag"         column="DEL_FLAG"         />
+        <result property="listJson"         column="DESIGN_JSON"         />
+        <result property="childNum"         column="CHILD_NUM"         />
+    </resultMap>
+
+    <select id="selectMenuList" resultMap="memberMenuMap">
+        select B.MENU_ID, B.PARENT_ID, B.NAME, B.ENAME,B.TYPE, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON,B.IMAGE_PATH, B.PRIORITY, B.CREATE_TIME
+        from SYS_MENU B
+        WHERE 1=1  AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <where>
+            <if test="currAppId != null and currAppId != ''">
+                AND B.APP_ID = #{currAppId}
+            </if>
+            <if test="menuName != null and menuName != ''">
+                AND NAME like concat('%', #{menuName}, '%')
+            </if>
+            <if test="visible != null and visible != ''">
+                AND IS_DISPLAY = #{visible}
+            </if>
+            <if test="status != null and status != ''">
+                AND IS_DISABLED = #{status}
+            </if>
+        </where>
+        order by PARENT_ID, PRIORITY
+    </select>
+
+    <select id="selectMenuListPage" resultMap="memberMenuMap">
+        select B.MENU_ID, B.PARENT_ID, B.NAME, B.ENAME,B.TYPE, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON,B.DEL_FLAG, B.PRIORITY, B.CREATE_TIME
+        , (select COUNT(MENU_ID) from SYS_MENU where PARENT_ID = B.MENU_ID AND DEL_FLAG = 0) CHILD_NUM
+        from SYS_MENU B
+        WHERE 1=1  AND B.TYPE = 'WORK'
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        <choose>
+            <when test="delFlag != null">
+                AND B.DEL_FLAG = #{delFlag}
+            </when>
+            <otherwise>
+                AND B.DEL_FLAG = 0
+            </otherwise>
+        </choose>
+        <if test="menuType != null and menuType != ''">
+            AND B.URL_TYPE = #{menuType}
+        </if>
+        <where>
+            <if test="menuName != null and menuName != ''">
+                AND NAME like concat('%', #{menuName}, '%')
+            </if>
+            <if test="visible != null and visible != ''">
+                AND IS_DISPLAY = #{visible}
+            </if>
+            <if test="status != null and status != ''">
+                AND IS_DISABLED = #{status}
+            </if>
+        </where>
+        <choose>
+            <when test="parentId != null">
+                <choose>
+                    <when test="parentId == 0">
+                        AND ( B.PARENT_ID = 0 OR B.PARENT_ID IS NULL )
+                    </when>
+                    <otherwise>
+                        and B.PARENT_ID = #{parentId}
+                    </otherwise>
+                </choose>
+            </when>
+            <otherwise>
+                AND (B.PARENT_ID = 0 OR B.PARENT_ID IS NULL)
+            </otherwise>
+        </choose>
+        <if test="q != null and ''!=q">
+            AND  (B.NAME like concat(concat('%',#{q}),'%')
+            or B.ENAME like concat(concat('%',#{q}),'%')
+            or B.MENU_SEQ like concat(concat('%',#{q}),'%')
+            )
+        </if>
+        order by PARENT_ID, PRIORITY
+    </select>
+
+    <select id="selectMenuTreeAll" resultMap="memberMenuMap">
+        select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+        from SYS_MENU B
+        where B.URL_TYPE in ('CATAGORY', 'MENU') and B.IS_DISABLED = 0  AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+    </select>
+
+    <select id="selectMenuListByMemberId" resultMap="memberMenuMap">
+        select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        left join SYS_ROLE RO on SRM.ROLE_ID = RO.ROLE_ID
+        left join PUBLIC_GROUP pg on RO.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        where uro.USERL_ID = #{memberId} and uro.IS_MEMBER = 1 AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        <if test="menuName != null and menuName != ''">
+            AND B.NAME like concat('%', #{menuName}, '%')
+        </if>
+        <if test="visible != null and visible != ''">
+            AND B.IS_DISPLAY = #{visible}
+        </if>
+        <if test="status != null and status != ''">
+            AND B.IS_DISABLED = #{status}
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+    </select>
+
+    <select id="selectMenuTreeByMemberId" resultMap="memberMenuMap">
+        select distinct B.MENU_ID, B.PARENT_ID, B.NAME,B.TYPE, B.ENAME, B.MENU_SEQ, B.JS_EVENT, B.URL, B.IS_DISPLAY, B.IS_DISABLED, ifnull(B.PERMS,'') as PERMS, B.IS_CHECK, B.SPARE2,B.SPARE1, B.URL_TYPE, B.ICON, B.PRIORITY, B.CREATE_TIME
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        left join SYS_ROLE RO on SRM.ROLE_ID = RO.ROLE_ID
+        left join PUBLIC_GROUP pg on RO.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        where uro.USERL_ID = #{memberId} and uro.IS_MEMBER = 1 AND B.URL_TYPE in ('CATAGORY', 'MENU') and B.IS_DISABLED = 0
+        AND RO.STATUS = 0  AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+    </select>
+
+    <select id="selectMenuListByRoleId" resultType="Long">
+        select B.MENU_ID
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        where SRM.ROLE_ID = #{roleId}  AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+        <if test="menuCheckStrictly">
+            and B.MENU_ID not in (select B.PARENT_ID from SYS_MENU B inner join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID and SRM.ROLE_ID = #{roleId})
+        </if>
+        order by B.PARENT_ID, B.PRIORITY
+    </select>
+
+    <select id="selectMenuPerms" resultType="String">
+        select distinct B.PERMS
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        left join SYS_ROLE RO on SRM.ROLE_ID = RO.ROLE_ID
+        left join PUBLIC_GROUP pg on RO.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        where 1 = 1 and uro.IS_MEMBER = 1 AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+    <select id="selectMenuPermsByMemberId" parameterType="Long" resultType="String">
+        select distinct B.PERMS
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        left join SYS_ROLE RO on SRM.ROLE_ID = RO.ROLE_ID
+        left join PUBLIC_GROUP pg on RO.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        where B.IS_DISABLED = 0 and RO.STATUS = 0  AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0
+        and uro.IS_MEMBER = 1 and uro.USERL_ID = #{memberId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+    <select id="selectMenuPermsByRoleId" resultType="String">
+        select distinct B.PERMS
+        from SYS_MENU B
+        left join SYS_ROLE_MENU SRM on B.MENU_ID = SRM.MENU_ID
+        where B.IS_DISABLED = 0 AND B.TYPE = 'WORK' AND B.DEL_FLAG = 0 and SRM.ROLE_ID = #{roleId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+    <select id="hasChildByParentId" resultType="Integer">
+        select count(1) from SYS_MENU where PARENT_ID = #{parentId} AND DEL_FLAG = 0
+    </select>
+
+    <delete id="deleteByParentId" parameterType="Long">
+        delete from SYS_MENU where PARENT_ID=#{parentId} AND URL_TYPE = 'BUTTON'
+    </delete>
+
+    <resultMap id="buttonMap" type="net.linlan.sys.role.dto.SysMenuButtonDto">
+        <id property="id" column="MENU_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="code" column="ENAME"/>
+        <result property="name" column="NAME"/>
+    </resultMap>
+    <select id="getButtons" resultMap="buttonMap">
+        SELECT
+            M.MENU_ID,
+            M.PARENT_ID,
+            M.NAME,
+            M.ENAME
+        FROM
+            SYS_MENU M
+        WHERE
+            1 = 1
+          AND M.PARENT_ID = #{menuId}
+          AND M.URL_TYPE = 'BUTTON'
+    </select>
+
+
+    <resultMap type="net.linlan.sys.role.entity.SysRole" id="sysRoleMap">
+        <id property="id" column="ROLE_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="code" column="CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="isRegular" column="IS_REGULAR"/>
+        <result property="isSuper" column="IS_SUPER"/>
+        <result property="isPublic" column="IS_PUBLIC"/>
+        <result property="creatorId" column="CREATOR_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="status" column="STATUS"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <select id="selectRoleCodeByMemberId" parameterType="Long" resultType="String">
+        select distinct B.CODE
+        from SYS_ROLE B
+        left join PUBLIC_GROUP pg on B.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        WHERE B.STATUS = 1 and uro.IS_MEMBER = 1 and uro.USERL_ID = #{memberId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+    <select id="selectRoleListByMemberId" parameterType="Long" resultType="Long">
+        select distinct B.ROLE_ID
+        from SYS_ROLE B
+        left join PUBLIC_GROUP pg on B.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        WHERE B.STATUS = 1 and uro.IS_MEMBER = 1 and uro.USERL_ID = #{memberId}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+    <select id="selectRolesByUsername" parameterType="String" resultMap="sysRoleMap">
+        select distinct B.ROLE_ID, B.NAME, B.CODE, B.PRIORITY, B.SPARE1, B.IS_REGULAR, B.IS_PUBLIC,
+        B.STATUS, B.CREATE_TIME, B.DESCRIPTION
+        from SYS_ROLE B
+        left join PUBLIC_GROUP pg on B.ROLE_ID = pg.ROLE_ID
+        left join USER_RANGE_ORGAN uro on uro.GROUP_ID = pg.GROUP_ID
+        left join THIRD_MEMBER tm on tm.MEMBER_ID = uro.USREL_ID
+        WHERE B.STATUS = 1 and tm.USERNAME = #{username}
+        <if test="currAppId != null and currAppId != ''">
+            AND B.APP_ID = #{currAppId}
+        </if>
+    </select>
+
+
+    <!-- 人员机构管理列表  姓名 机构 地域  分组  岗位-->
+    <resultMap type="net.linlan.social.permission.dto.PermissionCommDto" id="permissonCommDtoMap">
+        <result property="relationId" column="RELATION_ID"></result>
+        <result property="organId" column="ORGAN_ID"></result>
+        <result property="positionId" column="POSITION_ID"></result>
+        <result property="groupId" column="GROUP_ID"></result>
+        <result property="userId" column="USER_ID"></result>
+        <result property="name" column="NAME"></result>
+        <result property="memberId" column="MEMBER_ID"></result>
+        <result property="mobile" column="MOBILE"></result>
+        <result property="createTime" column="CREATE_TIME"></result>
+        <result property="delFlag" column="DEL_FLAG"></result>
+    </resultMap>
+
+    <!-- 通用获取未绑定的会员人员列表 -->
+    <select id="getUnBindMemberUserList" resultMap="permissonCommDtoMap">
+        SELECT DISTINCT B.USER_ID,B.MEMBER_ID,B.NICK_NAME,bu.MOBILE
+        FROM THIRD_MEMBER B
+        LEFT JOIN USER_RANGE_ORGAN uro on B.USER_ID = uro.USER_ID
+        LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE 1=1
+        <if test='q != null and q.trim() != ""'>
+            and (B.NICK_NAME like concat('%',concat(#{q},'%'))
+            or bu.USERNAME like concat('%',concat(#{q},'%'))
+            or bu.MOBILE like concat('%',concat(#{q},'%'))
+            or bue.RESUME like concat('%',concat(#{q},'%'))
+            or bue.NICKNAME like concat('%',concat(#{q},'%')))
+        </if>
+        <if test='bindOrganUserStatus != null and bindOrganUserStatus = "unbinded" and organId != null and organId.trim() != ""'>
+            AND NOT EXISTS (SELECT * FROM USER_RANGE_ORGAN SO WHERE SO.TYPE = 30 AND SO.DEL_FLAG = 0 AND SO.USER_ID = B.USER_ID AND SO.ORGAN_ID = #{organId})
+        </if>
+        <if test='bindPositionUserStatus != null and bindPositionUserStatus = "unbinded" and positionId != null and positionId.trim() != ""'>
+            AND NOT EXISTS (SELECT * FROM USER_RANGE_ORGAN SO WHERE SO.TYPE = 30 AND SO.DEL_FLAG = 0 AND SO.USER_ID = B.USER_ID AND SO.POSITION_ID = #{positionId})
+        </if>
+
+    </select>
+
+    <!-- 获取机构下绑定的人员列表 -->
+    <select id="getUsersByBindOrganList" resultMap="permissonCommDtoMap">
+        SELECT B.RELATION_ID,B.ORGAN_ID,B.USER_ID,B.USERL_ID AS MEMBER_ID,tm.NICK_NAME,bu.MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = tm.USER_ID
+        WHERE B.TYPE = 30 and B.ORGAN_ID = #{organId} AND B.DEL_FLAG =0
+        <if test='q != null and q.trim() != ""'>
+            and (tm.NICK_NAME like concat('%',concat(#{q},'%'))
+            or bu.USERNAME like concat('%',concat(#{q},'%'))
+            or bu.MOBILE like concat('%',concat(#{q},'%'))
+            or bue.RESUME like concat('%',concat(#{q},'%'))
+            or bue.NICKNAME like concat('%',concat(#{q},'%')))
+        </if>
+        ORDER BY B.CREATE_TIME DESC
+    </select>
+
+    <!-- 获取岗位下绑定的人员列表 -->
+    <select id="getUsersByBindPositionList" resultMap="permissonCommDtoMap">
+        SELECT B.RELATION_ID,B.POSITION_ID,B.USER_ID,B.USERL_ID AS MEMBER_ID,tm.NICK_NAME,bu.MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = tm.USER_ID
+        WHERE B.TYPE = 30 and B.POSITION_ID = #{positionId} AND B.DEL_FLAG =0
+        <if test='q != null and q.trim() != ""'>
+            and (tm.NICK_NAME like concat('%',concat(#{q},'%'))
+            or bu.USERNAME like concat('%',concat(#{q},'%'))
+            or bu.MOBILE like concat('%',concat(#{q},'%'))
+            or bue.RESUME like concat('%',concat(#{q},'%'))
+            or bue.NICKNAME like concat('%',concat(#{q},'%')))
+        </if>
+        ORDER BY B.CREATE_TIME DESC
+    </select>
+
+    <!-- 获取机构、分组、岗位 下绑定的人员列表 -->
+    <select id="getUsersByBindList" resultMap="permissonCommDtoMap">
+        SELECT DISTINCT B.RELATION_ID,B.ORGAN_ID,B.GROUP_ID,B.POSITION_ID
+        ,B.USER_ID, B.USERL_ID AS MEMBER_ID,tm.NICK_NAME,bu.MOBILE
+        FROM USER_RANGE_ORGAN B
+        LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
+        LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        LEFT JOIN THIRD_MEMBER tm ON B.USER_ID = tm.USER_ID
+        WHERE B.DEL_FLAG = 0
+        <if test="type != null and type != ''">
+            AND B.TYPE = #{type}
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test="groupId != null and groupId != ''">
+            AND B.GROUP_ID = #{groupId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID = #{positionId}
+        </if>
+        <if test="userId != null and userId != ''">
+            AND B.USER_ID = #{userId}
+        </if>
+    </select>
+
+    <!-- 绑定机构下的人员 -->
+    <insert id="bindUsersForOrgan" parameterType="net.linlan.social.permission.dto.PermissionCommDto">
+        INSERT INTO USER_RANGE_ORGAN
+        (
+            RELATION_ID,ORGAN_ID,USER_ID,USERL_ID,TYPE,DEL_FLAG,CREATE_TIME
+        )
+        VALUES
+        (
+            #{relationId}, #{organId}, #{userId}, #{memberId}, #{type},#{delFlag},#{createTime}
+        )
+    </insert>
+
+    <!-- 绑定岗位下的人员 -->
+    <insert id="bindUsersForPosition" parameterType="net.linlan.social.permission.dto.PermissionCommDto">
+        INSERT INTO USER_RANGE_ORGAN
+        (
+            RELATION_ID,POSITION_ID,USER_ID,USERL_ID,TYPE,DEL_FLAG,CREATE_TIME
+        )
+        VALUES
+        (
+            #{relationId}, #{positionId}, #{userId}, #{memberId}, #{type},#{delFlag},#{createTime}
+        )
+    </insert>
+
+    <!-- 批量绑定 -->
+    <insert id="batchBindUsers" parameterType="net.linlan.social.permission.dto.PermissionCommDto">
+        INSERT INTO USER_RANGE_ORGAN
+        (
+        RELATION_ID,ORGAN_ID,POSITION_ID,USER_ID,USERL_ID,TYPE,DEL_FLAG,CREATE_TIME,FOREIGN_ID,SPARE1,SPARE2
+        )
+        VALUES
+        <foreach collection="list" index="index" item="item" separator=",">
+            (
+            #{item.relationId},#{item.organId},#{item.positionId},#{item.userId},#{item.memberId},#{item.type},#{item.delFlag},#{item.createTime},#{item.areaId},#{item.groupId},#{item.siteId}
+            )
+        </foreach>
+    </insert>
+    <resultMap id="organGroupBindMap" type="net.linlan.social.permission.dto.OrganGroupBindDto">
+        <result property="memberId" column="MEMBER_ID"></result>
+        <result property="userId" column="USER_ID"></result>
+        <result property="name" column="NAME"></result>
+        <result property="mobile" column="MOBILE"></result>
+    </resultMap>
+
+    <select id="getOrganGroupBindList" resultType="net.linlan.social.permission.dto.OrganGroupBindDto">
+        SELECT B.MEMBER_ID, B.USER_ID, B.NICK_NAME AS NAME, B.MOBILE
+        FROM THIRD_MEMBER B
+            LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE   EXISTS
+        (SELECT 1 FROM  (SELECT USERL_ID FROM USER_RANGE_ORGAN WHERE GROUP_ID = #{groupId} )A where A.MEMBER_ID = B.MEMBER_ID)
+        <if test="q != null and q != ''">
+            <choose>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    AND (bue.ID_MOBILE = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NAME = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}'))))
+                </when>
+                <otherwise>
+                    AND (bue.ID_MOBILE like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NUM like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NAME like CONCAT('%',CONCAT(#{q},'%')))
+                </otherwise>
+            </choose>
+        </if>
+    </select>
+
+    <select id="getOrganGroupUnbindList" resultType="net.linlan.social.permission.dto.OrganGroupBindDto">
+        SELECT B.MEMBER_ID, B.USER_ID, B.NICK_NAME AS NAME, B.MOBILE
+        FROM THIRD_MEMBER B
+            LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE NOT  EXISTS
+        (SELECT 1 FROM  (SELECT USERL_ID FROM USER_RANGE_ORGAN WHERE GROUP_ID = #{groupId} )A where A.MEMBER_ID = B.MEMBER_ID)
+        <if test="q != null and q != ''">
+            <choose>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    AND (bue.ID_MOBILE = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NAME = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}'))))
+                </when>
+                <otherwise>
+                    AND (bue.ID_MOBILE like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NUM like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NAME like CONCAT('%',CONCAT(#{q},'%')))
+                </otherwise>
+            </choose>
+        </if>
+        ORDER BY bue.ID_NAME desc
+    </select>
+
+
+    <!-- 获取用户已有权限 -->
+    <select id="findByUserId" resultMap="permissonCommDtoMap">
+        SELECT B.ORGAN_ID,B.POSITION_ID,B.USER_ID,B.TYPE
+        FROM USER_RANGE_ORGAN B
+        WHERE 1=1
+        <if test="type != null and type != ''">
+            AND B.TYPE = #{type}
+        </if>
+        <if test="userId != null and userId != ''">
+            AND B.USER_ID = #{userId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            AND B.POSITION_ID = #{positionId}
+        </if>
+        <if test="organId != null and organId != ''">
+            AND B.ORGAN_ID = #{organId}
+        </if>
+        <if test="areaId != null and areaId != ''">
+            AND B.FOREIGN_ID = #{areaId}
+        </if>
+    </select>
+
+    <insert id="memberGroupBindUser">
+        insert into USER_RANGE_ORGAN
+        (RELATION_ID, GROUP_ID, USER_ID, USERL_ID, CREATE_TIME, LAST_TIME) values
+        <foreach collection="list" item="publicGroupUserDto" separator=",">
+            (#{publicGroupUserDto.id}, #{publicGroupUserDto.groupId}, #{publicGroupUserDto.userId}, #{publicGroupUserDto.memberId}, now(), now())
+        </foreach>
+    </insert>
+
+    <delete id="memberGroupUnBindUser">
+        delete from USER_RANGE_ORGAN where GROUP_ID = #{groupId} and
+        USERL_ID IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <select id="getUserPositionBindList" resultType="net.linlan.social.permission.dto.UserPositionBindDto">
+        SELECT B.MEMBER_ID, B.USER_ID, B.NICK_NAME AS NAME, B.MOBILE
+        FROM THIRD_MEMBER B
+            LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE
+        EXISTS (SELECT 1 FROM (SELECT USERL_ID FROM USER_RANGE_ORGAN WHERE POSITION_ID=#{positionId})A where A.USERL_ID = B.MEMBER_ID )
+        <if test="q != null and q != ''">
+            <choose>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    AND (bue.ID_MOBILE = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NAME = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}'))))
+                </when>
+                <otherwise>
+                    AND (bue.ID_MOBILE like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NUM like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NAME like CONCAT('%',CONCAT(#{q},'%')))
+                </otherwise>
+            </choose>
+        </if>
+        ORDER BY bue.ID_NAME desc
+    </select>
+
+    <select id="getUserPositionUnBindList" resultType="net.linlan.social.permission.dto.UserPositionBindDto">
+        SELECT B.MEMBER_ID, B.USER_ID, B.NICK_NAME AS NAME, B.MOBILE
+        FROM THIRD_MEMBER B
+            LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
+        WHERE
+        NOT  EXISTS (SELECT 1 FROM (SELECT USERL_ID FROM USER_RANGE_ORGAN WHERE POSITION_ID=#{positionId})A where A.USERL_ID = B.MEMBER_ID )
+        <if test="q != null and q != ''">
+            <choose>
+                <when test='@net.linlan.config.PlatformSecurityConfig@dbEncrypt == "true"'>
+                    AND (bue.ID_MOBILE = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NUM = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}')))
+                    OR bue.ID_NAME = (SELECT HEX(AES_ENCRYPT(#{q}, '${@net.linlan.config.PlatformSecurityConfig@dbKey}'))))
+                </when>
+                <otherwise>
+                    AND (bue.ID_MOBILE like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NUM like CONCAT('%',CONCAT(#{q},'%'))
+                    OR bue.ID_NAME like CONCAT('%',CONCAT(#{q},'%')))
+                </otherwise>
+            </choose>
+        </if>
+        ORDER BY bue.ID_NAME desc
+    </select>
+
+    <update id="logicalDeleteByPeopleIds">
+        UPDATE USER_RANGE_ORGAN B
+        SET B.DEL_FLAG = 1
+        where EXISTS
+        (
+        SELECT 1 FROM
+        (
+        SELECT S.CONN_USER_ID FROM MATERIAL_PEOPLE_BASE S
+        WHERE S.CONN_USER_ID IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        )C
+        WHERE C.CONN_USER_ID = B.USER_ID
+        ) AND TYPE = 10 AND B.DEL_FLAG = 0
+    </update>
+
+    <select id="getMobileByOrganId" resultType="java.lang.String">
+        SELECT DISTINCT(bu.MOBILE) from BASE_USER bu
+        LEFT JOIN USER_RANGE_ORGAN uro on bu.USER_ID = uro.USER_ID
+        where uro.ORGAN_ID=#{organId} AND bu.MOBILE IS NOT NULL AND bu.MOBILE != ''
+        AND bu.MOBILE LIKE '1%' AND LENGTH(bu.MOBILE) = 11
+    </select>
+
+    <resultMap type="net.linlan.sys.base.entity.BaseUser" id="baseUserPermissionMap">
+        <id property="id" column="USER_ID"/>
+        <result property="xzqhId" column="XZQH_ID"/>
+        <result property="source" column="SOURCE"/>
+        <result property="createType" column="CREATE_TYPE"/>
+        <result property="username" column="USERNAME"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="email" column="EMAIL"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="salt" column="SALT"/>
+        <result property="srcCode" column="SRC_CODE"/>
+        <result property="registerTime" column="REGISTER_TIME"/>
+        <result property="registerIp" column="REGISTER_IP"/>
+        <result property="currentLoginTime" column="CURRENT_LOGIN_TIME"/>
+        <result property="currentLoginIp" column="CURRENT_LOGIN_IP"/>
+        <result property="lastAppId" column="LAST_APP_ID"/>
+        <result property="lastLoginTime" column="LAST_LOGIN_TIME"/>
+        <result property="lastLoginIp" column="LAST_LOGIN_IP"/>
+        <result property="lastLogoutTime" column="LAST_LOGOUT_TIME"/>
+        <result property="loginCount" column="LOGIN_COUNT"/>
+        <result property="resetKey" column="RESET_KEY"/>
+        <result property="resetPwd" column="RESET_PWD"/>
+        <result property="lastResetTime" column="LAST_RESET_TIME"/>
+        <result property="errorTime" column="ERROR_TIME"/>
+        <result property="errorCount" column="ERROR_COUNT"/>
+        <result property="errorIp" column="ERROR_IP"/>
+        <result property="lockTime" column="LOCK_TIME"/>
+        <result property="activation" column="ACTIVATION"/>
+        <result property="activationCode" column="ACTIVATION_CODE"/>
+        <result property="priority" column="PRIORITY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="lastTime" column="LAST_TIME"/>
+        <result property="delFlag" column="DEL_FLAG"/>
+        <result property="deleteTime" column="DELETE_TIME"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="spare1" column="SPARE1"/>
+        <result property="spare2" column="SPARE2"/>
+    </resultMap>
+
+    <select id="getPublicAccount" resultMap="baseUserPermissionMap">
+        select bu.* from BASE_USER bu
+        LEFT JOIN USER_RANGE_ORGAN uro on uro.USER_ID = bu.USER_ID
+        where 1=1
+        <if test="organId != null and organId != ''">
+            AND uro.ORGAN_ID=#{organId}
+        </if>
+        <if test="areaId != null and areaId != ''">
+            AND uro.FOREIGN_ID=#{areaId}
+        </if>
+        <if test="positionId != null and positionId != ''">
+            and uro.POSITION_ID =#{positionId}
+        </if>
+        <if test="groupId != null and groupId!= ''">
+            and uro.SPARE1= #{groupId}
+        </if>
+        AND bu.CREATE_TYPE=10
+        and uro.DEL_FLAG=0
+    </select>
+
+    <select id="hasRoleByUser" resultType="java.lang.Integer">
+        select count(uro.GROUP_ID) from USER_RANGE_ORGAN uro
+        left join THIRD_MEMBER tm on tm.MEMBER_ID=uro.USERL_ID
+        where tm.USER_ID =#{userId}
+          and uro.GROUP_ID = #{groupId}
+    </select>
+
+    <select id="hasRole" resultType="java.lang.Integer">
+        select count(uro.GROUP_ID) from USER_RANGE_ORGAN uro
+        where uro.USERL_ID =#{memberId}
+          and uro.GROUP_ID = #{groupId}
+    </select>
+    <select id="hasRoleByMobile" resultType="java.lang.Integer">
+        select count(uro.GROUP_ID) from USER_RANGE_ORGAN uro
+        left join BASE_USER bu on bu.USER_ID=uro.USER_ID
+        where bu.mobile =#{mobile}
+          and uro.GROUP_ID = #{groupId}
+    </select>
+    <select id="hasRoleOrgan" resultType="java.lang.Integer">
+        select count(uro.GROUP_ID) from USER_RANGE_ORGAN uro
+        left join THIRD_MEMBER tm on tm.MEMBER_ID=uro.USERL_ID
+        left join BASE_USER bu on bu.USER_ID=tm.USER_ID
+        where bu.mobile =#{mobile}
+          and uro.GROUP_ID = #{groupId}
+          and uro.ORGAN_ID=#{organId}
+    </select>
+
+</mapper>
