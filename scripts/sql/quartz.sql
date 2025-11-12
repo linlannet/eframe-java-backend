@@ -1,174 +1,193 @@
-DROP TABLE IF EXISTS QRTZ_FIRED_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_PAUSED_TRIGGER_GRPS;
-DROP TABLE IF EXISTS QRTZ_SCHEDULER_STATE;
-DROP TABLE IF EXISTS QRTZ_LOCKS;
-DROP TABLE IF EXISTS QRTZ_SIMPLE_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_SIMPROP_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_CRON_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_BLOB_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_TRIGGERS;
-DROP TABLE IF EXISTS QRTZ_JOB_DETAILS;
-DROP TABLE IF EXISTS QRTZ_CALENDARS;
+/*
+
+ Source Server         : LLDB
+ Source Server Type    : MySQL
+ Source Server Version : 80022
+ Source Host           : localhost:3306
+ Source Schema         : framedb_1.1
+
+ Target Server Type    : MySQL
+ Target Server Version : 80022
+ File Encoding         : 65001
+
+ Date: 24/08/2025 15:40:03
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- 1、存储每一个已配置的 jobDetail 的详细信息
--- ----------------------------
-create table QRTZ_JOB_DETAILS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    job_name             varchar(200)    not null            comment '任务名称',
-    job_group            varchar(200)    not null            comment '任务组名',
-    description          varchar(250)    null                comment '相关介绍',
-    job_class_name       varchar(250)    not null            comment '执行任务类名称',
-    is_durable           varchar(1)      not null            comment '是否持久化',
-    is_nonconcurrent     varchar(1)      not null            comment '是否并发',
-    is_update_data       varchar(1)      not null            comment '是否更新数据',
-    requests_recovery    varchar(1)      not null            comment '是否接受恢复执行',
-    job_data             blob            null                comment '存放持久化job对象',
-    primary key (sched_name, job_name, job_group)
-) engine=innodb comment = '任务详细信息表';
+-- Table structure for QRTZ_BLOB_TRIGGERS  Trigger 作为 Blob 类型存储(用于 Quartz 用户用 JDBC 创建他们自己定制的 Trigger 类型，JobStore 并不知道如何存储实例的时候)
 
 -- ----------------------------
--- 2、 存储已配置的 Trigger 的信息
--- ----------------------------
-create table QRTZ_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment '触发器的名字',
-    trigger_group        varchar(200)    not null            comment '触发器所属组的名字',
-    job_name             varchar(200)    not null            comment 'qrtz_job_details表job_name的外键',
-    job_group            varchar(200)    not null            comment 'qrtz_job_details表job_group的外键',
-    description          varchar(250)    null                comment '相关介绍',
-    next_fire_time       bigint(13)      null                comment '上一次触发时间（毫秒）',
-    prev_fire_time       bigint(13)      null                comment '下一次触发时间（默认为-1表示不触发）',
-    priority             integer         null                comment '优先级',
-    trigger_state        varchar(16)     not null            comment '触发器状态',
-    trigger_type         varchar(8)      not null            comment '触发器的类型',
-    start_time           bigint(13)      not null            comment '开始时间',
-    end_time             bigint(13)      null                comment '结束时间',
-    calendar_name        varchar(200)    null                comment '日程表名称',
-    misfire_instr        smallint(2)     null                comment '补偿执行的策略',
-    job_data             blob            null                comment '存放持久化job对象',
-    primary key (sched_name, trigger_name, trigger_group),
-    foreign key (sched_name, job_name, job_group) references QRTZ_JOB_DETAILS(sched_name, job_name, job_group)
-) engine=innodb comment = '触发器详细信息表';
+DROP TABLE IF EXISTS `QRTZ_BLOB_TRIGGERS`;
+CREATE TABLE `QRTZ_BLOB_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_NAME的外键',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  `BLOB_DATA` blob NULL COMMENT '存放持久化TRIGGER对象',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) USING BTREE,
+  CONSTRAINT `QRTZ_BLOB_TRIGGERS_ibfk_1` FOREIGN KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) REFERENCES `QRTZ_TRIGGERS` (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = 'BLOB类型的触发器表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 3、 存储简单的 Trigger，包括重复次数，间隔，以及已触发的次数
+-- Table structure for QRTZ_CALENDARS 以 Blob 类型存储存放日历信息， quartz可配置一个日历来指定一个时间范围
 -- ----------------------------
-create table QRTZ_SIMPLE_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    repeat_count         bigint(7)       not null            comment '重复的次数统计',
-    repeat_interval      bigint(12)      not null            comment '重复的间隔时间',
-    times_triggered      bigint(10)      not null            comment '已经触发的次数',
-    primary key (sched_name, trigger_name, trigger_group),
-    foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = '简单触发器的信息表';
+DROP TABLE IF EXISTS `QRTZ_CALENDARS`;
+CREATE TABLE `QRTZ_CALENDARS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `CALENDAR_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '日历名称',
+  `CALENDAR` blob NOT NULL COMMENT '存放持久化CALENDAR对象',
+  PRIMARY KEY (`SCHED_NAME`, `CALENDAR_NAME`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '日历信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 4、 存储 Cron Trigger，包括 Cron 表达式和时区信息
--- ---------------------------- 
-create table QRTZ_CRON_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    cron_expression      varchar(200)    not null            comment 'cron表达式',
-    time_zone_id         varchar(80)                         comment '时区',
-    primary key (sched_name, trigger_name, trigger_group),
-    foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = 'Cron类型的触发器表';
+-- Table structure for QRTZ_CRON_TRIGGERS 存储 Cron Trigger，包括 Cron 表达式和时区信息
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_CRON_TRIGGERS`;
+CREATE TABLE `QRTZ_CRON_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_NAME的外键',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  `CRON_EXPRESSION` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'CRON表达式',
+  `TIME_ZONE_ID` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '时区',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) USING BTREE,
+  CONSTRAINT `QRTZ_CRON_TRIGGERS_ibfk_1` FOREIGN KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) REFERENCES `QRTZ_TRIGGERS` (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = 'CRON类型的触发器表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 5、 Trigger 作为 Blob 类型存储(用于 Quartz 用户用 JDBC 创建他们自己定制的 Trigger 类型，JobStore 并不知道如何存储实例的时候)
--- ---------------------------- 
-create table QRTZ_BLOB_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    blob_data            blob            null                comment '存放持久化Trigger对象',
-    primary key (sched_name, trigger_name, trigger_group),
-    foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = 'Blob类型的触发器表';
+-- Table structure for QRTZ_FIRED_TRIGGERS 存储与已触发的 Trigger 相关的状态信息，以及相联 Job 的执行信息
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_FIRED_TRIGGERS`;
+CREATE TABLE `QRTZ_FIRED_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `ENTRY_ID` varchar(95) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度器实例ID',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_NAME的外键',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  `INSTANCE_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度器实例名',
+  `FIRED_TIME` bigint(0) NOT NULL COMMENT '触发的时间',
+  `SCHED_TIME` bigint(0) NOT NULL COMMENT '定时器制定的时间',
+  `PRIORITY` int(0) NOT NULL COMMENT '优先级',
+  `STATE` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '状态',
+  `JOB_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '任务名称',
+  `JOB_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '任务组名',
+  `IS_NONCONCURRENT` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '是否并发',
+  `REQUESTS_RECOVERY` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '是否接受恢复执行',
+  PRIMARY KEY (`SCHED_NAME`, `ENTRY_ID`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '已触发的触发器表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 6、 以 Blob 类型存储存放日历信息， quartz可配置一个日历来指定一个时间范围
--- ---------------------------- 
-create table QRTZ_CALENDARS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    calendar_name        varchar(200)    not null            comment '日历名称',
-    calendar             blob            not null            comment '存放持久化calendar对象',
-    primary key (sched_name, calendar_name)
-) engine=innodb comment = '日历信息表';
+-- Table structure for QRTZ_JOB_DETAILS 存储每一个已配置的 jobDetail 的详细信息
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_JOB_DETAILS`;
+CREATE TABLE `QRTZ_JOB_DETAILS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `JOB_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '任务名称',
+  `JOB_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '任务组名',
+  `DESCRIPTION` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '相关介绍',
+  `JOB_CLASS_NAME` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '执行任务类名称',
+  `IS_DURABLE` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '是否持久化',
+  `IS_NONCONCURRENT` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '是否并发',
+  `IS_UPDATE_DATA` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '是否更新数据',
+  `REQUESTS_RECOVERY` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '是否接受恢复执行',
+  `JOB_DATA` blob NULL COMMENT '存放持久化JOB对象',
+  PRIMARY KEY (`SCHED_NAME`, `JOB_NAME`, `JOB_GROUP`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '任务详细信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 7、 存储已暂停的 Trigger 组的信息
--- ---------------------------- 
-create table QRTZ_PAUSED_TRIGGER_GRPS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    primary key (sched_name, trigger_group)
-) engine=innodb comment = '暂停的触发器表';
+-- Table structure for QRTZ_LOCKS 存储程序的悲观锁的信息(假如使用了悲观锁)
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_LOCKS`;
+CREATE TABLE `QRTZ_LOCKS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `LOCK_NAME` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '悲观锁名称',
+  PRIMARY KEY (`SCHED_NAME`, `LOCK_NAME`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '存储的悲观锁信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 8、 存储与已触发的 Trigger 相关的状态信息，以及相联 Job 的执行信息
--- ---------------------------- 
-create table QRTZ_FIRED_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    entry_id             varchar(95)     not null            comment '调度器实例id',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    instance_name        varchar(200)    not null            comment '调度器实例名',
-    fired_time           bigint(13)      not null            comment '触发的时间',
-    sched_time           bigint(13)      not null            comment '定时器制定的时间',
-    priority             integer         not null            comment '优先级',
-    state                varchar(16)     not null            comment '状态',
-    job_name             varchar(200)    null                comment '任务名称',
-    job_group            varchar(200)    null                comment '任务组名',
-    is_nonconcurrent     varchar(1)      null                comment '是否并发',
-    requests_recovery    varchar(1)      null                comment '是否接受恢复执行',
-    primary key (sched_name, entry_id)
-) engine=innodb comment = '已触发的触发器表';
+-- Table structure for QRTZ_PAUSED_TRIGGER_GRPS 存储已暂停的 Trigger 组的信息
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_PAUSED_TRIGGER_GRPS`;
+CREATE TABLE `QRTZ_PAUSED_TRIGGER_GRPS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_GROUP`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '暂停的触发器表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 9、 存储少量的有关 Scheduler 的状态信息，假如是用于集群中，可以看到其他的 Scheduler 实例
--- ---------------------------- 
-create table QRTZ_SCHEDULER_STATE (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    instance_name        varchar(200)    not null            comment '实例名称',
-    last_checkin_time    bigint(13)      not null            comment '上次检查时间',
-    checkin_interval     bigint(13)      not null            comment '检查间隔时间',
-    primary key (sched_name, instance_name)
-) engine=innodb comment = '调度器状态表';
+-- Table structure for QRTZ_SCHEDULER_STATE 存储少量的有关 Scheduler 的状态信息，假如是用于集群中，可以看到其他的 Scheduler 实例
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_SCHEDULER_STATE`;
+CREATE TABLE `QRTZ_SCHEDULER_STATE`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `INSTANCE_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '实例名称',
+  `LAST_CHECKIN_TIME` bigint(0) NOT NULL COMMENT '上次检查时间',
+  `CHECKIN_INTERVAL` bigint(0) NOT NULL COMMENT '检查间隔时间',
+  PRIMARY KEY (`SCHED_NAME`, `INSTANCE_NAME`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '调度器状态表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 10、 存储程序的悲观锁的信息(假如使用了悲观锁)
--- ---------------------------- 
-create table QRTZ_LOCKS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    lock_name            varchar(40)     not null            comment '悲观锁名称',
-    primary key (sched_name, lock_name)
-) engine=innodb comment = '存储的悲观锁信息表';
+-- Table structure for QRTZ_SIMPLE_TRIGGERS 存储简单的 Trigger，包括重复次数，间隔，以及已触发的次数
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_SIMPLE_TRIGGERS`;
+CREATE TABLE `QRTZ_SIMPLE_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_NAME的外键',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  `REPEAT_COUNT` bigint(0) NOT NULL COMMENT '重复的次数统计',
+  `REPEAT_INTERVAL` bigint(0) NOT NULL COMMENT '重复的间隔时间',
+  `TIMES_TRIGGERED` bigint(0) NOT NULL COMMENT '已经触发的次数',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) USING BTREE,
+  CONSTRAINT `QRTZ_SIMPLE_TRIGGERS_ibfk_1` FOREIGN KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) REFERENCES `QRTZ_TRIGGERS` (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '简单触发器的信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- 11、 Quartz集群实现同步机制的行锁表
--- ---------------------------- 
-create table QRTZ_SIMPROP_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    str_prop_1           varchar(512)    null                comment 'String类型的trigger的第一个参数',
-    str_prop_2           varchar(512)    null                comment 'String类型的trigger的第二个参数',
-    str_prop_3           varchar(512)    null                comment 'String类型的trigger的第三个参数',
-    int_prop_1           int             null                comment 'int类型的trigger的第一个参数',
-    int_prop_2           int             null                comment 'int类型的trigger的第二个参数',
-    long_prop_1          bigint          null                comment 'long类型的trigger的第一个参数',
-    long_prop_2          bigint          null                comment 'long类型的trigger的第二个参数',
-    dec_prop_1           numeric(13,4)   null                comment 'decimal类型的trigger的第一个参数',
-    dec_prop_2           numeric(13,4)   null                comment 'decimal类型的trigger的第二个参数',
-    bool_prop_1          varchar(1)      null                comment 'Boolean类型的trigger的第一个参数',
-    bool_prop_2          varchar(1)      null                comment 'Boolean类型的trigger的第二个参数',
-    primary key (sched_name, trigger_name, trigger_group),
-    foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = '同步机制的行锁表';
+-- Table structure for QRTZ_SIMPROP_TRIGGERS Quartz集群实现同步机制的行锁表
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_SIMPROP_TRIGGERS`;
+CREATE TABLE `QRTZ_SIMPROP_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_NAME的外键',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_TRIGGERS表TRIGGER_GROUP的外键',
+  `STR_PROP_1` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'STRING类型的TRIGGER的第一个参数',
+  `STR_PROP_2` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'STRING类型的TRIGGER的第二个参数',
+  `STR_PROP_3` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'STRING类型的TRIGGER的第三个参数',
+  `INT_PROP_1` int(0) NULL DEFAULT NULL COMMENT 'INT类型的TRIGGER的第一个参数',
+  `INT_PROP_2` int(0) NULL DEFAULT NULL COMMENT 'INT类型的TRIGGER的第二个参数',
+  `LONG_PROP_1` bigint(0) NULL DEFAULT NULL COMMENT 'LONG类型的TRIGGER的第一个参数',
+  `LONG_PROP_2` bigint(0) NULL DEFAULT NULL COMMENT 'LONG类型的TRIGGER的第二个参数',
+  `DEC_PROP_1` decimal(13, 4) NULL DEFAULT NULL COMMENT 'DECIMAL类型的TRIGGER的第一个参数',
+  `DEC_PROP_2` decimal(13, 4) NULL DEFAULT NULL COMMENT 'DECIMAL类型的TRIGGER的第二个参数',
+  `BOOL_PROP_1` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'BOOLEAN类型的TRIGGER的第一个参数',
+  `BOOL_PROP_2` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'BOOLEAN类型的TRIGGER的第二个参数',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) USING BTREE,
+  CONSTRAINT `QRTZ_SIMPROP_TRIGGERS_ibfk_1` FOREIGN KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) REFERENCES `QRTZ_TRIGGERS` (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '同步机制的行锁表' ROW_FORMAT = Dynamic;
 
-commit;
+-- ----------------------------
+-- Table structure for QRTZ_TRIGGERS 存储已配置的 Trigger 的信息
+-- ----------------------------
+DROP TABLE IF EXISTS `QRTZ_TRIGGERS`;
+CREATE TABLE `QRTZ_TRIGGERS`  (
+  `SCHED_NAME` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '调度名称',
+  `TRIGGER_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '触发器的名字',
+  `TRIGGER_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '触发器所属组的名字',
+  `JOB_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_JOB_DETAILS表JOB_NAME的外键',
+  `JOB_GROUP` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'QRTZ_JOB_DETAILS表JOB_GROUP的外键',
+  `DESCRIPTION` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '相关介绍',
+  `NEXT_FIRE_TIME` bigint(0) NULL DEFAULT NULL COMMENT '上一次触发时间（毫秒）',
+  `PREV_FIRE_TIME` bigint(0) NULL DEFAULT NULL COMMENT '下一次触发时间（默认为-1表示不触发）',
+  `PRIORITY` int(0) NULL DEFAULT NULL COMMENT '优先级',
+  `TRIGGER_STATE` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '触发器状态',
+  `TRIGGER_TYPE` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '触发器的类型',
+  `START_TIME` bigint(0) NOT NULL COMMENT '开始时间',
+  `END_TIME` bigint(0) NULL DEFAULT NULL COMMENT '结束时间',
+  `CALENDAR_NAME` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '日程表名称',
+  `MISFIRE_INSTR` smallint(0) NULL DEFAULT NULL COMMENT '补偿执行的策略',
+  `JOB_DATA` blob NULL COMMENT '存放持久化JOB对象',
+  PRIMARY KEY (`SCHED_NAME`, `TRIGGER_NAME`, `TRIGGER_GROUP`) USING BTREE,
+  INDEX `SCHED_NAME`(`SCHED_NAME`, `JOB_NAME`, `JOB_GROUP`) USING BTREE,
+  CONSTRAINT `QRTZ_TRIGGERS_ibfk_1` FOREIGN KEY (`SCHED_NAME`, `JOB_NAME`, `JOB_GROUP`) REFERENCES `QRTZ_JOB_DETAILS` (`SCHED_NAME`, `JOB_NAME`, `JOB_GROUP`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '触发器详细信息表' ROW_FORMAT = Dynamic;
+
+SET FOREIGN_KEY_CHECKS = 1;

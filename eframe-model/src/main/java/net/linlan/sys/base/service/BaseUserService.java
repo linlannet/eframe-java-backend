@@ -407,12 +407,17 @@ public class BaseUserService {
      * @param userId 用户ID
      */
     public void recordLoginInfo(String userId) {
-        if (ObjectUtils.isNotEmpty(userId)) {
-            BaseUser baseUser = new BaseUser();
-            baseUser.setId(userId);
-            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setLastLoginTime(new Date());
-            update(baseUser);
+        if (StringUtils.isNotBlank(userId)) {
+
+            BaseUser baseUser = findById(userId);
+            if (baseUser != null) {
+                baseUser.setId(userId);
+                baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+                baseUser.setLastLoginTime(new Date());
+                baseUser.setLoginCount(baseUser.getLoginCount() + 1);
+                update(baseUser);
+            }
+
         }
     }
 }

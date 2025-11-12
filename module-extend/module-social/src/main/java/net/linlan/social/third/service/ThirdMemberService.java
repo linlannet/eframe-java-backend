@@ -24,6 +24,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -36,6 +37,7 @@ import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.social.third.dao.ThirdMemberDao;
 import net.linlan.social.third.dto.ThirdMemberDto;
+import net.linlan.social.third.dto.ThirdUserDto;
 import net.linlan.social.third.entity.ThirdMember;
 import net.linlan.social.third.entity.ThirdMemberBind;
 import net.linlan.social.third.param.ThirdMemberParam;
@@ -44,13 +46,15 @@ import net.linlan.sys.base.constant.DelFlagEnum;
 import net.linlan.sys.base.constant.SrcCodeEnum;
 import net.linlan.sys.base.entity.BaseUser;
 import net.linlan.sys.base.entity.BaseUserExt;
+import net.linlan.sys.base.service.BaseUserExtService;
 import net.linlan.sys.base.service.BaseUserService;
 import net.linlan.sys.core.entity.CoreAccount;
 import net.linlan.sys.core.service.CoreAccountService;
 import net.linlan.utils.ServletUtils;
+import net.linlan.utils.bean.BeanUtils;
 import net.linlan.utils.exception.CommonException;
 import net.linlan.utils.ip.IPUtils;
-import static net.linlan.social.constant.ProviderSource.*;
+import static net.linlan.social.manage.constant.ProviderSource.*;
 
 /**
  *
@@ -72,7 +76,15 @@ public class ThirdMemberService {
     @Resource
     private BaseUserService        baseUserService;
     @Resource
+    private BaseUserExtService     baseUserExtService;
+    @Resource
     private ThirdMemberBindService thirdMemberBindService;
+
+    private final String[]         avatarList = { "https://linlan.net/cdn/public/images/avatar/Raccoon.svg",
+                                                  "https://linlan.net/cdn/public/images/avatar/Kitty.svg",
+                                                  "https://linlan.net/cdn/public/images/avatar/Puppy.svg",
+                                                  "https://linlan.net/cdn/public/images/avatar/Bunny.svg",
+                                                  "https://linlan.net/cdn/public/images/avatar/Fox.svg" };
 
     /** get the list of entity ThirdMember
      * 列表方法，返回{@link ThirdMember} 列表
@@ -239,7 +251,8 @@ public class ThirdMemberService {
         return authRequest;
     }
 
-    public void bind(String userId, String platformType, AuthUser authUser) {
+    @Transactional
+    public void bindFromSocial(String userId, String platformType, AuthUser authUser) {
         //保存ThirdMember
         Long memberId = null;
         ThirdMember thirdMember = findByUserId(userId);
@@ -253,8 +266,10 @@ public class ThirdMemberService {
             if (coreAccount != null) {
                 thirdMember.setAccountId(coreAccount.getId());
             }
-            thirdMember.setServerType(platformType);
+            thirdMember.setAccountType(platformType);
+            thirdMember.setNickName(authUser.getNickname());
             thirdMember.setAvatarUrl(authUser.getAvatar());
+            thirdMember.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
             save(thirdMember);
         } else {
             memberId = thirdMember.getId();
@@ -263,8 +278,10 @@ public class ThirdMemberService {
             if (coreAccount != null) {
                 thirdMember.setAccountId(coreAccount.getId());
             }
-            thirdMember.setServerType(platformType);
+            thirdMember.setAccountType(platformType);
+            thirdMember.setNickName(authUser.getNickname());
             thirdMember.setAvatarUrl(authUser.getAvatar());
+            thirdMember.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
             thirdMember.setDelFlag(DelFlagEnum.NORMAL.getKey());
             update(thirdMember);
         }
@@ -285,41 +302,43 @@ public class ThirdMemberService {
             baseUser.setLoginCount(1);
             baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
             baseUser.setCurrentLoginTime(new Date());
+            baseUserService.save(baseUser);
+
             BaseUserExt baseUserExt = new BaseUserExt();
-            baseUser.setBaseUserExt(baseUserExt);
+            baseUserExt.setId(userId);
             baseUserExt.setNickname(authUser.getNickname());
             baseUserExt.setSex(authUser.getGender().getDesc());
             baseUserExt.setImagePath(authUser.getAvatar());
+            baseUserExt.setWeiboId(authUser.getBlog());
             baseUserExt.setIntro(authUser.getRemark());
             baseUserExt.setComefrom(authUser.getLocation());
-            baseUserExt.setResume(authUser.getRawUserInfo().toJSONString());
             baseUserExt.setSpare1(authUser.getCompany());
             baseUserExt.setSpare2(authUser.getSource());
-            baseUserService.save(baseUser);
+            baseUserExtService.save(baseUserExt);
         } else {
             baseUser.setId(userId);
             baseUser.setSource(coreAccount.getId());
             baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
             baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
-            baseUser.setUsername(authUser.getUsername());
             baseUser.setEmail(authUser.getEmail());
             baseUser.setSpare2(authUser.getUuid());
             baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
             baseUser.setLastLoginTime(new Date());
-            baseUser.setLoginCount(1);
+            baseUser.setLoginCount(baseUser.getLoginCount() + 1);
             baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
             baseUser.setCurrentLoginTime(new Date());
-            BaseUserExt baseUserExt = baseUser.getBaseUserExt();
+            baseUserService.update(baseUser);
+
+            BaseUserExt baseUserExt = new BaseUserExt();
             baseUserExt.setNickname(authUser.getNickname());
             baseUserExt.setSex(authUser.getGender().getDesc());
             baseUserExt.setImagePath(authUser.getAvatar());
             baseUserExt.setIntro(authUser.getRemark());
             baseUserExt.setComefrom(authUser.getLocation());
-            baseUserExt.setResume(authUser.getRawUserInfo().toJSONString());
+            baseUserExt.setWeiboId(authUser.getBlog());
             baseUserExt.setSpare1(authUser.getCompany());
             baseUserExt.setSpare2(authUser.getSource());
-            baseUser.setBaseUserExt(baseUserExt);
-            baseUserService.update(baseUser);
+            baseUserExtService.update(baseUserExt);
         }
         //保存绑定记录
         ThirdMemberBind thirdMemberBind = thirdMemberBindService.findByUserIdAccountKey(userId,
@@ -330,22 +349,27 @@ public class ThirdMemberService {
             thirdMemberBind.setUserId(userId);
             thirdMemberBind.setUsername(authUser.getUsername());
             if (coreAccount != null) {
-                thirdMember.setAccountId(coreAccount.getId());
+                thirdMemberBind.setAccountId(coreAccount.getId());
             }
             thirdMemberBind.setAccountKey(authUser.getUuid());
             thirdMemberBind.setBindTime(new Date());
             thirdMemberBind.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
             thirdMemberBind.setDelFlag(DelFlagEnum.NORMAL.getKey());
+            thirdMemberBind.setSpare1(authUser.getNickname());
             thirdMemberBindService.save(thirdMemberBind);
         } else {
             //当前用户可能解绑过，设置状态可用即可
+            if (coreAccount != null) {
+                thirdMemberBind.setAccountId(coreAccount.getId());
+            }
             thirdMemberBind.setDelFlag(DelFlagEnum.NORMAL.getKey());
+            thirdMemberBind.setSpare1(authUser.getNickname());
             thirdMemberBindService.update(thirdMemberBind);
         }
 
     }
 
-    public void unBind(String userId, String platformType) {
+    public void unBindFromSocial(String userId, String platformType) {
         ThirdMember thirdMember = findByUserId(userId);
         CoreAccount coreAccount = coreAccountService.getByServerType(platformType);
         String accountId = "";
@@ -366,4 +390,95 @@ public class ThirdMemberService {
         }
     }
 
+    /** find the entity by input id, return ThirdUserDto
+     * 对象详情方法，通过id查询对象{@link ThirdUserDto}
+     * @param id 主键ID|1
+     * @return {@link ThirdUserDto}
+     */
+    public ThirdUserDto getThirdUserById(Long id) {
+        return dao.getThirdUserById(id);
+    }
+
+    public ThirdUserDto getThirdUserByUserId(String userId) {
+        return dao.getThirdUserByUserId(userId);
+    }
+
+    public ThirdUserDto getThirdUserByOpenId(String openId, String source) {
+        return dao.getThirdUserByOpenId(openId, source);
+    }
+
+    public ThirdUserDto bindFromMpMini(String platformType, String openId) {
+        //保存ThirdMember
+        Long memberId = RandomUtils.randomLid();
+        CoreAccount coreAccount = coreAccountService.getByServerType(platformType);
+        ThirdMember thirdMember = new ThirdMember();
+        thirdMember.setId(memberId);
+        String userId = RandomUtils.UUID32();
+        thirdMember.setUserId(userId);
+        thirdMember.setOpenId(openId);
+        if (coreAccount != null) {
+            thirdMember.setAccountId(coreAccount.getId());
+        }
+        thirdMember.setAccountType(platformType);
+        String avatar = avatarList[(int) (Math.random() * avatarList.length)];
+        String nickname = "微信用户" + RandomUtils.randomNumbers(8);
+        thirdMember.setNickName(nickname);
+        thirdMember.setAvatarUrl(avatar);
+        save(thirdMember);
+
+        //保存BaseUser和BaseUserExt
+        BaseUser baseUser = baseUserService.getByUsername(openId);
+        BaseUserExt baseUserExt;
+
+        if (baseUser == null) {
+            baseUser = new BaseUser();
+            baseUser.setId(userId);
+            baseUser.setSource(coreAccount.getId());
+            baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
+            baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
+            baseUser.setUsername(openId);
+            baseUser.setSpare2(openId);
+            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+            baseUser.setLastLoginTime(new Date());
+            baseUser.setLoginCount(1);
+            baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+            baseUser.setCurrentLoginTime(new Date());
+            baseUserService.save(baseUser);
+
+            baseUserExt = new BaseUserExt();
+            baseUserExt.setId(userId);
+            baseUserExt.setNickname(nickname);
+            baseUserExt.setImagePath(avatar);
+            baseUserExtService.save(baseUserExt);
+        } else {
+            baseUser.setSource(coreAccount.getId());
+            baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
+            baseUser.setSpare2(openId);
+            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+            baseUser.setLastLoginTime(new Date());
+            baseUser.setLoginCount(baseUser.getLoginCount() + 1);
+            baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+            baseUser.setCurrentLoginTime(new Date());
+            baseUserService.update(baseUser);
+            baseUserExt = baseUserExtService.findById(baseUser.getId());
+        }
+        //保存绑定记录
+        ThirdMemberBind thirdMemberBind = new ThirdMemberBind();
+        thirdMemberBind.setMemberId(memberId);
+        thirdMemberBind.setUserId(userId);
+        thirdMemberBind.setUsername(openId);
+        if (coreAccount != null) {
+            thirdMember.setAccountId(coreAccount.getId());
+        }
+        thirdMemberBind.setAccountKey(openId);
+        thirdMemberBind.setBindTime(new Date());
+        thirdMemberBind.setDelFlag(DelFlagEnum.NORMAL.getKey());
+        thirdMemberBindService.save(thirdMemberBind);
+
+        ThirdUserDto thirdUserDto = new ThirdUserDto();
+        BeanUtils.copyProperties(thirdMember, thirdUserDto);
+        thirdUserDto.setBaseUser(baseUser);
+        thirdUserDto.setBaseUserExt(baseUserExt);
+        return thirdUserDto;
+    }
 }

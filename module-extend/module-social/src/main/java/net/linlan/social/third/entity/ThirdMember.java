@@ -64,7 +64,7 @@ public class ThirdMember extends BaseEntity {
     /**
      * 开放平台认证平台类型
      */
-    private String  serverType;
+    private String  accountType;
 
     /**
      * 三方全局D

@@ -24,15 +24,15 @@ import net.linlan.utils.enums.BaseEnumInteger;
  */
 public enum InoutModeEnum implements BaseEnumInteger {
                                                       /**
-                                                       * 内部接入
+                                                       * 内部接入，前端接入
                                                        */
                                                       INOUT_MODE_INNER_IN(0, "内部接入"),
                                                       /**
-                                                       * 内部接出
+                                                       * 内部接出，访问外部城市平台、第三方授权平台
                                                        */
                                                       INOUT_MODE_INNER_OUT(1, "内部接出"),
                                                       /**
-                                                       * 外部接入
+                                                       * 外部接入，对接本平台的接入
                                                        */
                                                       INOUT_MODE_OUTER_IN(11, "外部接入"),
                                                       /**
@@ -40,9 +40,9 @@ public enum InoutModeEnum implements BaseEnumInteger {
                                                        */
                                                       INOUT_MODE_TWO_WAY(20, "双向接出接入"),
                                                       /**
-                                                       * 城市平台对接类短信平台
+                                                       * 城市平台对接类、短信平台
                                                        */
-                                                      INOUT_MODE_SMY_SMS(40, "城市平台对接类短信平台"),;
+                                                      INOUT_MODE_SMY_SMS(40, "城市平台对接类"),;
 
     private int    key;
 

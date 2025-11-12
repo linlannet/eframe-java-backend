@@ -81,4 +81,10 @@ public class JasyptUtils {
         return config;
     }
 
+    public static void main(String[] args) {
+        System.out.println(encryptPwd("Ll2023!EframeWeb", "wx8eeefa06f6666345"));
+        System.out.println(encryptPwd("Ll2023!EframeWeb", "e61c2bf3cde3cb0ba5f163bcceed49e3"));
+        System.out.println(encryptPwd("Ll2023!EframeWeb", "wxfaf5d03296e74036"));
+        System.out.println(encryptPwd("Ll2023!EframeWeb", "f1ce2c01f9b4aa787449abccc97bdf05"));
+    }
 }

@@ -45,6 +45,10 @@ public class ThirdMemberBindParam extends BaseParam {
      */
     private Long    memberId;
     /**
+     * 用户ID
+     */
+    private String  userId;
+    /**
      * 系统用户名，手机号
      */
     private String  username;

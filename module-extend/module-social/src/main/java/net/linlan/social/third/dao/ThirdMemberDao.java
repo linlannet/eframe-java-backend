@@ -27,6 +27,7 @@ import com.github.pagehelper.Page;
 
 import net.linlan.commons.db.mybatis.MybatisBaseDao;
 import net.linlan.social.third.dto.ThirdMemberDto;
+import net.linlan.social.third.dto.ThirdUserDto;
 import net.linlan.social.third.entity.ThirdMember;
 import net.linlan.social.third.param.ThirdMemberParam;
 
@@ -68,4 +69,12 @@ public interface ThirdMemberDao extends MybatisBaseDao<ThirdMember> {
 
     ThirdMember findByUserIdAccountId(@Param("userId") String userId,
                                       @Param("accountId") String accountId);
+
+    ThirdUserDto getThirdUserById(Long id);
+
+    ThirdUserDto getThirdUserByUserId(String userId);
+
+    ThirdUserDto getThirdUserByOpenId(@Param("openId") String openId,
+                                      @Param("source") String source);
+
 }

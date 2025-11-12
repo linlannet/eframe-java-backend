@@ -59,4 +59,7 @@ public interface ThirdMemberBindDao extends MybatisBaseDao<ThirdMemberBind> {
 
     ThirdMemberBind findByUserIdAccountId(@Param("userId") String userId,
                                           @Param("accountId") String accountId);
+
+    ThirdMemberBind findByUserIdOpenType(@Param("userId") String userId,
+                                         @Param("openType") String openType);
 }

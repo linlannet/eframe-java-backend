@@ -17,6 +17,7 @@
  */
 package net.linlan.social.third.service;
 
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +29,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
 import net.linlan.commons.core.ObjectUtils;
+import net.linlan.frame.FrameUserDetails;
+import net.linlan.frame.comm.vo.AppLoginInfo;
 import net.linlan.social.third.dao.ThirdMemberTokenDao;
 import net.linlan.social.third.dto.ThirdMemberTokenDto;
 import net.linlan.social.third.entity.ThirdMemberToken;
@@ -144,4 +147,24 @@ public class ThirdMemberTokenService {
         return dao.getDtoById(id);
     }
 
+    public void saveOrUpdateFromThird(AppLoginInfo appLoginInfo, FrameUserDetails loginUser) {
+        ThirdMemberToken entity = findById(loginUser.getUserLid());
+        if (entity == null) {
+            entity = new ThirdMemberToken();
+            entity.setId(loginUser.getUserLid());
+            entity.setUserId(loginUser.getUserId());
+            entity.setToken(appLoginInfo.getToken());
+            entity.setForeignId(loginUser.getForeignId());
+            entity.setUsername(loginUser.getUsername());
+            entity.setLoginIp(loginUser.getLoginIp());
+            entity.setUpdateTime(new Timestamp(System.currentTimeMillis()));
+            entity.setExpireTime(appLoginInfo.getExpireTime());
+            save(entity);
+        } else {
+            entity.setToken(appLoginInfo.getToken());
+            entity.setUpdateTime(new Timestamp(System.currentTimeMillis()));
+            entity.setExpireTime(appLoginInfo.getExpireTime());
+            update(entity);
+        }
+    }
 }

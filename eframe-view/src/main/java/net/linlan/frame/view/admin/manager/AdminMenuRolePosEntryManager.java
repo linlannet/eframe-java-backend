@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.script.json.StringMap;
-import net.linlan.frame.admin.dao.AdminRoleVoDao;
+import net.linlan.frame.admin.dao.AdminRoleDao;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
@@ -66,7 +66,7 @@ public class AdminMenuRolePosEntryManager {
     @Resource
     private SysRoleService     sysRoleService;
     @Resource
-    private AdminRoleVoDao     frameAdminRoleDao;
+    private AdminRoleDao       frameAdminRoleDao;
     @Resource
     private AdminUserService   adminUserService;
 
@@ -186,8 +186,8 @@ public class AdminMenuRolePosEntryManager {
      * @param roleIds 角色id
      */
     public void checkRoleDataScope(Long... roleIds) {
-        String userId = SecurityUtils.getUserId();
-        AdminUser adminUser = adminUserService.findByUserId(userId);
+        Long adminId = SecurityUtils.getUserLid();
+        AdminUser adminUser = adminUserService.findById(adminId);
         if (adminUser == null) {
             return;
         }

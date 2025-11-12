@@ -33,5 +33,8 @@ import net.linlan.social.third.entity.ThirdMemberBind;
  */
 @Data
 public class ThirdMemberBindDto extends ThirdMemberBind {
-
+    /**
+     * 第三方平台
+     */
+    private String openType;
 }

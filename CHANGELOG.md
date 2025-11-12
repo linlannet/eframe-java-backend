@@ -1,10 +1,20 @@
 ### 版本号：1.1.12
-- 更新日期：2025-10-27
+- 更新日期：2025-11-10
 - 更新内容：
-1. social内新增revoke和refresh方法
-2. resources内新增error.html和users.html
-3. resources内新增images目录，增加对接的第三方平台logo
-4. 
+1. 还原SecurityUtils内的userLid参数和方法
+2. roleTypeId统一调整为roletypeId
+3. 全局加解密配置类将DbKeyConfig修改为PlatformSecurityConfig
+4. 部分数据库内表别名修改，调整为小写
+5. organwId调整为id
+6. social内新增revoke和refresh方法
+7. resources内新增error.html和users.html
+8. authn内新增PublicGroup资源
+9. social内增加UserRangeOrgan资源
+10. social内增加权限方面的代码
+11. 调整ThirdLoginController，增加第三方社交平台登录方法
+12. 新增WechatOpenController，微信相关方法
+13. 新增LogCategoryEnum等枚举类
+14. 对微信扫码登录、小程序扫码登录进行功能调试，默认扫码添加用户信息
 
 
 ### 版本号：1.1.11
@@ -111,7 +121,7 @@
 4. 核对自动生成的doc接口api文档
    1. [EFRAME-API-HTML](./scripts/doc/ent-frame.html)
    2. [EFRAME-API-MD](./scripts/doc/ent-frame.html.md)
-5. 增加数据库默认结构SQL  [DB_STRUCTURE](./scripts/sql/eframe_structure.sql)
+5. 增加数据库默认结构SQL  [DB_STRUCTURE](./scripts/sql/eframe_structure_1.0.sql)
 6. 配置代码文件增加Formatter和Licence
 
 

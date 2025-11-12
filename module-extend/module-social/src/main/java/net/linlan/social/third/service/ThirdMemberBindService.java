@@ -161,4 +161,8 @@ public class ThirdMemberBindService {
     public ThirdMemberBind findByUserIdAccountId(String userId, String accountId) {
         return dao.findByUserIdAccountId(userId, accountId);
     }
+
+    public ThirdMemberBind findByUserIdOpenType(String userId, String openType) {
+        return dao.findByUserIdOpenType(userId, openType);
+    }
 }

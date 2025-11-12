@@ -1,0 +1,91 @@
+-- 社交平台新增表
+-- ----------------------------
+-- Table structure for THIRD_MEMBER
+-- ----------------------------
+DROP TABLE IF EXISTS `THIRD_MEMBER`;
+CREATE TABLE `THIRD_MEMBER`  (
+                                 `MEMBER_ID` bigint(20) NOT NULL COMMENT '主键ID',
+                                 `USER_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户ID',
+                                 `ORGAN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '机构ID',
+                                 `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外键ID，人口库ID',
+                                 `ACCOUNT_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '身份提供商ID',
+                                 `ACCOUNT_TYPE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '身份提供商类型',
+                                 `UNION_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '三方全局D',
+                                 `OPEN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '开放平台ID',
+                                 `EMAIL` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '邮箱',
+                                 `AREA_CODE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '手机号对应的国家号',
+                                 `MOBILE` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '电话号码',
+                                 `NICK_NAME` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '昵称',
+                                 `AVATAR_URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '头像',
+                                 `ADDITION_INFO` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '附加信息',
+                                 `CREATOR_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '创建人ID',
+                                 `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                                 `LAST_TIME` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
+                                 `DEL_FLAG` int(10) NULL DEFAULT NULL COMMENT '删除标记，0未删除1已删除',
+                                 `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注',
+                                 `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
+                                 `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
+                                 PRIMARY KEY (`MEMBER_ID`) USING BTREE,
+                                 INDEX `AK_UK_THIRD_MEMBER_USER_ID`(`USER_ID`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '第三方用户' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for THIRD_MEMBER_BIND
+-- ----------------------------
+DROP TABLE IF EXISTS `THIRD_MEMBER_BIND`;
+CREATE TABLE `THIRD_MEMBER_BIND`  (
+                                      `BIND_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '主键ID',
+                                      `MEMBER_ID` bigint(20) NOT NULL COMMENT '会员ID',
+                                      `USER_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户ID',
+                                      `USERNAME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT '0' COMMENT '系统用户名，手机号',
+                                      `ACCOUNT_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '身份提供商ID',
+                                      `ACCOUNT_KEY` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '第三方账号KEY，市民云、微信等的UnionId或OpenId',
+                                      `BIND_TIME` datetime(0) NULL DEFAULT NULL COMMENT '绑定时间',
+                                      `ADDITION_INFO` varchar(2000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '附加信息',
+                                      `CREATOR_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '创建人ID',
+                                      `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                                      `LAST_TIME` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
+                                      `DEL_FLAG` int(10) NULL DEFAULT NULL COMMENT '删除标记，0未删除1已删除',
+                                      `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注',
+                                      `SPARE1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用1',
+                                      `SPARE2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备用2',
+                                      PRIMARY KEY (`BIND_ID`) USING BTREE,
+                                      INDEX `UK_USER_IDP_BIND`(`USER_ID`, `ACCOUNT_ID`, `ACCOUNT_KEY`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '用户身份提供商绑定' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for THIRD_MEMBER_TOKEN
+-- ----------------------------
+DROP TABLE IF EXISTS `THIRD_MEMBER_TOKEN`;
+CREATE TABLE `THIRD_MEMBER_TOKEN`  (
+                                       `MEMBER_ID` bigint(20) NOT NULL COMMENT '主键ID',
+                                       `USER_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户ID',
+                                       `TOKEN` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '令牌TOKEN',
+                                       `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '前台应用或站点ID',
+                                       `USERNAME` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户名',
+                                       `LOGIN_IP` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '登录IP',
+                                       `UPDATE_TIME` datetime(0) NOT NULL COMMENT '更新时间',
+                                       `EXPIRE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '过期时间',
+                                       `CREATE_TIME` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                                       `DESCRIPTION` varchar(800) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注',
+                                       PRIMARY KEY (`MEMBER_ID`) USING BTREE,
+                                       INDEX `AK_UK_THIRD_MEMBER_TOKEN`(`TOKEN`) USING BTREE,
+                                       INDEX `AK_UK_THIRD_MEMBER_USERNAME`(`USERNAME`) USING BTREE,
+                                       INDEX `IDX_THIRD_MEMBER_T_TOKEN`(`TOKEN`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '会员用户令牌' ROW_FORMAT = Dynamic;
+
+
+-- 添加默认的测试用户
+INSERT INTO `BASE_USER`(`USER_ID`, `XZQH_ID`, `SOURCE`, `CREATE_TYPE`, `USERNAME`, `MOBILE`, `EMAIL`, `PASSWORD`, `SALT`, `SRC_CODE`, `REGISTER_TIME`, `REGISTER_IP`, `LOGIN_COUNT`, `CURRENT_LOGIN_TIME`, `CURRENT_LOGIN_IP`, `LAST_APP_ID`, `LAST_LOGIN_TIME`, `LAST_LOGIN_IP`, `LAST_LOGOUT_TIME`, `RESET_KEY`, `RESET_PWD`, `LAST_RESET_TIME`, `ERROR_TIME`, `ERROR_COUNT`, `ERROR_IP`, `LOCK_TIME`, `ACTIVATION`, `ACTIVATION_CODE`, `PRIORITY`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DELETE_TIME`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES ('7790d4se-ae5x-11fb-b488-00163e4231sh', 310000, '76082b25-be48-11f0-b488-00163e4221ec', 2, 'frontdemo', '13801700051', 'frontdemo@163.com', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', NULL, 1, '2025-10-29 17:11:15', '127.0.0.1', 0, NULL, '127.0.0.1', NULL, '2025-10-29 17:11:15', '172.30.2.130', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 10, '2025-10-21 17:11:30', '2025-10-29 17:11:15', 0, NULL, NULL, NULL, NULL);
+INSERT INTO `BASE_USER`(`USER_ID`, `XZQH_ID`, `SOURCE`, `CREATE_TYPE`, `USERNAME`, `MOBILE`, `EMAIL`, `PASSWORD`, `SALT`, `SRC_CODE`, `REGISTER_TIME`, `REGISTER_IP`, `LOGIN_COUNT`, `CURRENT_LOGIN_TIME`, `CURRENT_LOGIN_IP`, `LAST_APP_ID`, `LAST_LOGIN_TIME`, `LAST_LOGIN_IP`, `LAST_LOGOUT_TIME`, `RESET_KEY`, `RESET_PWD`, `LAST_RESET_TIME`, `ERROR_TIME`, `ERROR_COUNT`, `ERROR_IP`, `LOCK_TIME`, `ACTIVATION`, `ACTIVATION_CODE`, `PRIORITY`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DELETE_TIME`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES ('7790d4se-ae5x-11fb-b488-00163e4567sh', 310000, '76082b25-be48-11f0-b488-00163e4221ec', 2, 'frontwork', '13801700052', 'frontwork@163.com', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', NULL, 1, '2025-11-10 17:11:15', '127.0.0.1', 0, NULL, '127.0.0.1', NULL, '2025-11-10 17:11:15', '172.30.2.130', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 10, '2025-10-21 17:11:30', '2025-11-10 17:11:15', 0, NULL, NULL, NULL, NULL);
+INSERT INTO `BASE_USER`(`USER_ID`, `XZQH_ID`, `SOURCE`, `CREATE_TYPE`, `USERNAME`, `MOBILE`, `EMAIL`, `PASSWORD`, `SALT`, `SRC_CODE`, `REGISTER_TIME`, `REGISTER_IP`, `LOGIN_COUNT`, `CURRENT_LOGIN_TIME`, `CURRENT_LOGIN_IP`, `LAST_APP_ID`, `LAST_LOGIN_TIME`, `LAST_LOGIN_IP`, `LAST_LOGOUT_TIME`, `RESET_KEY`, `RESET_PWD`, `LAST_RESET_TIME`, `ERROR_TIME`, `ERROR_COUNT`, `ERROR_IP`, `LOCK_TIME`, `ACTIVATION`, `ACTIVATION_CODE`, `PRIORITY`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DELETE_TIME`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES ('7890d4se-ae5x-11fb-b488-00163e4231ec', 310000, '76082b25-be48-11f0-b488-00163e4221ec', 2, 'admin_linlan', '13801700050', 'linlannet@163.com', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', NULL, 1, '2025-10-21 17:11:15', '127.0.0.1', 2, '2025-11-12 15:04:17', '127.0.0.1', NULL, '2025-11-12 15:04:17', '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 10, '2025-10-21 17:11:30', '2025-11-12 15:04:17', 0, NULL, NULL, NULL, 'oyHbW6yF83nYSFkVQ4IFIi89BzRc');
+INSERT INTO `BASE_USER`(`USER_ID`, `XZQH_ID`, `SOURCE`, `CREATE_TYPE`, `USERNAME`, `MOBILE`, `EMAIL`, `PASSWORD`, `SALT`, `SRC_CODE`, `REGISTER_TIME`, `REGISTER_IP`, `LOGIN_COUNT`, `CURRENT_LOGIN_TIME`, `CURRENT_LOGIN_IP`, `LAST_APP_ID`, `LAST_LOGIN_TIME`, `LAST_LOGIN_IP`, `LAST_LOGOUT_TIME`, `RESET_KEY`, `RESET_PWD`, `LAST_RESET_TIME`, `ERROR_TIME`, `ERROR_COUNT`, `ERROR_IP`, `LOCK_TIME`, `ACTIVATION`, `ACTIVATION_CODE`, `PRIORITY`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DELETE_TIME`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES ('f2b59e2a-bee3-11f0-b488-00163e4221ec', 310000, '76082b25-be48-11f0-b488-00163e4221ec', 2, 'admin_lupeiran', '15021288853', 'lupeiran@126.com', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', NULL, 1, '2025-11-10 17:11:15', '127.0.0.1', 1, '2025-11-11 18:00:58', '116.228.156.53', NULL, '2025-11-11 18:17:52', '116.228.156.53', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 10, '2025-10-21 17:11:30', '2025-11-11 18:17:52', 0, NULL, NULL, NULL, 'oyHbW65POvF4Ouq-fZTxZdJYdsGU');
+INSERT INTO `BASE_USER_EXT`(`USER_ID`, `NICKNAME`, `ID_NAME`, `ID_TYPE`, `ID_NUM`, `ID_MOBILE`, `NAME_PY`, `SNAME`, `NAME_EN`, `SEARCH_CODE`, `SEX`, `BIRTHDAY`, `POST_CODE`, `ADDRESS`, `NATIVE_PLACE`, `FAMILY_ADDRESS`, `HOME_TEL`, `QQ_NO`, `WEIXIN_ID`, `WEIBO_ID`, `SPARE_MOBILE`, `IS_MOBILE_CONFIRM`, `EMERGENCE_PHONE`, `KEYWORDS`, `INTRO`, `COMEFROM`, `IMAGE_PATH`, `USER_SIGNATURE`, `IP_RANGE`, `MAC_CODE`, `RESUME`, `SPARE1`, `SPARE2`, `SPARE3`, `SPARE4`) VALUES ('7790d4se-ae5x-11fb-b488-00163e4231sh', 'frontdemo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `BASE_USER_EXT`(`USER_ID`, `NICKNAME`, `ID_NAME`, `ID_TYPE`, `ID_NUM`, `ID_MOBILE`, `NAME_PY`, `SNAME`, `NAME_EN`, `SEARCH_CODE`, `SEX`, `BIRTHDAY`, `POST_CODE`, `ADDRESS`, `NATIVE_PLACE`, `FAMILY_ADDRESS`, `HOME_TEL`, `QQ_NO`, `WEIXIN_ID`, `WEIBO_ID`, `SPARE_MOBILE`, `IS_MOBILE_CONFIRM`, `EMERGENCE_PHONE`, `KEYWORDS`, `INTRO`, `COMEFROM`, `IMAGE_PATH`, `USER_SIGNATURE`, `IP_RANGE`, `MAC_CODE`, `RESUME`, `SPARE1`, `SPARE2`, `SPARE3`, `SPARE4`) VALUES ('7790d4se-ae5x-11fb-b488-00163e4567sh', 'frontwork', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `BASE_USER_EXT`(`USER_ID`, `NICKNAME`, `ID_NAME`, `ID_TYPE`, `ID_NUM`, `ID_MOBILE`, `NAME_PY`, `SNAME`, `NAME_EN`, `SEARCH_CODE`, `SEX`, `BIRTHDAY`, `POST_CODE`, `ADDRESS`, `NATIVE_PLACE`, `FAMILY_ADDRESS`, `HOME_TEL`, `QQ_NO`, `WEIXIN_ID`, `WEIBO_ID`, `SPARE_MOBILE`, `IS_MOBILE_CONFIRM`, `EMERGENCE_PHONE`, `KEYWORDS`, `INTRO`, `COMEFROM`, `IMAGE_PATH`, `USER_SIGNATURE`, `IP_RANGE`, `MAC_CODE`, `RESUME`, `SPARE1`, `SPARE2`, `SPARE3`, `SPARE4`) VALUES ('7890d4se-ae5x-11fb-b488-00163e4231ec', 'administrator', NULL, NULL, NULL, NULL, '$2a$10$akcNZncOXCw426NPsJ.TMuKbAXQHJSbiAbbbvgqJUb1Zj6l1QbC1S', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `BASE_USER_EXT`(`USER_ID`, `NICKNAME`, `ID_NAME`, `ID_TYPE`, `ID_NUM`, `ID_MOBILE`, `NAME_PY`, `SNAME`, `NAME_EN`, `SEARCH_CODE`, `SEX`, `BIRTHDAY`, `POST_CODE`, `ADDRESS`, `NATIVE_PLACE`, `FAMILY_ADDRESS`, `HOME_TEL`, `QQ_NO`, `WEIXIN_ID`, `WEIBO_ID`, `SPARE_MOBILE`, `IS_MOBILE_CONFIRM`, `EMERGENCE_PHONE`, `KEYWORDS`, `INTRO`, `COMEFROM`, `IMAGE_PATH`, `USER_SIGNATURE`, `IP_RANGE`, `MAC_CODE`, `RESUME`, `SPARE1`, `SPARE2`, `SPARE3`, `SPARE4`) VALUES ('f2b59e2a-bee3-11f0-b488-00163e4221ec', 'admin_lpr', NULL, NULL, NULL, NULL, '$2a$10$OSlwzL9OjV5tdrbbU9g9vO1W.cYFA/aOTjffQcb38l8GmDXyv18ee', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO `THIRD_MEMBER`(`MEMBER_ID`, `USER_ID`, `ORGAN_ID`, `FOREIGN_ID`, `ACCOUNT_ID`, `ACCOUNT_TYPE`, `UNION_ID`, `OPEN_ID`, `EMAIL`, `AREA_CODE`, `MOBILE`, `NICK_NAME`, `AVATAR_URL`, `ADDITION_INFO`, `CREATOR_ID`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES (531088137731001, '7890d4se-ae5x-11fb-b488-00163e4231ec', NULL, NULL, '76082b25-be48-11f0-b488-00163e4221ec', 'wechat_open', NULL, 'oyHbW6yF83nYSFkVQ4IFIi89BzRc', 'linlannet@163.com', '310000', '13801700050', 'xiaobo', 'https://thirdwx.qlogo.cn/mmopen/vi_32/FjGZ1tKqw0VFQzcB5pyEZmUiaHao7NGDznQX5NictGhKDRWf9ibCZzpxNL63LddNmjaibS3fKBEyR2CqzDz7Vjs5mkCawyT83yyJwA9faj6icoFo/132', '{\"country\":\"\",\"unionid\":\"okETV6wcgLYvaKGi-TQR4otGdZT4\",\"province\":\"\",\"city\":\"\",\"openid\":\"oyHbW6yF83nYSFkVQ4IFIi89BzRc\",\"sex\":0,\"nickname\":\"xiaobo\",\"headimgurl\":\"https://thirdwx.qlogo.cn/mmopen/vi_32/FjGZ1tKqw0VFQzcB5pyEZmUiaHao7NGDznQX5NictGhKDRWf9ibCZzpxNL63LddNmjaibS3fKBEyR2CqzDz7Vjs5mkCawyT83yyJwA9faj6icoFo/132\",\"language\":\"\",\"privilege\":[]}', NULL, '2025-10-18 16:00:04', '2025-10-18 16:00:07', 0, NULL, NULL, NULL);
+INSERT INTO `THIRD_MEMBER`(`MEMBER_ID`, `USER_ID`, `ORGAN_ID`, `FOREIGN_ID`, `ACCOUNT_ID`, `ACCOUNT_TYPE`, `UNION_ID`, `OPEN_ID`, `EMAIL`, `AREA_CODE`, `MOBILE`, `NICK_NAME`, `AVATAR_URL`, `ADDITION_INFO`, `CREATOR_ID`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES (531088267731001, '7790d4se-ae5x-11fb-b488-00163e4231sh', NULL, NULL, '76082b25-be48-11f0-b488-00163e4221ec', 'wechat_open', NULL, NULL, 'frontdemo@163.com', '310000', '13801700051', 'frontdemo', NULL, NULL, NULL, '2025-10-29 15:58:14', '2025-10-29 15:58:14', 0, NULL, NULL, NULL);
+INSERT INTO `THIRD_MEMBER`(`MEMBER_ID`, `USER_ID`, `ORGAN_ID`, `FOREIGN_ID`, `ACCOUNT_ID`, `ACCOUNT_TYPE`, `UNION_ID`, `OPEN_ID`, `EMAIL`, `AREA_CODE`, `MOBILE`, `NICK_NAME`, `AVATAR_URL`, `ADDITION_INFO`, `CREATOR_ID`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES (531088267731002, '7790d4se-ae5x-11fb-b488-00163e4567sh', NULL, NULL, '76082b25-be48-11f0-b488-00163e4221ec', 'wechat_open', NULL, NULL, 'frontwork@163.com', '310000', '13801700052', 'frontwork', NULL, NULL, NULL, '2025-11-10 15:31:42', '2025-11-10 15:31:42', 0, NULL, NULL, NULL);
+INSERT INTO `THIRD_MEMBER`(`MEMBER_ID`, `USER_ID`, `ORGAN_ID`, `FOREIGN_ID`, `ACCOUNT_ID`, `ACCOUNT_TYPE`, `UNION_ID`, `OPEN_ID`, `EMAIL`, `AREA_CODE`, `MOBILE`, `NICK_NAME`, `AVATAR_URL`, `ADDITION_INFO`, `CREATOR_ID`, `CREATE_TIME`, `LAST_TIME`, `DEL_FLAG`, `DESCRIPTION`, `SPARE1`, `SPARE2`) VALUES (5616658972100864, 'f2b59e2a-bee3-11f0-b488-00163e4221ec', NULL, NULL, '76082b25-be48-11f0-b488-00163e4221ec', 'wechat_open', NULL, 'oyHbW65POvF4Ouq-fZTxZdJYdsGU', NULL, NULL, NULL, 'admin_lpr', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJzv3icibQrBNUlUCoB45H6QZ77iayfCmicxYJImkp42yIHCX89icRlAMgyRic1pme7nNBvV6uLIWL5kuWw/132', '{\"country\":\"\",\"unionid\":\"okETV64y5a8fFi-IJwoumSYb_L0M\",\"province\":\"\",\"city\":\"\",\"openid\":\"oyHbW65POvF4Ouq-fZTxZdJYdsGU\",\"sex\":0,\"nickname\":\"admin_lpr\",\"headimgurl\":\"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJzv3icibQrBNUlUCoB45H6QZ77iayfCmicxYJImkp42yIHCX89icRlAMgyRic1pme7nNBvV6uLIWL5kuWw/132\",\"language\":\"\",\"privilege\":[]}', 'f2b59e2a-bee3-11f0-b488-00163e4221ec', '2025-11-11 18:00:58', '2025-11-11 18:00:58', 0, NULL, NULL, NULL);

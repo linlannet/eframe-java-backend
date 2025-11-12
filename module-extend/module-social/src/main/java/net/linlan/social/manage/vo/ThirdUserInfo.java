@@ -1,0 +1,50 @@
+/*
+ * module-social - 社交平台对接模块
+ * Copyright © 2020-2025 Linlan (open@linlan.net)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package net.linlan.social.manage.vo;
+
+import java.util.Set;
+
+import lombok.Data;
+
+/**
+ *
+ * Filename AppUserInfo, 登录返回信息Vo类
+ * 适用管理模式用户
+ * @author Linlan
+ * CreateTime 2024-09-07 17:24:27
+ *
+ */
+@Data
+public class ThirdUserInfo {
+
+    /**
+     * 当前用户
+     */
+    private ThirdUserVo user;
+
+    /**
+     * 角色集合
+     */
+    private Set<Long>   roles;
+
+    /**
+     * 权限集合
+     */
+    private Set<String> permissions;
+
+}

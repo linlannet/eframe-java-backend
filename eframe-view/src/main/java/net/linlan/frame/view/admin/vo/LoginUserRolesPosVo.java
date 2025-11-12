@@ -59,5 +59,5 @@ public class LoginUserRolesPosVo {
     /**
      * 岗位Ids
      */
-    private List<Long>             positionIds;
+    private List<String>           positionIds;
 }

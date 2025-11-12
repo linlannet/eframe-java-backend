@@ -62,7 +62,7 @@ import net.linlan.utils.exception.CommonException;
 public class AdminMenuRolePosOpManager {
 
     @Resource
-    private SysPositionService adminPositionService;
+    private SysPositionService sysPositionService;
     @Resource
     private SysRoleService     sysRoleService;
     @Resource
@@ -105,7 +105,7 @@ public class AdminMenuRolePosOpManager {
                     adminRolePosition.setRoleId(Long.valueOf(zgwParentId));
                     adminRolePosition.setStatus(1);
                     adminRolePosition.setBeginTime(new Date());
-                    adminPositionService.saveRolePosition(adminRolePosition);
+                    sysPositionService.saveRolePosition(adminRolePosition);
                 }
                 if (parentId.matches(regexFgw)) {
                     zgwParentId = parentId.substring(parentId.indexOf(";") + 1);
@@ -114,19 +114,19 @@ public class AdminMenuRolePosOpManager {
                 if (parentId.equals("")) {
                     dto.setParentId(null);
                 }
-                adminPositionService.save(dto);
+                sysPositionService.save(dto);
                 return true;
             } else if (ApiIntfConfig.VALUE_AT_UPDATE.equals(actionType)) {//修改——重新申请
                 if (StringUtils.isNotBlank(id)) {
                     dto.setId(id);
-                    adminPositionService.update(dto);
+                    sysPositionService.update(dto);
                 }
                 return true;
             } else if (ApiIntfConfig.VALUE_AT_DELETE.equals(actionType)) {
                 //删除业务，可传递多个id
                 String[] ids = id.split(StringUtils.COMMA);
-                adminPositionService.deleteByIds(ids);
-                adminPositionService.deleteByPositionIds(ids);
+                sysPositionService.deleteByIds(ids);
+                sysPositionService.deleteByPositionIds(ids);
                 return true;
             }
         }
@@ -145,7 +145,7 @@ public class AdminMenuRolePosOpManager {
         if (StringUtils.isNotBlank(actionType)) {
             if (ApiIntfConfig.VALUE_AT_BIND.equals(actionType)) {//绑定
                 //删除原本绑定的角色
-                adminPositionService.deleteByPositionId(dto.getPositionId());
+                sysPositionService.deleteByPositionId(dto.getPositionId());
                 List<SysRolePosition> list = new ArrayList<SysRolePosition>();
                 String[] ids = idStr.split(StringUtils.COMMA);
                 for (String id : ids) {
@@ -161,12 +161,12 @@ public class AdminMenuRolePosOpManager {
                     list.add(adminRolePosition);
                 }
                 if (list.size() > 0) {
-                    adminPositionService.batchSaveRolePosition(list);
+                    sysPositionService.batchSaveRolePosition(list);
                 }
                 return true;
             } else if (ApiIntfConfig.VALUE_AT_UNBIND.equals(actionType)) {
                 if (dto.getPositionId() != null) {
-                    adminPositionService.deleteByPositionId(dto.getPositionId());
+                    sysPositionService.deleteByPositionId(dto.getPositionId());
                 }
                 return true;
             }

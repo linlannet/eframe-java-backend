@@ -76,10 +76,6 @@ public class BaseAppVo {
      */
     private String                        sertypeId;
     /**
-     * 服务类型名称
-     */
-    private String                        sertypeName;
-    /**
      * 应用名称
      */
     private String                        name;

@@ -32,7 +32,7 @@ import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUser;
-import net.linlan.frame.admin.service.AdminMenuVoService;
+import net.linlan.frame.admin.service.AdminMenuService;
 import net.linlan.frame.admin.service.AdminUserService;
 import net.linlan.frame.view.admin.vo.AdminBaseMenuInfo;
 import net.linlan.frame.view.admin.vo.AppPageIndexInfo;
@@ -49,11 +49,11 @@ import net.linlan.utils.constant.UserConstants;
 @Component
 public class AdminMenuManager {
     @Resource
-    private AdminMenuVoService adminMenuEntService;
+    private AdminMenuService adminMenuEntService;
     @Resource
-    private SysMenuService     sysMenuService;
+    private SysMenuService   sysMenuService;
     @Resource
-    private AdminUserService   adminUserService;
+    private AdminUserService adminUserService;
     //    /**
     //     * 构建前端路由所需要的菜单
     //     *
@@ -288,10 +288,9 @@ public class AdminMenuManager {
     //    }
 
     public AppPageIndexInfo getAppPageIndexInfo(FrameUserDetails loginUser) {
-        String userId = loginUser.getUserId();
-        AdminUser adminUser = adminUserService.findByUserId(userId);
+        Long adminId = loginUser.getUserLid();
+        AdminUser adminUser = adminUserService.findById(adminId);
         if (ObjectUtils.isNotEmpty(adminUser)) {
-            Long adminId = adminUser.getId();
             List<AdminMenuVo> menus = adminMenuEntService.selectMenuTreeByAdminId(adminId);
             List<AdminBaseMenuInfo> menuList = buildMenusForAdmin(menus);
             AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());

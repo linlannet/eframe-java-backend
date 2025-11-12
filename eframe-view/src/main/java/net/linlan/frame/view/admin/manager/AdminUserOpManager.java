@@ -30,6 +30,8 @@ import lombok.extern.slf4j.Slf4j;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.constant.AdminType;
+import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.admin.dao.AdminUserPositionDao;
 import net.linlan.frame.admin.dao.AdminUserRoleDao;
 import net.linlan.frame.admin.entity.AdminUser;
@@ -112,7 +114,7 @@ public class AdminUserOpManager {
                 adminUser.setEmail(input.getEmail());
                 adminUser.setPassword(input.getPassword());
                 adminUser.setImagePath(input.getImagePath());
-                adminUser.setAdminType("ADMIN");
+                adminUser.setAdminType(AdminType.ADMIN.getType());
                 adminUser.setIsSuperAdmin(input.getIsSuperAdmin());
                 adminUser.setIsAuditAdmin(input.getIsAuditAdmin());
                 adminUser.setIsSelfAdmin(input.getIsSelfAdmin());
@@ -150,7 +152,7 @@ public class AdminUserOpManager {
                         adminUser.setEmail(input.getEmail());
                         adminUser.setPassword(input.getPassword());
                         adminUser.setImagePath(input.getImagePath());
-                        adminUser.setAdminType("ADMIN");
+                        adminUser.setAdminType(AdminType.ADMIN.getType());
                         adminUser.setIsSuperAdmin(input.getIsSuperAdmin());
                         adminUser.setIsAuditAdmin(input.getIsAuditAdmin());
                         adminUser.setIsSelfAdmin(input.getIsSelfAdmin());
@@ -160,6 +162,7 @@ public class AdminUserOpManager {
                         adminUser.setStatus(input.getStatus());
                         adminUser.setDelFlag(input.getDelFlag());
                         adminUser.setSpare1(input.getDescription());
+                        adminUser.setLoginCount(adminUser.getLoginCount());
                         // 删除用户与角色关联
                         adminUserRoleDao.deleteByAdminId(input.getId());
                         // 新增用户与角色管理
@@ -236,7 +239,7 @@ public class AdminUserOpManager {
                 AsyncManager.me()
                     .execute(AsyncFactory.saveAdminLoginLog(adminUser.getUserId(), username,
                         Constants.REGISTER, MessageUtils.message("user.register.success"),
-                        ENT_APP_ID));
+                        ENT_APP_ID, adminUser.getId(), LogCategoryEnum.ADMIN.getKey()));
             }
         }
         return msg;

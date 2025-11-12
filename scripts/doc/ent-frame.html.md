@@ -60,706 +60,12 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
 # 一体化平台接口API
-## 个人信息业务处理
-### 个人资料信息
-**URL:** https://linlan.net/eframe_backend/api/admin/user/profile.do
-
-**Type:** GET
-
-**Author:** Linlan
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 个人资料信息
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─user|object|当前用户|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─authorities|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|所属应用ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|用户机构ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─token|string|登录令牌|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─viewName|string|昵称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─needChangePassword|boolean|需要修改密码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|邮箱|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|头像URL|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginIp|string|上次登录IP|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastUpdatePasswordTime|string|最后修改密码时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─expireTime|string|过期时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginTime|string|登录时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userType|string|用户类型|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuperAdmin|boolean|是否超级管理员|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginBrowse|string|登录的浏览器|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginOs|string|登录的OS|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─perms|array|权限列表|-
-└─roleGroup|string|角色组|-
-└─positionGroup|string|岗位组|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "user": {
-      "password": "psrnie",
-      "username": "merle.larkin",
-      "authorities": [
-        {
-          "object": "any object"
-        }
-      ],
-      "userId": "172",
-      "appId": "172",
-      "deptId": 700,
-      "organId": "172",
-      "token": "j0dvum",
-      "viewName": "merle.larkin",
-      "needChangePassword": true,
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "w3cs79",
-      "loginCount": 258,
-      "loginIp": "137.119.212.174",
-      "lastUpdatePasswordTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "foreignId": "172",
-      "expireTime": "2025-10-20 18:25:57",
-      "loginTime": "2025-10-20 18:25:57",
-      "userType": "97jicz",
-      "isSuperAdmin": true,
-      "loginBrowse": "nu52qh",
-      "loginOs": "1cw7az",
-      "perms": [
-        "5oyysd"
-      ]
-    },
-    "roleGroup": "2pnu4o",
-    "positionGroup": "ctenby"
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 个人信息
-**URL:** https://linlan.net/eframe_backend/api/admin/user/info.do
-
-**Type:** GET
-
-**Author:** Linlan
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 个人信息
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/info.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─creatorId|string|创建人id|-
-└─createTime|string|创建时间|-
-└─lastTime|string|最后修改时间|-
-└─id|int64|用户LID|-
-└─userId|string|用户UUID|-
-└─deptId|int64|部门ID|-
-└─deptName|string|部门名称|-
-└─organId|string|机构ID|-
-└─organName|string|机构名称|-
-└─name|string|人员姓名|-
-└─username|string|用户账号|-
-└─nickName|string|用户昵称|-
-└─email|string|用户邮箱|-
-└─mobile|string|手机号码|-
-└─imagePath|string|用户头像|-
-└─password|string|密码|-
-└─isSuperAdmin|boolean|是否超级管理员|-
-└─isAuditAdmin|boolean|是否审计只读管理员|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|-
-└─status|int32|帐号状态（0未生效 1正常）|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|-
-└─lastLoginIp|string|最后登录IP|-
-└─lastLoginTime|string|最后登录时间|-
-└─description|string|备注,办公地址|-
-└─dept|object|部门对象|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|-
-└─roles|array|角色对象|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|-
-└─roleIds|array|角色组|-
-└─positionIds|array|岗位组|-
-└─roleId|int64|角色ID|-
-└─userRoleList|array|角色集合|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|-
-└─code|string|验证码|-
-└─uuid|string|uuid标识|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:57",
-    "lastTime": "2025-10-20 18:25:57",
-    "id": 38,
-    "userId": "172",
-    "deptId": 527,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "yt9igo",
-    "password": "hh4qwf",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 609,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:57",
-    "description": "feb3u7",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "id": 16,
-      "organId": "172",
-      "parentId": 932,
-      "appId": "172",
-      "depttypeId": 170,
-      "foreignId": "172",
-      "createType": 413,
-      "type": "w5t9cl",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "onuo2s",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "s4b9rl",
-      "priority": 734,
-      "status": 779,
-      "delFlag": 5,
-      "description": "r887dc",
-      "spare1": "mmuodd",
-      "spare2": "s8ihia",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:57",
-        "lastTime": "2025-10-20 18:25:57",
-        "id": 429,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 278,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 347,
-        "description": "h98uxp",
-        "areaType": "1tt9gj"
-      }
-    ],
-    "roleIds": [
-      921
-    ],
-    "positionIds": [
-      "apb65v"
-    ],
-    "roleId": 69,
-    "userRoleList": [
-      {
-        "id": 124,
-        "deptId": 215,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 58,
-        "roleName": "merle.larkin",
-        "adminId": 339
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 修改用户个人信息
-**URL:** https://linlan.net/eframe_backend/api/admin/user/profile.do
-
-**Type:** POST
-
-**Author:** Linlan
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 修改用户个人信息
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:57",
-    "lastTime": "2025-10-20 18:25:57",
-    "id": 401,
-    "userId": "172",
-    "deptId": 22,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "1i0vpy",
-    "password": "yrh5v7",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 281,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:57",
-    "description": "tttz5o",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "id": 628,
-      "organId": "172",
-      "parentId": 37,
-      "appId": "172",
-      "depttypeId": 632,
-      "foreignId": "172",
-      "createType": 217,
-      "type": "29yjcg",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "kw6dnq",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "ypzr9l",
-      "priority": 791,
-      "status": 866,
-      "delFlag": 5,
-      "description": "5vgp6t",
-      "spare1": "ojlb4x",
-      "spare2": "ndxj2j",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:57",
-        "lastTime": "2025-10-20 18:25:57",
-        "id": 567,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 886,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 153,
-        "description": "um2loi",
-        "areaType": "gybwcv"
-      }
-    ],
-    "roleIds": [
-      180
-    ],
-    "positionIds": [
-      "rfzl0u"
-    ],
-    "roleId": 202,
-    "userRoleList": [
-      {
-        "id": 334,
-        "deptId": 376,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 808,
-        "roleName": "merle.larkin",
-        "adminId": 104
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": true,
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 个人重置密码
-**URL:** https://linlan.net/eframe_backend/api/admin/user/updatePwd.do
-
-**Type:** POST
-
-**Author:** Linlan
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 个人重置密码
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─oldPassword|string|旧密码|false|-
-└─newPassword|string|新密码|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
-  "data": {
-    "oldPassword": "zp0tmo",
-    "newPassword": "n3x96c"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "waring": "You may have used non-display generics."
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户头像上传
-**URL:** https://linlan.net/eframe_backend/api/admin/user/imagePath.do
-
-**Type:** POST
-
-**Author:** Linlan
-
-**Content-Type:** multipart/form-data
-
-**Description:** 用户头像上传
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-file|file| 文件|true|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/imagePath.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─imageUrl|string|角色组|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "imageUrl": "www.ben-grant.info"
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
 ## 公共文件管理读写控制类
 ### 获取资源存储清单列表
 **URL:** https://linlan.net/eframe_backend/api/system/file/list.do
@@ -802,7 +108,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?key=zz6omw&page=1&fileIsvalid=true&fileSize=998&q=6ppw34&fileExtension=kpj5lg&resclassId=172&limit=10&endTime=2025-10-20 18:20:52&refId=172&orderBy=133&fileName=merle.larkin&appId=172&startTime=2025-10-20 18:20:52&refType=ih8bfd
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?refType=by6ckb&fileExtension=r0va4j&fileName=chung.hoeger&endTime=2025-11-12 15:24:04&appId=104&fileSize=713&fileIsvalid=true&refId=104&startTime=2025-11-12 15:24:04&q=vyqjhe&resclassId=104&key=wgx8b2&limit=10&orderBy=370&page=1
 ```
 **Response-fields:**
 
@@ -834,26 +140,26 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 342,
+    "totalCount": 266,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "172",
-        "resclassId": "172",
-        "fileName": "merle.larkin",
+        "id": "104",
+        "resclassId": "104",
+        "fileName": "chung.hoeger",
         "fileIsvalid": true,
-        "createTime": "2025-10-20 18:26:03",
-        "fileExtension": "11z18g",
+        "createTime": "2025-11-12 15:29:33",
+        "fileExtension": "1kauc0",
         "ids": [
-          "ngo9eb"
+          "zaqifw"
         ]
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -898,7 +204,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'resclassId=172&page=1&refType=b5m2g9&fileSize=216&limit=10&key=nj8vej&appId=172&fileExtension=wgx5jo&q=s5szm2&orderBy=446&fileName=merle.larkin&fileIsvalid=true&startTime=2025-10-20 18:20:52&refId=172&endTime=2025-10-20 18:20:52'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileName=chung.hoeger&limit=10&refType=xz4p42&page=1&fileSize=294&orderBy=227&appId=104&q=s19hd9&endTime=2025-11-12 15:24:04&startTime=2025-11-12 15:24:04&fileIsvalid=true&fileExtension=0cn0li&resclassId=104&refId=104&key=2zki2e'
 ```
 **Response-fields:**
 
@@ -917,9 +223,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bazczz",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "yneiyz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -950,7 +256,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=104
 ```
 **Response-fields:**
 
@@ -977,18 +283,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "172",
-    "resclassId": "172",
-    "fileName": "merle.larkin",
+    "id": "104",
+    "resclassId": "104",
+    "fileName": "chung.hoeger",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 18:26:03",
-    "fileExtension": "5vh33x",
+    "createTime": "2025-11-12 15:29:33",
+    "fileExtension": "i6b8ze",
     "ids": [
-      "ww09li"
+      "wvnyve"
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1028,14 +334,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
   "data": {
-    "id": "172",
-    "resclassId": "172",
-    "fileName": "merle.larkin",
+    "id": "104",
+    "resclassId": "104",
+    "fileName": "chung.hoeger",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 18:26:04",
-    "fileExtension": "khpov6",
+    "createTime": "2025-11-12 15:29:33",
+    "fileExtension": "7stbhs",
     "ids": [
-      "3vm2d7"
+      "3dzidb"
     ]
   }
 }'
@@ -1057,9 +363,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "841y67",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "tyvhfb",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1099,14 +405,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
   "data": {
-    "id": "172",
-    "resclassId": "172",
-    "fileName": "merle.larkin",
+    "id": "104",
+    "resclassId": "104",
+    "fileName": "chung.hoeger",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 18:26:04",
-    "fileExtension": "w1jxb6",
+    "createTime": "2025-11-12 15:29:33",
+    "fileExtension": "eo25px",
     "ids": [
-      "xi6ipo"
+      "orvtv5"
     ]
   }
 }'
@@ -1128,9 +434,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "2bmq1k",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "g3xfmz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1170,14 +476,14 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
   "data": {
-    "id": "172",
-    "resclassId": "172",
-    "fileName": "merle.larkin",
+    "id": "104",
+    "resclassId": "104",
+    "fileName": "chung.hoeger",
     "fileIsvalid": true,
-    "createTime": "2025-10-20 18:26:04",
-    "fileExtension": "4d83tj",
+    "createTime": "2025-11-12 15:29:33",
+    "fileExtension": "qne97d",
     "ids": [
-      "gh80ol"
+      "ggy8ms"
     ]
   }
 }'
@@ -1199,9 +505,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1io9xx",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "isbq2v",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1245,9 +551,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rftw5r",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "guyoom",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1279,7 +585,7 @@ delete|boolean|是否删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=merle.larkin&delete=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?fileName=chung.hoeger&delete=true
 ```
 **Response-fields:**
 
@@ -1298,9 +604,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l1zfma",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "nyfq8p",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1351,15 +657,15 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "originFilename": "merle.larkin",
-    "filename": "merle.larkin",
-    "fileType": "6aup5y",
-    "fileUrl": "www.ben-grant.info",
-    "fileHttpUrl": "www.ben-grant.info",
-    "statusCode": "81486"
+    "originFilename": "chung.hoeger",
+    "filename": "chung.hoeger",
+    "fileType": "gdzxf0",
+    "fileUrl": "www.winston-nienow.name",
+    "fileHttpUrl": "www.winston-nienow.name",
+    "statusCode": "74128"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1417,16 +723,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "merle.larkin",
-      "filename": "merle.larkin",
-      "fileType": "wu94z7",
-      "fileUrl": "www.ben-grant.info",
-      "fileHttpUrl": "www.ben-grant.info",
-      "statusCode": "81486"
+      "originFilename": "chung.hoeger",
+      "filename": "chung.hoeger",
+      "fileType": "5k1i2x",
+      "fileUrl": "www.winston-nienow.name",
+      "fileHttpUrl": "www.winston-nienow.name",
+      "statusCode": "74128"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1457,7 +763,7 @@ resource|string|资源文件路径|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=su1pwa
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?resource=0od57b
 ```
 **Response-fields:**
 
@@ -1476,9 +782,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ceipw4",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "lav3ib",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1518,7 +824,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?configValue=sv6gos&limit=10&q=wu6k6r&orderBy=645&endTime=2025-10-20 18:20:52&remark=p9xoz9&page=1&startTime=2025-10-20 18:20:52&configKey=hab3d9&isDisabled=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&remark=2yf1h4&configKey=wxojjq&configValue=eu1q0n&orderBy=756&limit=10&page=1&isDisabled=true&q=dwzh9t
 ```
 **Response-fields:**
 
@@ -1548,22 +854,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 700,
+    "totalCount": 863,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "172",
-        "configKey": "s0wwln",
-        "configValue": "1jdpki",
+        "configId": "104",
+        "configKey": "rtkfcl",
+        "configValue": "77rtv9",
         "isDisabled": true,
-        "remark": "sxruzp"
+        "remark": "bv5zcf"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1602,7 +908,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'isDisabled=true&q=fh1c0u&limit=10&startTime=2025-10-20 18:20:52&remark=buh8ue&configKey=xgsbsw&orderBy=972&configValue=fubcmh&endTime=2025-10-20 18:20:52&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'startTime=2025-11-12 15:24:04&configValue=cs4o18&limit=10&configKey=sjbtfw&page=1&remark=0p3qsf&endTime=2025-11-12 15:24:04&isDisabled=true&q=foeie2&orderBy=254'
 ```
 **Response-fields:**
 
@@ -1621,9 +927,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cgleja",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "sauixm",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1653,7 +959,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/104.do
 ```
 **Response-fields:**
 
@@ -1678,14 +984,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "172",
-    "configKey": "50r1p1",
-    "configValue": "jsszfk",
+    "configId": "104",
+    "configKey": "p2dq9g",
+    "configValue": "0ermol",
     "isDisabled": true,
-    "remark": "oj76w7"
+    "remark": "rq5hp6"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1715,7 +1021,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/41447l.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/16odd9.do
 ```
 **Response-fields:**
 
@@ -1740,14 +1046,14 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "configId": "172",
-    "configKey": "uhpy34",
-    "configValue": "9kwt0m",
+    "configId": "104",
+    "configKey": "f8bh46",
+    "configValue": "rngtvv",
     "isDisabled": true,
-    "remark": "kmmg15"
+    "remark": "7b0uom"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1784,11 +1090,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
   "data": {
-    "configId": "172",
-    "configKey": "2yo5eb",
-    "configValue": "8agu6i",
+    "configId": "104",
+    "configKey": "1tv7qx",
+    "configValue": "nsrsk9",
     "isDisabled": true,
-    "remark": "wgwizn"
+    "remark": "vjrpuh"
   }
 }'
 ```
@@ -1809,9 +1115,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ausn4c",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "89kka3",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1848,11 +1154,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
   "data": {
-    "configId": "172",
-    "configKey": "5e780d",
-    "configValue": "bdpv7m",
+    "configId": "104",
+    "configKey": "i9m3ka",
+    "configValue": "r8tbxw",
     "isDisabled": true,
-    "remark": "cwvlr6"
+    "remark": "kujod7"
   }
 }'
 ```
@@ -1873,9 +1179,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qwfg5t",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "neq99u",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1924,9 +1230,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mzuhuq",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "quszci",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -1969,9 +1275,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "79r1n8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "copq9x",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2003,7 +1309,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?username=merle.larkin&ipaddr=0bssbz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=wtc095&username=chung.hoeger
 ```
 **Response-fields:**
 
@@ -2032,18 +1338,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "172",
-      "deptName": "merle.larkin",
-      "username": "merle.larkin",
-      "ipaddr": "tv82xt",
-      "loginLocation": "minmhr",
-      "browser": "exrfix",
-      "os": "iu1y1c",
-      "loginTime": 1760955652792
+      "tokenId": "104",
+      "deptName": "chung.hoeger",
+      "username": "chung.hoeger",
+      "ipaddr": "6e6bnl",
+      "loginLocation": "opzvj7",
+      "browser": "98b6rp",
+      "os": "y7d9xs",
+      "loginTime": 1762932244859
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2073,7 +1379,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/172.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/104.do
 ```
 **Response-fields:**
 
@@ -2092,9 +1398,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3yl4pb",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "tzgksb",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2160,7 +1466,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?spare4=40tbib&ids=k67ppr&ids=k67ppr&qqNo=q96edd&page=1&namePy=mpvyl6&keywords=823cpq&nameEn=vn3t5g&spare1=wc848k&spare2=oqkeb3&endTime=2025-10-20 18:20:52&spare3=fxgs3t&searchCode=81486&weixinId=172&homeTel=kd05o7&name=merle.larkin&idType=0l9595&orderBy=993&nickname=renna.dibbert&sex=w5m12w&idMobile=(415) 540-6962&startTime=2025-10-20 18:20:52&address=Apt. 410 14910 Erdman Heights， West Caroll， WI 86927&spareMobile=(415) 540-6962&limit=10&idNum=vpmhzq&emergencePhone=1-203-302-2484&intro=irdx33&q=w8d1ks&nativePlace=0bls1h&isMobileConfirm=true&comefrom=ybdyc6&familyAddress=Apt. 410 14910 Erdman Heights， West Caroll， WI 86927&birthday=2025-10-20 18:26:08&sname=merle.larkin&postCode=81486
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?weixinId=104&idNum=1mmxdy&isMobileConfirm=true&qqNo=dq20c5&page=1&familyAddress=1138 Eboni Meadows， West Aricaside， WY 91270&postCode=74128&limit=10&namePy=x474tv&homeTel=t3sqbo&emergencePhone=1-641-218-8251&birthday=2025-11-12 15:29:37&spare2=cx3tgz&idType=519nk7&sex=7a90ig&intro=w106c2&orderBy=537&endTime=2025-11-12 15:24:04&spare4=1ujv1p&sname=chung.hoeger&spare1=495kcv&keywords=ys4okf&comefrom=p1gaow&startTime=2025-11-12 15:24:04&nickname=deon.watsica&nameEn=dqk0dx&q=f4st9t&searchCode=74128&spare3=kw3ak7&name=chung.hoeger&nativePlace=gdyc1f&spareMobile=(567) 281-2291&ids=98aopz&ids=98aopz&idMobile=(567) 281-2291&address=1138 Eboni Meadows， West Aricaside， WY 91270
 ```
 **Response-fields:**
 
@@ -2219,48 +1525,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": "172",
-      "nickname": "renna.dibbert",
-      "idName": "merle.larkin",
-      "idNum": "zqipx6",
-      "idMobile": "(415) 540-6962",
-      "idType": "z6i0cb",
-      "namePy": "dghlhx",
-      "sname": "merle.larkin",
-      "nameEn": "icawjl",
-      "searchCode": "81486",
-      "sex": "ou4xq6",
-      "birthday": "2025-10-20 18:26:08",
-      "postCode": "81486",
-      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "nativePlace": "ijhrax",
-      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "homeTel": "o9769s",
-      "qqNo": "67uzac",
-      "weixinId": "172",
-      "weiboId": "172",
-      "spareMobile": "(415) 540-6962",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:37",
+      "lastTime": "2025-11-12 15:29:37",
+      "id": "104",
+      "nickname": "deon.watsica",
+      "idName": "chung.hoeger",
+      "idNum": "203itm",
+      "idMobile": "(567) 281-2291",
+      "idType": "a8m42k",
+      "namePy": "99jztx",
+      "sname": "chung.hoeger",
+      "nameEn": "i15sa2",
+      "searchCode": "74128",
+      "sex": "asku7t",
+      "birthday": "2025-11-12 15:29:37",
+      "postCode": "74128",
+      "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+      "nativePlace": "zqaibb",
+      "familyAddress": "1138 Eboni Meadows， West Aricaside， WY 91270",
+      "homeTel": "bstswe",
+      "qqNo": "on3sz1",
+      "weixinId": "104",
+      "weiboId": "104",
+      "spareMobile": "(567) 281-2291",
       "isMobileConfirm": true,
-      "emergencePhone": "1-203-302-2484",
-      "keywords": "6nukzz",
-      "intro": "9194hu",
-      "comefrom": "shkuvs",
-      "imagePath": "np89c3",
-      "userSignature": "xp3lyj",
-      "ipRange": "phpjye",
-      "macCode": "81486",
-      "resume": "goqkcc",
-      "spare1": "i2zzxl",
-      "spare2": "sc2yj0",
-      "spare3": "9htdat",
-      "spare4": "hs14po"
+      "emergencePhone": "1-641-218-8251",
+      "keywords": "fonvac",
+      "intro": "8igs5g",
+      "comefrom": "ovtxjl",
+      "imagePath": "1f924d",
+      "userSignature": "bt97bq",
+      "ipRange": "k9978f",
+      "macCode": "74128",
+      "resume": "uzlcb3",
+      "spare1": "77jtvm",
+      "spare2": "b0ejwi",
+      "spare3": "jeiel4",
+      "spare4": "ndjtyk"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2349,47 +1655,47 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "nickname": "renna.dibbert",
-    "idName": "merle.larkin",
-    "idNum": "nbvjdj",
-    "idMobile": "(415) 540-6962",
-    "idType": "hq72jj",
-    "namePy": "foppkl",
-    "sname": "merle.larkin",
-    "nameEn": "4adq8e",
-    "searchCode": "81486",
-    "sex": "978dvi",
-    "birthday": "2025-10-20 18:26:08",
-    "postCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "nativePlace": "ogze4w",
-    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "homeTel": "y8g2c8",
-    "qqNo": "gqgevv",
-    "weixinId": "172",
-    "weiboId": "172",
-    "spareMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "nickname": "deon.watsica",
+    "idName": "chung.hoeger",
+    "idNum": "tbhw0h",
+    "idMobile": "(567) 281-2291",
+    "idType": "g4zdit",
+    "namePy": "16jeml",
+    "sname": "chung.hoeger",
+    "nameEn": "wk9b6f",
+    "searchCode": "74128",
+    "sex": "c9u8i3",
+    "birthday": "2025-11-12 15:29:37",
+    "postCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "nativePlace": "3pck3h",
+    "familyAddress": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "homeTel": "x40u3s",
+    "qqNo": "6q06xz",
+    "weixinId": "104",
+    "weiboId": "104",
+    "spareMobile": "(567) 281-2291",
     "isMobileConfirm": true,
-    "emergencePhone": "1-203-302-2484",
-    "keywords": "uqt9wq",
-    "intro": "666v1r",
-    "comefrom": "tmu6bv",
-    "imagePath": "d69v9n",
-    "userSignature": "x8gcrm",
-    "ipRange": "vz0wua",
-    "macCode": "81486",
-    "resume": "vxb5tr",
-    "spare1": "55r4dh",
-    "spare2": "1tw8h4",
-    "spare3": "rdqy8b",
-    "spare4": "llipfk"
+    "emergencePhone": "1-641-218-8251",
+    "keywords": "95uebk",
+    "intro": "f5rk5i",
+    "comefrom": "0qxvp5",
+    "imagePath": "b5c4rm",
+    "userSignature": "b8lq2h",
+    "ipRange": "lrdtk4",
+    "macCode": "74128",
+    "resume": "ctugtv",
+    "spare1": "pkel67",
+    "spare2": "pwsv1m",
+    "spare3": "mk36il",
+    "spare4": "e5tzbr"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2460,44 +1766,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "nickname": "renna.dibbert",
-    "idName": "merle.larkin",
-    "idNum": "hbkj0n",
-    "idMobile": "(415) 540-6962",
-    "idType": "vijfpr",
-    "namePy": "8mv278",
-    "sname": "merle.larkin",
-    "nameEn": "8g346f",
-    "searchCode": "81486",
-    "sex": "agy4gw",
-    "birthday": "2025-10-20 18:26:08",
-    "postCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "nativePlace": "cfdsmg",
-    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "homeTel": "l77x60",
-    "qqNo": "7j94i1",
-    "weixinId": "172",
-    "weiboId": "172",
-    "spareMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "nickname": "deon.watsica",
+    "idName": "chung.hoeger",
+    "idNum": "itr1ap",
+    "idMobile": "(567) 281-2291",
+    "idType": "bq3y4y",
+    "namePy": "uqv19k",
+    "sname": "chung.hoeger",
+    "nameEn": "kbgpgw",
+    "searchCode": "74128",
+    "sex": "sh1ckm",
+    "birthday": "2025-11-12 15:29:37",
+    "postCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "nativePlace": "d1k5xm",
+    "familyAddress": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "homeTel": "bxloog",
+    "qqNo": "ajp6lz",
+    "weixinId": "104",
+    "weiboId": "104",
+    "spareMobile": "(567) 281-2291",
     "isMobileConfirm": true,
-    "emergencePhone": "1-203-302-2484",
-    "keywords": "1uu9ev",
-    "intro": "7i6f30",
-    "comefrom": "ui6y0w",
-    "imagePath": "xa0ymg",
-    "userSignature": "t17d2i",
-    "ipRange": "xrqp45",
-    "macCode": "81486",
-    "resume": "1ce7pc",
-    "spare1": "8keeka",
-    "spare2": "2n1l1t",
-    "spare3": "mt4jbs",
-    "spare4": "l1uivd"
+    "emergencePhone": "1-641-218-8251",
+    "keywords": "x1k518",
+    "intro": "ihqou4",
+    "comefrom": "twcun5",
+    "imagePath": "yeoqza",
+    "userSignature": "0rr65s",
+    "ipRange": "v59hnh",
+    "macCode": "74128",
+    "resume": "ntu9wz",
+    "spare1": "8adfrj",
+    "spare2": "s61idw",
+    "spare3": "msenz8",
+    "spare4": "vcbd00"
   }
 }'
 ```
@@ -2518,9 +1824,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "iz6syg",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "kyb65q",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2591,44 +1897,44 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "nickname": "renna.dibbert",
-    "idName": "merle.larkin",
-    "idNum": "wnppgr",
-    "idMobile": "(415) 540-6962",
-    "idType": "50a7dd",
-    "namePy": "wb0ipk",
-    "sname": "merle.larkin",
-    "nameEn": "65pr2b",
-    "searchCode": "81486",
-    "sex": "77jjhj",
-    "birthday": "2025-10-20 18:26:08",
-    "postCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "nativePlace": "nd4uho",
-    "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "homeTel": "jv1knd",
-    "qqNo": "amt0xi",
-    "weixinId": "172",
-    "weiboId": "172",
-    "spareMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "nickname": "deon.watsica",
+    "idName": "chung.hoeger",
+    "idNum": "py5fhk",
+    "idMobile": "(567) 281-2291",
+    "idType": "28bglx",
+    "namePy": "aoovpp",
+    "sname": "chung.hoeger",
+    "nameEn": "ih1rqu",
+    "searchCode": "74128",
+    "sex": "ewgu3c",
+    "birthday": "2025-11-12 15:29:37",
+    "postCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "nativePlace": "gfatgi",
+    "familyAddress": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "homeTel": "08khdo",
+    "qqNo": "9w13jw",
+    "weixinId": "104",
+    "weiboId": "104",
+    "spareMobile": "(567) 281-2291",
     "isMobileConfirm": true,
-    "emergencePhone": "1-203-302-2484",
-    "keywords": "wvtulx",
-    "intro": "atp6i7",
-    "comefrom": "2frhnq",
-    "imagePath": "01ehfb",
-    "userSignature": "v64zj0",
-    "ipRange": "8uqphw",
-    "macCode": "81486",
-    "resume": "fjrdra",
-    "spare1": "khmrcv",
-    "spare2": "qbid44",
-    "spare3": "4l1xfv",
-    "spare4": "mij68y"
+    "emergencePhone": "1-641-218-8251",
+    "keywords": "shw8wb",
+    "intro": "jiwpmq",
+    "comefrom": "jkcyv3",
+    "imagePath": "6ymull",
+    "userSignature": "80h1ci",
+    "ipRange": "2jc1k2",
+    "macCode": "74128",
+    "resume": "251apt",
+    "spare1": "26h6qz",
+    "spare2": "gnpsi8",
+    "spare3": "ci0nb6",
+    "spare4": "d986a6"
   }
 }'
 ```
@@ -2649,9 +1955,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "i6ocsg",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "t9237r",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2701,9 +2007,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n6pzxj",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "xt68lk",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -2761,7 +2067,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?mobile=(415) 540-6962&xzqhId=705&ids=nvvm4d&ids=nvvm4d&spare1=651vsl&lastAppId=172&orderBy=62&q=zrfigw&delFlag=5&email=vivian.streich@hotmail.com&isBindFrontUser=ukdo02&key=yd79rc&registerTime=2025-10-20 18:26:07&description=jwlbmd&source=765&workUserId=172&searchCode=81486&limit=10&createType=322&spare2=h1m0uk&bindOrganId=172&startTime=2025-10-20 18:20:52&bindOrganType=5165qi&createTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&page=1&srcCode=752&username=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/list.do?createType=490&limit=10&delFlag=9&bindOrganType=jw7vvo&bindOrganId=104&xzqhId=772&spare2=hwl7ae&key=47t6qp&startTime=2025-11-12 15:24:04&email=antone.stark@hotmail.com&searchCode=74128&orderBy=416&workUserId=104&spare1=5p8ebt&page=1&source=808&ids=09ja5p&ids=09ja5p&createTime=2025-11-12 15:24:04&isBindFrontUser=att2th&lastAppId=104&mobile=(567) 281-2291&username=chung.hoeger&endTime=2025-11-12 15:24:04&q=9vs2fg&srcCode=907&registerTime=2025-11-12 15:29:37&description=5onibh
 ```
 **Response-fields:**
 
@@ -2806,48 +2112,9 @@ data|array|返回数据对象|-
 └─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
 └─deleteTime|string|删除时间|-
 └─description|string|描述|-
-└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名，微信UNIONID|-
+└─spare1|string|备用1，头像|-
 └─spare2|string|备用2，第三方用户ID，OpenId|-
 └─newPassword|string|新密码|-
-└─baseUserExt|object|全局用户扩展类|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|string|用户ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickname|string|用户昵称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idName|string|真实姓名，加密的姓名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idNum|string|身份证号码，加密的身份证号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idMobile|string|电话|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idType|string|证件类型|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─namePy|string|姓名全拼，BCryptPasswordEncoder密码")|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|姓名缩写，外部输入填写的姓名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nameEn|string|姓名英文|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|查询码，名称的拼音首字母|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sex|string|性别GB_XBDM|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─birthday|string|出生日期|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─postCode|string|家庭邮政编码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─address|string|地址|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nativePlace|string|籍贯GB_XZQHDM_SHENG|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─familyAddress|string|家庭地址|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─homeTel|string|住宅电话|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─qqNo|string|即时通讯QQ号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weixinId|string|微信用户名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weiboId|string|微博用户名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spareMobile|string|备用手机，紧急手机|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isMobileConfirm|boolean|手机号码是否验证0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─emergencePhone|string|紧急电话，外部输入填写的身份证号码，外部导入或临时处理的身份证号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─keywords|string|关键字|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─intro|string|个人介绍|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comefrom|string|来自|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|用户图像图标|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userSignature|string|用户签名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ipRange|string|登录IP地址(";"分隔）|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─macCode|string|允许登录MAC地址(";"分隔）|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─resume|string|简历，网格平台使用，人所属的网格多个，分隔|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare3|string|备用3|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare4|string|备用4|-
 requestId|string|请求ID|-
 timestamp|string|返回时间戳字符串|-
 
@@ -2859,88 +2126,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:07",
-      "lastTime": "2025-10-20 18:26:07",
-      "id": "172",
-      "xzqhId": 48,
-      "source": "ps6l02",
-      "createType": 356,
-      "username": "merle.larkin",
-      "mobile": "(415) 540-6962",
-      "email": "vivian.streich@hotmail.com",
-      "password": "dwh0os",
-      "salt": "cxo3dq",
-      "srcCode": 864,
-      "registerTime": "2025-10-20 18:26:07",
-      "registerIp": "137.119.212.174",
-      "currentLoginTime": "2025-10-20 18:26:07",
-      "currentLoginIp": "137.119.212.174",
-      "lastAppId": "172",
-      "lastLoginTime": "2025-10-20 18:26:07",
-      "lastLoginIp": "137.119.212.174",
-      "lastLogoutTime": "2025-10-20 18:26:07",
-      "loginCount": 191,
-      "resetKey": "q6jjzo",
-      "resetPwd": "yw7ea7",
-      "lastResetTime": "2025-10-20 18:26:07",
-      "errorTime": "2025-10-20 18:26:07",
-      "errorCount": 32,
-      "errorIp": "137.119.212.174",
-      "lockTime": "2025-10-20 18:26:07",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:37",
+      "lastTime": "2025-11-12 15:29:37",
+      "id": "104",
+      "xzqhId": 446,
+      "source": "tya32v",
+      "createType": 296,
+      "username": "chung.hoeger",
+      "mobile": "(567) 281-2291",
+      "email": "antone.stark@hotmail.com",
+      "password": "84ng2y",
+      "salt": "xuuf3i",
+      "srcCode": 862,
+      "registerTime": "2025-11-12 15:29:37",
+      "registerIp": "239.116.167.16",
+      "currentLoginTime": "2025-11-12 15:29:37",
+      "currentLoginIp": "239.116.167.16",
+      "lastAppId": "104",
+      "lastLoginTime": "2025-11-12 15:29:37",
+      "lastLoginIp": "239.116.167.16",
+      "lastLogoutTime": "2025-11-12 15:29:37",
+      "loginCount": 291,
+      "resetKey": "htbkgc",
+      "resetPwd": "vpuexi",
+      "lastResetTime": "2025-11-12 15:29:37",
+      "errorTime": "2025-11-12 15:29:37",
+      "errorCount": 294,
+      "errorIp": "239.116.167.16",
+      "lockTime": "2025-11-12 15:29:37",
       "activation": true,
-      "activationCode": "81486",
-      "priority": 401,
-      "delFlag": 5,
-      "deleteTime": "2025-10-20 18:26:07",
-      "description": "598p3t",
-      "spare1": "x4mzek",
-      "spare2": "uu95py",
-      "newPassword": "18wsbe",
-      "baseUserExt": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:08",
-        "lastTime": "2025-10-20 18:26:08",
-        "id": "172",
-        "nickname": "renna.dibbert",
-        "idName": "merle.larkin",
-        "idNum": "dpdpn3",
-        "idMobile": "(415) 540-6962",
-        "idType": "pdvg9k",
-        "namePy": "9ob9ve",
-        "sname": "merle.larkin",
-        "nameEn": "gs634z",
-        "searchCode": "81486",
-        "sex": "ojxtla",
-        "birthday": "2025-10-20 18:26:08",
-        "postCode": "81486",
-        "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-        "nativePlace": "ffqyos",
-        "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-        "homeTel": "fzsjhw",
-        "qqNo": "589mu8",
-        "weixinId": "172",
-        "weiboId": "172",
-        "spareMobile": "(415) 540-6962",
-        "isMobileConfirm": true,
-        "emergencePhone": "1-203-302-2484",
-        "keywords": "snq2hb",
-        "intro": "kyo7u2",
-        "comefrom": "pga4xg",
-        "imagePath": "9mk4v5",
-        "userSignature": "1d8hqx",
-        "ipRange": "nw9asa",
-        "macCode": "81486",
-        "resume": "57vkdn",
-        "spare1": "b88q1s",
-        "spare2": "lecdt3",
-        "spare3": "3srcyb",
-        "spare4": "0mp1q1"
-      }
+      "activationCode": "74128",
+      "priority": 260,
+      "delFlag": 9,
+      "deleteTime": "2025-11-12 15:29:37",
+      "description": "u8kr0s",
+      "spare1": "8aj0jb",
+      "spare2": "jhvd3e",
+      "newPassword": "d2rdiy"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3016,48 +2243,9 @@ data|object|返回数据对象|-
 └─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
 └─deleteTime|string|删除时间|-
 └─description|string|描述|-
-└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名，微信UNIONID|-
+└─spare1|string|备用1，头像|-
 └─spare2|string|备用2，第三方用户ID，OpenId|-
 └─newPassword|string|新密码|-
-└─baseUserExt|object|全局用户扩展类|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|string|用户ID|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickname|string|用户昵称|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idName|string|真实姓名，加密的姓名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idNum|string|身份证号码，加密的身份证号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idMobile|string|电话|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idType|string|证件类型|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─namePy|string|姓名全拼，BCryptPasswordEncoder密码")|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|姓名缩写，外部输入填写的姓名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nameEn|string|姓名英文|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|查询码，名称的拼音首字母|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sex|string|性别GB_XBDM|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─birthday|string|出生日期|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─postCode|string|家庭邮政编码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─address|string|地址|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nativePlace|string|籍贯GB_XZQHDM_SHENG|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─familyAddress|string|家庭地址|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─homeTel|string|住宅电话|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─qqNo|string|即时通讯QQ号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weixinId|string|微信用户名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weiboId|string|微博用户名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spareMobile|string|备用手机，紧急手机|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isMobileConfirm|boolean|手机号码是否验证0否1是|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─emergencePhone|string|紧急电话，外部输入填写的身份证号码，外部导入或临时处理的身份证号码|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─keywords|string|关键字|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─intro|string|个人介绍|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comefrom|string|来自|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|用户图像图标|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userSignature|string|用户签名|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ipRange|string|登录IP地址(";"分隔）|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─macCode|string|允许登录MAC地址(";"分隔）|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─resume|string|简历，网格平台使用，人所属的网格多个，分隔|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare3|string|备用3|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare4|string|备用4|-
 requestId|string|请求ID|-
 timestamp|string|返回时间戳字符串|-
 
@@ -3068,87 +2256,47 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "xzqhId": 600,
-    "source": "0jzl2p",
-    "createType": 854,
-    "username": "merle.larkin",
-    "mobile": "(415) 540-6962",
-    "email": "vivian.streich@hotmail.com",
-    "password": "27l2pe",
-    "salt": "wf491o",
-    "srcCode": 511,
-    "registerTime": "2025-10-20 18:26:08",
-    "registerIp": "137.119.212.174",
-    "currentLoginTime": "2025-10-20 18:26:08",
-    "currentLoginIp": "137.119.212.174",
-    "lastAppId": "172",
-    "lastLoginTime": "2025-10-20 18:26:08",
-    "lastLoginIp": "137.119.212.174",
-    "lastLogoutTime": "2025-10-20 18:26:08",
-    "loginCount": 797,
-    "resetKey": "6jo409",
-    "resetPwd": "f6so9x",
-    "lastResetTime": "2025-10-20 18:26:08",
-    "errorTime": "2025-10-20 18:26:08",
-    "errorCount": 442,
-    "errorIp": "137.119.212.174",
-    "lockTime": "2025-10-20 18:26:08",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "xzqhId": 575,
+    "source": "c147d1",
+    "createType": 694,
+    "username": "chung.hoeger",
+    "mobile": "(567) 281-2291",
+    "email": "antone.stark@hotmail.com",
+    "password": "k3mav7",
+    "salt": "gsonip",
+    "srcCode": 181,
+    "registerTime": "2025-11-12 15:29:37",
+    "registerIp": "239.116.167.16",
+    "currentLoginTime": "2025-11-12 15:29:37",
+    "currentLoginIp": "239.116.167.16",
+    "lastAppId": "104",
+    "lastLoginTime": "2025-11-12 15:29:37",
+    "lastLoginIp": "239.116.167.16",
+    "lastLogoutTime": "2025-11-12 15:29:37",
+    "loginCount": 296,
+    "resetKey": "7vbg12",
+    "resetPwd": "eujkfv",
+    "lastResetTime": "2025-11-12 15:29:37",
+    "errorTime": "2025-11-12 15:29:37",
+    "errorCount": 681,
+    "errorIp": "239.116.167.16",
+    "lockTime": "2025-11-12 15:29:37",
     "activation": true,
-    "activationCode": "81486",
-    "priority": 298,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:08",
-    "description": "vx0cep",
-    "spare1": "vm606f",
-    "spare2": "m1zkuk",
-    "newPassword": "uhaq10",
-    "baseUserExt": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": "172",
-      "nickname": "renna.dibbert",
-      "idName": "merle.larkin",
-      "idNum": "y6jbgx",
-      "idMobile": "(415) 540-6962",
-      "idType": "wscqzx",
-      "namePy": "rktoio",
-      "sname": "merle.larkin",
-      "nameEn": "lqjr68",
-      "searchCode": "81486",
-      "sex": "cctzcw",
-      "birthday": "2025-10-20 18:26:08",
-      "postCode": "81486",
-      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "nativePlace": "0j6ntj",
-      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "homeTel": "zi7d4i",
-      "qqNo": "892pqd",
-      "weixinId": "172",
-      "weiboId": "172",
-      "spareMobile": "(415) 540-6962",
-      "isMobileConfirm": true,
-      "emergencePhone": "1-203-302-2484",
-      "keywords": "f2v3e8",
-      "intro": "13ne8t",
-      "comefrom": "c1pz43",
-      "imagePath": "vrnsgr",
-      "userSignature": "bkpn27",
-      "ipRange": "jcoxf8",
-      "macCode": "81486",
-      "resume": "4vhpf8",
-      "spare1": "ubtp3b",
-      "spare2": "smit7t",
-      "spare3": "o3xioy",
-      "spare4": "feoq4a"
-    }
+    "activationCode": "74128",
+    "priority": 724,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:37",
+    "description": "cuwx15",
+    "spare1": "kfnfs9",
+    "spare2": "rdh42i",
+    "newPassword": "l73lnw"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3211,131 +2359,52 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|false|-
 └─deleteTime|string|删除时间|false|-
 └─description|string|描述|false|-
-└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名，微信UNIONID|false|-
+└─spare1|string|备用1，头像|false|-
 └─spare2|string|备用2，第三方用户ID，OpenId|false|-
 └─newPassword|string|新密码|false|-
-└─baseUserExt|object|全局用户扩展类|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|string|用户ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickname|string|用户昵称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idName|string|真实姓名，加密的姓名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idNum|string|身份证号码，加密的身份证号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idMobile|string|电话|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idType|string|证件类型|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─namePy|string|姓名全拼，BCryptPasswordEncoder密码")|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|姓名缩写，外部输入填写的姓名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nameEn|string|姓名英文|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|查询码，名称的拼音首字母|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sex|string|性别GB_XBDM|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─birthday|string|出生日期|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─postCode|string|家庭邮政编码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─address|string|地址|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nativePlace|string|籍贯GB_XZQHDM_SHENG|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─familyAddress|string|家庭地址|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─homeTel|string|住宅电话|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─qqNo|string|即时通讯QQ号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weixinId|string|微信用户名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weiboId|string|微博用户名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spareMobile|string|备用手机，紧急手机|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isMobileConfirm|boolean|手机号码是否验证0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─emergencePhone|string|紧急电话，外部输入填写的身份证号码，外部导入或临时处理的身份证号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─keywords|string|关键字|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─intro|string|个人介绍|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comefrom|string|来自|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|用户图像图标|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userSignature|string|用户签名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ipRange|string|登录IP地址(";"分隔）|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─macCode|string|允许登录MAC地址(";"分隔）|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─resume|string|简历，网格平台使用，人所属的网格多个，分隔|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare3|string|备用3|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare4|string|备用4|false|-
 
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "xzqhId": 70,
-    "source": "y85hla",
-    "createType": 66,
-    "username": "merle.larkin",
-    "mobile": "(415) 540-6962",
-    "email": "vivian.streich@hotmail.com",
-    "password": "xc2i5b",
-    "salt": "yqo6in",
-    "srcCode": 677,
-    "registerTime": "2025-10-20 18:26:08",
-    "registerIp": "137.119.212.174",
-    "currentLoginTime": "2025-10-20 18:26:08",
-    "currentLoginIp": "137.119.212.174",
-    "lastAppId": "172",
-    "lastLoginTime": "2025-10-20 18:26:08",
-    "lastLoginIp": "137.119.212.174",
-    "lastLogoutTime": "2025-10-20 18:26:08",
-    "loginCount": 696,
-    "resetKey": "aupdk0",
-    "resetPwd": "5k7ptm",
-    "lastResetTime": "2025-10-20 18:26:08",
-    "errorTime": "2025-10-20 18:26:08",
-    "errorCount": 662,
-    "errorIp": "137.119.212.174",
-    "lockTime": "2025-10-20 18:26:08",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "xzqhId": 730,
+    "source": "oa1j9l",
+    "createType": 310,
+    "username": "chung.hoeger",
+    "mobile": "(567) 281-2291",
+    "email": "antone.stark@hotmail.com",
+    "password": "heg3kk",
+    "salt": "mhmugj",
+    "srcCode": 289,
+    "registerTime": "2025-11-12 15:29:37",
+    "registerIp": "239.116.167.16",
+    "currentLoginTime": "2025-11-12 15:29:37",
+    "currentLoginIp": "239.116.167.16",
+    "lastAppId": "104",
+    "lastLoginTime": "2025-11-12 15:29:37",
+    "lastLoginIp": "239.116.167.16",
+    "lastLogoutTime": "2025-11-12 15:29:37",
+    "loginCount": 94,
+    "resetKey": "0n5mi1",
+    "resetPwd": "wzh84p",
+    "lastResetTime": "2025-11-12 15:29:37",
+    "errorTime": "2025-11-12 15:29:37",
+    "errorCount": 997,
+    "errorIp": "239.116.167.16",
+    "lockTime": "2025-11-12 15:29:37",
     "activation": true,
-    "activationCode": "81486",
-    "priority": 286,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:08",
-    "description": "5tjwxh",
-    "spare1": "u4glel",
-    "spare2": "89bo3u",
-    "newPassword": "nj8dno",
-    "baseUserExt": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": "172",
-      "nickname": "renna.dibbert",
-      "idName": "merle.larkin",
-      "idNum": "myq959",
-      "idMobile": "(415) 540-6962",
-      "idType": "bojwu7",
-      "namePy": "f125ao",
-      "sname": "merle.larkin",
-      "nameEn": "q3uwe1",
-      "searchCode": "81486",
-      "sex": "gm1wx6",
-      "birthday": "2025-10-20 18:26:08",
-      "postCode": "81486",
-      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "nativePlace": "t6h2wq",
-      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "homeTel": "tf6a06",
-      "qqNo": "w0197k",
-      "weixinId": "172",
-      "weiboId": "172",
-      "spareMobile": "(415) 540-6962",
-      "isMobileConfirm": true,
-      "emergencePhone": "1-203-302-2484",
-      "keywords": "ba90h8",
-      "intro": "u5hjvy",
-      "comefrom": "89b0ys",
-      "imagePath": "m94a9m",
-      "userSignature": "2oojb8",
-      "ipRange": "2y3lwd",
-      "macCode": "81486",
-      "resume": "65ppep",
-      "spare1": "ysn5bi",
-      "spare2": "rw2cbh",
-      "spare3": "g4rwu9",
-      "spare4": "qa5af7"
-    }
+    "activationCode": "74128",
+    "priority": 107,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:37",
+    "description": "qkx0o2",
+    "spare1": "uospvx",
+    "spare2": "zpttje",
+    "newPassword": "r7rlip"
   }
 }'
 ```
@@ -3356,9 +2425,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g85rkb",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "8ydpbm",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3421,131 +2490,52 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|false|-
 └─deleteTime|string|删除时间|false|-
 └─description|string|描述|false|-
-└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名，微信UNIONID|false|-
+└─spare1|string|备用1，头像|false|-
 └─spare2|string|备用2，第三方用户ID，OpenId|false|-
 └─newPassword|string|新密码|false|-
-└─baseUserExt|object|全局用户扩展类|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|string|用户ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickname|string|用户昵称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idName|string|真实姓名，加密的姓名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idNum|string|身份证号码，加密的身份证号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idMobile|string|电话|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─idType|string|证件类型|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─namePy|string|姓名全拼，BCryptPasswordEncoder密码")|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|姓名缩写，外部输入填写的姓名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nameEn|string|姓名英文|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|查询码，名称的拼音首字母|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sex|string|性别GB_XBDM|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─birthday|string|出生日期|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─postCode|string|家庭邮政编码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─address|string|地址|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nativePlace|string|籍贯GB_XZQHDM_SHENG|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─familyAddress|string|家庭地址|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─homeTel|string|住宅电话|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─qqNo|string|即时通讯QQ号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weixinId|string|微信用户名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─weiboId|string|微博用户名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spareMobile|string|备用手机，紧急手机|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isMobileConfirm|boolean|手机号码是否验证0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─emergencePhone|string|紧急电话，外部输入填写的身份证号码，外部导入或临时处理的身份证号码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─keywords|string|关键字|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─intro|string|个人介绍|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comefrom|string|来自|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|用户图像图标|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userSignature|string|用户签名|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ipRange|string|登录IP地址(";"分隔）|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─macCode|string|允许登录MAC地址(";"分隔）|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─resume|string|简历，网格平台使用，人所属的网格多个，分隔|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare3|string|备用3|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare4|string|备用4|false|-
 
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuser/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": "172",
-    "xzqhId": 549,
-    "source": "g7pi0v",
-    "createType": 191,
-    "username": "merle.larkin",
-    "mobile": "(415) 540-6962",
-    "email": "vivian.streich@hotmail.com",
-    "password": "2s9536",
-    "salt": "p767a0",
-    "srcCode": 511,
-    "registerTime": "2025-10-20 18:26:08",
-    "registerIp": "137.119.212.174",
-    "currentLoginTime": "2025-10-20 18:26:08",
-    "currentLoginIp": "137.119.212.174",
-    "lastAppId": "172",
-    "lastLoginTime": "2025-10-20 18:26:08",
-    "lastLoginIp": "137.119.212.174",
-    "lastLogoutTime": "2025-10-20 18:26:08",
-    "loginCount": 592,
-    "resetKey": "h7gpnp",
-    "resetPwd": "hee53w",
-    "lastResetTime": "2025-10-20 18:26:08",
-    "errorTime": "2025-10-20 18:26:08",
-    "errorCount": 186,
-    "errorIp": "137.119.212.174",
-    "lockTime": "2025-10-20 18:26:08",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:37",
+    "lastTime": "2025-11-12 15:29:37",
+    "id": "104",
+    "xzqhId": 233,
+    "source": "9ucuuc",
+    "createType": 829,
+    "username": "chung.hoeger",
+    "mobile": "(567) 281-2291",
+    "email": "antone.stark@hotmail.com",
+    "password": "33bfqy",
+    "salt": "3cuj60",
+    "srcCode": 838,
+    "registerTime": "2025-11-12 15:29:37",
+    "registerIp": "239.116.167.16",
+    "currentLoginTime": "2025-11-12 15:29:37",
+    "currentLoginIp": "239.116.167.16",
+    "lastAppId": "104",
+    "lastLoginTime": "2025-11-12 15:29:37",
+    "lastLoginIp": "239.116.167.16",
+    "lastLogoutTime": "2025-11-12 15:29:37",
+    "loginCount": 908,
+    "resetKey": "4ix2xk",
+    "resetPwd": "3xeqht",
+    "lastResetTime": "2025-11-12 15:29:37",
+    "errorTime": "2025-11-12 15:29:37",
+    "errorCount": 758,
+    "errorIp": "239.116.167.16",
+    "lockTime": "2025-11-12 15:29:37",
     "activation": true,
-    "activationCode": "81486",
-    "priority": 640,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:08",
-    "description": "b75c01",
-    "spare1": "ag1sfj",
-    "spare2": "5k9qfa",
-    "newPassword": "g1ov5p",
-    "baseUserExt": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": "172",
-      "nickname": "renna.dibbert",
-      "idName": "merle.larkin",
-      "idNum": "bzsdr7",
-      "idMobile": "(415) 540-6962",
-      "idType": "vh0u2e",
-      "namePy": "8z6qgw",
-      "sname": "merle.larkin",
-      "nameEn": "tvgm77",
-      "searchCode": "81486",
-      "sex": "fdx8ks",
-      "birthday": "2025-10-20 18:26:08",
-      "postCode": "81486",
-      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "nativePlace": "0v7v47",
-      "familyAddress": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "homeTel": "hlmy08",
-      "qqNo": "bjx50o",
-      "weixinId": "172",
-      "weiboId": "172",
-      "spareMobile": "(415) 540-6962",
-      "isMobileConfirm": true,
-      "emergencePhone": "1-203-302-2484",
-      "keywords": "n0kk95",
-      "intro": "t6g1vw",
-      "comefrom": "8c6vth",
-      "imagePath": "voaju3",
-      "userSignature": "jbjsor",
-      "ipRange": "7eu2fh",
-      "macCode": "81486",
-      "resume": "gbdiy0",
-      "spare1": "q63i4w",
-      "spare2": "2ncml1",
-      "spare3": "jqde3s",
-      "spare4": "pq1kx4"
-    }
+    "activationCode": "74128",
+    "priority": 156,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:37",
+    "description": "cd67rs",
+    "spare1": "60dqjt",
+    "spare2": "fwuigz",
+    "newPassword": "fdme0y"
   }
 }'
 ```
@@ -3566,9 +2556,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "psfpej",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "nwl6sx",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3618,9 +2608,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uv3u0l",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "n11b7s",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3678,7 +2668,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?creatorId=172&bizType=79jb9i&title=mj8jeg&iconStyle=2mex50&startTime=2025-10-20 18:20:52&recvTargetid=172&description=9n6fp0&foreignId=172&q=nc90ph&limit=10&appId=172&page=1&endTime=2025-10-20 18:20:52&organId=172&recvMemberId=172&id=854&type=925&readStatus=rf64xb&imagePath=lulumt&orderBy=205&status=961&recvOrganId=172&msgUrl=www.ben-grant.info&updateTime=2025-10-20 18:26:08&recvGroupId=172&updatorId=172&content=nywa47
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?status=892&creatorId=104&q=qm1hk7&organId=104&updatorId=104&appId=104&msgUrl=www.winston-nienow.name&title=b4pbp3&recvTargetid=104&recvGroupId=104&recvOrganId=104&readStatus=sh80bi&iconStyle=4moi8a&description=7t6uzf&page=1&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&limit=10&orderBy=103&updateTime=2025-11-12 15:29:38&content=o9gacf&type=329&foreignId=104&bizType=166i6g&imagePath=3whxjr&id=589&recvMemberId=104
 ```
 **Response-fields:**
 
@@ -3721,32 +2711,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": 611,
-      "appId": "172",
-      "organId": "172",
-      "bizType": "9wlne0",
-      "type": 408,
-      "title": "h7vgeg",
-      "content": "8vpcva",
-      "msgUrl": "www.ben-grant.info",
-      "foreignId": "172",
-      "imagePath": "e40huh",
-      "iconStyle": "l5zwti",
-      "recvMemberId": "172",
-      "recvGroupId": "172",
-      "recvOrganId": "172",
-      "recvTargetid": "172",
-      "status": 355,
-      "updatorId": "172",
-      "updateTime": "2025-10-20 18:26:08",
-      "description": "b8uvlu"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:38",
+      "lastTime": "2025-11-12 15:29:38",
+      "id": 754,
+      "appId": "104",
+      "organId": "104",
+      "bizType": "ynan21",
+      "type": 910,
+      "title": "5d9l04",
+      "content": "wwtql6",
+      "msgUrl": "www.winston-nienow.name",
+      "foreignId": "104",
+      "imagePath": "4a7f70",
+      "iconStyle": "7niti3",
+      "recvMemberId": "104",
+      "recvGroupId": "104",
+      "recvOrganId": "104",
+      "recvTargetid": "104",
+      "status": 293,
+      "updatorId": "104",
+      "updateTime": "2025-11-12 15:29:38",
+      "description": "ax11n6"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3803,7 +2793,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?imagePath=snqwu2&readStatus=u9csqv&foreignId=172&updateTime=2025-10-20 18:26:08&description=driaut&appId=172&endTime=2025-10-20 18:20:52&limit=10&recvTargetid=172&organId=172&startTime=2025-10-20 18:20:52&recvMemberId=172&content=xbrkd5&updatorId=172&msgUrl=www.ben-grant.info&iconStyle=6mfg61&type=970&status=627&title=d8mnn9&orderBy=565&id=87&bizType=vd1be3&recvGroupId=172&page=1&q=ogva7l&recvOrganId=172&creatorId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?page=1&description=qnbhun&updatorId=104&startTime=2025-11-12 15:24:04&orderBy=556&recvTargetid=104&bizType=w9h1ho&limit=10&updateTime=2025-11-12 15:29:38&recvMemberId=104&title=7fqkep&status=646&readStatus=r3io1y&foreignId=104&imagePath=tv1y51&q=riqgqd&iconStyle=c7g7hy&content=03apkz&id=198&appId=104&type=385&creatorId=104&recvOrganId=104&msgUrl=www.winston-nienow.name&recvGroupId=104&endTime=2025-11-12 15:24:04&organId=104
 ```
 **Response-fields:**
 
@@ -3846,32 +2836,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:08",
-      "lastTime": "2025-10-20 18:26:08",
-      "id": 478,
-      "appId": "172",
-      "organId": "172",
-      "bizType": "bijdq9",
-      "type": 684,
-      "title": "pb2w1s",
-      "content": "9js9uy",
-      "msgUrl": "www.ben-grant.info",
-      "foreignId": "172",
-      "imagePath": "k6j6y7",
-      "iconStyle": "xnzma2",
-      "recvMemberId": "172",
-      "recvGroupId": "172",
-      "recvOrganId": "172",
-      "recvTargetid": "172",
-      "status": 668,
-      "updatorId": "172",
-      "updateTime": "2025-10-20 18:26:08",
-      "description": "r1ss0t"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:38",
+      "lastTime": "2025-11-12 15:29:38",
+      "id": 570,
+      "appId": "104",
+      "organId": "104",
+      "bizType": "m923ne",
+      "type": 826,
+      "title": "te3kn7",
+      "content": "tirsm6",
+      "msgUrl": "www.winston-nienow.name",
+      "foreignId": "104",
+      "imagePath": "vum70r",
+      "iconStyle": "1zz0k5",
+      "recvMemberId": "104",
+      "recvGroupId": "104",
+      "recvOrganId": "104",
+      "recvTargetid": "104",
+      "status": 589,
+      "updatorId": "104",
+      "updateTime": "2025-11-12 15:29:38",
+      "description": "j8dikq"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -3928,7 +2918,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'description=kxpxrn&msgUrl=www.ben-grant.info&foreignId=172&creatorId=172&imagePath=lqhvbg&q=qqbvb0&status=6&organId=172&readStatus=vpvo39&page=1&startTime=2025-10-20 18:20:52&updateTime=2025-10-20 18:26:08&orderBy=579&recvTargetid=172&bizType=bh2rf7&type=752&title=96lq46&endTime=2025-10-20 18:20:52&iconStyle=fqtdtu&id=153&updatorId=172&recvMemberId=172&content=57bo2z&appId=172&recvGroupId=172&recvOrganId=172&limit=10'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'orderBy=643&recvOrganId=104&endTime=2025-11-12 15:24:04&content=3ipoot&recvMemberId=104&recvGroupId=104&imagePath=523yqt&iconStyle=s691ly&creatorId=104&limit=10&updateTime=2025-11-12 15:29:38&q=txe42l&startTime=2025-11-12 15:24:04&status=691&type=216&recvTargetid=104&updatorId=104&readStatus=egjvni&appId=104&page=1&description=tjgr6q&id=801&foreignId=104&organId=104&bizType=yli1gm&title=zn3fv8&msgUrl=www.winston-nienow.name'
 ```
 **Response-fields:**
 
@@ -3947,9 +2937,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fmvde7",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ed4w80",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4022,31 +3012,31 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:08",
-    "lastTime": "2025-10-20 18:26:08",
-    "id": 689,
-    "appId": "172",
-    "organId": "172",
-    "bizType": "yhfumy",
-    "type": 743,
-    "title": "xud2sd",
-    "content": "p82eri",
-    "msgUrl": "www.ben-grant.info",
-    "foreignId": "172",
-    "imagePath": "ixpyo1",
-    "iconStyle": "pfljdh",
-    "recvMemberId": "172",
-    "recvGroupId": "172",
-    "recvOrganId": "172",
-    "recvTargetid": "172",
-    "status": 437,
-    "updatorId": "172",
-    "updateTime": "2025-10-20 18:26:08",
-    "description": "k261a7"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:38",
+    "lastTime": "2025-11-12 15:29:38",
+    "id": 257,
+    "appId": "104",
+    "organId": "104",
+    "bizType": "m1wo8p",
+    "type": 87,
+    "title": "7fa2jd",
+    "content": "n2ljmn",
+    "msgUrl": "www.winston-nienow.name",
+    "foreignId": "104",
+    "imagePath": "7asmh6",
+    "iconStyle": "gon7na",
+    "recvMemberId": "104",
+    "recvGroupId": "104",
+    "recvOrganId": "104",
+    "recvTargetid": "104",
+    "status": 678,
+    "updatorId": "104",
+    "updateTime": "2025-11-12 15:29:38",
+    "description": "w4o3qt"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4101,28 +3091,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:09",
-    "lastTime": "2025-10-20 18:26:09",
-    "id": 684,
-    "appId": "172",
-    "organId": "172",
-    "bizType": "8tx2vj",
-    "type": 603,
-    "title": "60dffo",
-    "content": "yjd9fb",
-    "msgUrl": "www.ben-grant.info",
-    "foreignId": "172",
-    "imagePath": "qm0uw2",
-    "iconStyle": "t363bq",
-    "recvMemberId": "172",
-    "recvGroupId": "172",
-    "recvOrganId": "172",
-    "recvTargetid": "172",
-    "status": 354,
-    "updatorId": "172",
-    "updateTime": "2025-10-20 18:26:09",
-    "description": "7j9qa5"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:38",
+    "lastTime": "2025-11-12 15:29:38",
+    "id": 177,
+    "appId": "104",
+    "organId": "104",
+    "bizType": "vw5ie0",
+    "type": 439,
+    "title": "q8uptp",
+    "content": "j98ryv",
+    "msgUrl": "www.winston-nienow.name",
+    "foreignId": "104",
+    "imagePath": "lecp08",
+    "iconStyle": "vhkoyu",
+    "recvMemberId": "104",
+    "recvGroupId": "104",
+    "recvOrganId": "104",
+    "recvTargetid": "104",
+    "status": 812,
+    "updatorId": "104",
+    "updateTime": "2025-11-12 15:29:38",
+    "description": "ewlnhz"
   }
 }'
 ```
@@ -4143,9 +3133,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "chn60x",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "wjh8aj",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4200,28 +3190,28 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:09",
-    "lastTime": "2025-10-20 18:26:09",
-    "id": 830,
-    "appId": "172",
-    "organId": "172",
-    "bizType": "uz9sak",
-    "type": 113,
-    "title": "reyqyb",
-    "content": "brifil",
-    "msgUrl": "www.ben-grant.info",
-    "foreignId": "172",
-    "imagePath": "f1o5ut",
-    "iconStyle": "2xms3e",
-    "recvMemberId": "172",
-    "recvGroupId": "172",
-    "recvOrganId": "172",
-    "recvTargetid": "172",
-    "status": 174,
-    "updatorId": "172",
-    "updateTime": "2025-10-20 18:26:09",
-    "description": "bq7dv6"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:38",
+    "lastTime": "2025-11-12 15:29:38",
+    "id": 867,
+    "appId": "104",
+    "organId": "104",
+    "bizType": "mrz1t3",
+    "type": 859,
+    "title": "nj9esn",
+    "content": "5jti7x",
+    "msgUrl": "www.winston-nienow.name",
+    "foreignId": "104",
+    "imagePath": "g5nwoy",
+    "iconStyle": "9sfmb1",
+    "recvMemberId": "104",
+    "recvGroupId": "104",
+    "recvOrganId": "104",
+    "recvTargetid": "104",
+    "status": 821,
+    "updatorId": "104",
+    "updateTime": "2025-11-12 15:29:38",
+    "description": "axqo0y"
   }
 }'
 ```
@@ -4242,9 +3232,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5j2zxx",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "oxz9i1",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4294,9 +3284,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "umue8d",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "zxi54s",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4340,9 +3330,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8cxhky",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "lajsl8",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4392,9 +3382,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "honykp",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "n2qyhv",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4444,9 +3434,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6w38t1",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "3r6qu1",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4491,17 +3481,17 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "k0uz5g",
-    "mapKey2": "vpze6f"
+    "mapKey1": "ln7m7i",
+    "mapKey2": "kdtn2a"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
 ## 平台账号信息读写控制类
 ### Get CoreAccount list. 获取平台账号信息列表或分页, 返回CoreAccount对象.
-**URL:** https://linlan.net/eframe_backend/api/system/plat/account/list.do
+**URL:** https://linlan.net/eframe_backend/api/system/account/list.do
 
 **Type:** GET
 
@@ -4559,7 +3549,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/list.do?currCount=973&description=mk5e3p&q=xj91pr&aesIvKey=agkkd4&startTime=2025-10-20 18:20:52&serverConf3=97qujg&limit=10&isAdmin=true&page=1&type=542&organId=172&name=merle.larkin&isSingle=true&id=172&isDisabled=true&serverType=52pas9&spare2=sz291n&aesKey=sn9v9v&serverConf2=ek6oq9&serverConf1=0gqaex&spare1=okw3xd&endTime=2025-10-20 18:20:52&serverIp=137.119.212.174&appId=172&clientId=172&clientSecret=mzpecv&organName=merle.larkin&serverUrl=www.ben-grant.info&cname=merle.larkin&inoutMode=313&orderBy=945&status=58&confLimit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/list.do?isDisabled=true&spare2=0hfgke&appId=104&aesIvKey=ap4qtn&orderBy=905&clientSecret=ewsclu&serverConf3=vmv7qd&organId=104&type=147&inoutMode=890&spare1=rbegt3&serverUrl=www.winston-nienow.name&q=bewvj8&organName=chung.hoeger&isSingle=true&confLimit=10&page=1&endTime=2025-11-12 15:24:04&cname=chung.hoeger&id=104&serverConf2=fsgyhp&currCount=154&status=222&aesKey=0o2tyh&description=bjiwnx&clientId=104&limit=10&serverIp=239.116.167.16&name=chung.hoeger&startTime=2025-11-12 15:24:04&serverConf1=aelrjl&isAdmin=true&serverType=2roi2e
 ```
 **Response-fields:**
 
@@ -4615,50 +3605,50 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:05",
-      "lastTime": "2025-10-20 18:26:05",
-      "id": "172",
-      "organId": "172",
-      "appId": "172",
-      "organName": "merle.larkin",
-      "inoutMode": 5,
-      "name": "merle.larkin",
-      "cname": "merle.larkin",
-      "type": 250,
-      "clientId": "172",
-      "clientSecret": "0hngib",
-      "aesKey": "t94ozb",
-      "aesIvKey": "siuxh2",
-      "serverIp": "137.119.212.174",
-      "serverType": "8k8w00",
-      "serverUrl": "www.ben-grant.info",
-      "serverConf1": "5pkow5",
-      "serverConf2": "55ehor",
-      "serverConf3": "lry4hq",
-      "currCount": 964,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:35",
+      "lastTime": "2025-11-12 15:29:35",
+      "id": "104",
+      "organId": "104",
+      "appId": "104",
+      "organName": "chung.hoeger",
+      "inoutMode": 667,
+      "name": "chung.hoeger",
+      "cname": "chung.hoeger",
+      "type": 160,
+      "clientId": "104",
+      "clientSecret": "3ojzvr",
+      "aesKey": "l5lf0a",
+      "aesIvKey": "e3d4vb",
+      "serverIp": "239.116.167.16",
+      "serverType": "ssxx07",
+      "serverUrl": "www.winston-nienow.name",
+      "serverConf1": "jclllp",
+      "serverConf2": "2nkwzc",
+      "serverConf3": "odcdv0",
+      "currCount": 467,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 327,
-      "description": "nl6iok",
-      "spare1": "7qx6fl",
-      "spare2": "p6qz5p",
-      "inOrganName": "merle.larkin",
-      "userName": "merle.larkin",
-      "appName": "merle.larkin",
-      "inoutModeName": "merle.larkin",
-      "typeName": "merle.larkin"
+      "status": 13,
+      "description": "0uqms6",
+      "spare1": "mkq0fa",
+      "spare2": "qdk3vg",
+      "inOrganName": "chung.hoeger",
+      "userName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "inoutModeName": "chung.hoeger",
+      "typeName": "chung.hoeger"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
 ### 平台账户生成密钥对
-**URL:** https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do
+**URL:** https://linlan.net/eframe_backend/api/system/account/getClientSecret.do
 
 **Type:** GET
 
@@ -4684,7 +3674,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getClientSecret.do?clientId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getClientSecret.do?clientId=104
 ```
 **Response-fields:**
 
@@ -4740,50 +3730,50 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:05",
-      "lastTime": "2025-10-20 18:26:05",
-      "id": "172",
-      "organId": "172",
-      "appId": "172",
-      "organName": "merle.larkin",
-      "inoutMode": 990,
-      "name": "merle.larkin",
-      "cname": "merle.larkin",
-      "type": 607,
-      "clientId": "172",
-      "clientSecret": "8fhxyl",
-      "aesKey": "8o3jox",
-      "aesIvKey": "aoq3p7",
-      "serverIp": "137.119.212.174",
-      "serverType": "6re4xd",
-      "serverUrl": "www.ben-grant.info",
-      "serverConf1": "z2f7mu",
-      "serverConf2": "eug3i1",
-      "serverConf3": "7qljo2",
-      "currCount": 965,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:35",
+      "lastTime": "2025-11-12 15:29:35",
+      "id": "104",
+      "organId": "104",
+      "appId": "104",
+      "organName": "chung.hoeger",
+      "inoutMode": 17,
+      "name": "chung.hoeger",
+      "cname": "chung.hoeger",
+      "type": 741,
+      "clientId": "104",
+      "clientSecret": "eyl7l0",
+      "aesKey": "ok7lur",
+      "aesIvKey": "u7yh8s",
+      "serverIp": "239.116.167.16",
+      "serverType": "6pakik",
+      "serverUrl": "www.winston-nienow.name",
+      "serverConf1": "yyijxv",
+      "serverConf2": "at874m",
+      "serverConf3": "j3srmf",
+      "currCount": 509,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 511,
-      "description": "nh2xw6",
-      "spare1": "nyuyl1",
-      "spare2": "2lnmbk",
-      "inOrganName": "merle.larkin",
-      "userName": "merle.larkin",
-      "appName": "merle.larkin",
-      "inoutModeName": "merle.larkin",
-      "typeName": "merle.larkin"
+      "status": 741,
+      "description": "6upsys",
+      "spare1": "0wj1af",
+      "spare2": "eboej6",
+      "inOrganName": "chung.hoeger",
+      "userName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "inoutModeName": "chung.hoeger",
+      "typeName": "chung.hoeger"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
 ### 生成平台密钥对
-**URL:** https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do
+**URL:** https://linlan.net/eframe_backend/api/system/account/getKeyParity.do
 
 **Type:** GET
 
@@ -4809,7 +3799,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/plat/account/getKeyParity.do?id=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getKeyParity.do?id=104
 ```
 **Response-fields:**
 
@@ -4865,45 +3855,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:05",
-      "lastTime": "2025-10-20 18:26:05",
-      "id": "172",
-      "organId": "172",
-      "appId": "172",
-      "organName": "merle.larkin",
-      "inoutMode": 291,
-      "name": "merle.larkin",
-      "cname": "merle.larkin",
-      "type": 627,
-      "clientId": "172",
-      "clientSecret": "0wogva",
-      "aesKey": "s384yd",
-      "aesIvKey": "k3cpj4",
-      "serverIp": "137.119.212.174",
-      "serverType": "0mxcip",
-      "serverUrl": "www.ben-grant.info",
-      "serverConf1": "4noehv",
-      "serverConf2": "lq0h9o",
-      "serverConf3": "jx7o4j",
-      "currCount": 639,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:35",
+      "lastTime": "2025-11-12 15:29:35",
+      "id": "104",
+      "organId": "104",
+      "appId": "104",
+      "organName": "chung.hoeger",
+      "inoutMode": 584,
+      "name": "chung.hoeger",
+      "cname": "chung.hoeger",
+      "type": 650,
+      "clientId": "104",
+      "clientSecret": "jo9wte",
+      "aesKey": "mlo0po",
+      "aesIvKey": "o15pse",
+      "serverIp": "239.116.167.16",
+      "serverType": "t0plfp",
+      "serverUrl": "www.winston-nienow.name",
+      "serverConf1": "pjcz0q",
+      "serverConf2": "yu9ngf",
+      "serverConf3": "2sar12",
+      "currCount": 624,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 615,
-      "description": "ax2ctx",
-      "spare1": "4qa5d2",
-      "spare2": "n2b5lp",
-      "inOrganName": "merle.larkin",
-      "userName": "merle.larkin",
-      "appName": "merle.larkin",
-      "inoutModeName": "merle.larkin",
-      "typeName": "merle.larkin"
+      "status": 979,
+      "description": "fpmo6w",
+      "spare1": "pectuu",
+      "spare2": "0velg0",
+      "inOrganName": "chung.hoeger",
+      "userName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "inoutModeName": "chung.hoeger",
+      "typeName": "chung.hoeger"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -4979,7 +3969,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"172","timestamp":"2025-10-20 18:20:52"}
+{"success":true,"code":"0","msg":"正常","data":Error restful return.,"requestId":"104","timestamp":"2025-11-12 15:24:04"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5022,9 +4012,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "m4l9go",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "dlhiki",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5068,9 +4058,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xdaqwm",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ymb5os",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5120,9 +4110,166 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3segf5",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "z075cf",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 获取社交授权平台账号列表
+**URL:** https://linlan.net/eframe_backend/api/system/account/authlist.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-11-19 14:58:36
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取社交授权平台账号列表
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+id|string|对接账户ID，外部系统分配的主键|false|-
+organId|string|系统机构ID|false|-
+appId|string|应用ID|false|-
+organName|string|系统机构名称，没有ORGAN_ID时使用|false|-
+inoutMode|int32|对接模式0内部接入1内部接出11外部接入20双向40市民云对接类短信平台|false|-
+name|string|对接系统或账户名称|false|-
+cname|string|对接系统名称中文|false|-
+type|int32|对接系统类型1平台应用2APP应用3外部接口|false|-
+clientId|string|对接系统CLIENTID，或CORPID|false|-
+clientSecret|string|客户密钥|false|-
+aesKey|string|AES加解密密钥，备用|false|-
+aesIvKey|string|AES iv key，备用|false|-
+serverIp|string|对接服务器IP地址或域名|false|-
+serverType|string|对接服务器类型，授权类型|false|-
+serverUrl|string|默认接口URL，存放CODE_URL，短信网关配置|false|-
+serverConf1|string|服务器配置扩展1，MODE为11时，访问IP地址白名单，,分隔；MODE为40时，|false|-
+serverConf2|string|服务器配置扩展2，MODE为40时，消息发送方式001,111,100,010等，第一位为发送站内信，第二位为短信，第三位为彩信|false|-
+serverConf3|string|服务器配置扩展3，MODE为1时平台类型，如果共用SMY体系，此时填写smy，多个市民云体系的APP可以用一套模式接入；MODE为40时，短信模板|false|-
+currCount|int32|当前调用次数|false|-
+confLimit|int32|每日限制调用次数(0无限制)|false|-
+isAdmin|boolean|是否默认管理后台API账户，是否开启前后端加密，如果开启则使用公钥私钥|false|-
+isSingle|boolean|是否限制单设备同时登陆|false|-
+isDisabled|boolean|是否禁用0否1是|false|-
+status|int32|对接系统状态0不可用1可用2过期|false|-
+description|string|对接系统描述|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/authlist.do?endTime=2025-11-12 15:24:04&page=1&cname=chung.hoeger&aesKey=fbufnb&isAdmin=true&serverType=36at3n&description=ek8s42&limit=10&status=144&serverConf3=cam51a&serverIp=239.116.167.16&spare1=nvnwon&clientId=104&q=7hh7ui&aesIvKey=1v16qy&serverConf1=bm3sn7&startTime=2025-11-12 15:24:04&inoutMode=22&name=chung.hoeger&spare2=xatdx0&organId=104&id=104&orderBy=796&serverConf2=29c8oh&organName=chung.hoeger&type=893&appId=104&confLimit=10&isSingle=true&serverUrl=www.winston-nienow.name&currCount=766&clientSecret=gx8f71&isDisabled=true
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|string|对接账户ID，外部系统分配的主键|-
+└─organId|string|系统机构ID|-
+└─appId|string|应用ID|-
+└─organName|string|系统机构名称，没有ORGAN_ID时使用|-
+└─inoutMode|int32|对接模式0内部接入1内部接出11外部接入20双向40市民云对接类短信平台|-
+└─name|string|对接系统或账户名称，开放平台认证平台名称|-
+└─cname|string|对接系统名称中文|-
+└─type|int32|对接系统类型1平台应用2APP应用3外部接口|-
+└─clientId|string|对接系统CLIENTID，或CORPID|-
+└─clientSecret|string|客户密钥|-
+└─aesKey|string|AES加解密密钥，备用|-
+└─aesIvKey|string|AES iv key，备用|-
+└─serverIp|string|对接服务器IP地址或域名|-
+└─serverType|string|对接服务器类型，授权类型，开放平台认证平台类型|-
+└─serverUrl|string|默认接口URL，存放CODE_URL，短信网关配置|-
+└─serverConf1|string|服务器配置扩展1，MODE为11时，访问IP地址白名单，,分隔；MODE为40时，|-
+└─serverConf2|string|服务器配置扩展2，MODE为40时，消息发送方式001,111,100,010等，第一位为发送站内信，第二位为短信，第三位为彩信|-
+└─serverConf3|string|服务器配置扩展3，MODE为1时平台类型，如果共用SMY体系，此时填写smy，多个市民云体系的APP可以用一套模式接入；MODE为40时，短信模板|-
+└─currCount|int32|当前调用次数|-
+└─confLimit|int32|每日限制调用次数(0无限制)|-
+└─isAdmin|boolean|是否默认管理后台API账户，是否开启前后端加密，如果开启则使用公钥私钥|-
+└─isSingle|boolean|是否限制单设备同时登陆|-
+└─isDisabled|boolean|是否禁用0否1是|-
+└─status|int32|对接系统状态0不可用1可用2过期|-
+└─description|string|对接系统描述|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+└─inOrganName|string|内部系统名称|-
+└─userName|string|用户名称|-
+└─appName|string|应用名称|-
+└─inoutModeName|string|对接模式名字|-
+└─typeName|string|平台类型名字|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:35",
+      "lastTime": "2025-11-12 15:29:35",
+      "id": "104",
+      "organId": "104",
+      "appId": "104",
+      "organName": "chung.hoeger",
+      "inoutMode": 953,
+      "name": "chung.hoeger",
+      "cname": "chung.hoeger",
+      "type": 363,
+      "clientId": "104",
+      "clientSecret": "xtbngu",
+      "aesKey": "6vjumw",
+      "aesIvKey": "gvs0e8",
+      "serverIp": "239.116.167.16",
+      "serverType": "bocsgf",
+      "serverUrl": "www.winston-nienow.name",
+      "serverConf1": "p21861",
+      "serverConf2": "vuj3jo",
+      "serverConf3": "zroau3",
+      "currCount": 257,
+      "confLimit": 10,
+      "isAdmin": true,
+      "isSingle": true,
+      "isDisabled": true,
+      "status": 661,
+      "description": "pchb8x",
+      "spare1": "6t5nrz",
+      "spare2": "qlp29e",
+      "inOrganName": "chung.hoeger",
+      "userName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "inoutModeName": "chung.hoeger",
+      "typeName": "chung.hoeger"
+    }
+  ],
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5159,9 +4306,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9jabaa",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "j85kz4",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5196,7 +4343,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?page=1&limit=10&orderBy=145&q=71h4fq&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?q=a22f23&page=1&startTime=2025-11-12 15:24:04&orderBy=919&limit=10&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -5225,18 +4372,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "50dm8l",
-      "deptNum": "lurmoi",
-      "peopleNum": "p5ghs2",
-      "roleNum": "uyugtd",
-      "dicTypeNum": "f0w8i6",
-      "appNum": "j0izx3",
-      "fileNum": "8wqkc8",
-      "paramNum": "smmlgz"
+      "organNum": "jas9pb",
+      "deptNum": "139rzc",
+      "peopleNum": "6xh2o2",
+      "roleNum": "svnnmp",
+      "dicTypeNum": "tg6ssu",
+      "appNum": "qscjvb",
+      "fileNum": "vrhbi7",
+      "paramNum": "b1gmbl"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5271,7 +4418,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&q=9fc4gf&page=1&orderBy=999&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?orderBy=243&q=87pkbo&limit=10&endTime=2025-11-12 15:24:04&startTime=2025-11-12 15:24:04&page=1
 ```
 **Response-fields:**
 
@@ -5294,12 +4441,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "xc310m",
-      "modelNum": "ao89yp"
+      "objectNum": "k039vn",
+      "modelNum": "fznf2v"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5334,7 +4481,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=5p6jqp&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&orderBy=494&limit=10&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=rkuhat&page=1&startTime=2025-11-12 15:24:04&limit=10&orderBy=191&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -5344,7 +4491,7 @@ success|boolean|成功标记:正常为true,错误为false|-
 code|string|返回状态码:正常状态为0|-
 msg|string|返回消息|-
 data|array|返回数据对象|-
-└─siteNum|string|站点数|-
+└─appNum|string|应用数|-
 └─accountNum|string|平台账户数|-
 └─serviceOrganNum|string|服务商数|-
 requestId|string|请求ID|-
@@ -5358,13 +4505,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "siteNum": "j0lkqn",
-      "accountNum": "45mx52",
-      "serviceOrganNum": "rr5vs0"
+      "appNum": "67cy8q",
+      "accountNum": "xrw6ds",
+      "serviceOrganNum": "nd3qxv"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5418,7 +4565,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?name=merle.larkin&isDisabled=true&description=nwg17m&existKey=tca3l9&ftpId=172&q=wk39e3&endTime=2025-10-20 18:20:52&ids=9tgl9y&ids=9tgl9y&limit=10&mode=679&appType=4gawjs&status=110&page=1&domainId=172&sertypeId=172&delFlag=5&isMobileApp=true&xzqhId=456&orderBy=122&startTime=2025-10-20 18:20:52&path=t02zau&organId=172&isSite=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?organId=104&orderBy=660&existKey=5s7kgs&startTime=2025-11-12 15:24:04&q=9dmho9&isMobileApp=true&status=577&xzqhId=171&ftpId=104&description=ox38dg&domainId=104&appType=mkg4lb&isSite=true&ids=tswm2b&ids=tswm2b&sertypeId=104&mode=559&endTime=2025-11-12 15:24:04&page=1&name=chung.hoeger&limit=10&path=nhjncc&delFlag=9&isDisabled=true
 ```
 **Response-fields:**
 
@@ -5462,33 +4609,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:02",
-      "lastTime": "2025-10-20 18:26:02",
-      "id": "172",
-      "ftpId": "172",
-      "domainId": "172",
-      "organId": "172",
-      "xzqhId": 57,
-      "sertypeId": "172",
-      "name": "merle.larkin",
-      "path": "o5vpnm",
-      "appType": "h3yxwv",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:32",
+      "lastTime": "2025-11-12 15:29:32",
+      "id": "104",
+      "ftpId": "104",
+      "domainId": "104",
+      "organId": "104",
+      "xzqhId": 68,
+      "sertypeId": "104",
+      "name": "chung.hoeger",
+      "path": "mkhgry",
+      "appType": "uv030j",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 535,
-      "priority": 885,
-      "delFlag": 5,
-      "deleteTime": "2025-10-20 18:26:02",
-      "description": "xmcfzd",
-      "spare1": "8llbhh",
-      "spare2": "v2kxqr",
-      "xzqhName": "merle.larkin"
+      "status": 427,
+      "priority": 955,
+      "delFlag": 9,
+      "deleteTime": "2025-11-12 15:29:32",
+      "description": "0t9aw5",
+      "spare1": "yjx3rq",
+      "spare2": "b5d4f1",
+      "xzqhName": "chung.hoeger"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5542,7 +4689,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?appType=4x5nqw&idArr=zldcpp&isSite=true&mode=391&isDisabled=true&startTime=2025-10-20 18:20:52&organId=172&domainId=172&limit=10&page=1&existKey=10wbvq&name=merle.larkin&orderBy=892&ftpId=172&delFlag=5&ids=hchm8r&ids=hchm8r&path=7maqge&q=4klvwe&description=nt14oe&sertypeId=172&isMobileApp=true&status=343&endTime=2025-10-20 18:20:52&xzqhId=112
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?limit=10&mode=71&name=chung.hoeger&endTime=2025-11-12 15:24:04&appType=708as6&orderBy=417&xzqhId=651&ids=bod28v&ids=bod28v&isMobileApp=true&idArr=xnutfd&page=1&domainId=104&isSite=true&description=23n6ap&delFlag=9&q=4araf7&status=509&startTime=2025-11-12 15:24:04&existKey=f7465b&path=db5832&isDisabled=true&sertypeId=104&ftpId=104&organId=104
 ```
 **Response-fields:**
 
@@ -5590,40 +4737,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 5,
+    "totalCount": 786,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:02",
-        "lastTime": "2025-10-20 18:26:02",
-        "id": "172",
-        "ftpId": "172",
-        "domainId": "172",
-        "organId": "172",
-        "xzqhId": 738,
-        "sertypeId": "172",
-        "name": "merle.larkin",
-        "path": "l36pf5",
-        "appType": "x4ptvp",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:32",
+        "lastTime": "2025-11-12 15:29:32",
+        "id": "104",
+        "ftpId": "104",
+        "domainId": "104",
+        "organId": "104",
+        "xzqhId": 434,
+        "sertypeId": "104",
+        "name": "chung.hoeger",
+        "path": "wothpi",
+        "appType": "7313t8",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 85,
-        "priority": 379,
-        "delFlag": 5,
-        "deleteTime": "2025-10-20 18:26:02",
-        "description": "u5ubgv",
-        "spare1": "1jj7fz",
-        "spare2": "bbdfge",
-        "xzqhName": "merle.larkin"
+        "status": 807,
+        "priority": 789,
+        "delFlag": 9,
+        "deleteTime": "2025-11-12 15:29:32",
+        "description": "14rz07",
+        "spare1": "661haa",
+        "spare2": "808ebs",
+        "xzqhName": "chung.hoeger"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5677,7 +4824,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'startTime=2025-10-20 18:20:52&q=2sip52&idArr=hcn4t9&mode=387&xzqhId=58&organId=172&orderBy=672&page=1&isDisabled=true&limit=10&endTime=2025-10-20 18:20:52&isMobileApp=true&status=451&ftpId=172&domainId=172&path=9zeswt&existKey=6azfd8&description=qyjv4f&appType=wc8xil&ids=y2wrgi&ids=y2wrgi&name=merle.larkin&sertypeId=172&isSite=true&delFlag=5'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'status=818&existKey=0wzzvs&ids=rnapvb&ids=rnapvb&limit=10&delFlag=9&appType=x295c6&organId=104&description=g5txu8&q=4c9tdx&idArr=y6ty29&page=1&path=p8xm14&sertypeId=104&domainId=104&isDisabled=true&endTime=2025-11-12 15:24:04&isMobileApp=true&startTime=2025-11-12 15:24:04&mode=432&orderBy=411&isSite=true&ftpId=104&name=chung.hoeger&xzqhId=345'
 ```
 **Response-fields:**
 
@@ -5696,9 +4843,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lpa9x9",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "9qjpgq",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5729,7 +4876,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/104.do
 ```
 **Response-fields:**
 
@@ -5776,36 +4923,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:02",
-    "lastTime": "2025-10-20 18:26:02",
-    "id": "172",
-    "ftpId": "172",
-    "domainId": "172",
-    "organId": "172",
-    "xzqhId": 618,
-    "sertypeId": "172",
-    "name": "merle.larkin",
-    "path": "eyd3xs",
-    "appType": "l5u96g",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:32",
+    "lastTime": "2025-11-12 15:29:32",
+    "id": "104",
+    "ftpId": "104",
+    "domainId": "104",
+    "organId": "104",
+    "xzqhId": 904,
+    "sertypeId": "104",
+    "name": "chung.hoeger",
+    "path": "df8nh2",
+    "appType": "r3x43o",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 425,
-    "priority": 657,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:02",
-    "description": "ldo324",
-    "spare1": "n47owg",
-    "spare2": "0kvjae",
-    "xzqhName": "merle.larkin",
-    "ftpName": "merle.larkin",
-    "sertypeName": "merle.larkin",
-    "domainName": "merle.larkin",
-    "organName": "merle.larkin"
+    "status": 507,
+    "priority": 764,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:32",
+    "description": "y6v1bj",
+    "spare1": "rjqnx2",
+    "spare2": "gpjmpy",
+    "xzqhName": "chung.hoeger",
+    "ftpName": "chung.hoeger",
+    "sertypeName": "chung.hoeger",
+    "domainName": "chung.hoeger",
+    "organName": "chung.hoeger"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5843,7 +4990,6 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─xzqhId|int64|应用适用顶级行政区划ID|false|-
 └─xzqhName|string|应用适用顶级行政区划名称|false|-
 └─sertypeId|string|应用服务类型ID|false|-
-└─sertypeName|string|服务类型名称|false|-
 └─name|string|应用名称|false|-
 └─path|string|应用访问路径|false|-
 └─appType|string|应用类型，QUANBU全部领域，WORK工作端，H5移动端，SCREEN大屏端；B/S，C/S，独立应用，可多选|false|-
@@ -5862,31 +5008,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
   "data": {
-    "id": "172",
-    "ftpId": "172",
-    "ftpName": "merle.larkin",
-    "domainId": "172",
-    "domainName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "xzqhId": 830,
-    "xzqhName": "merle.larkin",
-    "sertypeId": "172",
-    "sertypeName": "merle.larkin",
-    "name": "merle.larkin",
-    "path": "sggo7a",
-    "appType": "34plp3",
+    "id": "104",
+    "ftpId": "104",
+    "ftpName": "chung.hoeger",
+    "domainId": "104",
+    "domainName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "xzqhId": 378,
+    "xzqhName": "chung.hoeger",
+    "sertypeId": "104",
+    "name": "chung.hoeger",
+    "path": "ig607o",
+    "appType": "yac0w5",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 61,
-    "statusName": "merle.larkin",
-    "priority": 112,
-    "createTime": "2025-10-20 18:26:02",
-    "description": "vvi26d",
-    "spare1": "7en5ji",
+    "status": 483,
+    "statusName": "chung.hoeger",
+    "priority": 805,
+    "createTime": "2025-11-12 15:29:32",
+    "description": "9k1dni",
+    "spare1": "44jrug",
     "statusMap": {
-      "mapKey": "xvw2mv"
+      "mapKey": "xmi32k"
     }
   }
 }'
@@ -5908,9 +5053,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gb0bp8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "8vklku",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -5948,7 +5093,6 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─xzqhId|int64|应用适用顶级行政区划ID|false|-
 └─xzqhName|string|应用适用顶级行政区划名称|false|-
 └─sertypeId|string|应用服务类型ID|false|-
-└─sertypeName|string|服务类型名称|false|-
 └─name|string|应用名称|false|-
 └─path|string|应用访问路径|false|-
 └─appType|string|应用类型，QUANBU全部领域，WORK工作端，H5移动端，SCREEN大屏端；B/S，C/S，独立应用，可多选|false|-
@@ -5967,31 +5111,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
   "data": {
-    "id": "172",
-    "ftpId": "172",
-    "ftpName": "merle.larkin",
-    "domainId": "172",
-    "domainName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "xzqhId": 944,
-    "xzqhName": "merle.larkin",
-    "sertypeId": "172",
-    "sertypeName": "merle.larkin",
-    "name": "merle.larkin",
-    "path": "yqbxy0",
-    "appType": "9tdsm2",
+    "id": "104",
+    "ftpId": "104",
+    "ftpName": "chung.hoeger",
+    "domainId": "104",
+    "domainName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "xzqhId": 779,
+    "xzqhName": "chung.hoeger",
+    "sertypeId": "104",
+    "name": "chung.hoeger",
+    "path": "xm568h",
+    "appType": "zqbud6",
     "isSite": true,
     "isOpen": true,
     "isMobileApp": true,
-    "status": 324,
-    "statusName": "merle.larkin",
-    "priority": 304,
-    "createTime": "2025-10-20 18:26:02",
-    "description": "6grh2f",
-    "spare1": "m0usod",
+    "status": 738,
+    "statusName": "chung.hoeger",
+    "priority": 764,
+    "createTime": "2025-11-12 15:29:32",
+    "description": "4wp8e5",
+    "spare1": "yrfkq6",
     "statusMap": {
-      "mapKey": "8z6lyt"
+      "mapKey": "t8f1ro"
     }
   }
 }'
@@ -6013,9 +5156,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "syirib",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "sl0s5b",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6065,9 +5208,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "o7inva",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "wqznhd",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6111,16 +5254,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/172.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/104.do --data '{
   "data": {
-    "id": "172",
+    "id": "104",
     "menuJsons": {
       "size": 10
     },
     "initJson": {},
-    "username": "merle.larkin",
-    "password": "q22izs",
-    "initPath": "i77abu"
+    "username": "chung.hoeger",
+    "password": "9zbvch",
+    "initPath": "90lel5"
   }
 }'
 ```
@@ -6144,8 +5287,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6189,9 +5332,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jqpq5c",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "no1gdj",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6247,7 +5390,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?description=hgbs5d&parentId=275&nameEn=pxx88h&parentIds=vptanw&parentIds=vptanw&lft=969&deleteTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52&areatypeId=172&orderBy=521&rgt=69&delFlag=5&page=1&ids=5v321r&ids=5v321r&likeQuery=2i6ean&isDisplay=true&sname=merle.larkin&areatypeIds=b4iidv&areatypeIds=b4iidv&q=7zww6c&startTime=2025-10-20 18:20:52&limit=10&countryId=172&searchCode=81486&code=81486&name=merle.larkin&nameTotal=l0g996&hasContent=true
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?limit=10&delFlag=9&page=1&sname=chung.hoeger&code=74128&nameEn=uhmgue&description=3p4y2z&countryId=104&parentId=424&name=chung.hoeger&q=6ubaza&areatypeIds=d1k7sv&areatypeIds=d1k7sv&rgt=357&lft=167&startTime=2025-11-12 15:24:04&orderBy=28&nameTotal=xxk4si&deleteTime=2025-11-12 15:24:04&hasContent=true&areatypeId=104&isDisplay=true&endTime=2025-11-12 15:24:04&parentIds=ky25fe&parentIds=ky25fe&likeQuery=okxplb&searchCode=74128&ids=eihg8w&ids=eihg8w
 ```
 **Response-fields:**
 
@@ -6296,41 +5439,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 66,
+    "totalCount": 783,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:03",
-        "lastTime": "2025-10-20 18:26:03",
-        "id": 393,
-        "parentId": 988,
-        "countryId": "172",
-        "areatypeId": "172",
-        "lft": 273,
-        "rgt": 572,
-        "code": "81486",
-        "name": "merle.larkin",
-        "nameTotal": "4zss2h",
-        "sname": "merle.larkin",
-        "nameEn": "ngh7md",
-        "searchCode": "81486",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:32",
+        "lastTime": "2025-11-12 15:29:32",
+        "id": 387,
+        "parentId": 568,
+        "countryId": "104",
+        "areatypeId": "104",
+        "lft": 517,
+        "rgt": 818,
+        "code": "74128",
+        "name": "chung.hoeger",
+        "nameTotal": "wdhnr5",
+        "sname": "chung.hoeger",
+        "nameEn": "757mtz",
+        "searchCode": "74128",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 179,
-        "delFlag": 5,
-        "deleteTime": "2025-10-20 18:26:03",
-        "description": "4mt87w",
-        "countryName": "merle.larkin",
-        "parentName": "merle.larkin",
-        "areatypeName": "merle.larkin"
+        "priority": 953,
+        "delFlag": 9,
+        "deleteTime": "2025-11-12 15:29:32",
+        "description": "8qxfp3",
+        "countryName": "chung.hoeger",
+        "parentName": "chung.hoeger",
+        "areatypeName": "chung.hoeger"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6381,7 +5524,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?spare2=y50yo6&spare1=jpbb4z&organName=merle.larkin&page=1&limit=10&name=merle.larkin&organCode=81486&startTime=2025-10-20 18:20:52&orderBy=539&xzqhId=864&unionCode=81486&key=55epwl&delFlag=5&description=iqh23d&ids=vqzexo&ids=vqzexo&source=476&endTime=2025-10-20 18:20:52&isOrganWork=ikuh48&createType=303&q=di0w3w&orgtypeId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?organCode=74128&spare2=n2073m&orgtypeId=104&source=588&ids=dyct45&ids=dyct45&description=u3fxg6&xzqhId=252&startTime=2025-11-12 15:24:04&orderBy=321&limit=10&page=1&spare1=apqqd5&key=0oaze2&isOrganWork=nx35zk&organName=chung.hoeger&createType=175&delFlag=9&name=chung.hoeger&unionCode=74128&q=704ibw&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -6411,22 +5554,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 424,
+    "totalCount": 147,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:03",
-        "lastTime": "2025-10-20 18:26:03",
-        "cmsKey": "dbg5ca",
-        "cmsValue": "ag8syl"
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:33",
+        "lastTime": "2025-11-12 15:29:33",
+        "cmsKey": "w5cl7r",
+        "cmsValue": "lwf30r"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6476,7 +5619,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddValue=qkaard&orderBy=982&listClass=y5qby3&status=zh2qn2&dictLabel=egairw&parentId=107&endTime=2025-10-20 18:20:52&cddId=785&typeCode=81486&dictSort=386&cssClass=p9fk8e&remark=g226gh&isDefault=6xqgy9&name=merle.larkin&page=1&startTime=2025-10-20 18:20:52&searchCode=81486&limit=10&q=hy4pxd&key=isotuk
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?parentId=222&dictLabel=6i8kb1&cddValue=ptqhgb&q=bsvu95&listClass=i5cxt0&typeCode=74128&searchCode=74128&orderBy=215&page=1&endTime=2025-11-12 15:24:04&cddId=50&cssClass=g2tx9v&startTime=2025-11-12 15:24:04&status=5qyp1p&key=0hw0up&limit=10&name=chung.hoeger&isDefault=bbxngc&dictSort=323&remark=fkmwmw
 ```
 **Response-fields:**
 
@@ -6514,30 +5657,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 807,
+    "totalCount": 520,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 509,
-        "typeCode": "81486",
-        "parentId": 551,
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "cddValue": "0o0bur",
-        "searchCode": "81486",
-        "priority": 519,
-        "createTime": "2025-10-20 18:26:06",
-        "remark": "tt0nxe",
-        "dictLabel": "uubcqh",
-        "typeCodeName": "merle.larkin",
-        "parentName": "merle.larkin"
+        "cddId": 535,
+        "typeCode": "74128",
+        "parentId": 915,
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "cddValue": "ffz777",
+        "searchCode": "74128",
+        "priority": 3,
+        "createTime": "2025-11-12 15:29:36",
+        "remark": "tqeco8",
+        "dictLabel": "be0lwv",
+        "typeCodeName": "chung.hoeger",
+        "parentName": "chung.hoeger"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6586,7 +5729,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'q=uvzshq&dictLabel=ceyeha&cddValue=782vi3&orderBy=396&limit=10&isDefault=pj6f9g&listClass=n7aqm1&parentId=666&cddId=662&page=1&remark=jsu342&dictSort=917&key=7e84bn&searchCode=81486&startTime=2025-10-20 18:20:52&typeCode=81486&endTime=2025-10-20 18:20:52&name=merle.larkin&cssClass=znsurs&status=8om0gi'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'q=rr0x6k&cddId=357&cddValue=1c83sc&orderBy=863&endTime=2025-11-12 15:24:04&typeCode=74128&startTime=2025-11-12 15:24:04&status=oalncc&name=chung.hoeger&page=1&dictLabel=zhz198&listClass=oavgvo&isDefault=lo92a3&key=86u6d2&searchCode=74128&dictSort=894&cssClass=msni4h&limit=10&remark=7sv28r&parentId=176'
 ```
 **Response-fields:**
 
@@ -6605,9 +5748,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cylshd",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "4fakqs",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6637,7 +5780,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/352.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/816.do
 ```
 **Response-fields:**
 
@@ -6670,22 +5813,22 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cddId": 987,
-    "typeCode": "81486",
-    "parentId": 745,
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "cddValue": "rjwed0",
-    "searchCode": "81486",
-    "priority": 342,
-    "createTime": "2025-10-20 18:26:06",
-    "remark": "gfofb0",
-    "dictLabel": "zm98xw",
-    "typeCodeName": "merle.larkin",
-    "parentName": "merle.larkin"
+    "cddId": 174,
+    "typeCode": "74128",
+    "parentId": 173,
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "cddValue": "u2l2ev",
+    "searchCode": "74128",
+    "priority": 890,
+    "createTime": "2025-11-12 15:29:36",
+    "remark": "ctlhjl",
+    "dictLabel": "1tl0f3",
+    "typeCodeName": "chung.hoeger",
+    "parentName": "chung.hoeger"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6724,7 +5867,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/x1gydn.do?zparentId=172&roletypeId=172&typeCode=81486&parentId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/llz3jz.do?zparentId=104&typeCode=74128&parentId=104&roletypeId=104
 ```
 **Response-fields:**
 
@@ -6746,8 +5889,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6792,19 +5935,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
   "data": {
-    "cddId": 204,
-    "typeCode": "81486",
-    "parentId": 566,
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "cddValue": "n7imsg",
-    "searchCode": "81486",
-    "priority": 169,
-    "createTime": "2025-10-20 18:26:06",
-    "remark": "j9m9vl",
-    "dictLabel": "bpwdz2",
-    "typeCodeName": "merle.larkin",
-    "parentName": "merle.larkin"
+    "cddId": 136,
+    "typeCode": "74128",
+    "parentId": 752,
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "cddValue": "pi4upg",
+    "searchCode": "74128",
+    "priority": 460,
+    "createTime": "2025-11-12 15:29:36",
+    "remark": "ghcs2o",
+    "dictLabel": "5p94pr",
+    "typeCodeName": "chung.hoeger",
+    "parentName": "chung.hoeger"
   }
 }'
 ```
@@ -6825,9 +5968,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "n5j52j",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "z75o7v",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6872,19 +6015,19 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
   "data": {
-    "cddId": 329,
-    "typeCode": "81486",
-    "parentId": 913,
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "cddValue": "yozulx",
-    "searchCode": "81486",
-    "priority": 158,
-    "createTime": "2025-10-20 18:26:06",
-    "remark": "h51nx3",
-    "dictLabel": "i6uwna",
-    "typeCodeName": "merle.larkin",
-    "parentName": "merle.larkin"
+    "cddId": 470,
+    "typeCode": "74128",
+    "parentId": 9,
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "cddValue": "xoh7i6",
+    "searchCode": "74128",
+    "priority": 392,
+    "createTime": "2025-11-12 15:29:36",
+    "remark": "y9yufq",
+    "dictLabel": "37dde2",
+    "typeCodeName": "chung.hoeger",
+    "parentName": "chung.hoeger"
   }
 }'
 ```
@@ -6905,9 +6048,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qt3zvv",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "y36mqk",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -6956,9 +6099,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ccv6sg",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "3387q6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7000,9 +6143,8 @@ groupId|string|会员组ID,返回岗位是否绑定|false|-
 roleId|string|角色ID|false|-
 roletypeId|string|角色类型ID|false|-
 positionId|string|岗位ID|false|-
-roleTypeId|string|角色类型id，注意大小写|false|-
 refType|string|标签类型过滤|false|-
-organwId|string|如果传入parentId为空，则通过organwId查自身所属机构节点|false|-
+organId|string|如果传入parentId为空，则通过organId查自身所属机构节点|false|-
 metaId|string|用于资源目录管理的字段|false|-
 appId|string|应用ID|false|-
 status|string|状态|false|-
@@ -7012,7 +6154,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?gnType=ks7scb&positionType=krx9oi&groupId=172&refresh=7ul6cb&parentId=172&status=ap0sxa&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&type=7on81r&subType=s22mck&refType=lq3gq2&roletypeId=172&showButton=66v8pg&limit=10&appId=172&wlType=uwhezh&orderBy=990&organwId=172&key=fzqdk7&roleTypeId=172&q=dujl2o&positionId=172&metaId=172&page=1&roleId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?organId=104&status=xit2i1&roletypeId=104&endTime=2025-11-12 15:24:04&wlType=08sie3&subType=p5ogyz&page=1&startTime=2025-11-12 15:24:04&refType=zigbs5&orderBy=226&roleId=104&appId=104&refresh=cogo08&q=ehxmp9&positionId=104&showButton=zlkvdc&parentId=104&positionType=cdaon9&key=tkqm6s&limit=10&gnType=4pd8oi&groupId=104&metaId=104&type=etzc4i
 ```
 **Response-fields:**
 
@@ -7046,18 +6188,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "172",
-      "label": "zlk7w2",
-      "shortName": "merle.larkin",
-      "organId": "172",
-      "areaId": 863,
-      "searchCode": "81486",
-      "childNum": 341,
+      "id": "104",
+      "label": "fskz66",
+      "shortName": "chung.hoeger",
+      "organId": "104",
+      "areaId": 107,
+      "searchCode": "74128",
+      "childNum": 818,
       "checked": true,
-      "entity": 425,
+      "entity": 18,
       "show": true,
       "showIcon": true,
-      "parentId": "172",
+      "parentId": "104",
       "children": [
         {
           "$ref": ".."
@@ -7065,8 +6207,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7117,7 +6259,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?startTime=2025-10-20 18:20:52&typeMode=bhmc4g&page=1&existKey=v76318&key=yk5vdj&orderBy=182&delFlag=5&typeCodes=yglg04&typeCodes=yglg04&searchCode=81486&ids=raaj39&ids=raaj39&cddLevel=7k3c1v&cddValue=micac0&typeCode=81486&isAllChild=qmhc0h&description=qbzy6h&parentId=542&limit=10&name=merle.larkin&dispFlag=ejt3xl&endTime=2025-10-20 18:20:52&q=o79pel&sname=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?typeCodes=er2wiu&typeCodes=er2wiu&cddValue=a2encw&name=chung.hoeger&sname=chung.hoeger&ids=li8ubw&ids=li8ubw&startTime=2025-11-12 15:24:04&dispFlag=gqwnhk&typeCode=74128&cddLevel=7zokl5&q=yzn9ux&searchCode=74128&page=1&isAllChild=wulfqu&delFlag=9&description=f5loxo&existKey=kivms4&orderBy=379&typeMode=9yna6l&key=dnausj&limit=10&endTime=2025-11-12 15:24:04&parentId=253
 ```
 **Response-fields:**
 
@@ -7157,24 +6299,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:07",
-      "lastTime": "2025-10-20 18:26:07",
-      "id": 33,
-      "typeCode": "81486",
-      "parentId": 885,
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "cddValue": "fvmou5",
-      "cddLevel": "n6nf1m",
-      "searchCode": "81486",
-      "dispFlag": "dad6fo",
-      "priority": 82,
-      "delFlag": 5,
-      "deleteTime": "2025-10-20 18:26:07",
-      "description": "opjkqi",
-      "spare1": "9p8afo",
-      "spare2": "5ca81b",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:36",
+      "lastTime": "2025-11-12 15:29:36",
+      "id": 240,
+      "typeCode": "74128",
+      "parentId": 990,
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "cddValue": "rgssdp",
+      "cddLevel": "q5esrt",
+      "searchCode": "74128",
+      "dispFlag": "m7pxo0",
+      "priority": 408,
+      "delFlag": 9,
+      "deleteTime": "2025-11-12 15:29:36",
+      "description": "pfzw0w",
+      "spare1": "y3ox13",
+      "spare2": "5k0cn2",
       "children": [
         {
           "$ref": ".."
@@ -7182,8 +6324,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7226,7 +6368,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?typeClass=a6odk4&name=merle.larkin&q=9f6agm&orderBy=296&page=1&key=l64jfz&typeMode=236&limit=10&status=jnfpli&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&typeId=172&remark=cr3c1j
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2025-11-12 15:24:04&name=chung.hoeger&typeClass=awbha0&limit=10&page=1&typeId=104&orderBy=501&status=xequ47&typeMode=324&q=qu6aju&remark=clmoek&key=hu7np7&startTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -7261,27 +6403,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 239,
+    "totalCount": 178,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "172",
-        "name": "merle.larkin",
-        "typeClass": "3g1g4s",
-        "typeRef": "eudhc2",
-        "typeMode": 981,
-        "searchCode": "81486",
-        "priority": 255,
-        "createTime": "2025-10-20 18:26:07",
-        "status": 531,
-        "remark": "qdnp6y"
+        "typeId": "104",
+        "name": "chung.hoeger",
+        "typeClass": "1pp122",
+        "typeRef": "hogos1",
+        "typeMode": 890,
+        "searchCode": "74128",
+        "priority": 955,
+        "createTime": "2025-11-12 15:29:36",
+        "status": 611,
+        "remark": "joalev"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7323,7 +6465,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'limit=10&orderBy=147&startTime=2025-10-20 18:20:52&page=1&typeClass=00qp6y&q=kjo21o&typeId=172&name=merle.larkin&status=i0wd4b&remark=9d2bge&endTime=2025-10-20 18:20:52&typeMode=368&key=ialtb5'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'page=1&remark=mm8c7p&limit=10&typeId=104&orderBy=377&name=chung.hoeger&typeClass=31uxpf&status=hqyuf9&key=bvzekn&startTime=2025-11-12 15:24:04&typeMode=689&endTime=2025-11-12 15:24:04&q=vcfwus'
 ```
 **Response-fields:**
 
@@ -7342,9 +6484,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x9aizn",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "enjjmn",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7374,7 +6516,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/104.do
 ```
 **Response-fields:**
 
@@ -7404,19 +6546,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "typeId": "172",
-    "name": "merle.larkin",
-    "typeClass": "vste6k",
-    "typeRef": "e3909u",
-    "typeMode": 192,
-    "searchCode": "81486",
-    "priority": 502,
-    "createTime": "2025-10-20 18:26:07",
-    "status": 44,
-    "remark": "90hu61"
+    "typeId": "104",
+    "name": "chung.hoeger",
+    "typeClass": "1i62ms",
+    "typeRef": "9t8xv0",
+    "typeMode": 815,
+    "searchCode": "74128",
+    "priority": 673,
+    "createTime": "2025-11-12 15:29:36",
+    "status": 939,
+    "remark": "bibp10"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7458,16 +6600,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
   "data": {
-    "typeId": "172",
-    "name": "merle.larkin",
-    "typeClass": "165o99",
-    "typeRef": "5s67v0",
-    "typeMode": 277,
-    "searchCode": "81486",
-    "priority": 625,
-    "createTime": "2025-10-20 18:26:07",
-    "status": 4,
-    "remark": "217oi9"
+    "typeId": "104",
+    "name": "chung.hoeger",
+    "typeClass": "xwk30n",
+    "typeRef": "8qx63h",
+    "typeMode": 380,
+    "searchCode": "74128",
+    "priority": 219,
+    "createTime": "2025-11-12 15:29:36",
+    "status": 970,
+    "remark": "exphfo"
   }
 }'
 ```
@@ -7488,9 +6630,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p0m5w8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "fojnxz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7532,16 +6674,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
   "data": {
-    "typeId": "172",
-    "name": "merle.larkin",
-    "typeClass": "k5utc4",
-    "typeRef": "6tpbx5",
-    "typeMode": 527,
-    "searchCode": "81486",
-    "priority": 569,
-    "createTime": "2025-10-20 18:26:07",
-    "status": 479,
-    "remark": "6oano6"
+    "typeId": "104",
+    "name": "chung.hoeger",
+    "typeClass": "zrhvs4",
+    "typeRef": "3wu174",
+    "typeMode": 36,
+    "searchCode": "74128",
+    "priority": 475,
+    "createTime": "2025-11-12 15:29:36",
+    "status": 654,
+    "remark": "m7780d"
   }
 }'
 ```
@@ -7562,9 +6704,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "66sg60",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "s0mf9w",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7613,9 +6755,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xs8ze5",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "iw85uj",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7658,9 +6800,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6c2t3d",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "yqcbsn",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7715,20 +6857,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "172",
-      "name": "merle.larkin",
-      "typeClass": "ypk8cb",
-      "typeRef": "jh7tgj",
-      "typeMode": 72,
-      "searchCode": "81486",
-      "priority": 0,
-      "createTime": "2025-10-20 18:26:07",
-      "status": 867,
-      "remark": "obiu2p"
+      "typeId": "104",
+      "name": "chung.hoeger",
+      "typeClass": "uwc7sv",
+      "typeRef": "8kmcnf",
+      "typeMode": 297,
+      "searchCode": "74128",
+      "priority": 652,
+      "createTime": "2025-11-12 15:29:37",
+      "status": 717,
+      "remark": "0yauo4"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7805,46 +6947,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 468,
-      "total": 8.37,
-      "sys": 1.61,
-      "used": 8.42,
-      "wait": 85.10,
-      "free": 85.90
+      "cpuNum": 441,
+      "total": 87.85,
+      "sys": 19.17,
+      "used": 45.97,
+      "wait": 53.83,
+      "free": 38.10
     },
     "mem": {
-      "total": 96.69,
-      "used": 99.70,
-      "free": 5.87
+      "total": 38.56,
+      "used": 62.41,
+      "free": 92.37
     },
     "jvm": {
-      "total": 72.81,
-      "max": 40.75,
-      "free": 44.81,
-      "version": "0.38",
-      "home": "r226yl"
+      "total": 87.37,
+      "max": 65.15,
+      "free": 16.59,
+      "version": "0.46",
+      "home": "wsttjd"
     },
     "sys": {
-      "computerName": "merle.larkin",
-      "computerIp": "137.119.212.174",
-      "userDir": "5fk6bt",
-      "osName": "merle.larkin",
-      "osArch": "7r5fx0"
+      "computerName": "chung.hoeger",
+      "computerIp": "239.116.167.16",
+      "userDir": "izcnkd",
+      "osName": "chung.hoeger",
+      "osArch": "6cguwe"
     },
     "sysFiles": [
       {
-        "dirName": "merle.larkin",
-        "sysTypeName": "merle.larkin",
-        "typeName": "merle.larkin",
-        "total": "1l6his",
-        "free": "j8ln8d",
-        "used": "f1bn5p",
-        "usage": 98.21
+        "dirName": "chung.hoeger",
+        "sysTypeName": "chung.hoeger",
+        "typeName": "chung.hoeger",
+        "total": "0qzw31",
+        "free": "mur71d",
+        "used": "u7na1j",
+        "usage": 90.03
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7885,7 +7027,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?page=1&q=1z1ebq&description=ks3o9h&limit=10&sname=merle.larkin&delFlag=5&orderBy=781&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&name=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?sname=chung.hoeger&description=76keaz&orderBy=167&page=1&startTime=2025-11-12 15:24:04&limit=10&name=chung.hoeger&delFlag=9&q=uer6u0&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -7915,19 +7057,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:04",
-      "lastTime": "2025-10-20 18:26:04",
-      "id": "172",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "priority": 544,
-      "delFlag": 5,
-      "description": "80wvpp"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:34",
+      "lastTime": "2025-11-12 15:29:34",
+      "id": "104",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "priority": 369,
+      "delFlag": 9,
+      "description": "tqr0un"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -7967,7 +7109,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'endTime=2025-10-20 18:20:52&description=xmaj4i&orderBy=815&delFlag=5&page=1&name=merle.larkin&sname=merle.larkin&limit=10&startTime=2025-10-20 18:20:52&q=jd204t'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'delFlag=9&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&page=1&q=7hzj8k&limit=10&orderBy=810&description=4namok&sname=chung.hoeger&name=chung.hoeger'
 ```
 **Response-fields:**
 
@@ -7986,9 +7128,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pzbr1k",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "nallms",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8048,18 +7190,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "id": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "priority": 57,
-    "delFlag": 5,
-    "description": "nhecri"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "priority": 200,
+    "delFlag": 9,
+    "description": "gkueie"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8101,15 +7243,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "id": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "priority": 326,
-    "delFlag": 5,
-    "description": "xere9k"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "priority": 439,
+    "delFlag": 9,
+    "description": "6rm6bq"
   }
 }'
 ```
@@ -8130,9 +7272,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sppnag",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "xwvvzt",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8174,15 +7316,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "id": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "priority": 965,
-    "delFlag": 5,
-    "description": "dtfwxu"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "priority": 189,
+    "delFlag": 9,
+    "description": "ycubj1"
   }
 }'
 ```
@@ -8203,9 +7345,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tvymnx",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "6lq1jy",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8255,9 +7397,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "r14dl6",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ojs25g",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8311,7 +7453,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?subType=xffvho&description=i2hakc&providerId=172&creatorId=172&providerName=merle.larkin&limit=10&type=xzcm7q&endTime=2025-10-20 18:20:52&content=akihfz&delFlag=5&startTime=2025-10-20 18:20:52&spare2=8ra33g&spare1=lrpfwj&name=merle.larkin&appId=172&orderBy=364&q=vsy2wb&page=1&signature=swhoje&organId=172&foreignId=172&status=778&id=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?id=104&subType=ksgphc&spare1=9keon4&signature=pa1xza&status=542&organId=104&q=9tsfp6&startTime=2025-11-12 15:24:04&appId=104&providerName=chung.hoeger&spare2=m8ss3s&orderBy=65&delFlag=9&creatorId=104&limit=10&content=cf8585&page=1&foreignId=104&name=chung.hoeger&endTime=2025-11-12 15:24:04&providerId=104&type=zidt3a&description=3liku5
 ```
 **Response-fields:**
 
@@ -8352,30 +7494,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:10",
-      "lastTime": "2025-10-20 18:26:10",
-      "id": "172",
-      "appId": "172",
-      "organId": "172",
-      "providerId": "172",
-      "providerName": "merle.larkin",
-      "foreignId": "172",
-      "type": "q9t9a6",
-      "subType": "wiwfkt",
-      "name": "merle.larkin",
-      "signature": "j2dam2",
-      "content": "ofmga4",
-      "priority": 166,
-      "status": 859,
-      "delFlag": 5,
-      "description": "jzc3sj",
-      "spare1": "m19fum",
-      "spare2": "1x9sr4"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:39",
+      "lastTime": "2025-11-12 15:29:39",
+      "id": "104",
+      "appId": "104",
+      "organId": "104",
+      "providerId": "104",
+      "providerName": "chung.hoeger",
+      "foreignId": "104",
+      "type": "mgb0dp",
+      "subType": "lktxiy",
+      "name": "chung.hoeger",
+      "signature": "ki8xnf",
+      "content": "2grnx9",
+      "priority": 292,
+      "status": 439,
+      "delFlag": 9,
+      "description": "6bq9zi",
+      "spare1": "6ngpde",
+      "spare2": "4b6zym"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8446,29 +7588,29 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "organId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "type": "midpp1",
-    "subType": "bzslnq",
-    "name": "merle.larkin",
-    "signature": "h3tfzb",
-    "content": "1ol9sy",
-    "priority": 602,
-    "status": 450,
-    "delFlag": 5,
-    "description": "odzmp1",
-    "spare1": "58ctai",
-    "spare2": "6xzjo4"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "organId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "type": "0h253o",
+    "subType": "np2a6f",
+    "name": "chung.hoeger",
+    "signature": "8whp24",
+    "content": "2wesl5",
+    "priority": 703,
+    "status": 85,
+    "delFlag": 9,
+    "description": "cfpv0t",
+    "spare1": "pw2ng7",
+    "spare2": "lt9r0s"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8521,26 +7663,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "organId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "type": "isemit",
-    "subType": "5t6mep",
-    "name": "merle.larkin",
-    "signature": "93udue",
-    "content": "lofslk",
-    "priority": 148,
-    "status": 104,
-    "delFlag": 5,
-    "description": "r4ele3",
-    "spare1": "nmxajj",
-    "spare2": "5ntgnl"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "organId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "type": "nzaogj",
+    "subType": "us32rc",
+    "name": "chung.hoeger",
+    "signature": "rbuu1j",
+    "content": "d0ag5g",
+    "priority": 219,
+    "status": 601,
+    "delFlag": 9,
+    "description": "6u49ak",
+    "spare1": "hdm4qs",
+    "spare2": "kmey5h"
   }
 }'
 ```
@@ -8561,9 +7703,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "t6w55l",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "6mp6tg",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8616,26 +7758,26 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "organId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "type": "9si6oz",
-    "subType": "wl2gp3",
-    "name": "merle.larkin",
-    "signature": "dhej14",
-    "content": "mwsyiq",
-    "priority": 926,
-    "status": 42,
-    "delFlag": 5,
-    "description": "1k8457",
-    "spare1": "g43mb7",
-    "spare2": "smblc0"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:40",
+    "lastTime": "2025-11-12 15:29:40",
+    "id": "104",
+    "appId": "104",
+    "organId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "type": "jk0yqy",
+    "subType": "vngey3",
+    "name": "chung.hoeger",
+    "signature": "3uizu6",
+    "content": "m0r0l4",
+    "priority": 989,
+    "status": 906,
+    "delFlag": 9,
+    "description": "uq059a",
+    "spare1": "i3affv",
+    "spare2": "2xwkm7"
   }
 }'
 ```
@@ -8656,9 +7798,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ntpgxd",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "cg5hch",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8708,9 +7850,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nj645v",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "rl3ak7",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8777,7 +7919,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?limit=10&opOrganId=172&appId=172&description=dyxpmd&msgAccountName=merle.larkin&creatorId=172&msgModuleName=merle.larkin&id=172&msgCreateTime=2025-10-20 18:26:09&msgContent=aukmfj&msgUserId=172&opUserId=172&startTime=2025-10-20 18:20:52&opOrganName=merle.larkin&q=dseudf&msgTitle=7xo2vy&msgUserName=merle.larkin&msgUrl=www.ben-grant.info&foreignId=172&msgAccountId=172&msgOrganName=merle.larkin&spare1=6egk3p&msgId=174&spare2=jc6h1q&msgType=32&msgOrganId=172&msgModuleId=172&page=1&endTime=2025-10-20 18:20:52&bizType=2ctb8k&msgLabels=1ae0ea&type=vwtvrv&orderBy=954&status=72ivwr&opTime=2025-10-20 18:26:09&msgAbstract=2l1i3j
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?spare1=5v8eoi&spare2=1gaop9&creatorId=104&limit=10&msgId=194&msgModuleName=chung.hoeger&opUserId=104&appId=104&opTime=2025-11-12 15:29:38&msgCreateTime=2025-11-12 15:29:38&msgType=519&msgAbstract=356yps&msgAccountId=104&type=g9dxqe&id=104&endTime=2025-11-12 15:24:04&status=8nmwlt&msgOrganName=chung.hoeger&msgTitle=9ctm9b&msgUserName=chung.hoeger&foreignId=104&msgModuleId=104&msgOrganId=104&msgAccountName=chung.hoeger&msgContent=tfq8l0&bizType=smlysz&q=s0frtk&msgUrl=www.winston-nienow.name&opOrganId=104&page=1&description=mg7v9k&msgLabels=iyoow2&opOrganName=chung.hoeger&startTime=2025-11-12 15:24:04&orderBy=661&msgUserId=104
 ```
 **Response-fields:**
 
@@ -8830,42 +7972,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:09",
-      "lastTime": "2025-10-20 18:26:09",
-      "id": "172",
-      "appId": "172",
-      "foreignId": "172",
-      "type": "ky2jz1",
-      "bizType": "77ky20",
-      "msgCreateTime": "2025-10-20 18:26:09",
-      "msgId": 796,
-      "msgType": 65,
-      "msgTitle": "xdgs41",
-      "msgAbstract": "jv7cnp",
-      "msgAccountId": "172",
-      "msgAccountName": "merle.larkin",
-      "msgModuleId": "172",
-      "msgModuleName": "merle.larkin",
-      "msgUserId": "172",
-      "msgUserName": "merle.larkin",
-      "msgOrganId": "172",
-      "msgOrganName": "merle.larkin",
-      "msgUrl": "www.ben-grant.info",
-      "msgLabels": "dazhv9",
-      "msgContent": "doyqe0",
-      "status": "3t7li0",
-      "opUserId": "172",
-      "opTime": "2025-10-20 18:26:09",
-      "opOrganId": "172",
-      "opOrganName": "merle.larkin",
-      "description": "4mv7nw",
-      "spare1": "5hx7cu",
-      "spare2": "95l92v"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:38",
+      "lastTime": "2025-11-12 15:29:38",
+      "id": "104",
+      "appId": "104",
+      "foreignId": "104",
+      "type": "du6h12",
+      "bizType": "eycnaw",
+      "msgCreateTime": "2025-11-12 15:29:38",
+      "msgId": 265,
+      "msgType": 402,
+      "msgTitle": "k00hdk",
+      "msgAbstract": "tf6f3v",
+      "msgAccountId": "104",
+      "msgAccountName": "chung.hoeger",
+      "msgModuleId": "104",
+      "msgModuleName": "chung.hoeger",
+      "msgUserId": "104",
+      "msgUserName": "chung.hoeger",
+      "msgOrganId": "104",
+      "msgOrganName": "chung.hoeger",
+      "msgUrl": "www.winston-nienow.name",
+      "msgLabels": "nljhhz",
+      "msgContent": "au4lf7",
+      "status": "x0r73r",
+      "opUserId": "104",
+      "opTime": "2025-11-12 15:29:38",
+      "opOrganId": "104",
+      "opOrganName": "chung.hoeger",
+      "description": "1rhp04",
+      "spare1": "py4t50",
+      "spare2": "xcmwg0"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -8931,7 +8073,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgType=171&description=nnsyg8&msgUserId=172&msgAbstract=m0vf0c&opUserId=172&foreignId=172&msgUrl=www.ben-grant.info&limit=10&q=zc8o5t&msgCreateTime=2025-10-20 18:26:09&msgUserName=merle.larkin&msgModuleName=merle.larkin&msgLabels=9hv7ia&opTime=2025-10-20 18:26:09&spare1=duvb4y&msgModuleId=172&status=ltdsz4&spare2=j9c936&msgId=455&page=1&msgAccountName=merle.larkin&type=o0pj50&bizType=59pgxe&creatorId=172&msgOrganId=172&orderBy=522&startTime=2025-10-20 18:20:52&id=172&msgTitle=j7u1a8&msgAccountId=172&opOrganName=merle.larkin&appId=172&msgOrganName=merle.larkin&msgContent=jqvyuc&opOrganId=172&endTime=2025-10-20 18:20:52'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgModuleName=chung.hoeger&msgType=662&status=roygsi&opUserId=104&spare2=935nx4&msgContent=6hq2tx&msgOrganId=104&opOrganName=chung.hoeger&msgAccountName=chung.hoeger&msgAbstract=ezuy8i&limit=10&q=8684h8&msgId=934&id=104&orderBy=144&msgAccountId=104&opTime=2025-11-12 15:29:38&appId=104&msgUserId=104&startTime=2025-11-12 15:24:04&foreignId=104&msgTitle=2k9ksx&page=1&msgUserName=chung.hoeger&endTime=2025-11-12 15:24:04&type=ne66a8&msgModuleId=104&msgUrl=www.winston-nienow.name&spare1=aho5ut&creatorId=104&opOrganId=104&bizType=sq0j7m&msgLabels=1j616h&msgCreateTime=2025-11-12 15:29:38&msgOrganName=chung.hoeger&description=83pzzh'
 ```
 **Response-fields:**
 
@@ -8950,9 +8092,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0moj41",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "wpw269",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9035,41 +8177,41 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:09",
-    "lastTime": "2025-10-20 18:26:09",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "0slaku",
-    "bizType": "ihanlw",
-    "msgCreateTime": "2025-10-20 18:26:09",
-    "msgId": 277,
-    "msgType": 876,
-    "msgTitle": "ife7wc",
-    "msgAbstract": "cbyw83",
-    "msgAccountId": "172",
-    "msgAccountName": "merle.larkin",
-    "msgModuleId": "172",
-    "msgModuleName": "merle.larkin",
-    "msgUserId": "172",
-    "msgUserName": "merle.larkin",
-    "msgOrganId": "172",
-    "msgOrganName": "merle.larkin",
-    "msgUrl": "www.ben-grant.info",
-    "msgLabels": "q2lpf5",
-    "msgContent": "ouygdl",
-    "status": "90ppbx",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:09",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "wbpp1f",
-    "spare1": "6um27j",
-    "spare2": "3ly340"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:38",
+    "lastTime": "2025-11-12 15:29:38",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "xbwqo3",
+    "bizType": "dvv2tn",
+    "msgCreateTime": "2025-11-12 15:29:38",
+    "msgId": 473,
+    "msgType": 737,
+    "msgTitle": "8jweng",
+    "msgAbstract": "yf7468",
+    "msgAccountId": "104",
+    "msgAccountName": "chung.hoeger",
+    "msgModuleId": "104",
+    "msgModuleName": "chung.hoeger",
+    "msgUserId": "104",
+    "msgUserName": "chung.hoeger",
+    "msgOrganId": "104",
+    "msgOrganName": "chung.hoeger",
+    "msgUrl": "www.winston-nienow.name",
+    "msgLabels": "25hz8t",
+    "msgContent": "c3hjdm",
+    "status": "9cedi9",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:38",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "m425qc",
+    "spare1": "0vqbc0",
+    "spare2": "207npc"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9134,38 +8276,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:09",
-    "lastTime": "2025-10-20 18:26:09",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "3vwie7",
-    "bizType": "hsso98",
-    "msgCreateTime": "2025-10-20 18:26:09",
-    "msgId": 822,
-    "msgType": 21,
-    "msgTitle": "ak9ai0",
-    "msgAbstract": "avv3jy",
-    "msgAccountId": "172",
-    "msgAccountName": "merle.larkin",
-    "msgModuleId": "172",
-    "msgModuleName": "merle.larkin",
-    "msgUserId": "172",
-    "msgUserName": "merle.larkin",
-    "msgOrganId": "172",
-    "msgOrganName": "merle.larkin",
-    "msgUrl": "www.ben-grant.info",
-    "msgLabels": "v0yy1q",
-    "msgContent": "94ttw5",
-    "status": "d0ct8k",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:09",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "tc7tth",
-    "spare1": "og9qqp",
-    "spare2": "1c4chs"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "jriy1o",
+    "bizType": "p3ato5",
+    "msgCreateTime": "2025-11-12 15:29:39",
+    "msgId": 258,
+    "msgType": 260,
+    "msgTitle": "eqcdfh",
+    "msgAbstract": "ajgvfb",
+    "msgAccountId": "104",
+    "msgAccountName": "chung.hoeger",
+    "msgModuleId": "104",
+    "msgModuleName": "chung.hoeger",
+    "msgUserId": "104",
+    "msgUserName": "chung.hoeger",
+    "msgOrganId": "104",
+    "msgOrganName": "chung.hoeger",
+    "msgUrl": "www.winston-nienow.name",
+    "msgLabels": "khei5n",
+    "msgContent": "epmlug",
+    "status": "3jyjfa",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:39",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "izbytq",
+    "spare1": "jzkoeh",
+    "spare2": "v7nctm"
   }
 }'
 ```
@@ -9186,9 +8328,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "xeo6kh",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "it9421",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9253,38 +8395,38 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:09",
-    "lastTime": "2025-10-20 18:26:09",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "m609fc",
-    "bizType": "s5o86g",
-    "msgCreateTime": "2025-10-20 18:26:09",
-    "msgId": 488,
-    "msgType": 317,
-    "msgTitle": "iqoego",
-    "msgAbstract": "9q131u",
-    "msgAccountId": "172",
-    "msgAccountName": "merle.larkin",
-    "msgModuleId": "172",
-    "msgModuleName": "merle.larkin",
-    "msgUserId": "172",
-    "msgUserName": "merle.larkin",
-    "msgOrganId": "172",
-    "msgOrganName": "merle.larkin",
-    "msgUrl": "www.ben-grant.info",
-    "msgLabels": "tefq0c",
-    "msgContent": "737y43",
-    "status": "y953bh",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:09",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "q82vsr",
-    "spare1": "c1dtz7",
-    "spare2": "hok1ks"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "mh6cg0",
+    "bizType": "inorrz",
+    "msgCreateTime": "2025-11-12 15:29:39",
+    "msgId": 9,
+    "msgType": 540,
+    "msgTitle": "iu1ue7",
+    "msgAbstract": "cbq4x8",
+    "msgAccountId": "104",
+    "msgAccountName": "chung.hoeger",
+    "msgModuleId": "104",
+    "msgModuleName": "chung.hoeger",
+    "msgUserId": "104",
+    "msgUserName": "chung.hoeger",
+    "msgOrganId": "104",
+    "msgOrganName": "chung.hoeger",
+    "msgUrl": "www.winston-nienow.name",
+    "msgLabels": "4fnowo",
+    "msgContent": "p4tbnv",
+    "status": "47hlra",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:39",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "qxh07u",
+    "spare1": "5fwdtx",
+    "spare2": "qqce88"
   }
 }'
 ```
@@ -9305,9 +8447,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fbp8gk",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "i1hp6w",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9357,9 +8499,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "j1o7mn",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "g36at1",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9391,7 +8533,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/t1jvi5.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/lc1scm.do
 ```
 **Response-fields:**
 
@@ -9410,9 +8552,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "03qnzu",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "4bqh8u",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9449,7 +8591,7 @@ limit|int32|分页每页条数，默认10条|false|-
 type|string|类型 RCYY人才预约，SJKB数据看板，SJPZ事件配置，SQ12345诉求12345|false|-
 status|int32|状态：0未初始化 1 已初始化， 2.初始化失败|false|-
 appId|string|应用Id|false|-
-roleTypeId|string|角色类型，R31 WEB，R32移动<br>对应字段：SYNC_MODE|false|-
+syncMode|string|角色类型，R31 WEB，R32移动<br>对应字段：SYNC_MODE|false|-
 groupId|int64|组id|false|-
 positionId|string|岗位id|false|-
 organId|string|机构id|false|-
@@ -9459,7 +8601,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?batchId=172&keyWords=ukhukw&orderBy=940&startTime=2025-10-20 18:20:52&page=1&appId=172&status=789&groupId=812&positionId=172&endTime=2025-10-20 18:20:52&q=bagx4k&type=ioqu3u&roleTypeId=172&limit=10&organId=172&areaId=986
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?q=cvdzkk&areaId=17&limit=10&type=v7i0yh&syncMode=go5c08&positionId=104&startTime=2025-11-12 15:24:04&groupId=489&batchId=104&orderBy=879&endTime=2025-11-12 15:24:04&status=396&organId=104&keyWords=6cci41&page=1&appId=104
 ```
 **Response-fields:**
 
@@ -9533,66 +8675,66 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 29,
+    "totalCount": 585,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:00",
-        "lastTime": "2025-10-20 18:26:00",
-        "id": 111,
-        "appId": "172",
-        "saveSource": "gzs2d8",
-        "unitName": "merle.larkin",
-        "name": "merle.larkin",
-        "idNum": "08fhct",
-        "duty": "51otuh",
-        "telephone": "1-203-302-2484",
-        "mobile": "(415) 540-6962",
-        "extInfo1": "8wxt2q",
-        "extInfo2": "3nv27f",
-        "extInfo3": "6hlu5k",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:29",
+        "lastTime": "2025-11-12 15:29:29",
+        "id": 549,
+        "appId": "104",
+        "saveSource": "yproad",
+        "unitName": "chung.hoeger",
+        "name": "chung.hoeger",
+        "idNum": "89noe9",
+        "duty": "ymjz3p",
+        "telephone": "1-641-218-8251",
+        "mobile": "(567) 281-2291",
+        "extInfo1": "967vv4",
+        "extInfo2": "njw67u",
+        "extInfo3": "nqaubw",
         "needInitUser": true,
-        "userId": "172",
+        "userId": "104",
         "needInitOrgan": true,
-        "organId": "172",
-        "type": "9xe4v2",
-        "foreignUrl": "www.ben-grant.info",
-        "bizType": 263,
-        "bizOrganId": "172",
-        "bizAreaId": 461,
-        "bizGroupId": 172,
-        "bizPower": "xtjacw",
-        "bizMultiInfo": "9v594g",
+        "organId": "104",
+        "type": "x1v1zg",
+        "foreignUrl": "www.winston-nienow.name",
+        "bizType": 341,
+        "bizOrganId": "104",
+        "bizAreaId": 137,
+        "bizGroupId": 643,
+        "bizPower": "rzjzqn",
+        "bizMultiInfo": "p0zspu",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "172",
-        "opOrganId": "172",
-        "opTime": "2025-10-20 18:26:00",
-        "opInfo": "t10cmm",
-        "priority": 300,
-        "status": 890,
-        "delFlag": 5,
-        "dataBatch": "35wqoy",
-        "dataVersion": 149,
-        "updateTime": "2025-10-20 18:26:00",
-        "syncMode": "mxep30",
-        "syncTime": "2025-10-20 18:26:00",
-        "description": "lqtn26",
-        "groupName": "merle.larkin",
-        "positionName": "merle.larkin",
-        "bizPowerName": "merle.larkin",
-        "subdistrictName": "merle.larkin",
-        "communityName": "merle.larkin"
+        "opUserId": "104",
+        "opOrganId": "104",
+        "opTime": "2025-11-12 15:29:29",
+        "opInfo": "zx7qzz",
+        "priority": 6,
+        "status": 385,
+        "delFlag": 9,
+        "dataBatch": "7dlhif",
+        "dataVersion": 347,
+        "updateTime": "2025-11-12 15:29:29",
+        "syncMode": "mpa6ta",
+        "syncTime": "2025-11-12 15:29:29",
+        "description": "c9rtuz",
+        "groupName": "chung.hoeger",
+        "positionName": "chung.hoeger",
+        "bizPowerName": "chung.hoeger",
+        "subdistrictName": "chung.hoeger",
+        "communityName": "chung.hoeger"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9628,7 +8770,7 @@ limit|int32|分页每页条数，默认10条|false|-
 type|string|类型 RCYY人才预约，SJKB数据看板，SJPZ事件配置，SQ12345诉求12345|false|-
 status|int32|状态：0未初始化 1 已初始化， 2.初始化失败|false|-
 appId|string|应用Id|false|-
-roleTypeId|string|角色类型，R31 WEB，R32移动<br>对应字段：SYNC_MODE|false|-
+syncMode|string|角色类型，R31 WEB，R32移动<br>对应字段：SYNC_MODE|false|-
 groupId|int64|组id|false|-
 positionId|string|岗位id|false|-
 organId|string|机构id|false|-
@@ -9638,7 +8780,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'startTime=2025-10-20 18:20:52&batchId=172&roleTypeId=172&status=810&endTime=2025-10-20 18:20:52&page=1&orderBy=468&areaId=105&q=tmzb6q&groupId=851&type=0zu6nv&organId=172&limit=10&keyWords=c658q0&appId=172&positionId=172'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'page=1&appId=104&batchId=104&type=zfcecv&areaId=384&orderBy=221&positionId=104&status=17&q=8bvplt&groupId=73&syncMode=th3myk&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&limit=10&organId=104&keyWords=jbjeev'
 ```
 **Response-fields:**
 
@@ -9657,9 +8799,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q24xrx",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "jmsk1c",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9690,7 +8832,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/914.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/74.do
 ```
 **Response-fields:**
 
@@ -9759,58 +8901,58 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:00",
-    "lastTime": "2025-10-20 18:26:00",
-    "id": 317,
-    "appId": "172",
-    "saveSource": "m15pp8",
-    "unitName": "merle.larkin",
-    "name": "merle.larkin",
-    "idNum": "dr0r6x",
-    "duty": "3sawg4",
-    "telephone": "1-203-302-2484",
-    "mobile": "(415) 540-6962",
-    "extInfo1": "yvnjt8",
-    "extInfo2": "8y4mza",
-    "extInfo3": "y4105s",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": 913,
+    "appId": "104",
+    "saveSource": "1h9etg",
+    "unitName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "idNum": "hwc5nd",
+    "duty": "liydue",
+    "telephone": "1-641-218-8251",
+    "mobile": "(567) 281-2291",
+    "extInfo1": "dlvvbq",
+    "extInfo2": "m5qeqf",
+    "extInfo3": "19qkyy",
     "needInitUser": true,
-    "userId": "172",
+    "userId": "104",
     "needInitOrgan": true,
-    "organId": "172",
-    "type": "37wvwe",
-    "foreignUrl": "www.ben-grant.info",
-    "bizType": 626,
-    "bizOrganId": "172",
-    "bizAreaId": 335,
-    "bizGroupId": 191,
-    "bizPower": "7i5wla",
-    "bizMultiInfo": "rr7mia",
+    "organId": "104",
+    "type": "alr86u",
+    "foreignUrl": "www.winston-nienow.name",
+    "bizType": 294,
+    "bizOrganId": "104",
+    "bizAreaId": 974,
+    "bizGroupId": 786,
+    "bizPower": "yvswrd",
+    "bizMultiInfo": "gjno9c",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "172",
-    "opOrganId": "172",
-    "opTime": "2025-10-20 18:26:00",
-    "opInfo": "abijyl",
-    "priority": 668,
-    "status": 501,
-    "delFlag": 5,
-    "dataBatch": "kjmaq5",
-    "dataVersion": 234,
-    "updateTime": "2025-10-20 18:26:00",
-    "syncMode": "1sqq4n",
-    "syncTime": "2025-10-20 18:26:00",
-    "description": "q5ax80",
-    "groupName": "merle.larkin",
-    "positionName": "merle.larkin",
-    "bizPowerName": "merle.larkin",
-    "subdistrictName": "merle.larkin",
-    "communityName": "merle.larkin"
+    "opUserId": "104",
+    "opOrganId": "104",
+    "opTime": "2025-11-12 15:29:30",
+    "opInfo": "if80tl",
+    "priority": 292,
+    "status": 460,
+    "delFlag": 9,
+    "dataBatch": "pi3alc",
+    "dataVersion": 905,
+    "updateTime": "2025-11-12 15:29:30",
+    "syncMode": "ys6xu7",
+    "syncTime": "2025-11-12 15:29:30",
+    "description": "crm7ib",
+    "groupName": "chung.hoeger",
+    "positionName": "chung.hoeger",
+    "bizPowerName": "chung.hoeger",
+    "subdistrictName": "chung.hoeger",
+    "communityName": "chung.hoeger"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -9887,50 +9029,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:00",
-    "lastTime": "2025-10-20 18:26:00",
-    "id": 540,
-    "appId": "172",
-    "saveSource": "kga1tp",
-    "unitName": "merle.larkin",
-    "name": "merle.larkin",
-    "idNum": "nkaezs",
-    "duty": "1nzsgw",
-    "telephone": "1-203-302-2484",
-    "mobile": "(415) 540-6962",
-    "extInfo1": "lxsb0l",
-    "extInfo2": "14utbk",
-    "extInfo3": "nl2zcv",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": 989,
+    "appId": "104",
+    "saveSource": "cn7a35",
+    "unitName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "idNum": "jrrkeg",
+    "duty": "pgn60d",
+    "telephone": "1-641-218-8251",
+    "mobile": "(567) 281-2291",
+    "extInfo1": "zj5jaq",
+    "extInfo2": "ai4l6g",
+    "extInfo3": "5s2u4v",
     "needInitUser": true,
-    "userId": "172",
+    "userId": "104",
     "needInitOrgan": true,
-    "organId": "172",
-    "type": "ivq1rr",
-    "foreignUrl": "www.ben-grant.info",
-    "bizType": 476,
-    "bizOrganId": "172",
-    "bizAreaId": 986,
-    "bizGroupId": 989,
-    "bizPower": "u26axm",
-    "bizMultiInfo": "7prwox",
+    "organId": "104",
+    "type": "65ot6z",
+    "foreignUrl": "www.winston-nienow.name",
+    "bizType": 6,
+    "bizOrganId": "104",
+    "bizAreaId": 491,
+    "bizGroupId": 717,
+    "bizPower": "l9eai9",
+    "bizMultiInfo": "wkxzv5",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "172",
-    "opOrganId": "172",
-    "opTime": "2025-10-20 18:26:00",
-    "opInfo": "qhjv82",
-    "priority": 913,
-    "status": 171,
-    "delFlag": 5,
-    "dataBatch": "yrfhew",
-    "dataVersion": 702,
-    "updateTime": "2025-10-20 18:26:00",
-    "syncMode": "psacot",
-    "syncTime": "2025-10-20 18:26:00",
-    "description": "997rhb"
+    "opUserId": "104",
+    "opOrganId": "104",
+    "opTime": "2025-11-12 15:29:30",
+    "opInfo": "fbmfcl",
+    "priority": 639,
+    "status": 128,
+    "delFlag": 9,
+    "dataBatch": "wqn6f2",
+    "dataVersion": 689,
+    "updateTime": "2025-11-12 15:29:30",
+    "syncMode": "ti7vcy",
+    "syncTime": "2025-11-12 15:29:30",
+    "description": "jsoi3t"
   }
 }'
 ```
@@ -9951,9 +9093,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0yesbr",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "9egqns",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10030,50 +9172,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:00",
-    "lastTime": "2025-10-20 18:26:00",
-    "id": 618,
-    "appId": "172",
-    "saveSource": "qgexw3",
-    "unitName": "merle.larkin",
-    "name": "merle.larkin",
-    "idNum": "gc3d9k",
-    "duty": "xyqxnh",
-    "telephone": "1-203-302-2484",
-    "mobile": "(415) 540-6962",
-    "extInfo1": "cyjn7k",
-    "extInfo2": "ah66q1",
-    "extInfo3": "5u9ibo",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": 893,
+    "appId": "104",
+    "saveSource": "fxxfdk",
+    "unitName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "idNum": "ur811q",
+    "duty": "6o81m7",
+    "telephone": "1-641-218-8251",
+    "mobile": "(567) 281-2291",
+    "extInfo1": "hrftdy",
+    "extInfo2": "9tzj6s",
+    "extInfo3": "k9e56n",
     "needInitUser": true,
-    "userId": "172",
+    "userId": "104",
     "needInitOrgan": true,
-    "organId": "172",
-    "type": "j6kfi2",
-    "foreignUrl": "www.ben-grant.info",
-    "bizType": 281,
-    "bizOrganId": "172",
-    "bizAreaId": 550,
-    "bizGroupId": 491,
-    "bizPower": "pmzap3",
-    "bizMultiInfo": "2lu1df",
+    "organId": "104",
+    "type": "xmb4zp",
+    "foreignUrl": "www.winston-nienow.name",
+    "bizType": 43,
+    "bizOrganId": "104",
+    "bizAreaId": 69,
+    "bizGroupId": 412,
+    "bizPower": "7w9361",
+    "bizMultiInfo": "ubprys",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "172",
-    "opOrganId": "172",
-    "opTime": "2025-10-20 18:26:00",
-    "opInfo": "047s92",
-    "priority": 544,
-    "status": 403,
-    "delFlag": 5,
-    "dataBatch": "ew2tm5",
-    "dataVersion": 311,
-    "updateTime": "2025-10-20 18:26:00",
-    "syncMode": "jxqod6",
-    "syncTime": "2025-10-20 18:26:00",
-    "description": "86x172"
+    "opUserId": "104",
+    "opOrganId": "104",
+    "opTime": "2025-11-12 15:29:30",
+    "opInfo": "cokx98",
+    "priority": 174,
+    "status": 496,
+    "delFlag": 9,
+    "dataBatch": "2pra3j",
+    "dataVersion": 833,
+    "updateTime": "2025-11-12 15:29:30",
+    "syncMode": "rggno8",
+    "syncTime": "2025-11-12 15:29:30",
+    "description": "q4vk4l"
   }
 }'
 ```
@@ -10094,9 +9236,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "tu4hb8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "1qiksk",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10146,9 +9288,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rujenz",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "syepwe",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10192,9 +9334,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "frz69q",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vw8og6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10225,11 +9367,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
   "data": {
-    "username": "merle.larkin",
-    "password": "47ydx1",
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "appId": "172"
+    "username": "chung.hoeger",
+    "password": "j8skrd",
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "appId": "104"
   }
 }'
 ```
@@ -10250,9 +9392,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "dd83w7",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vp09aw",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10297,7 +9439,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?infoId=591&username=merle.larkin&q=evtjoz&orderBy=434&limit=10&endTime=2025-10-20 18:20:52&loginTime=2025-10-20 18:26:02&ipaddr=25b81w&status=s2t834&msg=z46ur8&browser=z2ykft&os=hqus8s&page=1&startTime=2025-10-20 18:20:52
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?orderBy=797&msg=50hyez&ipaddr=esr11g&startTime=2025-11-12 15:24:04&browser=2v954m&q=dwzc71&page=1&os=v4j58t&infoId=71&endTime=2025-11-12 15:24:04&limit=10&status=oq6f6r&username=chung.hoeger&loginTime=2025-11-12 15:29:31
 ```
 **Response-fields:**
 
@@ -10332,27 +9474,27 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 80,
+    "totalCount": 529,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 536,
-        "username": "merle.larkin",
-        "status": "p7giel",
-        "ipaddr": "l2u0w3",
-        "loginLocation": "hbz086",
-        "browser": "h18tkz",
-        "os": "l1nbqb",
-        "msg": "5kuamn",
-        "loginTime": "2025-10-20 18:26:02",
-        "remark": "6wsy1k"
+        "infoId": 869,
+        "username": "chung.hoeger",
+        "status": "mu02o5",
+        "ipaddr": "f9a36e",
+        "loginLocation": "ega78t",
+        "browser": "tuzsm2",
+        "os": "c1oo4n",
+        "msg": "mvjj4i",
+        "loginTime": "2025-11-12 15:29:31",
+        "remark": "2onlyx"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10396,7 +9538,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'startTime=2025-10-20 18:20:52&limit=10&infoId=252&status=zqxmwn&browser=684nal&username=merle.larkin&orderBy=11&msg=9ya476&q=c2x8ss&endTime=2025-10-20 18:20:52&loginTime=2025-10-20 18:26:02&os=f6cgrn&page=1&ipaddr=kzidmz'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'endTime=2025-11-12 15:24:04&orderBy=416&loginTime=2025-11-12 15:29:31&os=lkf5ej&startTime=2025-11-12 15:24:04&username=chung.hoeger&browser=cxmotw&q=qvjups&page=1&limit=10&infoId=972&status=4jqoj7&ipaddr=npoz1z&msg=iuq4nc'
 ```
 **Response-fields:**
 
@@ -10415,9 +9557,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lrn9en",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ow22dr",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10467,9 +9609,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uc74go",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "by9zuv",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10513,9 +9655,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4bqup9",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "0tubpi",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -10546,7 +9688,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/merle.larkin.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -10565,1660 +9707,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "l40al8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-## 管理用户增删改操作控制类
-### AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行新增操作.
-**URL:** https://linlan.net/eframe_backend/api/admin/user/save.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行新增操作.
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:56",
-    "lastTime": "2025-10-20 18:25:56",
-    "id": 709,
-    "userId": "172",
-    "deptId": 31,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "iwox4b",
-    "password": "n3cg42",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 981,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:56",
-    "description": "3xdw2t",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:56",
-      "lastTime": "2025-10-20 18:25:56",
-      "id": 755,
-      "organId": "172",
-      "parentId": 475,
-      "appId": "172",
-      "depttypeId": 878,
-      "foreignId": "172",
-      "createType": 97,
-      "type": "4736sb",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "6gnjjm",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "rt8v3a",
-      "priority": 755,
-      "status": 975,
-      "delFlag": 5,
-      "description": "l2epoc",
-      "spare1": "uuhlqu",
-      "spare2": "l72gtp",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "id": 992,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 332,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 509,
-        "description": "myq3y8",
-        "areaType": "hq0y12"
-      }
-    ],
-    "roleIds": [
-      100
-    ],
-    "positionIds": [
-      "54afr3"
-    ],
-    "roleId": 371,
-    "userRoleList": [
-      {
-        "id": 26,
-        "deptId": 328,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 937,
-        "roleName": "merle.larkin",
-        "adminId": 309
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "ycinlt",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行修改操作.
-**URL:** https://linlan.net/eframe_backend/api/admin/user/update.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行修改操作.
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:56",
-    "lastTime": "2025-10-20 18:25:56",
-    "id": 580,
-    "userId": "172",
-    "deptId": 412,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "p1o4nt",
-    "password": "3ds2bj",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 519,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:56",
-    "description": "nhgpdv",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:56",
-      "lastTime": "2025-10-20 18:25:56",
-      "id": 317,
-      "organId": "172",
-      "parentId": 987,
-      "appId": "172",
-      "depttypeId": 203,
-      "foreignId": "172",
-      "createType": 744,
-      "type": "dwgah7",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "69cyel",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "5hhxd1",
-      "priority": 320,
-      "status": 91,
-      "delFlag": 5,
-      "description": "b3rxwv",
-      "spare1": "fxtbwa",
-      "spare2": "emnf0t",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "id": 145,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 580,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 968,
-        "description": "ljqabc",
-        "areaType": "jvqesm"
-      }
-    ],
-    "roleIds": [
-      179
-    ],
-    "positionIds": [
-      "umedzp"
-    ],
-    "roleId": 667,
-    "userRoleList": [
-      {
-        "id": 343,
-        "deptId": 437,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 470,
-        "roleName": "merle.larkin",
-        "adminId": 204
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "sifm7a",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 停用启用用户
-**URL:** https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 停用启用用户
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|企业管理用户ID|false|-
-└─userId|string|系统管理用户ID|false|-
-└─organId|string|机构ID|false|-
-└─deptId|int64|单位ID|false|-
-└─createType|int32|创建方式0导入1录入2授权|false|-
-└─name|string|显示名称，可设置为用户名、手机号、昵称、真名|false|-
-└─username|string|用户名|false|-
-└─mobile|string|手机号码|false|-
-└─email|string|电子邮箱|false|-
-└─password|string|密码|false|-
-└─salt|string|混淆字符|false|-
-└─imagePath|string|头像|false|-
-└─adminType|string|管理类型：ADMIN管理员，DEMO演示用户|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─adminRange|string|管理的范围配置JSON，APP_ID或者SITE_ID的数组，或者单个APP_ID|false|-
-└─adminPerms|string|管理权限JSON|false|-
-└─lastAppId|string|最后登录的应用ID|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─loginCount|int32|登录次数|false|-
-└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|false|-
-└─spare1|string|备用1|false|-
-└─spare2|string|备用2|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:56",
-    "lastTime": "2025-10-20 18:25:56",
-    "id": 722,
-    "userId": "172",
-    "organId": "172",
-    "deptId": 289,
-    "createType": 442,
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "mobile": "(415) 540-6962",
-    "email": "vivian.streich@hotmail.com",
-    "password": "tb1r27",
-    "salt": "dcyx5h",
-    "imagePath": "ij6kvn",
-    "adminType": "9u9mn0",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "adminRange": "2aqyuu",
-    "adminPerms": "ixlx49",
-    "lastAppId": "172",
-    "lastLoginTime": "2025-10-20 18:25:56",
-    "lastLoginIp": "137.119.212.174",
-    "loginCount": 864,
-    "status": 876,
-    "delFlag": 5,
-    "spare1": "m0f6de",
-    "spare2": "235qam",
-    "roleIds": [
-      204
-    ],
-    "positionIds": [
-      "uxdoc7"
-    ]
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "2hmrx2",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 重置密码
-**URL:** https://linlan.net/eframe_backend/api/admin/user/resetpassword/{ids}.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 重置密码
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-ids|array| 管理员Ids,[array of int64]|true|
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:56",
-    "lastTime": "2025-10-20 18:25:56",
-    "id": 178,
-    "userId": "172",
-    "deptId": 511,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "e9dw24",
-    "password": "uru8em",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 832,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:56",
-    "description": "d8zgds",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:56",
-      "lastTime": "2025-10-20 18:25:56",
-      "id": 846,
-      "organId": "172",
-      "parentId": 584,
-      "appId": "172",
-      "depttypeId": 813,
-      "foreignId": "172",
-      "createType": 938,
-      "type": "6xc0lc",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "x2cj4w",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "h58ju9",
-      "priority": 218,
-      "status": 596,
-      "delFlag": 5,
-      "description": "jihkkn",
-      "spare1": "vzgr5q",
-      "spare2": "wo5q10",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "id": 801,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 31,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 698,
-        "description": "13f8xm",
-        "areaType": "qs6a24"
-      }
-    ],
-    "roleIds": [
-      173
-    ],
-    "positionIds": [
-      "7vxx5c"
-    ],
-    "roleId": 934,
-    "userRoleList": [
-      {
-        "id": 396,
-        "deptId": 194,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 270,
-        "roleName": "merle.larkin",
-        "adminId": 144
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "dvss2a",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 删除用户
-**URL:** https://linlan.net/eframe_backend/api/admin/user/delete/{adminIds}.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 删除用户
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-adminIds|array| 管理员Ids,[array of int64]|true|
-
-**Request-example:**
-```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/delete/.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "4kvh6f",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户数据导出
-**URL:** https://linlan.net/eframe_backend/api/admin/user/export.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 用户数据导出
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
-orderBy|int32|排序，默认主键倒序|false|-
-startTime|string|开始时间|false|-
-endTime|string|结束时间|false|-
-page|int32|分页信息：默认第1页|false|-
-limit|int32|分页每页条数，默认10条|false|-
-adminId|int64|用户LID|false|-
-userId|string|用户UUID|false|-
-deptId|int64|部门ID|false|-
-organId|string|机构ID|false|-
-username|string|用户账号|false|-
-nickName|string|用户昵称|false|-
-email|string|用户邮箱|false|-
-mobile|string|手机号码|false|-
-status|string|帐号状态（0未生效 1正常）|false|-
-delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'startTime=2025-10-20 18:20:52&mobile=(415) 540-6962&q=42d78v&orderBy=974&page=1&userId=172&organId=172&email=vivian.streich@hotmail.com&deptId=118&nickName=renna.dibbert&username=merle.larkin&endTime=2025-10-20 18:20:52&adminId=46&status=ado2nr&delFlag=5&limit=10'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "0creh2",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户数据导入
-**URL:** https://linlan.net/eframe_backend/api/admin/user/importData.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** multipart/form-data
-
-**Description:** 用户数据导入
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-file|file| 文件|true|-
-updateSupport|boolean|    是否支持更新|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importData.do --data 'updateSupport=true'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "1f2v32",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户导入模板下载
-**URL:** https://linlan.net/eframe_backend/api/admin/user/importTemplate.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 用户导入模板下载
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Request-example:**
-```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importTemplate.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "5r1gdg",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 重置密码
-**URL:** https://linlan.net/eframe_backend/api/admin/user/resetPwd.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 重置密码
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:57",
-    "lastTime": "2025-10-20 18:25:57",
-    "id": 373,
-    "userId": "172",
-    "deptId": 307,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "nh9yz7",
-    "password": "mciyp0",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 83,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:57",
-    "description": "n62rlr",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "id": 566,
-      "organId": "172",
-      "parentId": 401,
-      "appId": "172",
-      "depttypeId": 354,
-      "foreignId": "172",
-      "createType": 970,
-      "type": "3h2f0v",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "ow66n4",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "524tt6",
-      "priority": 185,
-      "status": 592,
-      "delFlag": 5,
-      "description": "1urh6b",
-      "spare1": "jz89k8",
-      "spare2": "rhk0cg",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:57",
-        "lastTime": "2025-10-20 18:25:57",
-        "id": 275,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 136,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 773,
-        "description": "lir1bu",
-        "areaType": "bisi55"
-      }
-    ],
-    "roleIds": [
-      356
-    ],
-    "positionIds": [
-      "d80a46"
-    ],
-    "roleId": 741,
-    "userRoleList": [
-      {
-        "id": 401,
-        "deptId": 615,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 618,
-        "roleName": "merle.larkin",
-        "adminId": 852
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "6bt2vs",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户状态修改
-**URL:** https://linlan.net/eframe_backend/api/admin/user/changeStatus.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 用户状态修改
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-data|object|请求数据对象，放入RequestBody内|false|-
-└─creatorId|string|创建人id|false|-
-└─createTime|string|创建时间|false|-
-└─lastTime|string|最后修改时间|false|-
-└─id|int64|用户LID|false|-
-└─userId|string|用户UUID|false|-
-└─deptId|int64|部门ID|false|-
-└─deptName|string|部门名称|false|-
-└─organId|string|机构ID|false|-
-└─organName|string|机构名称|false|-
-└─name|string|人员姓名|false|-
-└─username|string|用户账号|false|-
-└─nickName|string|用户昵称|false|-
-└─email|string|用户邮箱|false|-
-└─mobile|string|手机号码|false|-
-└─imagePath|string|用户头像|false|-
-└─password|string|密码|false|-
-└─isSuperAdmin|boolean|是否超级管理员|false|-
-└─isAuditAdmin|boolean|是否审计只读管理员|false|-
-└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
-└─status|int32|帐号状态（0未生效 1正常）|false|-
-└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
-└─lastLoginIp|string|最后登录IP|false|-
-└─lastLoginTime|string|最后登录时间|false|-
-└─description|string|备注,办公地址|false|-
-└─dept|object|部门对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
-└─roles|array|角色对象|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
-└─roleIds|array|角色组|false|-
-└─positionIds|array|岗位组|false|-
-└─roleId|int64|角色ID|false|-
-└─userRoleList|array|角色集合|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
-└─code|string|验证码|false|-
-└─uuid|string|uuid标识|false|-
-
-**Request-example:**
-```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
-  "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:57",
-    "lastTime": "2025-10-20 18:25:57",
-    "id": 592,
-    "userId": "172",
-    "deptId": 549,
-    "deptName": "merle.larkin",
-    "organId": "172",
-    "organName": "merle.larkin",
-    "name": "merle.larkin",
-    "username": "merle.larkin",
-    "nickName": "renna.dibbert",
-    "email": "vivian.streich@hotmail.com",
-    "mobile": "(415) 540-6962",
-    "imagePath": "b9a1qb",
-    "password": "j1urzi",
-    "isSuperAdmin": true,
-    "isAuditAdmin": true,
-    "isSelfAdmin": true,
-    "status": 864,
-    "delFlag": 5,
-    "lastLoginIp": "137.119.212.174",
-    "lastLoginTime": "2025-10-20 18:25:57",
-    "description": "ri4yq7",
-    "dept": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "id": 520,
-      "organId": "172",
-      "parentId": 195,
-      "appId": "172",
-      "depttypeId": 453,
-      "foreignId": "172",
-      "createType": 153,
-      "type": "lug5uq",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "ug3kk7",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "eneyrh",
-      "priority": 315,
-      "status": 209,
-      "delFlag": 5,
-      "description": "u14kuj",
-      "spare1": "xdwx7i",
-      "spare2": "7y0i4j",
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    },
-    "roles": [
-      {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:57",
-        "lastTime": "2025-10-20 18:25:57",
-        "id": 282,
-        "roletypeId": "172",
-        "appId": "172",
-        "name": "merle.larkin",
-        "code": "81486",
-        "priority": 253,
-        "isRegular": true,
-        "isSuper": true,
-        "isPublic": true,
-        "status": 268,
-        "description": "tpipu0",
-        "areaType": "8x61in"
-      }
-    ],
-    "roleIds": [
-      731
-    ],
-    "positionIds": [
-      "yqcvsy"
-    ],
-    "roleId": 891,
-    "userRoleList": [
-      {
-        "id": 609,
-        "deptId": 782,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleId": 797,
-        "roleName": "merle.larkin",
-        "adminId": 56
-      }
-    ],
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
-  }
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "g4w2nq",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 根据用户编号获取授权角色
-**URL:** https://linlan.net/eframe_backend/api/admin/user/authRole/{adminId}.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 根据用户编号获取授权角色
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-adminId|int64|    管理员ID|true|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/112.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "4pjvym",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 用户授权角色
-**URL:** https://linlan.net/eframe_backend/api/admin/user/authRole.do
-
-**Type:** POST
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 用户授权角色
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-adminId|int64|    管理员ID|false|-
-roleIds|array|    角色Ids,[array of int64]|false|
-
-**Request-example:**
-```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'roleIds=fbos1z&roleIds=fbos1z&adminId=892'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "duvbne",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "l4j0lc",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -12265,7 +9756,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?endTime=2025-10-20 18:20:52&page=1&organId=172&nickName=renna.dibbert&adminId=630&email=vivian.streich@hotmail.com&limit=10&startTime=2025-10-20 18:20:52&userId=172&status=4qnpti&username=merle.larkin&orderBy=608&mobile=(415) 540-6962&delFlag=5&deptId=885&q=9wih8t
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?nickName=deon.watsica&limit=10&endTime=2025-11-12 15:24:04&deptId=237&delFlag=9&organId=104&orderBy=622&adminId=489&startTime=2025-11-12 15:24:04&email=antone.stark@hotmail.com&username=chung.hoeger&page=1&status=4b34eq&userId=104&mobile=(567) 281-2291&q=ghmxjm
 ```
 **Response-fields:**
 
@@ -12371,60 +9862,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:56",
-      "lastTime": "2025-10-20 18:25:56",
-      "id": 53,
-      "userId": "172",
-      "deptId": 0,
-      "deptName": "merle.larkin",
-      "organId": "172",
-      "organName": "merle.larkin",
-      "name": "merle.larkin",
-      "username": "merle.larkin",
-      "nickName": "renna.dibbert",
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "7bvlb9",
-      "password": "fgrire",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:25",
+      "lastTime": "2025-11-12 15:29:25",
+      "id": 895,
+      "userId": "104",
+      "deptId": 737,
+      "deptName": "chung.hoeger",
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "name": "chung.hoeger",
+      "username": "chung.hoeger",
+      "nickName": "deon.watsica",
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "enoq2w",
+      "password": "rhf3o5",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 987,
-      "delFlag": 5,
-      "lastLoginIp": "137.119.212.174",
-      "lastLoginTime": "2025-10-20 18:25:56",
-      "description": "4zdjaf",
+      "status": 22,
+      "delFlag": 9,
+      "lastLoginIp": "239.116.167.16",
+      "lastLoginTime": "2025-11-12 15:29:25",
+      "description": "ieveyp",
       "dept": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "id": 748,
-        "organId": "172",
-        "parentId": 129,
-        "appId": "172",
-        "depttypeId": 517,
-        "foreignId": "172",
-        "createType": 819,
-        "type": "vmadkp",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "areaCode": "81486",
-        "organLeader": "5rsnzm",
-        "leaderId": "172",
-        "leaderMobile": "(415) 540-6962",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:25",
+        "lastTime": "2025-11-12 15:29:25",
+        "id": 4,
+        "organId": "104",
+        "parentId": 643,
+        "appId": "104",
+        "depttypeId": 422,
+        "foreignId": "104",
+        "createType": 436,
+        "type": "gfgygd",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "areaCode": "74128",
+        "organLeader": "p9ldnx",
+        "leaderId": "104",
+        "leaderMobile": "(567) 281-2291",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "81486",
-        "imagePath": "p33hye",
-        "priority": 807,
-        "status": 264,
-        "delFlag": 5,
-        "description": "mb74jz",
-        "spare1": "laogiv",
-        "spare2": "8e99jw",
+        "searchCode": "74128",
+        "imagePath": "hrr53n",
+        "priority": 130,
+        "status": 973,
+        "delFlag": 9,
+        "description": "axfiat",
+        "spare1": "4npmwy",
+        "spare2": "iukyrn",
         "children": [
           {
             "$ref": ".."
@@ -12433,48 +9924,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:25:56",
-          "lastTime": "2025-10-20 18:25:56",
-          "id": 935,
-          "roletypeId": "172",
-          "appId": "172",
-          "name": "merle.larkin",
-          "code": "81486",
-          "priority": 866,
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:25",
+          "lastTime": "2025-11-12 15:29:25",
+          "id": 390,
+          "roletypeId": "104",
+          "appId": "104",
+          "name": "chung.hoeger",
+          "code": "74128",
+          "priority": 779,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 705,
-          "description": "i505bo",
-          "areaType": "rqexlq"
+          "status": 64,
+          "description": "htt2ws",
+          "areaType": "13trok"
         }
       ],
       "roleIds": [
-        36
+        328
       ],
       "positionIds": [
-        "0r4yaz"
+        "0smzq2"
       ],
-      "roleId": 105,
+      "roleId": 991,
       "userRoleList": [
         {
-          "id": 418,
-          "deptId": 36,
-          "deptName": "merle.larkin",
-          "organId": "172",
-          "organName": "merle.larkin",
-          "roleId": 344,
-          "roleName": "merle.larkin",
-          "adminId": 294
+          "id": 667,
+          "deptId": 42,
+          "deptName": "chung.hoeger",
+          "organId": "104",
+          "organName": "chung.hoeger",
+          "roleId": 17,
+          "roleName": "chung.hoeger",
+          "adminId": 628
         }
       ],
-      "code": "81486",
-      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
+      "code": "74128",
+      "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -12505,7 +9996,7 @@ adminId|int64| 管理员ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/467].do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/288].do
 ```
 **Response-fields:**
 
@@ -12659,60 +10150,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:56",
-      "lastTime": "2025-10-20 18:25:56",
-      "id": 685,
-      "userId": "172",
-      "deptId": 804,
-      "deptName": "merle.larkin",
-      "organId": "172",
-      "organName": "merle.larkin",
-      "name": "merle.larkin",
-      "username": "merle.larkin",
-      "nickName": "renna.dibbert",
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "h7fqnd",
-      "password": "6zve0q",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 805,
+      "userId": "104",
+      "deptId": 921,
+      "deptName": "chung.hoeger",
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "name": "chung.hoeger",
+      "username": "chung.hoeger",
+      "nickName": "deon.watsica",
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "rc065w",
+      "password": "w34k5a",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 254,
-      "delFlag": 5,
-      "lastLoginIp": "137.119.212.174",
-      "lastLoginTime": "2025-10-20 18:25:56",
-      "description": "ms1366",
+      "status": 433,
+      "delFlag": 9,
+      "lastLoginIp": "239.116.167.16",
+      "lastLoginTime": "2025-11-12 15:29:26",
+      "description": "3l5tm1",
       "dept": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "id": 504,
-        "organId": "172",
-        "parentId": 316,
-        "appId": "172",
-        "depttypeId": 126,
-        "foreignId": "172",
-        "createType": 769,
-        "type": "q08eab",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "areaCode": "81486",
-        "organLeader": "tkxhfi",
-        "leaderId": "172",
-        "leaderMobile": "(415) 540-6962",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 892,
+        "organId": "104",
+        "parentId": 382,
+        "appId": "104",
+        "depttypeId": 68,
+        "foreignId": "104",
+        "createType": 440,
+        "type": "nty494",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "areaCode": "74128",
+        "organLeader": "j39lly",
+        "leaderId": "104",
+        "leaderMobile": "(567) 281-2291",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "81486",
-        "imagePath": "x7vp1z",
-        "priority": 556,
-        "status": 793,
-        "delFlag": 5,
-        "description": "migvho",
-        "spare1": "3tjt4q",
-        "spare2": "q85gdi",
+        "searchCode": "74128",
+        "imagePath": "otaevf",
+        "priority": 136,
+        "status": 285,
+        "delFlag": 9,
+        "description": "hient4",
+        "spare1": "infhvw",
+        "spare2": "62e3sh",
         "children": [
           {
             "$ref": ".."
@@ -12721,116 +10212,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:25:56",
-          "lastTime": "2025-10-20 18:25:56",
-          "id": 796,
-          "roletypeId": "172",
-          "appId": "172",
-          "name": "merle.larkin",
-          "code": "81486",
-          "priority": 841,
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:26",
+          "lastTime": "2025-11-12 15:29:26",
+          "id": 577,
+          "roletypeId": "104",
+          "appId": "104",
+          "name": "chung.hoeger",
+          "code": "74128",
+          "priority": 106,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 830,
-          "description": "gzrili",
-          "areaType": "piwb1x"
+          "status": 661,
+          "description": "55m5of",
+          "areaType": "j3h98u"
         }
       ],
       "roleIds": [
-        225
+        324
       ],
       "positionIds": [
-        "vayyna"
+        "90rfl2"
       ],
-      "roleId": 956,
+      "roleId": 227,
       "userRoleList": [
         {
-          "id": 621,
-          "deptId": 588,
-          "deptName": "merle.larkin",
-          "organId": "172",
-          "organName": "merle.larkin",
-          "roleId": 966,
-          "roleName": "merle.larkin",
-          "adminId": 841
+          "id": 629,
+          "deptId": 731,
+          "deptName": "chung.hoeger",
+          "organId": "104",
+          "organName": "chung.hoeger",
+          "roleId": 115,
+          "roleName": "chung.hoeger",
+          "adminId": 78
         }
       ],
-      "code": "81486",
-      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
+      "code": "74128",
+      "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
     },
     "roles": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "roleId": 37,
-        "roleName": "merle.larkin",
-        "roleKey": "udvx9a",
-        "roleSort": 871,
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "roleId": 197,
+        "roleName": "chung.hoeger",
+        "roleKey": "5ztsla",
+        "roleSort": 463,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 300,
+        "status": 698,
         "flag": true,
         "menuIds": [
-          165
+          280
         ],
         "deptIds": [
-          418
+          374
         ],
         "permissions": [
-          "v5xen5"
+          "w27rk3"
         ],
-        "remark": "w4uykz",
-        "parentName": "merle.larkin",
-        "appName": "merle.larkin",
-        "roletypeId": "172",
-        "roletypeName": "merle.larkin",
-        "priority": 490,
+        "remark": "s8rdfg",
+        "parentName": "chung.hoeger",
+        "appName": "chung.hoeger",
+        "roletypeId": "104",
+        "roletypeName": "chung.hoeger",
+        "priority": 940,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 111,
-        "roleId": 159,
-        "adminId": 10,
-        "deptId": 203,
-        "deptName": "merle.larkin",
-        "organId": "172",
-        "organName": "merle.larkin",
-        "roleName": "merle.larkin"
+        "id": 220,
+        "roleId": 534,
+        "adminId": 286,
+        "deptId": 64,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleName": "chung.hoeger"
       }
     ],
     "positions": [
       {
-        "postId": "172",
-        "postCode": "81486",
-        "postName": "merle.larkin",
-        "postSort": 631,
-        "status": 113,
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:56",
-        "lastTime": "2025-10-20 18:25:56",
-        "delFlag": 5,
-        "remark": "qt7efm",
+        "postId": "104",
+        "postCode": "74128",
+        "postName": "chung.hoeger",
+        "postSort": 224,
+        "status": 665,
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "delFlag": 9,
+        "remark": "n1jeku",
         "ids": [
-          "tgrlzs"
+          "9wqnpy"
         ],
-        "positionId": "172",
+        "positionId": "104",
         "flag": true
       }
     ],
     "roleIds": [
-      175
+      297
     ],
     "positionIds": [
-      557
+      "l81ka9"
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -12892,7 +10383,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?orderBy=848&areaCode=81486&startTime=2025-10-20 18:20:52&createType=563&sname=merle.larkin&leaderMobile=(415) 540-6962&organId=172&leaderId=172&depttypeId=640&spare2=vh9b3q&foreignId=172&status=386&appId=172&page=1&isOrganLevel=true&isVirtual=true&limit=10&name=merle.larkin&searchCode=81486&delFlag=5&description=8kbpis&q=dck15o&type=big50m&isLeaf=true&spare1=6ifxqg&creatorId=172&imagePath=vkrhnf&deptId=462&parentId=696&isDisabled=true&endTime=2025-10-20 18:20:52&organLeader=wmaimr
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?imagePath=ror2i6&description=dnf2sw&spare2=sz6jsd&isLeaf=true&searchCode=74128&parentId=661&startTime=2025-11-12 15:24:04&appId=104&limit=10&name=chung.hoeger&isOrganLevel=true&orderBy=801&page=1&creatorId=104&sname=chung.hoeger&areaCode=74128&organId=104&status=792&deptId=625&organLeader=xpow39&q=5rq281&isDisabled=true&leaderMobile=(567) 281-2291&delFlag=9&type=l26aj9&leaderId=104&spare1=im7icq&depttypeId=208&createType=737&isVirtual=true&endTime=2025-11-12 15:24:04&foreignId=104
 ```
 **Response-fields:**
 
@@ -12916,8 +10407,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 840,
-      "label": "hf2j2u",
+      "id": 627,
+      "label": "3druue",
       "children": [
         {
           "$ref": ".."
@@ -12925,8 +10416,2358 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行新增操作.
+**URL:** https://linlan.net/eframe_backend/api/admin/user/save.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行新增操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 940,
+    "userId": "104",
+    "deptId": 307,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "knq3q9",
+    "password": "k9m0ho",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 155,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "description": "lsego7",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 547,
+      "organId": "104",
+      "parentId": 240,
+      "appId": "104",
+      "depttypeId": 917,
+      "foreignId": "104",
+      "createType": 482,
+      "type": "an4vkc",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "qbwy22",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "mnly4w",
+      "priority": 141,
+      "status": 726,
+      "delFlag": 9,
+      "description": "r0ef4a",
+      "spare1": "tp8ow3",
+      "spare2": "zgpa0w",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 436,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 353,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 544,
+        "description": "9xn4z5",
+        "areaType": "vlhbl2"
+      }
+    ],
+    "roleIds": [
+      118
+    ],
+    "positionIds": [
+      "pkinr6"
+    ],
+    "roleId": 407,
+    "userRoleList": [
+      {
+        "id": 933,
+        "deptId": 934,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 617,
+        "roleName": "chung.hoeger",
+        "adminId": 548
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "hxcc54",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行修改操作.
+**URL:** https://linlan.net/eframe_backend/api/admin/user/update.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** AdminUser Operation. AdminUser数据操作逻辑，根据操作类型，执行修改操作.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 799,
+    "userId": "104",
+    "deptId": 372,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "hliu0u",
+    "password": "58tgcc",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 784,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "description": "ba7eqi",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 911,
+      "organId": "104",
+      "parentId": 327,
+      "appId": "104",
+      "depttypeId": 123,
+      "foreignId": "104",
+      "createType": 323,
+      "type": "obw5rd",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "qppn64",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "k1m9vp",
+      "priority": 616,
+      "status": 911,
+      "delFlag": 9,
+      "description": "8jcgif",
+      "spare1": "xafh5n",
+      "spare2": "6zjdp8",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 755,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 307,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 560,
+        "description": "0wns7v",
+        "areaType": "ed5i5y"
+      }
+    ],
+    "roleIds": [
+      414
+    ],
+    "positionIds": [
+      "qnbqn5"
+    ],
+    "roleId": 884,
+    "userRoleList": [
+      {
+        "id": 395,
+        "deptId": 857,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 757,
+        "roleName": "chung.hoeger",
+        "adminId": 397
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "a7pvea",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 停用启用用户
+**URL:** https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 停用启用用户
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|企业管理用户ID|false|-
+└─userId|string|系统管理用户ID|false|-
+└─organId|string|机构ID|false|-
+└─deptId|int64|单位ID|false|-
+└─createType|int32|创建方式0导入1录入2授权|false|-
+└─name|string|显示名称，可设置为用户名、手机号、昵称、真名|false|-
+└─username|string|用户名|false|-
+└─mobile|string|手机号码|false|-
+└─email|string|电子邮箱|false|-
+└─password|string|密码|false|-
+└─salt|string|混淆字符|false|-
+└─imagePath|string|头像|false|-
+└─adminType|string|管理类型：ADMIN管理员，DEMO演示用户|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─adminRange|string|管理的范围配置JSON，APP_ID或者SITE_ID的数组，或者单个APP_ID|false|-
+└─adminPerms|string|管理权限JSON|false|-
+└─lastAppId|string|最后登录的应用ID|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─loginCount|int32|登录次数|false|-
+└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|false|-
+└─spare1|string|备用1|false|-
+└─spare2|string|备用2|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 662,
+    "userId": "104",
+    "organId": "104",
+    "deptId": 416,
+    "createType": 194,
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "mobile": "(567) 281-2291",
+    "email": "antone.stark@hotmail.com",
+    "password": "088ve6",
+    "salt": "pw7gz3",
+    "imagePath": "0ui4px",
+    "adminType": "gxq73w",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "adminRange": "bvzsjs",
+    "adminPerms": "nz62ch",
+    "lastAppId": "104",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "lastLoginIp": "239.116.167.16",
+    "loginCount": 204,
+    "status": 59,
+    "delFlag": 9,
+    "spare1": "ttceb3",
+    "spare2": "tkpa7o",
+    "roleIds": [
+      623
+    ],
+    "positionIds": [
+      "7nyl6o"
+    ]
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "ll79hs",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 重置密码
+**URL:** https://linlan.net/eframe_backend/api/admin/user/resetpassword/{ids}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 重置密码
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+ids|array| 管理员Ids,[array of int64]|true|
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 884,
+    "userId": "104",
+    "deptId": 9,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "e9sfka",
+    "password": "xim9yg",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 973,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "description": "10yejm",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 933,
+      "organId": "104",
+      "parentId": 525,
+      "appId": "104",
+      "depttypeId": 894,
+      "foreignId": "104",
+      "createType": 852,
+      "type": "5d2gs6",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "ypdr6a",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "f2oe56",
+      "priority": 649,
+      "status": 514,
+      "delFlag": 9,
+      "description": "8qnymp",
+      "spare1": "vky6vp",
+      "spare2": "bci5jt",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 472,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 14,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 82,
+        "description": "9xyamw",
+        "areaType": "c46sqp"
+      }
+    ],
+    "roleIds": [
+      712
+    ],
+    "positionIds": [
+      "obzyer"
+    ],
+    "roleId": 500,
+    "userRoleList": [
+      {
+        "id": 219,
+        "deptId": 592,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 645,
+        "roleName": "chung.hoeger",
+        "adminId": 718
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "mnyyck",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 删除用户
+**URL:** https://linlan.net/eframe_backend/api/admin/user/delete/{adminIds}.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 删除用户
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+adminIds|array| 管理员Ids,[array of int64]|true|
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/delete/.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "5ghhoh",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户数据导出
+**URL:** https://linlan.net/eframe_backend/api/admin/user/export.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 用户数据导出
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+adminId|int64|用户LID|false|-
+userId|string|用户UUID|false|-
+deptId|int64|部门ID|false|-
+organId|string|机构ID|false|-
+username|string|用户账号|false|-
+nickName|string|用户昵称|false|-
+email|string|用户邮箱|false|-
+mobile|string|手机号码|false|-
+status|string|帐号状态（0未生效 1正常）|false|-
+delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'adminId=883&organId=104&delFlag=9&q=wk1h6g&endTime=2025-11-12 15:24:04&orderBy=568&deptId=92&userId=104&nickName=deon.watsica&status=erqqx0&startTime=2025-11-12 15:24:04&mobile=(567) 281-2291&limit=10&email=antone.stark@hotmail.com&page=1&username=chung.hoeger'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "83pl65",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户数据导入
+**URL:** https://linlan.net/eframe_backend/api/admin/user/importData.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** multipart/form-data
+
+**Description:** 用户数据导入
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+file|file| 文件|true|-
+updateSupport|boolean|    是否支持更新|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importData.do --data 'updateSupport=true'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "ov9qvh",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户导入模板下载
+**URL:** https://linlan.net/eframe_backend/api/admin/user/importTemplate.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 用户导入模板下载
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importTemplate.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "whkgyr",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 重置密码
+**URL:** https://linlan.net/eframe_backend/api/admin/user/resetPwd.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 重置密码
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 454,
+    "userId": "104",
+    "deptId": 979,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "ttnjtg",
+    "password": "lhip5z",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 692,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "description": "85yfkw",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 214,
+      "organId": "104",
+      "parentId": 128,
+      "appId": "104",
+      "depttypeId": 959,
+      "foreignId": "104",
+      "createType": 641,
+      "type": "ye9qeh",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "we6ucq",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "q4c77m",
+      "priority": 499,
+      "status": 48,
+      "delFlag": 9,
+      "description": "4wgshb",
+      "spare1": "rsftu1",
+      "spare2": "usaqc9",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 386,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 99,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 385,
+        "description": "5pcm8v",
+        "areaType": "j2a8im"
+      }
+    ],
+    "roleIds": [
+      345
+    ],
+    "positionIds": [
+      "uyymid"
+    ],
+    "roleId": 759,
+    "userRoleList": [
+      {
+        "id": 389,
+        "deptId": 845,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 805,
+        "roleName": "chung.hoeger",
+        "adminId": 35
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "fder97",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户状态修改
+**URL:** https://linlan.net/eframe_backend/api/admin/user/changeStatus.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 用户状态修改
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:26",
+    "lastTime": "2025-11-12 15:29:26",
+    "id": 470,
+    "userId": "104",
+    "deptId": 509,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "q2n072",
+    "password": "ybwg01",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 98,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:26",
+    "description": "3q0m4u",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:26",
+      "lastTime": "2025-11-12 15:29:26",
+      "id": 494,
+      "organId": "104",
+      "parentId": 565,
+      "appId": "104",
+      "depttypeId": 120,
+      "foreignId": "104",
+      "createType": 540,
+      "type": "vxfmpe",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "tsubkn",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "ojobhw",
+      "priority": 817,
+      "status": 271,
+      "delFlag": 9,
+      "description": "yww3be",
+      "spare1": "vy4rnk",
+      "spare2": "3oyk0f",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:26",
+        "lastTime": "2025-11-12 15:29:26",
+        "id": 694,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 849,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 672,
+        "description": "6twgtl",
+        "areaType": "gxezhs"
+      }
+    ],
+    "roleIds": [
+      933
+    ],
+    "positionIds": [
+      "tsdcwe"
+    ],
+    "roleId": 787,
+    "userRoleList": [
+      {
+        "id": 953,
+        "deptId": 630,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 830,
+        "roleName": "chung.hoeger",
+        "adminId": 323
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "nfa7xk",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据用户编号获取授权角色
+**URL:** https://linlan.net/eframe_backend/api/admin/user/authRole/{adminId}.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据用户编号获取授权角色
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+adminId|int64|    管理员ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/617.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "0uxn2j",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户授权角色
+**URL:** https://linlan.net/eframe_backend/api/admin/user/authRole.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 用户授权角色
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+adminId|int64|    管理员ID|false|-
+roleIds|array|    角色Ids,[array of int64]|false|
+
+**Request-example:**
+```
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=853&roleIds=1g2joo&roleIds=1g2joo'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "gj4xc6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 个人资料信息
+**URL:** https://linlan.net/eframe_backend/api/admin/user/profile.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 个人资料信息
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─user|object|当前用户|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─authorities|array|No comments found.|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userLid|int64|用户LID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|所属应用ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|用户机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─token|string|登录令牌|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─viewName|string|昵称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─needChangePassword|boolean|需要修改密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|邮箱|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|头像URL|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginIp|string|上次登录IP|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastUpdatePasswordTime|string|最后修改密码时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─expireTime|string|过期时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginTime|string|登录时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userType|string|用户类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuperAdmin|boolean|是否超级管理员|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginBrowse|string|登录的浏览器|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginOs|string|登录的OS|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─perms|array|权限列表|-
+└─roleGroup|string|角色组|-
+└─positionGroup|string|岗位组|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "user": {
+      "password": "dmkbvp",
+      "username": "chung.hoeger",
+      "authorities": [
+        {
+          "object": "any object"
+        }
+      ],
+      "userId": "104",
+      "userLid": 400,
+      "appId": "104",
+      "deptId": 349,
+      "organId": "104",
+      "token": "ieware",
+      "viewName": "chung.hoeger",
+      "needChangePassword": true,
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "7lb6bd",
+      "loginCount": 290,
+      "loginIp": "239.116.167.16",
+      "lastUpdatePasswordTime": "2025-11-12 15:29:27",
+      "lastTime": "2025-11-12 15:29:27",
+      "foreignId": "104",
+      "expireTime": "2025-11-12 15:29:27",
+      "loginTime": "2025-11-12 15:29:27",
+      "userType": "58cv4l",
+      "isSuperAdmin": true,
+      "loginBrowse": "sim8vz",
+      "loginOs": "7kktjd",
+      "perms": [
+        "yndr25"
+      ]
+    },
+    "roleGroup": "ee1fh0",
+    "positionGroup": "d508dv"
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 个人信息
+**URL:** https://linlan.net/eframe_backend/api/admin/user/info.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 个人信息
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/info.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|int64|用户LID|-
+└─userId|string|用户UUID|-
+└─deptId|int64|部门ID|-
+└─deptName|string|部门名称|-
+└─organId|string|机构ID|-
+└─organName|string|机构名称|-
+└─name|string|人员姓名|-
+└─username|string|用户账号|-
+└─nickName|string|用户昵称|-
+└─email|string|用户邮箱|-
+└─mobile|string|手机号码|-
+└─imagePath|string|用户头像|-
+└─password|string|密码|-
+└─isSuperAdmin|boolean|是否超级管理员|-
+└─isAuditAdmin|boolean|是否审计只读管理员|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|-
+└─status|int32|帐号状态（0未生效 1正常）|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|-
+└─lastLoginIp|string|最后登录IP|-
+└─lastLoginTime|string|最后登录时间|-
+└─description|string|备注,办公地址|-
+└─dept|object|部门对象|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|-
+└─roles|array|角色对象|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|-
+└─roleIds|array|角色组|-
+└─positionIds|array|岗位组|-
+└─roleId|int64|角色ID|-
+└─userRoleList|array|角色集合|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|-
+└─code|string|验证码|-
+└─uuid|string|uuid标识|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:27",
+    "lastTime": "2025-11-12 15:29:27",
+    "id": 319,
+    "userId": "104",
+    "deptId": 486,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "qe6xl0",
+    "password": "3ed7c4",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 371,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:27",
+    "description": "ng948a",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:27",
+      "lastTime": "2025-11-12 15:29:27",
+      "id": 542,
+      "organId": "104",
+      "parentId": 370,
+      "appId": "104",
+      "depttypeId": 449,
+      "foreignId": "104",
+      "createType": 848,
+      "type": "pj94s0",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "v96hjc",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "fypltr",
+      "priority": 268,
+      "status": 654,
+      "delFlag": 9,
+      "description": "59prs1",
+      "spare1": "v9onpu",
+      "spare2": "t5yw5x",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:27",
+        "lastTime": "2025-11-12 15:29:27",
+        "id": 702,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 929,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 421,
+        "description": "312ow9",
+        "areaType": "mr1x9v"
+      }
+    ],
+    "roleIds": [
+      866
+    ],
+    "positionIds": [
+      "sgcakh"
+    ],
+    "roleId": 280,
+    "userRoleList": [
+      {
+        "id": 867,
+        "deptId": 868,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 863,
+        "roleName": "chung.hoeger",
+        "adminId": 236
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 修改用户个人信息
+**URL:** https://linlan.net/eframe_backend/api/admin/user/profile.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 修改用户个人信息
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─creatorId|string|创建人id|false|-
+└─createTime|string|创建时间|false|-
+└─lastTime|string|最后修改时间|false|-
+└─id|int64|用户LID|false|-
+└─userId|string|用户UUID|false|-
+└─deptId|int64|部门ID|false|-
+└─deptName|string|部门名称|false|-
+└─organId|string|机构ID|false|-
+└─organName|string|机构名称|false|-
+└─name|string|人员姓名|false|-
+└─username|string|用户账号|false|-
+└─nickName|string|用户昵称|false|-
+└─email|string|用户邮箱|false|-
+└─mobile|string|手机号码|false|-
+└─imagePath|string|用户头像|false|-
+└─password|string|密码|false|-
+└─isSuperAdmin|boolean|是否超级管理员|false|-
+└─isAuditAdmin|boolean|是否审计只读管理员|false|-
+└─isSelfAdmin|boolean|是否只管理自己的数据|false|-
+└─status|int32|帐号状态（0未生效 1正常）|false|-
+└─delFlag|int32|删除标志（0代表存在 2代表删除）|false|-
+└─lastLoginIp|string|最后登录IP|false|-
+└─lastLoginTime|string|最后登录时间|false|-
+└─description|string|备注,办公地址|false|-
+└─dept|object|部门对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|单位ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|系统机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parentId|int64|父节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─depttypeId|int64|部门分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外部业务ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createType|int32|创建方式0导入1录入2授权|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|名称，多级累加名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sname|string|名称简称，本单位显示名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaCode|string|地域编码，所在城市|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organLeader|string|领导名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderId|string|负责人ID，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isLeaf|boolean|是否叶子节点|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isDisabled|boolean|是否禁用0否1是|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─searchCode|string|多级累加路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─imagePath|string|图片路径|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|是否删除1已删除0正常|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─children|array|子部门|false|-
+└─roles|array|角色对象|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─creatorId|string|创建人id|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastTime|string|最后修改时间|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roletypeId|string|角色分类ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─appId|string|应用ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|角色自定义名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─code|string|角色自定义代码|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|重点优先级|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isRegular|boolean|是否固定权限1表示固定角色0表示自定义角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isSuper|boolean|拥有所有权限|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─isPublic|boolean|是否公共角色|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|角色描述|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─areaType|string|地域类型|false|-
+└─roleIds|array|角色组|false|-
+└─positionIds|array|岗位组|false|-
+└─roleId|int64|角色ID|false|-
+└─userRoleList|array|角色集合|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptId|int64|部门ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─deptName|string|部门名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organName|string|机构名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleId|int64|角色ID|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─roleName|string|角色名称|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─adminId|int64|公共管理用户ID|false|-
+└─code|string|验证码|false|-
+└─uuid|string|uuid标识|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
+  "data": {
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:27",
+    "lastTime": "2025-11-12 15:29:27",
+    "id": 199,
+    "userId": "104",
+    "deptId": 536,
+    "deptName": "chung.hoeger",
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "name": "chung.hoeger",
+    "username": "chung.hoeger",
+    "nickName": "deon.watsica",
+    "email": "antone.stark@hotmail.com",
+    "mobile": "(567) 281-2291",
+    "imagePath": "2c6vnq",
+    "password": "bbjd9g",
+    "isSuperAdmin": true,
+    "isAuditAdmin": true,
+    "isSelfAdmin": true,
+    "status": 490,
+    "delFlag": 9,
+    "lastLoginIp": "239.116.167.16",
+    "lastLoginTime": "2025-11-12 15:29:27",
+    "description": "xfkuoz",
+    "dept": {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:27",
+      "lastTime": "2025-11-12 15:29:27",
+      "id": 786,
+      "organId": "104",
+      "parentId": 842,
+      "appId": "104",
+      "depttypeId": 52,
+      "foreignId": "104",
+      "createType": 784,
+      "type": "xyk5jz",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "14d4d3",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "6ubcia",
+      "priority": 876,
+      "status": 887,
+      "delFlag": 9,
+      "description": "485v4v",
+      "spare1": "38yyzy",
+      "spare2": "5mdonc",
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    },
+    "roles": [
+      {
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:27",
+        "lastTime": "2025-11-12 15:29:27",
+        "id": 907,
+        "roletypeId": "104",
+        "appId": "104",
+        "name": "chung.hoeger",
+        "code": "74128",
+        "priority": 460,
+        "isRegular": true,
+        "isSuper": true,
+        "isPublic": true,
+        "status": 152,
+        "description": "vppohd",
+        "areaType": "oc3o30"
+      }
+    ],
+    "roleIds": [
+      785
+    ],
+    "positionIds": [
+      "avk1tf"
+    ],
+    "roleId": 615,
+    "userRoleList": [
+      {
+        "id": 892,
+        "deptId": 424,
+        "deptName": "chung.hoeger",
+        "organId": "104",
+        "organName": "chung.hoeger",
+        "roleId": 853,
+        "roleName": "chung.hoeger",
+        "adminId": 821
+      }
+    ],
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": true,
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 个人修改密码
+**URL:** https://linlan.net/eframe_backend/api/admin/user/updatePwd.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 个人修改密码
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─oldPassword|string|旧密码|false|-
+└─newPassword|string|新密码|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
+  "data": {
+    "oldPassword": "nkrs0k",
+    "newPassword": "rbioj7"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "waring": "You may have used non-display generics."
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 用户头像上传
+**URL:** https://linlan.net/eframe_backend/api/admin/user/imagePath.do
+
+**Type:** POST
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** multipart/form-data
+
+**Description:** 用户头像上传
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+file|file| 文件|true|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/imagePath.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─imageUrl|string|角色组|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "imageUrl": "www.winston-nienow.name"
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -12979,12 +12820,11 @@ description|string|描述，岗位职责|false|-
 positionId|string|岗位ID|false|-
 groupId|string|分组Id|false|-
 id|string|编号id|false|-
-roleTypeId|string|角色类型编号|false|-
 createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?startTime=2025-10-20 18:20:52&orderBy=645&groupId=172&parentId=172&roletypeId=172&posFunction=bubpve&description=9fjq49&createTime=2025-10-20 18:20:52&delFlag=5&name=merle.larkin&status=626&limit=10&mobilePhone=1-203-302-2484&endTime=2025-10-20 18:20:52&posRank=60&code=81486&ids=7k54lp&ids=7k54lp&posType=tz7ls6&postypeId=172&roleTypeId=172&page=1&isPub=true&q=r4uesa&positionId=172&id=172&sname=merle.larkin&officePhone=1-203-302-2484&oname=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?posRank=523&id=104&positionId=104&posFunction=j8qieu&page=1&mobilePhone=1-641-218-8251&delFlag=9&startTime=2025-11-12 15:24:04&ids=7tnxrg&ids=7tnxrg&oname=chung.hoeger&orderBy=674&status=12&description=31esli&createTime=2025-11-12 15:24:04&roletypeId=104&postypeId=104&endTime=2025-11-12 15:24:04&name=chung.hoeger&sname=chung.hoeger&q=t0m0or&parentId=104&groupId=104&isPub=true&posType=zhi259&officePhone=1-641-218-8251&code=74128&limit=10
 ```
 **Response-fields:**
 
@@ -13022,32 +12862,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 136,
+    "totalCount": 383,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "172",
-        "postCode": "81486",
-        "postName": "merle.larkin",
-        "postSort": 84,
-        "status": 108,
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:00",
-        "lastTime": "2025-10-20 18:26:00",
-        "delFlag": 5,
-        "remark": "d7x45e",
+        "postId": "104",
+        "postCode": "74128",
+        "postName": "chung.hoeger",
+        "postSort": 760,
+        "status": 495,
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:30",
+        "lastTime": "2025-11-12 15:29:30",
+        "delFlag": 9,
+        "remark": "5z8ihg",
         "ids": [
-          "p0phw5"
+          "35ndfp"
         ],
-        "positionId": "172",
+        "positionId": "104",
         "flag": true
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13086,7 +12926,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postName=merle.larkin&startTime=2025-10-20 18:20:52&q=8q3pdi&orderBy=415&page=1&limit=10&delFlag=5&endTime=2025-10-20 18:20:52&postCode=81486&status=604'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'postCode=74128&page=1&postName=chung.hoeger&orderBy=108&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&limit=10&q=sdhrrs&status=862&delFlag=9'
 ```
 **Response-fields:**
 
@@ -13105,9 +12945,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hw96ex",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "j4dcmc",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13137,7 +12977,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/104.do
 ```
 **Response-fields:**
 
@@ -13198,50 +13038,50 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:00",
-    "lastTime": "2025-10-20 18:26:00",
-    "id": "172",
-    "parentId": "172",
-    "postypeId": "172",
-    "roletypeId": "172",
-    "userId": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "code": "81486",
-    "oname": "merle.larkin",
-    "posFunction": "lw8krg",
-    "posRank": 337,
-    "posType": "do4gyj",
-    "editorType": "2dhc8l",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": "104",
+    "parentId": "104",
+    "postypeId": "104",
+    "roletypeId": "104",
+    "userId": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "code": "74128",
+    "oname": "chung.hoeger",
+    "posFunction": "tmd65m",
+    "posRank": 920,
+    "posType": "dxqdsc",
+    "editorType": "31pyas",
     "isEditorCreate": true,
-    "status": 869,
+    "status": 153,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "172",
-    "manageDeptids": "imo476",
+    "leaderId": "104",
+    "manageDeptids": "nobq5s",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-203-302-2484",
-    "officePhone": "1-203-302-2484",
-    "buildingId": "172",
-    "roomNo": "7ktr2n",
-    "extQmType": "i5ju24",
-    "extQmTypePhoto": "ry2c1r",
-    "extPosName": "merle.larkin",
-    "extOrganName": "merle.larkin",
-    "priority": 55,
-    "priorityInOrgan": 552,
-    "priorityInDomain": 661,
-    "updaterId": "172",
-    "updateTime": "2025-10-20 18:26:00",
-    "delFlag": 5,
-    "description": "92a67v",
-    "remark": "hu655y"
+    "mobilePhone": "1-641-218-8251",
+    "officePhone": "1-641-218-8251",
+    "buildingId": "104",
+    "roomNo": "6eg8nk",
+    "extQmType": "f63081",
+    "extQmTypePhoto": "0yerbc",
+    "extPosName": "chung.hoeger",
+    "extOrganName": "chung.hoeger",
+    "priority": 757,
+    "priorityInOrgan": 865,
+    "priorityInDomain": 627,
+    "updaterId": "104",
+    "updateTime": "2025-11-12 15:29:30",
+    "delFlag": 9,
+    "description": "lsiao5",
+    "remark": "v1glvr"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13317,50 +13157,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:01",
-    "lastTime": "2025-10-20 18:26:01",
-    "id": "172",
-    "parentId": "172",
-    "postypeId": "172",
-    "roletypeId": "172",
-    "userId": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "code": "81486",
-    "oname": "merle.larkin",
-    "posFunction": "n8wjvu",
-    "posRank": 830,
-    "posType": "e6718v",
-    "editorType": "pfp631",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": "104",
+    "parentId": "104",
+    "postypeId": "104",
+    "roletypeId": "104",
+    "userId": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "code": "74128",
+    "oname": "chung.hoeger",
+    "posFunction": "iz8xl5",
+    "posRank": 744,
+    "posType": "1xywuc",
+    "editorType": "yv0n9u",
     "isEditorCreate": true,
-    "status": 970,
+    "status": 898,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "172",
-    "manageDeptids": "5whxz4",
+    "leaderId": "104",
+    "manageDeptids": "z9payo",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-203-302-2484",
-    "officePhone": "1-203-302-2484",
-    "buildingId": "172",
-    "roomNo": "bfkf16",
-    "extQmType": "rnqn3l",
-    "extQmTypePhoto": "pd8tl1",
-    "extPosName": "merle.larkin",
-    "extOrganName": "merle.larkin",
-    "priority": 729,
-    "priorityInOrgan": 665,
-    "priorityInDomain": 609,
-    "updaterId": "172",
-    "updateTime": "2025-10-20 18:26:01",
-    "delFlag": 5,
-    "description": "aqm0mn",
-    "remark": "jq4zje",
-    "parentName": "merle.larkin",
-    "roletypeName": "merle.larkin",
-    "postypeName": "merle.larkin"
+    "mobilePhone": "1-641-218-8251",
+    "officePhone": "1-641-218-8251",
+    "buildingId": "104",
+    "roomNo": "npd63v",
+    "extQmType": "1kfh6j",
+    "extQmTypePhoto": "uzgsd0",
+    "extPosName": "chung.hoeger",
+    "extOrganName": "chung.hoeger",
+    "priority": 263,
+    "priorityInOrgan": 849,
+    "priorityInDomain": 647,
+    "updaterId": "104",
+    "updateTime": "2025-11-12 15:29:30",
+    "delFlag": 9,
+    "description": "kpl3nq",
+    "remark": "u03zlc",
+    "parentName": "chung.hoeger",
+    "roletypeName": "chung.hoeger",
+    "postypeName": "chung.hoeger"
   }
 }'
 ```
@@ -13381,9 +13221,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "0ugjai",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "akjp5u",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13459,50 +13299,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:01",
-    "lastTime": "2025-10-20 18:26:01",
-    "id": "172",
-    "parentId": "172",
-    "postypeId": "172",
-    "roletypeId": "172",
-    "userId": "172",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "code": "81486",
-    "oname": "merle.larkin",
-    "posFunction": "7zb4sb",
-    "posRank": 556,
-    "posType": "5oaeau",
-    "editorType": "g7g9sr",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "id": "104",
+    "parentId": "104",
+    "postypeId": "104",
+    "roletypeId": "104",
+    "userId": "104",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "code": "74128",
+    "oname": "chung.hoeger",
+    "posFunction": "j96682",
+    "posRank": 188,
+    "posType": "5f590z",
+    "editorType": "wa7h31",
     "isEditorCreate": true,
-    "status": 702,
+    "status": 996,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "172",
-    "manageDeptids": "v7te1f",
+    "leaderId": "104",
+    "manageDeptids": "km81c4",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "1-203-302-2484",
-    "officePhone": "1-203-302-2484",
-    "buildingId": "172",
-    "roomNo": "ps413i",
-    "extQmType": "vou411",
-    "extQmTypePhoto": "o76k4i",
-    "extPosName": "merle.larkin",
-    "extOrganName": "merle.larkin",
-    "priority": 12,
-    "priorityInOrgan": 799,
-    "priorityInDomain": 737,
-    "updaterId": "172",
-    "updateTime": "2025-10-20 18:26:01",
-    "delFlag": 5,
-    "description": "f6gf5c",
-    "remark": "6y1xcc",
-    "parentName": "merle.larkin",
-    "roletypeName": "merle.larkin",
-    "postypeName": "merle.larkin"
+    "mobilePhone": "1-641-218-8251",
+    "officePhone": "1-641-218-8251",
+    "buildingId": "104",
+    "roomNo": "l36kjl",
+    "extQmType": "r5dou9",
+    "extQmTypePhoto": "82grgf",
+    "extPosName": "chung.hoeger",
+    "extOrganName": "chung.hoeger",
+    "priority": 245,
+    "priorityInOrgan": 335,
+    "priorityInDomain": 453,
+    "updaterId": "104",
+    "updateTime": "2025-11-12 15:29:30",
+    "delFlag": 9,
+    "description": "1rpq1e",
+    "remark": "4lpa29",
+    "parentName": "chung.hoeger",
+    "roletypeName": "chung.hoeger",
+    "postypeName": "chung.hoeger"
   }
 }'
 ```
@@ -13523,9 +13363,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "79z2at",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "jlsovz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13574,9 +13414,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vu571a",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "6d7zw8",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13621,20 +13461,20 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
   "data": {
-    "postId": "172",
-    "postCode": "81486",
-    "postName": "merle.larkin",
-    "postSort": 100,
-    "status": 443,
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:01",
-    "lastTime": "2025-10-20 18:26:01",
-    "delFlag": 5,
-    "remark": "698iua",
+    "postId": "104",
+    "postCode": "74128",
+    "postName": "chung.hoeger",
+    "postSort": 229,
+    "status": 370,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:30",
+    "lastTime": "2025-11-12 15:29:30",
+    "delFlag": 9,
+    "remark": "i4ruvy",
     "ids": [
-      "786068"
+      "mjoen2"
     ],
-    "positionId": "172",
+    "positionId": "104",
     "flag": true
   }
 }'
@@ -13656,9 +13496,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "w6dz4g",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "623vv0",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13696,12 +13536,12 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
   "data": {
-    "id": 985,
-    "roleId": 732,
-    "positionId": "172",
-    "status": 201,
-    "beginTime": "2025-10-20",
-    "endTime": "2025-10-20"
+    "id": 598,
+    "roleId": 161,
+    "positionId": "104",
+    "status": 147,
+    "beginTime": "2025-11-12",
+    "endTime": "2025-11-12"
   }
 }'
 ```
@@ -13722,9 +13562,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wwy24p",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "otm578",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13782,25 +13622,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "172",
-      "postCode": "81486",
-      "postName": "merle.larkin",
-      "postSort": 528,
-      "status": 568,
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:01",
-      "lastTime": "2025-10-20 18:26:01",
-      "delFlag": 5,
-      "remark": "ukcsmj",
+      "postId": "104",
+      "postCode": "74128",
+      "postName": "chung.hoeger",
+      "postSort": 149,
+      "status": 463,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:30",
+      "lastTime": "2025-11-12 15:29:30",
+      "delFlag": 9,
+      "remark": "mu2pp7",
       "ids": [
-        "x9rcgr"
+        "da3djc"
       ],
-      "positionId": "172",
+      "positionId": "104",
       "flag": true
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13846,7 +13686,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?time=1760955652792&startTime=2025-10-20 18:20:52&category=859&createTime=2025-10-20 18:26:01&orderBy=837&q=tslazr&appId=172&operation=ciunt0&ip=137.119.212.174&endTime=2025-10-20 18:20:52&page=1&method=4ge9f7&srcCode=196&username=merle.larkin&limit=10&userId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?endTime=2025-11-12 15:24:04&startTime=2025-11-12 15:24:04&limit=10&time=1762932244859&srcCode=734&appId=104&operation=fgg76y&userId=104&username=chung.hoeger&method=9ort6d&page=1&createTime=2025-11-12 15:29:31&ip=239.116.167.16&q=pnp35l&category=602&orderBy=595
 ```
 **Response-fields:**
 
@@ -13891,39 +13731,39 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 27,
+    "totalCount": 905,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 936,
-        "title": "ty0z2y",
-        "businessType": 268,
-        "businessTypeName": "merle.larkin",
+        "operId": 116,
+        "title": "is1pr3",
+        "businessType": 767,
+        "businessTypeName": "chung.hoeger",
         "businessTypes": [
-          265
+          288
         ],
-        "method": "9d6yus",
-        "requestMethod": "d8g7mv",
-        "operatorType": 652,
-        "operName": "merle.larkin",
-        "deptName": "merle.larkin",
-        "operUrl": "www.ben-grant.info",
-        "operIp": "137.119.212.174",
-        "operLocation": "z6rya1",
-        "operParam": "yktild",
-        "jsonResult": "1guot9",
-        "status": 212,
-        "errorMsg": "ocrfgo",
-        "operTime": "2025-10-20 18:26:01",
-        "costTime": 1760955652792,
-        "remark": "r3dv99"
+        "method": "lhdlfy",
+        "requestMethod": "jnjfod",
+        "operatorType": 705,
+        "operName": "chung.hoeger",
+        "deptName": "chung.hoeger",
+        "operUrl": "www.winston-nienow.name",
+        "operIp": "239.116.167.16",
+        "operLocation": "zlhhrg",
+        "operParam": "79otyd",
+        "jsonResult": "8x4arw",
+        "status": 255,
+        "errorMsg": "1arzev",
+        "operTime": "2025-11-12 15:29:31",
+        "costTime": 1762932244859,
+        "remark": "12g6z7"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -13968,7 +13808,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operTime=2025-10-20 18:26:01&operatorType=390&operName=merle.larkin&deptName=merle.larkin&q=rh4465&endTime=2025-10-20 18:20:52&status=836&startTime=2025-10-20 18:20:52&operId=946&limit=10&businessType=75&remark=3k3dg7&orderBy=531&title=dgmn6d&page=1&operIp=137.119.212.174'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'operatorType=521&title=7tuhey&deptName=chung.hoeger&orderBy=399&status=289&endTime=2025-11-12 15:24:04&operName=chung.hoeger&remark=sv3qmx&startTime=2025-11-12 15:24:04&businessType=8&page=1&limit=10&operId=757&operTime=2025-11-12 15:29:31&q=ijrqcd&operIp=239.116.167.16'
 ```
 **Response-fields:**
 
@@ -13987,9 +13827,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "uhjgfc",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "hw1y8r",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14038,9 +13878,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6nbhbe",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "z9qhrn",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14081,7 +13921,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?orderBy=644&q=ht7txn&endTime=2025-10-20 18:20:52&limit=10&startTime=2025-10-20 18:20:52&page=1&organName=merle.larkin&wlType=twgtvs&delFlag=5&organId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&page=1&organName=chung.hoeger&delFlag=9&organId=104&limit=10&wlType=tn868o&orderBy=4&q=8btrgr
 ```
 **Response-fields:**
 
@@ -14120,28 +13960,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "1l1ysh"
+        "ipwmpn"
       ],
-      "organId": "172",
-      "organName": "merle.larkin",
-      "organSName": "merle.larkin",
-      "organCode": "81486",
-      "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-      "wlType": "onnegi",
-      "wlTypeName": "merle.larkin",
-      "priority": 821,
-      "delFlag": 5,
-      "createTime": "2025-10-20 18:26:04",
-      "lastTime": "2025-10-20 18:26:04",
-      "contactName": "merle.larkin",
-      "contactEmail": "vivian.streich@hotmail.com",
-      "contactMobile": "(415) 540-6962",
-      "description": "tjnwmc",
-      "tel": "pi96ns"
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "organSName": "chung.hoeger",
+      "organCode": "74128",
+      "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+      "wlType": "ggurc3",
+      "wlTypeName": "chung.hoeger",
+      "priority": 753,
+      "delFlag": 9,
+      "createTime": "2025-11-12 15:29:33",
+      "lastTime": "2025-11-12 15:29:33",
+      "contactName": "chung.hoeger",
+      "contactEmail": "antone.stark@hotmail.com",
+      "contactMobile": "(567) 281-2291",
+      "description": "9wcybw",
+      "tel": "cxsq86"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14210,27 +14050,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "mqlazd"
+      "f7r4aw"
     ],
-    "organId": "172",
-    "organName": "merle.larkin",
-    "organSName": "merle.larkin",
-    "organCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "wlType": "js11pi",
-    "wlTypeName": "merle.larkin",
-    "priority": 452,
-    "delFlag": 5,
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "contactName": "merle.larkin",
-    "contactEmail": "vivian.streich@hotmail.com",
-    "contactMobile": "(415) 540-6962",
-    "description": "cgyaei",
-    "tel": "iz8rxs"
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "organSName": "chung.hoeger",
+    "organCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "wlType": "knjq3e",
+    "wlTypeName": "chung.hoeger",
+    "priority": 636,
+    "delFlag": 9,
+    "createTime": "2025-11-12 15:29:33",
+    "lastTime": "2025-11-12 15:29:33",
+    "contactName": "chung.hoeger",
+    "contactEmail": "antone.stark@hotmail.com",
+    "contactMobile": "(567) 281-2291",
+    "description": "l9is2o",
+    "tel": "poch1c"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14281,24 +14121,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "data": {
     "ids": [
-      "skhohc"
+      "3150b3"
     ],
-    "organId": "172",
-    "organName": "merle.larkin",
-    "organSName": "merle.larkin",
-    "organCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "wlType": "qg79q7",
-    "wlTypeName": "merle.larkin",
-    "priority": 719,
-    "delFlag": 5,
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "contactName": "merle.larkin",
-    "contactEmail": "vivian.streich@hotmail.com",
-    "contactMobile": "(415) 540-6962",
-    "description": "yvu8jp",
-    "tel": "lfra0c"
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "organSName": "chung.hoeger",
+    "organCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "wlType": "rk58zk",
+    "wlTypeName": "chung.hoeger",
+    "priority": 594,
+    "delFlag": 9,
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "contactName": "chung.hoeger",
+    "contactEmail": "antone.stark@hotmail.com",
+    "contactMobile": "(567) 281-2291",
+    "description": "viqgy5",
+    "tel": "rydfpq"
   }
 }'
 ```
@@ -14319,9 +14159,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "9gtbrc",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "072z9n",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14372,24 +14212,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "data": {
     "ids": [
-      "w7rklt"
+      "v87qa7"
     ],
-    "organId": "172",
-    "organName": "merle.larkin",
-    "organSName": "merle.larkin",
-    "organCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "wlType": "v192rj",
-    "wlTypeName": "merle.larkin",
-    "priority": 361,
-    "delFlag": 5,
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "contactName": "merle.larkin",
-    "contactEmail": "vivian.streich@hotmail.com",
-    "contactMobile": "(415) 540-6962",
-    "description": "j2awln",
-    "tel": "p3vhwh"
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "organSName": "chung.hoeger",
+    "organCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "wlType": "6eoinn",
+    "wlTypeName": "chung.hoeger",
+    "priority": 863,
+    "delFlag": 9,
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "contactName": "chung.hoeger",
+    "contactEmail": "antone.stark@hotmail.com",
+    "contactMobile": "(567) 281-2291",
+    "description": "gzvora",
+    "tel": "2bg32g"
   }
 }'
 ```
@@ -14410,9 +14250,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s1o47s",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "qgs51x",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14462,9 +14302,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rd92zu",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "qkwxap",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14515,24 +14355,24 @@ data|object|请求数据对象，放入RequestBody内|false|-
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "data": {
     "ids": [
-      "b11v9z"
+      "4yd29v"
     ],
-    "organId": "172",
-    "organName": "merle.larkin",
-    "organSName": "merle.larkin",
-    "organCode": "81486",
-    "address": "Apt. 410 14910 Erdman Heights， West Caroll， WI 86927",
-    "wlType": "s0iydj",
-    "wlTypeName": "merle.larkin",
-    "priority": 686,
-    "delFlag": 5,
-    "createTime": "2025-10-20 18:26:04",
-    "lastTime": "2025-10-20 18:26:04",
-    "contactName": "merle.larkin",
-    "contactEmail": "vivian.streich@hotmail.com",
-    "contactMobile": "(415) 540-6962",
-    "description": "8ymlys",
-    "tel": "qd72d9"
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "organSName": "chung.hoeger",
+    "organCode": "74128",
+    "address": "1138 Eboni Meadows， West Aricaside， WY 91270",
+    "wlType": "dmk97e",
+    "wlTypeName": "chung.hoeger",
+    "priority": 477,
+    "delFlag": 9,
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "contactName": "chung.hoeger",
+    "contactEmail": "antone.stark@hotmail.com",
+    "contactMobile": "(567) 281-2291",
+    "description": "zkd90l",
+    "tel": "u29cqw"
   }
 }'
 ```
@@ -14553,13 +14393,601 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rj14dl",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "2plo2y",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
-## 系统机构部门增删改操作控制类
+## 系统机构部门读写控制类
+### 获取部门列表
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/list.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取部门列表
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+deptId|int64|单位ID|false|-
+organId|string|系统机构ID|false|-
+parentId|int64|父节点|false|-
+appId|string|应用ID|false|-
+depttypeId|int64|部门分类ID|false|-
+foreignId|string|外部业务ID|false|-
+createType|int32|创建方式0导入1录入2授权|false|-
+type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
+areaCode|string|地域编码，所在城市|false|-
+organLeader|string|领导名称|false|-
+leaderId|string|负责人ID，用户接收相关信息|false|-
+leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+isLeaf|boolean|是否叶子节点|false|-
+isDisabled|boolean|是否禁用0否1是|false|-
+searchCode|string|多级累加路径|false|-
+imagePath|string|图片路径|false|-
+status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+creatorId|string|创建用户ID|false|-
+delFlag|int32|是否删除1已删除0正常|false|-
+description|string|描述|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?limit=10&isLeaf=true&name=chung.hoeger&imagePath=nqh5je&isVirtual=true&page=1&organId=104&leaderMobile=(567) 281-2291&creatorId=104&areaCode=74128&sname=chung.hoeger&searchCode=74128&leaderId=104&parentId=615&status=90&endTime=2025-11-12 15:24:04&depttypeId=604&foreignId=104&isDisabled=true&spare2=g8rmla&startTime=2025-11-12 15:24:04&spare1=imvdd5&createType=570&type=1aq2cw&deptId=303&delFlag=9&orderBy=279&description=15ngsd&q=hwhsfq&appId=104&isOrganLevel=true&organLeader=cepzt4
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─size|int32|No comments found.|-
+└─stackTrace|string|No comments found.|-
+└─pageNum|int32|No comments found.|-
+└─pageSize|int32|No comments found.|-
+└─startRow|int64|No comments found.|-
+└─endRow|int64|No comments found.|-
+└─total|int64|No comments found.|-
+└─pages|int32|No comments found.|-
+└─count|boolean|No comments found.|-
+└─reasonable|boolean|No comments found.|-
+└─pageSizeZero|boolean|No comments found.|-
+└─countColumn|string|No comments found.|-
+└─orderBy|string|No comments found.|-
+└─orderByOnly|boolean|No comments found.|-
+└─boundSqlInterceptor|object|No comments found.|-
+└─dialectClass|string|No comments found.|-
+└─keepOrderBy|boolean|No comments found.|-
+└─keepSubSelectOrderBy|boolean|No comments found.|-
+└─asyncCount|boolean|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "size": 10,
+    "stackTrace": "8yszgw",
+    "pageNum": 503,
+    "pageSize": 10,
+    "startRow": 692,
+    "endRow": 900,
+    "total": 191,
+    "pages": 404,
+    "count": true,
+    "reasonable": true,
+    "pageSizeZero": true,
+    "countColumn": "c4raj6",
+    "orderBy": "we4fj5",
+    "orderByOnly": true,
+    "boundSqlInterceptor": {},
+    "dialectClass": "0919t1",
+    "keepOrderBy": true,
+    "keepSubSelectOrderBy": true,
+    "asyncCount": true
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 获取部门分页
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/page.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取部门分页
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+deptId|int64|单位ID|false|-
+organId|string|系统机构ID|false|-
+parentId|int64|父节点|false|-
+appId|string|应用ID|false|-
+depttypeId|int64|部门分类ID|false|-
+foreignId|string|外部业务ID|false|-
+createType|int32|创建方式0导入1录入2授权|false|-
+type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
+areaCode|string|地域编码，所在城市|false|-
+organLeader|string|领导名称|false|-
+leaderId|string|负责人ID，用户接收相关信息|false|-
+leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+isLeaf|boolean|是否叶子节点|false|-
+isDisabled|boolean|是否禁用0否1是|false|-
+searchCode|string|多级累加路径|false|-
+imagePath|string|图片路径|false|-
+status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+creatorId|string|创建用户ID|false|-
+delFlag|int32|是否删除1已删除0正常|false|-
+description|string|描述|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?foreignId=104&appId=104&q=59t6t3&parentId=785&isLeaf=true&imagePath=cm5n1y&endTime=2025-11-12 15:24:04&searchCode=74128&type=eyj1g7&page=1&isOrganLevel=true&description=l0z7xb&areaCode=74128&leaderMobile=(567) 281-2291&status=773&creatorId=104&spare1=f4x5ow&depttypeId=157&spare2=sn3tcw&organId=104&deptId=267&organLeader=85yy8d&delFlag=9&orderBy=817&createType=965&limit=10&leaderId=104&isVirtual=true&sname=chung.hoeger&name=chung.hoeger&startTime=2025-11-12 15:24:04&isDisabled=true
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─size|int32|No comments found.|-
+└─stackTrace|string|No comments found.|-
+└─pageNum|int32|No comments found.|-
+└─pageSize|int32|No comments found.|-
+└─startRow|int64|No comments found.|-
+└─endRow|int64|No comments found.|-
+└─total|int64|No comments found.|-
+└─pages|int32|No comments found.|-
+└─count|boolean|No comments found.|-
+└─reasonable|boolean|No comments found.|-
+└─pageSizeZero|boolean|No comments found.|-
+└─countColumn|string|No comments found.|-
+└─orderBy|string|No comments found.|-
+└─orderByOnly|boolean|No comments found.|-
+└─boundSqlInterceptor|object|No comments found.|-
+└─dialectClass|string|No comments found.|-
+└─keepOrderBy|boolean|No comments found.|-
+└─keepSubSelectOrderBy|boolean|No comments found.|-
+└─asyncCount|boolean|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "size": 10,
+    "stackTrace": "yinr5h",
+    "pageNum": 581,
+    "pageSize": 10,
+    "startRow": 152,
+    "endRow": 118,
+    "total": 893,
+    "pages": 648,
+    "count": true,
+    "reasonable": true,
+    "pageSizeZero": true,
+    "countColumn": "gsdpf6",
+    "orderBy": "66hhbd",
+    "orderByOnly": true,
+    "boundSqlInterceptor": {},
+    "dialectClass": "hj5hfl",
+    "keepOrderBy": true,
+    "keepSubSelectOrderBy": true,
+    "asyncCount": true
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 查询部门列表（排除节点）
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/list/exclude/{deptId}.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 查询部门列表（排除节点）
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+deptId|int64| 部门ID|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/957.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─id|int64|单位ID|-
+└─organId|string|系统机构ID|-
+└─organName|string|系统机构名称|-
+└─parentId|int64|父节点|-
+└─appId|string|应用ID|-
+└─depttypeId|int64|部门分类ID|-
+└─foreignId|string|外部业务ID|-
+└─createType|int32|创建方式0导入1录入2授权|-
+└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
+└─name|string|名称|-
+└─sname|string|名称简称，本单位显示名称|-
+└─areaCode|string|地域编码，所在城市|-
+└─organLeader|string|领导名称|-
+└─leaderId|string|负责人ID，用户接收相关信息|-
+└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
+└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
+└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
+└─isLeaf|boolean|是否叶子节点|-
+└─isDisabled|boolean|是否禁用0否1是|-
+└─searchCode|string|多级累加路径|-
+└─imagePath|string|图片路径|-
+└─priority|int32|排序|-
+└─status|int32|状态0未生效1正常2受限3锁定4删除|-
+└─creatorId|string|创建用户ID|-
+└─createTime|string|创建时间|-
+└─lastTime|string|修改时间|-
+└─delFlag|int32|是否删除1已删除0正常|-
+└─description|string|描述|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+└─parentName|string|父节点名称|-
+└─childNum|string|字节点数量|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "id": 880,
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "parentId": 145,
+      "appId": "104",
+      "depttypeId": 746,
+      "foreignId": "104",
+      "createType": 964,
+      "type": "z2a8fo",
+      "name": "chung.hoeger",
+      "sname": "chung.hoeger",
+      "areaCode": "74128",
+      "organLeader": "9e8j7v",
+      "leaderId": "104",
+      "leaderMobile": "(567) 281-2291",
+      "isOrganLevel": true,
+      "isVirtual": true,
+      "isLeaf": true,
+      "isDisabled": true,
+      "searchCode": "74128",
+      "imagePath": "2pcyvv",
+      "priority": 603,
+      "status": 80,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:25",
+      "lastTime": "2025-11-12 15:29:25",
+      "delFlag": 9,
+      "description": "zwf7s9",
+      "spare1": "rhkdlk",
+      "spare2": "3zd5h4",
+      "parentName": "chung.hoeger",
+      "childNum": "69wr4c"
+    }
+  ],
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据部门编号获取详细信息
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/{deptId}.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据部门编号获取详细信息
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+deptId|int64| 部门ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/717.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─id|int64|单位ID|-
+└─organId|string|系统机构ID|-
+└─organName|string|系统机构名称|-
+└─parentId|int64|父节点|-
+└─appId|string|应用ID|-
+└─depttypeId|int64|部门分类ID|-
+└─foreignId|string|外部业务ID|-
+└─createType|int32|创建方式0导入1录入2授权|-
+└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
+└─name|string|名称|-
+└─sname|string|名称简称，本单位显示名称|-
+└─areaCode|string|地域编码，所在城市|-
+└─organLeader|string|领导名称|-
+└─leaderId|string|负责人ID，用户接收相关信息|-
+└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
+└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
+└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
+└─isLeaf|boolean|是否叶子节点|-
+└─isDisabled|boolean|是否禁用0否1是|-
+└─searchCode|string|多级累加路径|-
+└─imagePath|string|图片路径|-
+└─priority|int32|排序|-
+└─status|int32|状态0未生效1正常2受限3锁定4删除|-
+└─creatorId|string|创建用户ID|-
+└─createTime|string|创建时间|-
+└─lastTime|string|修改时间|-
+└─delFlag|int32|是否删除1已删除0正常|-
+└─description|string|描述|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+└─parentName|string|父节点名称|-
+└─childNum|string|字节点数量|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "id": 352,
+    "organId": "104",
+    "organName": "chung.hoeger",
+    "parentId": 499,
+    "appId": "104",
+    "depttypeId": 937,
+    "foreignId": "104",
+    "createType": 239,
+    "type": "qm8j8l",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "areaCode": "74128",
+    "organLeader": "6mosiq",
+    "leaderId": "104",
+    "leaderMobile": "(567) 281-2291",
+    "isOrganLevel": true,
+    "isVirtual": true,
+    "isLeaf": true,
+    "isDisabled": true,
+    "searchCode": "74128",
+    "imagePath": "zgelz6",
+    "priority": 158,
+    "status": 349,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:25",
+    "lastTime": "2025-11-12 15:29:25",
+    "delFlag": 9,
+    "description": "10eqf1",
+    "spare1": "0cxeux",
+    "spare2": "7hksl0",
+    "parentName": "chung.hoeger",
+    "childNum": "t5vyed"
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 获取部门树
+**URL:** https://linlan.net/eframe_backend/api/admin/dept/tree.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2024-10-02 23:27:08
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取部门树
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+deptId|int64|单位ID|false|-
+organId|string|系统机构ID|false|-
+parentId|int64|父节点|false|-
+appId|string|应用ID|false|-
+depttypeId|int64|部门分类ID|false|-
+foreignId|string|外部业务ID|false|-
+createType|int32|创建方式0导入1录入2授权|false|-
+type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
+name|string|名称，多级累加名称|false|-
+sname|string|名称简称，本单位显示名称|false|-
+areaCode|string|地域编码，所在城市|false|-
+organLeader|string|领导名称|false|-
+leaderId|string|负责人ID，用户接收相关信息|false|-
+leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
+isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
+isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
+isLeaf|boolean|是否叶子节点|false|-
+isDisabled|boolean|是否禁用0否1是|false|-
+searchCode|string|多级累加路径|false|-
+imagePath|string|图片路径|false|-
+status|int32|状态0未生效1正常2受限3锁定4删除|false|-
+creatorId|string|创建用户ID|false|-
+delFlag|int32|是否删除1已删除0正常|false|-
+description|string|描述|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?searchCode=74128&orderBy=582&leaderId=104&limit=10&areaCode=74128&name=chung.hoeger&type=832yao&foreignId=104&status=657&parentId=287&createType=883&sname=chung.hoeger&imagePath=04jy28&isDisabled=true&spare1=e4kuzl&isLeaf=true&delFlag=9&endTime=2025-11-12 15:24:04&isVirtual=true&page=1&startTime=2025-11-12 15:24:04&appId=104&depttypeId=106&isOrganLevel=true&creatorId=104&q=43z9c5&organLeader=74ika1&leaderMobile=(567) 281-2291&description=wsp0u2&spare2=d37jzo&deptId=447&organId=104
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─title|string|节点标题|-
+└─id|string|节点唯一索引，用于对指定节点进行各类操作|-
+└─parentId|string|父节点ID|-
+└─extId|string|拓展id|-
+└─href|string|点击节点弹出新窗口对应的 url。需开启 isJump 参数|-
+└─spread|boolean|节点是否初始展开，默认 false|-
+└─checked|boolean|节点是否初始为选中状态（如果开启复选框的话），默认 false|-
+└─disabled|boolean|节点是否为禁用状态。默认 false|-
+└─children|array|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "title": "8ia86v",
+      "id": "104",
+      "parentId": "104",
+      "extId": "104",
+      "href": "bv4dfy",
+      "spread": true,
+      "checked": true,
+      "disabled": true,
+      "children": [
+        {
+          "$ref": ".."
+        }
+      ]
+    }
+  ],
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
 ### 新增部门
 **URL:** https://linlan.net/eframe_backend/api/admin/dept/save.do
 
@@ -14619,35 +15047,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:55",
-    "lastTime": "2025-10-20 18:25:55",
-    "id": 75,
-    "organId": "172",
-    "parentId": 808,
-    "appId": "172",
-    "depttypeId": 28,
-    "foreignId": "172",
-    "createType": 380,
-    "type": "1su5hv",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "areaCode": "81486",
-    "organLeader": "9rrli1",
-    "leaderId": "172",
-    "leaderMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:25",
+    "lastTime": "2025-11-12 15:29:25",
+    "id": 178,
+    "organId": "104",
+    "parentId": 999,
+    "appId": "104",
+    "depttypeId": 153,
+    "foreignId": "104",
+    "createType": 219,
+    "type": "mxb3yd",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "areaCode": "74128",
+    "organLeader": "wnuy08",
+    "leaderId": "104",
+    "leaderMobile": "(567) 281-2291",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "81486",
-    "imagePath": "5xkxrm",
-    "priority": 366,
-    "status": 620,
-    "delFlag": 5,
-    "description": "3xhxdh",
-    "spare1": "rhh9ec",
-    "spare2": "3laotv",
+    "searchCode": "74128",
+    "imagePath": "5mkwka",
+    "priority": 38,
+    "status": 900,
+    "delFlag": 9,
+    "description": "z5a6ct",
+    "spare1": "bmcz0u",
+    "spare2": "en6867",
     "children": [
       {
         "$ref": ".."
@@ -14673,9 +15101,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8jlre2",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "3ktiea",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14738,35 +15166,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:55",
-    "lastTime": "2025-10-20 18:25:55",
-    "id": 174,
-    "organId": "172",
-    "parentId": 297,
-    "appId": "172",
-    "depttypeId": 351,
-    "foreignId": "172",
-    "createType": 5,
-    "type": "l14k0d",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "areaCode": "81486",
-    "organLeader": "gpmg6d",
-    "leaderId": "172",
-    "leaderMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:25",
+    "lastTime": "2025-11-12 15:29:25",
+    "id": 306,
+    "organId": "104",
+    "parentId": 928,
+    "appId": "104",
+    "depttypeId": 376,
+    "foreignId": "104",
+    "createType": 438,
+    "type": "uium1c",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "areaCode": "74128",
+    "organLeader": "qdpcsa",
+    "leaderId": "104",
+    "leaderMobile": "(567) 281-2291",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "81486",
-    "imagePath": "cp6ov2",
-    "priority": 395,
-    "status": 651,
-    "delFlag": 5,
-    "description": "hfuljl",
-    "spare1": "2ro69f",
-    "spare2": "lfji67",
+    "searchCode": "74128",
+    "imagePath": "pgtjsl",
+    "priority": 728,
+    "status": 390,
+    "delFlag": 9,
+    "description": "4018tx",
+    "spare1": "0zku89",
+    "spare2": "agna8e",
     "children": [
       {
         "$ref": ".."
@@ -14792,9 +15220,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hp942h",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "l6c7po",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14844,9 +15272,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q5hyot",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "2t7lze",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -14909,35 +15337,35 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:55",
-    "lastTime": "2025-10-20 18:25:55",
-    "id": 814,
-    "organId": "172",
-    "parentId": 734,
-    "appId": "172",
-    "depttypeId": 257,
-    "foreignId": "172",
-    "createType": 249,
-    "type": "mx5wjb",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "areaCode": "81486",
-    "organLeader": "n3mt8j",
-    "leaderId": "172",
-    "leaderMobile": "(415) 540-6962",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:25",
+    "lastTime": "2025-11-12 15:29:25",
+    "id": 220,
+    "organId": "104",
+    "parentId": 950,
+    "appId": "104",
+    "depttypeId": 437,
+    "foreignId": "104",
+    "createType": 587,
+    "type": "dexcxh",
+    "name": "chung.hoeger",
+    "sname": "chung.hoeger",
+    "areaCode": "74128",
+    "organLeader": "niq7lr",
+    "leaderId": "104",
+    "leaderMobile": "(567) 281-2291",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "81486",
-    "imagePath": "zqsbrg",
-    "priority": 880,
-    "status": 196,
-    "delFlag": 5,
-    "description": "4lkcfh",
-    "spare1": "2gnc4k",
-    "spare2": "j6ov1l",
+    "searchCode": "74128",
+    "imagePath": "jnq91z",
+    "priority": 50,
+    "status": 394,
+    "delFlag": 9,
+    "description": "nai7xf",
+    "spare1": "il3uey",
+    "spare2": "ioqoiv",
     "children": [
       {
         "$ref": ".."
@@ -14963,598 +15391,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "yxux0z",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-## 系统机构部门查询读取控制类
-### 获取部门列表
-**URL:** https://linlan.net/eframe_backend/api/admin/dept/list.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 获取部门列表
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
-orderBy|int32|排序，默认主键倒序|false|-
-startTime|string|开始时间|false|-
-endTime|string|结束时间|false|-
-page|int32|分页信息：默认第1页|false|-
-limit|int32|分页每页条数，默认10条|false|-
-deptId|int64|单位ID|false|-
-organId|string|系统机构ID|false|-
-parentId|int64|父节点|false|-
-appId|string|应用ID|false|-
-depttypeId|int64|部门分类ID|false|-
-foreignId|string|外部业务ID|false|-
-createType|int32|创建方式0导入1录入2授权|false|-
-type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称，多级累加名称|false|-
-sname|string|名称简称，本单位显示名称|false|-
-areaCode|string|地域编码，所在城市|false|-
-organLeader|string|领导名称|false|-
-leaderId|string|负责人ID，用户接收相关信息|false|-
-leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-isLeaf|boolean|是否叶子节点|false|-
-isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|多级累加路径|false|-
-imagePath|string|图片路径|false|-
-status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-creatorId|string|创建用户ID|false|-
-delFlag|int32|是否删除1已删除0正常|false|-
-description|string|描述|false|-
-spare1|string|备用1|false|-
-spare2|string|备用2|false|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?delFlag=5&creatorId=172&createType=823&appId=172&description=ujdkpg&q=z2ezv1&orderBy=936&leaderId=172&status=279&depttypeId=455&isDisabled=true&areaCode=81486&parentId=40&page=1&organId=172&sname=merle.larkin&imagePath=gzpyul&leaderMobile=(415) 540-6962&organLeader=olgt3i&isVirtual=true&limit=10&spare2=jlhgq7&name=merle.larkin&type=2mkjav&isLeaf=true&searchCode=81486&deptId=648&startTime=2025-10-20 18:20:52&foreignId=172&spare1=ypjx9y&isOrganLevel=true&endTime=2025-10-20 18:20:52
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─size|int32|No comments found.|-
-└─stackTrace|string|No comments found.|-
-└─pageNum|int32|No comments found.|-
-└─pageSize|int32|No comments found.|-
-└─startRow|int64|No comments found.|-
-└─endRow|int64|No comments found.|-
-└─total|int64|No comments found.|-
-└─pages|int32|No comments found.|-
-└─count|boolean|No comments found.|-
-└─reasonable|boolean|No comments found.|-
-└─pageSizeZero|boolean|No comments found.|-
-└─countColumn|string|No comments found.|-
-└─orderBy|string|No comments found.|-
-└─orderByOnly|boolean|No comments found.|-
-└─boundSqlInterceptor|object|No comments found.|-
-└─dialectClass|string|No comments found.|-
-└─keepOrderBy|boolean|No comments found.|-
-└─keepSubSelectOrderBy|boolean|No comments found.|-
-└─asyncCount|boolean|No comments found.|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "size": 10,
-    "stackTrace": "5f9deb",
-    "pageNum": 766,
-    "pageSize": 10,
-    "startRow": 675,
-    "endRow": 712,
-    "total": 206,
-    "pages": 480,
-    "count": true,
-    "reasonable": true,
-    "pageSizeZero": true,
-    "countColumn": "hrpiwx",
-    "orderBy": "ybphym",
-    "orderByOnly": true,
-    "boundSqlInterceptor": {},
-    "dialectClass": "kgny1m",
-    "keepOrderBy": true,
-    "keepSubSelectOrderBy": true,
-    "asyncCount": true
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 获取部门分页
-**URL:** https://linlan.net/eframe_backend/api/admin/dept/page.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 获取部门分页
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
-orderBy|int32|排序，默认主键倒序|false|-
-startTime|string|开始时间|false|-
-endTime|string|结束时间|false|-
-page|int32|分页信息：默认第1页|false|-
-limit|int32|分页每页条数，默认10条|false|-
-deptId|int64|单位ID|false|-
-organId|string|系统机构ID|false|-
-parentId|int64|父节点|false|-
-appId|string|应用ID|false|-
-depttypeId|int64|部门分类ID|false|-
-foreignId|string|外部业务ID|false|-
-createType|int32|创建方式0导入1录入2授权|false|-
-type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称，多级累加名称|false|-
-sname|string|名称简称，本单位显示名称|false|-
-areaCode|string|地域编码，所在城市|false|-
-organLeader|string|领导名称|false|-
-leaderId|string|负责人ID，用户接收相关信息|false|-
-leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-isLeaf|boolean|是否叶子节点|false|-
-isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|多级累加路径|false|-
-imagePath|string|图片路径|false|-
-status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-creatorId|string|创建用户ID|false|-
-delFlag|int32|是否删除1已删除0正常|false|-
-description|string|描述|false|-
-spare1|string|备用1|false|-
-spare2|string|备用2|false|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?parentId=611&leaderId=172&page=1&appId=172&name=merle.larkin&foreignId=172&delFlag=5&type=bht8e5&organId=172&deptId=949&areaCode=81486&sname=merle.larkin&searchCode=81486&q=83rlqn&depttypeId=436&isOrganLevel=true&leaderMobile=(415) 540-6962&isVirtual=true&imagePath=1n4q7j&createType=600&organLeader=ksrvrw&isLeaf=true&isDisabled=true&orderBy=774&status=532&spare2=rr3xbf&spare1=zqg0jw&limit=10&creatorId=172&description=iuwpst&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─size|int32|No comments found.|-
-└─stackTrace|string|No comments found.|-
-└─pageNum|int32|No comments found.|-
-└─pageSize|int32|No comments found.|-
-└─startRow|int64|No comments found.|-
-└─endRow|int64|No comments found.|-
-└─total|int64|No comments found.|-
-└─pages|int32|No comments found.|-
-└─count|boolean|No comments found.|-
-└─reasonable|boolean|No comments found.|-
-└─pageSizeZero|boolean|No comments found.|-
-└─countColumn|string|No comments found.|-
-└─orderBy|string|No comments found.|-
-└─orderByOnly|boolean|No comments found.|-
-└─boundSqlInterceptor|object|No comments found.|-
-└─dialectClass|string|No comments found.|-
-└─keepOrderBy|boolean|No comments found.|-
-└─keepSubSelectOrderBy|boolean|No comments found.|-
-└─asyncCount|boolean|No comments found.|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "size": 10,
-    "stackTrace": "gpaa7z",
-    "pageNum": 793,
-    "pageSize": 10,
-    "startRow": 621,
-    "endRow": 734,
-    "total": 583,
-    "pages": 240,
-    "count": true,
-    "reasonable": true,
-    "pageSizeZero": true,
-    "countColumn": "1hatnt",
-    "orderBy": "vk40h2",
-    "orderByOnly": true,
-    "boundSqlInterceptor": {},
-    "dialectClass": "c1eu1y",
-    "keepOrderBy": true,
-    "keepSubSelectOrderBy": true,
-    "asyncCount": true
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 查询部门列表（排除节点）
-**URL:** https://linlan.net/eframe_backend/api/admin/dept/list/exclude/{deptId}.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 查询部门列表（排除节点）
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-deptId|int64| 部门ID|false|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/301.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|array|返回数据对象|-
-└─id|int64|单位ID|-
-└─organId|string|系统机构ID|-
-└─organName|string|系统机构名称|-
-└─parentId|int64|父节点|-
-└─appId|string|应用ID|-
-└─depttypeId|int64|部门分类ID|-
-└─foreignId|string|外部业务ID|-
-└─createType|int32|创建方式0导入1录入2授权|-
-└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
-└─name|string|名称|-
-└─sname|string|名称简称，本单位显示名称|-
-└─areaCode|string|地域编码，所在城市|-
-└─organLeader|string|领导名称|-
-└─leaderId|string|负责人ID，用户接收相关信息|-
-└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
-└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
-└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
-└─isLeaf|boolean|是否叶子节点|-
-└─isDisabled|boolean|是否禁用0否1是|-
-└─searchCode|string|多级累加路径|-
-└─imagePath|string|图片路径|-
-└─priority|int32|排序|-
-└─status|int32|状态0未生效1正常2受限3锁定4删除|-
-└─creatorId|string|创建用户ID|-
-└─createTime|string|创建时间|-
-└─lastTime|string|修改时间|-
-└─delFlag|int32|是否删除1已删除0正常|-
-└─description|string|描述|-
-└─spare1|string|备用1|-
-└─spare2|string|备用2|-
-└─parentName|string|父节点名称|-
-└─childNum|string|字节点数量|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": [
-    {
-      "id": 382,
-      "organId": "172",
-      "organName": "merle.larkin",
-      "parentId": 982,
-      "appId": "172",
-      "depttypeId": 837,
-      "foreignId": "172",
-      "createType": 481,
-      "type": "7fucmi",
-      "name": "merle.larkin",
-      "sname": "merle.larkin",
-      "areaCode": "81486",
-      "organLeader": "6mp6go",
-      "leaderId": "172",
-      "leaderMobile": "(415) 540-6962",
-      "isOrganLevel": true,
-      "isVirtual": true,
-      "isLeaf": true,
-      "isDisabled": true,
-      "searchCode": "81486",
-      "imagePath": "5vz2we",
-      "priority": 589,
-      "status": 652,
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:55",
-      "lastTime": "2025-10-20 18:25:55",
-      "delFlag": 5,
-      "description": "qorwfr",
-      "spare1": "0bcotz",
-      "spare2": "47t4oy",
-      "parentName": "merle.larkin",
-      "childNum": "gpr9pv"
-    }
-  ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 根据部门编号获取详细信息
-**URL:** https://linlan.net/eframe_backend/api/admin/dept/{deptId}.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 根据部门编号获取详细信息
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-deptId|int64| 部门ID|true|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/503.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─id|int64|单位ID|-
-└─organId|string|系统机构ID|-
-└─organName|string|系统机构名称|-
-└─parentId|int64|父节点|-
-└─appId|string|应用ID|-
-└─depttypeId|int64|部门分类ID|-
-└─foreignId|string|外部业务ID|-
-└─createType|int32|创建方式0导入1录入2授权|-
-└─type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|-
-└─name|string|名称|-
-└─sname|string|名称简称，本单位显示名称|-
-└─areaCode|string|地域编码，所在城市|-
-└─organLeader|string|领导名称|-
-└─leaderId|string|负责人ID，用户接收相关信息|-
-└─leaderMobile|string|负责人手机号码，用户接收相关信息|-
-└─isOrganLevel|boolean|是否机构本级1是0否默认1|-
-└─isVirtual|boolean|是否虚拟节点1是0不是默认0|-
-└─isLeaf|boolean|是否叶子节点|-
-└─isDisabled|boolean|是否禁用0否1是|-
-└─searchCode|string|多级累加路径|-
-└─imagePath|string|图片路径|-
-└─priority|int32|排序|-
-└─status|int32|状态0未生效1正常2受限3锁定4删除|-
-└─creatorId|string|创建用户ID|-
-└─createTime|string|创建时间|-
-└─lastTime|string|修改时间|-
-└─delFlag|int32|是否删除1已删除0正常|-
-└─description|string|描述|-
-└─spare1|string|备用1|-
-└─spare2|string|备用2|-
-└─parentName|string|父节点名称|-
-└─childNum|string|字节点数量|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": {
-    "id": 463,
-    "organId": "172",
-    "organName": "merle.larkin",
-    "parentId": 278,
-    "appId": "172",
-    "depttypeId": 273,
-    "foreignId": "172",
-    "createType": 724,
-    "type": "ukl0nm",
-    "name": "merle.larkin",
-    "sname": "merle.larkin",
-    "areaCode": "81486",
-    "organLeader": "6gg32i",
-    "leaderId": "172",
-    "leaderMobile": "(415) 540-6962",
-    "isOrganLevel": true,
-    "isVirtual": true,
-    "isLeaf": true,
-    "isDisabled": true,
-    "searchCode": "81486",
-    "imagePath": "3t9t9h",
-    "priority": 130,
-    "status": 210,
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:55",
-    "lastTime": "2025-10-20 18:25:55",
-    "delFlag": 5,
-    "description": "dfxdq9",
-    "spare1": "lej5ps",
-    "spare2": "zlqzuh",
-    "parentName": "merle.larkin",
-    "childNum": "z1xce2"
-  },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 获取部门树
-**URL:** https://linlan.net/eframe_backend/api/admin/dept/tree.do
-
-**Type:** GET
-
-**Author:** Linlan
-CreateTime 2024-10-02 23:27:08
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 获取部门树
-
-**Request-headers:**
-
-Header | Type|Description|Required|Since
----|---|---|---|----
-token|string|令牌|true|-
-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
-orderBy|int32|排序，默认主键倒序|false|-
-startTime|string|开始时间|false|-
-endTime|string|结束时间|false|-
-page|int32|分页信息：默认第1页|false|-
-limit|int32|分页每页条数，默认10条|false|-
-deptId|int64|单位ID|false|-
-organId|string|系统机构ID|false|-
-parentId|int64|父节点|false|-
-appId|string|应用ID|false|-
-depttypeId|int64|部门分类ID|false|-
-foreignId|string|外部业务ID|false|-
-createType|int32|创建方式0导入1录入2授权|false|-
-type|string|部门类型，BENJI本级，NEISHE内设机构，FENZI分子机构|false|-
-name|string|名称，多级累加名称|false|-
-sname|string|名称简称，本单位显示名称|false|-
-areaCode|string|地域编码，所在城市|false|-
-organLeader|string|领导名称|false|-
-leaderId|string|负责人ID，用户接收相关信息|false|-
-leaderMobile|string|负责人手机号码，用户接收相关信息|false|-
-isOrganLevel|boolean|是否机构本级1是0否默认1|false|-
-isVirtual|boolean|是否虚拟节点1是0不是默认0|false|-
-isLeaf|boolean|是否叶子节点|false|-
-isDisabled|boolean|是否禁用0否1是|false|-
-searchCode|string|多级累加路径|false|-
-imagePath|string|图片路径|false|-
-status|int32|状态0未生效1正常2受限3锁定4删除|false|-
-creatorId|string|创建用户ID|false|-
-delFlag|int32|是否删除1已删除0正常|false|-
-description|string|描述|false|-
-spare1|string|备用1|false|-
-spare2|string|备用2|false|-
-
-**Request-example:**
-```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?startTime=2025-10-20 18:20:52&spare2=75lzm6&page=1&parentId=162&isVirtual=true&name=merle.larkin&orderBy=822&leaderMobile=(415) 540-6962&limit=10&isLeaf=true&description=zbwtuz&foreignId=172&isDisabled=true&q=34y81v&createType=967&leaderId=172&isOrganLevel=true&spare1=tvxas9&searchCode=81486&sname=merle.larkin&type=33fjki&depttypeId=963&endTime=2025-10-20 18:20:52&organId=172&areaCode=81486&status=408&deptId=32&appId=172&delFlag=5&creatorId=172&imagePath=e679kw&organLeader=leiv1r
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|array|返回数据对象|-
-└─title|string|节点标题|-
-└─id|string|节点唯一索引，用于对指定节点进行各类操作|-
-└─parentId|string|父节点ID|-
-└─extId|string|拓展id|-
-└─href|string|点击节点弹出新窗口对应的 url。需开启 isJump 参数|-
-└─spread|boolean|节点是否初始展开，默认 false|-
-└─checked|boolean|节点是否初始为选中状态（如果开启复选框的话），默认 false|-
-└─disabled|boolean|节点是否为禁用状态。默认 false|-
-└─children|array|No comments found.|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": [
-    {
-      "title": "smc21u",
-      "id": "172",
-      "parentId": "172",
-      "extId": "172",
-      "href": "4nbbzm",
-      "spread": true,
-      "checked": true,
-      "disabled": true,
-      "children": [
-        {
-          "$ref": ".."
-        }
-      ]
-    }
-  ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "mca5u6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -15585,11 +15424,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
   "data": {
-    "username": "merle.larkin",
-    "password": "7u4tak",
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "appId": "172"
+    "username": "chung.hoeger",
+    "password": "2ru4th",
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "appId": "104"
   }
 }'
 ```
@@ -15615,13 +15454,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "172",
-    "token": "bfja9g",
-    "updateTime": "2025-10-20 18:25:57",
-    "expireTime": "2025-10-20 18:25:57"
+    "userId": "104",
+    "token": "yfwnpl",
+    "updateTime": "2025-11-12 15:29:27",
+    "expireTime": "2025-11-12 15:29:27"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -15747,60 +15586,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:57",
-      "lastTime": "2025-10-20 18:25:57",
-      "id": 461,
-      "userId": "172",
-      "deptId": 312,
-      "deptName": "merle.larkin",
-      "organId": "172",
-      "organName": "merle.larkin",
-      "name": "merle.larkin",
-      "username": "merle.larkin",
-      "nickName": "renna.dibbert",
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "gi2spd",
-      "password": "1bpzcs",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:27",
+      "lastTime": "2025-11-12 15:29:27",
+      "id": 998,
+      "userId": "104",
+      "deptId": 704,
+      "deptName": "chung.hoeger",
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "name": "chung.hoeger",
+      "username": "chung.hoeger",
+      "nickName": "deon.watsica",
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "3qrzfu",
+      "password": "73vrqi",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 602,
-      "delFlag": 5,
-      "lastLoginIp": "137.119.212.174",
-      "lastLoginTime": "2025-10-20 18:25:57",
-      "description": "zgerj1",
+      "status": 448,
+      "delFlag": 9,
+      "lastLoginIp": "239.116.167.16",
+      "lastLoginTime": "2025-11-12 15:29:27",
+      "description": "ghm1q4",
       "dept": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:57",
-        "lastTime": "2025-10-20 18:25:57",
-        "id": 561,
-        "organId": "172",
-        "parentId": 663,
-        "appId": "172",
-        "depttypeId": 854,
-        "foreignId": "172",
-        "createType": 367,
-        "type": "cw3quo",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "areaCode": "81486",
-        "organLeader": "tphdle",
-        "leaderId": "172",
-        "leaderMobile": "(415) 540-6962",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:27",
+        "lastTime": "2025-11-12 15:29:27",
+        "id": 825,
+        "organId": "104",
+        "parentId": 781,
+        "appId": "104",
+        "depttypeId": 336,
+        "foreignId": "104",
+        "createType": 492,
+        "type": "wnbb0a",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "areaCode": "74128",
+        "organLeader": "3rw1uv",
+        "leaderId": "104",
+        "leaderMobile": "(567) 281-2291",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "81486",
-        "imagePath": "nuaier",
-        "priority": 906,
-        "status": 372,
-        "delFlag": 5,
-        "description": "szwmc7",
-        "spare1": "r59ko8",
-        "spare2": "v7unqw",
+        "searchCode": "74128",
+        "imagePath": "6z8eiz",
+        "priority": 115,
+        "status": 288,
+        "delFlag": 9,
+        "description": "hm7rrc",
+        "spare1": "vurl0f",
+        "spare2": "33xkuv",
         "children": [
           {
             "$ref": ".."
@@ -15809,54 +15648,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:25:57",
-          "lastTime": "2025-10-20 18:25:57",
-          "id": 816,
-          "roletypeId": "172",
-          "appId": "172",
-          "name": "merle.larkin",
-          "code": "81486",
-          "priority": 653,
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:27",
+          "lastTime": "2025-11-12 15:29:27",
+          "id": 609,
+          "roletypeId": "104",
+          "appId": "104",
+          "name": "chung.hoeger",
+          "code": "74128",
+          "priority": 262,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 829,
-          "description": "xj7rp3",
-          "areaType": "6mppc5"
+          "status": 547,
+          "description": "m48ldf",
+          "areaType": "1ils9q"
         }
       ],
       "roleIds": [
-        399
+        903
       ],
       "positionIds": [
-        "xtkswx"
+        "xoyxen"
       ],
-      "roleId": 449,
+      "roleId": 96,
       "userRoleList": [
         {
-          "id": 401,
-          "deptId": 881,
-          "deptName": "merle.larkin",
-          "organId": "172",
-          "organName": "merle.larkin",
-          "roleId": 270,
-          "roleName": "merle.larkin",
-          "adminId": 279
+          "id": 607,
+          "deptId": 840,
+          "deptName": "chung.hoeger",
+          "organId": "104",
+          "organName": "chung.hoeger",
+          "roleId": 302,
+          "roleName": "chung.hoeger",
+          "adminId": 759
         }
       ],
-      "code": "81486",
-      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
+      "code": "74128",
+      "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
     },
     "roles": [
-      "ln5idl"
+      "rvcne8"
     ],
     "permissions": [
-      "8i8kff"
+      "mbwya4"
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -15914,33 +15753,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "accountId": "172",
-    "areaId": 154,
-    "groupId": 449,
-    "positionId": "172",
-    "tplSolution": "r9r4hp",
+    "accountId": "104",
+    "areaId": 392,
+    "groupId": 372,
+    "positionId": "104",
+    "tplSolution": "lpf6bx",
     "menuList": [
       {
-        "id": 849,
-        "parentId": 515,
-        "name": "merle.larkin",
-        "ename": "merle.larkin",
-        "type": "75qzhv",
-        "perms": "f24vx1",
-        "menuLevel": 337,
-        "urlType": "hxif5n",
-        "url": "www.ben-grant.info",
-        "menuSeq": "w0v7e7",
-        "icon": "jdto25",
-        "imagePath": "x57bki",
-        "css": "0w9p0i",
-        "description": "1aehoj",
-        "todoTotalApi": "12gpk6"
+        "id": 289,
+        "parentId": 555,
+        "name": "chung.hoeger",
+        "ename": "chung.hoeger",
+        "type": "j5welf",
+        "perms": "f8sl18",
+        "menuLevel": 783,
+        "urlType": "1m8exu",
+        "url": "www.winston-nienow.name",
+        "menuSeq": "67jj95",
+        "icon": "hsfrvz",
+        "imagePath": "isy1g7",
+        "css": "eorgn8",
+        "description": "vbyndp",
+        "todoTotalApi": "vqgn38"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16003,40 +15842,40 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "id": "172",
+    "id": "104",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "yyg8wy",
-    "aesKey": "4ktk65",
-    "clientId": "172",
-    "serverUrl": "www.ben-grant.info",
-    "serverConf1": "9g4oxa",
+    "publicKey": "t09bdv",
+    "aesKey": "yqgxq5",
+    "clientId": "104",
+    "serverUrl": "www.winston-nienow.name",
+    "serverConf1": "s2p1td",
     "appConf": {
-      "siteId": 601,
-      "appId": "172",
-      "topXzqhId": "172",
+      "siteId": 477,
+      "appId": "104",
+      "topXzqhId": "104",
       "appConfJson": {
-        "mapKey": "5y38qv"
+        "mapKey": "p9xs4d"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "hi0ti0",
+      "layout": "acpfox",
       "siteInfo": {
-        "id": 858,
-        "appId": "172",
-        "areaCode": "81486",
-        "path": "np57oh",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "layout": "ys76mf",
-        "logoUrl": "www.ben-grant.info",
-        "cdnUrl": "www.ben-grant.info"
+        "id": 274,
+        "appId": "104",
+        "areaCode": "74128",
+        "path": "r4oky2",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "layout": "c65vzw",
+        "logoUrl": "www.winston-nienow.name",
+        "cdnUrl": "www.winston-nienow.name"
       }
     }
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16066,11 +15905,11 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/third/ecorgan/login.do --data '{
   "data": {
-    "username": "merle.larkin",
-    "password": "frvxlj",
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "appId": "172"
+    "username": "chung.hoeger",
+    "password": "n06xhu",
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "appId": "104"
   }
 }'
 ```
@@ -16096,13 +15935,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "172",
-    "token": "zsy0ov",
-    "updateTime": "2025-10-20 18:25:58",
-    "expireTime": "2025-10-20 18:25:58"
+    "userId": "104",
+    "token": "8tpvw5",
+    "updateTime": "2025-11-12 15:29:28",
+    "expireTime": "2025-11-12 15:29:28"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16126,7 +15965,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=9bbea0fa-1409-4914-9b7e-342924ed57ad&code=81486
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?code=74128&uuid=751dd19a-c431-414c-be28-4d0be16947d8
 ```
 **Response-fields:**
 
@@ -16145,9 +15984,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4y5edo",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "lqx9e9",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16197,8 +16036,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16247,14 +16086,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "merle.larkin",
-      "cacheKey": "kxvgxf",
-      "cacheValue": "698pi8",
-      "remark": "ku5igi"
+      "cacheName": "chung.hoeger",
+      "cacheKey": "84j1jo",
+      "cacheValue": "m8018s",
+      "remark": "8egh77"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16284,7 +16123,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/merle.larkin.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -16306,8 +16145,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16338,7 +16177,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/merle.larkin/erzz2z.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/chung.hoeger/vpykx8.do
 ```
 **Response-fields:**
 
@@ -16362,13 +16201,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cacheName": "merle.larkin",
-    "cacheKey": "q49y0k",
-    "cacheValue": "i41r39",
-    "remark": "x79mra"
+    "cacheName": "chung.hoeger",
+    "cacheKey": "dausxh",
+    "cacheValue": "azxdkj",
+    "remark": "86zu4j"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16398,7 +16237,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/merle.larkin.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -16417,9 +16256,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vhup1n",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ikglsi",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16449,7 +16288,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/s7dh7k.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/6g4prr.do
 ```
 **Response-fields:**
 
@@ -16468,9 +16307,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "18vbt3",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "g152k5",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16513,9 +16352,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x9klo0",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "gax5pc",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16559,7 +16398,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?visible=ewitfn&startTime=2025-10-20 18:20:52&menuId=388&q=uoh5s5&menuType=zi73rh&endTime=2025-10-20 18:20:52&delFlag=w34i1a&limit=10&parentId=354&orderBy=183&page=1&currAppId=172&status=qzph7x&menuName=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?limit=10&menuType=a5jybf&menuName=chung.hoeger&status=h5eqi4&currAppId=104&menuId=400&parentId=184&orderBy=806&startTime=2025-11-12 15:24:04&visible=xy4ncm&delFlag=cf62i4&page=1&endTime=2025-11-12 15:24:04&q=l8vn5q
 ```
 **Response-fields:**
 
@@ -16616,56 +16455,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 46,
-      "menuName": "merle.larkin",
-      "type": "i8trsg",
-      "typeName": "merle.larkin",
-      "parentName": "merle.larkin",
-      "parentId": 844,
-      "priority": 628,
-      "path": "u6gnm3",
-      "component": "gcj2l0",
-      "query": "5p2dvz",
-      "routeName": "merle.larkin",
-      "isFrame": "23f8fh",
-      "isCache": "6dvwu3",
-      "menuType": "90y3hb",
-      "menuTypeName": "merle.larkin",
-      "visible": "evkb1f",
-      "status": "bhomxv",
-      "perms": "46kmvz",
-      "icon": "1nn0x1",
-      "imagePath": "4nqyhb",
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:58",
-      "lastTime": "2025-10-20 18:25:58",
+      "menuId": 190,
+      "menuName": "chung.hoeger",
+      "type": "3vm0fu",
+      "typeName": "chung.hoeger",
+      "parentName": "chung.hoeger",
+      "parentId": 452,
+      "priority": 491,
+      "path": "1v7uhq",
+      "component": "ssi874",
+      "query": "8ej3wi",
+      "routeName": "chung.hoeger",
+      "isFrame": "rddjkb",
+      "isCache": "vzps99",
+      "menuType": "ekjxis",
+      "menuTypeName": "chung.hoeger",
+      "visible": "jvmeu7",
+      "status": "rwckfg",
+      "perms": "lsdfe8",
+      "icon": "49cmz2",
+      "imagePath": "sbu5g3",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:28",
+      "lastTime": "2025-11-12 15:29:28",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 200,
-      "description": "jjp2my",
-      "listJson": "9aelz9",
-      "delFlag": 5,
+      "childNum": 614,
+      "description": "5e4psz",
+      "listJson": "brs3je",
+      "delFlag": 9,
       "permsList": [
         {
-          "permsName": "merle.larkin",
-          "permsStr": "m1otfp"
+          "permsName": "chung.hoeger",
+          "permsStr": "yvk5rn"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "172",
-          "parentId": "172",
-          "code": "81486",
-          "name": "merle.larkin"
+          "id": "104",
+          "parentId": "104",
+          "code": "74128",
+          "name": "chung.hoeger"
         }
       ]
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16708,7 +16547,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?menuId=735&menuType=ooou1t&status=rf770u&menuName=merle.larkin&visible=m0b0ab&startTime=2025-10-20 18:20:52&q=xzgf1u&endTime=2025-10-20 18:20:52&delFlag=n5l9ey&page=1&parentId=485&currAppId=172&orderBy=164&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?currAppId=104&q=9phphm&status=rnrryb&menuId=582&visible=al7xc2&delFlag=t9m4ro&orderBy=509&startTime=2025-11-12 15:24:04&limit=10&menuName=chung.hoeger&endTime=2025-11-12 15:24:04&menuType=hkhmsf&page=1&parentId=805
 ```
 **Response-fields:**
 
@@ -16748,27 +16587,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "8cbqgv",
-    "pageNum": 385,
+    "stackTrace": "cdg67r",
+    "pageNum": 1,
     "pageSize": 10,
-    "startRow": 596,
-    "endRow": 481,
-    "total": 496,
-    "pages": 180,
+    "startRow": 332,
+    "endRow": 857,
+    "total": 304,
+    "pages": 398,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "pmp4d8",
-    "orderBy": "jb6cly",
+    "countColumn": "cdf9yh",
+    "orderBy": "tq3c2m",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "a1mrdy",
+    "dialectClass": "kv7sjv",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16798,7 +16637,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/690.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/768.do
 ```
 **Response-fields:**
 
@@ -16854,55 +16693,55 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "menuId": 357,
-    "menuName": "merle.larkin",
-    "type": "kh412f",
-    "typeName": "merle.larkin",
-    "parentName": "merle.larkin",
-    "parentId": 979,
-    "priority": 255,
-    "path": "yon0sy",
-    "component": "2pc1ln",
-    "query": "7pnliq",
-    "routeName": "merle.larkin",
-    "isFrame": "khsu2j",
-    "isCache": "tqchcv",
-    "menuType": "yhpc3i",
-    "menuTypeName": "merle.larkin",
-    "visible": "eo4khp",
-    "status": "ec4gck",
-    "perms": "sl3d6s",
-    "icon": "7hfqz4",
-    "imagePath": "0akj8z",
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:58",
-    "lastTime": "2025-10-20 18:25:58",
+    "menuId": 643,
+    "menuName": "chung.hoeger",
+    "type": "lf985q",
+    "typeName": "chung.hoeger",
+    "parentName": "chung.hoeger",
+    "parentId": 522,
+    "priority": 617,
+    "path": "7dm8om",
+    "component": "e0dssk",
+    "query": "gup8dk",
+    "routeName": "chung.hoeger",
+    "isFrame": "wpigxb",
+    "isCache": "ya6zi0",
+    "menuType": "ehz046",
+    "menuTypeName": "chung.hoeger",
+    "visible": "48w05l",
+    "status": "tjku3i",
+    "perms": "rz4zbc",
+    "icon": "ugo3jt",
+    "imagePath": "zqygd0",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:28",
+    "lastTime": "2025-11-12 15:29:28",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 568,
-    "description": "82mtne",
-    "listJson": "ujdvwo",
-    "delFlag": 5,
+    "childNum": 952,
+    "description": "4p0hj9",
+    "listJson": "bvfuvx",
+    "delFlag": 9,
     "permsList": [
       {
-        "permsName": "merle.larkin",
-        "permsStr": "7v2ni8"
+        "permsName": "chung.hoeger",
+        "permsStr": "7yk1n3"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "172",
-        "parentId": "172",
-        "code": "81486",
-        "name": "merle.larkin"
+        "id": "104",
+        "parentId": "104",
+        "code": "74128",
+        "name": "chung.hoeger"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -16945,7 +16784,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?status=qwgk06&visible=zaiydf&startTime=2025-10-20 18:20:52&currAppId=172&orderBy=518&page=1&endTime=2025-10-20 18:20:52&q=qylztw&limit=10&menuName=merle.larkin&delFlag=qy9vy6&menuId=378&menuType=5j0fwq&parentId=870
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?menuName=chung.hoeger&parentId=374&limit=10&page=1&currAppId=104&status=harnuw&menuType=o4i5mh&menuId=297&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&orderBy=901&visible=vd46n0&q=059wb6&delFlag=vqa42o
 ```
 **Response-fields:**
 
@@ -16971,12 +16810,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      646
+      148
     ],
     "menus": [
       {
-        "id": 641,
-        "label": "9azss9",
+        "id": 643,
+        "label": "ulreoc",
         "children": [
           {
             "$ref": ".."
@@ -16985,8 +16824,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17050,7 +16889,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?parentRoot=edkzcj&appIds=mmob6t&appIds=mmob6t&subCount=22&icon=0kkbh7&parentId=163&startTime=2025-10-20 18:20:52&createTime=2025-10-20 18:20:52&typeNoButton=hzyc03&imagePath=vis2tu&page=1&urlType=14vdz3&description=d3vqeo&menuLevel=791&spare1=z308mr&parentNull=pxxaei&isDisabled=true&isCheck=true&appId=172&limit=10&code=81486&isDisplay=true&shortCut=h7yvcl&isMenuAll=yhdbc3&isProtect=true&delFlag=5&q=r1n6yr&popPosition=187&type=cd255x&url=www.ben-grant.info&orderBy=939&endTime=2025-10-20 18:20:52&menuIds=n563j8&menuIds=n563j8&spare2=jq6kox&offset=1&name=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?appIds=ocgp1c&appIds=ocgp1c&isDisabled=true&createTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&type=vyfd36&spare2=0q8pn8&spare1=8qtp77&url=www.winston-nienow.name&page=1&menuLevel=768&startTime=2025-11-12 15:24:04&popPosition=412&delFlag=9&limit=10&orderBy=605&isDisplay=true&isCheck=true&parentNull=ezda3f&typeNoButton=wkdb0i&name=chung.hoeger&subCount=200&shortCut=ce1pgt&description=erl6th&offset=1&q=4ttyr6&code=74128&isMenuAll=3110ot&urlType=gn98ys&appId=104&isProtect=true&icon=g7f143&parentId=954&menuIds=kxiopw&menuIds=kxiopw&parentRoot=rhbvph&imagePath=ypbiwz
 ```
 **Response-fields:**
 
@@ -17080,11 +16919,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "ji8o4g",
-      "id": "172",
-      "parentId": "172",
-      "extId": "172",
-      "href": "ymvbrp",
+      "title": "6ggjt2",
+      "id": "104",
+      "parentId": "104",
+      "extId": "104",
+      "href": "jyq4av",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -17095,8 +16934,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17126,7 +16965,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/243.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/249.do
 ```
 **Response-fields:**
 
@@ -17152,12 +16991,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      956
+      33
     ],
     "menus": [
       {
-        "id": 682,
-        "label": "65rsr5",
+        "id": 706,
+        "label": "jzfdxi",
         "children": [
           {
             "$ref": ".."
@@ -17166,8 +17005,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17235,50 +17074,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save/single.do --data '{
   "data": {
-    "menuId": 776,
-    "menuName": "merle.larkin",
-    "type": "gbytnq",
-    "typeName": "merle.larkin",
-    "parentName": "merle.larkin",
-    "parentId": 921,
-    "priority": 319,
-    "path": "0ogao8",
-    "component": "mkrcm3",
-    "query": "0mkxtb",
-    "routeName": "merle.larkin",
-    "isFrame": "p6n09e",
-    "isCache": "0ovddp",
-    "menuType": "w1gejm",
-    "menuTypeName": "merle.larkin",
-    "visible": "tem6t4",
-    "status": "2pjeka",
-    "perms": "5l9s6z",
-    "icon": "gygkb6",
-    "imagePath": "mrcmp9",
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:58",
-    "lastTime": "2025-10-20 18:25:58",
+    "menuId": 767,
+    "menuName": "chung.hoeger",
+    "type": "86hpw4",
+    "typeName": "chung.hoeger",
+    "parentName": "chung.hoeger",
+    "parentId": 145,
+    "priority": 211,
+    "path": "qew96n",
+    "component": "5euhx4",
+    "query": "fz1ybk",
+    "routeName": "chung.hoeger",
+    "isFrame": "cbzw7o",
+    "isCache": "djddhq",
+    "menuType": "rlcfnd",
+    "menuTypeName": "chung.hoeger",
+    "visible": "6pq3fs",
+    "status": "441nwg",
+    "perms": "sb1nel",
+    "icon": "pbmdxl",
+    "imagePath": "kea18x",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:28",
+    "lastTime": "2025-11-12 15:29:28",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 555,
-    "description": "rc0ges",
-    "listJson": "d5h1sq",
-    "delFlag": 5,
+    "childNum": 845,
+    "description": "b1ef2t",
+    "listJson": "6yernc",
+    "delFlag": 9,
     "permsList": [
       {
-        "permsName": "merle.larkin",
-        "permsStr": "38pyym"
+        "permsName": "chung.hoeger",
+        "permsStr": "h8aqma"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "172",
-        "parentId": "172",
-        "code": "81486",
-        "name": "merle.larkin"
+        "id": "104",
+        "parentId": "104",
+        "code": "74128",
+        "name": "chung.hoeger"
       }
     ]
   }
@@ -17301,9 +17140,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "z0xkfz",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "267ovp",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17371,50 +17210,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update/single.do --data '{
   "data": {
-    "menuId": 464,
-    "menuName": "merle.larkin",
-    "type": "9ubv48",
-    "typeName": "merle.larkin",
-    "parentName": "merle.larkin",
-    "parentId": 543,
-    "priority": 482,
-    "path": "74pz4x",
-    "component": "y0v2rg",
-    "query": "bgjacb",
-    "routeName": "merle.larkin",
-    "isFrame": "kw08rk",
-    "isCache": "creomm",
-    "menuType": "s2yfbw",
-    "menuTypeName": "merle.larkin",
-    "visible": "ukjwhd",
-    "status": "nrsggm",
-    "perms": "szag4p",
-    "icon": "ofg7sn",
-    "imagePath": "a00x59",
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:58",
-    "lastTime": "2025-10-20 18:25:58",
+    "menuId": 643,
+    "menuName": "chung.hoeger",
+    "type": "c9ao7l",
+    "typeName": "chung.hoeger",
+    "parentName": "chung.hoeger",
+    "parentId": 884,
+    "priority": 540,
+    "path": "kopmre",
+    "component": "1c0wuo",
+    "query": "pxe4kq",
+    "routeName": "chung.hoeger",
+    "isFrame": "r41715",
+    "isCache": "5qhkov",
+    "menuType": "ymh173",
+    "menuTypeName": "chung.hoeger",
+    "visible": "onl2z4",
+    "status": "34it8a",
+    "perms": "miq3pg",
+    "icon": "dv4l2d",
+    "imagePath": "tim30d",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:28",
+    "lastTime": "2025-11-12 15:29:28",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 470,
-    "description": "c0wmfv",
-    "listJson": "fg2xrk",
-    "delFlag": 5,
+    "childNum": 621,
+    "description": "n6ovoa",
+    "listJson": "z43p24",
+    "delFlag": 9,
     "permsList": [
       {
-        "permsName": "merle.larkin",
-        "permsStr": "7wm9su"
+        "permsName": "chung.hoeger",
+        "permsStr": "wsb197"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "172",
-        "parentId": "172",
-        "code": "81486",
-        "name": "merle.larkin"
+        "id": "104",
+        "parentId": "104",
+        "code": "74128",
+        "name": "chung.hoeger"
       }
     ]
   }
@@ -17437,9 +17276,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "vek6fy",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "zed7mu",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17507,50 +17346,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
   "data": {
-    "menuId": 790,
-    "menuName": "merle.larkin",
-    "type": "uer3s0",
-    "typeName": "merle.larkin",
-    "parentName": "merle.larkin",
-    "parentId": 60,
-    "priority": 866,
-    "path": "vipgzx",
-    "component": "lsa41r",
-    "query": "kw8hft",
-    "routeName": "merle.larkin",
-    "isFrame": "la4qzq",
-    "isCache": "l9v726",
-    "menuType": "cm8s1c",
-    "menuTypeName": "merle.larkin",
-    "visible": "d5youn",
-    "status": "02brjy",
-    "perms": "d33ae1",
-    "icon": "3up236",
-    "imagePath": "4lvf8w",
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:58",
-    "lastTime": "2025-10-20 18:25:58",
+    "menuId": 392,
+    "menuName": "chung.hoeger",
+    "type": "3s01y4",
+    "typeName": "chung.hoeger",
+    "parentName": "chung.hoeger",
+    "parentId": 160,
+    "priority": 819,
+    "path": "emmwvu",
+    "component": "2xdy4q",
+    "query": "2rnagv",
+    "routeName": "chung.hoeger",
+    "isFrame": "j563fc",
+    "isCache": "tokgrf",
+    "menuType": "8dgdwf",
+    "menuTypeName": "chung.hoeger",
+    "visible": "ipj57h",
+    "status": "xepttc",
+    "perms": "uyw59a",
+    "icon": "60a2v6",
+    "imagePath": "xt2bm9",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:28",
+    "lastTime": "2025-11-12 15:29:28",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 676,
-    "description": "kkx953",
-    "listJson": "uphkzp",
-    "delFlag": 5,
+    "childNum": 844,
+    "description": "2m9a2e",
+    "listJson": "kvyb0m",
+    "delFlag": 9,
     "permsList": [
       {
-        "permsName": "merle.larkin",
-        "permsStr": "ofe7fb"
+        "permsName": "chung.hoeger",
+        "permsStr": "7h3jrw"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "172",
-        "parentId": "172",
-        "code": "81486",
-        "name": "merle.larkin"
+        "id": "104",
+        "parentId": "104",
+        "code": "74128",
+        "name": "chung.hoeger"
       }
     ]
   }
@@ -17573,9 +17412,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "bm2d72",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "2ojqkz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17643,50 +17482,50 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
   "data": {
-    "menuId": 480,
-    "menuName": "merle.larkin",
-    "type": "mh374a",
-    "typeName": "merle.larkin",
-    "parentName": "merle.larkin",
-    "parentId": 864,
-    "priority": 665,
-    "path": "6z94c7",
-    "component": "3q1ucf",
-    "query": "jmgsv1",
-    "routeName": "merle.larkin",
-    "isFrame": "3pjgee",
-    "isCache": "io75c3",
-    "menuType": "h77meq",
-    "menuTypeName": "merle.larkin",
-    "visible": "eaul1u",
-    "status": "xsaya4",
-    "perms": "3exvci",
-    "icon": "jdkiv6",
-    "imagePath": "4n30cl",
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:58",
-    "lastTime": "2025-10-20 18:25:58",
+    "menuId": 245,
+    "menuName": "chung.hoeger",
+    "type": "modulh",
+    "typeName": "chung.hoeger",
+    "parentName": "chung.hoeger",
+    "parentId": 624,
+    "priority": 815,
+    "path": "zg01ax",
+    "component": "m38wvv",
+    "query": "gzgbbr",
+    "routeName": "chung.hoeger",
+    "isFrame": "gcal2b",
+    "isCache": "focduz",
+    "menuType": "jdbggr",
+    "menuTypeName": "chung.hoeger",
+    "visible": "xp2mhc",
+    "status": "pspq32",
+    "perms": "00hjo1",
+    "icon": "n2s4h4",
+    "imagePath": "w6q4ui",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:28",
+    "lastTime": "2025-11-12 15:29:28",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 615,
-    "description": "tjwyqa",
-    "listJson": "aen47i",
-    "delFlag": 5,
+    "childNum": 314,
+    "description": "hb1wu7",
+    "listJson": "tsp92m",
+    "delFlag": 9,
     "permsList": [
       {
-        "permsName": "merle.larkin",
-        "permsStr": "ixras5"
+        "permsName": "chung.hoeger",
+        "permsStr": "7crdlr"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "172",
-        "parentId": "172",
-        "code": "81486",
-        "name": "merle.larkin"
+        "id": "104",
+        "parentId": "104",
+        "code": "74128",
+        "name": "chung.hoeger"
       }
     ]
   }
@@ -17709,9 +17548,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "35m940",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "dsmafe",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17760,9 +17599,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f29rxo",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "yxgkad",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17831,41 +17670,41 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "id": 84,
-    "parentId": 113,
-    "appId": "172",
-    "name": "merle.larkin",
-    "ename": "merle.larkin",
-    "sname": "merle.larkin",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "id": 944,
+    "parentId": 921,
+    "appId": "104",
+    "name": "chung.hoeger",
+    "ename": "chung.hoeger",
+    "sname": "chung.hoeger",
     "isProtect": true,
-    "type": "0758pl",
-    "userId": "172",
-    "code": "81486",
-    "menuLevel": 518,
-    "subCount": 741,
-    "perms": "89p9u7",
-    "urlType": "m2fv33",
-    "url": "www.ben-grant.info",
-    "icon": "vfsu6z",
-    "popPosition": 464,
-    "imagePath": "v8lzou",
-    "css": "nffgqu",
-    "jsEvent": "s0es2z",
-    "menuSeq": "ijjwf0",
-    "shortCut": "73kdnc",
+    "type": "7yfurj",
+    "userId": "104",
+    "code": "74128",
+    "menuLevel": 423,
+    "subCount": 793,
+    "perms": "awynqk",
+    "urlType": "hiiyy4",
+    "url": "www.winston-nienow.name",
+    "icon": "zmw7ud",
+    "popPosition": 926,
+    "imagePath": "ky5t94",
+    "css": "o7hd28",
+    "jsEvent": "cr4er4",
+    "menuSeq": "oks4k5",
+    "shortCut": "naubrv",
     "isLeaf": true,
     "isDisplay": true,
     "isDisabled": true,
     "isCheck": true,
-    "priority": 814,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:25:59",
-    "description": "fa8vo9",
-    "spare1": "vskx5g",
-    "spare2": "ft0xbo",
+    "priority": 867,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:29",
+    "description": "jg8rh7",
+    "spare1": "eikxfi",
+    "spare2": "q264b8",
     "open": true,
     "list": [
       {
@@ -17892,9 +17731,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ap6fx1",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "p0widc",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -17934,7 +17773,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?orderBy=500&roleName=merle.larkin&roleId=531&roleKey=3mi6bc&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&status=583&page=1&q=y48eib&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&q=phi1kg&page=1&roleKey=61wnxp&limit=10&roleName=chung.hoeger&orderBy=558&roleId=175&status=253
 ```
 **Response-fields:**
 
@@ -17976,37 +17815,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:59",
-      "lastTime": "2025-10-20 18:25:59",
-      "roleId": 953,
-      "roleName": "merle.larkin",
-      "roleKey": "qvfbu5",
-      "roleSort": 518,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:29",
+      "lastTime": "2025-11-12 15:29:29",
+      "roleId": 45,
+      "roleName": "chung.hoeger",
+      "roleKey": "1jxs1e",
+      "roleSort": 657,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 961,
+      "status": 295,
       "flag": true,
       "menuIds": [
-        655
+        820
       ],
       "deptIds": [
-        514
+        324
       ],
       "permissions": [
-        "fdx6wg"
+        "mvv42j"
       ],
-      "remark": "lu2e8b",
-      "parentName": "merle.larkin",
-      "appName": "merle.larkin",
-      "roletypeId": "172",
-      "roletypeName": "merle.larkin",
-      "priority": 505,
+      "remark": "8zbob0",
+      "parentName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "roletypeId": "104",
+      "roletypeName": "chung.hoeger",
+      "priority": 567,
       "isSuper": true
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18045,7 +17884,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleName=merle.larkin&endTime=2025-10-20 18:20:52&page=1&startTime=2025-10-20 18:20:52&limit=10&roleId=362&roleKey=60vyu7&orderBy=47&status=185&q=30gyvm'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'roleId=68&roleName=chung.hoeger&startTime=2025-11-12 15:24:04&status=528&orderBy=804&endTime=2025-11-12 15:24:04&limit=10&page=1&q=ywbg5e&roleKey=rrzils'
 ```
 **Response-fields:**
 
@@ -18064,9 +17903,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "o1dcof",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "2ku1iz",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18096,7 +17935,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/40.do
 ```
 **Response-fields:**
 
@@ -18137,36 +17976,36 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 609,
-    "roleName": "merle.larkin",
-    "roleKey": "zv4t19",
-    "roleSort": 72,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 385,
+    "roleName": "chung.hoeger",
+    "roleKey": "6km0vm",
+    "roleSort": 821,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 306,
+    "status": 69,
     "flag": true,
     "menuIds": [
-      746
+      271
     ],
     "deptIds": [
-      601
+      904
     ],
     "permissions": [
-      "4kvsze"
+      "eunusx"
     ],
-    "remark": "si8wdx",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 981,
+    "remark": "tlckh9",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 675,
     "isSuper": true
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18219,32 +18058,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 353,
-    "roleName": "merle.larkin",
-    "roleKey": "zqzpun",
-    "roleSort": 332,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 17,
+    "roleName": "chung.hoeger",
+    "roleKey": "vf9jov",
+    "roleSort": 327,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 273,
+    "status": 319,
     "flag": true,
     "menuIds": [
-      775
+      730
     ],
     "deptIds": [
-      913
+      491
     ],
     "permissions": [
-      "5rsqpc"
+      "bnummz"
     ],
-    "remark": "9a5cqi",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 237,
+    "remark": "mk957q",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 947,
     "isSuper": true
   }
 }'
@@ -18266,9 +18105,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "urgogt",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "dima20",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18321,32 +18160,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 222,
-    "roleName": "merle.larkin",
-    "roleKey": "hgj8ju",
-    "roleSort": 876,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 970,
+    "roleName": "chung.hoeger",
+    "roleKey": "foxfhn",
+    "roleSort": 377,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 15,
+    "status": 233,
     "flag": true,
     "menuIds": [
-      611
+      502
     ],
     "deptIds": [
-      403
+      158
     ],
     "permissions": [
-      "9z3t4g"
+      "8i6zdu"
     ],
-    "remark": "yaqhz7",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 614,
+    "remark": "5gbwry",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 453,
     "isSuper": true
   }
 }'
@@ -18368,9 +18207,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "13ar7r",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "fj22as",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18423,32 +18262,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save/all.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 802,
-    "roleName": "merle.larkin",
-    "roleKey": "sumdvv",
-    "roleSort": 742,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 990,
+    "roleName": "chung.hoeger",
+    "roleKey": "opmfij",
+    "roleSort": 974,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 223,
+    "status": 178,
     "flag": true,
     "menuIds": [
-      694
+      214
     ],
     "deptIds": [
-      838
+      672
     ],
     "permissions": [
-      "s1ywk8"
+      "8oined"
     ],
-    "remark": "0o2oam",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 212,
+    "remark": "xl34c7",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 363,
     "isSuper": true
   }
 }'
@@ -18470,9 +18309,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "to4e4y",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "1icizo",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18525,32 +18364,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update/all.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 544,
-    "roleName": "merle.larkin",
-    "roleKey": "2bsqs0",
-    "roleSort": 601,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 670,
+    "roleName": "chung.hoeger",
+    "roleKey": "kga4sd",
+    "roleSort": 833,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 734,
+    "status": 977,
     "flag": true,
     "menuIds": [
-      805
+      737
     ],
     "deptIds": [
-      35
+      786
     ],
     "permissions": [
-      "f65ipn"
+      "a05yzn"
     ],
-    "remark": "nq1m1w",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 166,
+    "remark": "tfod3q",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 617,
     "isSuper": true
   }
 }'
@@ -18572,9 +18411,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hln0vn",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "3sacga",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18623,9 +18462,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "p1q2zq",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "v0ejvd",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18672,21 +18511,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "id": 555,
-    "roletypeId": "172",
-    "appId": "172",
-    "name": "merle.larkin",
-    "code": "81486",
-    "priority": 824,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "id": 192,
+    "roletypeId": "104",
+    "appId": "104",
+    "name": "chung.hoeger",
+    "code": "74128",
+    "priority": 485,
     "isRegular": true,
     "isSuper": true,
     "isPublic": true,
-    "status": 756,
-    "description": "vsnoj0",
-    "areaType": "us98xc"
+    "status": 880,
+    "description": "syerou",
+    "areaType": "1bvais"
   }
 }'
 ```
@@ -18707,9 +18546,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "ef2ai3",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ltfomn",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18762,32 +18601,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 390,
-    "roleName": "merle.larkin",
-    "roleKey": "py5p1f",
-    "roleSort": 241,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 708,
+    "roleName": "chung.hoeger",
+    "roleKey": "yiq185",
+    "roleSort": 116,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 385,
+    "status": 57,
     "flag": true,
     "menuIds": [
-      847
+      217
     ],
     "deptIds": [
-      608
+      585
     ],
     "permissions": [
-      "tv6mu1"
+      "ll2ezx"
     ],
-    "remark": "uo33l7",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 36,
+    "remark": "iehrbg",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 248,
     "isSuper": true
   }
 }'
@@ -18809,9 +18648,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "wev9zc",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ce3elt",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18864,32 +18703,32 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:59",
-    "lastTime": "2025-10-20 18:25:59",
-    "roleId": 308,
-    "roleName": "merle.larkin",
-    "roleKey": "4yki1k",
-    "roleSort": 633,
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:29",
+    "lastTime": "2025-11-12 15:29:29",
+    "roleId": 846,
+    "roleName": "chung.hoeger",
+    "roleKey": "q78wvl",
+    "roleSort": 272,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 420,
+    "status": 815,
     "flag": true,
     "menuIds": [
-      580
+      365
     ],
     "deptIds": [
-      233
+      242
     ],
     "permissions": [
-      "37r7uu"
+      "ophgh0"
     ],
-    "remark": "xeqbdq",
-    "parentName": "merle.larkin",
-    "appName": "merle.larkin",
-    "roletypeId": "172",
-    "roletypeName": "merle.larkin",
-    "priority": 596,
+    "remark": "od2lev",
+    "parentName": "chung.hoeger",
+    "appName": "chung.hoeger",
+    "roletypeId": "104",
+    "roletypeName": "chung.hoeger",
+    "priority": 684,
     "isSuper": true
   }
 }'
@@ -18911,9 +18750,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "03yf6w",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vbps89",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -18979,37 +18818,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:59",
-      "lastTime": "2025-10-20 18:25:59",
-      "roleId": 945,
-      "roleName": "merle.larkin",
-      "roleKey": "bnq6ry",
-      "roleSort": 644,
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:29",
+      "lastTime": "2025-11-12 15:29:29",
+      "roleId": 463,
+      "roleName": "chung.hoeger",
+      "roleKey": "lo1nv1",
+      "roleSort": 127,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 606,
+      "status": 284,
       "flag": true,
       "menuIds": [
-        22
+        629
       ],
       "deptIds": [
-        165
+        126
       ],
       "permissions": [
-        "jccxwa"
+        "zlimrg"
       ],
-      "remark": "lq1cyn",
-      "parentName": "merle.larkin",
-      "appName": "merle.larkin",
-      "roletypeId": "172",
-      "roletypeName": "merle.larkin",
-      "priority": 677,
+      "remark": "nbrzz6",
+      "parentName": "chung.hoeger",
+      "appName": "chung.hoeger",
+      "roletypeId": "104",
+      "roletypeName": "chung.hoeger",
+      "priority": 16,
       "isSuper": true
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19054,7 +18893,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?deptId=441&endTime=2025-10-20 18:20:52&adminId=458&nickName=renna.dibbert&orderBy=161&startTime=2025-10-20 18:20:52&q=49omlc&status=hs73vi&organId=172&userId=172&username=merle.larkin&limit=10&delFlag=5&mobile=(415) 540-6962&email=vivian.streich@hotmail.com&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?page=1&nickName=deon.watsica&email=antone.stark@hotmail.com&endTime=2025-11-12 15:24:04&delFlag=9&mobile=(567) 281-2291&q=hcgaiq&orderBy=218&status=46osfv&limit=10&adminId=302&startTime=2025-11-12 15:24:04&userId=104&organId=104&deptId=273&username=chung.hoeger
 ```
 **Response-fields:**
 
@@ -19160,60 +18999,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:59",
-      "lastTime": "2025-10-20 18:25:59",
-      "id": 366,
-      "userId": "172",
-      "deptId": 658,
-      "deptName": "merle.larkin",
-      "organId": "172",
-      "organName": "merle.larkin",
-      "name": "merle.larkin",
-      "username": "merle.larkin",
-      "nickName": "renna.dibbert",
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "um4l9x",
-      "password": "0r0p15",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:29",
+      "lastTime": "2025-11-12 15:29:29",
+      "id": 391,
+      "userId": "104",
+      "deptId": 370,
+      "deptName": "chung.hoeger",
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "name": "chung.hoeger",
+      "username": "chung.hoeger",
+      "nickName": "deon.watsica",
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "6moxf7",
+      "password": "b1cnx3",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 418,
-      "delFlag": 5,
-      "lastLoginIp": "137.119.212.174",
-      "lastLoginTime": "2025-10-20 18:25:59",
-      "description": "l2rmlx",
+      "status": 428,
+      "delFlag": 9,
+      "lastLoginIp": "239.116.167.16",
+      "lastLoginTime": "2025-11-12 15:29:29",
+      "description": "v9yg0l",
       "dept": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:59",
-        "lastTime": "2025-10-20 18:25:59",
-        "id": 996,
-        "organId": "172",
-        "parentId": 0,
-        "appId": "172",
-        "depttypeId": 465,
-        "foreignId": "172",
-        "createType": 221,
-        "type": "ioevz0",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "areaCode": "81486",
-        "organLeader": "2dvff9",
-        "leaderId": "172",
-        "leaderMobile": "(415) 540-6962",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:29",
+        "lastTime": "2025-11-12 15:29:29",
+        "id": 457,
+        "organId": "104",
+        "parentId": 452,
+        "appId": "104",
+        "depttypeId": 582,
+        "foreignId": "104",
+        "createType": 921,
+        "type": "fskxfp",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "areaCode": "74128",
+        "organLeader": "t44mw9",
+        "leaderId": "104",
+        "leaderMobile": "(567) 281-2291",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "81486",
-        "imagePath": "74bj5t",
-        "priority": 946,
-        "status": 426,
-        "delFlag": 5,
-        "description": "vnq3i7",
-        "spare1": "7hayki",
-        "spare2": "qu8ws0",
+        "searchCode": "74128",
+        "imagePath": "jryjnk",
+        "priority": 163,
+        "status": 344,
+        "delFlag": 9,
+        "description": "qm7l18",
+        "spare1": "dogpvo",
+        "spare2": "j8jrrw",
         "children": [
           {
             "$ref": ".."
@@ -19222,48 +19061,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:25:59",
-          "lastTime": "2025-10-20 18:25:59",
-          "id": 743,
-          "roletypeId": "172",
-          "appId": "172",
-          "name": "merle.larkin",
-          "code": "81486",
-          "priority": 713,
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:29",
+          "lastTime": "2025-11-12 15:29:29",
+          "id": 545,
+          "roletypeId": "104",
+          "appId": "104",
+          "name": "chung.hoeger",
+          "code": "74128",
+          "priority": 408,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 581,
-          "description": "7es5th",
-          "areaType": "wg0pk9"
+          "status": 366,
+          "description": "ntiblu",
+          "areaType": "bdqun8"
         }
       ],
       "roleIds": [
-        818
+        802
       ],
       "positionIds": [
-        "0jplgf"
+        "wujs2n"
       ],
-      "roleId": 605,
+      "roleId": 327,
       "userRoleList": [
         {
-          "id": 292,
-          "deptId": 578,
-          "deptName": "merle.larkin",
-          "organId": "172",
-          "organName": "merle.larkin",
-          "roleId": 183,
-          "roleName": "merle.larkin",
-          "adminId": 952
+          "id": 906,
+          "deptId": 970,
+          "deptName": "chung.hoeger",
+          "organId": "104",
+          "organName": "chung.hoeger",
+          "roleId": 378,
+          "roleName": "chung.hoeger",
+          "adminId": 631
         }
       ],
-      "code": "81486",
-      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
+      "code": "74128",
+      "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19308,7 +19147,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?limit=10&deptId=6&mobile=(415) 540-6962&email=vivian.streich@hotmail.com&delFlag=5&endTime=2025-10-20 18:20:52&orderBy=71&page=1&startTime=2025-10-20 18:20:52&userId=172&username=merle.larkin&adminId=728&q=bvekqm&nickName=renna.dibbert&status=j0m4hz&organId=172
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?q=o2rvgl&deptId=899&organId=104&email=antone.stark@hotmail.com&orderBy=627&page=1&username=chung.hoeger&adminId=902&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&mobile=(567) 281-2291&status=r8e8xc&delFlag=9&userId=104&limit=10&nickName=deon.watsica
 ```
 **Response-fields:**
 
@@ -19414,60 +19253,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:59",
-      "lastTime": "2025-10-20 18:25:59",
-      "id": 726,
-      "userId": "172",
-      "deptId": 750,
-      "deptName": "merle.larkin",
-      "organId": "172",
-      "organName": "merle.larkin",
-      "name": "merle.larkin",
-      "username": "merle.larkin",
-      "nickName": "renna.dibbert",
-      "email": "vivian.streich@hotmail.com",
-      "mobile": "(415) 540-6962",
-      "imagePath": "7hulz6",
-      "password": "ya4646",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:29",
+      "lastTime": "2025-11-12 15:29:29",
+      "id": 136,
+      "userId": "104",
+      "deptId": 74,
+      "deptName": "chung.hoeger",
+      "organId": "104",
+      "organName": "chung.hoeger",
+      "name": "chung.hoeger",
+      "username": "chung.hoeger",
+      "nickName": "deon.watsica",
+      "email": "antone.stark@hotmail.com",
+      "mobile": "(567) 281-2291",
+      "imagePath": "jxemyg",
+      "password": "uom1ng",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 952,
-      "delFlag": 5,
-      "lastLoginIp": "137.119.212.174",
-      "lastLoginTime": "2025-10-20 18:25:59",
-      "description": "ltj4mt",
+      "status": 213,
+      "delFlag": 9,
+      "lastLoginIp": "239.116.167.16",
+      "lastLoginTime": "2025-11-12 15:29:29",
+      "description": "v20bgl",
       "dept": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:25:59",
-        "lastTime": "2025-10-20 18:25:59",
-        "id": 421,
-        "organId": "172",
-        "parentId": 106,
-        "appId": "172",
-        "depttypeId": 637,
-        "foreignId": "172",
-        "createType": 316,
-        "type": "dav7k0",
-        "name": "merle.larkin",
-        "sname": "merle.larkin",
-        "areaCode": "81486",
-        "organLeader": "4drq8i",
-        "leaderId": "172",
-        "leaderMobile": "(415) 540-6962",
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:29",
+        "lastTime": "2025-11-12 15:29:29",
+        "id": 279,
+        "organId": "104",
+        "parentId": 375,
+        "appId": "104",
+        "depttypeId": 46,
+        "foreignId": "104",
+        "createType": 582,
+        "type": "znt01l",
+        "name": "chung.hoeger",
+        "sname": "chung.hoeger",
+        "areaCode": "74128",
+        "organLeader": "a2tn2k",
+        "leaderId": "104",
+        "leaderMobile": "(567) 281-2291",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "81486",
-        "imagePath": "7vnjy0",
-        "priority": 9,
-        "status": 654,
-        "delFlag": 5,
-        "description": "8sogbq",
-        "spare1": "ovm3ed",
-        "spare2": "ngz7vs",
+        "searchCode": "74128",
+        "imagePath": "d9o6dp",
+        "priority": 426,
+        "status": 412,
+        "delFlag": 9,
+        "description": "9dp18k",
+        "spare1": "zuv59e",
+        "spare2": "zn3v1n",
         "children": [
           {
             "$ref": ".."
@@ -19476,48 +19315,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:25:59",
-          "lastTime": "2025-10-20 18:25:59",
-          "id": 272,
-          "roletypeId": "172",
-          "appId": "172",
-          "name": "merle.larkin",
-          "code": "81486",
-          "priority": 19,
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:29",
+          "lastTime": "2025-11-12 15:29:29",
+          "id": 748,
+          "roletypeId": "104",
+          "appId": "104",
+          "name": "chung.hoeger",
+          "code": "74128",
+          "priority": 715,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 376,
-          "description": "i53f7m",
-          "areaType": "tvrjn1"
+          "status": 386,
+          "description": "awbruz",
+          "areaType": "eyau2a"
         }
       ],
       "roleIds": [
-        909
+        125
       ],
       "positionIds": [
-        "7xjat8"
+        "r50n10"
       ],
-      "roleId": 782,
+      "roleId": 419,
       "userRoleList": [
         {
-          "id": 262,
-          "deptId": 356,
-          "deptName": "merle.larkin",
-          "organId": "172",
-          "organName": "merle.larkin",
-          "roleId": 100,
-          "roleName": "merle.larkin",
-          "adminId": 159
+          "id": 135,
+          "deptId": 996,
+          "deptName": "chung.hoeger",
+          "organId": "104",
+          "organName": "chung.hoeger",
+          "roleId": 36,
+          "roleName": "chung.hoeger",
+          "adminId": 507
         }
       ],
-      "code": "81486",
-      "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad"
+      "code": "74128",
+      "uuid": "751dd19a-c431-414c-be28-4d0be16947d8"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19552,9 +19391,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
   "data": {
-    "id": 328,
-    "roleId": 0,
-    "adminId": 614
+    "id": 762,
+    "roleId": 774,
+    "adminId": 997
   }
 }'
 ```
@@ -19575,9 +19414,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nd1ksk",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "kq4xm9",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19608,7 +19447,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=838&adminIds=cz0lyo&adminIds=cz0lyo'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'adminIds=9yakmn&adminIds=9yakmn&roleId=201'
 ```
 **Response-fields:**
 
@@ -19627,9 +19466,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g73k6m",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "4rxi9w",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19660,7 +19499,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=590&adminIds=l8b2b2&adminIds=l8b2b2'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=5d1u6q&adminIds=5d1u6q&roleId=947'
 ```
 **Response-fields:**
 
@@ -19679,9 +19518,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "10b0a2",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "5qapvb",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19711,7 +19550,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/481.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/685.do
 ```
 **Response-fields:**
 
@@ -19737,12 +19576,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      305
+      244
     ],
     "depts": [
       {
-        "id": 549,
-        "label": "2poloe",
+        "id": 212,
+        "label": "a1pl5p",
         "children": [
           {
             "$ref": ".."
@@ -19751,8 +19590,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19824,7 +19663,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoCurrInfo=3568f2&todoId=172&q=dyhp6w&todoProcessName=merle.larkin&todoOrganId=172&page=1&todoLabels=9vda3c&spare1=k1qpxa&todoType=bppnsx&creatorId=172&todoUserId=172&status=a667lb&todoAccountId=172&todoModuleId=172&todoAccountName=merle.larkin&opTime=2025-10-20 18:26:10&bizType=diucl5&foreignId=172&opOrganId=172&orderBy=561&todoUserName=merle.larkin&startTime=2025-10-20 18:20:52&todoProcessInfo=gxn55o&opOrganName=merle.larkin&todoOrganName=merle.larkin&id=172&todoProcessStatus=gqmqy6&spare2=jnxr7w&todoModuleName=merle.larkin&limit=10&endTime=2025-10-20 18:20:52&todoCreateTime=2025-10-20 18:26:10&todoUrl=www.ben-grant.info&opUserId=172&type=29huh6&todoName=merle.larkin&description=4vhd62&appId=172&todoNextInfo=x7788k&todoContent=hgpu4r&todoAbstract=scynp0
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?id=104&todoType=zrhhxn&todoOrganId=104&todoOrganName=chung.hoeger&type=xefmh1&limit=10&todoModuleName=chung.hoeger&todoModuleId=104&todoProcessStatus=qv9si2&todoAccountId=104&todoAccountName=chung.hoeger&todoUserName=chung.hoeger&todoUrl=www.winston-nienow.name&spare2=f8zkfs&todoUserId=104&creatorId=104&opTime=2025-11-12 15:29:39&spare1=e79dkj&todoAbstract=lzlff8&opOrganId=104&opUserId=104&foreignId=104&q=xtigh7&orderBy=495&startTime=2025-11-12 15:24:04&endTime=2025-11-12 15:24:04&todoProcessInfo=00e4uy&todoName=chung.hoeger&status=210nb4&appId=104&todoId=104&todoProcessName=chung.hoeger&todoContent=c961p7&todoCreateTime=2025-11-12 15:29:39&opOrganName=chung.hoeger&description=adw17f&todoNextInfo=u2tsz2&todoCurrInfo=3dgh13&page=1&bizType=hvld1e&todoLabels=pwrktq
 ```
 **Response-fields:**
 
@@ -19882,47 +19721,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:10",
-      "lastTime": "2025-10-20 18:26:10",
-      "id": "172",
-      "appId": "172",
-      "foreignId": "172",
-      "type": "0umv3v",
-      "bizType": "nl2ljr",
-      "todoCreateTime": "2025-10-20 18:26:10",
-      "todoId": "172",
-      "todoType": "jcb46p",
-      "todoName": "merle.larkin",
-      "todoAbstract": "4n76as",
-      "todoAccountId": "172",
-      "todoAccountName": "merle.larkin",
-      "todoModuleId": "172",
-      "todoModuleName": "merle.larkin",
-      "todoUserId": "172",
-      "todoUserName": "merle.larkin",
-      "todoOrganId": "172",
-      "todoOrganName": "merle.larkin",
-      "todoProcessName": "merle.larkin",
-      "todoProcessStatus": "yeda3d",
-      "todoProcessInfo": "rxqg2l",
-      "todoCurrInfo": "7m63kw",
-      "todoNextInfo": "iwr7mn",
-      "todoUrl": "www.ben-grant.info",
-      "todoLabels": "3vhvg3",
-      "todoContent": "ibbwub",
-      "status": "kv1on0",
-      "opUserId": "172",
-      "opTime": "2025-10-20 18:26:10",
-      "opOrganId": "172",
-      "opOrganName": "merle.larkin",
-      "description": "pvup08",
-      "spare1": "5s2ubl",
-      "spare2": "vz9wf1"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:39",
+      "lastTime": "2025-11-12 15:29:39",
+      "id": "104",
+      "appId": "104",
+      "foreignId": "104",
+      "type": "srdcpy",
+      "bizType": "edb1es",
+      "todoCreateTime": "2025-11-12 15:29:39",
+      "todoId": "104",
+      "todoType": "ftrm6v",
+      "todoName": "chung.hoeger",
+      "todoAbstract": "4zyo2g",
+      "todoAccountId": "104",
+      "todoAccountName": "chung.hoeger",
+      "todoModuleId": "104",
+      "todoModuleName": "chung.hoeger",
+      "todoUserId": "104",
+      "todoUserName": "chung.hoeger",
+      "todoOrganId": "104",
+      "todoOrganName": "chung.hoeger",
+      "todoProcessName": "chung.hoeger",
+      "todoProcessStatus": "xddf1v",
+      "todoProcessInfo": "awf3r6",
+      "todoCurrInfo": "ys5tdv",
+      "todoNextInfo": "bcxsh4",
+      "todoUrl": "www.winston-nienow.name",
+      "todoLabels": "0f5wad",
+      "todoContent": "mv2als",
+      "status": "3vdp9h",
+      "opUserId": "104",
+      "opTime": "2025-11-12 15:29:39",
+      "opOrganId": "104",
+      "opOrganName": "chung.hoeger",
+      "description": "gcfxwp",
+      "spare1": "a3wcbr",
+      "spare2": "i4cv3r"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -19993,7 +19832,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoName=merle.larkin&id=172&todoNextInfo=u8nzju&todoType=o503zl&opOrganId=172&todoAccountId=172&creatorId=172&todoProcessName=merle.larkin&spare1=p0iz5a&type=7zv4hb&foreignId=172&todoId=172&todoCurrInfo=p5t7zq&appId=172&todoLabels=052d0k&todoUserName=merle.larkin&todoOrganId=172&todoProcessInfo=2b635v&todoContent=2qlvg8&todoOrganName=merle.larkin&todoCreateTime=2025-10-20 18:26:10&orderBy=717&limit=10&todoUserId=172&todoUrl=www.ben-grant.info&opOrganName=merle.larkin&todoModuleName=merle.larkin&opUserId=172&startTime=2025-10-20 18:20:52&todoAbstract=6peyzm&todoAccountName=merle.larkin&spare2=7kcd3q&page=1&todoProcessStatus=uhfw7p&status=h1hhu4&q=g8rhcm&todoModuleId=172&description=7feo5q&bizType=qvhjfv&opTime=2025-10-20 18:26:10&endTime=2025-10-20 18:20:52'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'type=ldjbn6&q=lkkilg&page=1&todoName=chung.hoeger&todoModuleName=chung.hoeger&todoCreateTime=2025-11-12 15:29:39&id=104&todoUserId=104&foreignId=104&todoUserName=chung.hoeger&todoOrganId=104&limit=10&todoProcessStatus=e8xhwd&todoContent=7b1jqh&opTime=2025-11-12 15:29:39&opOrganName=chung.hoeger&startTime=2025-11-12 15:24:04&opOrganId=104&todoModuleId=104&creatorId=104&todoUrl=www.winston-nienow.name&todoProcessName=chung.hoeger&todoAccountName=chung.hoeger&orderBy=997&opUserId=104&todoAccountId=104&endTime=2025-11-12 15:24:04&todoId=104&spare1=fjot5m&todoOrganName=chung.hoeger&appId=104&todoProcessInfo=id5q5t&status=4j44cz&todoCurrInfo=3t4i4n&todoNextInfo=pnhy2j&spare2=emjj8o&todoType=nlgnj3&todoAbstract=1yq2w6&bizType=pyhdtf&description=kf7qfp&todoLabels=q27qkk'
 ```
 **Response-fields:**
 
@@ -20012,9 +19851,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3fwdgp",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vxgbnt",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20102,46 +19941,46 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "hrppjv",
-    "bizType": "538qu9",
-    "todoCreateTime": "2025-10-20 18:26:10",
-    "todoId": "172",
-    "todoType": "zh1kj6",
-    "todoName": "merle.larkin",
-    "todoAbstract": "22y5e8",
-    "todoAccountId": "172",
-    "todoAccountName": "merle.larkin",
-    "todoModuleId": "172",
-    "todoModuleName": "merle.larkin",
-    "todoUserId": "172",
-    "todoUserName": "merle.larkin",
-    "todoOrganId": "172",
-    "todoOrganName": "merle.larkin",
-    "todoProcessName": "merle.larkin",
-    "todoProcessStatus": "d2j9rn",
-    "todoProcessInfo": "v896vt",
-    "todoCurrInfo": "8dnh7g",
-    "todoNextInfo": "zp0r0u",
-    "todoUrl": "www.ben-grant.info",
-    "todoLabels": "4woa3e",
-    "todoContent": "kqmlxo",
-    "status": "dbzstl",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:10",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "a4i739",
-    "spare1": "7piw7v",
-    "spare2": "mi87e8"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "96ofsc",
+    "bizType": "2i8mpa",
+    "todoCreateTime": "2025-11-12 15:29:39",
+    "todoId": "104",
+    "todoType": "385t3g",
+    "todoName": "chung.hoeger",
+    "todoAbstract": "vloo3c",
+    "todoAccountId": "104",
+    "todoAccountName": "chung.hoeger",
+    "todoModuleId": "104",
+    "todoModuleName": "chung.hoeger",
+    "todoUserId": "104",
+    "todoUserName": "chung.hoeger",
+    "todoOrganId": "104",
+    "todoOrganName": "chung.hoeger",
+    "todoProcessName": "chung.hoeger",
+    "todoProcessStatus": "q4eucx",
+    "todoProcessInfo": "rdc75t",
+    "todoCurrInfo": "fwoy9y",
+    "todoNextInfo": "xvi3h5",
+    "todoUrl": "www.winston-nienow.name",
+    "todoLabels": "kn7dd7",
+    "todoContent": "pbx90k",
+    "status": "yhofgn",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:39",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "bosus1",
+    "spare1": "s937gd",
+    "spare2": "0190tc"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20211,43 +20050,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "ycpq9b",
-    "bizType": "ey8edf",
-    "todoCreateTime": "2025-10-20 18:26:10",
-    "todoId": "172",
-    "todoType": "upi0e3",
-    "todoName": "merle.larkin",
-    "todoAbstract": "28kh5p",
-    "todoAccountId": "172",
-    "todoAccountName": "merle.larkin",
-    "todoModuleId": "172",
-    "todoModuleName": "merle.larkin",
-    "todoUserId": "172",
-    "todoUserName": "merle.larkin",
-    "todoOrganId": "172",
-    "todoOrganName": "merle.larkin",
-    "todoProcessName": "merle.larkin",
-    "todoProcessStatus": "ysahtg",
-    "todoProcessInfo": "mn6qoq",
-    "todoCurrInfo": "gwwhco",
-    "todoNextInfo": "rxo8nz",
-    "todoUrl": "www.ben-grant.info",
-    "todoLabels": "im55kt",
-    "todoContent": "7a66ln",
-    "status": "4onqyf",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:10",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "k1eonb",
-    "spare1": "o03nmy",
-    "spare2": "rqbjno"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "ufbkvh",
+    "bizType": "h2mj0i",
+    "todoCreateTime": "2025-11-12 15:29:39",
+    "todoId": "104",
+    "todoType": "6wkd6z",
+    "todoName": "chung.hoeger",
+    "todoAbstract": "ftj2zt",
+    "todoAccountId": "104",
+    "todoAccountName": "chung.hoeger",
+    "todoModuleId": "104",
+    "todoModuleName": "chung.hoeger",
+    "todoUserId": "104",
+    "todoUserName": "chung.hoeger",
+    "todoOrganId": "104",
+    "todoOrganName": "chung.hoeger",
+    "todoProcessName": "chung.hoeger",
+    "todoProcessStatus": "25ai2t",
+    "todoProcessInfo": "8xrem0",
+    "todoCurrInfo": "y18mln",
+    "todoNextInfo": "g3fnfv",
+    "todoUrl": "www.winston-nienow.name",
+    "todoLabels": "lx9ac5",
+    "todoContent": "9uj7fm",
+    "status": "6ixx1p",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:39",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "537w9q",
+    "spare1": "mwqbrp",
+    "spare2": "rgfa2c"
   }
 }'
 ```
@@ -20268,9 +20107,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "g0ut5e",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "b4igmo",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20340,43 +20179,43 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:10",
-    "lastTime": "2025-10-20 18:26:10",
-    "id": "172",
-    "appId": "172",
-    "foreignId": "172",
-    "type": "rq3fg8",
-    "bizType": "83xx7i",
-    "todoCreateTime": "2025-10-20 18:26:10",
-    "todoId": "172",
-    "todoType": "ffgbcl",
-    "todoName": "merle.larkin",
-    "todoAbstract": "k8im0d",
-    "todoAccountId": "172",
-    "todoAccountName": "merle.larkin",
-    "todoModuleId": "172",
-    "todoModuleName": "merle.larkin",
-    "todoUserId": "172",
-    "todoUserName": "merle.larkin",
-    "todoOrganId": "172",
-    "todoOrganName": "merle.larkin",
-    "todoProcessName": "merle.larkin",
-    "todoProcessStatus": "o9ew21",
-    "todoProcessInfo": "3huy3f",
-    "todoCurrInfo": "drfq9p",
-    "todoNextInfo": "sia5xt",
-    "todoUrl": "www.ben-grant.info",
-    "todoLabels": "cqjkys",
-    "todoContent": "rq95eb",
-    "status": "0tsh4h",
-    "opUserId": "172",
-    "opTime": "2025-10-20 18:26:10",
-    "opOrganId": "172",
-    "opOrganName": "merle.larkin",
-    "description": "2lhkdg",
-    "spare1": "svpwlf",
-    "spare2": "gvceg8"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:39",
+    "lastTime": "2025-11-12 15:29:39",
+    "id": "104",
+    "appId": "104",
+    "foreignId": "104",
+    "type": "tun7lo",
+    "bizType": "ew3e22",
+    "todoCreateTime": "2025-11-12 15:29:39",
+    "todoId": "104",
+    "todoType": "kkckth",
+    "todoName": "chung.hoeger",
+    "todoAbstract": "yemiea",
+    "todoAccountId": "104",
+    "todoAccountName": "chung.hoeger",
+    "todoModuleId": "104",
+    "todoModuleName": "chung.hoeger",
+    "todoUserId": "104",
+    "todoUserName": "chung.hoeger",
+    "todoOrganId": "104",
+    "todoOrganName": "chung.hoeger",
+    "todoProcessName": "chung.hoeger",
+    "todoProcessStatus": "nja46l",
+    "todoProcessInfo": "8hkx6k",
+    "todoCurrInfo": "f7zc9k",
+    "todoNextInfo": "eefhpc",
+    "todoUrl": "www.winston-nienow.name",
+    "todoLabels": "hyzodu",
+    "todoContent": "693lnw",
+    "status": "fxomzx",
+    "opUserId": "104",
+    "opTime": "2025-11-12 15:29:39",
+    "opOrganId": "104",
+    "opOrganName": "chung.hoeger",
+    "description": "cccy3f",
+    "spare1": "1vd2jj",
+    "spare2": "xfrms4"
   }
 }'
 ```
@@ -20397,9 +20236,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s9of1e",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "atrc2r",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20449,9 +20288,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jmbd4g",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "c0ekq9",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20508,7 +20347,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?limit=10&code=81486&rgt=483&startTime=2025-10-20 18:20:52&likeQuery=7vs2yx&countryId=172&hasContent=true&areatypeId=172&nameTotal=zq0s1a&page=1&endTime=2025-10-20 18:20:52&nameEn=vktshn&parentIds=34i048&parentIds=34i048&description=vbemcg&deleteTime=2025-10-20 18:20:52&q=snzwkq&ids=dmn1n8&ids=dmn1n8&searchCode=81486&lft=529&delFlag=5&orderBy=960&sname=merle.larkin&isDisplay=true&name=merle.larkin&parentId=81&areatypeIds=8ugecz&areatypeIds=8ugecz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?ids=fnyohc&ids=fnyohc&nameTotal=jvprz0&name=chung.hoeger&delFlag=9&nameEn=x63z0y&areatypeIds=dwdylb&areatypeIds=dwdylb&parentId=822&areatypeId=104&code=74128&searchCode=74128&orderBy=331&deleteTime=2025-11-12 15:24:04&rgt=255&q=zth62v&countryId=104&limit=10&sname=chung.hoeger&isDisplay=true&description=nl2hd0&startTime=2025-11-12 15:24:04&parentIds=ptqpdp&parentIds=ptqpdp&lft=615&likeQuery=63vebc&endTime=2025-11-12 15:24:04&hasContent=true&page=1
 ```
 **Response-fields:**
 
@@ -20550,31 +20389,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:03",
-      "lastTime": "2025-10-20 18:26:03",
-      "id": 606,
-      "parentId": 325,
-      "countryId": "172",
-      "areatypeId": "172",
-      "lft": 218,
-      "rgt": 729,
-      "code": "81486",
-      "name": "merle.larkin",
-      "nameTotal": "4t27rt",
-      "sname": "merle.larkin",
-      "nameEn": "58vdi4",
-      "searchCode": "81486",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:33",
+      "lastTime": "2025-11-12 15:29:33",
+      "id": 627,
+      "parentId": 371,
+      "countryId": "104",
+      "areatypeId": "104",
+      "lft": 366,
+      "rgt": 817,
+      "code": "74128",
+      "name": "chung.hoeger",
+      "nameTotal": "n7aibw",
+      "sname": "chung.hoeger",
+      "nameEn": "6e4cqw",
+      "searchCode": "74128",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 561,
-      "delFlag": 5,
-      "deleteTime": "2025-10-20 18:26:03",
-      "description": "90iudb"
+      "priority": 54,
+      "delFlag": 9,
+      "deleteTime": "2025-11-12 15:29:33",
+      "description": "7nbg1w"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20630,7 +20469,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'isDisplay=true&limit=10&q=7yrcn4&delFlag=5&orderBy=857&areatypeId=172&description=mecpas&name=merle.larkin&parentIds=34xn4n&parentIds=34xn4n&areatypeIds=m53ul4&areatypeIds=m53ul4&parentId=542&hasContent=true&deleteTime=2025-10-20 18:20:52&nameTotal=sf4uj1&page=1&lft=278&rgt=371&code=81486&sname=merle.larkin&ids=kab7zu&ids=kab7zu&searchCode=81486&countryId=172&likeQuery=o8tzwb&nameEn=5031f6&startTime=2025-10-20 18:20:52&endTime=2025-10-20 18:20:52'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'parentId=739&code=74128&hasContent=true&isDisplay=true&likeQuery=r02t3v&rgt=198&limit=10&description=sinp6d&countryId=104&q=eu6r7q&nameTotal=1cftwb&orderBy=79&parentIds=bqd5ij&parentIds=bqd5ij&delFlag=9&searchCode=74128&sname=chung.hoeger&areatypeId=104&lft=287&deleteTime=2025-11-12 15:24:04&nameEn=y5txu2&ids=w36pna&ids=w36pna&name=chung.hoeger&page=1&areatypeIds=4cnifw&areatypeIds=4cnifw&endTime=2025-11-12 15:24:04&startTime=2025-11-12 15:24:04'
 ```
 **Response-fields:**
 
@@ -20649,9 +20488,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "f40zyd",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "gnx6oh",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20723,30 +20562,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:03",
-    "lastTime": "2025-10-20 18:26:03",
-    "id": 578,
-    "parentId": 393,
-    "countryId": "172",
-    "areatypeId": "172",
-    "lft": 850,
-    "rgt": 814,
-    "code": "81486",
-    "name": "merle.larkin",
-    "nameTotal": "ic7h0z",
-    "sname": "merle.larkin",
-    "nameEn": "2k171h",
-    "searchCode": "81486",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:33",
+    "lastTime": "2025-11-12 15:29:33",
+    "id": 24,
+    "parentId": 578,
+    "countryId": "104",
+    "areatypeId": "104",
+    "lft": 357,
+    "rgt": 647,
+    "code": "74128",
+    "name": "chung.hoeger",
+    "nameTotal": "n84ebx",
+    "sname": "chung.hoeger",
+    "nameEn": "dyiwsi",
+    "searchCode": "74128",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 393,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:03",
-    "description": "aty2b1"
+    "priority": 910,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:33",
+    "description": "3w6owi"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20800,27 +20639,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:03",
-    "lastTime": "2025-10-20 18:26:03",
-    "id": 364,
-    "parentId": 398,
-    "countryId": "172",
-    "areatypeId": "172",
-    "lft": 287,
-    "rgt": 672,
-    "code": "81486",
-    "name": "merle.larkin",
-    "nameTotal": "zs88y0",
-    "sname": "merle.larkin",
-    "nameEn": "yfh6cr",
-    "searchCode": "81486",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:33",
+    "lastTime": "2025-11-12 15:29:33",
+    "id": 626,
+    "parentId": 389,
+    "countryId": "104",
+    "areatypeId": "104",
+    "lft": 79,
+    "rgt": 851,
+    "code": "74128",
+    "name": "chung.hoeger",
+    "nameTotal": "t89bz9",
+    "sname": "chung.hoeger",
+    "nameEn": "v3us2k",
+    "searchCode": "74128",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 556,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:03",
-    "description": "eo4h3i"
+    "priority": 420,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:33",
+    "description": "y0lop7"
   }
 }'
 ```
@@ -20841,9 +20680,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d3xsvv",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "pwelhg",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20897,27 +20736,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:03",
-    "lastTime": "2025-10-20 18:26:03",
-    "id": 233,
-    "parentId": 68,
-    "countryId": "172",
-    "areatypeId": "172",
-    "lft": 45,
-    "rgt": 91,
-    "code": "81486",
-    "name": "merle.larkin",
-    "nameTotal": "jcawbf",
-    "sname": "merle.larkin",
-    "nameEn": "7ahdqb",
-    "searchCode": "81486",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:33",
+    "lastTime": "2025-11-12 15:29:33",
+    "id": 950,
+    "parentId": 382,
+    "countryId": "104",
+    "areatypeId": "104",
+    "lft": 696,
+    "rgt": 655,
+    "code": "74128",
+    "name": "chung.hoeger",
+    "nameTotal": "njkfcx",
+    "sname": "chung.hoeger",
+    "nameEn": "n7wpia",
+    "searchCode": "74128",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 512,
-    "delFlag": 5,
-    "deleteTime": "2025-10-20 18:26:03",
-    "description": "yrtu2j"
+    "priority": 419,
+    "delFlag": 9,
+    "deleteTime": "2025-11-12 15:29:33",
+    "description": "gf3mrs"
   }
 }'
 ```
@@ -20938,9 +20777,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "no1hny",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ndn4k8",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -20990,9 +20829,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "4rgaq8",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "wxh93u",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21035,7 +20874,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?delFlag=5&orderBy=805&name=merle.larkin&code=81486&startTime=2025-10-20 18:20:52&description=zuijw5&existKey=ttqxtz&q=im6u3f&page=1&limit=10&type=1luhfx&endTime=2025-10-20 18:20:52
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?orderBy=305&endTime=2025-11-12 15:24:04&page=1&description=1e6ubw&limit=10&type=ccrq2b&delFlag=9&q=yoaqgy&code=74128&existKey=8iv9a1&startTime=2025-11-12 15:24:04&name=chung.hoeger
 ```
 **Response-fields:**
 
@@ -21066,20 +20905,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:05",
-      "lastTime": "2025-10-20 18:26:05",
-      "id": "172",
-      "name": "merle.larkin",
-      "type": "evh2g2",
-      "code": "81486",
-      "priority": 124,
-      "delFlag": 5,
-      "description": "dcfdpi"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:34",
+      "lastTime": "2025-11-12 15:29:34",
+      "id": "104",
+      "name": "chung.hoeger",
+      "type": "4131wo",
+      "code": "74128",
+      "priority": 473,
+      "delFlag": 9,
+      "description": "0ganof"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21121,7 +20960,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'type=tcp6u1&startTime=2025-10-20 18:20:52&code=81486&endTime=2025-10-20 18:20:52&orderBy=322&existKey=9zubgz&q=mspimc&delFlag=5&name=merle.larkin&limit=10&description=8auh5y&page=1'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'page=1&description=9h4goo&limit=10&endTime=2025-11-12 15:24:04&name=chung.hoeger&code=74128&orderBy=160&existKey=eq9sii&delFlag=9&startTime=2025-11-12 15:24:04&type=fv3cqh&q=hendjg'
 ```
 **Response-fields:**
 
@@ -21140,9 +20979,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3ecifh",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "y1b6hj",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21203,19 +21042,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:05",
-    "lastTime": "2025-10-20 18:26:05",
-    "id": "172",
-    "name": "merle.larkin",
-    "type": "u6qxx4",
-    "code": "81486",
-    "priority": 371,
-    "delFlag": 5,
-    "description": "u13tly"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "type": "ua7334",
+    "code": "74128",
+    "priority": 845,
+    "delFlag": 9,
+    "description": "vhci8e"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21258,16 +21097,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:05",
-    "lastTime": "2025-10-20 18:26:05",
-    "id": "172",
-    "name": "merle.larkin",
-    "type": "4upvcg",
-    "code": "81486",
-    "priority": 861,
-    "delFlag": 5,
-    "description": "ylrqgx"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "type": "mj30ex",
+    "code": "74128",
+    "priority": 678,
+    "delFlag": 9,
+    "description": "wue2lh"
   }
 }'
 ```
@@ -21288,9 +21127,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3v1ya5",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "0bpmsy",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21333,16 +21172,16 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:05",
-    "lastTime": "2025-10-20 18:26:05",
-    "id": "172",
-    "name": "merle.larkin",
-    "type": "hmb51q",
-    "code": "81486",
-    "priority": 986,
-    "delFlag": 5,
-    "description": "8smvr8"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:34",
+    "lastTime": "2025-11-12 15:29:34",
+    "id": "104",
+    "name": "chung.hoeger",
+    "type": "76gt5f",
+    "code": "74128",
+    "priority": 244,
+    "delFlag": 9,
+    "description": "0kkvi6"
   }
 }'
 ```
@@ -21363,9 +21202,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "793ri0",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "aat9hr",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21415,9 +21254,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "d1k2e3",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vmutic",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21456,7 +21295,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?endTime=2025-10-20 18:20:52&page=1&cfgKey=eh6pd2&startTime=2025-10-20 18:20:52&ids=4yvc98&ids=4yvc98&limit=10&q=7f93d5&orderBy=814&cfgValue=8aj99h
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?q=uno0l9&page=1&limit=10&ids=umjr07&ids=umjr07&cfgKey=hfyxzn&startTime=2025-11-12 15:24:04&cfgValue=ot33ao&orderBy=416&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -21483,19 +21322,19 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "totalCount": 964,
+    "totalCount": 84,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "zlysnm",
-        "cfgValue": "8d3h9a"
+        "cfgKey": "r8kxgd",
+        "cfgValue": "ziw2bq"
       }
     ]
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21533,7 +21372,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'startTime=2025-10-20 18:20:52&limit=10&orderBy=301&q=3kycht&cfgValue=disjza&cfgKey=hyzjmk&endTime=2025-10-20 18:20:52&page=1&ids=m8betg&ids=m8betg'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'ids=dcjlkx&ids=dcjlkx&startTime=2025-11-12 15:24:04&cfgValue=6x05zy&limit=10&orderBy=827&endTime=2025-11-12 15:24:04&cfgKey=zho20s&q=4wyk5x&page=1'
 ```
 **Response-fields:**
 
@@ -21552,9 +21391,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3duhme",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "a7hujt",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21584,7 +21423,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/23dzh1.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/6yo43p.do
 ```
 **Response-fields:**
 
@@ -21606,11 +21445,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "cfgKey": "f34w4j",
-    "cfgValue": "a26kk1"
+    "cfgKey": "x1b77u",
+    "cfgValue": "k7n5qz"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21644,8 +21483,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
   "data": {
-    "cfgKey": "k3y2l7",
-    "cfgValue": "562wge"
+    "cfgKey": "jqlgq2",
+    "cfgValue": "tpvm55"
   }
 }'
 ```
@@ -21666,9 +21505,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "avmcf9",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "vqi46n",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21702,8 +21541,8 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
   "data": {
-    "cfgKey": "lzyfxf",
-    "cfgValue": "ktcalz"
+    "cfgKey": "q6g5wn",
+    "cfgValue": "qohgdd"
   }
 }'
 ```
@@ -21724,9 +21563,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "zre70g",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "bt2q4l",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21775,9 +21614,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "q6g0wl",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "f0od8p",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21820,9 +21659,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "kf07su",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "mqrhik",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21865,12 +21704,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "img": "g2u1ej",
-    "code": "81486"
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "img": "1jwpp9",
+    "code": "74128"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -21912,12 +21751,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "img": "nw3l6i",
-    "code": "81486"
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "img": "ojllx3",
+    "code": "74128"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22022,7 +21861,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?businessName=merle.larkin&pkColumn.createTime=2025-10-20 18:26:11&subTable.columns[0].isEdit=6ngzlj&subTable.columns[0].priority=726&columns[0].isQuery=fdx4wp&parentMenuName=merle.larkin&subTable.optionLists=zwywgs&subTable.subTable.subTableFkName=merle.larkin&pkColumn.javaField=ohm2rc&subTable.columns[0].htmlType=oros42&subTable.subTable.Description=7m1zze&subTable.tplWebType=ejncfb&subTable.treeName=merle.larkin&columns[0].columnName=merle.larkin&columns[0].isIncrement=l5ccr4&subTable.subTable.lastTime=2025-10-20 18:26:11&pkColumn.tableId=580&subTable.subTable.parentMenuName=merle.larkin&pkColumn.columnType=lfryix&subTable.subTable.functionAuthor=Glendora Flatley&subTable.createTime=2025-10-20 18:26:11&subTable.subTable.className=merle.larkin&subTable.subTable.packageName=merle.larkin&limit=10&Description=wddj7c&subTable.pkColumn.queryType=29g9xo&pkColumn.columnName=merle.larkin&optionLists=l2l41o&parentMenuId=348&subTable.subTable.limit=10&pkColumn.isRequired=aetjwe&subTable.pkColumn.columnType=q8mwpb&subTable.columns[0].javaType=4zoce1&subTable.pkColumn.priority=127&columns[0].htmlType=kjzoti&subTable.genPath=j92bmv&pkColumn.lastTime=2025-10-20 18:26:11&pkColumn.isIncrement=8yv2lm&subTable.tableComment=phuy29&subTable.pkColumn.htmlType=4d8v3o&subTable.pkColumn.isRequired=1590nk&creatorId=172&subTable.tableName=merle.larkin&subTable.subTable.functionName=merle.larkin&subTable.pkColumn.isIncrement=umbcdn&subTable.creatorId=172&subTable.subTable.optionLists=4jfrt2&subTable.columns[0].isInsert=e02512&subTable.subTable.tableId=906&columns[0].isRequired=dn5etb&subTable.pkColumn.creatorId=172&columns[0].columnComment=0ti83b&subTable.columns[0].columnId=309&subTable.pkColumn.lastTime=2025-10-20 18:26:11&pkColumn.isInsert=x2cyv4&columns[0].queryType=ojbk6b&subTable.genType=sswle6&subTable.subTable.genType=glq3wg&subTable.pkColumn.isEdit=w5neoa&subTable.columns[0].columnType=4marg0&subTable.columns[0].tableId=300&pkColumn.queryType=yzwxe2&subTable.subTable.moduleName=merle.larkin&subTable.columns[0].lastTime=2025-10-20 18:26:11&subTable.subTable.formColNum=526&subTable.columns[0].isList=hfei53&subTable.pkColumn.javaField=hc3h1u&columns[0].creatorId=172&columns[0].tableId=391&subTable.className=merle.larkin&columns[0].isInsert=ka2b1l&columns[0].dictType=i2o65f&genType=41em9v&tplCategory=5g0x3i&tableName=merle.larkin&subTableFkName=merle.larkin&subTable.pkColumn.tableId=648&className=merle.larkin&subTable.subTable.treeCode=81486&subTable.pkColumn.isList=b4ymx2&subTable.subTable.createTime=2025-10-20 18:26:11&pkColumn.priority=298&subTable.subTable.treeName=merle.larkin&subTable.subTable.creatorId=172&formColNum=949&subTable.subTable.subTableName=merle.larkin&subTable.columns[0].javaField=fw3ag0&columns[0].lastTime=2025-10-20 18:26:11&columns[0].isEdit=1fqsa9&subTable.columns[0].isQuery=ffdohm&treeCode=81486&treeParentCode=81486&subTable.pkColumn.columnComment=p14uax&subTable.subTableFkName=merle.larkin&pkColumn.isPk=i9yf43&subTable.subTable.tableName=merle.larkin&subTable.columns[0].isRequired=hrn1xr&treeName=merle.larkin&subTable.pkColumn.columnName=merle.larkin&pkColumn.isQuery=qeudll&subTable.limit=10&columns[0].javaType=8q5ikz&subTable.subTable.page=1&columns[0].javaField=y9sjmy&subTable.functionName=merle.larkin&subTable.Description=zrvumx&subTable.columns[0].dictType=jvrmoc&subTable.parentMenuName=merle.larkin&subTable.pkColumn.dictType=oapf38&subTable.columns[0].columnName=merle.larkin&subTable.functionAuthor=Glendora Flatley&subTable.columns[0].queryType=d87n2l&packageName=merle.larkin&subTable.parentMenuId=259&subTable.tplCategory=ken4et&subTable.subTable.parentMenuId=463&subTable.pkColumn.createTime=2025-10-20 18:26:11&columns[0].columnId=31&pkColumn.javaType=r8vhc9&functionAuthor=Glendora Flatley&subTable.subTable.businessName=merle.larkin&moduleName=merle.larkin&subTable.subTableName=merle.larkin&tplWebType=kcdgz0&subTable.columns[0].createTime=2025-10-20 18:26:11&subTable.columns[0].columnComment=dxlp39&columns[0].priority=416&tableId=504&page=1&subTable.subTable.treeParentCode=81486&subTable.lastTime=2025-10-20 18:26:11&pkColumn.htmlType=zcz1e9&columns[0].isList=uoy3fd&subTable.columns[0].creatorId=172&subTable.packageName=merle.larkin&columns[0].columnType=c56xrz&pkColumn.columnId=695&subTable.businessName=merle.larkin&pkColumn.isEdit=nu4cgu&subTable.pkColumn.isQuery=6qls34&functionName=merle.larkin&pkColumn.columnComment=5vi1fd&subTable.tableId=142&subTable.pkColumn.isPk=is6jdv&subTable.subTable.tplCategory=2z086t&subTable.subTable.tplWebType=3z5jtr&pkColumn.creatorId=172&tableComment=5e1gg9&subTable.treeParentCode=81486&subTable.page=1&subTable.subTable.genPath=1uo9sn&columns[0].createTime=2025-10-20 18:26:11&lastTime=2025-10-20 18:26:11&subTable.subTable.tableComment=izcciu&pkColumn.isList=rbc483&subTable.columns[0].isPk=hnmg29&genPath=t2hr4r&pkColumn.dictType=4pnx7k&subTable.columns[0].isIncrement=i78idn&columns[0].isPk=hvyxdf&subTable.moduleName=merle.larkin&subTable.treeCode=81486&subTable.pkColumn.columnId=383&subTable.pkColumn.javaType=zu4dj2&subTable.pkColumn.isInsert=aujh2n&subTableName=merle.larkin&subTable.formColNum=719&createTime=2025-10-20 18:26:11
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?pkColumn.columnType=6fixrp&subTable.formColNum=28&subTable.pkColumn.isList=vrhcdk&subTable.columns[0].priority=31&columns[0].isRequired=r5cfsk&subTable.tableComment=5hjfcl&page=1&subTable.moduleName=chung.hoeger&subTable.pkColumn.dictType=9gk9tg&subTable.subTable.tplCategory=tsxkub&subTable.columns[0].queryType=qyopfa&columns[0].javaField=5vm44n&subTable.pkColumn.isInsert=dww7fv&subTable.pkColumn.columnName=chung.hoeger&pkColumn.isRequired=8oqdu6&subTable.treeCode=74128&pkColumn.javaField=maqknm&limit=10&pkColumn.dictType=9cymk3&columns[0].columnType=9eecr9&tplCategory=8xb94v&treeName=chung.hoeger&subTable.columns[0].isRequired=uzv4ni&subTable.subTable.className=chung.hoeger&subTable.columns[0].columnId=963&subTable.subTable.parentMenuId=557&subTable.treeName=chung.hoeger&subTable.pkColumn.queryType=4910dv&pkColumn.htmlType=kknriw&subTable.subTable.tplWebType=vafsyr&Description=2iszoq&subTable.subTable.tableComment=527rwp&subTable.functionAuthor=Mrs. Cecilia Muller&subTable.pkColumn.isPk=ah1u87&subTableFkName=chung.hoeger&subTable.subTable.moduleName=chung.hoeger&subTable.subTable.treeCode=74128&subTable.columns[0].creatorId=104&subTable.columns[0].javaType=nmey98&subTable.subTable.parentMenuName=chung.hoeger&columns[0].columnId=667&columns[0].columnName=chung.hoeger&columns[0].javaType=a9y5b6&columns[0].queryType=xzrmf6&columns[0].dictType=p8ffgc&subTableName=chung.hoeger&subTable.pkColumn.isRequired=qobihw&columns[0].isIncrement=2bdget&subTable.subTable.page=1&tableId=822&subTable.columns[0].javaField=zh9al8&pkColumn.javaType=c96s7i&createTime=2025-11-12 15:29:40&subTable.pkColumn.columnComment=2le0rc&subTable.subTable.functionName=chung.hoeger&subTable.columns[0].isPk=rq2q4k&subTable.pkColumn.columnType=su6zgf&subTable.subTable.tableName=chung.hoeger&columns[0].creatorId=104&functionName=chung.hoeger&subTable.tableName=chung.hoeger&subTable.pkColumn.columnId=970&pkColumn.isList=to5n4v&subTable.pkColumn.tableId=667&subTable.pkColumn.priority=593&moduleName=chung.hoeger&subTable.columns[0].isList=xzm3iy&subTable.columns[0].tableId=700&subTable.optionLists=v6s46k&className=chung.hoeger&columns[0].createTime=2025-11-12 15:29:40&parentMenuId=336&subTable.functionName=chung.hoeger&subTable.pkColumn.javaField=739twq&subTable.page=1&columns[0].priority=12&subTable.pkColumn.isEdit=rugtz5&subTable.genPath=ylz20i&subTable.tableId=228&functionAuthor=Mrs. Cecilia Muller&subTable.tplCategory=f1g30j&subTable.columns[0].isQuery=mwlsvm&subTable.columns[0].htmlType=ktqnpz&subTable.subTableFkName=chung.hoeger&subTable.subTable.treeParentCode=74128&columns[0].isEdit=09ityc&subTable.subTable.limit=10&subTable.parentMenuName=chung.hoeger&pkColumn.isPk=gm68v0&pkColumn.isEdit=uzoloq&treeParentCode=74128&pkColumn.isIncrement=wokw6u&genPath=obs2cy&subTable.subTable.functionAuthor=Mrs. Cecilia Muller&subTable.lastTime=2025-11-12 15:29:40&lastTime=2025-11-12 15:29:40&tplWebType=xrfwuf&subTable.className=chung.hoeger&pkColumn.priority=678&subTable.subTableName=chung.hoeger&subTable.subTable.subTableName=chung.hoeger&subTable.subTable.subTableFkName=chung.hoeger&columns[0].columnComment=e5q49h&subTable.subTable.packageName=chung.hoeger&columns[0].isInsert=dru2ne&subTable.pkColumn.isQuery=f6jaf9&columns[0].tableId=350&businessName=chung.hoeger&subTable.treeParentCode=74128&genType=3i3gln&columns[0].lastTime=2025-11-12 15:29:40&parentMenuName=chung.hoeger&subTable.subTable.creatorId=104&subTable.subTable.treeName=chung.hoeger&subTable.columns[0].columnName=chung.hoeger&pkColumn.columnId=453&subTable.columns[0].dictType=284c6m&subTable.limit=10&columns[0].isList=rh2qhb&subTable.subTable.genPath=snujgh&subTable.columns[0].columnType=vvsq5z&tableName=chung.hoeger&subTable.subTable.tableId=872&formColNum=992&subTable.pkColumn.htmlType=czmttt&subTable.columns[0].createTime=2025-11-12 15:29:40&subTable.parentMenuId=668&columns[0].isPk=xnxr4j&pkColumn.createTime=2025-11-12 15:29:40&subTable.packageName=chung.hoeger&columns[0].isQuery=nvzws8&columns[0].htmlType=cns2g5&treeCode=74128&creatorId=104&subTable.subTable.Description=7g0769&subTable.pkColumn.creatorId=104&subTable.subTable.createTime=2025-11-12 15:29:40&subTable.subTable.genType=s3u203&subTable.pkColumn.lastTime=2025-11-12 15:29:40&tableComment=24kuts&subTable.creatorId=104&subTable.subTable.formColNum=270&pkColumn.queryType=iikpss&subTable.tplWebType=jbpdtl&subTable.businessName=chung.hoeger&subTable.pkColumn.javaType=926djn&subTable.subTable.lastTime=2025-11-12 15:29:40&subTable.pkColumn.isIncrement=1x3dgr&subTable.Description=cxwuun&optionLists=qcsvd7&subTable.createTime=2025-11-12 15:29:40&pkColumn.lastTime=2025-11-12 15:29:40&pkColumn.tableId=765&subTable.pkColumn.createTime=2025-11-12 15:29:40&pkColumn.isQuery=pxvhny&pkColumn.columnName=chung.hoeger&subTable.columns[0].isEdit=by0064&packageName=chung.hoeger&subTable.columns[0].isInsert=ro59is&pkColumn.creatorId=104&subTable.columns[0].lastTime=2025-11-12 15:29:40&subTable.subTable.optionLists=grmyeg&pkColumn.columnComment=32iv0s&subTable.genType=fvpul6&pkColumn.isInsert=d3ewsl&subTable.subTable.businessName=chung.hoeger&subTable.columns[0].columnComment=aevbly&subTable.columns[0].isIncrement=mq4ovu
 ```
 **Response-fields:**
 
@@ -22117,83 +21956,83 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:11",
-      "lastTime": "2025-10-20 18:26:11",
-      "tableId": 865,
-      "tableName": "merle.larkin",
-      "tableComment": "nbxc2i",
-      "subTableName": "merle.larkin",
-      "subTableFkName": "merle.larkin",
-      "className": "merle.larkin",
-      "tplCategory": "0otyxz",
-      "tplWebType": "ndlhb1",
-      "packageName": "merle.larkin",
-      "moduleName": "merle.larkin",
-      "businessName": "merle.larkin",
-      "functionName": "merle.larkin",
-      "functionAuthor": "Glendora Flatley",
-      "formColNum": 382,
-      "genType": "f99ll0",
-      "genPath": "k5zll7",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:40",
+      "lastTime": "2025-11-12 15:29:40",
+      "tableId": 668,
+      "tableName": "chung.hoeger",
+      "tableComment": "0gyp2o",
+      "subTableName": "chung.hoeger",
+      "subTableFkName": "chung.hoeger",
+      "className": "chung.hoeger",
+      "tplCategory": "dga9qk",
+      "tplWebType": "3gnqi1",
+      "packageName": "chung.hoeger",
+      "moduleName": "chung.hoeger",
+      "businessName": "chung.hoeger",
+      "functionName": "chung.hoeger",
+      "functionAuthor": "Mrs. Cecilia Muller",
+      "formColNum": 102,
+      "genType": "1hz7gy",
+      "genPath": "vc1t39",
       "pkColumn": {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:11",
-        "lastTime": "2025-10-20 18:26:11",
-        "columnId": 953,
-        "tableId": 142,
-        "columnName": "merle.larkin",
-        "columnComment": "x19fvj",
-        "columnType": "xg6oag",
-        "javaType": "yroyde",
-        "javaField": "topju2",
-        "isPk": "6xpiqq",
-        "isIncrement": "75972x",
-        "isRequired": "3sgqhi",
-        "isInsert": "ve7rqh",
-        "isEdit": "t6uyh0",
-        "isList": "zehneb",
-        "isQuery": "vxnoq1",
-        "queryType": "wg5ago",
-        "htmlType": "e96fvm",
-        "dictType": "uh8ymf",
-        "priority": 220
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:40",
+        "lastTime": "2025-11-12 15:29:40",
+        "columnId": 231,
+        "tableId": 139,
+        "columnName": "chung.hoeger",
+        "columnComment": "w0j71e",
+        "columnType": "swbqt7",
+        "javaType": "57qv16",
+        "javaField": "cbimx4",
+        "isPk": "livbrh",
+        "isIncrement": "ukli7b",
+        "isRequired": "nurzrw",
+        "isInsert": "ikpv1y",
+        "isEdit": "sz2c85",
+        "isList": "r7ktfx",
+        "isQuery": "cbwnvu",
+        "queryType": "ebmuwh",
+        "htmlType": "1cdw4k",
+        "dictType": "7t6ehh",
+        "priority": 868
       },
       "subTable": {
         "$ref": "..."
       },
       "columns": [
         {
-          "creatorId": "172",
-          "createTime": "2025-10-20 18:26:11",
-          "lastTime": "2025-10-20 18:26:11",
-          "columnId": 699,
-          "tableId": 769,
-          "columnName": "merle.larkin",
-          "columnComment": "fhnbce",
-          "columnType": "hvqc16",
-          "javaType": "8k2d6x",
-          "javaField": "zfpyjk",
-          "isPk": "mf49ke",
-          "isIncrement": "dma1sc",
-          "isRequired": "pq0wiw",
-          "isInsert": "cahqr3",
-          "isEdit": "3jxpe8",
-          "isList": "rc7t2i",
-          "isQuery": "7u4gvq",
-          "queryType": "wlfzhl",
-          "htmlType": "26f28m",
-          "dictType": "6r0gjx",
-          "priority": 395
+          "creatorId": "104",
+          "createTime": "2025-11-12 15:29:40",
+          "lastTime": "2025-11-12 15:29:40",
+          "columnId": 949,
+          "tableId": 415,
+          "columnName": "chung.hoeger",
+          "columnComment": "hufjwd",
+          "columnType": "4b02nu",
+          "javaType": "dry4f0",
+          "javaField": "ykjsyh",
+          "isPk": "xil0lq",
+          "isIncrement": "yz14yl",
+          "isRequired": "rewhct",
+          "isInsert": "hl5dpa",
+          "isEdit": "dhfaw7",
+          "isList": "g3emkf",
+          "isQuery": "d6meih",
+          "queryType": "hrvne7",
+          "htmlType": "vtoxps",
+          "dictType": "grn4xq",
+          "priority": 953
         }
       ],
-      "optionLists": "lpbtb9",
-      "treeCode": "81486",
-      "treeParentCode": "81486",
-      "treeName": "merle.larkin",
-      "parentMenuId": 148,
-      "parentMenuName": "merle.larkin",
-      "Description": "iizmhg",
+      "optionLists": "wj8ok5",
+      "treeCode": "74128",
+      "treeParentCode": "74128",
+      "treeName": "chung.hoeger",
+      "parentMenuId": 408,
+      "parentMenuName": "chung.hoeger",
+      "Description": "gy12df",
       "page": 1,
       "limit": 10,
       "params": {
@@ -22201,8 +22040,8 @@ timestamp|string|返回时间戳字符串|-
       }
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22232,7 +22071,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/407.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/202.do
 ```
 **Response-fields:**
 
@@ -22257,8 +22096,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22361,7 +22200,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?genPath=p7yu8n&subTable.formColNum=583&subTable.columns[0].priority=257&subTable.subTable.tplWebType=ag9k02&subTable.pkColumn.columnName=merle.larkin&subTable.subTable.treeParentCode=81486&subTable.genType=wq0cgk&subTable.columns[0].isIncrement=9iztac&subTable.columns[0].htmlType=smwc3k&subTable.page=1&columns[0].isPk=rhy0mf&columns[0].isIncrement=zw0b8v&columns[0].dictType=yhtnbo&subTable.columns[0].isEdit=g5fgol&subTable.subTable.moduleName=merle.larkin&subTable.subTable.functionAuthor=Glendora Flatley&subTable.columns[0].javaField=738t2p&pkColumn.createTime=2025-10-20 18:26:11&tplCategory=1zltsy&subTable.pkColumn.priority=985&columns[0].priority=715&Description=km2vt3&subTable.pkColumn.isQuery=4isq95&subTable.subTable.tableId=310&subTable.subTable.businessName=merle.larkin&subTable.tableName=merle.larkin&subTable.columns[0].columnId=792&subTable.columns[0].dictType=4atw38&subTable.pkColumn.columnId=623&columns[0].columnType=9eid5w&pkColumn.isInsert=mpv9fk&columns[0].isQuery=bdttwm&parentMenuName=merle.larkin&pkColumn.columnId=292&subTable.subTable.subTableName=merle.larkin&subTable.columns[0].isRequired=768eg3&pkColumn.priority=978&subTable.moduleName=merle.larkin&subTable.tplWebType=ocjse2&subTable.pkColumn.isRequired=f47ma8&pkColumn.tableId=13&pkColumn.isQuery=uz1z7o&pkColumn.creatorId=172&subTable.pkColumn.tableId=197&subTable.subTable.formColNum=309&subTable.tableComment=tb19rp&columns[0].isEdit=nb3elh&subTable.columns[0].queryType=i8tfjk&createTime=2025-10-20 18:26:11&className=merle.larkin&subTable.subTable.creatorId=172&moduleName=merle.larkin&subTable.pkColumn.isList=z8kpab&subTable.treeName=merle.larkin&pkColumn.isIncrement=u1pr80&subTable.columns[0].tableId=370&treeName=merle.larkin&columns[0].isInsert=zr42tr&genType=26b3di&subTable.pkColumn.isPk=i9pvfl&subTable.subTable.tplCategory=r5d6gk&columns[0].htmlType=xnqrjy&parentMenuId=780&subTable.subTable.className=merle.larkin&subTable.pkColumn.isIncrement=ma1jib&limit=10&pkColumn.javaType=9vkhgh&subTable.createTime=2025-10-20 18:26:11&subTable.businessName=merle.larkin&subTable.columns[0].isInsert=ojirzi&subTable.parentMenuName=merle.larkin&subTable.subTable.subTableFkName=merle.larkin&columns[0].columnComment=cidtp9&columns[0].isRequired=vlewvd&subTable.columns[0].creatorId=172&subTable.columns[0].columnName=merle.larkin&subTable.subTable.createTime=2025-10-20 18:26:11&subTable.subTable.tableComment=3mg9ym&subTable.functionName=merle.larkin&subTable.genPath=3951a3&formColNum=850&pkColumn.isRequired=309i5i&subTable.subTable.lastTime=2025-10-20 18:26:11&columns[0].columnId=803&columns[0].isList=mjvacv&subTable.treeCode=81486&tableComment=u71k4d&subTable.columns[0].lastTime=2025-10-20 18:26:11&subTable.pkColumn.createTime=2025-10-20 18:26:11&businessName=merle.larkin&subTable.columns[0].isList=mqwcxn&subTable.pkColumn.lastTime=2025-10-20 18:26:11&subTable.pkColumn.javaField=wgk7x6&subTable.functionAuthor=Glendora Flatley&packageName=merle.larkin&subTable.creatorId=172&subTable.pkColumn.creatorId=172&subTable.columns[0].javaType=uoze2z&subTable.subTable.parentMenuId=76&pkColumn.columnComment=luzdga&subTable.pkColumn.javaType=xbju61&subTable.columns[0].columnComment=i19q1z&pkColumn.dictType=mypvlv&subTable.columns[0].isQuery=cjykw1&subTable.columns[0].columnType=o1axsa&columns[0].lastTime=2025-10-20 18:26:11&subTable.subTable.treeName=merle.larkin&subTable.packageName=merle.larkin&subTable.pkColumn.columnComment=8eyde9&subTableFkName=merle.larkin&subTable.subTable.optionLists=74371r&subTable.className=merle.larkin&functionName=merle.larkin&functionAuthor=Glendora Flatley&pkColumn.isPk=3zfb19&subTable.pkColumn.columnType=cn2pl1&subTable.pkColumn.isInsert=16o4ip&subTable.tplCategory=e89yzl&columns[0].javaField=lbnzja&lastTime=2025-10-20 18:26:11&subTable.subTable.Description=mywff4&subTable.subTable.tableName=merle.larkin&columns[0].queryType=uxhlbo&pkColumn.queryType=47fm8j&pkColumn.htmlType=4hptno&pkColumn.columnType=5j1h3f&subTable.pkColumn.isEdit=85gyqz&subTable.subTable.page=1&page=1&columns[0].javaType=ww273s&subTable.optionLists=01hcxj&treeParentCode=81486&creatorId=172&columns[0].creatorId=172&tableId=273&subTable.subTable.genPath=bccowt&subTable.limit=10&treeCode=81486&columns[0].createTime=2025-10-20 18:26:11&subTable.lastTime=2025-10-20 18:26:11&pkColumn.columnName=merle.larkin&pkColumn.isEdit=0jnguk&pkColumn.lastTime=2025-10-20 18:26:11&subTable.Description=levkls&subTable.tableId=545&subTable.columns[0].createTime=2025-10-20 18:26:11&subTable.subTableName=merle.larkin&subTable.pkColumn.dictType=pbf3y7&pkColumn.javaField=7vjiqg&subTable.parentMenuId=696&columns[0].tableId=275&subTable.pkColumn.htmlType=mi1v3h&subTable.subTable.packageName=merle.larkin&tplWebType=monlgb&subTable.subTable.genType=1dwk3w&subTable.subTable.parentMenuName=merle.larkin&subTable.subTable.limit=10&subTable.treeParentCode=81486&columns[0].columnName=merle.larkin&optionLists=164nf1&subTable.subTable.functionName=merle.larkin&subTable.subTable.treeCode=81486&tableName=merle.larkin&pkColumn.isList=baifrw&subTable.pkColumn.queryType=o8squb&subTableName=merle.larkin&subTable.columns[0].isPk=4q9dax&subTable.subTableFkName=merle.larkin
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?subTable.functionAuthor=Mrs. Cecilia Muller&subTable.packageName=chung.hoeger&subTable.columns[0].queryType=j1g0hn&columns[0].columnComment=8bsacf&subTable.lastTime=2025-11-12 15:29:40&pkColumn.isList=dqeql3&subTable.columns[0].isIncrement=43omiu&subTable.treeParentCode=74128&columns[0].isEdit=ubaxs0&columns[0].queryType=og36mo&treeCode=74128&subTable.pkColumn.columnType=icpco0&subTable.pkColumn.priority=627&subTable.pkColumn.tableId=685&treeName=chung.hoeger&subTable.functionName=chung.hoeger&subTable.columns[0].columnId=950&pkColumn.creatorId=104&tplCategory=96rncz&subTable.pkColumn.lastTime=2025-11-12 15:29:40&columns[0].columnName=chung.hoeger&subTable.columns[0].javaType=iky7nu&subTable.subTable.parentMenuId=453&className=chung.hoeger&subTable.subTableFkName=chung.hoeger&pkColumn.isIncrement=zoxpaf&Description=o2bcq2&subTable.className=chung.hoeger&businessName=chung.hoeger&subTable.subTable.lastTime=2025-11-12 15:29:40&columns[0].htmlType=8h3hg2&subTable.subTable.Description=yfyht6&subTable.pkColumn.columnName=chung.hoeger&columns[0].tableId=708&functionAuthor=Mrs. Cecilia Muller&subTable.pkColumn.columnComment=hl5t7o&subTable.subTable.optionLists=v81jt9&functionName=chung.hoeger&genPath=jbzs7j&subTable.columns[0].creatorId=104&subTable.treeName=chung.hoeger&pkColumn.isInsert=fhz4xp&parentMenuId=784&columns[0].dictType=z6gs3a&columns[0].lastTime=2025-11-12 15:29:40&subTable.columns[0].isEdit=e0540k&subTable.businessName=chung.hoeger&packageName=chung.hoeger&subTable.pkColumn.isList=0d47cl&pkColumn.lastTime=2025-11-12 15:29:40&genType=eqkbri&creatorId=104&subTable.pkColumn.createTime=2025-11-12 15:29:40&pkColumn.columnName=chung.hoeger&subTable.createTime=2025-11-12 15:29:40&subTableName=chung.hoeger&tableId=47&subTable.pkColumn.isRequired=0ogdum&pkColumn.columnType=bv9p6c&subTable.subTable.businessName=chung.hoeger&pkColumn.isQuery=yrymj3&subTable.pkColumn.creatorId=104&subTable.pkColumn.dictType=k2cou0&subTable.pkColumn.columnId=76&subTable.subTable.genType=z4yyja&subTable.subTable.page=1&subTable.columns[0].columnComment=ms2x46&subTable.columns[0].javaField=x94wf9&subTable.columns[0].priority=923&columns[0].isInsert=rgcps2&subTable.columns[0].isPk=yu4h2r&subTable.columns[0].createTime=2025-11-12 15:29:40&subTable.tableName=chung.hoeger&limit=10&columns[0].creatorId=104&subTable.pkColumn.isQuery=xjxknt&subTable.columns[0].isList=jw0xt5&subTable.columns[0].isRequired=s9s9uh&pkColumn.queryType=11xjn3&subTable.columns[0].dictType=fl7u8g&subTable.pkColumn.htmlType=zcqpav&subTable.subTable.subTableName=chung.hoeger&pkColumn.priority=605&pkColumn.isRequired=qdwxoo&subTable.tableComment=kugull&subTable.subTable.tableName=chung.hoeger&subTable.columns[0].tableId=232&subTable.Description=8r3n2n&pkColumn.columnComment=opocn8&columns[0].columnId=206&columns[0].priority=277&pkColumn.javaType=qcdsd0&tableName=chung.hoeger&columns[0].columnType=14z8ek&subTable.subTable.moduleName=chung.hoeger&subTable.pkColumn.isIncrement=63fq9c&pkColumn.isEdit=st8z01&subTable.genType=gdzwbp&subTable.subTable.tableComment=9trl3p&subTable.subTable.tplCategory=1t4mvo&subTable.subTable.tplWebType=k5s8ym&pkColumn.columnId=107&subTable.tableId=988&subTable.subTable.treeParentCode=74128&subTable.page=1&subTable.subTable.parentMenuName=chung.hoeger&parentMenuName=chung.hoeger&subTable.subTable.genPath=4npdt5&pkColumn.javaField=zbiwk8&subTable.pkColumn.queryType=5j8tbd&columns[0].javaType=xwprhs&subTable.subTable.functionName=chung.hoeger&columns[0].isRequired=e7z198&columns[0].javaField=turmqu&subTable.parentMenuName=chung.hoeger&treeParentCode=74128&subTable.treeCode=74128&subTable.subTable.treeCode=74128&subTable.subTable.className=chung.hoeger&subTable.tplCategory=mww8l9&subTable.moduleName=chung.hoeger&subTable.subTable.tableId=158&formColNum=89&subTable.pkColumn.isInsert=05i3r3&subTable.genPath=hpqvu2&subTable.columns[0].lastTime=2025-11-12 15:29:40&subTable.columns[0].columnType=3jq15p&subTable.subTable.limit=10&subTable.subTable.subTableFkName=chung.hoeger&columns[0].isIncrement=e107j1&pkColumn.htmlType=0lh746&pkColumn.isPk=3bscoj&subTable.pkColumn.isPk=wbrr4b&subTable.columns[0].htmlType=b1lbqi&subTable.formColNum=67&subTable.creatorId=104&subTable.subTableName=chung.hoeger&pkColumn.tableId=409&lastTime=2025-11-12 15:29:40&columns[0].isList=uhhnns&tplWebType=8c6ksk&subTable.subTable.packageName=chung.hoeger&subTable.columns[0].isQuery=13kvyu&subTable.limit=10&subTableFkName=chung.hoeger&columns[0].createTime=2025-11-12 15:29:40&subTable.tplWebType=18lr6y&tableComment=gaqaf2&page=1&subTable.subTable.createTime=2025-11-12 15:29:40&subTable.columns[0].isInsert=6slxpb&subTable.columns[0].columnName=chung.hoeger&subTable.optionLists=byicxu&pkColumn.dictType=hgioy9&createTime=2025-11-12 15:29:40&moduleName=chung.hoeger&subTable.pkColumn.javaType=35sver&subTable.parentMenuId=849&columns[0].isPk=htnqau&columns[0].isQuery=pzgiva&optionLists=uypckn&pkColumn.createTime=2025-11-12 15:29:40&subTable.pkColumn.isEdit=b7dg1k&subTable.pkColumn.javaField=pqrgyl&subTable.subTable.functionAuthor=Mrs. Cecilia Muller&subTable.subTable.treeName=chung.hoeger&subTable.subTable.creatorId=104&subTable.subTable.formColNum=722
 ```
 **Response-fields:**
 
@@ -22401,27 +22240,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "stackTrace": "8lix4m",
-    "pageNum": 810,
+    "stackTrace": "gf8wxj",
+    "pageNum": 765,
     "pageSize": 10,
-    "startRow": 458,
-    "endRow": 139,
-    "total": 220,
-    "pages": 658,
+    "startRow": 979,
+    "endRow": 91,
+    "total": 785,
+    "pages": 540,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "397phv",
-    "orderBy": "q5rtjm",
+    "countColumn": "1hhxq5",
+    "orderBy": "svfx6z",
     "orderByOnly": true,
     "boundSqlInterceptor": {},
-    "dialectClass": "bu6uue",
+    "dialectClass": "lpaggz",
     "keepOrderBy": true,
     "keepSubSelectOrderBy": true,
     "asyncCount": true
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22451,7 +22290,7 @@ tableId|int64|表对象ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=446
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=715
 ```
 **Response-fields:**
 
@@ -22493,31 +22332,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:11",
-      "lastTime": "2025-10-20 18:26:11",
-      "columnId": 406,
-      "tableId": 69,
-      "columnName": "merle.larkin",
-      "columnComment": "j48gu4",
-      "columnType": "txeima",
-      "javaType": "190rwb",
-      "javaField": "ske92j",
-      "isPk": "f9evsa",
-      "isIncrement": "u8mxiy",
-      "isRequired": "yz33jo",
-      "isInsert": "sqsmc6",
-      "isEdit": "himpdh",
-      "isList": "jab3lx",
-      "isQuery": "xr4ynv",
-      "queryType": "djpeoo",
-      "htmlType": "rj4ius",
-      "dictType": "v4r1gn",
-      "priority": 187
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:40",
+      "lastTime": "2025-11-12 15:29:40",
+      "columnId": 463,
+      "tableId": 553,
+      "columnName": "chung.hoeger",
+      "columnComment": "kfwv7s",
+      "columnType": "zk7o1c",
+      "javaType": "phf0jb",
+      "javaField": "b0uycm",
+      "isPk": "seqvon",
+      "isIncrement": "tmub9d",
+      "isRequired": "pun2bh",
+      "isInsert": "vg3nnz",
+      "isEdit": "ekde47",
+      "isList": "ivv35t",
+      "isQuery": "3i2f0q",
+      "queryType": "0clmjv",
+      "htmlType": "6m0ozv",
+      "dictType": "7yxe2e",
+      "priority": 520
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22547,7 +22386,7 @@ tables|string|表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=fl2a6a'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=quniv1'
 ```
 **Response-fields:**
 
@@ -22566,9 +22405,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "8xeu3p",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "l3sss2",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22598,7 +22437,7 @@ sql|string|  SQL脚本|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=kqgty4'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=w1q5k8'
 ```
 **Response-fields:**
 
@@ -22617,9 +22456,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "qq2w2o",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "xhaxue",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22725,83 +22564,83 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:26:11",
-    "lastTime": "2025-10-20 18:26:11",
-    "tableId": 53,
-    "tableName": "merle.larkin",
-    "tableComment": "f8p6oj",
-    "subTableName": "merle.larkin",
-    "subTableFkName": "merle.larkin",
-    "className": "merle.larkin",
-    "tplCategory": "ffzssv",
-    "tplWebType": "edbozp",
-    "packageName": "merle.larkin",
-    "moduleName": "merle.larkin",
-    "businessName": "merle.larkin",
-    "functionName": "merle.larkin",
-    "functionAuthor": "Glendora Flatley",
-    "formColNum": 206,
-    "genType": "drzhr1",
-    "genPath": "9gff0f",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:40",
+    "lastTime": "2025-11-12 15:29:40",
+    "tableId": 382,
+    "tableName": "chung.hoeger",
+    "tableComment": "9see56",
+    "subTableName": "chung.hoeger",
+    "subTableFkName": "chung.hoeger",
+    "className": "chung.hoeger",
+    "tplCategory": "34xk3q",
+    "tplWebType": "rys93i",
+    "packageName": "chung.hoeger",
+    "moduleName": "chung.hoeger",
+    "businessName": "chung.hoeger",
+    "functionName": "chung.hoeger",
+    "functionAuthor": "Mrs. Cecilia Muller",
+    "formColNum": 870,
+    "genType": "95piqb",
+    "genPath": "b71tu5",
     "pkColumn": {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:26:11",
-      "lastTime": "2025-10-20 18:26:11",
-      "columnId": 526,
-      "tableId": 754,
-      "columnName": "merle.larkin",
-      "columnComment": "fnq2hg",
-      "columnType": "8ipskh",
-      "javaType": "vz1usm",
-      "javaField": "6vdbyj",
-      "isPk": "8ss98u",
-      "isIncrement": "da3qo5",
-      "isRequired": "7ams35",
-      "isInsert": "c7t8zd",
-      "isEdit": "dezjrh",
-      "isList": "cxarp8",
-      "isQuery": "18myj8",
-      "queryType": "9dcdtj",
-      "htmlType": "afd460",
-      "dictType": "witdhh",
-      "priority": 97
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:40",
+      "lastTime": "2025-11-12 15:29:40",
+      "columnId": 949,
+      "tableId": 206,
+      "columnName": "chung.hoeger",
+      "columnComment": "nd5a8r",
+      "columnType": "zofnvi",
+      "javaType": "qn57cn",
+      "javaField": "imybt4",
+      "isPk": "w7y1ox",
+      "isIncrement": "2r5pk4",
+      "isRequired": "vp3plh",
+      "isInsert": "li8146",
+      "isEdit": "yef93n",
+      "isList": "sx68xc",
+      "isQuery": "36xe23",
+      "queryType": "iejp1q",
+      "htmlType": "b6ypcy",
+      "dictType": "tby4qg",
+      "priority": 65
     },
     "subTable": {
       "$ref": "..."
     },
     "columns": [
       {
-        "creatorId": "172",
-        "createTime": "2025-10-20 18:26:11",
-        "lastTime": "2025-10-20 18:26:11",
-        "columnId": 532,
-        "tableId": 239,
-        "columnName": "merle.larkin",
-        "columnComment": "rfq9rv",
-        "columnType": "pri4fl",
-        "javaType": "fbsmov",
-        "javaField": "7o7jdb",
-        "isPk": "vnl8kv",
-        "isIncrement": "hu1wky",
-        "isRequired": "j8f1c9",
-        "isInsert": "7gry0o",
-        "isEdit": "49g4k5",
-        "isList": "cs644w",
-        "isQuery": "6pfqyp",
-        "queryType": "tlb7oy",
-        "htmlType": "aaix0r",
-        "dictType": "56x5qj",
-        "priority": 123
+        "creatorId": "104",
+        "createTime": "2025-11-12 15:29:40",
+        "lastTime": "2025-11-12 15:29:40",
+        "columnId": 906,
+        "tableId": 696,
+        "columnName": "chung.hoeger",
+        "columnComment": "ph66im",
+        "columnType": "ptx12q",
+        "javaType": "ukfkil",
+        "javaField": "t3hvah",
+        "isPk": "yxux5q",
+        "isIncrement": "wjxmwh",
+        "isRequired": "p94et6",
+        "isInsert": "nt66w1",
+        "isEdit": "u3fwjr",
+        "isList": "pv323x",
+        "isQuery": "hppgft",
+        "queryType": "rp3gom",
+        "htmlType": "d3xjb5",
+        "dictType": "6r043h",
+        "priority": 784
       }
     ],
-    "optionLists": "qpzln1",
-    "treeCode": "81486",
-    "treeParentCode": "81486",
-    "treeName": "merle.larkin",
-    "parentMenuId": 78,
-    "parentMenuName": "merle.larkin",
-    "Description": "fzkws1",
+    "optionLists": "68nnzn",
+    "treeCode": "74128",
+    "treeParentCode": "74128",
+    "treeName": "chung.hoeger",
+    "parentMenuId": 624,
+    "parentMenuName": "chung.hoeger",
+    "Description": "km249u",
     "page": 1,
     "limit": 10,
     "params": {
@@ -22827,9 +22666,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "akqx33",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "qe90s6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22878,9 +22717,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "b7ga45",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "jpe99w",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22910,7 +22749,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/894.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/503.do
 ```
 **Response-fields:**
 
@@ -22930,11 +22769,11 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "mapKey1": "vqeeum",
-    "mapKey2": "y20r6d"
+    "mapKey1": "s33s12",
+    "mapKey2": "7nsjrc"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -22964,7 +22803,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/merle.larkin.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -22983,9 +22822,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sz4b4f",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "u9jdfv",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23015,7 +22854,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/merle.larkin.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -23034,9 +22873,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "6wrcvj",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "72i1u7",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23066,7 +22905,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/merle.larkin.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/chung.hoeger.do
 ```
 **Response-fields:**
 
@@ -23085,9 +22924,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "x19i8d",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ao5xpc",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23117,7 +22956,7 @@ tables|string|   表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=bng9j3
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?tables=n7fdx0
 ```
 **Response-fields:**
 
@@ -23136,9 +22975,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lrmn4z",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "i3x0bu",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23183,7 +23022,7 @@ description|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/list.do?q=dleqvk&foreignId=172&id=127&expireTime=2025-10-20 18:25:53&endTime=2025-10-20 18:20:52&limit=10&description=nqvs3q&page=1&orderBy=502&startTime=2025-10-20 18:20:52&username=merle.larkin&updateTime=2025-10-20 18:25:53&loginIp=137.119.212.174&token=9kt1ga
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/list.do?expireTime=2025-11-12 15:29:22&username=chung.hoeger&id=531&orderBy=406&description=zbzn3y&startTime=2025-11-12 15:24:04&q=z300yd&page=1&limit=10&foreignId=104&loginIp=239.116.167.16&token=fb1szm&updateTime=2025-11-12 15:29:22&endTime=2025-11-12 15:24:04
 ```
 **Response-fields:**
 
@@ -23216,22 +23055,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:53",
-      "lastTime": "2025-10-20 18:25:53",
-      "id": 806,
-      "userId": "172",
-      "token": "40yaac",
-      "foreignId": "172",
-      "username": "merle.larkin",
-      "loginIp": "137.119.212.174",
-      "updateTime": "2025-10-20 18:25:53",
-      "expireTime": "2025-10-20 18:25:53",
-      "description": "wx78no"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:22",
+      "lastTime": "2025-11-12 15:29:22",
+      "id": 420,
+      "userId": "104",
+      "token": "tf3gw6",
+      "foreignId": "104",
+      "username": "chung.hoeger",
+      "loginIp": "239.116.167.16",
+      "updateTime": "2025-11-12 15:29:22",
+      "expireTime": "2025-11-12 15:29:22",
+      "description": "3xjy04"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23281,9 +23120,509 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "lv1n2i",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "fxl08h",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+## 微信扫码、消息订阅等接口相关控制器
+### 获取微信扫码登录验证码
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/getCode.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取微信扫码登录验证码
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/getCode.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "31n0zo",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 获取微信扫码是否已登录
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/isLogin/{loginCode}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取微信扫码是否已登录
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+loginCode|string|登录代码|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/isLogin/74128.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─user|object|当前用户|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─xzqhId|int64|行政区划编号，用户来源地|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─source|string|创建来源类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名，城市APP市民云的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|电子邮箱|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外键ID，人口库ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountId|string|身份提供商ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountType|string|开放平台认证平台类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─unionId|string|三方全局D|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─openId|string|开放平台ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickName|string|昵称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─avatarUrl|string|头像|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─registerTime|string|注册时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginTime|string|最后登录时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginIp|string|最后登录IP|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lockTime|string|锁定时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activation|boolean|是否激活0否1是|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activationCode|string|激活代码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2，第三方用户ID，OpenId|-
+└─roles|array|角色集合|-
+└─permissions|array|权限集合|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "user": {
+      "id": 269,
+      "userId": "104",
+      "xzqhId": 448,
+      "source": "skeozb",
+      "username": "chung.hoeger",
+      "mobile": "(567) 281-2291",
+      "email": "antone.stark@hotmail.com",
+      "password": "vli205",
+      "organId": "104",
+      "foreignId": "104",
+      "accountId": "104",
+      "accountType": "7pljei",
+      "unionId": "104",
+      "openId": "104",
+      "nickName": "deon.watsica",
+      "avatarUrl": "www.winston-nienow.name",
+      "registerTime": "2025-11-12 15:29:23",
+      "lastLoginTime": "2025-11-12 15:29:23",
+      "lastLoginIp": "239.116.167.16",
+      "loginCount": 694,
+      "lockTime": "2025-11-12 15:29:23",
+      "activation": true,
+      "activationCode": "74128",
+      "priority": 667,
+      "createTime": "2025-11-12 15:29:23",
+      "delFlag": 9,
+      "description": "ubkxic",
+      "spare1": "ikgb3j",
+      "spare2": "saag4s"
+    },
+    "roles": [
+      303
+    ],
+    "permissions": [
+      "yxl1mi"
+    ]
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 微信小程序登录
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/miniLogin/{code}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 微信小程序登录
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+code|string|代码|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/miniLogin/74128.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─user|object|当前用户|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─xzqhId|int64|行政区划编号，用户来源地|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─source|string|创建来源类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名，城市APP市民云的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|电子邮箱|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外键ID，人口库ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountId|string|身份提供商ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountType|string|开放平台认证平台类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─unionId|string|三方全局D|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─openId|string|开放平台ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickName|string|昵称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─avatarUrl|string|头像|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─registerTime|string|注册时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginTime|string|最后登录时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginIp|string|最后登录IP|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lockTime|string|锁定时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activation|boolean|是否激活0否1是|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activationCode|string|激活代码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2，第三方用户ID，OpenId|-
+└─roles|array|角色集合|-
+└─permissions|array|权限集合|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "user": {
+      "id": 433,
+      "userId": "104",
+      "xzqhId": 21,
+      "source": "bj8icr",
+      "username": "chung.hoeger",
+      "mobile": "(567) 281-2291",
+      "email": "antone.stark@hotmail.com",
+      "password": "1c6yed",
+      "organId": "104",
+      "foreignId": "104",
+      "accountId": "104",
+      "accountType": "sxpce2",
+      "unionId": "104",
+      "openId": "104",
+      "nickName": "deon.watsica",
+      "avatarUrl": "www.winston-nienow.name",
+      "registerTime": "2025-11-12 15:29:23",
+      "lastLoginTime": "2025-11-12 15:29:23",
+      "lastLoginIp": "239.116.167.16",
+      "loginCount": 267,
+      "lockTime": "2025-11-12 15:29:23",
+      "activation": true,
+      "activationCode": "74128",
+      "priority": 762,
+      "createTime": "2025-11-12 15:29:23",
+      "delFlag": 9,
+      "description": "vxp20n",
+      "spare1": "t8t4m0",
+      "spare2": "n6wwjq"
+    },
+    "roles": [
+      932
+    ],
+    "permissions": [
+      "apfcq1"
+    ]
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+## 微信服务号接口相关控制器
+### 微信公众号token验证
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 微信公众号token验证
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+signature|string|签名|false|-
+timestamp|string|时间|false|-
+nonce|string|有效期|false|-
+echostr|string|响应字符串|false|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/.do?echostr=cqq146&nonce=jqakel&signature=20st9s&timestamp=2025-11-12 15:24:04
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "yrw9id",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 微信公众号消息对接
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 微信公众号消息对接
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+signature|string|签名|true|-
+timestamp|string|时间|true|-
+nonce|string|有效期|true|-
+encrypt_type|string|加密类型|false|-
+msg_signature|string|消息签名|false|-
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/api/open/wechat/.do?encrypt_type=vbzg6m&signature=blt6ny&timestamp=2025-11-12 15:24:04&nonce=i2sivt&msg_signature=0k2ws0 --data '{
+  "requestBody": "3rgp2a"
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "8vt1kt",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 微信公众号 获取oauth2完整授权地址
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/getRedirect.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 微信公众号 获取oauth2完整授权地址
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/getRedirect.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─any object|object|any object.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {},
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 微信公众号 oauth2授权后 获取用户信息
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/login.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 微信公众号 oauth2授权后 获取用户信息
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+code|string| 代码|false|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/login.do?code=74128
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─any object|object|any object.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {},
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 微信公众号 页面端原生能力调用
+**URL:** https://linlan.net/eframe_backend/api/open/wechat/getJsapiTicket.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 微信公众号 页面端原生能力调用
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+url|string|  路径URL|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/api/open/wechat/getJsapiTicket.do?url=www.winston-nienow.name
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─any object|object|any object.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {},
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23341,7 +23680,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?q=5nv2ay&receiverMobile=(415) 540-6962&bizType=vzb3fy&creatorId=172&id=967&sendTime=2025-10-20&endTime=2025-10-20 18:20:52&orderBy=539&receiverName=merle.larkin&providerId=172&spare2=kgt2fv&delFlag=5&providerName=merle.larkin&content=gke713&limit=10&returnTime=2025-10-20 18:25:52&foreignId=172&appId=172&returnInfo=modptn&description=c83t4o&spare1=l1ubdh&page=1&startTime=2025-10-20 18:20:52&msgUrl=www.ben-grant.info&status=o7m5n9&bizSubtype=ggo9zi&sendStatus=t27d1n
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?endTime=2025-11-12 15:24:04&sendStatus=nkyh70&page=1&creatorId=104&id=101&foreignId=104&receiverMobile=(567) 281-2291&limit=10&msgUrl=www.winston-nienow.name&sendTime=2025-11-12&bizSubtype=qoe3ab&startTime=2025-11-12 15:24:04&spare2=xqyst3&orderBy=283&delFlag=9&description=efx8g7&bizType=uawddp&status=wi12y2&providerName=chung.hoeger&providerId=104&appId=104&spare1=bv17mj&returnTime=2025-11-12 15:29:21&q=sygxjb&returnInfo=ksp7sb&receiverName=chung.hoeger&content=8gn40n
 ```
 **Response-fields:**
 
@@ -23385,33 +23724,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:52",
-      "lastTime": "2025-10-20 18:25:52",
-      "id": 438,
-      "appId": "172",
-      "providerId": "172",
-      "providerName": "merle.larkin",
-      "foreignId": "172",
-      "receiverMobile": "(415) 540-6962",
-      "receiverName": "merle.larkin",
-      "bizType": "wzp7px",
-      "bizSubtype": "5yfnyn",
-      "content": "4uqbi3",
-      "msgUrl": "www.ben-grant.info",
-      "status": "vv0t4z",
-      "sendTime": "2025-10-20",
-      "sendStatus": "m2g6sv",
-      "returnTime": "2025-10-20 18:25:52",
-      "returnInfo": "covbtf",
-      "delFlag": 5,
-      "description": "67kh0f",
-      "spare1": "0vm6qu",
-      "spare2": "isucvy"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:21",
+      "lastTime": "2025-11-12 15:29:21",
+      "id": 679,
+      "appId": "104",
+      "providerId": "104",
+      "providerName": "chung.hoeger",
+      "foreignId": "104",
+      "receiverMobile": "(567) 281-2291",
+      "receiverName": "chung.hoeger",
+      "bizType": "q3ag9o",
+      "bizSubtype": "ym9ft4",
+      "content": "v7lex1",
+      "msgUrl": "www.winston-nienow.name",
+      "status": "t51m96",
+      "sendTime": "2025-11-12",
+      "sendStatus": "hj7cwz",
+      "returnTime": "2025-11-12 15:29:21",
+      "returnInfo": "j6eog9",
+      "delFlag": 9,
+      "description": "hyrlod",
+      "spare1": "1b5a60",
+      "spare2": "j1hckv"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23485,32 +23824,32 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 553,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "receiverMobile": "(415) 540-6962",
-    "receiverName": "merle.larkin",
-    "bizType": "jbyejq",
-    "bizSubtype": "e113zk",
-    "content": "kisp8h",
-    "msgUrl": "www.ben-grant.info",
-    "status": "i2gs7y",
-    "sendTime": "2025-10-20",
-    "sendStatus": "7dv2h2",
-    "returnTime": "2025-10-20 18:25:52",
-    "returnInfo": "u4zo6w",
-    "delFlag": 5,
-    "description": "t1bfpq",
-    "spare1": "8x6j0s",
-    "spare2": "y3bvkl"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:21",
+    "lastTime": "2025-11-12 15:29:21",
+    "id": 765,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "receiverMobile": "(567) 281-2291",
+    "receiverName": "chung.hoeger",
+    "bizType": "u9lgmb",
+    "bizSubtype": "wt4yr1",
+    "content": "2hh7rp",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "kejja3",
+    "sendTime": "2025-11-12",
+    "sendStatus": "bk55yr",
+    "returnTime": "2025-11-12 15:29:21",
+    "returnInfo": "sw1gg0",
+    "delFlag": 9,
+    "description": "yd9x5e",
+    "spare1": "5c8a31",
+    "spare2": "zsidp0"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23566,29 +23905,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 888,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "receiverMobile": "(415) 540-6962",
-    "receiverName": "merle.larkin",
-    "bizType": "h3881m",
-    "bizSubtype": "mbxltg",
-    "content": "c8d7li",
-    "msgUrl": "www.ben-grant.info",
-    "status": "8sxp2g",
-    "sendTime": "2025-10-20",
-    "sendStatus": "oqaa37",
-    "returnTime": "2025-10-20 18:25:52",
-    "returnInfo": "3wc59w",
-    "delFlag": 5,
-    "description": "pu06ao",
-    "spare1": "84k8zm",
-    "spare2": "rnsp4b"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:21",
+    "lastTime": "2025-11-12 15:29:21",
+    "id": 486,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "receiverMobile": "(567) 281-2291",
+    "receiverName": "chung.hoeger",
+    "bizType": "980uk8",
+    "bizSubtype": "9a7ieu",
+    "content": "h1bdat",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "bfpwt6",
+    "sendTime": "2025-11-12",
+    "sendStatus": "sim8ny",
+    "returnTime": "2025-11-12 15:29:21",
+    "returnInfo": "tuooks",
+    "delFlag": 9,
+    "description": "vjmsuw",
+    "spare1": "al8pn8",
+    "spare2": "4xpl55"
   }
 }'
 ```
@@ -23609,9 +23948,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "s7chbl",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "icv2wg",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23667,29 +24006,29 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 953,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "receiverMobile": "(415) 540-6962",
-    "receiverName": "merle.larkin",
-    "bizType": "1a2lbq",
-    "bizSubtype": "uemetf",
-    "content": "wfqxfx",
-    "msgUrl": "www.ben-grant.info",
-    "status": "ms3ssv",
-    "sendTime": "2025-10-20",
-    "sendStatus": "rg5tin",
-    "returnTime": "2025-10-20 18:25:52",
-    "returnInfo": "bxvvzj",
-    "delFlag": 5,
-    "description": "ev2gq7",
-    "spare1": "1gfs5f",
-    "spare2": "hl25zd"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:21",
+    "lastTime": "2025-11-12 15:29:21",
+    "id": 685,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "receiverMobile": "(567) 281-2291",
+    "receiverName": "chung.hoeger",
+    "bizType": "xe2i0y",
+    "bizSubtype": "onhr4n",
+    "content": "g262zl",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "gdzqbu",
+    "sendTime": "2025-11-12",
+    "sendStatus": "7k8i02",
+    "returnTime": "2025-11-12 15:29:21",
+    "returnInfo": "rpypjn",
+    "delFlag": 9,
+    "description": "f7ayud",
+    "spare1": "krgx5a",
+    "spare2": "uwdjav"
   }
 }'
 ```
@@ -23710,9 +24049,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "fkqcxv",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "y2nya5",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23762,9 +24101,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "89y2lu",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "4dg6qf",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23794,10 +24133,10 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/sms.do --data '{
   "data": {
-    "mobile": "(415) 540-6962",
-    "code": "81486",
-    "uuid": "9bbea0fa-1409-4914-9b7e-342924ed57ad",
-    "appId": "172"
+    "mobile": "(567) 281-2291",
+    "code": "74128",
+    "uuid": "751dd19a-c431-414c-be28-4d0be16947d8",
+    "appId": "104"
   }
 }'
 ```
@@ -23823,13 +24162,13 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "172",
-    "token": "6zngnj",
-    "updateTime": "2025-10-20 18:25:53",
-    "expireTime": "2025-10-20 18:25:53"
+    "userId": "104",
+    "token": "e9tq3a",
+    "updateTime": "2025-11-12 15:29:21",
+    "expireTime": "2025-11-12 15:29:21"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23852,7 +24191,7 @@ mobile|string|手机号码|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=(415) 540-6962'
+curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=(567) 281-2291'
 ```
 **Response-fields:**
 
@@ -23871,9 +24210,188 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1x9n86",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "0ssahe",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 发送邮件
+**URL:** https://linlan.net/eframe_backend/login/mail/send.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 发送邮件
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─id|int64|主键ID|false|-
+└─platform|int32|平台|false|-
+└─mailFormat|string|邮件格式|false|-
+└─mailFrom|string|发件人邮箱|false|-
+└─formAlias|string|发件人昵称|false|-
+└─mailTos|string|接收人邮箱|false|-
+└─receiversName|string|收件人列表|false|-
+└─templateName|string|模板名|false|-
+└─tagName|string|标签名|false|-
+└─subject|string|邮件主题|false|-
+└─content|string|邮件正文|false|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/send.do --data '{
+  "data": {
+    "id": 784,
+    "platform": 368,
+    "mailFormat": "carhzl",
+    "mailFrom": "097gxd",
+    "formAlias": "j5gbzf",
+    "mailTos": "hfbt4g",
+    "receiversName": "chung.hoeger",
+    "templateName": "chung.hoeger",
+    "tagName": "chung.hoeger",
+    "subject": "zmeuv4",
+    "content": "g876ls"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "522gga",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 邮箱账号注册
+**URL:** https://linlan.net/eframe_backend/login/mail/register.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 邮箱账号注册
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─email|string|邮箱|true|-
+└─code|string|验证码|true|-
+└─password|string|密码|true|-
+└─nickname|string|昵称|true|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/register.do --data '{
+  "data": {
+    "email": "antone.stark@hotmail.com",
+    "code": "74128",
+    "password": "qhure0",
+    "nickname": "deon.watsica"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": true,
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据邮箱修改密码
+**URL:** https://linlan.net/eframe_backend/login/mail/email/forgot.do
+
+**Type:** POST
+
+**Author:** Linlan
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 根据邮箱修改密码
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+data|object|请求数据对象，放入RequestBody内|false|-
+└─email|string|邮箱|true|-
+└─code|string|验证码|true|-
+└─password|string|密码|true|-
+└─nickname|string|昵称|true|-
+
+**Request-example:**
+```
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/email/forgot.do --data '{
+  "data": {
+    "email": "antone.stark@hotmail.com",
+    "code": "74128",
+    "password": "fwbu2d",
+    "nickname": "deon.watsica"
+  }
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": true,
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -23928,7 +24446,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/list.do?creatorId=172&spare1=jntzs9&spare2=7xdt0w&delFlag=5&additionInfo=d02jrr&unionId=172&email=vivian.streich@hotmail.com&page=1&accountId=172&serverType=pk83en&limit=10&avatarUrl=www.ben-grant.info&areaCode=81486&mobile=(415) 540-6962&nickName=renna.dibbert&id=660&description=eby0cg&organId=172&foreignId=172&endTime=2025-10-20 18:20:52&startTime=2025-10-20 18:20:52&openId=172&q=5q0l26&orderBy=529
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/list.do?mobile=(567) 281-2291&orderBy=841&accountId=104&openId=104&page=1&spare1=wt19tt&email=antone.stark@hotmail.com&foreignId=104&creatorId=104&endTime=2025-11-12 15:24:04&description=datc1r&limit=10&id=427&organId=104&q=dq0xx9&startTime=2025-11-12 15:24:04&nickName=deon.watsica&additionInfo=66fiji&serverType=r6kq36&spare2=31pkxn&areaCode=74128&unionId=104&avatarUrl=www.winston-nienow.name&delFlag=9
 ```
 **Response-fields:**
 
@@ -23946,7 +24464,7 @@ data|array|返回数据对象|-
 └─organId|string|机构ID|-
 └─foreignId|string|外键ID，人口库ID|-
 └─accountId|string|身份提供商ID|-
-└─serverType|string|开放平台认证平台类型|-
+└─accountType|string|开放平台认证平台类型|-
 └─unionId|string|三方全局D|-
 └─openId|string|开放平台ID|-
 └─email|string|邮箱|-
@@ -23970,31 +24488,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:53",
-      "lastTime": "2025-10-20 18:25:53",
-      "id": 916,
-      "userId": "172",
-      "organId": "172",
-      "foreignId": "172",
-      "accountId": "172",
-      "serverType": "4dyp0o",
-      "unionId": "172",
-      "openId": "172",
-      "email": "vivian.streich@hotmail.com",
-      "areaCode": "81486",
-      "mobile": "(415) 540-6962",
-      "nickName": "renna.dibbert",
-      "avatarUrl": "www.ben-grant.info",
-      "additionInfo": "ymubnd",
-      "delFlag": 5,
-      "description": "wn0o0z",
-      "spare1": "pojlv4",
-      "spare2": "z2ypil"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:22",
+      "lastTime": "2025-11-12 15:29:22",
+      "id": 101,
+      "userId": "104",
+      "organId": "104",
+      "foreignId": "104",
+      "accountId": "104",
+      "accountType": "1ggbjc",
+      "unionId": "104",
+      "openId": "104",
+      "email": "antone.stark@hotmail.com",
+      "areaCode": "74128",
+      "mobile": "(567) 281-2291",
+      "nickName": "deon.watsica",
+      "avatarUrl": "www.winston-nienow.name",
+      "additionInfo": "k3yeta",
+      "delFlag": 9,
+      "description": "1gqd0a",
+      "spare1": "7emc2g",
+      "spare2": "avrest"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24043,7 +24561,7 @@ data|object|返回数据对象|-
 └─organId|string|机构ID|-
 └─foreignId|string|外键ID，人口库ID|-
 └─accountId|string|身份提供商ID|-
-└─serverType|string|开放平台认证平台类型|-
+└─accountType|string|开放平台认证平台类型|-
 └─unionId|string|三方全局D|-
 └─openId|string|开放平台ID|-
 └─email|string|邮箱|-
@@ -24066,30 +24584,30 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": 399,
-    "userId": "172",
-    "organId": "172",
-    "foreignId": "172",
-    "accountId": "172",
-    "serverType": "8c2am7",
-    "unionId": "172",
-    "openId": "172",
-    "email": "vivian.streich@hotmail.com",
-    "areaCode": "81486",
-    "mobile": "(415) 540-6962",
-    "nickName": "renna.dibbert",
-    "avatarUrl": "www.ben-grant.info",
-    "additionInfo": "ts5es0",
-    "delFlag": 5,
-    "description": "zjf0uz",
-    "spare1": "lbd03c",
-    "spare2": "mnbcqj"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": 509,
+    "userId": "104",
+    "organId": "104",
+    "foreignId": "104",
+    "accountId": "104",
+    "accountType": "ph9yc5",
+    "unionId": "104",
+    "openId": "104",
+    "email": "antone.stark@hotmail.com",
+    "areaCode": "74128",
+    "mobile": "(567) 281-2291",
+    "nickName": "deon.watsica",
+    "avatarUrl": "www.winston-nienow.name",
+    "additionInfo": "nvg4rs",
+    "delFlag": 9,
+    "description": "u72c8p",
+    "spare1": "uw7qrc",
+    "spare2": "wrstmz"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24125,7 +24643,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─organId|string|机构ID|false|-
 └─foreignId|string|外键ID，人口库ID|false|-
 └─accountId|string|身份提供商ID|false|-
-└─serverType|string|开放平台认证平台类型|false|-
+└─accountType|string|开放平台认证平台类型|false|-
 └─unionId|string|三方全局D|false|-
 └─openId|string|开放平台ID|false|-
 └─email|string|邮箱|false|-
@@ -24143,27 +24661,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": 689,
-    "userId": "172",
-    "organId": "172",
-    "foreignId": "172",
-    "accountId": "172",
-    "serverType": "a679cn",
-    "unionId": "172",
-    "openId": "172",
-    "email": "vivian.streich@hotmail.com",
-    "areaCode": "81486",
-    "mobile": "(415) 540-6962",
-    "nickName": "renna.dibbert",
-    "avatarUrl": "www.ben-grant.info",
-    "additionInfo": "2fc9kk",
-    "delFlag": 5,
-    "description": "ifizr9",
-    "spare1": "lmwvvm",
-    "spare2": "cpd39r"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": 154,
+    "userId": "104",
+    "organId": "104",
+    "foreignId": "104",
+    "accountId": "104",
+    "accountType": "xu8jsv",
+    "unionId": "104",
+    "openId": "104",
+    "email": "antone.stark@hotmail.com",
+    "areaCode": "74128",
+    "mobile": "(567) 281-2291",
+    "nickName": "deon.watsica",
+    "avatarUrl": "www.winston-nienow.name",
+    "additionInfo": "9jv4x8",
+    "delFlag": 9,
+    "description": "v8x886",
+    "spare1": "jsooe1",
+    "spare2": "7sbq3y"
   }
 }'
 ```
@@ -24184,9 +24702,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "gw19sh",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "6nmq7l",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24222,7 +24740,7 @@ data|object|请求数据对象，放入RequestBody内|false|-
 └─organId|string|机构ID|false|-
 └─foreignId|string|外键ID，人口库ID|false|-
 └─accountId|string|身份提供商ID|false|-
-└─serverType|string|开放平台认证平台类型|false|-
+└─accountType|string|开放平台认证平台类型|false|-
 └─unionId|string|三方全局D|false|-
 └─openId|string|开放平台ID|false|-
 └─email|string|邮箱|false|-
@@ -24240,27 +24758,27 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": 470,
-    "userId": "172",
-    "organId": "172",
-    "foreignId": "172",
-    "accountId": "172",
-    "serverType": "uso9lb",
-    "unionId": "172",
-    "openId": "172",
-    "email": "vivian.streich@hotmail.com",
-    "areaCode": "81486",
-    "mobile": "(415) 540-6962",
-    "nickName": "renna.dibbert",
-    "avatarUrl": "www.ben-grant.info",
-    "additionInfo": "87on7d",
-    "delFlag": 5,
-    "description": "4743bq",
-    "spare1": "q7408o",
-    "spare2": "2nr4wc"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": 489,
+    "userId": "104",
+    "organId": "104",
+    "foreignId": "104",
+    "accountId": "104",
+    "accountType": "o3isvj",
+    "unionId": "104",
+    "openId": "104",
+    "email": "antone.stark@hotmail.com",
+    "areaCode": "74128",
+    "mobile": "(567) 281-2291",
+    "nickName": "deon.watsica",
+    "avatarUrl": "www.winston-nienow.name",
+    "additionInfo": "0xxsax",
+    "delFlag": 9,
+    "description": "b4c1gm",
+    "spare1": "ze37em",
+    "spare2": "pjek43"
   }
 }'
 ```
@@ -24281,9 +24799,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "c3skqk",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "rhs198",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24333,9 +24851,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3tnmfv",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "y76vd6",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24371,6 +24889,7 @@ page|int32|分页信息：默认第1页|false|-
 limit|int32|分页每页条数，默认10条|false|-
 id|string|主键ID|false|-
 memberId|int64|会员ID|false|-
+userId|string|用户ID|false|-
 username|string|系统用户名，手机号|false|-
 accountId|string|身份提供商ID|false|-
 accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|false|-
@@ -24384,7 +24903,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/list.do?creatorId=172&limit=10&id=172&orderBy=573&username=merle.larkin&accountKey=rfdmjx&memberId=816&bindTime=2025-10-20 18:25:53&page=1&delFlag=5&description=9zsxd2&endTime=2025-10-20 18:20:52&accountId=172&additionInfo=63ylb2&spare2=1bnb62&spare1=1il6p0&q=ymv8rb&startTime=2025-10-20 18:20:52
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/list.do?page=1&memberId=625&username=chung.hoeger&endTime=2025-11-12 15:24:04&orderBy=956&q=ym9i3f&bindTime=2025-11-12 15:29:22&startTime=2025-11-12 15:24:04&limit=10&accountId=104&delFlag=9&spare1=y4ezxa&additionInfo=cg9jhy&id=104&accountKey=9q15bc&userId=104&creatorId=104&description=ti96hm&spare2=dw86ig
 ```
 **Response-fields:**
 
@@ -24409,6 +24928,7 @@ data|array|返回数据对象|-
 └─description|string|备注|-
 └─spare1|string|备用1|-
 └─spare2|string|备用2|-
+└─openType|string|第三方平台|-
 requestId|string|请求ID|-
 timestamp|string|返回时间戳字符串|-
 
@@ -24420,25 +24940,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:53",
-      "lastTime": "2025-10-20 18:25:53",
-      "id": "172",
-      "memberId": 872,
-      "userId": "172",
-      "username": "merle.larkin",
-      "accountId": "172",
-      "accountKey": "6vo95p",
-      "bindTime": "2025-10-20 18:25:53",
-      "additionInfo": "9gaa21",
-      "delFlag": 5,
-      "description": "ng5x07",
-      "spare1": "f1yngy",
-      "spare2": "yz4j5s"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:22",
+      "lastTime": "2025-11-12 15:29:22",
+      "id": "104",
+      "memberId": 49,
+      "userId": "104",
+      "username": "chung.hoeger",
+      "accountId": "104",
+      "accountKey": "04bgo1",
+      "bindTime": "2025-11-12 15:29:22",
+      "additionInfo": "6jwmmy",
+      "delFlag": 9,
+      "description": "stzpab",
+      "spare1": "nx2173",
+      "spare2": "kuoxrx",
+      "openType": "2a4oju"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24504,24 +25025,24 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": "172",
-    "memberId": 336,
-    "userId": "172",
-    "username": "merle.larkin",
-    "accountId": "172",
-    "accountKey": "t01gfa",
-    "bindTime": "2025-10-20 18:25:53",
-    "additionInfo": "bkp677",
-    "delFlag": 5,
-    "description": "ly6rmt",
-    "spare1": "d1jk3k",
-    "spare2": "w5inow"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": "104",
+    "memberId": 866,
+    "userId": "104",
+    "username": "chung.hoeger",
+    "accountId": "104",
+    "accountKey": "tmavmx",
+    "bindTime": "2025-11-12 15:29:22",
+    "additionInfo": "997137",
+    "delFlag": 9,
+    "description": "hkoa6q",
+    "spare1": "qx302v",
+    "spare2": "n6ooo1"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24569,21 +25090,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": "172",
-    "memberId": 480,
-    "userId": "172",
-    "username": "merle.larkin",
-    "accountId": "172",
-    "accountKey": "q6xx8w",
-    "bindTime": "2025-10-20 18:25:53",
-    "additionInfo": "c5h9bu",
-    "delFlag": 5,
-    "description": "a602le",
-    "spare1": "hwcuih",
-    "spare2": "uv5ocg"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": "104",
+    "memberId": 815,
+    "userId": "104",
+    "username": "chung.hoeger",
+    "accountId": "104",
+    "accountKey": "xo4jdg",
+    "bindTime": "2025-11-12 15:29:22",
+    "additionInfo": "4z1wiw",
+    "delFlag": 9,
+    "description": "xutxkb",
+    "spare1": "yv36sy",
+    "spare2": "zc5h7z"
   }
 }'
 ```
@@ -24604,9 +25125,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "v372n4",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "nvhw6e",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24654,21 +25175,21 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:53",
-    "lastTime": "2025-10-20 18:25:53",
-    "id": "172",
-    "memberId": 678,
-    "userId": "172",
-    "username": "merle.larkin",
-    "accountId": "172",
-    "accountKey": "rbykbr",
-    "bindTime": "2025-10-20 18:25:53",
-    "additionInfo": "4ug1rp",
-    "delFlag": 5,
-    "description": "gxooi2",
-    "spare1": "0swuvu",
-    "spare2": "y83lmp"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:22",
+    "lastTime": "2025-11-12 15:29:22",
+    "id": "104",
+    "memberId": 807,
+    "userId": "104",
+    "username": "chung.hoeger",
+    "accountId": "104",
+    "accountKey": "wjpplg",
+    "bindTime": "2025-11-12 15:29:22",
+    "additionInfo": "e5pg5i",
+    "delFlag": 9,
+    "description": "4snvuy",
+    "spare1": "ajo3c4",
+    "spare2": "zt1pgm"
   }
 }'
 ```
@@ -24689,9 +25210,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3r39w2",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "uvsgqd",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -24741,14 +25262,215 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "cjk8zd",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "dv9k48",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
-## 第三方社交平台登录验证
-### 社交平台登录方法
+### 获取我的绑定列表或分页, 返回ThirdMemberBind对象.
+**URL:** https://linlan.net/eframe_backend/api/third/memberbind/mylist.do
+
+**Type:** GET
+
+**Author:** Linlan
+CreateTime 2025-10-13 16:58:20
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取我的绑定列表或分页, 返回ThirdMemberBind对象.
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+token|string|令牌|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+q|string|关键字：查询输入条件q，可匹配name、title、keywords等文本信息|false|-
+orderBy|int32|排序，默认主键倒序|false|-
+startTime|string|开始时间|false|-
+endTime|string|结束时间|false|-
+page|int32|分页信息：默认第1页|false|-
+limit|int32|分页每页条数，默认10条|false|-
+id|string|主键ID|false|-
+memberId|int64|会员ID|false|-
+userId|string|用户ID|false|-
+username|string|系统用户名，手机号|false|-
+accountId|string|身份提供商ID|false|-
+accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|false|-
+bindTime|string|绑定时间|false|-
+additionInfo|string|附加信息|false|-
+creatorId|string|创建人ID|false|-
+delFlag|int32|删除标记，0未删除1已删除|false|-
+description|string|备注|false|-
+spare1|string|备用1|false|-
+spare2|string|备用2|false|-
+
+**Request-example:**
+```
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/mylist.do?accountKey=zjwumg&limit=10&accountId=104&id=104&memberId=156&startTime=2025-11-12 15:24:04&additionInfo=llf3mq&spare2=720xq6&orderBy=421&page=1&bindTime=2025-11-12 15:29:22&creatorId=104&username=chung.hoeger&q=szuks0&endTime=2025-11-12 15:24:04&userId=104&delFlag=9&description=57dezo&spare1=ngr643
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|array|返回数据对象|-
+└─creatorId|string|创建人id|-
+└─createTime|string|创建时间|-
+└─lastTime|string|最后修改时间|-
+└─id|string|主键ID|-
+└─memberId|int64|会员ID|-
+└─userId|string|用户ID|-
+└─username|string|系统用户名，手机号|-
+└─accountId|string|身份提供商ID|-
+└─accountKey|string|第三方账号KEY，市民云、微信等的UnionId或OpenId|-
+└─bindTime|string|绑定时间|-
+└─additionInfo|string|附加信息|-
+└─delFlag|int32|删除标记，0未删除1已删除|-
+└─description|string|备注|-
+└─spare1|string|备用1|-
+└─spare2|string|备用2|-
+└─openType|string|第三方平台|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": [
+    {
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:22",
+      "lastTime": "2025-11-12 15:29:22",
+      "id": "104",
+      "memberId": 356,
+      "userId": "104",
+      "username": "chung.hoeger",
+      "accountId": "104",
+      "accountKey": "1ebju8",
+      "bindTime": "2025-11-12 15:29:22",
+      "additionInfo": "y5ova7",
+      "delFlag": 9,
+      "description": "0ckds4",
+      "spare1": "zxd0pg",
+      "spare2": "nkengs",
+      "openType": "gu96y0"
+    }
+  ],
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+## 第三方社交平台登录验证管理体系管理用户登录，覆盖系统管理员、各个角色岗位管理人员，执行第一步、第二步、第三步，无需进行人员信息添加，只需验证人员信息（暂时不考虑）会员体系管理用户登录，覆盖服务商工作人员、各类分组WEB端人员，执行第一步、第二步、第三步，无需进行人员信息添加，只需验证人员信息会员体系门户用户，覆盖网站一般用户、大屏一般用户、移动端一般用户，执行第一步、第二步、第四步、第三步，需要提前执行第四步，完成人员绑定
+### 根据类型，获取授权请求，第一步
+**URL:** https://linlan.net/eframe_backend/login/social/render/{source}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据类型，获取授权请求，第一步
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，dingtalk|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/render/其他.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": "coo7cy",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据类型，获取授权请求，第二步
+**URL:** https://linlan.net/eframe_backend/login/social/callback/{source}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据类型，获取授权请求，第二步
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，dingtalk|true|-
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+code|string|No comments found.|false|-
+auth_code|string|No comments found.|false|-
+state|string|No comments found.|false|-
+authorization_code|string|No comments found.|false|-
+oauth_token|string|No comments found.|false|-
+oauth_verifier|string|No comments found.|false|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/callback/其他.do?auth_code=74128&code=74128&state=2b2gml&authorization_code=74128&oauth_verifier=ryn7x9&oauth_token=jshzq2
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─view|object|No comments found.|-
+└─model|object|No comments found.|-
+└─status|enum|null<br/>CONTINUE<br/>SWITCHING_PROTOCOLS<br/>PROCESSING<br/>CHECKPOINT<br/>OK<br/>CREATED<br/>ACCEPTED<br/>NON_AUTHORITATIVE_INFORMATION<br/>NO_CONTENT<br/>RESET_CONTENT<br/>PARTIAL_CONTENT<br/>MULTI_STATUS<br/>ALREADY_REPORTED<br/>IM_USED<br/>MULTIPLE_CHOICES<br/>MOVED_PERMANENTLY<br/>FOUND<br/>MOVED_TEMPORARILY<br/>SEE_OTHER<br/>NOT_MODIFIED<br/>USE_PROXY<br/>TEMPORARY_REDIRECT<br/>PERMANENT_REDIRECT<br/>BAD_REQUEST<br/>UNAUTHORIZED<br/>PAYMENT_REQUIRED<br/>FORBIDDEN<br/>NOT_FOUND<br/>METHOD_NOT_ALLOWED<br/>NOT_ACCEPTABLE<br/>PROXY_AUTHENTICATION_REQUIRED<br/>REQUEST_TIMEOUT<br/>CONFLICT<br/>GONE<br/>LENGTH_REQUIRED<br/>PRECONDITION_FAILED<br/>PAYLOAD_TOO_LARGE<br/>REQUEST_ENTITY_TOO_LARGE<br/>URI_TOO_LONG<br/>REQUEST_URI_TOO_LONG<br/>UNSUPPORTED_MEDIA_TYPE<br/>REQUESTED_RANGE_NOT_SATISFIABLE<br/>EXPECTATION_FAILED<br/>I_AM_A_TEAPOT<br/>INSUFFICIENT_SPACE_ON_RESOURCE<br/>METHOD_FAILURE<br/>DESTINATION_LOCKED<br/>UNPROCESSABLE_ENTITY<br/>LOCKED<br/>FAILED_DEPENDENCY<br/>TOO_EARLY<br/>UPGRADE_REQUIRED<br/>PRECONDITION_REQUIRED<br/>TOO_MANY_REQUESTS<br/>REQUEST_HEADER_FIELDS_TOO_LARGE<br/>UNAVAILABLE_FOR_LEGAL_REASONS<br/>INTERNAL_SERVER_ERROR<br/>NOT_IMPLEMENTED<br/>BAD_GATEWAY<br/>SERVICE_UNAVAILABLE<br/>GATEWAY_TIMEOUT<br/>HTTP_VERSION_NOT_SUPPORTED<br/>VARIANT_ALSO_NEGOTIATES<br/>INSUFFICIENT_STORAGE<br/>LOOP_DETECTED<br/>BANDWIDTH_LIMIT_EXCEEDED<br/>NOT_EXTENDED<br/>NETWORK_AUTHENTICATION_REQUIRED<br/>|-
+└─cleared|boolean|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{"success":true,"code":"0","msg":"正常","data":Forward or redirect to a page view.,"requestId":"104","timestamp":"2025-11-12 15:24:04"}
+```
+
+### 社交平台登录方法，第三步
 **URL:** https://linlan.net/eframe_backend/login/social.do
 
 **Type:** POST
@@ -24757,14 +25479,14 @@ timestamp|string|返回时间戳字符串|-
 
 **Content-Type:** application/json; charset=utf-8
 
-**Description:** 社交平台登录方法
+**Description:** 社交平台登录方法，第三步
 
 **Body-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 data|object|请求数据对象，放入RequestBody内|false|-
-└─serverType|string|开放平台类型|false|-
+└─platformType|string|开放平台类型|false|-
 └─code|string|开放平台Code|false|-
 └─state|string|state|false|-
 
@@ -24772,9 +25494,9 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social.do --data '{
   "data": {
-    "serverType": "ei7oc4",
-    "code": "81486",
-    "state": "hg1jic"
+    "platformType": "ujwk83",
+    "code": "74128",
+    "state": "k9cdg4"
   }
 }'
 ```
@@ -24800,114 +25522,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "userId": "172",
-    "token": "y7qjyo",
-    "updateTime": "2025-10-20 18:25:54",
-    "expireTime": "2025-10-20 18:25:54"
+    "userId": "104",
+    "token": "h9ng95",
+    "updateTime": "2025-11-12 15:29:23",
+    "expireTime": "2025-11-12 15:29:23"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
-### 根据类型，获取授权请求
-**URL:** https://linlan.net/eframe_backend/login/social/render/{source}.do
-
-**Type:** GET
-
-**Author:** Linlan
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 根据类型，获取授权请求
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-source|string|来源类型，alipay|true|-
-
-**Request-example:**
-```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/render/其他.do
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{
-  "success": true,
-  "code": "0",
-  "msg": "正常",
-  "data": "su6l0g",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
-}
-```
-
-### 根据类型，获取授权请求
-**URL:** https://linlan.net/eframe_backend/login/social/callback/{source}.do
-
-**Type:** GET
-
-**Author:** Linlan
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 根据类型，获取授权请求
-
-**Path-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-source|string|来源类型，alipay|true|-
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-code|string|No comments found.|false|-
-auth_code|string|No comments found.|false|-
-state|string|No comments found.|false|-
-authorization_code|string|No comments found.|false|-
-oauth_token|string|No comments found.|false|-
-oauth_verifier|string|No comments found.|false|-
-
-**Request-example:**
-```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/callback/其他.do?oauth_token=jezs6x&code=81486&oauth_verifier=0xe6t7&auth_code=81486&authorization_code=81486&state=cqmrp1
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-success|boolean|成功标记:正常为true,错误为false|-
-code|string|返回状态码:正常状态为0|-
-msg|string|返回消息|-
-data|object|返回数据对象|-
-└─view|object|No comments found.|-
-└─model|object|No comments found.|-
-└─status|enum|null<br/>CONTINUE<br/>SWITCHING_PROTOCOLS<br/>PROCESSING<br/>CHECKPOINT<br/>OK<br/>CREATED<br/>ACCEPTED<br/>NON_AUTHORITATIVE_INFORMATION<br/>NO_CONTENT<br/>RESET_CONTENT<br/>PARTIAL_CONTENT<br/>MULTI_STATUS<br/>ALREADY_REPORTED<br/>IM_USED<br/>MULTIPLE_CHOICES<br/>MOVED_PERMANENTLY<br/>FOUND<br/>MOVED_TEMPORARILY<br/>SEE_OTHER<br/>NOT_MODIFIED<br/>USE_PROXY<br/>TEMPORARY_REDIRECT<br/>PERMANENT_REDIRECT<br/>BAD_REQUEST<br/>UNAUTHORIZED<br/>PAYMENT_REQUIRED<br/>FORBIDDEN<br/>NOT_FOUND<br/>METHOD_NOT_ALLOWED<br/>NOT_ACCEPTABLE<br/>PROXY_AUTHENTICATION_REQUIRED<br/>REQUEST_TIMEOUT<br/>CONFLICT<br/>GONE<br/>LENGTH_REQUIRED<br/>PRECONDITION_FAILED<br/>PAYLOAD_TOO_LARGE<br/>REQUEST_ENTITY_TOO_LARGE<br/>URI_TOO_LONG<br/>REQUEST_URI_TOO_LONG<br/>UNSUPPORTED_MEDIA_TYPE<br/>REQUESTED_RANGE_NOT_SATISFIABLE<br/>EXPECTATION_FAILED<br/>I_AM_A_TEAPOT<br/>INSUFFICIENT_SPACE_ON_RESOURCE<br/>METHOD_FAILURE<br/>DESTINATION_LOCKED<br/>UNPROCESSABLE_ENTITY<br/>LOCKED<br/>FAILED_DEPENDENCY<br/>TOO_EARLY<br/>UPGRADE_REQUIRED<br/>PRECONDITION_REQUIRED<br/>TOO_MANY_REQUESTS<br/>REQUEST_HEADER_FIELDS_TOO_LARGE<br/>UNAVAILABLE_FOR_LEGAL_REASONS<br/>INTERNAL_SERVER_ERROR<br/>NOT_IMPLEMENTED<br/>BAD_GATEWAY<br/>SERVICE_UNAVAILABLE<br/>GATEWAY_TIMEOUT<br/>HTTP_VERSION_NOT_SUPPORTED<br/>VARIANT_ALSO_NEGOTIATES<br/>INSUFFICIENT_STORAGE<br/>LOOP_DETECTED<br/>BANDWIDTH_LIMIT_EXCEEDED<br/>NOT_EXTENDED<br/>NETWORK_AUTHENTICATION_REQUIRED<br/>|-
-└─cleared|boolean|No comments found.|-
-requestId|string|请求ID|-
-timestamp|string|返回时间戳字符串|-
-
-**Response-example:**
-```
-{"success":true,"code":"0","msg":"正常","data":Forward or redirect to a page view.,"requestId":"172","timestamp":"2025-10-20 18:20:52"}
-```
-
-### 第三方社交平台账号绑定
-**URL:** https://linlan.net/eframe_backend/login/member/bind.do
+### 第三方社交平台账号绑定，第四步
+**URL:** https://linlan.net/eframe_backend/login/social/bind.do
 
 **Type:** POST
 
@@ -24915,7 +25541,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Content-Type:** application/json; charset=utf-8
 
-**Description:** 第三方社交平台账号绑定
+**Description:** 第三方社交平台账号绑定，第四步
 
 **Body-parameters:**
 
@@ -24924,15 +25550,17 @@ Parameter | Type|Description|Required|Since
 data|object|请求数据对象，放入RequestBody内|false|-
 └─platformType|string|开放平台类型|false|-
 └─code|string|开放平台Code|false|-
-└─state|string|state|false|-
+└─state|string|状态信息|false|-
+└─bindFrom|string|绑定来自，关联BindFromEnum, admin_work:管理WEB端;web:门户前台;h5:移动端前台;web_work:门户工作;h5_work:移动端工作;other:其他|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/member/bind.do --data '{
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social/bind.do --data '{
   "data": {
-    "platformType": "2u6q5q",
-    "code": "81486",
-    "state": "hl7iw3"
+    "platformType": "kddaz0",
+    "code": "74128",
+    "state": "0rh49c",
+    "bindFrom": "orwfn6"
   }
 }'
 ```
@@ -24953,32 +25581,43 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "rk2xuv",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "ql5ppp",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
 ### 第三方社交平台账号解绑
-**URL:** https://linlan.net/eframe_backend/login/member/bind/{platformType}.do
+**URL:** https://linlan.net/eframe_backend/login/social/unBind.do
 
-**Type:** PUT
+**Type:** POST
 
 **Author:** Linlan
 
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+**Content-Type:** application/json; charset=utf-8
 
 **Description:** 第三方社交平台账号解绑
 
-**Path-parameters:**
+**Body-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-platformType|string|   平台类型|true|-
+data|object|请求数据对象，放入RequestBody内|false|-
+└─platformType|string|开放平台类型|false|-
+└─code|string|开放平台Code|false|-
+└─state|string|状态信息|false|-
+└─bindFrom|string|绑定来自，关联BindFromEnum, admin_work:管理WEB端;web:门户前台;h5:移动端前台;web_work:门户工作;h5_work:移动端工作;other:其他|false|-
 
 **Request-example:**
 ```
-curl -X PUT -k -i https://linlan.net/eframe_backend/login/member/bind/jhbvq8.do
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social/unBind.do --data '{
+  "data": {
+    "platformType": "9b6137",
+    "code": "74128",
+    "state": "qo416d",
+    "bindFrom": "2viqw3"
+  }
+}'
 ```
 **Response-fields:**
 
@@ -24997,9 +25636,365 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "1gd50l",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "2a3c31",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据来源类型，回收授权信息
+**URL:** https://linlan.net/eframe_backend/login/social/revoke/{source}/{uuid}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据来源类型，回收授权信息
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，dingtalk|true|-
+uuid|string|第三方用户ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/revoke/其他/751dd19a-c431-414c-be28-4d0be16947d8.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "waring": "You may have used non-display generics."
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 根据来源类型，刷新access_token信息
+**URL:** https://linlan.net/eframe_backend/login/social/refresh/{source}/{uuid}.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 根据来源类型，刷新access_token信息
+
+**Path-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|来源类型，dingtalk|true|-
+uuid|string|第三方用户ID|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/refresh/其他/751dd19a-c431-414c-be28-4d0be16947d8.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─any object|object|any object.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {},
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 查看当前第三方授权用户列表
+**URL:** https://linlan.net/eframe_backend/login/social/getAuthUsers.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 查看当前第三方授权用户列表
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/getAuthUsers.do
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─view|object|No comments found.|-
+└─model|object|No comments found.|-
+└─status|enum|null<br/>CONTINUE<br/>SWITCHING_PROTOCOLS<br/>PROCESSING<br/>CHECKPOINT<br/>OK<br/>CREATED<br/>ACCEPTED<br/>NON_AUTHORITATIVE_INFORMATION<br/>NO_CONTENT<br/>RESET_CONTENT<br/>PARTIAL_CONTENT<br/>MULTI_STATUS<br/>ALREADY_REPORTED<br/>IM_USED<br/>MULTIPLE_CHOICES<br/>MOVED_PERMANENTLY<br/>FOUND<br/>MOVED_TEMPORARILY<br/>SEE_OTHER<br/>NOT_MODIFIED<br/>USE_PROXY<br/>TEMPORARY_REDIRECT<br/>PERMANENT_REDIRECT<br/>BAD_REQUEST<br/>UNAUTHORIZED<br/>PAYMENT_REQUIRED<br/>FORBIDDEN<br/>NOT_FOUND<br/>METHOD_NOT_ALLOWED<br/>NOT_ACCEPTABLE<br/>PROXY_AUTHENTICATION_REQUIRED<br/>REQUEST_TIMEOUT<br/>CONFLICT<br/>GONE<br/>LENGTH_REQUIRED<br/>PRECONDITION_FAILED<br/>PAYLOAD_TOO_LARGE<br/>REQUEST_ENTITY_TOO_LARGE<br/>URI_TOO_LONG<br/>REQUEST_URI_TOO_LONG<br/>UNSUPPORTED_MEDIA_TYPE<br/>REQUESTED_RANGE_NOT_SATISFIABLE<br/>EXPECTATION_FAILED<br/>I_AM_A_TEAPOT<br/>INSUFFICIENT_SPACE_ON_RESOURCE<br/>METHOD_FAILURE<br/>DESTINATION_LOCKED<br/>UNPROCESSABLE_ENTITY<br/>LOCKED<br/>FAILED_DEPENDENCY<br/>TOO_EARLY<br/>UPGRADE_REQUIRED<br/>PRECONDITION_REQUIRED<br/>TOO_MANY_REQUESTS<br/>REQUEST_HEADER_FIELDS_TOO_LARGE<br/>UNAVAILABLE_FOR_LEGAL_REASONS<br/>INTERNAL_SERVER_ERROR<br/>NOT_IMPLEMENTED<br/>BAD_GATEWAY<br/>SERVICE_UNAVAILABLE<br/>GATEWAY_TIMEOUT<br/>HTTP_VERSION_NOT_SUPPORTED<br/>VARIANT_ALSO_NEGOTIATES<br/>INSUFFICIENT_STORAGE<br/>LOOP_DETECTED<br/>BANDWIDTH_LIMIT_EXCEEDED<br/>NOT_EXTENDED<br/>NETWORK_AUTHENTICATION_REQUIRED<br/>|-
+└─cleared|boolean|No comments found.|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{"success":true,"code":"0","msg":"正常","data":Forward or redirect to a page view.,"requestId":"104","timestamp":"2025-11-12 15:24:04"}
+```
+
+### 获取通用用户信息
+**URL:** https://linlan.net/eframe_backend/login/social/userInfo.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取通用用户信息
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|   用户来源|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/userInfo.do?source=0rhxvq
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─user|object|当前用户|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─xzqhId|int64|行政区划编号，用户来源地|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─source|string|创建来源类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名，城市APP市民云的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|电子邮箱|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外键ID，人口库ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountId|string|身份提供商ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountType|string|开放平台认证平台类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─unionId|string|三方全局D|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─openId|string|开放平台ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickName|string|昵称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─avatarUrl|string|头像|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─registerTime|string|注册时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginTime|string|最后登录时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginIp|string|最后登录IP|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lockTime|string|锁定时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activation|boolean|是否激活0否1是|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activationCode|string|激活代码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2，第三方用户ID，OpenId|-
+└─roles|array|角色集合|-
+└─permissions|array|权限集合|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "user": {
+      "id": 224,
+      "userId": "104",
+      "xzqhId": 524,
+      "source": "yc9fjs",
+      "username": "chung.hoeger",
+      "mobile": "(567) 281-2291",
+      "email": "antone.stark@hotmail.com",
+      "password": "bmeort",
+      "organId": "104",
+      "foreignId": "104",
+      "accountId": "104",
+      "accountType": "3v5tms",
+      "unionId": "104",
+      "openId": "104",
+      "nickName": "deon.watsica",
+      "avatarUrl": "www.winston-nienow.name",
+      "registerTime": "2025-11-12 15:29:23",
+      "lastLoginTime": "2025-11-12 15:29:23",
+      "lastLoginIp": "239.116.167.16",
+      "loginCount": 515,
+      "lockTime": "2025-11-12 15:29:23",
+      "activation": true,
+      "activationCode": "74128",
+      "priority": 51,
+      "createTime": "2025-11-12 15:29:23",
+      "delFlag": 9,
+      "description": "h52yg5",
+      "spare1": "jz0zs8",
+      "spare2": "no4o9m"
+    },
+    "roles": [
+      570
+    ],
+    "permissions": [
+      "gtkwj4"
+    ]
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
+}
+```
+
+### 获取工作用户信息，包含用户权限菜单和角色
+**URL:** https://linlan.net/eframe_backend/login/social/workUserInfo.do
+
+**Type:** GET
+
+**Author:** Linlan
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 获取工作用户信息，包含用户权限菜单和角色
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+source|string|   用户来源|true|-
+
+**Request-example:**
+```
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/workUserInfo.do?source=bs1aj4
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+success|boolean|成功标记:正常为true,错误为false|-
+code|string|返回状态码:正常状态为0|-
+msg|string|返回消息|-
+data|object|返回数据对象|-
+└─user|object|当前用户|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─id|int64|用户ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─userId|string|用户UUID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─xzqhId|int64|行政区划编号，用户来源地|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─source|string|创建来源类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─username|string|用户名，城市APP市民云的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─mobile|string|手机号码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─email|string|电子邮箱|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─password|string|密码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─organId|string|机构ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─foreignId|string|外键ID，人口库ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountId|string|身份提供商ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─accountType|string|开放平台认证平台类型|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─unionId|string|三方全局D|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─openId|string|开放平台ID|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nickName|string|昵称|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─avatarUrl|string|头像|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─registerTime|string|注册时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginTime|string|最后登录时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lastLoginIp|string|最后登录IP|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─loginCount|int32|登录次数|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lockTime|string|锁定时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activation|boolean|是否激活0否1是|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─activationCode|string|激活代码|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─priority|int32|排序|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─createTime|string|创建时间|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─delFlag|int32|删除标记0正常1已删除2应用内受限3回收站|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─description|string|描述|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare1|string|备用1，第三方的平台的用户名，如随申办统一身份体系的用户名|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─spare2|string|备用2，第三方用户ID，OpenId|-
+└─roles|array|角色集合|-
+└─permissions|array|权限集合|-
+requestId|string|请求ID|-
+timestamp|string|返回时间戳字符串|-
+
+**Response-example:**
+```
+{
+  "success": true,
+  "code": "0",
+  "msg": "正常",
+  "data": {
+    "user": {
+      "id": 342,
+      "userId": "104",
+      "xzqhId": 627,
+      "source": "dsutsn",
+      "username": "chung.hoeger",
+      "mobile": "(567) 281-2291",
+      "email": "antone.stark@hotmail.com",
+      "password": "yy97bh",
+      "organId": "104",
+      "foreignId": "104",
+      "accountId": "104",
+      "accountType": "wgzeuy",
+      "unionId": "104",
+      "openId": "104",
+      "nickName": "deon.watsica",
+      "avatarUrl": "www.winston-nienow.name",
+      "registerTime": "2025-11-12 15:29:23",
+      "lastLoginTime": "2025-11-12 15:29:23",
+      "lastLoginIp": "239.116.167.16",
+      "loginCount": 517,
+      "lockTime": "2025-11-12 15:29:23",
+      "activation": true,
+      "activationCode": "74128",
+      "priority": 825,
+      "createTime": "2025-11-12 15:29:23",
+      "delFlag": 9,
+      "description": "1bok2y",
+      "spare1": "rq6tsf",
+      "spare2": "6w8i4l"
+    },
+    "roles": [
+      312
+    ],
+    "permissions": [
+      "k09uac"
+    ]
+  },
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25038,7 +26033,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?jobId=693&jobGroup=4nf0ey&concurrent=upvpwk&invokeTarget=uyv0b1&status=432&remark=5d4s5c&misfirePolicy=6r814u&jobName=merle.larkin&cronExpression=h60r0f
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?concurrent=lc1m5e&remark=es89te&jobGroup=5vf6ax&jobId=923&status=975&invokeTarget=clwed6&cronExpression=nsi0tx&misfirePolicy=p8pvju&jobName=chung.hoeger
 ```
 **Response-fields:**
 
@@ -25068,19 +26063,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "jobId": "172",
-      "jobName": "merle.larkin",
-      "jobGroup": "k4wqwk",
-      "invokeTarget": "jtqog4",
-      "cronExpression": "q32uga",
-      "misfirePolicy": "qj53pv",
-      "concurrent": "pr4d7y",
-      "status": 366,
-      "remark": "4ou2c4"
+      "jobId": "104",
+      "jobName": "chung.hoeger",
+      "jobGroup": "i0t0q4",
+      "invokeTarget": "87euhm",
+      "cronExpression": "fmqz39",
+      "misfirePolicy": "mh6fis",
+      "concurrent": "khxr5j",
+      "status": 288,
+      "remark": "2cosfq"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25118,7 +26113,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'jobId=656&cronExpression=hw5l3a&jobName=merle.larkin&misfirePolicy=et5jlx&jobGroup=f6kewi&remark=kkca0k&status=105&invokeTarget=4n89l2&concurrent=yjteri'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'invokeTarget=3jdopz&cronExpression=bpqt4z&jobName=chung.hoeger&jobId=838&remark=qnje8d&concurrent=wa6hyn&status=223&jobGroup=406wlq&misfirePolicy=b6vjob'
 ```
 **Response-fields:**
 
@@ -25137,9 +26132,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "5526k7",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "bo2887",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25169,7 +26164,7 @@ jobId|string|    任务ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/104.do
 ```
 **Response-fields:**
 
@@ -25198,18 +26193,18 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "jobId": "172",
-    "jobName": "merle.larkin",
-    "jobGroup": "95bnwy",
-    "invokeTarget": "cxaxza",
-    "cronExpression": "r09y3b",
-    "misfirePolicy": "16rb6y",
-    "concurrent": "gbqnxy",
-    "status": 936,
-    "remark": "a7o2mm"
+    "jobId": "104",
+    "jobName": "chung.hoeger",
+    "jobGroup": "gtx6kv",
+    "invokeTarget": "90vn5n",
+    "cronExpression": "fhwpb2",
+    "misfirePolicy": "ctvadh",
+    "concurrent": "oelz2c",
+    "status": 956,
+    "remark": "utqka7"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25250,15 +26245,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/save.do --data '{
   "data": {
-    "jobId": "172",
-    "jobName": "merle.larkin",
-    "jobGroup": "h7re02",
-    "invokeTarget": "04wiee",
-    "cronExpression": "e10kuz",
-    "misfirePolicy": "fmxjsp",
-    "concurrent": "00rd1p",
-    "status": 128,
-    "remark": "r7baes"
+    "jobId": "104",
+    "jobName": "chung.hoeger",
+    "jobGroup": "i3i2ex",
+    "invokeTarget": "3qeklx",
+    "cronExpression": "d47kf7",
+    "misfirePolicy": "88te6z",
+    "concurrent": "tki95s",
+    "status": 0,
+    "remark": "r0ktwr"
   }
 }'
 ```
@@ -25279,9 +26274,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "048xd3",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "zz1bdp",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25322,15 +26317,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/update.do --data '{
   "data": {
-    "jobId": "172",
-    "jobName": "merle.larkin",
-    "jobGroup": "4nprv9",
-    "invokeTarget": "3rla3m",
-    "cronExpression": "yv53tz",
-    "misfirePolicy": "qp5qt0",
-    "concurrent": "moepsi",
-    "status": 795,
-    "remark": "k98m0q"
+    "jobId": "104",
+    "jobName": "chung.hoeger",
+    "jobGroup": "73h69g",
+    "invokeTarget": "m9vgn0",
+    "cronExpression": "e6u162",
+    "misfirePolicy": "r48s73",
+    "concurrent": "qllld1",
+    "status": 193,
+    "remark": "qqloix"
   }
 }'
 ```
@@ -25351,9 +26346,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "er16hf",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "z5xcfx",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25394,15 +26389,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/changeStatus.do --data '{
   "data": {
-    "jobId": "172",
-    "jobName": "merle.larkin",
-    "jobGroup": "i9pz40",
-    "invokeTarget": "6safn6",
-    "cronExpression": "wcqjbu",
-    "misfirePolicy": "9f4sm4",
-    "concurrent": "hh3dkv",
-    "status": 280,
-    "remark": "mctvkb"
+    "jobId": "104",
+    "jobName": "chung.hoeger",
+    "jobGroup": "mj1pag",
+    "invokeTarget": "c71g6k",
+    "cronExpression": "7cfk13",
+    "misfirePolicy": "nnflyf",
+    "concurrent": "0ts8dj",
+    "status": 646,
+    "remark": "239glg"
   }
 }'
 ```
@@ -25423,9 +26418,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "nlfj2b",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "qoew4i",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25466,15 +26461,15 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/run.do --data '{
   "data": {
-    "jobId": "172",
-    "jobName": "merle.larkin",
-    "jobGroup": "g7dvn1",
-    "invokeTarget": "f7g8mk",
-    "cronExpression": "1gsyb3",
-    "misfirePolicy": "qykpok",
-    "concurrent": "8fd98y",
-    "status": 158,
-    "remark": "uewp95"
+    "jobId": "104",
+    "jobName": "chung.hoeger",
+    "jobGroup": "u8oe9h",
+    "invokeTarget": "jvn0mc",
+    "cronExpression": "sboxj9",
+    "misfirePolicy": "y29qh3",
+    "concurrent": "ftlbfu",
+    "status": 689,
+    "remark": "bibcop"
   }
 }'
 ```
@@ -25495,9 +26490,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "isu9nr",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "n6lucn",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25546,9 +26541,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "hd997s",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "nt3trf",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25592,7 +26587,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?exceptionInfo=wq0la3&startTime=2025-10-20 18:25:54&jobGroup=wca06p&invokeTarget=ft13e8&createTime=2025-10-20 18:25:54&remark=3f80kn&status=928&stopTime=2025-10-20 18:25:54&lastTime=2025-10-20 18:25:54&jobId=172&creatorId=172&jobLogId=509&jobName=merle.larkin&jobMessage=success
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?jobId=104&remark=j69ccx&stopTime=2025-11-12 15:29:24&invokeTarget=8hqhmf&jobMessage=success&lastTime=2025-11-12 15:29:24&jobLogId=350&createTime=2025-11-12 15:29:24&jobName=chung.hoeger&exceptionInfo=tzhsij&creatorId=104&status=759&jobGroup=ssydx1&startTime=2025-11-12 15:29:24
 ```
 **Response-fields:**
 
@@ -25624,21 +26619,21 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:54",
-      "lastTime": "2025-10-20 18:25:54",
-      "jobLogId": "172",
-      "jobId": "172",
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:24",
+      "lastTime": "2025-11-12 15:29:24",
+      "jobLogId": "104",
+      "jobId": "104",
       "jobMessage": "success",
-      "status": 419,
-      "exceptionInfo": "qa174n",
-      "startTime": "2025-10-20 18:25:54",
-      "stopTime": "2025-10-20 18:25:54",
-      "remark": "ciax7k"
+      "status": 485,
+      "exceptionInfo": "n1m82x",
+      "startTime": "2025-11-12 15:29:24",
+      "stopTime": "2025-11-12 15:29:24",
+      "remark": "fa457a"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25681,7 +26676,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'jobGroup=dpbl11&lastTime=2025-10-20 18:25:54&jobName=merle.larkin&jobId=172&createTime=2025-10-20 18:25:54&stopTime=2025-10-20 18:25:54&status=236&startTime=2025-10-20 18:25:54&invokeTarget=ez4aaw&jobLogId=945&exceptionInfo=wxkr28&jobMessage=success&remark=uzcmgq&creatorId=172'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'exceptionInfo=zibdst&jobName=chung.hoeger&jobGroup=3024zv&lastTime=2025-11-12 15:29:24&invokeTarget=au1tr3&creatorId=104&startTime=2025-11-12 15:29:24&status=32&createTime=2025-11-12 15:29:24&jobMessage=success&jobLogId=271&jobId=104&stopTime=2025-11-12 15:29:24&remark=4mvm6z'
 ```
 **Response-fields:**
 
@@ -25700,9 +26695,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "pp3q3z",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "8u2gij",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25732,7 +26727,7 @@ jobLogId|string|    任务日志ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/172.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/104.do
 ```
 **Response-fields:**
 
@@ -25763,20 +26758,20 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:54",
-    "lastTime": "2025-10-20 18:25:54",
-    "jobLogId": "172",
-    "jobId": "172",
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:24",
+    "lastTime": "2025-11-12 15:29:24",
+    "jobLogId": "104",
+    "jobId": "104",
     "jobMessage": "success",
-    "status": 275,
-    "exceptionInfo": "fy5huz",
-    "startTime": "2025-10-20 18:25:54",
-    "stopTime": "2025-10-20 18:25:54",
-    "remark": "jargfy"
+    "status": 711,
+    "exceptionInfo": "nwdji6",
+    "startTime": "2025-11-12 15:29:24",
+    "stopTime": "2025-11-12 15:29:24",
+    "remark": "o3kiq4"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25825,9 +26820,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "mplz6k",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "hot3jb",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -25886,7 +26881,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?content=vbyf2s&spare1=qgiqsr&sendTime=2025-10-20&endTime=2025-10-20 18:20:52&page=1&readTime=2025-10-20 18:25:52&startTime=2025-10-20 18:20:52&receiverEmail=vivian.streich@hotmail.com&providerName=merle.larkin&receiverName=merle.larkin&providerId=172&title=3f0vha&spare2=bcaczj&q=os0u8n&foreignId=172&sendStatus=ir004v&orderBy=662&appId=172&id=947&msgUrl=www.ben-grant.info&status=4la440&description=gdv61j&readStatus=8ijml6&creatorId=172&limit=10&senderName=merle.larkin&delFlag=5&bizType=s0tnsi
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?providerId=104&startTime=2025-11-12 15:24:04&appId=104&receiverEmail=antone.stark@hotmail.com&delFlag=9&readStatus=quzc5c&description=8hjvsb&receiverName=chung.hoeger&msgUrl=www.winston-nienow.name&title=xrekz9&orderBy=665&status=ginfic&q=oy1b64&readTime=2025-11-12 15:29:20&page=1&endTime=2025-11-12 15:24:04&foreignId=104&spare2=ixsbl0&sendTime=2025-11-12&content=jip3mh&id=617&senderName=chung.hoeger&providerName=chung.hoeger&bizType=sz682c&sendStatus=9x8tgr&spare1=a5dbov&limit=10&creatorId=104
 ```
 **Response-fields:**
 
@@ -25931,34 +26926,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "172",
-      "createTime": "2025-10-20 18:25:52",
-      "lastTime": "2025-10-20 18:25:52",
-      "id": 185,
-      "appId": "172",
-      "providerId": "172",
-      "providerName": "merle.larkin",
-      "foreignId": "172",
-      "senderName": "merle.larkin",
-      "receiverEmail": "vivian.streich@hotmail.com",
-      "receiverName": "merle.larkin",
-      "bizType": "uw7zvj",
-      "title": "re59vp",
-      "content": "daxlb3",
-      "msgUrl": "www.ben-grant.info",
-      "status": "76593c",
-      "sendTime": "2025-10-20",
-      "sendStatus": "0gop7b",
-      "readTime": "2025-10-20 18:25:52",
-      "readStatus": "fsp8mn",
-      "delFlag": 5,
-      "description": "qrljxs",
-      "spare1": "7dofcs",
-      "spare2": "lslo1g"
+      "creatorId": "104",
+      "createTime": "2025-11-12 15:29:20",
+      "lastTime": "2025-11-12 15:29:20",
+      "id": 417,
+      "appId": "104",
+      "providerId": "104",
+      "providerName": "chung.hoeger",
+      "foreignId": "104",
+      "senderName": "chung.hoeger",
+      "receiverEmail": "antone.stark@hotmail.com",
+      "receiverName": "chung.hoeger",
+      "bizType": "r9cr4z",
+      "title": "3f779r",
+      "content": "u7xpmm",
+      "msgUrl": "www.winston-nienow.name",
+      "status": "lt5ft2",
+      "sendTime": "2025-11-12",
+      "sendStatus": "cflsfz",
+      "readTime": "2025-11-12 15:29:20",
+      "readStatus": "ah32ji",
+      "delFlag": 9,
+      "description": "2hdnq9",
+      "spare1": "wnkn5b",
+      "spare2": "vnay2e"
     }
   ],
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -26033,33 +27028,33 @@ timestamp|string|返回时间戳字符串|-
   "code": "0",
   "msg": "正常",
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 605,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "senderName": "merle.larkin",
-    "receiverEmail": "vivian.streich@hotmail.com",
-    "receiverName": "merle.larkin",
-    "bizType": "vdt1yb",
-    "title": "o5o18l",
-    "content": "s4kmat",
-    "msgUrl": "www.ben-grant.info",
-    "status": "503d53",
-    "sendTime": "2025-10-20",
-    "sendStatus": "02lpia",
-    "readTime": "2025-10-20 18:25:52",
-    "readStatus": "fpi6ua",
-    "delFlag": 5,
-    "description": "yoskak",
-    "spare1": "upq5y0",
-    "spare2": "lgutns"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:20",
+    "lastTime": "2025-11-12 15:29:20",
+    "id": 205,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "senderName": "chung.hoeger",
+    "receiverEmail": "antone.stark@hotmail.com",
+    "receiverName": "chung.hoeger",
+    "bizType": "jitauq",
+    "title": "qcfmpn",
+    "content": "zrzqii",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "hzd6vb",
+    "sendTime": "2025-11-12",
+    "sendStatus": "lhcbww",
+    "readTime": "2025-11-12 15:29:20",
+    "readStatus": "vn687q",
+    "delFlag": 9,
+    "description": "7wwh7f",
+    "spare1": "ycrd8r",
+    "spare2": "zjq254"
   },
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -26116,30 +27111,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/save.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 167,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "senderName": "merle.larkin",
-    "receiverEmail": "vivian.streich@hotmail.com",
-    "receiverName": "merle.larkin",
-    "bizType": "ehibbe",
-    "title": "9k9c49",
-    "content": "jippbw",
-    "msgUrl": "www.ben-grant.info",
-    "status": "bk9xxf",
-    "sendTime": "2025-10-20",
-    "sendStatus": "mvi1zt",
-    "readTime": "2025-10-20 18:25:52",
-    "readStatus": "o4m5em",
-    "delFlag": 5,
-    "description": "a2ihu3",
-    "spare1": "bmsiwh",
-    "spare2": "858f37"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:20",
+    "lastTime": "2025-11-12 15:29:20",
+    "id": 78,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "senderName": "chung.hoeger",
+    "receiverEmail": "antone.stark@hotmail.com",
+    "receiverName": "chung.hoeger",
+    "bizType": "qp6mpa",
+    "title": "ru7zo6",
+    "content": "du2vgp",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "36nx00",
+    "sendTime": "2025-11-12",
+    "sendStatus": "4324s1",
+    "readTime": "2025-11-12 15:29:20",
+    "readStatus": "8llnj3",
+    "delFlag": 9,
+    "description": "pk88hl",
+    "spare1": "jsiy1s",
+    "spare2": "ld3xds"
   }
 }'
 ```
@@ -26160,9 +27155,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "sralah",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "3wl4gm",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -26219,30 +27214,30 @@ data|object|请求数据对象，放入RequestBody内|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/update.do --data '{
   "data": {
-    "creatorId": "172",
-    "createTime": "2025-10-20 18:25:52",
-    "lastTime": "2025-10-20 18:25:52",
-    "id": 972,
-    "appId": "172",
-    "providerId": "172",
-    "providerName": "merle.larkin",
-    "foreignId": "172",
-    "senderName": "merle.larkin",
-    "receiverEmail": "vivian.streich@hotmail.com",
-    "receiverName": "merle.larkin",
-    "bizType": "kppe50",
-    "title": "zyqrh6",
-    "content": "j6bdm9",
-    "msgUrl": "www.ben-grant.info",
-    "status": "hc44nz",
-    "sendTime": "2025-10-20",
-    "sendStatus": "cechxr",
-    "readTime": "2025-10-20 18:25:52",
-    "readStatus": "qdv0kb",
-    "delFlag": 5,
-    "description": "qug6rs",
-    "spare1": "68kzph",
-    "spare2": "jfoqza"
+    "creatorId": "104",
+    "createTime": "2025-11-12 15:29:21",
+    "lastTime": "2025-11-12 15:29:21",
+    "id": 103,
+    "appId": "104",
+    "providerId": "104",
+    "providerName": "chung.hoeger",
+    "foreignId": "104",
+    "senderName": "chung.hoeger",
+    "receiverEmail": "antone.stark@hotmail.com",
+    "receiverName": "chung.hoeger",
+    "bizType": "mwmp3c",
+    "title": "ps0jac",
+    "content": "nkawir",
+    "msgUrl": "www.winston-nienow.name",
+    "status": "0oyrte",
+    "sendTime": "2025-11-12",
+    "sendStatus": "a8wkm0",
+    "readTime": "2025-11-12 15:29:21",
+    "readStatus": "vjy9gz",
+    "delFlag": 9,
+    "description": "olwk2r",
+    "spare1": "lenapw",
+    "spare2": "ik2c09"
   }
 }'
 ```
@@ -26263,9 +27258,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "jdwjsy",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "jprb1j",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 
@@ -26315,9 +27310,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": "0",
   "msg": "正常",
-  "data": "3ljoav",
-  "requestId": "172",
-  "timestamp": "2025-10-20 18:20:52"
+  "data": "wseug0",
+  "requestId": "104",
+  "timestamp": "2025-11-12 15:24:04"
 }
 ```
 

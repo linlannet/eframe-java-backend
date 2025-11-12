@@ -26,11 +26,11 @@ public enum AccountTypeEnum implements BaseEnumInteger {
                                                         /**
                                                          * 平台WEB类型
                                                          */
-                                                        WORK(1, "平台WEB类型"),
+                                                        WEB(1, "平台WEB类型"),
                                                         /**
                                                          * 移动APP类型
                                                          */
-                                                        APP(2, "移动APP类型"),
+                                                        H5(2, "移动APP类型"),
                                                         /**
                                                          * 身份源AUTH类型
                                                          */

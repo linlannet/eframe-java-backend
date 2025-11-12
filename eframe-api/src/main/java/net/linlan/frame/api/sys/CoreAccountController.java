@@ -41,6 +41,7 @@ import net.linlan.frame.api.BaseController;
 import net.linlan.frame.comm.utils.EnumUtil;
 import net.linlan.frame.view.sys.service.FrameDictionaryService;
 import net.linlan.sys.core.constant.AccountTypeEnum;
+import net.linlan.sys.core.constant.InoutModeEnum;
 import net.linlan.sys.core.dto.CoreAccountDto;
 import net.linlan.sys.core.entity.CoreAccount;
 import net.linlan.sys.core.param.CoreAccountParam;
@@ -69,15 +70,15 @@ public class CoreAccountController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('system:account:list')")
     @PlatLog(value = "查询平台账号信息分页")
-    @GetMapping("/plat/account/list")
+    @GetMapping("/account/list")
     public ResponseResult<List<CoreAccountDto>> list(CoreAccountParam param) {
         Page<CoreAccountDto> result = memberAccountService.getPageDto(param);
-        Map<String, String> typeMap = frameDictionaryService
-            .getByTypeCode("PLATACCOUNT_INPUT_MODE");
-        LinkedHashMap<String, String> TypeEnumMap = EnumUtil.enumToMap(AccountTypeEnum.class);
+        LinkedHashMap<String, String> inoutEnumMap = EnumUtil.enumToMap(InoutModeEnum.class);
+        LinkedHashMap<String, String> typeEnumMap = EnumUtil.enumToMap(AccountTypeEnum.class);
         for (CoreAccountDto memberAccountDto : result) {
-            memberAccountDto.setInoutModeName(typeMap.get(memberAccountDto.getInoutMode() + ""));
-            memberAccountDto.setTypeName(TypeEnumMap.get(memberAccountDto.getType() + ""));
+            memberAccountDto
+                .setInoutModeName(inoutEnumMap.get(memberAccountDto.getInoutMode() + ""));
+            memberAccountDto.setTypeName(typeEnumMap.get(memberAccountDto.getType() + ""));
         }
 
         if (result == null) {
@@ -92,7 +93,7 @@ public class CoreAccountController extends BaseController {
      * @return  密钥信息
      */
     @PlatLog(value = "生成密钥 id: 平台账户主键  clientId :平台账户应用Id")
-    @GetMapping("/plat/account/getClientSecret")
+    @GetMapping("/account/getClientSecret")
     public ResponseResult<List<CoreAccountDto>> getClientSecret(String clientId) {
         String clientSecret = ShaUtils.getSHA256(clientId);
         Map<String, String> result = new HashMap<>();
@@ -109,7 +110,7 @@ public class CoreAccountController extends BaseController {
      * @throws Exception    异常
      */
     @PlatLog(value = "生成平台密钥对")
-    @GetMapping("/plat/account/getKeyParity")
+    @GetMapping("/account/getKeyParity")
     public ResponseResult<List<CoreAccountDto>> getKeyParity(String id) throws Exception {
         Map<String, String> result = new HashMap<>();
         KeyPair keyPair = RSAUtil.getKeyPair();
@@ -181,6 +182,32 @@ public class CoreAccountController extends BaseController {
     public ResponseResult<String> delete(@PathVariable String[] ids) {
         memberAccountService.deleteByIds(ids);
         return success("SUCCESS");
+    }
+
+    /** 获取社交授权平台账号列表
+     * @param param 参数查询对象
+     * @return 获取平台账号信息列表或分页, 返回CoreAccount对象.
+     */
+    @PlatLog(value = "获取社交授权平台账号列表")
+    @GetMapping("/account/authlist")
+    public ResponseResult<List<CoreAccountDto>> authlist(CoreAccountParam param) {
+        if (ObjectUtils.isEmpty(param)) {
+            return null;
+        }
+        param.setType(AccountTypeEnum.AUTH.getKey());
+        Page<CoreAccountDto> result = memberAccountService.getPageDto(param);
+        LinkedHashMap<String, String> inoutEnumMap = EnumUtil.enumToMap(InoutModeEnum.class);
+        LinkedHashMap<String, String> typeEnumMap = EnumUtil.enumToMap(AccountTypeEnum.class);
+        for (CoreAccountDto memberAccountDto : result) {
+            memberAccountDto
+                .setInoutModeName(inoutEnumMap.get(memberAccountDto.getInoutMode() + ""));
+            memberAccountDto.setTypeName(typeEnumMap.get(memberAccountDto.getType() + ""));
+        }
+
+        if (result == null) {
+            return empty();
+        }
+        return successPage(result);
     }
 
 }

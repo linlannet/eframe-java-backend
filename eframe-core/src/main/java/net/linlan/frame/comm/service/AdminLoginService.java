@@ -114,7 +114,7 @@ public class AdminLoginService {
             AuthenticationContextHolder.clearContext();
         }
         FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
-        recordLoginInfo(null, loginUser.getUserId());
+        recordLoginInfo(loginUser.getUserLid(), loginUser.getUserId());
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),
@@ -164,7 +164,7 @@ public class AdminLoginService {
             AuthenticationContextHolder.clearContext();
         }
         FrameUserDetails loginUser = (FrameUserDetails) authentication.getPrincipal();
-        recordLoginInfo(null, loginUser.getUserId());
+        recordLoginInfo(loginUser.getUserLid(), loginUser.getUserId());
         AsyncManager.me()
             .execute(AsyncFactory.saveAdminLoginLog(loginUser.getUserId(), username,
                 Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success"),

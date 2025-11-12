@@ -33,6 +33,7 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -41,6 +42,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.web.filter.CorsFilter;
 
+import lombok.AllArgsConstructor;
+
 import net.linlan.authn.sms.security.MobileAuthenticationProvider;
 import net.linlan.authn.sms.security.MobileUserDetailsService;
 import net.linlan.authn.sms.security.MobileVerifyCodeService;
@@ -48,17 +51,19 @@ import net.linlan.config.properties.PermitAllUrlProperties;
 import net.linlan.frame.comm.security.filter.JwtAuthenticationTokenFilter;
 import net.linlan.frame.comm.security.handle.AuthenticationEntryPointImpl;
 import net.linlan.frame.comm.security.handle.LogoutSuccessHandlerImpl;
-import net.linlan.social.security.ThirdAuthenticationProvider;
-import net.linlan.social.security.ThirdOpenIdService;
-import net.linlan.social.security.ThirdUserDetailsService;
+import net.linlan.social.manage.security.ThirdAuthenticationProvider;
+import net.linlan.social.manage.security.ThirdOpenIdService;
+import net.linlan.social.manage.security.ThirdUserDetailsService;
 
 /**
  * spring security配置
  *
  * @author Linlan
  */
-@EnableMethodSecurity(prePostEnabled = true, securedEnabled = true)
 @Configuration
+@AllArgsConstructor
+@EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfig {
     /**
      * 自定义用户认证逻辑
