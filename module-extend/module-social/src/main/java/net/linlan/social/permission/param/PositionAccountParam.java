@@ -15,20 +15,30 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.social.manage.wechat.config;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+package net.linlan.social.permission.param;
 
 import lombok.Data;
 
-@Configuration
-@ConfigurationProperties(prefix = "wx.login")
+/**
+ * 公共账号查询条件
+ */
 @Data
-public class WxConfig {
+public class PositionAccountParam {
 
-    private String apiHostUrl;
-
-    private String miniProgramState;
-
+    /**
+     * 岗位id
+     */
+    private String positionId;
+    /**
+     * 组id
+     */
+    private String groupId;
+    /**
+     * 机构id
+     */
+    private String organId;
+    /**
+     * 区域id
+     */
+    private Long   areaId;
 }

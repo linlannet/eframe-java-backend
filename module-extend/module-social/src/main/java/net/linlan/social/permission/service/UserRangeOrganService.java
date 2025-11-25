@@ -109,6 +109,10 @@ public class UserRangeOrganService {
         dao.save(userRangeOrgan);
     }
 
+    public void batchSave(List<UserRangeOrgan> list) {
+        dao.batchSave(list);
+    }
+
     /** update the entity with input object
      * 更新对象方法
      * @param userRangeOrgan the input userRangeOrgan

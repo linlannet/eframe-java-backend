@@ -191,6 +191,45 @@
         )
     </insert>
 
+    <insert id="batchSave" parameterType="java.util.List">
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                INSERT INTO USER_RANGE_ORGAN
+                (
+                RELATION_ID, ORGAN_ID, USER_ID, USERL_ID, GROUP_ID, POSITION_ID, DEPT_ID, FOREIGN_ID, IS_MEMBER, TYPE,
+                POWER, IS_DEF, DEL_FLAG, STATUS, CREATOR_ID, CREATE_TIME, UPDATOR_ID, UPDATE_TIME, SPARE1, SPARE2
+                )
+                VALUES
+                <foreach collection="list" index="index" item="item" separator=",">
+                    (
+                    #{item.id}, #{item.organId}, #{item.userId}, #{item.userlId}, #{item.groupId}, #{item.positionId},
+                    #{item.deptId}, #{item.foreignId}, #{item.isMember}, #{item.type}, #{item.power}, #{item.isDef},
+                    #{item.delFlag}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.updatorId},
+                    #{item.updateTime}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </when>
+
+            <otherwise>
+                <foreach collection="list" item="item" index="index" open="begin" close=";end;" separator=";">
+                    INSERT INTO USER_RANGE_ORGAN
+                    (
+                    RELATION_ID, ORGAN_ID, USER_ID, USERL_ID, GROUP_ID, POSITION_ID, DEPT_ID, FOREIGN_ID, IS_MEMBER,
+                    TYPE, POWER, IS_DEF, DEL_FLAG, STATUS, CREATOR_ID, CREATE_TIME, UPDATOR_ID, UPDATE_TIME, SPARE1,
+                    SPARE2
+                    )
+                    VALUES
+                    (
+                    #{item.id}, #{item.organId}, #{item.userId}, #{item.userlId}, #{item.groupId}, #{item.positionId},
+                    #{item.deptId}, #{item.foreignId}, #{item.isMember}, #{item.type}, #{item.power}, #{item.isDef},
+                    #{item.delFlag}, #{item.status}, #{item.creatorId}, #{item.createTime}, #{item.updatorId},
+                    #{item.updateTime}, #{item.spare1}, #{item.spare2}
+                    )
+                </foreach>
+            </otherwise>
+        </choose>
+    </insert>
+
     <!-- update object，更新对象信息 -->
     <update id="update" parameterType="net.linlan.social.permission.entity.UserRangeOrgan">
         UPDATE USER_RANGE_ORGAN
@@ -340,7 +379,7 @@
         select uro.ORGAN_ID RESIDENTIALID,GOE.SNAME RESIDENTIALNAME,pg.GROUP_ID GROUPID,pg.NAME GROUPNAME,pg.CODE GROUPCODE
         from USER_RANGE_ORGAN uro
                  left join BASE_ORGAN_EXT GOE on uro.ORGAN_ID = GOE.ORGAN_ID
-                 left join PUBLIC_GROUP pg on uro.SPARE1 = pg.GROUP_ID
+                 left join PUBLIC_GROUP pg on uro.GROUP_ID = pg.GROUP_ID
         where uro.DEL_FLAG <![CDATA[ <> ]]> 1 and uro.POWER = #{power}
           and uro.TYPE = #{type} and uro.STATUS= 1 and uro.USER_ID = #{userId}
     </select>
@@ -1223,10 +1262,10 @@
 
     <select id="getRoleIdsByMemberId" resultType="Long">
         SELECT distinct sr.ROLE_ID
-        FROM PUBLIC_GROUP B
-        LEFT JOIN USER_RANGE_ORGAN uro ON B.GROUP_ID = uro.GROUP_ID
+        FROM SYS_ROLE sr
+        LEFT JOIN PUBLIC_GROUP pb ON pb.ROLE_ID = sr.ROLE_ID
+        LEFT JOIN USER_RANGE_ORGAN uro ON pb.GROUP_ID = uro.GROUP_ID
         LEFT JOIN THIRD_MEMBER tm ON uro.USERL_ID = tm.MEMBER_ID
-        LEFT JOIN SYS_ROLE sr ON B.ROLE_ID = sr.ROLE_ID
         WHERE 1 = 1
         <if test="appId != null and appId.trim() != ''">
             and sr.APP_ID = #{appId}
@@ -1241,15 +1280,15 @@
             and uro.USERL_ID = #{memberId}
         </if>
         <if test="groupId != null">
-            and B.GROUP_ID = #{groupId}
+            and pb.GROUP_ID = #{groupId}
         </if>
         <if test="isDisabled != null">
-            and B.IS_DISABLED = #{isDisabled}
+            and pb.IS_DISABLED = #{isDisabled}
         </if>
         <if test="groupCode != null">
-            and B.CODE = #{groupCode}
+            and pb.CODE = #{groupCode}
         </if>
-        order by B.PRIORITY asc
+        order by sr.ROLE_ID asc
     </select>
 
     <select id="getUserByIdAndRoleIdPositionId" resultMap="userRangeOrganMap">

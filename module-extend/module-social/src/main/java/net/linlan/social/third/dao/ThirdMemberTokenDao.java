@@ -53,4 +53,5 @@ public interface ThirdMemberTokenDao extends MybatisBaseDao<ThirdMemberToken> {
      */
     ThirdMemberTokenDto getDtoById(Long id);
 
+    ThirdMemberToken getByToken(String token);
 }

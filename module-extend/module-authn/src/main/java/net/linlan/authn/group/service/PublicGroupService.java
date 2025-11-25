@@ -256,10 +256,10 @@ public class PublicGroupService {
 
     /**
      * 会员组解绑
-     * @param id  用户ID
+     * @param groupId  分组ID
      */
-    public void groupUnBindPosition(String id) {
-        dao.groupUnBindPosition(id);
+    public void groupUnBindPosition(Long groupId) {
+        dao.groupUnBindPosition(groupId);
     }
 
     public void groupUnBindPositionId(Long groupId, List<String> ids) {

@@ -44,7 +44,7 @@ public enum OpenTypeEnum implements BaseEnumString {
                                                     /**
                                                      * 支付宝小程序
                                                      */
-                                                    ALIPAY_MINI("web_work", "支付宝小程序"),
+                                                    ALIPAY_MINI("alipay_mini", "支付宝小程序"),
                                                     /**
                                                      * 其他
                                                      */

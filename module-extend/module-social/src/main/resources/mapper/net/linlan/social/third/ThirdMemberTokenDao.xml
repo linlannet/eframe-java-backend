@@ -231,6 +231,9 @@ B.MEMBER_ID, B.USER_ID, B.TOKEN, B.FOREIGN_ID, B.USERNAME, B.LOGIN_IP, B.UPDATE_
     </select>
 
     <!-- 以下为新增特定的操作 -->
-
+    <!-- get by token，通过Token获取对象 -->
+    <select id="getByToken" resultMap="thirdMemberTokenMap">
+        select * from THIRD_MEMBER_TOKEN where TOKEN = #{value}
+    </select>
 
 </mapper>

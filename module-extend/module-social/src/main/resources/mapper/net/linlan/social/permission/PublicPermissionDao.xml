@@ -655,7 +655,7 @@
             and uro.POSITION_ID =#{positionId}
         </if>
         <if test="groupId != null and groupId!= ''">
-            and uro.SPARE1= #{groupId}
+            and uro.GROUP_ID= #{groupId}
         </if>
         AND bu.CREATE_TYPE=10
         and uro.DEL_FLAG=0

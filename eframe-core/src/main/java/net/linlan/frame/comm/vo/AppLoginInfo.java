@@ -19,7 +19,13 @@ package net.linlan.frame.comm.vo;
 
 import java.util.Date;
 
+import org.springframework.lang.Nullable;
+
+import com.google.common.base.Function;
+
 import lombok.Data;
+
+import net.linlan.sys.base.dto.TokenResponse;
 
 /**
  *
@@ -33,19 +39,23 @@ public class AppLoginInfo {
     /**
      * 用户ID
      */
-    private String userId;
+    private String  userId;
     /**
      * 令牌TOKEN
      */
-    private String token;
+    private String  token;
     /**
      * 更新时间
      */
-    private Date   updateTime;
+    private Date    updateTime;
     /**
      * 过期时间
      */
-    private Date   expireTime;
+    private Date    expireTime;
+    /**
+     * 是否有手机号码
+     */
+    private boolean isMobileConfirm = true;
 
     /**
      * 无参构造方法
@@ -53,4 +63,20 @@ public class AppLoginInfo {
     public AppLoginInfo() {
     }
 
+    /**
+     * entity对象直接输出进行转换
+     */
+    public static final Function TO = new Function<TokenResponse, AppLoginInfo>() {
+        @Nullable
+        @Override
+        public AppLoginInfo apply(@Nullable TokenResponse input) {
+            return new AppLoginInfo(input);
+        }
+    };
+
+    public AppLoginInfo(TokenResponse input) {
+        this.token = input.getToken();
+        this.expireTime = input.getExpireTime();
+        this.isMobileConfirm = true;
+    }
 }

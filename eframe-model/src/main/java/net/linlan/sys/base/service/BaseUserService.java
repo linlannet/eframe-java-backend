@@ -40,7 +40,6 @@ import net.linlan.sys.base.dao.BaseUserDao;
 import net.linlan.sys.base.dto.BaseUserDto;
 import net.linlan.sys.base.dto.BaseUserSelect;
 import net.linlan.sys.base.entity.BaseUser;
-import net.linlan.sys.base.entity.BaseUserExt;
 import net.linlan.sys.base.param.BaseUserParam;
 import net.linlan.sys.web.KernelConstant;
 import net.linlan.utils.ServletUtils;
@@ -59,10 +58,7 @@ import net.linlan.utils.ip.IPUtils;
 public class BaseUserService {
 
     @Resource
-    private BaseUserDao        dao;
-
-    @Resource
-    private BaseUserExtService baseUserExtService;
+    private BaseUserDao dao;
 
     /** get the list of entity BaseUser
      * 列表方法，返回BaseUser列表
@@ -113,10 +109,6 @@ public class BaseUserService {
             baseUser.setId(id);
         }
         dao.save(baseUser);
-        BaseUserExt baseUserExt = new BaseUserExt();
-        baseUserExt.setId(id);
-        baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
-        baseUserExtService.save(baseUserExt);
     }
 
     /** save the entity with input list
@@ -145,18 +137,6 @@ public class BaseUserService {
         }
         baseUser.setLastTime(new Timestamp(System.currentTimeMillis()));
         dao.update(baseUser);
-        BaseUserExt baseUserExt = baseUserExtService.findById(baseUser.getId());
-        if (ObjectUtils.isEmpty(baseUserExt)) {
-            baseUserExt = new BaseUserExt();
-            baseUserExt.setId(baseUser.getId());
-            baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
-            baseUserExtService.save(baseUserExt);
-        } else {
-            baseUserExt.setId(baseUser.getId());
-            baseUserExt.setNamePy(ShaUtils.encryptPassword(bcryptPassword));
-            baseUserExtService.update(baseUserExt);
-        }
-
     }
 
     /** delete the entity by input id
@@ -251,9 +231,6 @@ public class BaseUserService {
         newPassword = ShaUtils.encryptPassword(newPassword);
         int result = dao.updatePassword(new StringMap().put("id", id).put("password", password)
             .put("newPassword", newPassword).map());
-        // shuxiaobo modify 20250205 同步更新BcryptPassword
-        baseUserExtService
-            .updatePassword(new StringMap().put("id", id).put("newPassword", newPassword).map());
         return result;
     }
 
@@ -396,8 +373,6 @@ public class BaseUserService {
         //sha256加密
         password = ShaUtils.encryptPassword(password);
         int result = dao.batUpdatePassword(userIds, password, salt);
-        // shuxiaobo modify 20250205 同步更新BcryptPassword
-        baseUserExtService.batUpdatePassword(userIds, password);
         return result;
     }
 
@@ -420,4 +395,13 @@ public class BaseUserService {
 
         }
     }
+
+    public BaseUser getByOpenId(String openId) {
+        return dao.getByOpenId(openId);
+    }
+
+    public BaseUser getByUnionId(String unionId) {
+        return dao.getByUnionId(unionId);
+    }
+
 }

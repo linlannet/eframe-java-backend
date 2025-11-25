@@ -91,11 +91,11 @@ public enum SrcCodeEnum implements BaseEnumInteger {
                                                     /**
                                                      * 微信小程序
                                                      */
-                                                    SRC_CODE_MINI_WEIXIN_MINI(45, "微信小程序"),
+                                                    SRC_CODE_MINI_WECHAT_MINI(45, "微信小程序"),
                                                     /**
                                                      * 微信公众号
                                                      */
-                                                    SRC_CODE_MINI_WEIXIN_MP(46, "微信公众号"),
+                                                    SRC_CODE_MINI_WECHAT_MP(46, "微信公众号"),
                                                     /**
                                                      * 支付宝小程序
                                                      */
@@ -103,11 +103,11 @@ public enum SrcCodeEnum implements BaseEnumInteger {
                                                     /**
                                                      * 支付宝生活号
                                                      */
-                                                    SRC_CODE_MINI_ALIPAY_FUWU(48, "支付宝生活号"),
+                                                    SRC_CODE_MINI_ALIPAY_LIFE(48, "支付宝生活号"),
                                                     /**
-                                                     * 融媒体来源
+                                                     * 城市融媒体来源
                                                      */
-                                                    SRC_CODE_MINI_RONGMEITI(50, "融媒体来源"),
+                                                    SRC_CODE_MINI_CITY(50, "城市融媒体来源"),
                                                     /**
                                                      * 阿里钉钉来源
                                                      */
@@ -115,7 +115,7 @@ public enum SrcCodeEnum implements BaseEnumInteger {
                                                     /**
                                                      * 企业微信来源
                                                      */
-                                                    SRC_CODE_MINI_WEWORK(52, "企业微信来源"),
+                                                    SRC_CODE_MINI_WECHAT_WORK(52, "企业微信来源"),
                                                     /**
                                                      * 飞书来源
                                                      */

@@ -1,3 +1,10 @@
+
+### 版本号：1.1.13
+- 更新日期：2025-11-25
+- 更新内容：
+1. BaseUser内spare1保存unionId，增加getByUnionId 
+2. BaseUser内spare2保存openId，source保存来源
+
 ### 版本号：1.1.12
 - 更新日期：2025-11-10
 - 更新内容：

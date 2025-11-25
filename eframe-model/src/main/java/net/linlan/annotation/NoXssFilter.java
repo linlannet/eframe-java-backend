@@ -1,5 +1,5 @@
 /*
- * module-social - 社交平台对接模块
+ * eframe-model - model模型数据模块
  * Copyright © 2020-2025 Linlan (open@linlan.net)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,12 +15,19 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.linlan.social.manage.wechat.handler;
+package net.linlan.annotation;
 
-import lombok.extern.slf4j.Slf4j;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-import me.chanjar.weixin.mp.api.WxMpMessageHandler;
+/**
+ *  不需要校验xss非法字段
+ * @author Linlan
+ */
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface NoXssFilter {
 
-@Slf4j
-public abstract class AbstractHandler implements WxMpMessageHandler {
 }

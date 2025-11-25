@@ -151,15 +151,16 @@ public class ThirdLoginController {
         if (!response.ok()) {
             throw new RuntimeException("第三方登录失败");
         }
-        // 绑定用户信息
-        thirdMemberService.bindFromSocial(SecurityUtils.getUserId(),
-            thirdBindBody.getPlatformType(), response.getData());
         String bindFrom = "";
         if (StringUtils.isEmpty(thirdBindBody.getBindFrom())) {
             bindFrom = BindFromEnum.WEB.getKey();
         } else {
             bindFrom = thirdBindBody.getBindFrom();
         }
+        // 绑定用户信息
+        thirdMemberService.bindFromSocial(SecurityUtils.getUserId(), bindFrom,
+            thirdBindBody.getPlatformType(), response.getData());
+
         //管理WEB端绑定方式
         if (bindFrom.equals(BindFromEnum.ADMIN_WORK.getKey())) {
             //管理端仅查询人员的角色、岗位，如果有配置则正常返回，如果人员未做任何配置，则提升失败

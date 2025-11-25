@@ -179,4 +179,34 @@ public class ThirdPermissionService {
         return frameUserDetails;
     }
 
+    public FrameUserDetails createLoginUser(ThirdUserInfo thirdUserInfo) {
+        if (thirdUserInfo == null)
+            return null;
+        ThirdUserVo thirdUserVo = thirdUserInfo.getUser();
+        // 用户权限列表
+        Set<String> perms = thirdUserInfo.getPermissions();
+        FrameUserDetails frameUserDetails = new FrameUserDetails(thirdUserVo.getUserId(), perms);
+        frameUserDetails.setUserId(thirdUserVo.getUserId());
+        frameUserDetails.setUserLid(thirdUserVo.getId());
+        frameUserDetails.setUsername(thirdUserVo.getUsername());
+        frameUserDetails.setPassword(thirdUserVo.getPassword());
+        frameUserDetails.setViewName(thirdUserVo.getUsername());
+        frameUserDetails.setOrganId(thirdUserVo.getOrganId());
+        frameUserDetails.setMobile(thirdUserVo.getMobile());
+        frameUserDetails.setEmail(thirdUserVo.getEmail());
+        frameUserDetails.setImagePath(thirdUserVo.getAvatarUrl());
+        frameUserDetails.setUserType(AdminType.USER.getType());
+        frameUserDetails.setLoginIp(thirdUserVo.getLastLoginIp());
+        frameUserDetails.setLoginTime(thirdUserVo.getLastLoginTime());
+        frameUserDetails.setLoginCount(thirdUserVo.getLoginCount());
+        // 数据权限范围关联机构部门或地域层级，TODO
+        List<Long> deptIds = new ArrayList<>();
+        // 用户角色编码列表
+        Set<Long> roleIdList = thirdUserInfo.getRoles();
+        roleIdList.forEach(roleId -> perms.add("ROLE_" + roleId));
+
+        frameUserDetails.setPerms(perms);
+        return frameUserDetails;
+    }
+
 }
