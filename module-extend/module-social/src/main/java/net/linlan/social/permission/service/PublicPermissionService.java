@@ -38,14 +38,10 @@ import net.linlan.social.permission.dto.OrganGroupBindDto;
 import net.linlan.social.permission.dto.PermissionCommDto;
 import net.linlan.social.permission.dto.PublicGroupUserDto;
 import net.linlan.social.permission.dto.UserPositionBindDto;
-import net.linlan.social.permission.param.OrganGroupBindParam;
-import net.linlan.social.permission.param.PermissionCommParam;
-import net.linlan.social.permission.param.PublicGroupSimpleParam;
-import net.linlan.social.permission.param.UserPositionBindParam;
+import net.linlan.social.permission.param.*;
 import net.linlan.social.third.entity.ThirdMember;
 import net.linlan.social.third.service.ThirdMemberService;
 import net.linlan.sys.base.entity.BaseUser;
-import net.linlan.sys.core.param.CoreAccountParam;
 import net.linlan.sys.role.dto.SysMenuButtonDto;
 import net.linlan.sys.role.entity.SysRole;
 import net.linlan.sys.role.service.SysRoleService;
@@ -459,7 +455,7 @@ public class PublicPermissionService {
      * @param param 查询条件
      * @return  用户列表
      */
-    public List<BaseUser> getPublicAccount(CoreAccountParam param) {
+    public List<BaseUser> getPublicAccount(PositionAccountParam param) {
         return dao.getPublicAccount(param);
     }
 

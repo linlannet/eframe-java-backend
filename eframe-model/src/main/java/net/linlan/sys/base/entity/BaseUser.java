@@ -167,7 +167,7 @@ public class BaseUser extends BaseEntity {
     private Date    lockTime;
 
     /**
-     * 是否激活0否1是
+     * 是否激活0否1是，是否需要更改密码0否1是
      */
     private Boolean activation;
 
@@ -197,7 +197,7 @@ public class BaseUser extends BaseEntity {
     private String  description;
 
     /**
-     * 备用1，头像
+     * 备用1，第三方用户ID，UnionId
      */
     private String  spare1;
 

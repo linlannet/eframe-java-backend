@@ -24,11 +24,11 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.12</version>
+        <version>1.1.13</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>eframe-api</artifactId>
-    <version>1.1.12</version>
+    <version>1.1.13</version>
     <packaging>jar</packaging>
     <name>eframe-api</name>
     <description>

@@ -108,7 +108,7 @@ public interface PublicGroupDao extends MybatisBaseDao<PublicGroup> {
 
     void groupBindPosition(List<PublicGroupPositionDto> list);
 
-    void groupUnBindPosition(String id);
+    void groupUnBindPosition(Long id);
 
     void groupUnBindPositionId(@Param("groupId") Long groupId, @Param("ids") List<String> ids);
 

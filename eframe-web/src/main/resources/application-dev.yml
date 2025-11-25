@@ -106,37 +106,3 @@ platform:
             # 前后端交互RSA2048公钥、私钥配置
             public_key:
             private_key:
-
-# 微信配置
-wx:
-    # 小程序
-    miniapp:
-        appid: wxfaf5d0      #微信小程序的appid 小览生活
-        secret: f1ce2c01f9b4aa787    #微信小程序的Secret 小览生活
-        token: token_linlan_wxmp #微信小程序消息服务器配置的token
-        aesKey:      #微信小程序消息服务器配置的EncodingAESKey
-        msgDataFormat: JSON
-        config-storage:
-            type: RedisTemplate # 配置类型: Memory(默认), Jedis, RedisTemplate
-            key-prefix: 'eframe:mini' # 相关redis前缀配置: wa(默认)
-    # 公众号
-    mp:
-        appId: wx73ccdb9   #微信服务号 麟览
-        secret: e61c2bf3cde3c
-        token: token_linlan_wxmp
-        aesKey: UfovGwsyxys4ddOsS
-        config-storage:
-            type: RedisTemplate # 配置类型: Memory(默认), Jedis, RedisTemplate
-            key-prefix: 'eframe:mp' # 相关redis前缀配置: wx(默认)
-        hosts:
-            api-host: https://linlan.net/
-    # 支付
-    pay:
-        appId:
-        mchId:
-        mchKey:
-        keyPath: classpath:cert/apiclient_cert.p12 # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
-    login:
-        # 域名配置
-        api_host_url: https://linlan.net/
-        mini_program_state: 'develop' # 小程序码跳转小程序类型

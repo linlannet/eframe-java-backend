@@ -62,10 +62,9 @@ public interface ThirdMemberDao extends MybatisBaseDao<ThirdMember> {
 
     ThirdMember findByUserId(String userId);
 
-    ThirdMember findByAccountIdOpenId(@Param("accountId") String accountId,
-                                      @Param("openId") String openId);
+    ThirdMember findByOpenId(@Param("openId") String openId, @Param("source") String source);
 
-    ThirdMember findByUserIdOpenId(@Param("userId") String userId, @Param("openId") String openId);
+    ThirdMember findByUnionId(@Param("unionId") String unionId);
 
     ThirdMember findByUserIdAccountId(@Param("userId") String userId,
                                       @Param("accountId") String accountId);
@@ -76,5 +75,19 @@ public interface ThirdMemberDao extends MybatisBaseDao<ThirdMember> {
 
     ThirdUserDto getThirdUserByOpenId(@Param("openId") String openId,
                                       @Param("source") String source);
+
+    ThirdUserDto getThirdUserByUnionId(@Param("unionId") String unionId);
+
+    Long getMemberId(String userId);
+
+    List<ThirdMember> getByMobile(@Param("mobile") String mobile, @Param("source") String source);
+
+    List<ThirdMember> getByUsername(@Param("username") String username,
+                                    @Param("source") String source);
+
+    List<ThirdMember> getByEmail(@Param("email") String email, @Param("source") String source);
+
+    List<ThirdMember> getByUserkey(@Param("userkey") String userkey,
+                                   @Param("source") String source);
 
 }

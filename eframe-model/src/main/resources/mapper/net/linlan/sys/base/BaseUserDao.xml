@@ -502,4 +502,34 @@
 
     </update>
 
+    <select id="getByUnionId" resultMap="baseUserMap">
+        select * from BASE_USER
+        where SPARE1 like concat('%',concat(#{unionId},'%'))
+        <choose>
+            <when test='_databaseId == "oracle"'>
+                AND rownum&lt;=1
+                ORDER BY CREATE_TIME DESC
+            </when>
+            <otherwise>
+                ORDER BY CREATE_TIME DESC
+                LIMIT 1
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="getByOpenId" resultMap="baseUserMap">
+        select * from BASE_USER
+        where SPARE2 like concat('%',concat(#{openId},'%'))
+        <choose>
+            <when test='_databaseId == "oracle"'>
+                AND rownum&lt;=1
+                ORDER BY CREATE_TIME DESC
+            </when>
+            <otherwise>
+                ORDER BY CREATE_TIME DESC
+                LIMIT 1
+            </otherwise>
+        </choose>
+    </select>
+
 </mapper>

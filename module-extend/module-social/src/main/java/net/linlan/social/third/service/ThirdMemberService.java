@@ -35,6 +35,9 @@ import me.zhyd.oauth.request.*;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.frame.admin.entity.AdminUser;
+import net.linlan.frame.admin.service.AdminUserService;
+import net.linlan.social.manage.constant.BindFromEnum;
 import net.linlan.social.third.dao.ThirdMemberDao;
 import net.linlan.social.third.dto.ThirdMemberDto;
 import net.linlan.social.third.dto.ThirdUserDto;
@@ -74,17 +77,13 @@ public class ThirdMemberService {
     @Resource
     private CoreAccountService     coreAccountService;
     @Resource
+    private AdminUserService       adminUserService;
+    @Resource
     private BaseUserService        baseUserService;
     @Resource
     private BaseUserExtService     baseUserExtService;
     @Resource
     private ThirdMemberBindService thirdMemberBindService;
-
-    private final String[]         avatarList = { "https://linlan.net/cdn/public/images/avatar/Raccoon.svg",
-                                                  "https://linlan.net/cdn/public/images/avatar/Kitty.svg",
-                                                  "https://linlan.net/cdn/public/images/avatar/Puppy.svg",
-                                                  "https://linlan.net/cdn/public/images/avatar/Bunny.svg",
-                                                  "https://linlan.net/cdn/public/images/avatar/Fox.svg" };
 
     /** get the list of entity ThirdMember
      * 列表方法，返回{@link ThirdMember} 列表
@@ -189,25 +188,12 @@ public class ThirdMemberService {
         return dao.findByUserId(userId);
     }
 
-    public ThirdMember getByServerTypeAndOpenId(String serverType, String openId) {
-        CoreAccount coreAccount = coreAccountService.getByServerType(serverType);
-        if (ObjectUtils.isEmpty(coreAccount) && StringUtils.isBlank(openId)) {
-            return null;
-        }
-        //通过accountId和openId查询正常状态的用户
-        ThirdMember thirdMember = findByAccountIdOpenId(coreAccount.getId(), openId);
-        if (null != thirdMember) {
-            return thirdMember;
-        }
-        return null;
+    public ThirdMember findByOpenId(String openId, String source) {
+        return dao.findByOpenId(openId, source);
     }
 
-    public ThirdMember findByAccountIdOpenId(String accountId, String openId) {
-        return dao.findByAccountIdOpenId(accountId, openId);
-    }
-
-    public ThirdMember findByUserIdOpenId(String userId, String openId) {
-        return dao.findByUserIdOpenId(userId, openId);
+    public ThirdMember findByUnionId(String unionId) {
+        return dao.findByUnionId(unionId);
     }
 
     public ThirdMember findByUserIdAccountId(String userId, String accountId) {
@@ -252,84 +238,116 @@ public class ThirdMemberService {
     }
 
     @Transactional
-    public void bindFromSocial(String userId, String platformType, AuthUser authUser) {
-        //保存ThirdMember
-        Long memberId = null;
-        ThirdMember thirdMember = findByUserId(userId);
+    public void bindFromSocial(String userId, String bindFrom, String platformType,
+                               AuthUser authUser) {
         CoreAccount coreAccount = coreAccountService.getByServerType(platformType);
+        if (coreAccount == null) {
+            return;
+        }
+
+        //保存ThirdMember
+        Long memberId = RandomUtils.randomLid();
+        ThirdMember thirdMember = findByOpenId(authUser.getUuid(), platformType);
+        String unionId = "";
+        if (authUser.getRawUserInfo().get("unionid") != null) {
+            unionId = authUser.getRawUserInfo().get("unionid").toString();
+        }
         if (thirdMember == null) {
             thirdMember = new ThirdMember();
-            memberId = RandomUtils.randomLid();
             thirdMember.setId(memberId);
             thirdMember.setUserId(userId);
+            thirdMember.setUnionId(unionId);
             thirdMember.setOpenId(authUser.getUuid());
-            if (coreAccount != null) {
-                thirdMember.setAccountId(coreAccount.getId());
-            }
+            thirdMember.setAccountId(coreAccount.getId());
             thirdMember.setAccountType(platformType);
             thirdMember.setNickName(authUser.getNickname());
             thirdMember.setAvatarUrl(authUser.getAvatar());
             thirdMember.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
             save(thirdMember);
+
         } else {
             memberId = thirdMember.getId();
-            thirdMember.setUserId(userId);
-            thirdMember.setOpenId(authUser.getUuid());
-            if (coreAccount != null) {
-                thirdMember.setAccountId(coreAccount.getId());
-            }
-            thirdMember.setAccountType(platformType);
             thirdMember.setNickName(authUser.getNickname());
             thirdMember.setAvatarUrl(authUser.getAvatar());
             thirdMember.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
             thirdMember.setDelFlag(DelFlagEnum.NORMAL.getKey());
             update(thirdMember);
         }
-
+        //当前用户可能已经通过其他渠道进行过BaseUser保存，也可能是管理员进行绑定，进行区分处理
         //保存BaseUser和BaseUserExt
+        //AdminUser登录进行绑定时，BaseUser信息可能不存在，ThirdMember登录，BaseUser都存在
         BaseUser baseUser = baseUserService.findById(userId);
         if (baseUser == null) {
             baseUser = new BaseUser();
-            baseUser.setId(userId);
-            baseUser.setSource(coreAccount.getId());
-            baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
-            baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
-            baseUser.setUsername(authUser.getUsername());
-            baseUser.setEmail(authUser.getEmail());
-            baseUser.setSpare2(authUser.getUuid());
-            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setLastLoginTime(new Date());
-            baseUser.setLoginCount(1);
-            baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setCurrentLoginTime(new Date());
-            baseUserService.save(baseUser);
-
-            BaseUserExt baseUserExt = new BaseUserExt();
-            baseUserExt.setId(userId);
-            baseUserExt.setNickname(authUser.getNickname());
-            baseUserExt.setSex(authUser.getGender().getDesc());
-            baseUserExt.setImagePath(authUser.getAvatar());
-            baseUserExt.setWeiboId(authUser.getBlog());
-            baseUserExt.setIntro(authUser.getRemark());
-            baseUserExt.setComefrom(authUser.getLocation());
-            baseUserExt.setSpare1(authUser.getCompany());
-            baseUserExt.setSpare2(authUser.getSource());
-            baseUserExtService.save(baseUserExt);
+            if (bindFrom.equals(BindFromEnum.ADMIN_WORK.getKey())) {
+                //管理员绑定，直接拷贝AdminUser的信息到BaseUser中
+                AdminUser adminUser = adminUserService.findByUserId(userId);
+                if (adminUser != null) {
+                    BeanUtils.copyProperties(adminUser, baseUser);
+                    //单独设置差异化的信息
+                    baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
+                    baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
+                    baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+                    baseUser.setLastLoginTime(new Date());
+                    baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
+                    baseUser.setCurrentLoginTime(new Date());
+                    if (unionId != null) {
+                        baseUser.setSpare1(unionId);
+                    }
+                    baseUser.setSpare2(authUser.getUuid());
+                    baseUserService.save(baseUser);
+                    //保存人员扩展信息
+                    BaseUserExt baseUserExt = new BaseUserExt();
+                    baseUserExt.setId(userId);
+                    baseUserExt.setNickname(authUser.getNickname());
+                    baseUserExt.setSex(authUser.getGender().getDesc());
+                    baseUserExt.setImagePath(authUser.getAvatar());
+                    baseUserExt.setWeiboId(authUser.getBlog());
+                    baseUserExt.setIntro(authUser.getRemark());
+                    baseUserExt.setComefrom(authUser.getLocation());
+                    baseUserExt.setSpare1(authUser.getCompany());
+                    baseUserExt.setSpare2(authUser.getSource());
+                    baseUserExtService.save(baseUserExt);
+                }
+            }
         } else {
+            //微信支付宝绑定同一个人的处理
             baseUser.setId(userId);
-            baseUser.setSource(coreAccount.getId());
+            //原有信息如果已经存在，则不更新
+            if (baseUser.getSource() == null) {
+                baseUser.setSource(coreAccount.getId());
+            }
             baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
             baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
-            baseUser.setEmail(authUser.getEmail());
-            baseUser.setSpare2(authUser.getUuid());
+
+            if (baseUser.getEmail() == null) {
+                baseUser.setEmail(authUser.getEmail());
+            }
+            if (unionId != null) {
+                if (baseUser.getSpare1() == null) {
+                    baseUser.setSpare1(unionId);
+                } else {
+                    if (!baseUser.getSpare1().contains(unionId)) {
+                        baseUser.setSpare1(baseUser.getSpare1() + ";" + unionId);
+                    }
+                }
+            }
+
+            if (baseUser.getSpare2() == null) {
+                baseUser.setSpare2(authUser.getUuid());
+            } else {
+                if (!baseUser.getSpare2().contains(authUser.getUuid())) {
+                    baseUser.setSpare2(baseUser.getSpare2() + ";" + authUser.getUuid());
+                }
+            }
             baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
             baseUser.setLastLoginTime(new Date());
-            baseUser.setLoginCount(baseUser.getLoginCount() + 1);
             baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
             baseUser.setCurrentLoginTime(new Date());
             baseUserService.update(baseUser);
 
-            BaseUserExt baseUserExt = new BaseUserExt();
+            BaseUserExt baseUserExt = baseUserExtService.findById(userId);
+            baseUserExt.setId(userId);
             baseUserExt.setNickname(authUser.getNickname());
             baseUserExt.setSex(authUser.getGender().getDesc());
             baseUserExt.setImagePath(authUser.getAvatar());
@@ -340,6 +358,7 @@ public class ThirdMemberService {
             baseUserExt.setSpare2(authUser.getSource());
             baseUserExtService.update(baseUserExt);
         }
+
         //保存绑定记录
         ThirdMemberBind thirdMemberBind = thirdMemberBindService.findByUserIdAccountKey(userId,
             authUser.getUuid());
@@ -348,9 +367,7 @@ public class ThirdMemberService {
             thirdMemberBind.setMemberId(memberId);
             thirdMemberBind.setUserId(userId);
             thirdMemberBind.setUsername(authUser.getUsername());
-            if (coreAccount != null) {
-                thirdMemberBind.setAccountId(coreAccount.getId());
-            }
+            thirdMemberBind.setAccountId(coreAccount.getId());
             thirdMemberBind.setAccountKey(authUser.getUuid());
             thirdMemberBind.setBindTime(new Date());
             thirdMemberBind.setAdditionInfo(authUser.getRawUserInfo().toJSONString());
@@ -359,9 +376,7 @@ public class ThirdMemberService {
             thirdMemberBindService.save(thirdMemberBind);
         } else {
             //当前用户可能解绑过，设置状态可用即可
-            if (coreAccount != null) {
-                thirdMemberBind.setAccountId(coreAccount.getId());
-            }
+            thirdMemberBind.setAccountId(coreAccount.getId());
             thirdMemberBind.setDelFlag(DelFlagEnum.NORMAL.getKey());
             thirdMemberBind.setSpare1(authUser.getNickname());
             thirdMemberBindService.update(thirdMemberBind);
@@ -370,12 +385,14 @@ public class ThirdMemberService {
     }
 
     public void unBindFromSocial(String userId, String platformType) {
-        ThirdMember thirdMember = findByUserId(userId);
         CoreAccount coreAccount = coreAccountService.getByServerType(platformType);
         String accountId = "";
         if (coreAccount != null) {
             accountId = coreAccount.getId();
         }
+
+        ThirdMember thirdMember = findByUserIdAccountId(userId, accountId);
+
         if (thirdMember != null && StringUtils.isNotBlank(accountId)) {
             //设置会员用户状态为应用锁定
             thirdMember.setDelFlag(DelFlagEnum.LOCKED.getKey());
@@ -407,78 +424,76 @@ public class ThirdMemberService {
         return dao.getThirdUserByOpenId(openId, source);
     }
 
-    public ThirdUserDto bindFromMpMini(String platformType, String openId) {
-        //保存ThirdMember
-        Long memberId = RandomUtils.randomLid();
-        CoreAccount coreAccount = coreAccountService.getByServerType(platformType);
-        ThirdMember thirdMember = new ThirdMember();
-        thirdMember.setId(memberId);
-        String userId = RandomUtils.UUID32();
-        thirdMember.setUserId(userId);
-        thirdMember.setOpenId(openId);
-        if (coreAccount != null) {
-            thirdMember.setAccountId(coreAccount.getId());
-        }
-        thirdMember.setAccountType(platformType);
-        String avatar = avatarList[(int) (Math.random() * avatarList.length)];
-        String nickname = "微信用户" + RandomUtils.randomNumbers(8);
-        thirdMember.setNickName(nickname);
-        thirdMember.setAvatarUrl(avatar);
-        save(thirdMember);
-
-        //保存BaseUser和BaseUserExt
-        BaseUser baseUser = baseUserService.getByUsername(openId);
-        BaseUserExt baseUserExt;
-
-        if (baseUser == null) {
-            baseUser = new BaseUser();
-            baseUser.setId(userId);
-            baseUser.setSource(coreAccount.getId());
-            baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
-            baseUser.setSrcCode(SrcCodeEnum.SRC_CODE_THIRD.getKey());
-            baseUser.setUsername(openId);
-            baseUser.setSpare2(openId);
-            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setLastLoginTime(new Date());
-            baseUser.setLoginCount(1);
-            baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setCurrentLoginTime(new Date());
-            baseUserService.save(baseUser);
-
-            baseUserExt = new BaseUserExt();
-            baseUserExt.setId(userId);
-            baseUserExt.setNickname(nickname);
-            baseUserExt.setImagePath(avatar);
-            baseUserExtService.save(baseUserExt);
-        } else {
-            baseUser.setSource(coreAccount.getId());
-            baseUser.setCreateType(CreateTypeEnum.AUTH.getKey());
-            baseUser.setSpare2(openId);
-            baseUser.setLastLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setLastLoginTime(new Date());
-            baseUser.setLoginCount(baseUser.getLoginCount() + 1);
-            baseUser.setCurrentLoginIp(IPUtils.getIpAddr(ServletUtils.getRequest()));
-            baseUser.setCurrentLoginTime(new Date());
-            baseUserService.update(baseUser);
-            baseUserExt = baseUserExtService.findById(baseUser.getId());
-        }
-        //保存绑定记录
-        ThirdMemberBind thirdMemberBind = new ThirdMemberBind();
-        thirdMemberBind.setMemberId(memberId);
-        thirdMemberBind.setUserId(userId);
-        thirdMemberBind.setUsername(openId);
-        if (coreAccount != null) {
-            thirdMember.setAccountId(coreAccount.getId());
-        }
-        thirdMemberBind.setAccountKey(openId);
-        thirdMemberBind.setBindTime(new Date());
-        thirdMemberBind.setDelFlag(DelFlagEnum.NORMAL.getKey());
-        thirdMemberBindService.save(thirdMemberBind);
-
-        ThirdUserDto thirdUserDto = new ThirdUserDto();
-        BeanUtils.copyProperties(thirdMember, thirdUserDto);
-        thirdUserDto.setBaseUser(baseUser);
-        thirdUserDto.setBaseUserExt(baseUserExt);
-        return thirdUserDto;
+    public ThirdUserDto getThirdUserByUnionId(String unionId) {
+        return dao.getThirdUserByUnionId(unionId);
     }
+
+    /**
+     * 根据手机号码获取会员信息
+     * @param mobile    手机号码
+     * @param source    来源
+     * @return
+     */
+
+    public ThirdMember getByMobile(String mobile, String source) {
+        //由于存在多条记录，此处需要处理
+        List<ThirdMember> list = dao.getByMobile(mobile, source);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 根据账号获取会员信息
+     * @param username  用户名
+     * @param source    来源
+     * @return
+     */
+
+    public ThirdMember getByUsername(String username, String source) {
+        //由于存在多条记录，此处需要处理
+        List<ThirdMember> list = dao.getByUsername(username, source);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 根据邮箱获取会员用户信息
+     * @param email     邮箱地址
+     * @param source    来源
+     * @return
+     */
+
+    public ThirdMember getByEmail(String email, String source) {
+        //由于存在多条记录，此处需要处理
+        List<ThirdMember> list = dao.getByEmail(email, source);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 通过username, mobile, email获取对象
+     * @param userkey   用户名邮箱或手机号码
+     * @param source    来源
+     * @return
+     */
+
+    public ThirdMember getByUserkey(String userkey, String source) {
+        //由于存在多条记录，此处需要处理
+        List<ThirdMember> list = dao.getByUserkey(userkey, source);
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    public Long getMemberId(String userId) {
+        return dao.getMemberId(userId);
+    }
+
 }

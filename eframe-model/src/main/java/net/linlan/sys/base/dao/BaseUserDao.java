@@ -122,4 +122,7 @@ public interface BaseUserDao extends MybatisBaseDao<BaseUser> {
     int batUpdatePassword(@Param("userIds") String[] userIds, @Param("password") String password,
                           @Param("salt") String salt);
 
+    BaseUser getByOpenId(String openId);
+
+    BaseUser getByUnionId(String unionId);
 }

@@ -25,11 +25,11 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>module-extend</artifactId>
-        <version>1.1.12</version>
+        <version>1.1.13</version>
     </parent>
     <groupId>net.linlan.eframe</groupId>
     <artifactId>module-authn</artifactId>
-    <version>1.1.12</version>
+    <version>1.1.13</version>
     <packaging>jar</packaging>
     <name>module-authn</name>
     <description>
@@ -37,6 +37,7 @@
     </description>
     <properties>
         <tencentcloud.sdk.sms.version>3.1.998</tencentcloud.sdk.sms.version>
+        <qiniu.version>7.2.28</qiniu.version>
     </properties>
     <url>https://gitee.com/linlannet/eframe-java-backend.git</url>
     <licenses>
@@ -77,6 +78,12 @@
             <groupId>com.tencentcloudapi</groupId>
             <artifactId>tencentcloud-sdk-java-ses</artifactId>
             <version>3.1.944</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.tencentcloudapi</groupId>
+                    <artifactId>tencentcloud-sdk-java-common</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.sun.mail</groupId>
@@ -102,7 +109,25 @@
         <dependency>
             <groupId>com.qiniu</groupId>
             <artifactId>qiniu-java-sdk</artifactId>
-            <version>7.12.1</version>
+            <version>${qiniu.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.gson</groupId>
+                    <artifactId>gson</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.qiniu</groupId>
+                    <artifactId>happy-dns-java</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>

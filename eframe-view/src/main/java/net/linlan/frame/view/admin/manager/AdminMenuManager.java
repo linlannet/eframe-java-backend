@@ -49,7 +49,7 @@ import net.linlan.utils.constant.UserConstants;
 @Component
 public class AdminMenuManager {
     @Resource
-    private AdminMenuService adminMenuEntService;
+    private AdminMenuService adminMenuService;
     @Resource
     private SysMenuService   sysMenuService;
     @Resource
@@ -125,7 +125,7 @@ public class AdminMenuManager {
             AdminMenuVo menu = (AdminMenuVo) iterator.next();
             // 如果是顶级节点, 遍历该父节点的所有子节点
             if (!tempList.contains(menu.getParentId())) {
-                adminMenuEntService.fetchList(menus, menu);
+                adminMenuService.fetchList(menus, menu);
                 returnList.add(menu);
             }
         }
@@ -291,7 +291,7 @@ public class AdminMenuManager {
         Long adminId = loginUser.getUserLid();
         AdminUser adminUser = adminUserService.findById(adminId);
         if (ObjectUtils.isNotEmpty(adminUser)) {
-            List<AdminMenuVo> menus = adminMenuEntService.selectMenuTreeByAdminId(adminId);
+            List<AdminMenuVo> menus = adminMenuService.selectMenuTreeByAdminId(adminId);
             List<AdminBaseMenuInfo> menuList = buildMenusForAdmin(menus);
             AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
             AppPageIndexInfo entity = new AppPageIndexInfo();

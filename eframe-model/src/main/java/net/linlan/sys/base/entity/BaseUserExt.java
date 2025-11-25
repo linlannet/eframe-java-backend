@@ -140,7 +140,7 @@ public class BaseUserExt extends BaseEntity {
     private String  spareMobile;
 
     /**
-     * 手机号码是否验证0否1是
+     * 手机号码是否验证0否1是，是否实名认证
      */
     private Boolean isMobileConfirm;
 

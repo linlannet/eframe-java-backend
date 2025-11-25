@@ -1,3 +1,24 @@
+
+
+### 版本号：1.1.13
+- 更新日期：2025-11-25
+- 更新内容：
+1. 优化调整pom文件内包的引用，解决多版本冗余
+2. 关闭PageHelper的控制台输出，调整为多数据源自动模式
+3. wechat目录内方法拆分为Mp、Mini和Open三个文件
+4. 调整ThirdMember的用户绑定方法，拆分MpMini到wechat目录
+5. 增强BaseUser的人员查询匹配，增加OpenId和手机号多重查询
+6. wechat目录移动到其他工程中，删除微信小程序相关代码
+7. 新增安全的部分工具类，NoSqlFilter、NoXssFilter等
+8. ThirdMember新增多个方法，查询用户信息
+9. token内的updateTime和expireTime信息更新
+10. ThirdMemberToken内新增部分方法
+11. BaseUser和BaseUserExt内方法，分开处理
+12. ThirdMemberService内心中unionId的操作方法
+13. BaseUser内spare1保存unionId，增加getByUnionId 
+14. BaseUser内spare2保存openId，source保存来源
+15. AppLoginInfo内新增手机是否验证或实名状态
+
 ### 版本号：1.1.12
 - 更新日期：2025-11-10
 - 更新内容：

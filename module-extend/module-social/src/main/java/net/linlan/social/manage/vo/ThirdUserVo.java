@@ -125,7 +125,7 @@ public class ThirdUserVo {
      */
     private Date    lockTime;
     /**
-     * 是否激活0否1是
+     * 是否激活0否1是，是否需要更改密码0否1是
      */
     private Boolean activation;
     /**

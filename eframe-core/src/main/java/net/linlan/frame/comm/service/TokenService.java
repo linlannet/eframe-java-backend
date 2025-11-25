@@ -157,6 +157,8 @@ public class TokenService {
         AppLoginInfo appLoginInfo = new AppLoginInfo();
         appLoginInfo.setUserId(loginUser.getUserId());
         appLoginInfo.setToken(newtoken);
+        appLoginInfo.setUpdateTime(loginUser.getLoginTime());
+        appLoginInfo.setExpireTime(loginUser.getExpireTime());
         return appLoginInfo;
     }
 

@@ -302,11 +302,18 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, 
         WHERE B.ACCOUNT_ID = #{accountId} AND B.OPEN_ID = #{openId} AND B.DEL_FLAG = 0
     </select>
 
-    <select id="findByUserIdOpenId" resultMap="thirdMemberMap">
+    <select id="findByOpenId" resultMap="thirdMemberMap">
         SELECT
             MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
         FROM THIRD_MEMBER B
-        WHERE B.USER_ID = #{userId} AND B.OPEN_ID = #{openId} AND B.DEL_FLAG = 0
+        WHERE B.OPEN_ID = #{openId} AND B.ACCOUNT_TYPE = #{source}
+    </select>
+
+    <select id="findByUnionId" resultMap="thirdMemberMap">
+        SELECT
+            MEMBER_ID, USER_ID, ORGAN_ID, FOREIGN_ID, ACCOUNT_ID, ACCOUNT_TYPE, UNION_ID, OPEN_ID, EMAIL, AREA_CODE, MOBILE, NICK_NAME, AVATAR_URL, ADDITION_INFO, CREATOR_ID, CREATE_TIME, LAST_TIME, DEL_FLAG, DESCRIPTION, SPARE1, SPARE2
+        FROM THIRD_MEMBER B
+        WHERE B.UNION_ID = #{unionId}
     </select>
 
     <select id="findByUserIdAccountId" resultMap="thirdMemberMap">
@@ -356,6 +363,78 @@ B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, 
                  LEFT JOIN BASE_USER BU ON B.USER_ID = BU.USER_ID
                  LEFT JOIN BASE_USER_EXT BUE ON B.USER_ID = BUE.USER_ID
         WHERE B.OPEN_ID = #{openId} and B.ACCOUNT_TYPE = #{source}
+    </select>
+
+    <select id="getThirdUserByUnionId" resultMap="thirdUserDtoMap">
+        SELECT
+            B.MEMBER_ID, B.USER_ID, B.ORGAN_ID, B.FOREIGN_ID, B.ACCOUNT_ID, B.ACCOUNT_TYPE, B.UNION_ID, B.OPEN_ID, B.EMAIL, B.AREA_CODE, B.MOBILE, B.NICK_NAME, B.AVATAR_URL, B.ADDITION_INFO, B.CREATOR_ID, B.CREATE_TIME, B.LAST_TIME, B.DEL_FLAG, B.DESCRIPTION, B.SPARE1, B.SPARE2
+             , BU.*, BUE.*
+        FROM THIRD_MEMBER B
+                 LEFT JOIN BASE_USER BU ON B.USER_ID = BU.USER_ID
+                 LEFT JOIN BASE_USER_EXT BUE ON B.USER_ID = BUE.USER_ID
+        WHERE B.UNION_ID = #{unionId}
+    </select>
+
+    <select id="getMemberId" resultType="java.lang.Long">
+        select B.MEMBER_ID from THIRD_MEMBER B where
+        B.USER_ID = #{userId}
+        <choose>
+            <when test='_databaseId == "mysql"'>
+                LIMIT 1
+            </when>
+            <when test='_databaseId == "dm8" or _databaseId == "xg"'>
+                LIMIT 1
+            </when>
+            <otherwise>
+                AND rownum = 1
+            </otherwise>
+        </choose>
+
+    </select>
+
+
+    <!-- get by username，通过username获取对象 -->
+    <select id="getByUsername" resultMap="thirdMemberMap">
+        select * from THIRD_MEMBER
+        where USER_ID in (
+            select USER_ID from BASE_USER where USERNAME = #{username} AND DEL_FLAG=0
+        )
+        <if test="source != null and source != ''">
+            and ACCOUNT_TYPE = #{source}
+        </if>
+    </select>
+
+    <!-- get by mobile，通过mobile获取对象 -->
+    <select id="getByMobile" resultMap="thirdMemberMap">
+        select * from THIRD_MEMBER
+        where USER_ID in (
+            select USER_ID from BASE_USER where MOBILE = #{mobile} AND DEL_FLAG=0
+        )
+        <if test="source != null and source != ''">
+            and ACCOUNT_TYPE = #{source}
+        </if>
+    </select>
+
+    <!-- get by email，通过email获取对象 -->
+    <select id="getByEmail" resultMap="thirdMemberMap">
+        select * from THIRD_MEMBER
+        where USER_ID in (
+            select USER_ID from BASE_USER where EMAIL = #{email} AND DEL_FLAG=0
+        )
+        <if test="source != null and source != ''">
+            and ACCOUNT_TYPE = #{source}
+        </if>
+    </select>
+
+    <!-- get by userkey，通过username, mobile, email获取对象 -->
+    <select id="getByUserkey" resultMap="thirdMemberMap">
+        select * from THIRD_MEMBER
+        where USER_ID in (
+            select USER_ID from BASE_USER where ( USERNAME = #{userkey} or MOBILE = #{userkey} or EMAIL = #{userkey} ) AND DEL_FLAG=0
+        )
+        <if test="source != null and source != ''">
+            and ACCOUNT_TYPE = #{source}
+        </if>
     </select>
 
 </mapper>

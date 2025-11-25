@@ -32,12 +32,8 @@ import net.linlan.social.permission.dto.OrganGroupBindDto;
 import net.linlan.social.permission.dto.PermissionCommDto;
 import net.linlan.social.permission.dto.PublicGroupUserDto;
 import net.linlan.social.permission.dto.UserPositionBindDto;
-import net.linlan.social.permission.param.OrganGroupBindParam;
-import net.linlan.social.permission.param.PermissionCommParam;
-import net.linlan.social.permission.param.PublicGroupSimpleParam;
-import net.linlan.social.permission.param.UserPositionBindParam;
+import net.linlan.social.permission.param.*;
 import net.linlan.sys.base.entity.BaseUser;
-import net.linlan.sys.core.param.CoreAccountParam;
 import net.linlan.sys.role.dto.SysMenuButtonDto;
 import net.linlan.sys.role.entity.SysRole;
 
@@ -264,7 +260,7 @@ public interface PublicPermissionDao extends MybatisBaseDao<PermissionCommDto> {
      * @param param 查询条件
      * @return    返回列表
      */
-    List<BaseUser> getPublicAccount(CoreAccountParam param);
+    List<BaseUser> getPublicAccount(PositionAccountParam param);
 
     /**
      * 是否有某个角色组的权限

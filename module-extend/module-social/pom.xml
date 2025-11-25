@@ -24,12 +24,12 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>module-extend</artifactId>
-        <version>1.1.12</version>
+        <version>1.1.13</version>
     </parent>
     <groupId>net.linlan.eframe</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>module-social</artifactId>
-    <version>1.1.12</version>
+    <version>1.1.13</version>
     <packaging>jar</packaging>
     <name>module-social</name>
     <description>
@@ -72,19 +72,7 @@
             <artifactId>JustAuth</artifactId>
             <version>${justauth.version}</version>
         </dependency>
-        <!-- 微信公众号 -->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>wx-java-mp-spring-boot-starter</artifactId>
-            <version>4.3.0</version>
-        </dependency>
 
-        <!-- 微信小程序 -->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>wx-java-miniapp-spring-boot-starter</artifactId>
-            <version>4.3.0</version>
-        </dependency>
         <!-- 通用工具-->
         <dependency>
             <groupId>net.linlan.eframe</groupId>

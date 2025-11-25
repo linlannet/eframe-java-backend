@@ -48,14 +48,16 @@ mybatis:
 
 # PageHelper分页插件
 pagehelper:
-    helperDialect: mysql
+    autoRuntimeDialect: true   # 自动识别运行时数据源类型，支持多数据源环境
+#    helperDialect: mysql   # 单数据源使用
     supportMethodsArguments: true
     params: count=countSql
+    reasonable: true    # 对不合法的分页参数进行合理化处理
 
 # 平台相关配置
 platform:
     name: eframe-web     # 名称
-    version: 1.1.12     # 版本
+    version: 1.1.13     # 版本
     copyrightYear: 2023     # 版权年份
     profile: ${platform.file.dir}      # 文件路径
     addressEnabled: false       # 获取ip地址开关

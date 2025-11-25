@@ -17,6 +17,8 @@
  */
 package net.linlan;
 
+import javax.annotation.PostConstruct;
+
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -67,4 +69,9 @@ public class FrameApplication extends SpringBootServletInitializer {
         return application.sources(FrameApplication.class);
     }
 
+    @PostConstruct
+    public void suppressPageHelperBanner() {
+        // 关闭 PageHelper 的 banner
+        System.setProperty("pagehelper.banner", "false");
+    }
 }

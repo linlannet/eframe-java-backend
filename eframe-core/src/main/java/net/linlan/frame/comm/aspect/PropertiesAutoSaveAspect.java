@@ -65,12 +65,11 @@ public class PropertiesAutoSaveAspect {
             Object obj = args[0];
             if (obj instanceof BaseEntity) {
                 BaseEntity baseEntity = (BaseEntity) obj;
-                Date date = new Date();
                 if (baseEntity.getCreateTime() == null) {
-                    baseEntity.setCreateTime(date);
+                    baseEntity.setCreateTime(new Date());
                 }
                 if (baseEntity.getLastTime() == null) {
-                    baseEntity.setLastTime(date);
+                    baseEntity.setLastTime(new Timestamp(System.currentTimeMillis()));
                 }
                 if (baseEntity.getCreatorId() == null) {
                     FrameUserDetails user = SecurityUtils.getLoginUser();
@@ -99,8 +98,10 @@ public class PropertiesAutoSaveAspect {
             Object obj = args[0];
             if (obj instanceof BaseEntity) {
                 BaseEntity baseEntity = (BaseEntity) obj;
-                if (baseEntity.getLastTime() == null) {
-                    baseEntity.setLastTime(new Timestamp(System.currentTimeMillis()));
+                baseEntity.setLastTime(new Timestamp(System.currentTimeMillis()));
+                if (baseEntity.getCreatorId() == null) {
+                    FrameUserDetails user = SecurityUtils.getLoginUser();
+                    baseEntity.setCreatorId(user == null ? null : user.getUserId());
                 }
             }
         }
