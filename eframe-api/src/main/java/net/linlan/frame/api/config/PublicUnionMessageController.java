@@ -30,8 +30,8 @@ import com.github.pagehelper.Page;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.config.dto.PublicUnionMessageDto;
 import net.linlan.frame.config.entity.PublicUnionMessage;
@@ -61,7 +61,7 @@ public class PublicUnionMessageController extends BaseController {
     @PlatLog(value = "查询消息阅读分页")
     @GetMapping("/message/list")
     @Encrypt
-    public ResponseResult<List<PublicUnionMessageDto>> list(PublicUnionMessageParam param) {
+    public ResponseEntity<List<PublicUnionMessageDto>> list(PublicUnionMessageParam param) {
         Page<PublicUnionMessageDto> result = portalUnionMessageService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -94,7 +94,7 @@ public class PublicUnionMessageController extends BaseController {
     @PlatLog(value = "主键获取消息阅读详细信息", category = 1)
     @GetMapping(value = "/message/{id}")
     @Encrypt
-    public ResponseResult<PublicUnionMessage> getPublicUnionMessageById(@PathVariable("id") String id) {
+    public ResponseEntity<PublicUnionMessage> getPublicUnionMessageById(@PathVariable("id") String id) {
         return success(portalUnionMessageService.findById(id));
     }
 
@@ -107,7 +107,7 @@ public class PublicUnionMessageController extends BaseController {
     @PostMapping("/message/save")
     @Encrypt
     @LimitScope(name = "publicUnionMessageSave", key = "publicUnionMessageSave")
-    public ResponseResult<String> save(@RequestBody PublicUnionMessage input) {
+    public ResponseEntity<String> save(@RequestBody PublicUnionMessage input) {
         portalUnionMessageService.save(input);
         return success();
     }
@@ -121,7 +121,7 @@ public class PublicUnionMessageController extends BaseController {
     @PostMapping("/message/update")
     @Encrypt
     @LimitScope(name = "publicUnionMessageUpdate", key = "publicUnionMessageUpdate")
-    public ResponseResult<String> update(@RequestBody PublicUnionMessage input) {
+    public ResponseEntity<String> update(@RequestBody PublicUnionMessage input) {
         portalUnionMessageService.update(input);
         return success();
     }
@@ -135,7 +135,7 @@ public class PublicUnionMessageController extends BaseController {
     @PostMapping("/message/delete/{ids}")
     @Encrypt
     @LimitScope(name = "publicUnionMessageDelete", key = "publicUnionMessageDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         portalUnionMessageService.deleteByIds(ids);
         return success();
     }
@@ -150,7 +150,7 @@ public class PublicUnionMessageController extends BaseController {
     @PostMapping("/message/read/{ids}/{status}")
     @Encrypt
     @LimitScope(name = "publicUnionMessageRead", key = "publicUnionMessageRead")
-    public ResponseResult<String> read(@PathVariable String[] ids, @PathVariable String status) {
+    public ResponseEntity<String> read(@PathVariable String[] ids, @PathVariable String status) {
         if (ObjectUtils.isEmpty(ids)) {
             return error();
         }

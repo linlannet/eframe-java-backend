@@ -32,8 +32,8 @@ import net.linlan.authn.sms.dto.SmsSendRecordDto;
 import net.linlan.authn.sms.entity.SmsSendRecord;
 import net.linlan.authn.sms.param.SmsSendRecordParam;
 import net.linlan.authn.sms.service.SmsSendRecordService;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 
 /**
@@ -59,7 +59,7 @@ public class SmsSendRecordController extends BaseController {
     @PlatLog(value = "查询短信发送记录分页", category = 0)
     @GetMapping("/smssendrecord/list")
     @Encrypt
-    public ResponseResult<List<SmsSendRecord>> list(SmsSendRecordParam param) {
+    public ResponseEntity<List<SmsSendRecord>> list(SmsSendRecordParam param) {
         Page<SmsSendRecordDto> result = smsSendRecordService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +77,7 @@ public class SmsSendRecordController extends BaseController {
     @PlatLog(value = "主键获取短信发送记录详细信息", category = 1)
     @GetMapping(value = "/smssendrecord/{id}")
     @Encrypt
-    public ResponseResult<SmsSendRecord> findById(@PathVariable("id") Long id) {
+    public ResponseEntity<SmsSendRecord> findById(@PathVariable("id") Long id) {
         return success(smsSendRecordService.findById(id));
     }
 
@@ -90,7 +90,7 @@ public class SmsSendRecordController extends BaseController {
     @PostMapping("/smssendrecord/save")
     @Encrypt
     @LimitScope(name = "smsSendRecordSave", key = "smsSendRecordSave")
-    public ResponseResult<String> save(@RequestBody SmsSendRecord input) {
+    public ResponseEntity<String> save(@RequestBody SmsSendRecord input) {
         smsSendRecordService.save(input);
         return success();
     }
@@ -104,7 +104,7 @@ public class SmsSendRecordController extends BaseController {
     @PostMapping("/smssendrecord/update")
     @Encrypt
     @LimitScope(name = "smsSendRecordUpdate", key = "smsSendRecordUpdate")
-    public ResponseResult<String> update(@RequestBody SmsSendRecord input) {
+    public ResponseEntity<String> update(@RequestBody SmsSendRecord input) {
         smsSendRecordService.update(input);
         return success();
     }
@@ -118,7 +118,7 @@ public class SmsSendRecordController extends BaseController {
     @PostMapping("/smssendrecord/delete/{ids}")
     @Encrypt
     @LimitScope(name = "smsSendRecordDelete", key = "smsSendRecordDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         smsSendRecordService.deleteByIds(ids);
         return success();
     }

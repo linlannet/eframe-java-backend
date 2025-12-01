@@ -25,9 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.admin.service.InitialConfigService;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.manager.AdminUserOpManager;
@@ -55,7 +55,7 @@ public class SysRegisterController extends BaseController {
     @PostMapping("/register")
     @Encrypt
     @LimitScope(name = "adminUserRegister", key = "adminUserRegister")
-    public ResponseResult<String> register(@RequestBody RegisterBody user) {
+    public ResponseEntity<String> register(@RequestBody RegisterBody user) {
         if (!("true".equals(initialConfigService.selectConfigByKey("sys.account.registerUser")))) {
             return error("当前系统没有开启注册功能！");
         }

@@ -26,9 +26,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.linlan.annotation.Encrypt;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.admin.dto.IndexApplicationDto;
 import net.linlan.frame.admin.dto.IndexElementDto;
 import net.linlan.frame.admin.dto.IndexManageDto;
@@ -68,9 +68,9 @@ public class SysIndexController {
     @PlatLog("工作台应用支撑统计")
     @GetMapping("/api/admin/index/application")
     @Encrypt
-    public ResponseResult<List<IndexApplicationDto>> getApplicationNum(FrameIndexParam param) {
+    public ResponseEntity<List<IndexApplicationDto>> getApplicationNum(FrameIndexParam param) {
         List<IndexApplicationDto> result = frameIndexService.getIndexApplicationCount(param);
-        return ResponseResult.ok().setResultData(result);
+        return ResponseEntity.ok().setResultData(result);
     }
 
     /**
@@ -81,9 +81,9 @@ public class SysIndexController {
     @PlatLog("工作台要素支撑统计")
     @GetMapping("/api/admin/index/element")
     @Encrypt
-    public ResponseResult<List<IndexElementDto>> getIndexElementCount(FrameIndexParam param) {
+    public ResponseEntity<List<IndexElementDto>> getIndexElementCount(FrameIndexParam param) {
         List<IndexElementDto> result = frameIndexService.getIndexElementCount(param);
-        return ResponseResult.ok().setResultData(result);
+        return ResponseEntity.ok().setResultData(result);
     }
 
     /**
@@ -94,9 +94,9 @@ public class SysIndexController {
     @PlatLog("工作台管理支撑统计")
     @GetMapping("/api/admin/index/manage")
     @Encrypt
-    public ResponseResult<List<IndexManageDto>> getIndexManageCount(FrameIndexParam param) {
+    public ResponseEntity<List<IndexManageDto>> getIndexManageCount(FrameIndexParam param) {
         List<IndexManageDto> result = frameIndexService.getIndexManageCount(param);
-        return ResponseResult.ok().setResultData(result);
+        return ResponseEntity.ok().setResultData(result);
     }
 
 }

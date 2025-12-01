@@ -32,8 +32,8 @@ import net.linlan.authn.mail.dto.MailSendRecordDto;
 import net.linlan.authn.mail.entity.MailSendRecord;
 import net.linlan.authn.mail.param.MailSendRecordParam;
 import net.linlan.authn.mail.service.MailSendRecordService;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 
 /**
@@ -59,7 +59,7 @@ public class MailSendRecordController extends BaseController {
     @PlatLog(value = "查询邮件发送记录分页", category = 0)
     @GetMapping("/mailsendrecord/list")
     @Encrypt
-    public ResponseResult<List<MailSendRecord>> list(MailSendRecordParam param) {
+    public ResponseEntity<List<MailSendRecord>> list(MailSendRecordParam param) {
         Page<MailSendRecordDto> result = mailSendRecordService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +77,7 @@ public class MailSendRecordController extends BaseController {
     @PlatLog(value = "主键获取邮件发送记录详细信息", category = 1)
     @GetMapping(value = "/mailsendrecord/{id}")
     @Encrypt
-    public ResponseResult<MailSendRecord> findById(@PathVariable("id") Long id) {
+    public ResponseEntity<MailSendRecord> findById(@PathVariable("id") Long id) {
         return success(mailSendRecordService.findById(id));
     }
 
@@ -90,7 +90,7 @@ public class MailSendRecordController extends BaseController {
     @PostMapping("/mailsendrecord/save")
     @Encrypt
     @LimitScope(name = "mailSendRecordSave", key = "mailSendRecordSave")
-    public ResponseResult<String> save(@RequestBody MailSendRecord input) {
+    public ResponseEntity<String> save(@RequestBody MailSendRecord input) {
         mailSendRecordService.save(input);
         return success();
     }
@@ -104,7 +104,7 @@ public class MailSendRecordController extends BaseController {
     @PostMapping("/mailsendrecord/update")
     @Encrypt
     @LimitScope(name = "mailSendRecordUpdate", key = "mailSendRecordUpdate")
-    public ResponseResult<String> update(@RequestBody MailSendRecord input) {
+    public ResponseEntity<String> update(@RequestBody MailSendRecord input) {
         mailSendRecordService.update(input);
         return success();
     }
@@ -118,7 +118,7 @@ public class MailSendRecordController extends BaseController {
     @PostMapping("/mailsendrecord/delete/{ids}")
     @Encrypt
     @LimitScope(name = "mailSendRecordDelete", key = "mailSendRecordDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         mailSendRecordService.deleteByIds(ids);
         return success();
     }

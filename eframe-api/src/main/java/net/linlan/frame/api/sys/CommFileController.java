@@ -41,13 +41,13 @@ import lombok.extern.slf4j.Slf4j;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.HttpStatus;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.api.BaseController;
-import net.linlan.frame.mbiz.constant.HttpStatusEnum;
 import net.linlan.frame.view.admin.service.InitialRedisService;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.frame.view.sys.param.CommFileVoParam;
@@ -88,7 +88,7 @@ public class CommFileController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:file:list')")
     @GetMapping("file/list")
     @Encrypt
-    public ResponseResult<Pagination<CommFileVo>> list(CommFileVoParam param) {
+    public ResponseEntity<Pagination<CommFileVo>> list(CommFileVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -131,7 +131,7 @@ public class CommFileController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:file:detail')")
     @GetMapping(value = "file/info")
     @Encrypt
-    public ResponseResult<CommFileVo> getInfo(@RequestParam("id") String id) {
+    public ResponseEntity<CommFileVo> getInfo(@RequestParam("id") String id) {
 
         if (StringUtils.isBlank(id)) {
             return failure();
@@ -153,7 +153,7 @@ public class CommFileController extends BaseController {
     @PostMapping("file/save")
     @Encrypt
     @LimitScope(name = "commFileSave", key = "commFileSave")
-    public ResponseResult<String> save(@Validated @RequestBody CommFileVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody CommFileVo input) {
         if (ObjectUtils.isNotEmpty(baseCommFileService.findById(input.getId()))) {
             return error("新增参数'" + input.getId() + "'失败，参数键名已存在");
         }
@@ -171,7 +171,7 @@ public class CommFileController extends BaseController {
     @PostMapping("file/update")
     @Encrypt
     @LimitScope(name = "commFileUpdate", key = "commFileUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody CommFileVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody CommFileVo input) {
         if (ObjectUtils.isNotEmpty(baseCommFileService.findById(input.getId()))) {
             return error("修改参数'" + input.getId() + "'失败，参数键名已存在");
         }
@@ -189,7 +189,7 @@ public class CommFileController extends BaseController {
     @PostMapping("file/delete")
     @Encrypt
     @LimitScope(name = "commFileDelete", key = "commFileDelete")
-    public ResponseResult<String> delete(@Validated @RequestBody CommFileVo input) {
+    public ResponseEntity<String> delete(@Validated @RequestBody CommFileVo input) {
         baseCommFileService.deleteByIds(input.getIds());
         return success();
     }
@@ -203,7 +203,7 @@ public class CommFileController extends BaseController {
     @DeleteMapping("file/refreshCache")
     @Encrypt
     @LimitScope(name = "commFileRefresh", key = "commFileRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetConfigCache();
         return success();
     }
@@ -253,7 +253,7 @@ public class CommFileController extends BaseController {
     @PlatLog(value = "通用上传请求（单个）", category = 10)
     @PostMapping("file/upload")
     @Encrypt
-    public ResponseResult<FileInfo> uploadFile(HttpServletRequest request,
+    public ResponseEntity<FileInfo> uploadFile(HttpServletRequest request,
                                                HttpServletResponse response) throws Exception {
         try {
             MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
@@ -267,12 +267,12 @@ public class CommFileController extends BaseController {
                 FrameUserDetails loginUser = SecurityUtils.getLoginUser();
                 FileInfo fileInfo = uploadFileService.uploadFileByMember(multipartFile, context,
                     Constants.ENT_APP_ID, loginUser.getUserId());
-                return ResponseResult.ok().setResultData(fileInfo);
+                return ResponseEntity.ok().setResultData(fileInfo);
             }
-            return ResponseResult.error(HttpStatusEnum.BAD_REQUEST.getCode(), "文件上传类型错误");
+            return ResponseEntity.error(HttpStatus.BAD_REQUEST.value(), "文件上传类型错误");
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseResult.error(HttpStatusEnum.BAD_REQUEST.getCode(), "文件上传失败");
+            return ResponseEntity.error(HttpStatus.BAD_REQUEST.value(), "文件上传失败");
         }
     }
 
@@ -286,7 +286,7 @@ public class CommFileController extends BaseController {
     @PlatLog(value = "通用上传请求（多个）", category = 10)
     @PostMapping("file/uploads")
     @Encrypt
-    public ResponseResult<List<FileInfo>> uploadFiles(List<MultipartFile> files,
+    public ResponseEntity<List<FileInfo>> uploadFiles(List<MultipartFile> files,
                                                       HttpServletRequest request) throws Exception {
         try {
             // 上传文件路径
@@ -305,15 +305,15 @@ public class CommFileController extends BaseController {
                             Constants.ENT_APP_ID, loginUser.getUserId());
                         fileInfos.add(fileInfo);
                     }
-                    return ResponseResult.error(HttpStatusEnum.BAD_REQUEST.getCode(), "文件上传类型错误");
+                    return ResponseEntity.error(HttpStatus.BAD_REQUEST.value(), "文件上传类型错误");
                 } catch (Exception e) {
                     e.printStackTrace();
-                    return ResponseResult.error(HttpStatusEnum.BAD_REQUEST.getCode(), "文件上传失败");
+                    return ResponseEntity.error(HttpStatus.BAD_REQUEST.value(), "文件上传失败");
                 }
             }
-            return ResponseResult.ok().setResultData(fileInfos);
+            return ResponseEntity.ok().setResultData(fileInfos);
         } catch (Exception e) {
-            return ResponseResult.error(e.getMessage());
+            return ResponseEntity.error(e.getMessage());
         }
     }
 

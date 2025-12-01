@@ -36,8 +36,8 @@ import net.linlan.authn.mail.service.MailSendService;
 import net.linlan.authn.mail.vo.MailSendVo;
 import net.linlan.authn.manage.service.AuthnLoginService;
 import net.linlan.authn.manage.vo.MobileLoginBody;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.comm.vo.AppLoginInfo;
 
 /**
@@ -61,10 +61,10 @@ public class AuthnLoginController {
     @PlatLog(value = "短信邮箱登录方法", category = 10, srcCode = 10)
     @PostMapping("/login/sms")
     @Encrypt
-    public ResponseResult<AppLoginInfo> authnLogin(@RequestBody MobileLoginBody loginBody) {
+    public ResponseEntity<AppLoginInfo> authnLogin(@RequestBody MobileLoginBody loginBody) {
         // 生成令牌
         AppLoginInfo appLoginInfo = authnLoginService.loginByMobile(loginBody);
-        return ResponseResult.ok(appLoginInfo);
+        return ResponseEntity.ok(appLoginInfo);
     }
 
     /**
@@ -75,13 +75,13 @@ public class AuthnLoginController {
      */
     @PlatLog(value = "登录发送短信验证码", category = 10, srcCode = 10)
     @PostMapping("/login/otp/send")
-    public ResponseResult<String> sendOtpCode(String mobile) {
+    public ResponseEntity<String> sendOtpCode(String mobile) {
         boolean flag = authnLoginService.sendCode(mobile);
         if (!flag) {
-            return ResponseResult.error("短信发送失败！");
+            return ResponseEntity.error("短信发送失败！");
         }
 
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 
     /**
@@ -92,7 +92,7 @@ public class AuthnLoginController {
      */
     @PlatLog(value = "登录发送短信验证码", category = 10, srcCode = 10)
     @PostMapping("/login/mail/send")
-    public ResponseResult<String> send(@RequestBody MailSendVo vo) {
+    public ResponseEntity<String> send(@RequestBody MailSendVo vo) {
         // 发送本地邮件
         if (vo.getPlatform() == MailPlatformEnum.LOCAL.getValue()) {
             MailLocalSendParam local = new MailLocalSendParam();
@@ -102,7 +102,7 @@ public class AuthnLoginController {
             local.setHtml(StrUtil.equalsIgnoreCase(vo.getMailFormat(), MailFormatEnum.HTML.name()));
             boolean flag = mailSendService.sendLocal(local);
 
-            return flag ? ResponseResult.ok() : ResponseResult.error("发送失败");
+            return flag ? ResponseEntity.ok() : ResponseEntity.error("发送失败");
         }
 
         // 发送阿里云模板邮件
@@ -115,7 +115,7 @@ public class AuthnLoginController {
             aliyun.setTemplateName(vo.getTemplateName());
             boolean flag = mailSendService.batchSendAliyun(aliyun);
 
-            return flag ? ResponseResult.ok() : ResponseResult.error("发送失败");
+            return flag ? ResponseEntity.ok() : ResponseEntity.error("发送失败");
         }
 
         // 发送阿里云邮件
@@ -130,10 +130,10 @@ public class AuthnLoginController {
                 .setHtml(StrUtil.equalsIgnoreCase(vo.getMailFormat(), MailFormatEnum.HTML.name()));
             boolean flag = mailSendService.sendAliyun(aliyun);
 
-            return flag ? ResponseResult.ok() : ResponseResult.error("发送失败");
+            return flag ? ResponseEntity.ok() : ResponseEntity.error("发送失败");
         }
 
-        return ResponseResult.error("不支持的邮件平台或邮件格式");
+        return ResponseEntity.error("不支持的邮件平台或邮件格式");
     }
 
     /**
@@ -144,8 +144,8 @@ public class AuthnLoginController {
      */
     @PlatLog(value = "邮箱账号注册", category = 10, srcCode = 10)
     @PostMapping("/login/mail/register")
-    public ResponseResult<Boolean> register(@RequestBody EmailRegisterDto dto) {
-        return ResponseResult.ok(authnLoginService.register(dto));
+    public ResponseEntity<Boolean> register(@RequestBody EmailRegisterDto dto) {
+        return ResponseEntity.ok(authnLoginService.register(dto));
     }
 
     /**
@@ -156,8 +156,8 @@ public class AuthnLoginController {
      */
     @PlatLog(value = "根据邮箱修改密码", category = 10, srcCode = 10)
     @PostMapping("/login/mail/email/forgot")
-    public ResponseResult<Boolean> forgot(@RequestBody EmailRegisterDto dto) {
-        return ResponseResult.ok(authnLoginService.forgot(dto));
+    public ResponseEntity<Boolean> forgot(@RequestBody EmailRegisterDto dto) {
+        return ResponseEntity.ok(authnLoginService.forgot(dto));
     }
 
 }

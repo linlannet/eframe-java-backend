@@ -37,9 +37,9 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.mbiz.ApiIntfConfig;
@@ -78,7 +78,7 @@ public class SysPositionController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:position:list')")
     @GetMapping("position/list")
     @Encrypt
-    public ResponseResult<Pagination<SysPositionVo>> getSysPositionPage(SysPositionParam param) {
+    public ResponseEntity<Pagination<SysPositionVo>> getSysPositionPage(SysPositionParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -121,7 +121,7 @@ public class SysPositionController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:position:detail')")
     @GetMapping(value = "position/{postId}")
     @Encrypt
-    public ResponseResult<SysPosition> getInfo(@PathVariable String postId) {
+    public ResponseEntity<SysPosition> getInfo(@PathVariable String postId) {
         if (ObjectUtils.isEmpty(postId)) {
             return failure();
         }
@@ -139,7 +139,7 @@ public class SysPositionController extends BaseController {
     @PostMapping("position/save")
     @Encrypt
     @LimitScope(name = "sysPositionSave", key = "sysPositionSave")
-    public ResponseResult<String> save(@Validated @RequestBody SysPositionDto input) {
+    public ResponseEntity<String> save(@Validated @RequestBody SysPositionDto input) {
         if (!adminPositionEntryManager.checkPostNameUnique(input)) {
             return error("新增岗位'" + input.getName() + "'失败，岗位名称已存在");
         } else if (!adminPositionEntryManager.checkPostCodeUnique(input)) {
@@ -161,7 +161,7 @@ public class SysPositionController extends BaseController {
     @PostMapping("position/update")
     @Encrypt
     @LimitScope(name = "sysPositionUpdate", key = "sysPositionUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody SysPositionDto input) {
+    public ResponseEntity<String> update(@Validated @RequestBody SysPositionDto input) {
         if (!adminPositionEntryManager.checkPostNameUnique(input)) {
             return error("修改岗位'" + input.getName() + "'失败，岗位名称已存在");
         } else if (!adminPositionEntryManager.checkPostCodeUnique(input)) {
@@ -184,7 +184,7 @@ public class SysPositionController extends BaseController {
     @PostMapping("position/{positionIds}")
     @Encrypt
     @LimitScope(name = "sysPositionDelete", key = "sysPositionDelete")
-    public ResponseResult<String> delete(@PathVariable String[] positionIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] positionIds) {
         if (ObjectUtils.isEmpty(positionIds)) {
             return failure();
         }
@@ -205,7 +205,7 @@ public class SysPositionController extends BaseController {
     @PostMapping("position/bind/{positionId}")
     @Encrypt
     @LimitScope(name = "sysPositionBindPos", key = "sysPositionBindPos")
-    public ResponseResult<String> bind(@RequestBody SysPositionVo input) {
+    public ResponseEntity<String> bind(@RequestBody SysPositionVo input) {
         SysRolePosition adminRolePosition = new SysRolePosition();
         String[] roleIds = input.getIds();
         adminRolePosition.setPositionId(input.getPositionId());
@@ -226,7 +226,7 @@ public class SysPositionController extends BaseController {
     @PostMapping("position/unbind/{positionId}")
     @Encrypt
     @LimitScope(name = "sysPositionUnbindPos", key = "sysPositionUnbindPos")
-    public ResponseResult<String> unbind(@RequestBody SysRolePosition input) {
+    public ResponseEntity<String> unbind(@RequestBody SysRolePosition input) {
         if (adminPositionOpManager.doBindPosition(ApiIntfConfig.VALUE_AT_UNBIND, null, input)) {
             return success();
         }
@@ -240,7 +240,7 @@ public class SysPositionController extends BaseController {
     @PlatLog(value = "获取岗位选择框列表")
     @GetMapping("position/option/select")
     @Encrypt
-    public ResponseResult<List<SysPositionVo>> optionSelect() {
+    public ResponseEntity<List<SysPositionVo>> optionSelect() {
         List<SysPositionVo> vos = adminPositionEntryManager.selectPositionAll();
         if (vos == null) {
             return empty();

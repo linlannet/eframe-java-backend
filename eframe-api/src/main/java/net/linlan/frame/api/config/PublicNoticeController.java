@@ -33,8 +33,8 @@ import com.github.pagehelper.Page;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.json.JsonMapUtils;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.frame.FrameUserDetails;
@@ -70,7 +70,7 @@ public class PublicNoticeController extends BaseController {
     @PlatLog(value = "查询平台公共消息分页")
     @GetMapping("/notice/list")
     @Encrypt
-    public ResponseResult<List<PublicNotice>> list(PublicNoticeParam param) {
+    public ResponseEntity<List<PublicNotice>> list(PublicNoticeParam param) {
 
         Page<PublicNoticeDto> result = publicNoticeService.getPageDto(param);
         if (result == null) {
@@ -88,7 +88,7 @@ public class PublicNoticeController extends BaseController {
     @PlatLog(value = "查询平台公共消息分页")
     @GetMapping("/notice/list/myself")
     @Encrypt
-    public ResponseResult<List<PublicNotice>> myselfList(PublicNoticeParam param) {
+    public ResponseEntity<List<PublicNotice>> myselfList(PublicNoticeParam param) {
         FrameUserDetails loginUser = getLoginUser();
         if (loginUser.getUserId() == null) {
             return error();
@@ -125,7 +125,7 @@ public class PublicNoticeController extends BaseController {
     @PlatLog(value = "主键获取平台公共消息详细信息", category = 1)
     @GetMapping(value = "/notice/{id}")
     @Encrypt
-    public ResponseResult<PublicNotice> getPublicNoticeById(@PathVariable("id") Long id) {
+    public ResponseEntity<PublicNotice> getPublicNoticeById(@PathVariable("id") Long id) {
         return success(publicNoticeService.findById(id));
     }
 
@@ -138,7 +138,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/save")
     @Encrypt
     @LimitScope(name = "publicNoticeSave", key = "publicNoticeSave")
-    public ResponseResult<String> save(@RequestBody PublicNotice input) {
+    public ResponseEntity<String> save(@RequestBody PublicNotice input) {
         publicNoticeService.save(input);
         return success();
     }
@@ -152,7 +152,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/update")
     @Encrypt
     @LimitScope(name = "publicNoticeUpdate", key = "publicNoticeUpdate")
-    public ResponseResult<String> update(@RequestBody PublicNotice input) {
+    public ResponseEntity<String> update(@RequestBody PublicNotice input) {
         publicNoticeService.update(input);
         return success();
     }
@@ -166,7 +166,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/delete/{ids}")
     @Encrypt
     @LimitScope(name = "publicNoticeDelete", key = "publicNoticeDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         publicNoticeService.deleteByIds(ids);
         return success();
     }
@@ -179,7 +179,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/read/all")
     @Encrypt
     @LimitScope(name = "publicNoticeReadAll", key = "publicNoticeReadAll")
-    public ResponseResult<String> allRead() {
+    public ResponseEntity<String> allRead() {
 
         FrameUserDetails loginUser = getLoginUser();
         if (loginUser.getUserId() == null) {
@@ -216,7 +216,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/read/{ids}")
     @Encrypt
     @LimitScope(name = "publicNoticeRead", key = "publicNoticeRead")
-    public ResponseResult<String> read(@PathVariable Long[] ids) {
+    public ResponseEntity<String> read(@PathVariable Long[] ids) {
         if (ObjectUtils.isEmpty(ids)) {
             return error();
         }
@@ -247,7 +247,7 @@ public class PublicNoticeController extends BaseController {
     @PostMapping("/notice/unRead/{ids}")
     @Encrypt
     @LimitScope(name = "publicNoticeUnRead", key = "publicNoticeUnRead")
-    public ResponseResult<String> unRead(@PathVariable Long[] ids) {
+    public ResponseEntity<String> unRead(@PathVariable Long[] ids) {
         if (ObjectUtils.isEmpty(ids)) {
             return error();
         }
@@ -277,7 +277,7 @@ public class PublicNoticeController extends BaseController {
     @PlatLog(value = "获取未读消息数据", category = 21)
     @GetMapping("/notice/num")
     @Encrypt
-    public ResponseResult<Map<String, String>> getNum() {
+    public ResponseEntity<Map<String, String>> getNum() {
 
         FrameUserDetails loginUser = getLoginUser();
 

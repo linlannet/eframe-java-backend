@@ -38,15 +38,15 @@ import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlCreateTableStateme
 import com.github.pagehelper.Page;
 
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
+import net.linlan.commons.db.filter.SqlUtils;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.tools.generator.entity.GenTable;
 import net.linlan.tools.generator.entity.GenTableColumn;
 import net.linlan.tools.generator.service.GenTableColumnService;
 import net.linlan.tools.generator.service.GenTableService;
-import net.linlan.utils.sql.SqlUtil;
 import net.linlan.utils.text.Convert;
 
 /**
@@ -71,7 +71,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "查询代码生成列表")
     @PreAuthorize("@ss.hasPerms('tool:gen:list')")
     @GetMapping("gen/list")
-    public ResponseResult<List<GenTable>> genList(GenTable genTable) {
+    public ResponseEntity<List<GenTable>> genList(GenTable genTable) {
         List<GenTable> list = genTableService.selectGenTableList(genTable);
         return success(list);
     }
@@ -84,7 +84,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "查询某个表的全部字段")
     @PreAuthorize("@ss.hasPerms('tool:gen:detail')")
     @GetMapping(value = "gen/{tableId}")
-    public ResponseResult<Map<String, Object>> getInfo(@PathVariable Long tableId) {
+    public ResponseEntity<Map<String, Object>> getInfo(@PathVariable Long tableId) {
         GenTable table = genTableService.selectGenTableById(tableId);
         List<GenTable> tables = genTableService.selectGenTableAll();
         List<GenTableColumn> list = genTableColumnService
@@ -104,7 +104,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "查询数据库分页")
     @PreAuthorize("@ss.hasPerms('tool:gen:list')")
     @GetMapping("gen/db/list")
-    public ResponseResult<Page<GenTable>> dataList(GenTable genTable) {
+    public ResponseEntity<Page<GenTable>> dataList(GenTable genTable) {
         Page<GenTable> list = genTableService.selectDbTablePageDto(genTable);
         return successPage(list.getResult(), list.getPageSize(), list.getPageNum(),
             list.getTotal());
@@ -118,7 +118,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "查询数据表字段列表")
     @PreAuthorize("@ss.hasPerms('tool:gen:list')")
     @GetMapping(value = "gen/column/{tableId}")
-    public ResponseResult<List<GenTableColumn>> columnList(Long tableId) {
+    public ResponseEntity<List<GenTableColumn>> columnList(Long tableId) {
         List<GenTableColumn> list = genTableColumnService
             .selectGenTableColumnListByTableId(tableId);
         return success(list);
@@ -132,7 +132,7 @@ public class GenController extends BaseController {
     @PreAuthorize("@ss.hasPerms('tool:gen:import')")
     @PlatLog(value = "导入表结构（保存）", category = 51)
     @PostMapping("gen/importTable")
-    public ResponseResult<String> importTableSave(String tables) {
+    public ResponseEntity<String> importTableSave(String tables) {
         String[] tableNames = Convert.toStrArray(tables);
         // 查询表信息
         List<GenTable> tableList = genTableService.selectDbTableListByNames(tableNames);
@@ -148,9 +148,9 @@ public class GenController extends BaseController {
     @PlatLog(value = "创建表结构（保存）", category = 50)
     @PostMapping("gen/createTable")
     @LimitScope(name = "genTableSave", key = "genTableSave")
-    public ResponseResult<String> save(String sql) {
+    public ResponseEntity<String> save(String sql) {
         try {
-            SqlUtil.filterKeyword(sql);
+            SqlUtils.filterKeyword(sql);
             List<SQLStatement> sqlStatements = SQLUtils.parseStatements(sql, DbType.mysql);
             List<String> tableNames = new ArrayList<>();
             for (SQLStatement sqlStatement : sqlStatements) {
@@ -166,10 +166,10 @@ public class GenController extends BaseController {
                 .selectDbTableListByNames(tableNames.toArray(new String[tableNames.size()]));
             String operName = SecurityUtils.getUsername();
             genTableService.importGenTable(tableList, operName);
-            return ResponseResult.ok();
+            return ResponseEntity.ok();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
-            return ResponseResult.error("创建表结构异常");
+            return ResponseEntity.error("创建表结构异常");
         }
     }
 
@@ -182,7 +182,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "修改保存代码生成业务", category = 20)
     @PostMapping("gen")
     @LimitScope(name = "genTableUpdate", key = "genTableUpdate")
-    public ResponseResult<String> editSave(@Validated @RequestBody GenTable genTable) {
+    public ResponseEntity<String> editSave(@Validated @RequestBody GenTable genTable) {
         genTableService.validateEdit(genTable);
         genTableService.updateGenTable(genTable);
         return success();
@@ -197,7 +197,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "删除代码生成", category = 40)
     @DeleteMapping("gen/{tableIds}")
     @LimitScope(name = "genTableDelete", key = "genTableDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] tableIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] tableIds) {
         genTableService.deleteGenTableByIds(tableIds);
         return success();
     }
@@ -211,7 +211,7 @@ public class GenController extends BaseController {
     @PlatLog(value = "预览代码", category = 50)
     @PreAuthorize("@ss.hasPerms('tool:gen:preview')")
     @GetMapping("gen/preview/{tableId}")
-    public ResponseResult<Map<String, String>> preview(@PathVariable("tableId") Long tableId) throws IOException {
+    public ResponseEntity<Map<String, String>> preview(@PathVariable("tableId") Long tableId) throws IOException {
         Map<String, String> dataMap = genTableService.previewCode(tableId);
         return success(dataMap);
     }
@@ -239,7 +239,7 @@ public class GenController extends BaseController {
     @PreAuthorize("@ss.hasPerms('tool:gen:code')")
     @PlatLog(value = "生成代码（自定义路径）", category = 50)
     @GetMapping("gen/genCode/{tableName}")
-    public ResponseResult<String> genCode(@PathVariable("tableName") String tableName) {
+    public ResponseEntity<String> genCode(@PathVariable("tableName") String tableName) {
         genTableService.generatorCode(tableName);
         return success();
     }
@@ -252,7 +252,7 @@ public class GenController extends BaseController {
     @PreAuthorize("@ss.hasPerms('tool:gen:update')")
     @PlatLog(value = "同步数据库结构", category = 20)
     @GetMapping("gen/synchDb/{tableName}")
-    public ResponseResult<String> synchDb(@PathVariable("tableName") String tableName) {
+    public ResponseEntity<String> synchDb(@PathVariable("tableName") String tableName) {
         genTableService.synchDb(tableName);
         return success();
     }

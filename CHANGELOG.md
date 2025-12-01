@@ -1,4 +1,10 @@
-
+### 版本号：1.1.14
+- 更新日期：2025-12-01
+- 更新内容：
+1. 更新tools基础包，采用ResponseEntity，code采用200等int类型
+2. 删除本地的HttpStatus，用commons包内的HttpStatus，保持与spring一致
+3. 修改和调整部分注释帮助文字
+4. 删除SQLFilterUtils文件
 
 ### 版本号：1.1.13
 - 更新日期：2025-11-25

@@ -37,6 +37,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.admin.entity.AdminUser;
 import net.linlan.frame.admin.service.AdminUserService;
@@ -92,7 +93,7 @@ public class BaseAppController extends BaseController {
     @AuthIgnore
     @GetMapping("/app/selectList")
     @Encrypt
-    public ResponseResult<List<BaseAppDto>> selectList(BaseAppParam param) {
+    public ResponseEntity<List<BaseAppDto>> selectList(BaseAppParam param) {
         Page<BaseAppDto> result = baseAppService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -109,7 +110,7 @@ public class BaseAppController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:app:list')")
     @GetMapping("/app/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseAppDto>> list(BaseAppVoParam param) {
+    public ResponseEntity<Pagination<BaseAppDto>> list(BaseAppVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -152,7 +153,7 @@ public class BaseAppController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:app:detail')")
     @GetMapping(value = "/app/{appId}")
     @Encrypt
-    public ResponseResult<BaseAppInfoDto> getInfo(@PathVariable String appId) {
+    public ResponseEntity<BaseAppInfoDto> getInfo(@PathVariable String appId) {
         if (ObjectUtils.isEmpty(appId)) {
             return failure();
         }
@@ -173,7 +174,7 @@ public class BaseAppController extends BaseController {
     @PostMapping("/app/save")
     @Encrypt
     @LimitScope(name = "baseAppSave", key = "baseAppSave")
-    public ResponseResult<String> save(@Validated @RequestBody BaseAppVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody BaseAppVo input) {
         if (ObjectUtils.isNotEmpty(baseAppService.findById(input.getId()))) {
             return error("新增参数'" + input.getId() + "'失败，参数键名已存在");
         }
@@ -191,7 +192,7 @@ public class BaseAppController extends BaseController {
     @PostMapping("/app/update")
     @Encrypt
     @LimitScope(name = "baseAppUpdate", key = "baseAppUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody BaseAppVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody BaseAppVo input) {
 
         baseAppService.update(BaseAppVo.transTo(input));
         return success();
@@ -207,7 +208,7 @@ public class BaseAppController extends BaseController {
     @PostMapping("/app/delete/{appIds}")
     @Encrypt
     @LimitScope(name = "baseAppDelete", key = "baseAppDelete")
-    public ResponseResult<String> delete(@PathVariable String[] appIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] appIds) {
         baseAppService.deleteByIds(appIds);
         return success();
     }
@@ -222,7 +223,7 @@ public class BaseAppController extends BaseController {
     @PlatLog(value = "应用初始化", category = 20)
     @PostMapping("/app/init/{id}")
     @Encrypt
-    public ResponseResult init(@RequestBody AppInitialVo input,
+    public ResponseEntity init(@RequestBody AppInitialVo input,
                                @PathVariable(value = "id") String id) {
         if (ObjectUtils.isEmpty(input)) {
             return success();
@@ -364,7 +365,7 @@ public class BaseAppController extends BaseController {
     @DeleteMapping("/app/refreshCache")
     @Encrypt
     @LimitScope(name = "baseAppRefresh", key = "baseAppRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetConfigCache();
         return success();
     }
@@ -377,7 +378,7 @@ public class BaseAppController extends BaseController {
     @PlatLog(value = "顶级行政区划下拉框")
     @GetMapping("/app/xzqh/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseXzqhDto>> xzqhList(BaseXzqhParam param) {
+    public ResponseEntity<Pagination<BaseXzqhDto>> xzqhList(BaseXzqhParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -397,7 +398,7 @@ public class BaseAppController extends BaseController {
     @PlatLog(value = "管理单位下拉框")
     @GetMapping("/app/organ/list")
     @Encrypt
-    public ResponseResult<Pagination<KeyValueMapDto>> organList(BaseOrganParam param) {
+    public ResponseEntity<Pagination<KeyValueMapDto>> organList(BaseOrganParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }

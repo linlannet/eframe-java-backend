@@ -31,7 +31,7 @@ import org.springframework.security.web.authentication.logout.LogoutSuccessHandl
 import com.alibaba.fastjson2.JSON;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.comm.manager.AsyncManager;
@@ -67,6 +67,6 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler {
                     loginUser.getAppId(), loginUser.getUserLid(), LogCategoryEnum.ADMIN.getKey()));
         }
         ServletUtils.renderString(response,
-            JSON.toJSONString(ResponseResult.ok(MessageUtils.message("user.logout.success"))));
+            JSON.toJSONString(ResponseEntity.ok(MessageUtils.message("user.logout.success"))));
     }
 }

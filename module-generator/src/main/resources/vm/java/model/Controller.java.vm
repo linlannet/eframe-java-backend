@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.RandomUtils;
-import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
 
@@ -50,7 +50,7 @@ public class ${ClassName}Controller extends BaseController
     @PlatLog(value = "查询${functionName}列表")
     @GetMapping("/${businessName}/list")
     @Encrypt
-    public ResponseResult<List<${ClassName}>> list(${ClassName} param)
+    public ResponseEntity<List<${ClassName}>> list(${ClassName} param)
     {
         List<${ClassName}> list = ${className}Service.getList(JsonMapUtils.beanToMap(param));
         return success(list);
@@ -59,7 +59,7 @@ public class ${ClassName}Controller extends BaseController
     @PlatLog(value = "查询${functionName}分页")
     @GetMapping("/${businessName}/list")
     @Encrypt
-    public ResponseResult<List<${ClassName}>> list(${ClassName}Param param)
+    public ResponseEntity<List<${ClassName}>> list(${ClassName}Param param)
     {
         Page<${ClassName}Dto> result = ${className}Service.getPageDto(param);
         if (result == null){
@@ -93,7 +93,7 @@ public class ${ClassName}Controller extends BaseController
     @PlatLog(value = "主键获取${functionName}详细信息", category = 1)
     @GetMapping(value = "/${businessName}/{${pkColumn.javaField}}")
     @Encrypt
-    public ResponseResult<${ClassName}> get${ClassName}ById(@PathVariable("${pkColumn.javaField}") ${pkColumn.javaType} ${pkColumn.javaField})
+    public ResponseEntity<${ClassName}> get${ClassName}ById(@PathVariable("${pkColumn.javaField}") ${pkColumn.javaType} ${pkColumn.javaField})
     {
         return success(${className}Service.findById(${pkColumn.javaField}));
     }
@@ -107,7 +107,7 @@ public class ${ClassName}Controller extends BaseController
     @PostMapping("/${businessName}/save")
     @Encrypt
     @LimitScope(name = "${className}Save", key = "${className}Save")
-    public ResponseResult<String> save(@RequestBody ${ClassName} input)
+    public ResponseEntity<String> save(@RequestBody ${ClassName} input)
     {
         ${className}Service.save(input);
         return success();
@@ -122,7 +122,7 @@ public class ${ClassName}Controller extends BaseController
     @PostMapping("/${businessName}/update")
     @Encrypt
     @LimitScope(name = "${className}Update", key = "${className}Update")
-    public ResponseResult<String> update(@RequestBody ${ClassName} input)
+    public ResponseEntity<String> update(@RequestBody ${ClassName} input)
     {
         return success(${className}Service.update(input));
     }
@@ -136,7 +136,7 @@ public class ${ClassName}Controller extends BaseController
 	@PostMapping("/${businessName}/delete/{${pkColumn.javaField}s}")
     @Encrypt
     @LimitScope(name = "${className}Delete", key = "${className}Delete")
-    public ResponseResult<String> delete(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s)
+    public ResponseEntity<String> delete(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s)
     {
         return success(${className}Service.deleteByIds(${pkColumn.javaField}s));
     }

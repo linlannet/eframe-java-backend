@@ -53,24 +53,24 @@
     }],
     "responseParamsTable": true, //是否将响应参数表展示在文档中, 默认true，@since 2.2.5
     "responseBodyAdvice":{ //自smart-doc 1.9.8起，非必须项，ResponseBodyAdvice统一返回设置(不要随便配置根据项目的技术来配置)，可用ignoreResponseBodyAdvice tag来忽略
-        "className":"net.linlan.commons.core.ResponseResult" //通用响应体
+        "className":"net.linlan.commons.core.http.ResponseEntity" //通用响应体
     },
     "customResponseFields": [{ //自定义添加字段和注释，一般用户处理第三方jar包库，非必须
         "name": "code",//覆盖响应码字段
         "desc": "返回状态码:正常状态为0",//覆盖响应码的字段注释
-        "ownerClassName": "net.linlan.commons.core.ResponseResult", //指定你要添加注释的类名
+        "ownerClassName": "net.linlan.commons.core.http.ResponseEntity", //指定你要添加注释的类名
         "ignore":false, //设置true会被自动忽略掉不会出现在文档中
         "value": "0"//设置响应码的值
     },{ //自定义添加字段和注释，一般用户处理第三方jar包库，非必须
         "name": "msg",//覆盖响应码字段
         "desc": "返回消息",//覆盖响应码的字段注释
-        "ownerClassName": "net.linlan.commons.core.ResponseResult", //指定你要添加注释的类名
+        "ownerClassName": "net.linlan.commons.core.http.ResponseEntity", //指定你要添加注释的类名
         "ignore":false, //设置true会被自动忽略掉不会出现在文档中
         "value": "正常"//设置响应码的值
     },{ //自定义添加字段和注释，一般用户处理第三方jar包库，非必须
         "name": "success",//覆盖响应码字段
         "desc": "成功标记:正常为true,错误为false",//覆盖响应码的字段注释
-        "ownerClassName": "net.linlan.commons.core.ResponseResult", //指定你要添加注释的类名
+        "ownerClassName": "net.linlan.commons.core.http.ResponseEntity", //指定你要添加注释的类名
         "ignore":false, //设置true会被自动忽略掉不会出现在文档中
         "value": "true"//设置响应码的值
     }],

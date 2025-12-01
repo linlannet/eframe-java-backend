@@ -19,7 +19,7 @@ package net.linlan.frame.page;
 
 import com.github.pagehelper.PageHelper;
 
-import net.linlan.utils.sql.SqlUtil;
+import net.linlan.commons.db.filter.SqlUtils;
 
 /**
  * 分页工具类
@@ -34,7 +34,7 @@ public class PageUtils extends PageHelper {
         PageDomain pageDomain = TableSupport.buildPageRequest();
         Integer pageNum = pageDomain.getPageNum();
         Integer pageSize = pageDomain.getPageSize();
-        String orderBy = SqlUtil.escapeOrderBySql(pageDomain.getOrderBy());
+        String orderBy = SqlUtils.escapeOrderBySql(pageDomain.getOrderBy());
         Boolean reasonable = pageDomain.getReasonable();
         PageHelper.startPage(pageNum, pageSize, orderBy).setReasonable(reasonable);
     }

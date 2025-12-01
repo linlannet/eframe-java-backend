@@ -35,8 +35,8 @@ import com.google.common.collect.Lists;
 
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.param.CommLogVoParam;
@@ -65,7 +65,7 @@ public class CommLogController extends BaseController {
     @PlatLog(value = "查看全部日志列表")
     @PreAuthorize("@ss.hasPerms('monitor:commlog:list')")
     @GetMapping("commlog/list")
-    public ResponseResult<Pagination<CommLogVo>> list(CommLogParam param) {
+    public ResponseEntity<Pagination<CommLogVo>> list(CommLogParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -107,7 +107,7 @@ public class CommLogController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:commlog:delete')")
     @DeleteMapping("commlog/{ids}")
     @LimitScope(name = "commLogDelete", key = "commLogDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         commLogService.deleteByIds(ids);
         return success();
     }

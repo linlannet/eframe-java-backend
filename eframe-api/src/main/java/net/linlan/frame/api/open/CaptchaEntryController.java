@@ -32,8 +32,8 @@ import com.google.code.kaptcha.Producer;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.RandomUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.admin.service.InitialConfigService;
 import net.linlan.frame.view.admin.vo.CaptchaReturnVo;
 import net.linlan.sys.web.RedisService;
@@ -70,12 +70,12 @@ public class CaptchaEntryController {
     @PlatLog(value = "获取验证码")
     @GetMapping("captcha/get")
     @Encrypt
-    public ResponseResult<CaptchaReturnVo> getCode() throws IOException {
+    public ResponseEntity<CaptchaReturnVo> getCode() throws IOException {
         CaptchaReturnVo captchaReturnVo = new CaptchaReturnVo();
         boolean captchaEnabled = initialConfigService.selectCaptchaEnabled();
         captchaReturnVo.setCaptchaEnabled(captchaEnabled);
         if (!captchaEnabled) {
-            return ResponseResult.ok(captchaReturnVo);
+            return ResponseEntity.ok(captchaReturnVo);
         }
 
         // 保存验证码信息
@@ -103,11 +103,11 @@ public class CaptchaEntryController {
         try {
             ImageIO.write(image, "jpg", os);
         } catch (IOException e) {
-            return ResponseResult.error(e.getMessage());
+            return ResponseEntity.error(e.getMessage());
         }
         captchaReturnVo.setUuid(uuid);
         captchaReturnVo.setImg(Base64.encode(os.toByteArray()));
-        return ResponseResult.ok(captchaReturnVo);
+        return ResponseEntity.ok(captchaReturnVo);
     }
 
     /**
@@ -117,12 +117,12 @@ public class CaptchaEntryController {
     @PlatLog(value = "获取消息验证码")
     @GetMapping("message/captcha/get")
     @Encrypt
-    public ResponseResult<CaptchaReturnVo> getMessageCode() {
+    public ResponseEntity<CaptchaReturnVo> getMessageCode() {
         CaptchaReturnVo captchaReturnVo = new CaptchaReturnVo();
         boolean captchaEnabled = initialConfigService.selectCaptchaEnabled();
         captchaReturnVo.setCaptchaEnabled(captchaEnabled);
         if (!captchaEnabled) {
-            return ResponseResult.ok(captchaReturnVo);
+            return ResponseEntity.ok(captchaReturnVo);
         }
 
         // 保存验证码信息
@@ -150,7 +150,7 @@ public class CaptchaEntryController {
 
         captchaReturnVo.setUuid(uuid);
         captchaReturnVo.setCode(code);
-        return ResponseResult.ok(captchaReturnVo);
+        return ResponseEntity.ok(captchaReturnVo);
     }
 
 }

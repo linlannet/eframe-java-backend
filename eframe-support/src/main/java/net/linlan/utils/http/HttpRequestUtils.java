@@ -41,6 +41,7 @@ import lombok.NoArgsConstructor;
 import net.linlan.commons.core.StringUtils;
 
 /**
+ * http请求处理工具类
  * @author Linlan
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

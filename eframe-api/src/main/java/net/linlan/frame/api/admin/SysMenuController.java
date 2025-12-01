@@ -35,9 +35,9 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.admin.dto.AdminMenuVo;
 import net.linlan.frame.admin.dto.PermsDto;
 import net.linlan.frame.admin.param.AdminMenuVoParam;
@@ -83,7 +83,7 @@ public class SysMenuController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:menu:list')")
     @GetMapping("menu/list")
     @Encrypt
-    public ResponseResult<List<AdminMenuVo>> list(AdminMenuVoParam param) {
+    public ResponseEntity<List<AdminMenuVo>> list(AdminMenuVoParam param) {
         List<AdminMenuVo> menus = adminMenuService.selectMenuList(param,
             SecurityUtils.getUserLid());
         return success(menus);
@@ -98,7 +98,7 @@ public class SysMenuController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:menu:list')")
     @GetMapping("menu/page")
     @Encrypt
-    public ResponseResult<Page<AdminMenuVo>> page(AdminMenuVoParam param) {
+    public ResponseEntity<Page<AdminMenuVo>> page(AdminMenuVoParam param) {
         Page<AdminMenuVo> result = adminMenuService.selectMenuListPage(param);
         Map<String, String> typeNameMap = frameDictionaryService
             .getDictionaryList("ADMIN_MENU_TYPE");
@@ -121,7 +121,7 @@ public class SysMenuController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:menu:detail')")
     @GetMapping(value = "menu/{menuId}")
     @Encrypt
-    public ResponseResult<AdminMenuVo> getInfo(@PathVariable Long menuId) {
+    public ResponseEntity<AdminMenuVo> getInfo(@PathVariable Long menuId) {
         if (ObjectUtils.isEmpty(menuId)) {
             return failure();
         }
@@ -150,7 +150,7 @@ public class SysMenuController extends BaseController {
     @PlatLog(value = "获取菜单下拉树列表")
     @GetMapping("menu/treeselect")
     @Encrypt
-    public ResponseResult<MenuTreeRoleVo> treeselect(AdminMenuVoParam param) {
+    public ResponseEntity<MenuTreeRoleVo> treeselect(AdminMenuVoParam param) {
         List<AdminMenuVo> menus = adminMenuService.selectMenuList(param,
             SecurityUtils.getUserLid());
         List<TreeSelect> treeSelects = adminMenuManager.buildMenuTreeSelect(menus);
@@ -167,7 +167,7 @@ public class SysMenuController extends BaseController {
     @PlatLog(value = "获取菜单下拉初始树列表")
     @GetMapping("menu/treeInit")
     @Encrypt
-    public ResponseResult<List<LayuiTree>> treeInit(SysMenuParam param) {
+    public ResponseEntity<List<LayuiTree>> treeInit(SysMenuParam param) {
 
         param.setAppId(Constants.ENT_APP_ID);
         param.setIsMenuAll("ALL");
@@ -202,12 +202,12 @@ public class SysMenuController extends BaseController {
     @PlatLog(value = "加载对应角色菜单列表树")
     @GetMapping(value = "menu/roleMenuTreeselect/{roleId}")
     @Encrypt
-    public ResponseResult<MenuTreeRoleVo> roleMenuTreeselect(@PathVariable("roleId") Long roleId) {
+    public ResponseEntity<MenuTreeRoleVo> roleMenuTreeselect(@PathVariable("roleId") Long roleId) {
         List<AdminMenuVo> menus = adminMenuService.selectMenuList(SecurityUtils.getUserLid());
         MenuTreeRoleVo menuTreeVo = new MenuTreeRoleVo();
         menuTreeVo.setCheckedKeys(adminMenuService.selectMenuListByRoleId(roleId));
         menuTreeVo.setMenus(adminMenuManager.buildMenuTreeSelect(menus));
-        return ResponseResult.ok(menuTreeVo);
+        return ResponseEntity.ok(menuTreeVo);
     }
 
     /**
@@ -220,7 +220,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/save/single")
     @Encrypt
     @LimitScope(name = "sysMenuSave", key = "sysMenuSave")
-    public ResponseResult<String> saveSingle(@Validated @RequestBody AdminMenuVo input) {
+    public ResponseEntity<String> saveSingle(@Validated @RequestBody AdminMenuVo input) {
         if (!adminMenuManager.checkMenuNameUnique(input)) {
             return error("新增菜单'" + input.getMenuName() + "'失败，菜单名称已存在");
         }
@@ -245,7 +245,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/update/single")
     @Encrypt
     @LimitScope(name = "sysMenuUpdate", key = "sysMenuUpdate")
-    public ResponseResult<String> updateSingle(@Validated @RequestBody AdminMenuVo input) {
+    public ResponseEntity<String> updateSingle(@Validated @RequestBody AdminMenuVo input) {
         if (!adminMenuManager.checkMenuNameUnique(input)) {
             return error("修改菜单'" + input.getMenuName() + "'失败，菜单名称已存在");
         }
@@ -271,7 +271,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/save")
     @Encrypt
     @LimitScope(name = "sysMenuSave", key = "sysMenuSave")
-    public ResponseResult<String> save(@Validated @RequestBody AdminMenuVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody AdminMenuVo input) {
         if (!adminMenuManager.checkMenuNameUnique(input)) {
             return error("新增菜单'" + input.getMenuName() + "'失败，菜单名称已存在");
         }
@@ -334,7 +334,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/update")
     @Encrypt
     @LimitScope(name = "sysMenuUpdate", key = "sysMenuUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody AdminMenuVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody AdminMenuVo input) {
         if (!adminMenuManager.checkMenuNameUnique(input)) {
             return error("修改菜单'" + input.getMenuName() + "'失败，菜单名称已存在");
         } else if (input.getMenuId().equals(input.getParentId())) {
@@ -368,7 +368,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/delete/{menuIds}")
     @Encrypt
     @LimitScope(name = "sysMenuDelete", key = "sysMenuDelete")
-    public ResponseResult<String> delete(@PathVariable("menuIds") Long[] menuIds) {
+    public ResponseEntity<String> delete(@PathVariable("menuIds") Long[] menuIds) {
         for (Long menuId : menuIds) {
             if (adminMenuService.hasChildByParentId(menuId) > 0) {
                 return warn("存在未删除的子菜单,不允许删除");
@@ -394,7 +394,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("menu/disable/{id}")
     @Encrypt
     @LimitScope(name = "sysMenuDelete", key = "sysMenuDelete")
-    public ResponseResult<String> delete(@RequestBody SysMenu input) {
+    public ResponseEntity<String> delete(@RequestBody SysMenu input) {
         Long menuId = input.getId();
         if (adminMenuService.hasChildByParentId(menuId) > 0) {
             return error("该部门包含未停用的子菜单！");

@@ -38,8 +38,8 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.service.InitialRedisService;
@@ -72,7 +72,7 @@ public class BaseConfigPartsController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:configparts:list')")
     @GetMapping("parts/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseConfigPartsVo>> list(BaseConfigPartsVoParam param) {
+    public ResponseEntity<Pagination<BaseConfigPartsVo>> list(BaseConfigPartsVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -115,7 +115,7 @@ public class BaseConfigPartsController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:configparts:detail')")
     @GetMapping(value = "parts/{cfgKey}")
     @Encrypt
-    public ResponseResult<BaseConfigPartsVo> getInfo(@PathVariable String cfgKey) {
+    public ResponseEntity<BaseConfigPartsVo> getInfo(@PathVariable String cfgKey) {
         if (ObjectUtils.isEmpty(cfgKey)) {
             return failure();
         }
@@ -136,7 +136,7 @@ public class BaseConfigPartsController extends BaseController {
     @PostMapping("parts/save")
     @Encrypt
     @LimitScope(name = "baseConfigPartsSave", key = "baseConfigPartsSave")
-    public ResponseResult<String> save(@Validated @RequestBody BaseConfigPartsVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody BaseConfigPartsVo input) {
         if (ObjectUtils.isNotEmpty(baseConfigPartsService.findById(input.getCfgValue()))) {
             return error("新增键值'" + input.getCfgKey() + "'失败，参数键名已存在");
         }
@@ -154,7 +154,7 @@ public class BaseConfigPartsController extends BaseController {
     @PostMapping("parts/update")
     @Encrypt
     @LimitScope(name = "baseConfigPartsUpdate", key = "baseConfigPartsUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody BaseConfigPartsVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody BaseConfigPartsVo input) {
         //        if (ObjectUtils.isNotEmpty(baseConfigPartsService.findById(config.getId())))
         //        {
         //            return error("修改参数'" + config.getId() + "'失败，参数键名已存在");
@@ -173,7 +173,7 @@ public class BaseConfigPartsController extends BaseController {
     @PostMapping("parts/delete/{cfgKeys}")
     @Encrypt
     @LimitScope(name = "baseConfigPartsDelete", key = "baseConfigPartsDelete")
-    public ResponseResult<String> delete(@PathVariable String[] cfgKeys) {
+    public ResponseEntity<String> delete(@PathVariable String[] cfgKeys) {
         baseConfigPartsService.deleteByIds(cfgKeys);
         return success();
     }
@@ -187,7 +187,7 @@ public class BaseConfigPartsController extends BaseController {
     @DeleteMapping("config/refreshCache")
     @Encrypt
     @LimitScope(name = "baseConfigPartsRefresh", key = "baseConfigPartsRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetConfigCache();
         return success();
     }

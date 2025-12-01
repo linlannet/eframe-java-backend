@@ -40,8 +40,8 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.frame.api.BaseController;
@@ -78,7 +78,7 @@ public class BaseDicTypeController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:dictype:list')")
     @GetMapping("dictype/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseDicTypeVo>> list(BaseDicTypeVoParam param) {
+    public ResponseEntity<Pagination<BaseDicTypeVo>> list(BaseDicTypeVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -124,7 +124,7 @@ public class BaseDicTypeController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:dictype:detail')")
     @GetMapping(value = "dictype/{dictId}")
     @Encrypt
-    public ResponseResult<BaseDicTypeVo> getInfo(@PathVariable String dictId) {
+    public ResponseEntity<BaseDicTypeVo> getInfo(@PathVariable String dictId) {
         if (ObjectUtils.isEmpty(dictId)) {
             return failure();
         }
@@ -145,7 +145,7 @@ public class BaseDicTypeController extends BaseController {
     @PostMapping("dictype/save")
     @Encrypt
     @LimitScope(name = "baseDicTypeSave", key = "baseDicTypeSave")
-    public ResponseResult<String> save(@Validated @RequestBody BaseDicTypeVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody BaseDicTypeVo input) {
         if (ObjectUtils.isNotEmpty(
             baseDicTypeService.getList(new StringMap().put("typeId", input.getTypeId()).map()))) {
             return error("新增字典'" + input.getTypeId() + "'失败，字典类型已存在");
@@ -164,7 +164,7 @@ public class BaseDicTypeController extends BaseController {
     @PostMapping("dictype/update")
     @Encrypt
     @LimitScope(name = "baseDicTypeUpdate", key = "baseDicTypeUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody BaseDicTypeVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody BaseDicTypeVo input) {
         baseDicTypeService.update(BaseDicTypeVo.transTo(input));
         return success();
     }
@@ -179,7 +179,7 @@ public class BaseDicTypeController extends BaseController {
     @PostMapping("dictype/delete/{dictIds}")
     @Encrypt
     @LimitScope(name = "baseDicTypeDelete", key = "baseDicTypeDelete")
-    public ResponseResult<String> delete(@PathVariable String[] dictIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] dictIds) {
         baseDicTypeService.deleteByIds(dictIds);
         return success();
     }
@@ -193,7 +193,7 @@ public class BaseDicTypeController extends BaseController {
     @DeleteMapping("dictype/refreshCache")
     @Encrypt
     @LimitScope(name = "baseDicTypeRefresh", key = "baseDicTypeRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetDictCache();
         return success();
     }
@@ -205,7 +205,7 @@ public class BaseDicTypeController extends BaseController {
     @PlatLog(value = "获取字典选择框列表")
     @GetMapping("dictype/option/select")
     @Encrypt
-    public ResponseResult<List<BaseDicTypeVo>> optionSelect() {
+    public ResponseEntity<List<BaseDicTypeVo>> optionSelect() {
         Page<BaseDicTypeDto> result = baseDicTypeService.getPageDto(new BaseDicTypeParam());
         if (ObjectUtils.isEmpty(result)) {
             return empty();

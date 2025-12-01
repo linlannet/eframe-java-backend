@@ -29,8 +29,8 @@ import com.github.pagehelper.Page;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.admin.dto.UserPresetDto;
 import net.linlan.frame.admin.entity.UserPreset;
@@ -65,7 +65,7 @@ public class UserPresetController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:preset:list')")
     @GetMapping("preset/list")
     @Encrypt
-    public ResponseResult<Pagination<UserPresetDto>> list(UserPresetParam param) {
+    public ResponseEntity<Pagination<UserPresetDto>> list(UserPresetParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -107,7 +107,7 @@ public class UserPresetController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:preset:detail')")
     @GetMapping(value = "preset/{configId}")
     @Encrypt
-    public ResponseResult<UserPresetDto> getInfo(@PathVariable Long configId) {
+    public ResponseEntity<UserPresetDto> getInfo(@PathVariable Long configId) {
         if (ObjectUtils.isEmpty(configId)) {
             return failure();
         }
@@ -128,7 +128,7 @@ public class UserPresetController extends BaseController {
     @PostMapping("preset/save")
     @Encrypt
     @LimitScope(name = "userPresetSave", key = "userPresetSave")
-    public ResponseResult<String> save(@Validated @RequestBody UserPreset input) {
+    public ResponseEntity<String> save(@Validated @RequestBody UserPreset input) {
         if (ObjectUtils.isNotEmpty(userPresetEntService.findById(input.getId()))) {
             return error("新增参数'" + input.getId() + "'失败，参数键名已存在");
         }
@@ -146,7 +146,7 @@ public class UserPresetController extends BaseController {
     @PostMapping("preset/update")
     @Encrypt
     @LimitScope(name = "userPresetUpdate", key = "userPresetUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody UserPreset input) {
+    public ResponseEntity<String> update(@Validated @RequestBody UserPreset input) {
         userPresetEntService.update(input);
         return success();
     }
@@ -161,7 +161,7 @@ public class UserPresetController extends BaseController {
     @PostMapping("preset/delete/{configIds}")
     @Encrypt
     @LimitScope(name = "userPresetDelete", key = "userPresetDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] configIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] configIds) {
         userPresetEntService.deleteByIds(configIds);
         return success();
     }
@@ -175,7 +175,7 @@ public class UserPresetController extends BaseController {
     @DeleteMapping("preset/refreshCache")
     @Encrypt
     @LimitScope(name = "userPresetRefresh", key = "userPresetRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetConfigCache();
         return success();
     }

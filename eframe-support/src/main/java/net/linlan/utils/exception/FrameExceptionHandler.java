@@ -31,9 +31,9 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import lombok.extern.slf4j.Slf4j;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.http.HttpStatus;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.html.EscapeUtils;
-import net.linlan.utils.http.HttpStatus;
 import net.linlan.utils.text.Convert;
 
 /**
@@ -52,11 +52,11 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(AccessDeniedException.class)
-    public ResponseResult handleAccessDeniedException(AccessDeniedException e,
+    public ResponseEntity handleAccessDeniedException(AccessDeniedException e,
                                                       HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求地址'{}',权限校验失败'{}'", requestURI, e.getMessage());
-        return ResponseResult.error(HttpStatus.FORBIDDEN + "", "没有权限，请联系管理员授权");
+        return ResponseEntity.error(HttpStatus.UNAUTHORIZED.value(), "没有权限，请联系管理员授权");
     }
 
     /**
@@ -66,11 +66,11 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-    public ResponseResult handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException e,
+    public ResponseEntity handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException e,
                                                               HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求地址'{}',不支持'{}'请求", requestURI, e.getMethod());
-        return ResponseResult.error(e.getMessage());
+        return ResponseEntity.error(e.getMessage());
     }
 
     /**
@@ -80,11 +80,11 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(CommonException.class)
-    public ResponseResult handleServiceException(CommonException e, HttpServletRequest request) {
+    public ResponseEntity handleServiceException(CommonException e, HttpServletRequest request) {
         log.error(e.getMessage(), e);
         Integer code = e.getCode();
-        return ObjectUtils.isNotEmpty(code) ? ResponseResult.error(code + "", e.getMessage())
-            : ResponseResult.error(e.getMessage());
+        return ObjectUtils.isNotEmpty(code) ? ResponseEntity.error(code, e.getMessage())
+            : ResponseEntity.error(e.getMessage());
     }
 
     /**
@@ -94,11 +94,11 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(MissingPathVariableException.class)
-    public ResponseResult handleMissingPathVariableException(MissingPathVariableException e,
+    public ResponseEntity handleMissingPathVariableException(MissingPathVariableException e,
                                                              HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求路径中缺少必需的路径变量'{}',发生系统异常.", requestURI, e);
-        return ResponseResult.error(String.format("请求路径中缺少必需的路径变量[%s]", e.getVariableName()));
+        return ResponseEntity.error(String.format("请求路径中缺少必需的路径变量[%s]", e.getVariableName()));
     }
 
     /**
@@ -108,7 +108,7 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public ResponseResult handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException e,
+    public ResponseEntity handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException e,
                                                                     HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         String value = Convert.toStr(e.getValue());
@@ -116,7 +116,7 @@ public class FrameExceptionHandler {
             value = EscapeUtils.clean(value);
         }
         log.error("请求参数类型不匹配'{}',发生系统异常.", requestURI, e);
-        return ResponseResult.error(String.format("请求参数类型不匹配，参数[%s]要求类型为：'%s'，但输入值为：'%s'",
+        return ResponseEntity.error(String.format("请求参数类型不匹配，参数[%s]要求类型为：'%s'，但输入值为：'%s'",
             e.getName(), e.getRequiredType().getName(), value));
     }
 
@@ -127,10 +127,10 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(RuntimeException.class)
-    public ResponseResult handleRuntimeException(RuntimeException e, HttpServletRequest request) {
+    public ResponseEntity handleRuntimeException(RuntimeException e, HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求地址'{}',发生未知异常.", requestURI, e);
-        return ResponseResult.error(e.getMessage());
+        return ResponseEntity.error(e.getMessage());
     }
 
     /**
@@ -140,10 +140,10 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(Exception.class)
-    public ResponseResult handleException(Exception e, HttpServletRequest request) {
+    public ResponseEntity handleException(Exception e, HttpServletRequest request) {
         String requestURI = request.getRequestURI();
         log.error("请求地址'{}',发生系统异常.", requestURI, e);
-        return ResponseResult.error(e.getMessage());
+        return ResponseEntity.error(e.getMessage());
     }
 
     /**
@@ -152,10 +152,10 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(BindException.class)
-    public ResponseResult handleBindException(BindException e) {
+    public ResponseEntity handleBindException(BindException e) {
         log.error(e.getMessage(), e);
         String message = e.getAllErrors().get(0).getDefaultMessage();
-        return ResponseResult.error(message);
+        return ResponseEntity.error(message);
     }
 
     /**
@@ -167,7 +167,7 @@ public class FrameExceptionHandler {
     public Object handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         log.error(e.getMessage(), e);
         String message = e.getBindingResult().getFieldError().getDefaultMessage();
-        return ResponseResult.error(message);
+        return ResponseEntity.error(message);
     }
 
     /**
@@ -176,7 +176,7 @@ public class FrameExceptionHandler {
      * @return  响应对象
      */
     @ExceptionHandler(DemoModeException.class)
-    public ResponseResult handleDemoModeException(DemoModeException e) {
-        return ResponseResult.error("演示模式，不允许操作");
+    public ResponseEntity handleDemoModeException(DemoModeException e) {
+        return ResponseEntity.error("演示模式，不允许操作");
     }
 }

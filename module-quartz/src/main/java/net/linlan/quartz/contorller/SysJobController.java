@@ -36,9 +36,9 @@ import com.google.common.collect.Lists;
 
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.quartz.param.SysJobParam;
@@ -68,7 +68,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:list')")
     @GetMapping("job/list")
-    public ResponseResult<List<SysJobVo>> list(SysJobParam param) {
+    public ResponseEntity<List<SysJobVo>> list(SysJobParam param) {
         Page<ScheduleInfoDto> result = scheduleInfoService.getPageDto(param.toModelParam());
         if (ObjectUtils.isEmpty(result)) {
             return empty();
@@ -102,7 +102,7 @@ public class SysJobController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:detail')")
     @GetMapping(value = "job/{jobId}")
-    public ResponseResult<SysJobVo> getInfo(@PathVariable("jobId") String jobId) {
+    public ResponseEntity<SysJobVo> getInfo(@PathVariable("jobId") String jobId) {
         if (ObjectUtils.isEmpty(jobId)) {
             return failure();
         }
@@ -123,7 +123,7 @@ public class SysJobController extends BaseController {
     @PlatLog(value = "定时任务", category = 10)
     @PostMapping("job/save")
     @LimitScope(name = "sysJobSave", key = "sysJobSave")
-    public ResponseResult<String> save(@RequestBody SysJobVo input) {
+    public ResponseEntity<String> save(@RequestBody SysJobVo input) {
         if (!ScheduleUtils.isValid(input.getCronExpression())) {
             return error("新增任务'" + input.getJobName() + "'失败，Cron表达式不正确");
         } else if (StringUtils.containsIgnoreCase(input.getInvokeTarget(), Constants.LOOKUP_RMI)) {
@@ -153,7 +153,7 @@ public class SysJobController extends BaseController {
     @PlatLog(value = "定时任务", category = 20)
     @PostMapping("job/update")
     @LimitScope(name = "sysJobUpdate", key = "sysJobUpdate")
-    public ResponseResult<String> edit(@RequestBody SysJobVo input) {
+    public ResponseEntity<String> edit(@RequestBody SysJobVo input) {
         if (!ScheduleUtils.isValid(input.getCronExpression())) {
             return error("修改任务'" + input.getJobName() + "'失败，Cron表达式不正确");
         } else if (StringUtils.containsIgnoreCase(input.getInvokeTarget(), Constants.LOOKUP_RMI)) {
@@ -182,7 +182,7 @@ public class SysJobController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:job:changeStatus')")
     @PlatLog(value = "定时任务", category = 20)
     @PostMapping("job/changeStatus")
-    public ResponseResult<String> changeStatus(@RequestBody SysJobVo input) {
+    public ResponseEntity<String> changeStatus(@RequestBody SysJobVo input) {
         ScheduleInfo newJob = scheduleInfoService.findById(input.getJobId());
         newJob.setStatus(input.getStatus());
         scheduleInfoService.update(newJob);
@@ -197,7 +197,7 @@ public class SysJobController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:job:changeStatus')")
     @PlatLog(value = "定时任务", category = 20)
     @PostMapping("job/run")
-    public ResponseResult<String> run(@RequestBody SysJobVo input) {
+    public ResponseEntity<String> run(@RequestBody SysJobVo input) {
         scheduleInfoService.run(new String[] { input.getJobId() });
         return success();
     }
@@ -211,7 +211,7 @@ public class SysJobController extends BaseController {
     @PlatLog(value = "定时任务", category = 40)
     @DeleteMapping("job/{jobIds}")
     @LimitScope(name = "sysJobDelete", key = "sysJobDelete")
-    public ResponseResult<String> delete(@PathVariable String[] jobIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] jobIds) {
         scheduleInfoService.deleteByIds(jobIds);
         return success();
     }

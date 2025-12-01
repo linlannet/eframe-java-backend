@@ -32,8 +32,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.service.AdminUserOnlineService;
@@ -64,7 +64,7 @@ public class UserOnlineController extends BaseController {
     @PlatLog(value = "获取在线用户列表")
     @PreAuthorize("@ss.hasPerms('monitor:online:list')")
     @GetMapping("online/list")
-    public ResponseResult<List<AdminUserOnline>> list(String ipaddr, String username) {
+    public ResponseEntity<List<AdminUserOnline>> list(String ipaddr, String username) {
         Collection<String> keys = redisService.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
         List<AdminUserOnline> userOnlineList = new ArrayList<>();
         for (String key : keys) {
@@ -93,7 +93,7 @@ public class UserOnlineController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:online:forceLogout')")
     @PlatLog(value = "在线用户下线", category = 32)
     @DeleteMapping("online/{tokenId}")
-    public ResponseResult<String> forceLogout(@PathVariable String tokenId) {
+    public ResponseEntity<String> forceLogout(@PathVariable String tokenId) {
         redisService.delete(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
         return success();
     }

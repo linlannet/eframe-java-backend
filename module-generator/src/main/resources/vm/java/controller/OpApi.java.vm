@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.RandomUtils;
-import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
 
@@ -52,7 +52,7 @@ public class ${ClassName}OpApi extends BaseController {
     @PlatLog(value = "新增${functionName}", category = 10)
     @PostMapping("${businessName}/save")
     @LimitScope(name = "${className}Save", key = "${className}Save")
-    public ResponseResult<String> ${className}AddOp(@RequestBody ${ClassName}Vo input) {
+    public ResponseEntity<String> ${className}AddOp(@RequestBody ${ClassName}Vo input) {
         if (${className}OpManager.do${ClassName}Op(ApiIntfConfig.VALUE_AT_ADD, null, input)){
             return success();
         }
@@ -67,7 +67,7 @@ public class ${ClassName}OpApi extends BaseController {
     @PlatLog(value = "修改${functionName}", category = 20)
     @PostMapping("${businessName}/update")
     @LimitScope(name = "${className}Update", key = "${className}Update")
-    public ResponseResult<String> ${className}UpdateOp(@RequestBody ${ClassName}Vo input) {
+    public ResponseEntity<String> ${className}UpdateOp(@RequestBody ${ClassName}Vo input) {
         if (${className}OpManager.do${ClassName}Op(ApiIntfConfig.VALUE_AT_UPDATE, null, input)){
             return success();
         }
@@ -82,7 +82,7 @@ public class ${ClassName}OpApi extends BaseController {
     @PlatLog(value = "删除${functionName}", category = 40)
     @PostMapping("${businessName}/delete/{${pkColumn.javaField}s}")
     @LimitScope(name = "${className}Delete", key = "${className}Delete")
-    public ResponseResult<String> ${className}DeleteOp(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s) {
+    public ResponseEntity<String> ${className}DeleteOp(@PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s) {
         return success(${className}Service.deleteByIds(${pkColumn.javaField}s));
     }
 
