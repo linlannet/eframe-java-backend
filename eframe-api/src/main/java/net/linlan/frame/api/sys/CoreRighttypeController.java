@@ -29,8 +29,8 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.sys.core.dto.CoreRighttypeDto;
@@ -59,7 +59,7 @@ public class CoreRighttypeController extends BaseController {
     @PlatLog(value = "查询权限分类分页")
     @GetMapping("/righttype/list")
     @Encrypt
-    public ResponseResult<List<CoreRighttype>> list(CoreRighttypeParam param) {
+    public ResponseEntity<List<CoreRighttype>> list(CoreRighttypeParam param) {
         Page<CoreRighttypeDto> result = coreRighttypeService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -93,7 +93,7 @@ public class CoreRighttypeController extends BaseController {
     @PlatLog(value = "主键获取权限分类详细信息", category = 1)
     @GetMapping(value = "/righttype/{id}")
     @Encrypt
-    public ResponseResult<CoreRighttype> getCoreRighttypeById(@PathVariable("id") String id) {
+    public ResponseEntity<CoreRighttype> getCoreRighttypeById(@PathVariable("id") String id) {
         return success(coreRighttypeService.findById(id));
     }
 
@@ -106,7 +106,7 @@ public class CoreRighttypeController extends BaseController {
     @PostMapping("/righttype/save")
     @Encrypt
     @LimitScope(name = "coreRighttypeSave", key = "coreRighttypeSave")
-    public ResponseResult<String> save(@RequestBody CoreRighttype input) {
+    public ResponseEntity<String> save(@RequestBody CoreRighttype input) {
         coreRighttypeService.save(input);
         return success();
     }
@@ -120,7 +120,7 @@ public class CoreRighttypeController extends BaseController {
     @PostMapping("/righttype/update")
     @Encrypt
     @LimitScope(name = "coreRighttypeUpdate", key = "coreRighttypeUpdate")
-    public ResponseResult<String> update(@RequestBody CoreRighttype input) {
+    public ResponseEntity<String> update(@RequestBody CoreRighttype input) {
         coreRighttypeService.update(input);
         return success();
     }
@@ -134,7 +134,7 @@ public class CoreRighttypeController extends BaseController {
     @PostMapping("/righttype/delete/{ids}")
     @Encrypt
     @LimitScope(name = "coreRighttypeDelete", key = "coreRighttypeDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         coreRighttypeService.deleteByIds(ids);
         return success();
     }

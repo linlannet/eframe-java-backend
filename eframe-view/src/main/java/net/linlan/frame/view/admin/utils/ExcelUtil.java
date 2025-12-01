@@ -95,8 +95,8 @@ import net.linlan.commons.core.ArrayUtils;
 import net.linlan.commons.core.DateUtils;
 import net.linlan.commons.core.NumberUtils;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.regex.RegexUtils;
 import net.linlan.utils.config.PlatformConfig;
 import net.linlan.utils.exception.UtilsException;
@@ -486,7 +486,7 @@ public class ExcelUtil<T> {
      * @param sheetName 工作表的名称
      * @return  返回对象
      */
-    public ResponseResult exportExcel(List<T> list, String sheetName) {
+    public ResponseEntity exportExcel(List<T> list, String sheetName) {
         return exportExcel(list, sheetName, StringUtils.EMPTY);
     }
 
@@ -498,7 +498,7 @@ public class ExcelUtil<T> {
      * @param title 标题
      * @return  返回对象
      */
-    public ResponseResult exportExcel(List<T> list, String sheetName, String title) {
+    public ResponseEntity exportExcel(List<T> list, String sheetName, String title) {
         this.init(list, sheetName, title, Type.EXPORT);
         return exportExcel();
     }
@@ -537,7 +537,7 @@ public class ExcelUtil<T> {
      * @param sheetName 工作表的名称
      * @return  返回对象
      */
-    public ResponseResult importTemplateExcel(String sheetName) {
+    public ResponseEntity importTemplateExcel(String sheetName) {
         return importTemplateExcel(sheetName, StringUtils.EMPTY);
     }
 
@@ -548,7 +548,7 @@ public class ExcelUtil<T> {
      * @param title 标题
      * @return  返回对象
      */
-    public ResponseResult importTemplateExcel(String sheetName, String title) {
+    public ResponseEntity importTemplateExcel(String sheetName, String title) {
         this.init(null, sheetName, title, Type.IMPORT);
         return exportExcel();
     }
@@ -599,14 +599,14 @@ public class ExcelUtil<T> {
      * 
      * @return 返回对象
      */
-    public ResponseResult exportExcel() {
+    public ResponseEntity exportExcel() {
         OutputStream out = null;
         try {
             writeSheet();
             String filename = encodingFilename(sheetName);
             out = new FileOutputStream(getAbsoluteFile(filename));
             wb.write(out);
-            return ResponseResult.ok(filename);
+            return ResponseEntity.ok(filename);
         } catch (Exception e) {
             log.error("导出Excel异常{}", e.getMessage());
             throw new UtilsException("导出Excel失败，请联系网站管理员！");

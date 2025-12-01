@@ -37,8 +37,8 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.service.InitialRedisService;
@@ -72,7 +72,7 @@ public class BaseConfigWholeController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:configwhole:list')")
     @GetMapping("configwhole/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseConfigWholeVo>> list(BaseConfigWholeVoParam param) {
+    public ResponseEntity<Pagination<BaseConfigWholeVo>> list(BaseConfigWholeVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -115,7 +115,7 @@ public class BaseConfigWholeController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:configwhole:detail')")
     @GetMapping(value = "configwhole/{configId}")
     @Encrypt
-    public ResponseResult<BaseConfigWholeVo> getInfo(@PathVariable String configId) {
+    public ResponseEntity<BaseConfigWholeVo> getInfo(@PathVariable String configId) {
         if (ObjectUtils.isEmpty(configId)) {
             return failure();
         }
@@ -134,7 +134,7 @@ public class BaseConfigWholeController extends BaseController {
     @PlatLog(value = "根据参数键名查询参数值")
     @GetMapping(value = "configwhole/configKey/{configKey}")
     @Encrypt
-    public ResponseResult<BaseConfigWholeVo> getConfigKey(@PathVariable String configKey) {
+    public ResponseEntity<BaseConfigWholeVo> getConfigKey(@PathVariable String configKey) {
         if (ObjectUtils.isEmpty(configKey)) {
             return failure();
         }
@@ -155,7 +155,7 @@ public class BaseConfigWholeController extends BaseController {
     @PostMapping("configwhole/save")
     @Encrypt
     @LimitScope(name = "baseConfigWholeSave", key = "baseConfigWholeSave")
-    public ResponseResult<String> save(@Validated @RequestBody BaseConfigWholeVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody BaseConfigWholeVo input) {
         if (ObjectUtils.isNotEmpty(baseConfigWholeService.getByKey(input.getConfigKey()))) {
             return error("新增参数'" + input.getConfigKey() + "'失败，参数键名已存在");
         }
@@ -173,7 +173,7 @@ public class BaseConfigWholeController extends BaseController {
     @PostMapping("configwhole/update")
     @Encrypt
     @LimitScope(name = "baseConfigWholeUpdate", key = "baseConfigWholeUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody BaseConfigWholeVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody BaseConfigWholeVo input) {
         //        if (ObjectUtils.isNotEmpty(baseConfigWholeService.getByKey(config.getConfigKey())))
         //        {
         //            return error("修改参数'" + config.getConfigName() + "'失败，参数键名已存在");
@@ -192,7 +192,7 @@ public class BaseConfigWholeController extends BaseController {
     @PostMapping("configwhole/delete/{configIds}")
     @Encrypt
     @LimitScope(name = "baseConfigWholeDelete", key = "baseConfigWholeDelete")
-    public ResponseResult<String> delete(@PathVariable String[] configIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] configIds) {
         baseConfigWholeService.deleteByIds(configIds);
         return success();
     }
@@ -206,7 +206,7 @@ public class BaseConfigWholeController extends BaseController {
     @PostMapping("configwhole/refreshCache")
     @Encrypt
     @LimitScope(name = "baseConfigWholeRefresh", key = "baseConfigWholeRefresh")
-    public ResponseResult<String> refreshCache() {
+    public ResponseEntity<String> refreshCache() {
         initialRedisService.resetConfigCache();
         return success();
     }

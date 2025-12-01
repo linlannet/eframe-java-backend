@@ -432,7 +432,7 @@ public class ThirdMemberService {
      * 根据手机号码获取会员信息
      * @param mobile    手机号码
      * @param source    来源
-     * @return
+     * @return    第三方会员对象
      */
 
     public ThirdMember getByMobile(String mobile, String source) {
@@ -448,7 +448,7 @@ public class ThirdMemberService {
      * 根据账号获取会员信息
      * @param username  用户名
      * @param source    来源
-     * @return
+     * @return    第三方会员对象
      */
 
     public ThirdMember getByUsername(String username, String source) {
@@ -464,7 +464,7 @@ public class ThirdMemberService {
      * 根据邮箱获取会员用户信息
      * @param email     邮箱地址
      * @param source    来源
-     * @return
+     * @return    第三方会员对象
      */
 
     public ThirdMember getByEmail(String email, String source) {
@@ -480,7 +480,7 @@ public class ThirdMemberService {
      * 通过username, mobile, email获取对象
      * @param userkey   用户名邮箱或手机号码
      * @param source    来源
-     * @return
+     * @return    第三方会员对象
      */
 
     public ThirdMember getByUserkey(String userkey, String source) {

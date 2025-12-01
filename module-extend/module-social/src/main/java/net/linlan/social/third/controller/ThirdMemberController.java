@@ -30,6 +30,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.social.third.dto.ThirdMemberDto;
 import net.linlan.social.third.entity.ThirdMember;
@@ -59,7 +60,7 @@ public class ThirdMemberController extends BaseController {
     @PlatLog(value = "查询第三方用户分页", category = 0)
     @GetMapping("/member/list")
     @Encrypt
-    public ResponseResult<List<ThirdMember>> list(ThirdMemberParam param) {
+    public ResponseEntity<List<ThirdMember>> list(ThirdMemberParam param) {
         Page<ThirdMemberDto> result = thirdMemberService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +78,7 @@ public class ThirdMemberController extends BaseController {
     @PlatLog(value = "主键获取第三方用户详细信息", category = 1)
     @GetMapping(value = "/member/{id}")
     @Encrypt
-    public ResponseResult<ThirdMember> findById(@PathVariable("id") Long id) {
+    public ResponseEntity<ThirdMember> findById(@PathVariable("id") Long id) {
         return success(thirdMemberService.findById(id));
     }
 
@@ -90,7 +91,7 @@ public class ThirdMemberController extends BaseController {
     @PostMapping("/member/save")
     @Encrypt
     @LimitScope(name = "thirdMemberSave", key = "thirdMemberSave")
-    public ResponseResult<String> save(@RequestBody ThirdMember input) {
+    public ResponseEntity<String> save(@RequestBody ThirdMember input) {
         thirdMemberService.save(input);
         return success();
     }
@@ -104,7 +105,7 @@ public class ThirdMemberController extends BaseController {
     @PostMapping("/member/update")
     @Encrypt
     @LimitScope(name = "thirdMemberUpdate", key = "thirdMemberUpdate")
-    public ResponseResult<String> update(@RequestBody ThirdMember input) {
+    public ResponseEntity<String> update(@RequestBody ThirdMember input) {
         thirdMemberService.update(input);
         return success();
     }
@@ -118,7 +119,7 @@ public class ThirdMemberController extends BaseController {
     @PostMapping("/member/delete/{ids}")
     @Encrypt
     @LimitScope(name = "thirdMemberDelete", key = "thirdMemberDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         thirdMemberService.deleteByIds(ids);
         return success();
     }

@@ -28,9 +28,9 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.admin.dto.AdminUserDto;
@@ -43,7 +43,7 @@ import net.linlan.frame.comm.service.SysPermissionService;
 import net.linlan.frame.comm.service.TokenService;
 import net.linlan.frame.comm.service.WebLayoutService;
 import net.linlan.frame.comm.vo.AppLoginInfo;
-import net.linlan.frame.mbiz.constant.HttpStatusEnum;
+import net.linlan.frame.mbiz.constant.HttpStatusExtend;
 import net.linlan.frame.view.admin.manager.AdminMenuManager;
 import net.linlan.frame.view.admin.vo.AdminUserVo;
 import net.linlan.frame.view.admin.vo.AppPageIndexInfo;
@@ -98,12 +98,12 @@ public class SysLoginController {
     @PlatLog(value = "登录方法", category = 10)
     @PostMapping("/login")
     @Encrypt
-    public ResponseResult<AppLoginInfo> login(@RequestBody LoginBody loginBody) {
+    public ResponseEntity<AppLoginInfo> login(@RequestBody LoginBody loginBody) {
         // 生成令牌
         AppLoginInfo appLoginInfo = adminLoginService.login(loginBody.getUsername(),
             loginBody.getPassword(), loginBody.getCode(), loginBody.getUuid(),
             loginBody.getAppId());
-        return ResponseResult.ok(appLoginInfo);
+        return ResponseEntity.ok(appLoginInfo);
     }
 
     /**
@@ -114,7 +114,7 @@ public class SysLoginController {
     @PlatLog(value = "获取应用用户信息")
     @GetMapping("appUserInfo")
     @Encrypt
-    public ResponseResult<AppUserInfo> appUserInfo() {
+    public ResponseEntity<AppUserInfo> appUserInfo() {
         FrameUserDetails loginUser = getLoginUser();
         AdminUserDto user = adminUserService.getByUsername(loginUser.getUsername());
         // 角色集合
@@ -130,7 +130,7 @@ public class SysLoginController {
             loginUser.setPerms(permissions);
             tokenService.refreshToken(loginUser);
         }
-        return ResponseResult.ok(appUserInfo);
+        return ResponseEntity.ok(appUserInfo);
     }
 
     /**
@@ -141,10 +141,10 @@ public class SysLoginController {
     @PlatLog(value = "获取应用首页信息")
     @GetMapping("appIndexInfo")
     @Encrypt
-    public ResponseResult<AppPageIndexInfo> appIndexInfo() {
+    public ResponseEntity<AppPageIndexInfo> appIndexInfo() {
         FrameUserDetails loginUser = getLoginUser();
         AppPageIndexInfo appPageIndexInfo = adminMenuManager.getAppPageIndexInfo(loginUser);
-        return ResponseResult.ok(appPageIndexInfo);
+        return ResponseEntity.ok(appPageIndexInfo);
     }
 
     /**
@@ -155,7 +155,7 @@ public class SysLoginController {
     @PlatLog(srcCode = 1, value = "内部应用，第三方应用登录方法，返回字段少的平台用户对象.")
     @PostMapping("/platLogin")
     @Encrypt
-    public ResponseResult<WebLayoutDto> platLogin(HttpServletRequest request) {
+    public ResponseEntity<WebLayoutDto> platLogin(HttpServletRequest request) {
         String accountId = request.getHeader(Constants.ACCOUNT_KEY);
         CoreAccount coreAccount = (CoreAccount) redisService
             .get(CacheConstants.PLAT_ACCOUNT_KEY + accountId);
@@ -166,10 +166,10 @@ public class SysLoginController {
                 BaseAppParam param = new BaseAppParam();
                 Page<BaseAppDto> baseApps = baseAppService.getPageDto(param);
                 if (baseApps != null && baseApps.size() > 0) {
-                    return ResponseResult.error(HttpStatusEnum.TOKEN_ERROR.getCode(),
-                        HttpStatusEnum.TOKEN_ERROR.getMsg());
+                    return ResponseEntity.error(HttpStatusExtend.TOKEN_ERROR.getCode(),
+                        HttpStatusExtend.TOKEN_ERROR.getMsg());
                 } else {
-                    return ResponseResult.error("1202", "未初始化数据。");
+                    return ResponseEntity.error(HttpStatusExtend.ERROR_INIT.getCode(), "未初始化数据。");
                 }
             }
             redisService.set(CacheConstants.PLAT_ACCOUNT_KEY + accountId, coreAccount,
@@ -177,7 +177,7 @@ public class SysLoginController {
         }
 
         WebLayoutDto platConfInfoDto = platAdminEntService.getPlatConfInfoDto(coreAccount);
-        return ResponseResult.ok().setResultData(platConfInfoDto);
+        return ResponseEntity.ok().setResultData(platConfInfoDto);
     }
 
     /**
@@ -189,12 +189,12 @@ public class SysLoginController {
     @PlatLog(value = "第三方服务商登录方法", category = 10, srcCode = 1)
     @PostMapping("/third/ecorgan/login")
     @Encrypt
-    public ResponseResult<AppLoginInfo> thirdEcorganLogin(@RequestBody LoginBody loginBody) {
+    public ResponseEntity<AppLoginInfo> thirdEcorganLogin(@RequestBody LoginBody loginBody) {
         // 生成令牌
         AppLoginInfo appLoginInfo = adminLoginService.thirdEcorganLogin(loginBody.getUsername(),
             loginBody.getPassword(), loginBody.getCode(), loginBody.getUuid(),
             loginBody.getAppId());
-        return ResponseResult.ok(appLoginInfo);
+        return ResponseEntity.ok(appLoginInfo);
     }
 
     /**
@@ -207,7 +207,7 @@ public class SysLoginController {
     @GetMapping("captcha/verify")
     @Encrypt
     @LimitScope(name = "sysLoginCaptcha", key = "sysLoginCaptcha", interval = 10, count = 5)
-    public ResponseResult<String> validateCaptcha(String code, String uuid) {
+    public ResponseEntity<String> validateCaptcha(String code, String uuid) {
 
         FrameUserDetails loginUser = getLoginUser();
         String username = loginUser.getUsername();
@@ -228,7 +228,7 @@ public class SysLoginController {
             throw new CaptchaException();
         }
 
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 
 }

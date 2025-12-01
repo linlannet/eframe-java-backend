@@ -24,11 +24,11 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.13</version>
+        <version>1.1.14</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>eframe-web</artifactId>
-    <version>1.1.13</version>
+    <version>1.1.14</version>
     <packaging>jar</packaging>
     <name>eframe-web</name>
     <description>
@@ -260,17 +260,17 @@
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-authn</artifactId>
-            <version>1.1.13</version>
+            <version>1.1.14</version>
         </dependency>
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-oss</artifactId>
-            <version>1.1.13</version>
+            <version>1.1.14</version>
         </dependency>
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-social</artifactId>
-            <version>1.1.13</version>
+            <version>1.1.14</version>
         </dependency>
 
     </dependencies>
@@ -390,7 +390,7 @@
                 <executions>
                     <execution>
                         <!--如果不需要在执行编译时启动smart-doc，则将phase注释掉-->
-<!--                        <phase>compile</phase>-->
+                        <phase>compile</phase>
                         <goals>
                             <!--smart-doc提供了html、openapi、markdown等goal，可按需配置-->
                             <goal>html</goal>

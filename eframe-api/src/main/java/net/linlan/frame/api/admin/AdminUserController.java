@@ -35,6 +35,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dao.AdminUserRoleDao;
 import net.linlan.frame.admin.dto.AdminUserDto;
@@ -99,7 +100,7 @@ public class AdminUserController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:list')")
     @GetMapping("user/list")
     @Encrypt
-    public ResponseResult<List<AdminUserVo>> list(AdminUserVoParam param) {
+    public ResponseEntity<List<AdminUserVo>> list(AdminUserVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -121,7 +122,7 @@ public class AdminUserController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:detail')")
     @GetMapping(value = { "user/{adminId}" })
     @Encrypt
-    public ResponseResult<LoginUserRolesPosVo> getInfo(@PathVariable(value = "adminId", required = false) Long adminId) {
+    public ResponseEntity<LoginUserRolesPosVo> getInfo(@PathVariable(value = "adminId", required = false) Long adminId) {
         LoginUserRolesPosVo loginUserRolesPosVo = new LoginUserRolesPosVo();
         if (ObjectUtils.isNotEmpty(adminId)) {
             adminUserService.checkUserDataScope(adminId);
@@ -156,7 +157,7 @@ public class AdminUserController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:list')")
     @GetMapping("user/deptTree")
     @Encrypt
-    public ResponseResult<List<TreeSelect>> deptTree(AdminDeptParam param) {
+    public ResponseEntity<List<TreeSelect>> deptTree(AdminDeptParam param) {
         return success(adminDeptService.selectDeptTreeList(param));
     }
 
@@ -169,7 +170,7 @@ public class AdminUserController extends BaseController {
     @PostMapping("user/save")
     @Encrypt
     @LimitScope(name = "adminUserSave", key = "adminUserSave")
-    public ResponseResult<String> adminUserAddOp(@RequestBody AdminUserVo input) {
+    public ResponseEntity<String> adminUserAddOp(@RequestBody AdminUserVo input) {
         adminDeptService.checkDeptDataScope(input.getDeptId());
         adminMenuRolePosEntryManager.checkRoleDataScope(input.getRoleIds());
         if (!adminUserService.checkUsernameUnique(input.getUsername(), input.getId())) {
@@ -203,7 +204,7 @@ public class AdminUserController extends BaseController {
     @PostMapping("user/update")
     @Encrypt
     @LimitScope(name = "adminUserUpdate", key = "adminUserUpdate")
-    public ResponseResult<String> adminUserUpdateOp(@RequestBody AdminUserVo input) {
+    public ResponseEntity<String> adminUserUpdateOp(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
         adminUserService.checkUserDataScope(input.getId());
         adminDeptService.checkDeptDataScope(input.getDeptId());
@@ -233,7 +234,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "停用启用用户", category = 50)
     @PostMapping("user/disable/{id}")
     @Encrypt
-    public ResponseResult<String> disable(@RequestBody AdminUser input) {
+    public ResponseEntity<String> disable(@RequestBody AdminUser input) {
         if (input.getUserId().equals(SecurityUtils.getUserId())) {
             return error("当前用户不能停用");
         }
@@ -251,7 +252,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "重置密码", category = 51)
     @PostMapping("user/resetpassword/{ids}")
     @Encrypt
-    public ResponseResult<String> resetpassword(@PathVariable Long[] ids,
+    public ResponseEntity<String> resetpassword(@PathVariable Long[] ids,
                                                 @RequestBody AdminUserVo input) {
         for (Long id : ids) {
             AdminUser adminUser = new AdminUser();
@@ -276,7 +277,7 @@ public class AdminUserController extends BaseController {
     @PostMapping("user/delete/{adminIds}")
     @Encrypt
     @LimitScope(name = "adminUserDelete", key = "adminUserDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] adminIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] adminIds) {
         Long adminId = SecurityUtils.getUserLid();
         if (ArrayUtils.contains(adminIds, adminId)) {
             return error("当前用户不能删除");
@@ -315,7 +316,7 @@ public class AdminUserController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:import')")
     @PostMapping("user/importData")
     @Encrypt
-    public ResponseResult<String> importData(MultipartFile file,
+    public ResponseEntity<String> importData(MultipartFile file,
                                              boolean updateSupport) throws Exception {
         ExcelUtil<AdminUserVo> util = new ExcelUtil<AdminUserVo>(AdminUserVo.class);
         List<AdminUserVo> userList = util.importExcel(file.getInputStream());
@@ -345,7 +346,7 @@ public class AdminUserController extends BaseController {
     @Encrypt
     @PlatLog(value = "重置密码", category = 20)
     @PostMapping("user/resetPwd")
-    public ResponseResult<String> resetPwd(@RequestBody AdminUserVo input) {
+    public ResponseEntity<String> resetPwd(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
         adminUserService.checkUserDataScope(input.getId());
         String newPassword = ShaUtils.encryptPassword(input.getPassword());
@@ -361,7 +362,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "用户状态修改", category = 20)
     @PostMapping("user/changeStatus")
     @Encrypt
-    public ResponseResult<String> changeStatus(@RequestBody AdminUserVo input) {
+    public ResponseEntity<String> changeStatus(@RequestBody AdminUserVo input) {
         adminUserService.checkUserAllowed(new AdminUser(input.getId()));
         adminUserService.checkUserDataScope(input.getId());
         return returnRow(adminUserService.updateUserStatus(input.getId(), input.getStatus()));
@@ -376,7 +377,7 @@ public class AdminUserController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:user:detail')")
     @GetMapping("user/authRole/{adminId}")
     @Encrypt
-    public ResponseResult<String> authRole(@PathVariable("adminId") Long adminId) {
+    public ResponseEntity<String> authRole(@PathVariable("adminId") Long adminId) {
         LoginUserRolesVo loginUserRolesVo = new LoginUserRolesVo();
         AdminUserDto dto = adminUserService.getMoreById(adminId);
         AdminUserVo vo = null;
@@ -401,7 +402,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "用户授权角色", category = 31)
     @PostMapping("user/authRole")
     @Encrypt
-    public ResponseResult<String> insertAuthRole(Long adminId, Long[] roleIds) {
+    public ResponseEntity<String> insertAuthRole(Long adminId, Long[] roleIds) {
         adminUserService.checkUserDataScope(adminId);
         adminMenuRolePosEntryManager.checkRoleDataScope(roleIds);
         adminUserService.insertUserAuth(adminId, roleIds);
@@ -415,7 +416,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "个人资料信息查询")
     @GetMapping("/user/profile")
     @Encrypt
-    public ResponseResult<LoginUserProfileVo> profile() {
+    public ResponseEntity<LoginUserProfileVo> profile() {
         FrameUserDetails loginUser = getLoginUser();
         LoginUserProfileVo loginUserProfileVo = new LoginUserProfileVo();
         loginUserProfileVo.setUser(loginUser);
@@ -423,7 +424,7 @@ public class AdminUserController extends BaseController {
             .setRoleGroup(adminUserService.selectUserRoleGroup(loginUser.getUsername()));
         loginUserProfileVo
             .setPositionGroup(adminUserService.selectUserPostGroup(loginUser.getUsername()));
-        return ResponseResult.ok(loginUserProfileVo);
+        return ResponseEntity.ok(loginUserProfileVo);
     }
 
     /**
@@ -433,13 +434,13 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "个人信息查询")
     @GetMapping("/user/info")
     @Encrypt
-    public ResponseResult<AdminUserVo> info() {
+    public ResponseEntity<AdminUserVo> info() {
         FrameUserDetails loginUser = getLoginUser();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
 
         AdminUserVo userVo = (AdminUserVo) AdminUserVo.DTO.apply(currentUser);
 
-        return ResponseResult.ok(userVo);
+        return ResponseEntity.ok(userVo);
     }
 
     /**
@@ -450,7 +451,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "修改用户个人信息", category = 20)
     @PostMapping("/user/profile")
     @Encrypt
-    public ResponseResult<Boolean> updateProfile(@RequestBody AdminUserVo input) {
+    public ResponseEntity<Boolean> updateProfile(@RequestBody AdminUserVo input) {
         FrameUserDetails loginUser = getLoginUser();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
         if (!currentUser.getMobile().equals(input.getMobile())) {
@@ -488,7 +489,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "个人修改密码", category = 20)
     @PostMapping("/user/updatePwd")
     @Encrypt
-    public ResponseResult updatePwd(@RequestBody PasswordVo vo) {
+    public ResponseEntity updatePwd(@RequestBody PasswordVo vo) {
         FrameUserDetails loginUser = getLoginUser();
         String username = loginUser.getUsername();
         AdminUserDto currentUser = adminUserService.getByUsername(loginUser.getUsername());
@@ -523,7 +524,7 @@ public class AdminUserController extends BaseController {
     @PlatLog(value = "用户头像上传", category = 20)
     @PostMapping("/user/imagePath")
     @Encrypt
-    public ResponseResult<UserImagePathVo> imagePath(@RequestParam("file") MultipartFile file,
+    public ResponseEntity<UserImagePathVo> imagePath(@RequestParam("file") MultipartFile file,
                                                      HttpServletRequest request) throws Exception {
         if (!file.isEmpty()) {
             FrameUserDetails loginUser = getLoginUser();

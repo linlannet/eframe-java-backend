@@ -37,9 +37,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.view.admin.vo.SysCacheVo;
 import net.linlan.utils.constant.CacheConstants;
 
@@ -80,7 +80,7 @@ public class CacheMonitorController {
     @PlatLog(value = "获取缓存信息列表")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @GetMapping("cache")
-    public ResponseResult<Map<String, Object>> getInfo() throws Exception {
+    public ResponseEntity<Map<String, Object>> getInfo() throws Exception {
         Properties info = (Properties) redisTemplate
             .execute((RedisCallback<Object>) connection -> connection.info());
         Properties commandStats = (Properties) redisTemplate
@@ -101,7 +101,7 @@ public class CacheMonitorController {
             pieList.add(data);
         });
         result.put("commandStats", pieList);
-        return ResponseResult.ok(result);
+        return ResponseEntity.ok(result);
     }
 
     /**
@@ -112,8 +112,8 @@ public class CacheMonitorController {
     @PlatLog(value = "通过名称前缀获取缓存信息列表")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @GetMapping("cache/getNames")
-    public ResponseResult<List<SysCacheVo>> cache() {
-        return ResponseResult.ok(caches);
+    public ResponseEntity<List<SysCacheVo>> cache() {
+        return ResponseEntity.ok(caches);
     }
 
     /**
@@ -124,9 +124,9 @@ public class CacheMonitorController {
     @PlatLog(value = "通过名称获取缓存信息列表")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @GetMapping("cache/getKeys/{cacheName}")
-    public ResponseResult<TreeSet> getCacheKeys(@PathVariable String cacheName) {
+    public ResponseEntity<TreeSet> getCacheKeys(@PathVariable String cacheName) {
         Set<String> cacheKeys = redisTemplate.keys(cacheName + "*");
-        return ResponseResult.ok(new TreeSet<>(cacheKeys));
+        return ResponseEntity.ok(new TreeSet<>(cacheKeys));
     }
 
     /**
@@ -138,11 +138,11 @@ public class CacheMonitorController {
     @PlatLog(value = "通过名称获取缓存详情")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @GetMapping("cache/getValue/{cacheName}/{cacheKey}")
-    public ResponseResult<SysCacheVo> getCacheValue(@PathVariable String cacheName,
+    public ResponseEntity<SysCacheVo> getCacheValue(@PathVariable String cacheName,
                                                     @PathVariable String cacheKey) {
         String cacheValue = redisTemplate.opsForValue().get(cacheKey);
         SysCacheVo sysCache = new SysCacheVo(cacheName, cacheKey, cacheValue);
-        return ResponseResult.ok(sysCache);
+        return ResponseEntity.ok(sysCache);
     }
 
     /**
@@ -153,10 +153,10 @@ public class CacheMonitorController {
     @PlatLog(value = "通过名称前缀清理缓存")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @DeleteMapping("cache/clearCacheName/{cacheName}")
-    public ResponseResult<String> clearCacheName(@PathVariable String cacheName) {
+    public ResponseEntity<String> clearCacheName(@PathVariable String cacheName) {
         Collection<String> cacheKeys = redisTemplate.keys(cacheName + "*");
         redisTemplate.delete(cacheKeys);
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 
     /**
@@ -167,9 +167,9 @@ public class CacheMonitorController {
     @PlatLog(value = "通过名称清理缓存")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @DeleteMapping("cache/clearCacheKey/{cacheKey}")
-    public ResponseResult<String> clearCacheKey(@PathVariable String cacheKey) {
+    public ResponseEntity<String> clearCacheKey(@PathVariable String cacheKey) {
         redisTemplate.delete(cacheKey);
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 
     /**
@@ -179,9 +179,9 @@ public class CacheMonitorController {
     @PlatLog(value = "清理全部缓存")
     @PreAuthorize("@ss.hasPerms('monitor:cache:list')")
     @DeleteMapping("cache/clearCacheAll")
-    public ResponseResult<String> clearCacheAll() {
+    public ResponseEntity<String> clearCacheAll() {
         Collection<String> cacheKeys = redisTemplate.keys("*");
         redisTemplate.delete(cacheKeys);
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 }

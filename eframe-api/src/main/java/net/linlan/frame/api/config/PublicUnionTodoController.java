@@ -29,8 +29,8 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.config.dto.PublicUnionTodoDto;
 import net.linlan.frame.config.entity.PublicUnionTodo;
@@ -60,7 +60,7 @@ public class PublicUnionTodoController extends BaseController {
     @PlatLog(value = "查询统一待办分页")
     @GetMapping("/todo/list")
     @Encrypt
-    public ResponseResult<List<PublicUnionTodoDto>> list(PublicUnionTodoParam param) {
+    public ResponseEntity<List<PublicUnionTodoDto>> list(PublicUnionTodoParam param) {
         Page<PublicUnionTodoDto> result = portalUnionTodoService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -93,7 +93,7 @@ public class PublicUnionTodoController extends BaseController {
     @PlatLog(value = "主键获取统一待办详细信息", category = 1)
     @GetMapping(value = "/todo/{id}")
     @Encrypt
-    public ResponseResult<PublicUnionTodoDto> getPublicUnionTodoById(@PathVariable("id") String id) {
+    public ResponseEntity<PublicUnionTodoDto> getPublicUnionTodoById(@PathVariable("id") String id) {
         return success(portalUnionTodoService.findById(id));
     }
 
@@ -106,7 +106,7 @@ public class PublicUnionTodoController extends BaseController {
     @PostMapping("/todo/save")
     @Encrypt
     @LimitScope(name = "publicUnionTodoSave", key = "publicUnionTodoSave")
-    public ResponseResult<String> save(@RequestBody PublicUnionTodo input) {
+    public ResponseEntity<String> save(@RequestBody PublicUnionTodo input) {
         portalUnionTodoService.save(input);
         return success();
     }
@@ -120,7 +120,7 @@ public class PublicUnionTodoController extends BaseController {
     @PostMapping("/todo/update")
     @Encrypt
     @LimitScope(name = "publicUnionTodoUpdate", key = "publicUnionTodoUpdate")
-    public ResponseResult<String> update(@RequestBody PublicUnionTodo input) {
+    public ResponseEntity<String> update(@RequestBody PublicUnionTodo input) {
         portalUnionTodoService.update(input);
         return success();
     }
@@ -134,7 +134,7 @@ public class PublicUnionTodoController extends BaseController {
     @PostMapping("/todo/delete/{ids}")
     @Encrypt
     @LimitScope(name = "publicUnionTodoDelete", key = "publicUnionTodoDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         portalUnionTodoService.deleteByIds(ids);
         return success();
     }

@@ -29,8 +29,8 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.sys.core.dto.CoreRoletypeDto;
@@ -59,7 +59,7 @@ public class CoreRoletypeController extends BaseController {
     @PlatLog(value = "查询角色分类分页")
     @GetMapping("/roletype/list")
     @Encrypt
-    public ResponseResult<List<CoreRoletype>> list(CoreRoletypeParam param) {
+    public ResponseEntity<List<CoreRoletype>> list(CoreRoletypeParam param) {
         Page<CoreRoletypeDto> result = coreRoletypeService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -93,7 +93,7 @@ public class CoreRoletypeController extends BaseController {
     @PlatLog(value = "主键获取角色分类详细信息", category = 1)
     @GetMapping(value = "/roletype/{id}")
     @Encrypt
-    public ResponseResult<CoreRoletype> getCoreRoletypeById(@PathVariable("id") String id) {
+    public ResponseEntity<CoreRoletype> getCoreRoletypeById(@PathVariable("id") String id) {
         return success(coreRoletypeService.findById(id));
     }
 
@@ -106,7 +106,7 @@ public class CoreRoletypeController extends BaseController {
     @PostMapping("/roletype/save")
     @Encrypt
     @LimitScope(name = "coreRoletypeSave", key = "coreRoletypeSave")
-    public ResponseResult<String> save(@RequestBody CoreRoletype input) {
+    public ResponseEntity<String> save(@RequestBody CoreRoletype input) {
         coreRoletypeService.save(input);
         return success();
     }
@@ -120,7 +120,7 @@ public class CoreRoletypeController extends BaseController {
     @PostMapping("/roletype/update")
     @Encrypt
     @LimitScope(name = "coreRoletypeUpdate", key = "coreRoletypeUpdate")
-    public ResponseResult<String> update(@RequestBody CoreRoletype input) {
+    public ResponseEntity<String> update(@RequestBody CoreRoletype input) {
         coreRoletypeService.update(input);
         return success();
     }
@@ -134,7 +134,7 @@ public class CoreRoletypeController extends BaseController {
     @PostMapping("/roletype/delete/{ids}")
     @Encrypt
     @LimitScope(name = "coreRoletypeDelete", key = "coreRoletypeDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         coreRoletypeService.deleteByIds(ids);
         return success();
     }

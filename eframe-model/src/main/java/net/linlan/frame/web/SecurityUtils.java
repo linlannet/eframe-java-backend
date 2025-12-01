@@ -24,10 +24,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.PatternMatchUtils;
 
 import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.http.HttpStatus;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.utils.constant.Constants;
 import net.linlan.utils.exception.CommonException;
-import net.linlan.utils.http.HttpStatus;
 
 /**
  * 安全服务工具类
@@ -47,7 +47,7 @@ public class SecurityUtils {
                 return getLoginUser().getUserId();
             }
         } catch (Exception e) {
-            throw new CommonException("获取用户UUID异常", HttpStatus.UNAUTHORIZED);
+            throw new CommonException("获取用户UUID异常", HttpStatus.UNAUTHORIZED.value());
         }
         return null;
     }
@@ -63,7 +63,7 @@ public class SecurityUtils {
                 return getLoginUser().getUserLid();
             }
         } catch (Exception e) {
-            throw new CommonException("获取用户LID异常", HttpStatus.UNAUTHORIZED);
+            throw new CommonException("获取用户LID异常", HttpStatus.UNAUTHORIZED.value());
         }
         return null;
     }
@@ -79,7 +79,7 @@ public class SecurityUtils {
                 return getLoginUser().getDeptId();
             }
         } catch (Exception e) {
-            throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED);
+            throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED.value());
         }
         return null;
     }
@@ -95,7 +95,7 @@ public class SecurityUtils {
                 return getLoginUser().getOrganId();
             }
         } catch (Exception e) {
-            throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED);
+            throw new CommonException("获取部门ID异常", HttpStatus.UNAUTHORIZED.value());
         }
         return null;
     }
@@ -111,7 +111,7 @@ public class SecurityUtils {
                 return getLoginUser().getUsername();
             }
         } catch (Exception e) {
-            throw new CommonException("获取用户账户异常", HttpStatus.UNAUTHORIZED);
+            throw new CommonException("获取用户账户异常", HttpStatus.UNAUTHORIZED.value());
         }
         return null;
     }
@@ -125,7 +125,7 @@ public class SecurityUtils {
             return (FrameUserDetails) getAuthentication().getPrincipal();
         } catch (Exception e) {
             //在登出的时候，没有用户，此时仍然需要保存操作记录，返回null对象
-            //            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED);
+            //            logger.info("获取用户信息异常", HttpStatus.UNAUTHORIZED.value());
             return null;
         }
     }

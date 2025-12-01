@@ -30,6 +30,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.web.SecurityUtils;
 import net.linlan.social.third.dto.ThirdMemberBindDto;
@@ -61,7 +62,7 @@ public class ThirdMemberBindController extends BaseController {
     @PlatLog(value = "查询用户身份提供商绑定分页", category = 0)
     @GetMapping("/memberbind/list")
     @Encrypt
-    public ResponseResult<List<ThirdMemberBindDto>> list(ThirdMemberBindParam param) {
+    public ResponseEntity<List<ThirdMemberBindDto>> list(ThirdMemberBindParam param) {
         Page<ThirdMemberBindDto> result = thirdMemberBindService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -79,7 +80,7 @@ public class ThirdMemberBindController extends BaseController {
     @PlatLog(value = "主键获取用户身份提供商绑定详细信息", category = 1)
     @GetMapping(value = "/memberbind/{id}")
     @Encrypt
-    public ResponseResult<ThirdMemberBind> findById(@PathVariable("id") String id) {
+    public ResponseEntity<ThirdMemberBind> findById(@PathVariable("id") String id) {
         return success(thirdMemberBindService.findById(id));
     }
 
@@ -92,7 +93,7 @@ public class ThirdMemberBindController extends BaseController {
     @PostMapping("/memberbind/save")
     @Encrypt
     @LimitScope(name = "thirdMemberBindSave", key = "thirdMemberBindSave")
-    public ResponseResult<String> save(@RequestBody ThirdMemberBind input) {
+    public ResponseEntity<String> save(@RequestBody ThirdMemberBind input) {
         thirdMemberBindService.save(input);
         return success();
     }
@@ -106,7 +107,7 @@ public class ThirdMemberBindController extends BaseController {
     @PostMapping("/memberbind/update")
     @Encrypt
     @LimitScope(name = "thirdMemberBindUpdate", key = "thirdMemberBindUpdate")
-    public ResponseResult<String> update(@RequestBody ThirdMemberBind input) {
+    public ResponseEntity<String> update(@RequestBody ThirdMemberBind input) {
         thirdMemberBindService.update(input);
         return success();
     }
@@ -120,7 +121,7 @@ public class ThirdMemberBindController extends BaseController {
     @PostMapping("/memberbind/delete/{ids}")
     @Encrypt
     @LimitScope(name = "thirdMemberBindDelete", key = "thirdMemberBindDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         thirdMemberBindService.deleteByIds(ids);
         return success();
     }
@@ -131,7 +132,7 @@ public class ThirdMemberBindController extends BaseController {
      */
     @PlatLog(value = "获取我的绑定列表或分页", category = 0)
     @GetMapping("/memberbind/mylist")
-    public ResponseResult<List<ThirdMemberBindDto>> mylist(ThirdMemberBindParam param) {
+    public ResponseEntity<List<ThirdMemberBindDto>> mylist(ThirdMemberBindParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return null;
         }

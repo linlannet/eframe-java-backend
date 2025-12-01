@@ -30,6 +30,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.sys.base.dto.BaseUserExtDto;
 import net.linlan.sys.base.entity.BaseUserExt;
@@ -59,7 +60,7 @@ public class BaseUserExtController extends BaseController {
     @PlatLog(value = "查询基础用户扩展信息分页", category = 0)
     @GetMapping("/baseuserext/list")
     @Encrypt
-    public ResponseResult<List<BaseUserExt>> list(BaseUserExtParam param) {
+    public ResponseEntity<List<BaseUserExt>> list(BaseUserExtParam param) {
         Page<BaseUserExtDto> result = baseUserExtService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +78,7 @@ public class BaseUserExtController extends BaseController {
     @PlatLog(value = "主键获取基础用户扩展信息详细信息", category = 1)
     @GetMapping(value = "/baseuserext/{id}")
     @Encrypt
-    public ResponseResult<BaseUserExt> findById(@PathVariable("id") String id) {
+    public ResponseEntity<BaseUserExt> findById(@PathVariable("id") String id) {
         return success(baseUserExtService.findById(id));
     }
 
@@ -90,7 +91,7 @@ public class BaseUserExtController extends BaseController {
     @PostMapping("/baseuserext/save")
     @Encrypt
     @LimitScope(name = "baseUserExtSave", key = "baseUserExtSave")
-    public ResponseResult<String> save(@RequestBody BaseUserExt input) {
+    public ResponseEntity<String> save(@RequestBody BaseUserExt input) {
         baseUserExtService.save(input);
         return success();
     }
@@ -104,7 +105,7 @@ public class BaseUserExtController extends BaseController {
     @PostMapping("/baseuserext/update")
     @Encrypt
     @LimitScope(name = "baseUserExtUpdate", key = "baseUserExtUpdate")
-    public ResponseResult<String> update(@RequestBody BaseUserExt input) {
+    public ResponseEntity<String> update(@RequestBody BaseUserExt input) {
         baseUserExtService.update(input);
         return success();
     }
@@ -118,7 +119,7 @@ public class BaseUserExtController extends BaseController {
     @PostMapping("/baseuserext/delete/{ids}")
     @Encrypt
     @LimitScope(name = "baseUserExtDelete", key = "baseUserExtDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         baseUserExtService.deleteByIds(ids);
         return success();
     }

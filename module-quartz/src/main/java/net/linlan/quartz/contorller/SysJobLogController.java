@@ -35,8 +35,8 @@ import com.google.common.collect.Lists;
 
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.quartz.param.SysJobLogParam;
@@ -63,7 +63,7 @@ public class SysJobLogController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:list')")
     @GetMapping("joblog/list")
-    public ResponseResult<List<SysJobLogVo>> list(SysJobLogParam param) {
+    public ResponseEntity<List<SysJobLogVo>> list(SysJobLogParam param) {
         Page<ScheduleLogDto> result = scheduleLogService.getPageDto(param.toModelParam());
         if (ObjectUtils.isEmpty(result)) {
             return empty();
@@ -97,7 +97,7 @@ public class SysJobLogController extends BaseController {
      */
     @PreAuthorize("@ss.hasPerms('monitor:job:detail')")
     @GetMapping(value = "joblog/{jobLogId}")
-    public ResponseResult<SysJobLogVo> getInfo(@PathVariable String jobLogId) {
+    public ResponseEntity<SysJobLogVo> getInfo(@PathVariable String jobLogId) {
         if (ObjectUtils.isEmpty(jobLogId)) {
             return failure();
         }
@@ -118,7 +118,7 @@ public class SysJobLogController extends BaseController {
     @PlatLog(value = "定时任务调度日志", category = 40)
     @DeleteMapping("joblog/{jobLogIds}")
     @LimitScope(name = "sysJobLogDelete", key = "sysJobLogDelete")
-    public ResponseResult<String> delete(@PathVariable String[] jobLogIds) {
+    public ResponseEntity<String> delete(@PathVariable String[] jobLogIds) {
         scheduleLogService.deleteByIds(jobLogIds);
         return success();
     }

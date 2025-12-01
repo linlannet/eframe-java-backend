@@ -29,8 +29,8 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
 import net.linlan.sys.base.dto.BaseXzqhDto;
@@ -59,7 +59,7 @@ public class BaseXzqhController extends BaseController {
     @PlatLog(value = "查询行政区划管理分页")
     @GetMapping("/xzqh/list")
     @Encrypt
-    public ResponseResult<List<BaseXzqh>> list(BaseXzqhParam param) {
+    public ResponseEntity<List<BaseXzqh>> list(BaseXzqhParam param) {
         Page<BaseXzqhDto> result = baseXzqhService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -93,7 +93,7 @@ public class BaseXzqhController extends BaseController {
     @PlatLog(value = "主键获取行政区划管理详细信息", category = 1)
     @GetMapping(value = "/xzqh/{id}")
     @Encrypt
-    public ResponseResult<BaseXzqh> getBaseXzqhById(@PathVariable("id") Long id) {
+    public ResponseEntity<BaseXzqh> getBaseXzqhById(@PathVariable("id") Long id) {
         return success(baseXzqhService.findById(id));
     }
 
@@ -106,7 +106,7 @@ public class BaseXzqhController extends BaseController {
     @PostMapping("/xzqh/save")
     @Encrypt
     @LimitScope(name = "baseXzqhSave", key = "baseXzqhSave")
-    public ResponseResult<String> save(@RequestBody BaseXzqh input) {
+    public ResponseEntity<String> save(@RequestBody BaseXzqh input) {
         baseXzqhService.save(input);
         return success();
     }
@@ -120,7 +120,7 @@ public class BaseXzqhController extends BaseController {
     @PostMapping("/xzqh/update")
     @Encrypt
     @LimitScope(name = "baseXzqhUpdate", key = "baseXzqhUpdate")
-    public ResponseResult<String> update(@RequestBody BaseXzqh input) {
+    public ResponseEntity<String> update(@RequestBody BaseXzqh input) {
         baseXzqhService.update(input);
         return success();
     }
@@ -134,7 +134,7 @@ public class BaseXzqhController extends BaseController {
     @PostMapping("/xzqh/delete/{ids}")
     @Encrypt
     @LimitScope(name = "baseXzqhDelete", key = "baseXzqhDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         baseXzqhService.deleteByIds(ids);
         return success();
     }

@@ -33,8 +33,8 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.view.admin.utils.ExcelUtil;
@@ -73,7 +73,7 @@ public class BaseDictionaryController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:dictionary:list')")
     @GetMapping("dictionary/list")
     @Encrypt
-    public ResponseResult<Pagination<BaseDictionaryVo>> list(BaseDictionaryVoParam param) {
+    public ResponseEntity<Pagination<BaseDictionaryVo>> list(BaseDictionaryVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -116,7 +116,7 @@ public class BaseDictionaryController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:dictionary:detail')")
     @GetMapping(value = "dictionary/{dictId}")
     @Encrypt
-    public ResponseResult<BaseDictionaryVo> getInfo(@PathVariable Long dictId) {
+    public ResponseEntity<BaseDictionaryVo> getInfo(@PathVariable Long dictId) {
         if (ObjectUtils.isEmpty(dictId)) {
             return failure();
         }
@@ -136,7 +136,7 @@ public class BaseDictionaryController extends BaseController {
     @PlatLog(value = "根据字典类型查询字典数据信息")
     @GetMapping(value = "dictionary/type/{dictType}")
     @Encrypt
-    public ResponseResult dictType(@PathVariable String dictType, BaseDictionaryTreeParam param) {
+    public ResponseEntity dictType(@PathVariable String dictType, BaseDictionaryTreeParam param) {
         List<DictionaryInitDto> data = frameDictionaryService.getDict(dictType, param);
         if (ObjectUtils.isEmpty(data)) {
             return empty();
@@ -155,7 +155,7 @@ public class BaseDictionaryController extends BaseController {
     @PostMapping("dictionary/save")
     @Encrypt
     @LimitScope(name = "baseDictionarySave", key = "baseDictionarySave")
-    public ResponseResult<String> save(@Validated @RequestBody BaseDictionaryVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody BaseDictionaryVo input) {
         baseDictionaryService.save(BaseDictionaryVo.transTo(input));
         return success();
     }
@@ -170,7 +170,7 @@ public class BaseDictionaryController extends BaseController {
     @PostMapping("dictionary/update")
     @Encrypt
     @LimitScope(name = "baseDictionaryUpdate", key = "baseDictionaryUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody BaseDictionaryVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody BaseDictionaryVo input) {
         baseDictionaryService.update(BaseDictionaryVo.transTo(input));
         return success();
     }
@@ -185,7 +185,7 @@ public class BaseDictionaryController extends BaseController {
     @PostMapping("dictionary/delete/{dictIds}")
     @Encrypt
     @LimitScope(name = "baseDictionaryDelete", key = "baseDictionaryDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] dictIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] dictIds) {
         baseDictionaryService.deleteByIds(dictIds);
         return success();
     }
@@ -198,9 +198,9 @@ public class BaseDictionaryController extends BaseController {
     @PlatLog(value = "通用字典树获取接口")
     @GetMapping("/comm/tree")
     @Encrypt
-    public ResponseResult<List<TreeNode>> getTree(TreeParam param) {
+    public ResponseEntity<List<TreeNode>> getTree(TreeParam param) {
         List<TreeNode> result = frameDictionaryService.getTree(param);
-        return ResponseResult.ok().setResultData(result);
+        return ResponseEntity.ok().setResultData(result);
     }
 
     /**
@@ -211,7 +211,7 @@ public class BaseDictionaryController extends BaseController {
     @PlatLog(value = "字典树获取")
     @GetMapping("/dictionary/tree")
     @Encrypt
-    public ResponseResult<List<BaseDictionary>> getBaseDictionaryTree(BaseDictionaryParam param) {
+    public ResponseEntity<List<BaseDictionary>> getBaseDictionaryTree(BaseDictionaryParam param) {
         List<BaseDictionary> pubLinkageTypeTree = new ArrayList<>();
         List<BaseDictionary> dictionaryList = new ArrayList<>();
         param.setLimit(30000);
@@ -229,7 +229,7 @@ public class BaseDictionaryController extends BaseController {
                 pubLinkageTypeTree = getPubLinkageTypeTree(rootList, dictionaryList);
             }
         }
-        return ResponseResult.ok().setResultData(pubLinkageTypeTree);
+        return ResponseEntity.ok().setResultData(pubLinkageTypeTree);
     }
 
     private List<BaseDictionary> getPubLinkageTypeTree(List<BaseDictionary> parentList,

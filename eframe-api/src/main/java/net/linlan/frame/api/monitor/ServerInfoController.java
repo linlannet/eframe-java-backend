@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.env.server.ServerInfo;
 
 /**
@@ -33,7 +33,7 @@ import net.linlan.commons.env.server.ServerInfo;
  */
 @RestController
 @RequestMapping("/api/monitor/")
-public class ServerInoController {
+public class ServerInfoController {
 
     /**
      * 获取服务器基本信息
@@ -43,9 +43,9 @@ public class ServerInoController {
     @PlatLog(value = "获取服务器基本信息")
     @PreAuthorize("@ss.hasPerms('monitor:server:list')")
     @GetMapping("server")
-    public ResponseResult<ServerInfo> getInfo() throws Exception {
+    public ResponseEntity<ServerInfo> getInfo() throws Exception {
         ServerInfo server = new ServerInfo();
         server.copyTo();
-        return ResponseResult.ok(server);
+        return ResponseEntity.ok(server);
     }
 }

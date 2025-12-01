@@ -38,8 +38,8 @@ import com.google.common.collect.Lists;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.entity.AdminUserRole;
@@ -98,7 +98,7 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:list')")
     @GetMapping("role/list")
     @Encrypt
-    public ResponseResult<List<SysRoleVo>> list(SysRoleVoParam param) {
+    public ResponseEntity<List<SysRoleVo>> list(SysRoleVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -141,7 +141,7 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:detail')")
     @GetMapping(value = "role/{roleId}")
     @Encrypt
-    public ResponseResult<SysRoleVo> getInfo(@PathVariable Long roleId) {
+    public ResponseEntity<SysRoleVo> getInfo(@PathVariable Long roleId) {
         if (ObjectUtils.isEmpty(roleId)) {
             return failure();
         }
@@ -163,7 +163,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/save")
     @Encrypt
     @LimitScope(name = "sysRoleSave", key = "sysRoleSave")
-    public ResponseResult<String> save(@Validated @RequestBody SysRoleVo input) {
+    public ResponseEntity<String> save(@Validated @RequestBody SysRoleVo input) {
         if (!adminMenuRolePosEntryManager.checkRoleNameUnique(input)) {
             return error("新增角色'" + input.getRoleName() + "'失败，角色名称已存在");
         } else if (!adminMenuRolePosEntryManager.checkRoleCodeUnique(input)) {
@@ -185,7 +185,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/update")
     @Encrypt
     @LimitScope(name = "sysRoleUpdate", key = "sysRoleUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody SysRoleVo input) {
+    public ResponseEntity<String> update(@Validated @RequestBody SysRoleVo input) {
         if (!adminMenuRolePosEntryManager.checkRoleNameUnique(input)) {
             return error("修改角色'" + input.getRoleName() + "'失败，角色名称已存在");
         } else if (!adminMenuRolePosEntryManager.checkRoleCodeUnique(input)) {
@@ -215,7 +215,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/save/all")
     @Encrypt
     @LimitScope(name = "sysRoleSave", key = "sysRoleSave")
-    public ResponseResult<String> saveAll(@Validated @RequestBody SysRoleVo input) {
+    public ResponseEntity<String> saveAll(@Validated @RequestBody SysRoleVo input) {
         if (!adminMenuRolePosEntryManager.checkRoleNameUnique(input)) {
             return error("新增角色'" + input.getRoleName() + "'失败，角色名称已存在");
         } else if (!adminMenuRolePosEntryManager.checkRoleCodeUnique(input)) {
@@ -237,7 +237,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/update/all")
     @Encrypt
     @LimitScope(name = "sysRoleUpdate", key = "sysRoleUpdate")
-    public ResponseResult<String> updateAll(@Validated @RequestBody SysRoleVo input) {
+    public ResponseEntity<String> updateAll(@Validated @RequestBody SysRoleVo input) {
         if (!adminMenuRolePosEntryManager.checkRoleNameUnique(input)) {
             return error("修改角色'" + input.getRoleName() + "'失败，角色名称已存在");
         } else if (!adminMenuRolePosEntryManager.checkRoleCodeUnique(input)) {
@@ -267,7 +267,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/delete/{roleIds}")
     @Encrypt
     @LimitScope(name = "sysRoleDelete", key = "sysRoleDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] roleIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] roleIds) {
         //        return returnRow(roleService.deleteRoleByIds(roleIds));
         //        if (ObjectUtils.isEmpty(roleIds)){
         //            return failure();
@@ -295,7 +295,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/disable/{roleId}")
     @Encrypt
     @LimitScope(name = "sysRoleDisable", key = "sysRoleDisable")
-    public ResponseResult<String> disable(@RequestBody SysRole input) {
+    public ResponseEntity<String> disable(@RequestBody SysRole input) {
         SysRole adminRole = new SysRole();
         adminRole.setId(input.getId());
         adminRole.setLastTime(new Timestamp(System.currentTimeMillis()));
@@ -314,7 +314,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/bindMenu/{roleId}")
     @Encrypt
     @LimitScope(name = "sysRoleBindMenu", key = "sysRoleBindMenu")
-    public ResponseResult<String> bindMenu(@RequestBody SysRoleVo input) {
+    public ResponseEntity<String> bindMenu(@RequestBody SysRoleVo input) {
         if (adminMenuRolePosOpManager.doAdminRoleOp(ApiIntfConfig.VALUE_AT_BIND,
             input.getRoleId().toString(), input)) {
             // 更新缓存用户权限
@@ -339,7 +339,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/bindDept/{roleId}")
     @Encrypt
     @LimitScope(name = "sysRoleBindDept", key = "sysRoleBindDept")
-    public ResponseResult<String> bindDept(@RequestBody SysRoleVo input) {
+    public ResponseEntity<String> bindDept(@RequestBody SysRoleVo input) {
         if (adminMenuRolePosOpManager.doAdminRoleOp(ApiIntfConfig.VALUE_AT_OTHER,
             input.getRoleId().toString(), input)) {
             return success("部门授权成功");
@@ -355,7 +355,7 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:detail')")
     @GetMapping("role/option/select")
     @Encrypt
-    public ResponseResult<List<SysRoleVo>> optionSelect() {
+    public ResponseEntity<List<SysRoleVo>> optionSelect() {
         List<SysRoleVo> vos = adminMenuRolePosEntryManager.selectRoleAll();
         if (ObjectUtils.isEmpty(vos)) {
             return failure();
@@ -372,7 +372,7 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:list')")
     @GetMapping("role/authUser/allocatedList")
     @Encrypt
-    public ResponseResult<List<AdminUserVo>> allocatedList(AdminUserVoParam user) {
+    public ResponseEntity<List<AdminUserVo>> allocatedList(AdminUserVoParam user) {
         List<AdminUserDto> adminUserDtoList = adminUserService
             .selectAllocatedList(user.toModelParam());
         if (adminUserDtoList == null) {
@@ -391,7 +391,7 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:list')")
     @GetMapping("role/authUser/unallocatedList")
     @Encrypt
-    public ResponseResult<List<AdminUserVo>> unallocatedList(AdminUserVoParam user) {
+    public ResponseEntity<List<AdminUserVo>> unallocatedList(AdminUserVoParam user) {
         List<AdminUserDto> adminUserDtoList = adminUserService
             .selectUnallocatedList(user.toModelParam());
         if (adminUserDtoList == null) {
@@ -411,7 +411,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/authUser/cancel")
     @Encrypt
     @LimitScope(name = "sysRoleCancel", key = "sysRoleCancel")
-    public ResponseResult<String> cancelAuthUser(@RequestBody AdminUserRole input) {
+    public ResponseEntity<String> cancelAuthUser(@RequestBody AdminUserRole input) {
         return returnRow(adminRoleService.deleteAuthUser(input.getRoleId(), input.getAdminId()));
     }
 
@@ -426,7 +426,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/authUser/cancelAll")
     @Encrypt
     @LimitScope(name = "sysRoleCancelAll", key = "sysRoleCancelAll")
-    public ResponseResult<String> cancelAuthUserAll(Long roleId, Long[] adminIds) {
+    public ResponseEntity<String> cancelAuthUserAll(Long roleId, Long[] adminIds) {
         return returnRow(adminRoleService.deleteAuthUsers(roleId, adminIds));
     }
 
@@ -441,7 +441,7 @@ public class SysRoleController extends BaseController {
     @PostMapping("role/authUser/selectAll")
     @Encrypt
     @LimitScope(name = "sysRoleSelectAll", key = "sysRoleSelectAll")
-    public ResponseResult<String> selectAuthUserAll(Long roleId, Long[] adminIds) {
+    public ResponseEntity<String> selectAuthUserAll(Long roleId, Long[] adminIds) {
         adminMenuRolePosEntryManager.checkRoleDataScope(roleId);
         return returnRow(adminRoleService.insertAuthUsers(roleId, adminIds));
     }
@@ -455,13 +455,13 @@ public class SysRoleController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:role:detail')")
     @GetMapping(value = "role/deptTree/{roleId}")
     @Encrypt
-    public ResponseResult<DeptTreeRoleVo> deptTree(@PathVariable("roleId") Long roleId) {
+    public ResponseEntity<DeptTreeRoleVo> deptTree(@PathVariable("roleId") Long roleId) {
         DeptTreeRoleVo deptTreeRoleVo = new DeptTreeRoleVo();
         List<Long> checkedKeys = adminDeptService.selectDeptListByRoleId(roleId);
         List<TreeSelect> depts = adminDeptService.selectDeptTreeList(new AdminDeptParam());
         deptTreeRoleVo.setCheckedKeys(checkedKeys);
         deptTreeRoleVo.setDepts(depts);
-        return ResponseResult.ok(deptTreeRoleVo);
+        return ResponseEntity.ok(deptTreeRoleVo);
     }
 
 }

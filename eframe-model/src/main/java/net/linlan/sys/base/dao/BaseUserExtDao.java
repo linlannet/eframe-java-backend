@@ -64,16 +64,16 @@ public interface BaseUserExtDao extends MybatisBaseDao<BaseUserExt> {
     List<Map<String, Object>> getUserAgeList(Map<String, Object> map);
 
     /** 修改用户登录密码
-     * @param map
-     * @return
+     * @param map   参数
+     * @return  更新密码状态
      */
     int updatePassword(Map<String, Object> map);
 
     /**
      * 批量更新用户密码
-     * @param userIds
-     * @param password
-     * @return
+     * @param userIds   用户IDs
+     * @param password  密码
+     * @return  更新状态
      */
     int batUpdatePassword(@Param("userIds") String[] userIds, @Param("password") String password);
 

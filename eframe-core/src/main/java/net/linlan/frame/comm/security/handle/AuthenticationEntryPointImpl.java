@@ -29,10 +29,10 @@ import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson2.JSON;
 
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.http.HttpStatus;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.utils.ServletUtils;
-import net.linlan.utils.http.HttpStatus;
 
 /**
  * 认证失败处理类 返回未授权
@@ -46,9 +46,8 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint, S
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException e) throws IOException {
-        int code = HttpStatus.UNAUTHORIZED;
+        int code = HttpStatus.UNAUTHORIZED.value();
         String msg = StringUtils.format("请求访问：{}，认证失败，无法访问系统资源", request.getRequestURI());
-        ServletUtils.renderString(response,
-            JSON.toJSONString(ResponseResult.error(code + "", msg)));
+        ServletUtils.renderString(response, JSON.toJSONString(ResponseEntity.error(code, msg)));
     }
 }

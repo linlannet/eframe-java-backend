@@ -37,8 +37,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.OriginalResponse;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.utils.crypt.AESUtils;
 import net.linlan.utils.crypt.RSAUtil;
 import net.linlan.utils.exception.FrameApiError;
@@ -114,7 +114,7 @@ public class EncryptResponseBodyAdvice implements ResponseBodyAdvice {
     }
 
     // 处理非Restful风格的响应数据
-    private ResponseResult buildResult(Object originBody, MethodParameter returnType,
+    private ResponseEntity buildResult(Object originBody, MethodParameter returnType,
                                        Class selectedConverterType, ServerHttpRequest request,
                                        ServerHttpResponse response) {
         // 封装相应参数  数据status设置对应status   response status设置200
@@ -122,15 +122,15 @@ public class EncryptResponseBodyAdvice implements ResponseBodyAdvice {
 
         if (originBody instanceof FrameApiError) {
             FrameApiError error = (FrameApiError) originBody;
-            return new ResponseResult(error.getStatus().toString(), error.getMessage(), null);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST.value(), error.getMessage());
         }
         if (originBody instanceof LinkedHashMap) {
             LinkedHashMap bodyMap = (LinkedHashMap) originBody;
             if (bodyMap.containsKey("status") && bodyMap.containsKey("message")) {
-                return new ResponseResult(bodyMap.get("status").toString(),
-                    String.valueOf(bodyMap.get("message")), null);
+                return new ResponseEntity(Integer.parseInt(bodyMap.get("status").toString()),
+                    bodyMap.get("message").toString());
             }
         }
-        return ResponseResult.ok(originBody);
+        return ResponseEntity.ok(originBody);
     }
 }

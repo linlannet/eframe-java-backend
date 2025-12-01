@@ -30,6 +30,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.config.dto.PublicTemplateInfoDto;
 import net.linlan.frame.config.entity.PublicTemplateInfo;
@@ -59,7 +60,7 @@ public class PublicTemplateInfoController extends BaseController {
     @PlatLog(value = "查询模板信息配置分页", category = 0)
     @GetMapping("/template/list")
     @Encrypt
-    public ResponseResult<List<PublicTemplateInfo>> list(PublicTemplateInfoParam param) {
+    public ResponseEntity<List<PublicTemplateInfo>> list(PublicTemplateInfoParam param) {
         Page<PublicTemplateInfoDto> result = publicTemplateInfoService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +78,7 @@ public class PublicTemplateInfoController extends BaseController {
     @PlatLog(value = "主键获取模板信息配置详细信息", category = 1)
     @GetMapping(value = "/template/{id}")
     @Encrypt
-    public ResponseResult<PublicTemplateInfo> findById(@PathVariable("id") String id) {
+    public ResponseEntity<PublicTemplateInfo> findById(@PathVariable("id") String id) {
         return success(publicTemplateInfoService.findById(id));
     }
 
@@ -90,7 +91,7 @@ public class PublicTemplateInfoController extends BaseController {
     @PostMapping("/template/save")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoSave", key = "publicTemplateInfoSave")
-    public ResponseResult<String> save(@RequestBody PublicTemplateInfo input) {
+    public ResponseEntity<String> save(@RequestBody PublicTemplateInfo input) {
         publicTemplateInfoService.save(input);
         return success();
     }
@@ -104,7 +105,7 @@ public class PublicTemplateInfoController extends BaseController {
     @PostMapping("/template/update")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoUpdate", key = "publicTemplateInfoUpdate")
-    public ResponseResult<String> update(@RequestBody PublicTemplateInfo input) {
+    public ResponseEntity<String> update(@RequestBody PublicTemplateInfo input) {
         publicTemplateInfoService.update(input);
         return success();
     }
@@ -118,7 +119,7 @@ public class PublicTemplateInfoController extends BaseController {
     @PostMapping("/template/delete/{ids}")
     @Encrypt
     @LimitScope(name = "publicTemplateInfoDelete", key = "publicTemplateInfoDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         publicTemplateInfoService.deleteByIds(ids);
         return success();
     }

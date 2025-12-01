@@ -33,6 +33,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.json.JsonMapUtils;
 import net.linlan.frame.admin.dto.AdminDeptDto;
 import net.linlan.frame.admin.dto.AdminMenuVo;
@@ -70,7 +71,7 @@ public class AdminDeptController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:dept:list')")
     @GetMapping("dept/list")
     @Encrypt
-    public ResponseResult<Page<AdminDeptVo>> list(AdminDeptParam param) {
+    public ResponseEntity<Page<AdminDeptVo>> list(AdminDeptParam param) {
 
         List<AdminDept> result = adminDeptService.getList(JsonMapUtils.beanToMap(param));
         return success(result);
@@ -86,7 +87,7 @@ public class AdminDeptController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:menu:list')")
     @GetMapping("dept/page")
     @Encrypt
-    public ResponseResult<Page<AdminMenuVo>> page(AdminDeptParam param) {
+    public ResponseEntity<Page<AdminMenuVo>> page(AdminDeptParam param) {
         Page<AdminDeptDto> result = adminDeptService.getPageDto(param);
         if (ObjectUtils.isEmpty(result)) {
             return empty();
@@ -104,7 +105,7 @@ public class AdminDeptController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:dept:list')")
     @GetMapping("dept/list/exclude/{deptId}")
     @Encrypt
-    public ResponseResult<List<AdminDeptVo>> excludeChild(@PathVariable(value = "deptId", required = false) Long deptId) {
+    public ResponseEntity<List<AdminDeptVo>> excludeChild(@PathVariable(value = "deptId", required = false) Long deptId) {
         Page<AdminDeptDto> depts = adminDeptService.getPageDto(new AdminDeptParam());
         depts.removeIf(
             d -> d.getId().intValue() == deptId
@@ -122,7 +123,7 @@ public class AdminDeptController extends BaseController {
     @PreAuthorize("@ss.hasPerms('admin:dept:detail')")
     @GetMapping(value = "dept/{deptId}")
     @Encrypt
-    public ResponseResult<AdminDeptVo> getInfo(@PathVariable Long deptId) {
+    public ResponseEntity<AdminDeptVo> getInfo(@PathVariable Long deptId) {
         adminDeptService.checkDeptDataScope(deptId);
         AdminDeptVo vo = null;
         AdminDeptDto dto = adminDeptService.getDtoById(deptId);
@@ -140,7 +141,7 @@ public class AdminDeptController extends BaseController {
     @PlatLog(value = "获取部门树")
     @GetMapping("dept/tree")
     @Encrypt
-    public ResponseResult<List<LayuiTree>> treeInit(AdminDeptParam params) {
+    public ResponseEntity<List<LayuiTree>> treeInit(AdminDeptParam params) {
         params.setLimit(30000);
         Page<AdminDeptDto> page = adminDeptService.getPageDto(params);
         List<LayuiTree> deptTreeList = new ArrayList<>();
@@ -172,7 +173,7 @@ public class AdminDeptController extends BaseController {
     @PostMapping("dept/save")
     @Encrypt
     @LimitScope(name = "adminDeptSave", key = "adminDeptSave")
-    public ResponseResult<String> save(@Validated @RequestBody AdminDept input) {
+    public ResponseEntity<String> save(@Validated @RequestBody AdminDept input) {
         if (!adminDeptService.checkDeptNameUnique(input)) {
             return error("新增部门'" + input.getName() + "'失败，部门名称已存在");
         }
@@ -207,7 +208,7 @@ public class AdminDeptController extends BaseController {
     @PostMapping("dept/update")
     @Encrypt
     @LimitScope(name = "adminDeptUpdate", key = "adminDeptUpdate")
-    public ResponseResult<String> update(@Validated @RequestBody AdminDept input) {
+    public ResponseEntity<String> update(@Validated @RequestBody AdminDept input) {
         Long deptId = input.getId();
         adminDeptService.checkDeptDataScope(deptId);
         if (!adminDeptService.checkDeptNameUnique(input)) {
@@ -232,7 +233,7 @@ public class AdminDeptController extends BaseController {
     @PostMapping("dept/delete/{deptIds}")
     @Encrypt
     @LimitScope(name = "adminDeptDelete", key = "adminDeptDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] deptIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] deptIds) {
         for (Long deptId : deptIds) {
             if (adminDeptService.hasChildByDeptId(deptId)) {
                 return warn("存在下级部门,不允许删除");
@@ -255,7 +256,7 @@ public class AdminDeptController extends BaseController {
     @PlatLog(value = "停用启用部门管理", category = 20)
     @PostMapping("dept/disable/{id}")
     @Encrypt
-    public ResponseResult<String> disable(@RequestBody AdminDept input) {
+    public ResponseEntity<String> disable(@RequestBody AdminDept input) {
         Long deptId = input.getId();
         adminDeptService.checkDeptDataScope(deptId);
         if (adminDeptService.selectNormalChildrenDeptById(deptId) > 0) {

@@ -30,8 +30,8 @@ import com.google.common.collect.Lists;
 
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.admin.dto.AdminLoginLogDto;
 import net.linlan.frame.admin.service.AdminLoginLogService;
@@ -65,7 +65,7 @@ public class AdminLoginLogEntryController extends BaseController {
     @PlatLog(value = "获取管理员登录日志列表")
     @PreAuthorize("@ss.hasPerms('monitor:loginlog:list')")
     @GetMapping("loginlog/list")
-    public ResponseResult<Pagination<AdminLoginLogVo>> list(AdminLoginLogVoParam param) {
+    public ResponseEntity<Pagination<AdminLoginLogVo>> list(AdminLoginLogVoParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return failure();
         }
@@ -107,7 +107,7 @@ public class AdminLoginLogEntryController extends BaseController {
     @PlatLog(value = "删除管理员登录日志", category = 40)
     @DeleteMapping("loginlog/{infoIds}")
     @LimitScope(name = "adminLoginLogDelete", key = "adminLoginLogDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] infoIds) {
+    public ResponseEntity<String> delete(@PathVariable Long[] infoIds) {
         adminLoginLogService.deleteByIds(infoIds);
         return success();
     }
@@ -119,7 +119,7 @@ public class AdminLoginLogEntryController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:loginlog:delete')")
     @PlatLog(value = "清理管理员登录日志", category = 21)
     @DeleteMapping("loginlog/clean")
-    public ResponseResult<String> clean() {
+    public ResponseEntity<String> clean() {
         return success();
     }
 
@@ -131,7 +131,7 @@ public class AdminLoginLogEntryController extends BaseController {
     @PreAuthorize("@ss.hasPerms('monitor:loginlog:unlock')")
     @PlatLog(value = "账户解锁", category = 50)
     @GetMapping("loginlog/unlock/{username}")
-    public ResponseResult<String> unlock(@PathVariable("username") String username) {
+    public ResponseEntity<String> unlock(@PathVariable("username") String username) {
         sysPasswordService.clearLoginRecordCache(username);
         return success();
     }

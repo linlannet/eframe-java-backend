@@ -44,8 +44,7 @@ import static net.linlan.commons.core.abs.StringConstants.COLON;
 
 /**
  * 
- * Filename:HttpContextUtils.java
- * Desc: 获取应用和工程上下文的request对象
+ * 获取应用和工程上下文的request对象
  *
  * @author Linlan
  * CreateTime:2018/4/22 12:58

@@ -28,8 +28,8 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.mbiz.ApiIntfConfig;
 import net.linlan.frame.view.sys.manager.FrameOrganManager;
@@ -58,7 +58,7 @@ public class CoreOrganController extends BaseController {
     @PlatLog(value = "查询系统机构表分页")
     @GetMapping("/organ/list")
     @Encrypt
-    public ResponseResult<List<OrganBaseInfoDto>> list(OrganAccountParam param) {
+    public ResponseEntity<List<OrganBaseInfoDto>> list(OrganAccountParam param) {
         Page<OrganBaseInfoDto> result = coreOrganEntManager.getCoreOrganList(param);
         if (result == null) {
             return empty();
@@ -76,7 +76,7 @@ public class CoreOrganController extends BaseController {
     @PlatLog(value = "主键获取系统机构表详细信息", category = 1)
     @GetMapping(value = "/organ/{id}")
     @Encrypt
-    public ResponseResult<OrganBaseInfoDto> getCoreOrganById(@PathVariable("id") String id) {
+    public ResponseEntity<OrganBaseInfoDto> getCoreOrganById(@PathVariable("id") String id) {
         return success(coreOrganEntManager.getOrganDetail(id));
     }
 
@@ -89,7 +89,7 @@ public class CoreOrganController extends BaseController {
     @PostMapping("/organ/save")
     @Encrypt
     @LimitScope(name = "coreOrganSave", key = "coreOrganSave")
-    public ResponseResult<String> save(@RequestBody OrganBaseInfoDto input) throws CommonException {
+    public ResponseEntity<String> save(@RequestBody OrganBaseInfoDto input) throws CommonException {
 
         return success(coreOrganEntManager.doCoreOrganOperation(input, ApiIntfConfig.VALUE_AT_ADD));
     }
@@ -103,7 +103,7 @@ public class CoreOrganController extends BaseController {
     @PostMapping("/organ/update")
     @Encrypt
     @LimitScope(name = "coreOrganUpdate", key = "coreOrganUpdate")
-    public ResponseResult<String> update(@RequestBody OrganBaseInfoDto input) throws CommonException {
+    public ResponseEntity<String> update(@RequestBody OrganBaseInfoDto input) throws CommonException {
         return success(
             coreOrganEntManager.doCoreOrganOperation(input, ApiIntfConfig.VALUE_AT_UPDATE));
     }
@@ -117,7 +117,7 @@ public class CoreOrganController extends BaseController {
     @PostMapping("/organ/delete/{ids}")
     @Encrypt
     @LimitScope(name = "coreOrganDelete", key = "coreOrganDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) throws CommonException {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) throws CommonException {
         OrganBaseInfoDto input = new OrganBaseInfoDto();
         input.setIds(ids);
         return success(
@@ -133,7 +133,7 @@ public class CoreOrganController extends BaseController {
     @PostMapping("/organ/disable/{id}")
     @Encrypt
     @LimitScope(name = "coreOrganDisable", key = "coreOrganDisable")
-    public ResponseResult<String> disable(@RequestBody OrganBaseInfoDto input) throws CommonException {
+    public ResponseEntity<String> disable(@RequestBody OrganBaseInfoDto input) throws CommonException {
         return success(
             coreOrganEntManager.doCoreOrganOperation(input, ApiIntfConfig.VALUE_AT_OTHER));
     }

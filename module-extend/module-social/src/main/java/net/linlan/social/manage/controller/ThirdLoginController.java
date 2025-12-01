@@ -42,9 +42,9 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.authn.group.constant.PublicGroupEnum;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.comm.vo.AppLoginInfo;
 import net.linlan.frame.web.SecurityUtils;
@@ -126,10 +126,10 @@ public class ThirdLoginController {
     @PostMapping("/login/social")
     @Encrypt
     @LimitScope(name = "thirdUserLogin", key = "thirdUserLogin")
-    public ResponseResult<AppLoginInfo> socialLogin(@RequestBody ThirdLoginBody loginBody) {
+    public ResponseEntity<AppLoginInfo> socialLogin(@RequestBody ThirdLoginBody loginBody) {
         // 生成令牌
         AppLoginInfo appLoginInfo = thirdLoginService.socialLogin(loginBody);
-        return ResponseResult.ok(appLoginInfo);
+        return ResponseEntity.ok(appLoginInfo);
     }
 
     /** 第三方社交平台账号绑定，第四步
@@ -140,7 +140,7 @@ public class ThirdLoginController {
     @PostMapping("/login/social/bind")
     @Encrypt
     @LimitScope(name = "thirdUserBind", key = "thirdUserBind")
-    public ResponseResult<String> bind(@RequestBody ThirdBindBody thirdBindBody) {
+    public ResponseEntity<String> bind(@RequestBody ThirdBindBody thirdBindBody) {
         AuthRequest authRequest = thirdMemberService
             .getAuthRequest(thirdBindBody.getPlatformType());
         AuthCallback callback = AuthCallback.builder().code(thirdBindBody.getCode())
@@ -166,16 +166,16 @@ public class ThirdLoginController {
             //管理端仅查询人员的角色、岗位，如果有配置则正常返回，如果人员未做任何配置，则提升失败
             if (!userRangeOrganService.saveOrUpdateFromAdmin(SecurityUtils.getLoginUser(),
                 BindFromEnum.fromType(bindFrom))) {
-                return ResponseResult.error("管理WEB端来源的绑定失败");
+                return ResponseEntity.error("管理WEB端来源的绑定失败");
             }
         } else {
             //其他前端绑定逻辑，则需要将人员的分组信息保存到关系表内
             if (ObjectUtils.isEmpty(userRangeOrganService.saveOrUpdateFromSocial(
                 SecurityUtils.getLoginUser(), BindFromEnum.fromType(bindFrom)))) {
-                return ResponseResult.error("前端工作或通用来源的绑定失败");
+                return ResponseEntity.error("前端工作或通用来源的绑定失败");
             }
         }
-        return ResponseResult.ok("用户绑定成功");
+        return ResponseEntity.ok("用户绑定成功");
     }
 
     /** 第三方社交平台账号解绑
@@ -186,7 +186,7 @@ public class ThirdLoginController {
     @PostMapping("/login/social/unBind")
     @Encrypt
     @LimitScope(name = "thirdMemberUpdate", key = "thirdMemberUpdate")
-    public ResponseResult<String> unBind(@RequestBody ThirdBindBody thirdBindBody) {
+    public ResponseEntity<String> unBind(@RequestBody ThirdBindBody thirdBindBody) {
         //查询当前用户信息
         FrameUserDetails loginUser = getLoginUser();
         if (loginUser == null) {
@@ -199,7 +199,7 @@ public class ThirdLoginController {
             userRangeOrganService.removeOrUpdateFromSocial(SecurityUtils.getLoginUser(),
                 PublicGroupEnum.WWW_GROUP);
         }
-        return ResponseResult.ok();
+        return ResponseEntity.ok();
     }
 
     /** 根据来源类型，回收授权信息
@@ -211,25 +211,25 @@ public class ThirdLoginController {
     @RequestMapping("/login/social/revoke/{source}/{uuid}")
     @ResponseBody
     @Encrypt
-    public ResponseResult revokeAuth(@PathVariable("source") String source,
+    public ResponseEntity revokeAuth(@PathVariable("source") String source,
                                      @PathVariable("uuid") String uuid) {
         AuthRequest authRequest = thirdMemberService.getAuthRequest(source.toLowerCase());
 
         AuthUser user = justAuthUserService.getByUuid(uuid);
         if (null == user) {
-            return ResponseResult.error("用户不存在");
+            return ResponseEntity.error("用户不存在");
         }
         AuthResponse<AuthToken> response = null;
         try {
             response = authRequest.revoke(user.getToken());
             if (response.ok()) {
                 justAuthUserService.removeFromRedis(user.getUuid());
-                return ResponseResult.ok("用户 [" + user.getUsername() + "] 的 授权状态 已收回！");
+                return ResponseEntity.ok("用户 [" + user.getUsername() + "] 的 授权状态 已收回！");
             }
-            return ResponseResult
+            return ResponseEntity
                 .error("用户 [" + user.getUsername() + "] 的 授权状态 收回失败！" + response.getMsg());
         } catch (AuthException e) {
-            return ResponseResult.error(e.getErrorMsg());
+            return ResponseEntity.error(e.getErrorMsg());
         }
     }
 
@@ -247,7 +247,7 @@ public class ThirdLoginController {
 
         AuthUser user = justAuthUserService.getByUuid(uuid);
         if (null == user) {
-            return ResponseResult.error("用户不存在");
+            return ResponseEntity.error("用户不存在");
         }
         AuthResponse<AuthToken> response = null;
         try {
@@ -255,14 +255,14 @@ public class ThirdLoginController {
             if (response.ok()) {
                 user.setToken(response.getData());
                 justAuthUserService.saveToRedis(user);
-                return ResponseResult
+                return ResponseEntity
                     .ok("用户 [" + user.getUsername() + "] 的 access token 已刷新！新的 accessToken: "
                         + response.getData().getAccessToken());
             }
-            return ResponseResult
+            return ResponseEntity
                 .error("用户 [" + user.getUsername() + "] 的 access token 刷新失败！" + response.getMsg());
         } catch (AuthException e) {
-            return ResponseResult.error(e.getErrorMsg());
+            return ResponseEntity.error(e.getErrorMsg());
         }
     }
 
@@ -289,13 +289,13 @@ public class ThirdLoginController {
      */
     @PlatLog(value = "获取通用用户信息", category = 0, srcCode = 1)
     @GetMapping("/login/social/userInfo")
-    public ResponseResult<ThirdUserInfo> getUserInfo(@RequestParam("source") String source) {
+    public ResponseEntity<ThirdUserInfo> getUserInfo(@RequestParam("source") String source) {
         //查询当前用户信息
         FrameUserDetails loginUser = getLoginUser();
         if (loginUser == null) {
             throw new CommonException("当前用户未登录，无法查看");
         }
-        return ResponseResult.ok(thirdPermissionService.getUserInfo(source));
+        return ResponseEntity.ok(thirdPermissionService.getUserInfo(source));
     }
 
     /**
@@ -305,13 +305,13 @@ public class ThirdLoginController {
      */
     @PlatLog(value = "获取工作用户信息，包含用户权限菜单和角色", category = 0, srcCode = 1)
     @GetMapping("/login/social/workUserInfo")
-    public ResponseResult<ThirdUserInfo> getWorkUserInfo(@RequestParam("source") String source) {
+    public ResponseEntity<ThirdUserInfo> getWorkUserInfo(@RequestParam("source") String source) {
         //查询当前用户信息
         FrameUserDetails loginUser = getLoginUser();
         if (loginUser == null) {
             throw new CommonException("当前用户未登录，无法查看");
         }
-        return ResponseResult.ok(thirdPermissionService.getWorkUserInfo(source));
+        return ResponseEntity.ok(thirdPermissionService.getWorkUserInfo(source));
     }
 
 }

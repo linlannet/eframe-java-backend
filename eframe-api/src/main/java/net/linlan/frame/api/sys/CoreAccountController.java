@@ -33,9 +33,9 @@ import com.github.pagehelper.Page;
 
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.frame.api.BaseController;
 import net.linlan.frame.comm.utils.EnumUtil;
@@ -71,7 +71,7 @@ public class CoreAccountController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:account:list')")
     @PlatLog(value = "查询平台账号信息分页")
     @GetMapping("/account/list")
-    public ResponseResult<List<CoreAccountDto>> list(CoreAccountParam param) {
+    public ResponseEntity<List<CoreAccountDto>> list(CoreAccountParam param) {
         Page<CoreAccountDto> result = memberAccountService.getPageDto(param);
         LinkedHashMap<String, String> inoutEnumMap = EnumUtil.enumToMap(InoutModeEnum.class);
         LinkedHashMap<String, String> typeEnumMap = EnumUtil.enumToMap(AccountTypeEnum.class);
@@ -94,7 +94,7 @@ public class CoreAccountController extends BaseController {
      */
     @PlatLog(value = "生成密钥 id: 平台账户主键  clientId :平台账户应用Id")
     @GetMapping("/account/getClientSecret")
-    public ResponseResult<List<CoreAccountDto>> getClientSecret(String clientId) {
+    public ResponseEntity<List<CoreAccountDto>> getClientSecret(String clientId) {
         String clientSecret = ShaUtils.getSHA256(clientId);
         Map<String, String> result = new HashMap<>();
         if (ObjectUtils.isNotEmpty(clientSecret)) {
@@ -111,7 +111,7 @@ public class CoreAccountController extends BaseController {
      */
     @PlatLog(value = "生成平台密钥对")
     @GetMapping("/account/getKeyParity")
-    public ResponseResult<List<CoreAccountDto>> getKeyParity(String id) throws Exception {
+    public ResponseEntity<List<CoreAccountDto>> getKeyParity(String id) throws Exception {
         Map<String, String> result = new HashMap<>();
         KeyPair keyPair = RSAUtil.getKeyPair();
         String aesIvKey = new String(
@@ -130,7 +130,7 @@ public class CoreAccountController extends BaseController {
     @PreAuthorize("@ss.hasPerms('system:account:detail')")
     @PlatLog(value = "主键获取平台账号信息详细信息", category = 1)
     @GetMapping(value = "/account/{id}")
-    public ResponseResult<CoreAccount> info(@PathVariable("id") String id) {
+    public ResponseEntity<CoreAccount> info(@PathVariable("id") String id) {
         return success(memberAccountService.findById(id));
     }
 
@@ -142,7 +142,7 @@ public class CoreAccountController extends BaseController {
     @PlatLog(value = "新增平台账号信息", category = 10)
     @PostMapping("/account/save")
     @LimitScope(name = "coreAccountSave", key = "coreAccountSave")
-    public ResponseResult<String> save(@RequestBody CoreAccount input) {
+    public ResponseEntity<String> save(@RequestBody CoreAccount input) {
         if (StringUtils.isNotBlank(input.getId()) && !checkCodeUnique(input)) {
             return error("新增平台账号'" + input.getId() + "'失败，平台账号ID已存在");
         }
@@ -166,7 +166,7 @@ public class CoreAccountController extends BaseController {
     @PlatLog(value = "修改平台账号信息", category = 20)
     @PostMapping("/account/update")
     @LimitScope(name = "coreAccountUpdate", key = "coreAccountUpdate")
-    public ResponseResult<String> update(@RequestBody CoreAccount input) {
+    public ResponseEntity<String> update(@RequestBody CoreAccount input) {
         memberAccountService.update(input);
         return success("SUCCESS");
     }
@@ -179,7 +179,7 @@ public class CoreAccountController extends BaseController {
     @PlatLog(value = "删除平台账号信息", category = 40)
     @PostMapping("/account/delete/{ids}")
     @LimitScope(name = "coreAccountDelete", key = "coreAccountDelete")
-    public ResponseResult<String> delete(@PathVariable String[] ids) {
+    public ResponseEntity<String> delete(@PathVariable String[] ids) {
         memberAccountService.deleteByIds(ids);
         return success("SUCCESS");
     }
@@ -190,7 +190,7 @@ public class CoreAccountController extends BaseController {
      */
     @PlatLog(value = "获取社交授权平台账号列表")
     @GetMapping("/account/authlist")
-    public ResponseResult<List<CoreAccountDto>> authlist(CoreAccountParam param) {
+    public ResponseEntity<List<CoreAccountDto>> authlist(CoreAccountParam param) {
         if (ObjectUtils.isEmpty(param)) {
             return null;
         }

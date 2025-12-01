@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.linlan.annotation.AuthIgnore;
-import net.linlan.commons.core.ResponseResult;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.sys.web.KernelAdminUtils;
 import net.linlan.utils.constant.Constants;
@@ -54,14 +54,14 @@ public class ApiStatusMonitorController {
      */
     @AuthIgnore
     @GetMapping("getStatus")
-    public ResponseResult<Map<String, Object>> getStatus(@RequestParam Map<String, Object> params) {
+    public ResponseEntity<Map<String, Object>> getStatus(@RequestParam Map<String, Object> params) {
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
         String url = request.getRequestURL().toString();
         url = KernelAdminUtils.getDomainMore(url);
         Map<String, Object> map = new StringMap().put(Constants.FIELD_VERSION, "1.1.X")
             .put("activeMode", activeMode).put("url", url).put(Constants.REQUEST_PARAMS, params)
             .put("timestamp", System.currentTimeMillis()).map();
-        return ResponseResult.ok(map);
+        return ResponseEntity.ok(map);
     }
 
 }

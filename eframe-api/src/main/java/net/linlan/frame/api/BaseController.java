@@ -33,12 +33,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import net.linlan.commons.core.DateUtils;
 import net.linlan.commons.core.Rcode;
-import net.linlan.commons.core.ResponseResult;
 import net.linlan.commons.core.StringUtils;
+import net.linlan.commons.core.http.HttpStatus;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.db.page.Pagination;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.mbiz.ApiIntfConfig;
-import net.linlan.frame.mbiz.constant.HttpStatusEnum;
+import net.linlan.frame.mbiz.constant.HttpStatusExtend;
 import net.linlan.frame.web.SecurityUtils;
 
 /**
@@ -54,26 +55,26 @@ public class BaseController {
      * 返回成功，信息同时放入data中
      * @return  返回对象
      */
-    public ResponseResult success() {
-        return ResponseResult.ok().setResultData(ApiIntfConfig.SUCCESS);
+    public ResponseEntity success() {
+        return ResponseEntity.ok().setResultData(ApiIntfConfig.SUCCESS);
     }
 
     /**
      * 返回失败消息，信息同时放入data中
      * @return  返回对象
      */
-    public ResponseResult failure() {
-        return ResponseResult.error(HttpStatusEnum.PARAMETER_ERROR.getCode(),
-            HttpStatusEnum.PARAMETER_ERROR.getMsg()).setResultData(ApiIntfConfig.FAILURE);
+    public ResponseEntity failure() {
+        return ResponseEntity.error(HttpStatusExtend.PARAMETER_ERROR.getCode(),
+            HttpStatusExtend.PARAMETER_ERROR.getMsg()).setResultData(ApiIntfConfig.FAILURE);
     }
 
     /**
      * 返回失败消息，信息同时放入data中
      * @return  返回对象
      */
-    public ResponseResult empty() {
-        return ResponseResult.error(HttpStatusEnum.RETURN_NONE.getCode(),
-            HttpStatusEnum.RETURN_NONE.getMsg());
+    public ResponseEntity empty() {
+        return ResponseEntity.error(HttpStatus.NO_CONTENT.value(),
+            HttpStatus.NO_CONTENT.getReasonPhrase());
     }
 
     /**
@@ -82,8 +83,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult<String> okMsg(String message) {
-        return ResponseResult.ok(message);
+    public ResponseEntity<String> okMsg(String message) {
+        return ResponseEntity.ok(message);
     }
 
     /**
@@ -91,8 +92,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult errorMsg(String message) {
-        return ResponseResult.error(message);
+    public ResponseEntity errorMsg(String message) {
+        return ResponseEntity.error(message);
     }
 
     /**
@@ -100,8 +101,8 @@ public class BaseController {
      * @param data 返回对象
      * @return  返回对象
      */
-    public ResponseResult success(Object data) {
-        return ResponseResult.ok(data);
+    public ResponseEntity success(Object data) {
+        return ResponseEntity.ok(data);
     }
 
     /**
@@ -109,8 +110,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult warnMsg(String message) {
-        return ResponseResult.warn(message);
+    public ResponseEntity warnMsg(String message) {
+        return ResponseEntity.warn(message);
     }
 
     /**
@@ -137,7 +138,7 @@ public class BaseController {
      * @return  返回对象
      * @return  返回对象
      */
-    public ResponseResult successPage(List<?> list, int limit, int page, long total) {
+    public ResponseEntity successPage(List<?> list, int limit, int page, long total) {
         if (list == null) {
             return null;
         }
@@ -149,7 +150,7 @@ public class BaseController {
      * @param page 页面
      * @return  返回对象
      */
-    public ResponseResult successPage(Page page) {
+    public ResponseEntity successPage(Page page) {
         if (page == null) {
             return null;
         }
@@ -168,8 +169,8 @@ public class BaseController {
      * 返回失败消息
      * @return  返回对象
      */
-    public ResponseResult error() {
-        return ResponseResult.error("失败");
+    public ResponseEntity error() {
+        return ResponseEntity.error("失败");
     }
 
     /**
@@ -177,8 +178,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult success(String message) {
-        return ResponseResult.ok(message);
+    public ResponseEntity success(String message) {
+        return ResponseEntity.ok(message);
     }
 
     /**
@@ -186,8 +187,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult error(String message) {
-        return ResponseResult.error(message);
+    public ResponseEntity error(String message) {
+        return ResponseEntity.error(message);
     }
 
     /**
@@ -195,8 +196,8 @@ public class BaseController {
      * @param message 提示消息
      * @return  返回对象
      */
-    public ResponseResult warn(String message) {
-        return ResponseResult.warn(message);
+    public ResponseEntity warn(String message) {
+        return ResponseEntity.warn(message);
     }
 
     /**
@@ -205,8 +206,8 @@ public class BaseController {
      * @param rows 影响行数
      * @return 操作结果
      */
-    protected ResponseResult returnRow(int rows) {
-        return rows > 0 ? ResponseResult.ok() : ResponseResult.error("error");
+    protected ResponseEntity returnRow(int rows) {
+        return rows > 0 ? ResponseEntity.ok() : ResponseEntity.error("error");
     }
 
     /**
@@ -215,7 +216,7 @@ public class BaseController {
      * @param result 结果
      * @return 操作结果
      */
-    protected ResponseResult returnRow(boolean result) {
+    protected ResponseEntity returnRow(boolean result) {
         return result ? success() : error();
     }
 

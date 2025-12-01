@@ -30,6 +30,7 @@ import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.*;
 import net.linlan.commons.core.annotation.PlatLog;
+import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.api.BaseController;
 import net.linlan.social.third.dto.ThirdMemberTokenDto;
 import net.linlan.social.third.entity.ThirdMemberToken;
@@ -59,7 +60,7 @@ public class ThirdMemberTokenController extends BaseController {
     @PlatLog(value = "查询会员用户令牌分页", category = 0)
     @GetMapping("/token/list")
     @Encrypt
-    public ResponseResult<List<ThirdMemberToken>> list(ThirdMemberTokenParam param) {
+    public ResponseEntity<List<ThirdMemberToken>> list(ThirdMemberTokenParam param) {
         Page<ThirdMemberTokenDto> result = thirdMemberTokenService.getPageDto(param);
         if (result == null) {
             return empty();
@@ -77,7 +78,7 @@ public class ThirdMemberTokenController extends BaseController {
     @PostMapping("/token/delete/{ids}")
     @Encrypt
     @LimitScope(name = "thirdMemberTokenDelete", key = "thirdMemberTokenDelete")
-    public ResponseResult<String> delete(@PathVariable Long[] ids) {
+    public ResponseEntity<String> delete(@PathVariable Long[] ids) {
         thirdMemberTokenService.deleteByIds(ids);
         return success();
     }

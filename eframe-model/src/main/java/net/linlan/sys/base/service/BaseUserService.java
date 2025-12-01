@@ -327,7 +327,7 @@ public class BaseUserService {
 
     /** 增加错误登录次数，未达到6次时，仅增加错误次数，达到6次，需要设置锁定时间
      * @param id    当前用户ID
-     * @return
+     * @return  异常登录状态
      */
     public int addErrorLoginInfo(String id) {
         if (StringUtils.isBlank(id)) {
