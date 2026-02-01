@@ -141,9 +141,7 @@
         <if test="status != null and status != ''">
             and B.STATUS = #{status}
         </if>
-        <if test="wlType != null">
-            and exists (select 1 from ORGAN_WORK Z where B.ORGAN_ID = Z.ORGAN_ID and WL_TYPE = #{wlType} )
-        </if>
+
         <if test="q != null and q != ''">
             and B.USER_ID in (select bue.USER_ID from BASE_USER_EXT bue where bue.ID_NAME LIKE concat('%',concat(#{q},'%')))
             or B.ORGAN_ID in (select org.ORGAN_ID from BASE_ORGAN org where org.NAME LIKE concat('%',concat(#{q},'%')))
@@ -666,12 +664,6 @@
         <if test="groupId != null and groupId != ''">
             AND B.GROUP_ID = #{groupId}
         </if>
-        <if test="areaId != null and areaId != ''">
-            AND B.ORGAN_ID IN (SELECT ORGAN_ID FROM ORGAN_WORK WHERE WL_TYPE LIKE '%DYJG%' AND AREA_ID = #{areaId})
-        </if>
-        <if test="areaIdLike != null and areaIdLike != ''">
-            AND B.ORGAN_ID IN (SELECT ORGAN_ID FROM ORGAN_WORK WHERE WL_TYPE LIKE '%DYJG%' AND AREA_ID LIKE concat('%',concat(#{areaIdLike},'%')) )
-        </if>
         <if test="organId != null and organId != ''">
             AND B.ORGAN_ID = #{organId}
         </if>
@@ -778,17 +770,6 @@
         LEFT JOIN PUBLIC_GROUP_POSITION pgP ON sp.POSITION_ID = pgP.POSITION_ID
         LEFT JOIN PUBLIC_GROUP pg ON B.GROUP_ID = pg.GROUP_ID
         WHERE 1 = 1 AND B.TYPE=30
-        <!-- 20240505 添加树条件进行筛选 -->
-        <if test='organwId != null and organwId != ""'>
-            AND B.ORGAN_ID IN (select distinct(OW.ORGAN_ID) from ORGAN_WORK OW where
-            <if test="onlyCurrent != null and 'Y'.toString()==onlyCurrent">
-                OW.PARENT_ID = #{organwId}
-            </if>
-            <if test="onlyCurrent != null and 'N'.toString()==onlyCurrent">
-                OW.SEARCH_CODE like CONCAT('%',CONCAT(#{organwId},'%'))
-            </if>
-            )
-        </if>
 
         <if test='name != null and name != ""'>
             AND bue.ID_NAME LIKE concat('%',concat(#{name},'%'))
@@ -853,19 +834,12 @@
         LEFT JOIN BASE_USER bu ON B.USER_ID = bu.USER_ID
         LEFT JOIN BASE_USER_EXT bue ON B.USER_ID = bue.USER_ID
         LEFT JOIN BASE_ORGAN org ON B.ORGAN_ID = org.ORGAN_ID
-        LEFT JOIN ORGAN_WORK W on B.ORGAN_ID = W.ORGAN_ID
-        LEFT JOIN ORGAN_WORK SOW on SOW.ORGANW_ID = #{organwId}
         WHERE 1 = 1
         AND bue.NICKNAME is not null AND B.TYPE=10
         <if test='name != null and name != ""'>
             AND bue.ID_NAME LIKE concat('%',concat(#{name},'%'))
         </if>
-        <if test="onlyCurrent != null and 'Y'.toString()==onlyCurrent">
-            AND  W.PARENT_ID=#{organwId}
-        </if>
-        <if test="onlyCurrent != null and 'N'.toString()==onlyCurrent">
-            AND W.SEARCH_CODE like CONCAT('%',CONCAT(SOW.SEARCH_CODE,'%'))
-        </if>
+
         <if test='organName != null and organName != ""'>
             AND org.NAME LIKE concat('%',concat(#{organName},'%'))
         </if>

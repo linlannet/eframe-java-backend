@@ -133,15 +133,7 @@
         B.NAME like concat('%',concat(#{key},'%'))
         )
         </if>
-        <if test='entCode != null and entCode.trim() != ""'>
-            AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE 1=1 AND EPLTS.TYPE_ID IN (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE 1=1 AND  EPLT.FOREIGN_ID = (SELECT SOP.ORGAN_ID FROM net.linlan.ele.house.dto.ResidentialStatisORGAN_PERSONAL SOP WHERE SOP.ENT_CODE = #{entCode})))
-        </if>
-        <if test='organId != null and organId.trim() != ""'>
-            <if test='labelTypeName != null and labelTypeName.trim() != ""'>
-                AND B.LABEL_ID IN(
-                SELECT LABEL_ID from THEME_LABEL_TYPE_SET WHERE TYPE_ID =  (select TYPE_ID from THEME_LABEL_TYPE where FOREIGN_ID = #{organId} AND NAME = #{labelTypeName}))
-            </if>
-        </if>
+
         <if test="labelTypeId != null and labelTypeId != '' ">
             AND B.LABEL_ID IN(
             SELECT EPLTS.LABEL_ID from ELE_PUB_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{labelTypeId}
@@ -149,59 +141,23 @@
         </if>
         <if test='organLabelId != null and organLabelId.trim() != ""'>
             <if test='type == 1'><!-- 查询type -->
-                <if test='typeLabelStatus == 1'><!-- 查询已绑定 -->
-                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE EPLT.FOREIGN_ID =  #{organLabelId}))
 
-                </if>
-
-                <if test='typeLabelStatus == 2'><!-- 查询未绑定 -->
-                    AND B.LABEL_ID NOT IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = (SELECT EPLT.TYPE_ID FROM THEME_LABEL_TYPE EPLT WHERE EPLT.FOREIGN_ID =  #{organLabelId}))
-                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
-                </if>
             </if>
 
             <if test='type == 2'><!-- 查询Organ -->
-                <if test='organLabelStatus == 1'><!-- 查询已绑定 -->
-                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
-                </if>
 
-                <if test='organLabelStatus == 2'><!-- 查询未绑定 -->
-                    AND B.LABEL_ID NOT IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
-                </if>
             </if>
 
             <if test='type == 3'><!-- 查询Organ -->
-                <if test='organLabelGroup == 1'><!-- 查询许愿组 -->
-                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{organLabelGroup})
-                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
-                </if>
 
-                <if test='organLabelGroup == 2'><!-- 查询祝福组 -->
-                    AND B.LABEL_ID IN (SELECT EPLTS.LABEL_ID FROM THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID = #{organLabelGroup})
-                    AND B.LABEL_ID IN (SELECT EOL.LABEL_ID FROM THEME_ORGAN_LABEL EOL WHERE EOL.ORGAN_ID = #{organLabelId})
-                </if>
             </if>
 
         </if>
         <if test='typeIdBind != null and typeIdBind == 1 '>
-            AND B.LABEL_ID IN(
-            SELECT EPLTS.LABEL_ID from THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID in
-            (select EPLT.TYPE_ID from THEME_LABEL_TYPE EPLT WHERE 1=1 AND EPLTS.TYPE_ID in
-            <foreach item="item" index="index" collection="typeId.split(',')" open="(" separator="," close=")">
-                #{item}
-            </foreach>
-            )
-            )
+
         </if>
         <if test='typeIdBind != null and typeIdBind == 0'>
-            AND B.LABEL_ID NOT IN(
-            SELECT EPLTS.LABEL_ID from THEME_LABEL_TYPE_SET EPLTS WHERE EPLTS.TYPE_ID in
-            (select EPLT.TYPE_ID from THEME_LABEL_TYPE EPLT WHERE 1=1 AND EPLTS.TYPE_ID in
-            <foreach item="item" index="index" collection="typeId.split(',')" open="(" separator="," close=")">
-                #{item}
-            </foreach>
-            )
-            )
+
         </if>
         <if test='ids != null'>
             AND LABEL_ID IN
