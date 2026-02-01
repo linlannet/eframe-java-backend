@@ -489,10 +489,10 @@ CREATE TABLE `COMM_FILE`  (
 DROP TABLE IF EXISTS `COMM_FLOW`;
 CREATE TABLE `COMM_FLOW`  (
                               `FLOW_ID` bigint(20) NOT NULL COMMENT '主键',
-                              `FOREIGN_TYPE` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外键类型，GWS_YIQ_NORMAL_REPORT通用报备类型，',
-                              `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外键ID，GWS_YIQ_NORMAL_REPORT的REPORT_ID',
-                              `OBJ_USER_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对象人员ID，关联GLOBAL_USER、关联ELE_PEOPLE、关联SAS_PEOPLE_BASE',
-                              `OBJ_ORGAN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对象机构ID，关联GLOBAL_ORGAN、关联ELE_ORGAN、关联SAS_ORGAN_BASE',
+                              `FOREIGN_TYPE` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外键类型',
+                              `FOREIGN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '外键ID',
+                              `OBJ_USER_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对象人员ID',
+                              `OBJ_ORGAN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对象机构ID',
                               `OBJ_CONN_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '对象关联ID，备用字段',
                               `FLOW_TYPE` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '操作类型 D（派发）、R（复核）、C（催办）、E（退回）',
                               `ASSIGN_FLAG` int(10) NULL DEFAULT NULL COMMENT '流程单产生标示，0自动派单，1人工派单',

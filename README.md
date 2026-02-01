@@ -18,7 +18,7 @@ JAVA企业级后端框架（EFRAME），基于Springboot，采用支持 JAVA 1.8
 
 前端工程路径：
 
-**VUE+TS前端工程地址：** <a target="_blank">https://gitee.com/linlannet/eframe-java-backend
+**VUE+TS前端工程地址：** <a target="_blank">https://gitee.com/linlannet/eframe-vue-frontend
 
 
 ## 版本历史
