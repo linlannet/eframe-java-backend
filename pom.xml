@@ -37,43 +37,50 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <maven.version>3.1.0</maven.version>
-        <maven.compile.version>3.7.0</maven.compile.version>
-        <maven.source.version>3.3.1</maven.source.version>
+        <java.version>17</java.version>
+        <maven.version>3.4.0</maven.version>
+        <maven.compile.version>3.12.1</maven.compile.version>
+        <maven.source.version>3.3.0</maven.source.version>
         <maven.javadoc.version>3.3.1</maven.javadoc.version>
         <maven.pluging.version>3.8.3</maven.pluging.version>
         <maven.pluging.annotations.version>3.6.1</maven.pluging.annotations.version>
         <maven.tree.version>3.1.0</maven.tree.version>
         <maven.gpg.version>3.1.0</maven.gpg.version>
         <maven.sonatype.version>0.7.0</maven.sonatype.version>
-        <spring.boot.version>2.7.18</spring.boot.version>
-        <spring-framework.version>5.3.31</spring-framework.version>
-        <spring.security.version>5.7.11</spring.security.version>
-        <mybatis.spring.version>2.3.2</mybatis.spring.version>
+        <spring.boot.version>3.3.5</spring.boot.version>
+        <spring-framework.version>6.1.14</spring-framework.version>
+        <spring.security.version>6.3.5</spring.security.version>
+        <spring.data.version>3.3.5</spring.data.version>
+        <mybatis.version>3.5.19</mybatis.version>
+        <commons.codec.version>1.11</commons.codec.version>
+        <commons.collections.version>3.2.1</commons.collections.version>
+        <zxing.version>3.4.1</zxing.version>
+        <httpcomponents.version>4.5.13</httpcomponents.version>
+        <mybatis.spring.version>3.0.4</mybatis.spring.version>
         <druid.version>1.2.23</druid.version>
-        <quartz.version>2.3.0</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <commons-pool2.version>2.12.0</commons-pool2.version>
         <bitwalker.version>1.21</bitwalker.version>
-        <springfox.version>2.9.2</springfox.version>
+        <springfox.version>3.0.0</springfox.version>
         <kaptcha.version>2.3.3</kaptcha.version>
-        <pagehelper.boot.version>2.1.0</pagehelper.boot.version>
-        <lombok.version>1.18.30</lombok.version>
-        <fastjson2.version>2.0.31</fastjson2.version>
-        <fasterxml.version>2.13.5</fasterxml.version>
-        <oshi.version>5.5.1</oshi.version>
-        <snakeyaml.version>1.30</snakeyaml.version>
+        <pagehelper.boot.version>3.0.1</pagehelper.boot.version>
+        <lombok.version>1.18.38</lombok.version>
+        <fastjson2.version>2.0.57</fastjson2.version>
+        <fasterxml.version>2.17.2</fasterxml.version>
+        <oshi.version>6.1.6</oshi.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
         <commons.io.version>2.13.0</commons.io.version>
-        <poi.version>4.1.2</poi.version>
+        <poi.version>4.0.0</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
         <guava.version>23.0</guava.version>
-        <apache.httpclient.version>4.5.13</apache.httpclient.version>
-        <jedis.version>3.8.0</jedis.version>
+        <apache.httpclient.version>4.5.5</apache.httpclient.version>
+        <jedis.version>4.3.6</jedis.version>
         <aspectj.version>1.9.7</aspectj.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
-        <slf4j.version>1.7.36</slf4j.version>
+        <slf4j.version>2.0.9</slf4j.version>
         <mysql.version>8.0.32</mysql.version>
         <license-maven-plugin.version>4.2</license-maven-plugin.version>
         <formatter-maven-plugin.version>2.16.0</formatter-maven-plugin.version>
