@@ -17,14 +17,13 @@
  */
 package net.linlan.authn.manage.controller;
 
-import javax.annotation.Resource;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.hutool.core.util.StrUtil;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.Encrypt;
 import net.linlan.authn.mail.constant.MailFormatEnum;
 import net.linlan.authn.mail.constant.MailPlatformEnum;

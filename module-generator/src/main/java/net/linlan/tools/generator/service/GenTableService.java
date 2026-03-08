@@ -30,8 +30,6 @@ import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.velocity.Template;
@@ -47,6 +45,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.abs.CharsetConstants;

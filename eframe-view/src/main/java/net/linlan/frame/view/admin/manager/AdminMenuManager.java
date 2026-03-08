@@ -23,10 +23,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminMenuVo;

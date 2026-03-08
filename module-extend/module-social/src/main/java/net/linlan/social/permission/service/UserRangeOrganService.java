@@ -19,8 +19,6 @@ package net.linlan.social.permission.service;
 
 import java.util.*;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
@@ -28,6 +26,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.group.constant.PublicGroupEnum;
 import net.linlan.authn.group.entity.PublicGroup;
 import net.linlan.commons.core.CollectionUtils;

@@ -17,13 +17,12 @@
  */
 package net.linlan.frame.comm.security;
 
-import javax.annotation.Resource;
-
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.constant.UserStatus;
 import net.linlan.frame.FrameUserDetails;

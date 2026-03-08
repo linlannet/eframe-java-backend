@@ -24,12 +24,12 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>module-extend</artifactId>
-        <version>1.1.15</version>
+        <version>1.2.0</version>
     </parent>
     <groupId>net.linlan.eframe</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>module-social</artifactId>
-    <version>1.1.15</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>module-social</name>
     <description>

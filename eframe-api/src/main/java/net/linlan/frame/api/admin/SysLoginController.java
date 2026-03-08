@@ -19,13 +19,12 @@ package net.linlan.frame.api.admin;
 
 import java.util.Set;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.web.bind.annotation.*;
 
 import com.github.pagehelper.Page;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.StringUtils;

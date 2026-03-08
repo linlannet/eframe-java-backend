@@ -19,10 +19,9 @@ package net.linlan.tools.generator.service;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.tools.generator.dao.GenTableColumnDao;
 import net.linlan.tools.generator.entity.GenTableColumn;
 

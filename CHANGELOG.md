@@ -1,3 +1,13 @@
+### 版本号：1.2.0
+- 更新日期：2026-03-08
+- 更新内容：
+1. jdk版本升级为17
+2. 更新maven相关版本，适配jdk升级
+3. javax修改为jakarta
+4. 更新jdbc和websocket的版本
+5. 修改SecurityConfig内错误
+6. 增加DruidProperties，修改DynamicDataSourceConfig，删除RemoveAds文件
+
 ### 版本号：1.1.15
 - 更新日期：2026-02-01
 - 更新内容：

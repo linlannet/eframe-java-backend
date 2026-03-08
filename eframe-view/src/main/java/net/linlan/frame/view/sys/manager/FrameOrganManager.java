@@ -20,13 +20,12 @@ package net.linlan.frame.view.sys.manager;
 import java.sql.Timestamp;
 import java.util.*;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.Page;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;

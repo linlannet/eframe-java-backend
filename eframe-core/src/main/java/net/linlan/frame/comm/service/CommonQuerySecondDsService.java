@@ -21,10 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.db.annotation.DataSource;
 import net.linlan.frame.comm.dao.CommonQuerySecondDsDao;

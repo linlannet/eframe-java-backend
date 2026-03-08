@@ -23,14 +23,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import com.github.pagehelper.Page;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;

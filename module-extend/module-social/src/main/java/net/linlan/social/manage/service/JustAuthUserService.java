@@ -21,15 +21,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
 import me.zhyd.oauth.model.AuthUser;
 import net.linlan.utils.constant.CacheConstants;
 

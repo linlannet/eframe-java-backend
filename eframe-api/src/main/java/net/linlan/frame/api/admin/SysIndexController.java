@@ -19,12 +19,11 @@ package net.linlan.frame.api.admin;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.core.annotation.PlatLog;

@@ -23,9 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.io.IOUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -37,6 +34,8 @@ import com.alibaba.druid.sql.ast.SQLStatement;
 import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlCreateTableStatement;
 import com.github.pagehelper.Page;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.commons.core.http.ResponseEntity;

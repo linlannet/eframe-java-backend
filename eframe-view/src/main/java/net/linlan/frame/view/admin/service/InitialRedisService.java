@@ -23,13 +23,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.script.json.StringMap;
 import net.linlan.frame.view.admin.utils.DictionaryUtils;

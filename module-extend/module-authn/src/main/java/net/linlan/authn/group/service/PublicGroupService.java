@@ -19,8 +19,6 @@ package net.linlan.authn.group.service;
 
 import java.util.*;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +27,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.group.dao.PublicGroupDao;
 import net.linlan.authn.group.dto.PositionCommParam;
 import net.linlan.authn.group.dto.PositionSimpleDto;

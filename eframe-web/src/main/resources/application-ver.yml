@@ -29,9 +29,9 @@ spring:
         #        driverClassName: com.mysql.cj.jdbc.Driver
         druid:
             first: #数据源1-产品数据源
-                url: jdbc:mysql://localhost:3306/eframedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
-                username: 'lldba'
-                password: 'DB_Lldba_2023!'
+                url: jdbc:mysql://47.102.200.108:6306/eframedb_1.0?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+                username: 'admin'
+                password: 'sjj5dEID@156!'
             h2: #数据源-H2本地数据库
                 url: jdbc:h2:~/H2Data/lldb;AUTO_SERVER=TRUE;LOG=0;UNDO_LOG=0
                 username: sa
@@ -85,7 +85,6 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
-
     data:
         # redis 配置
         redis:
@@ -120,6 +119,7 @@ platform:
         db_encrypt: false        #数据库敏感信息是否加密
         db_key: encrypt_string        #数据库敏感字段加密值
         db_key_out: encrypt_string_out        #数据库敏感字段对外提供加密值
+
     backend:
         encrypt: false      #前后端交互是否加密
         rsa:

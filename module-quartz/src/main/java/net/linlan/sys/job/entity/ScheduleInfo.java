@@ -20,10 +20,9 @@ package net.linlan.sys.job.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.validation.constraints.NotBlank;
-
 import lombok.Data;
 
+import jakarta.validation.constraints.NotBlank;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.utils.entity.BaseEntity;
 

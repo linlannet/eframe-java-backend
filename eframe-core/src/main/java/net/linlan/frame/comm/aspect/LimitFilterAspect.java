@@ -19,8 +19,6 @@ package net.linlan.frame.comm.aspect;
 
 import java.lang.reflect.Method;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -33,6 +31,7 @@ import org.springframework.stereotype.Component;
 
 import com.google.common.collect.ImmutableList;
 
+import jakarta.servlet.http.HttpServletRequest;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.constant.LimitType;

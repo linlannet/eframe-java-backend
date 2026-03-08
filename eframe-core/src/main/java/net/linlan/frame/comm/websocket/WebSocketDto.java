@@ -17,9 +17,9 @@
  */
 package net.linlan.frame.comm.websocket;
 
-import javax.websocket.Session;
-
 import lombok.Data;
+
+import jakarta.websocket.Session;
 
 @Data
 public class WebSocketDto {

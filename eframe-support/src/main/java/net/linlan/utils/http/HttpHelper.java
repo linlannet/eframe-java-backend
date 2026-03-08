@@ -23,11 +23,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import javax.servlet.ServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jakarta.servlet.ServletRequest;
 import net.linlan.commons.core.ExceptionUtils;
 
 /**

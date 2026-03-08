@@ -17,8 +17,6 @@
  */
 package net.linlan.utils.exception;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -30,6 +28,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.servlet.http.HttpServletRequest;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.http.HttpStatus;
 import net.linlan.commons.core.http.ResponseEntity;

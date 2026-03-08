@@ -17,12 +17,11 @@
  */
 package net.linlan.frame.api.open;
 
-import javax.annotation.Resource;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.StringUtils;

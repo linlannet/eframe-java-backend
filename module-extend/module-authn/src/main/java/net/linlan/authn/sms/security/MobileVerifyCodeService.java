@@ -17,10 +17,9 @@
  */
 package net.linlan.authn.sms.security;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.sms.service.SmsSendService;
 
 /**

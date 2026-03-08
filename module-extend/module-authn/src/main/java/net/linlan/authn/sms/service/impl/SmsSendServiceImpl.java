@@ -23,8 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson2.JSONObject;
@@ -32,6 +30,7 @@ import com.alibaba.fastjson2.JSONObject;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.sms.cache.SmsConfigCache;
 import net.linlan.authn.sms.cache.SmsSendCache;
 import net.linlan.authn.sms.channel.SmsContext;

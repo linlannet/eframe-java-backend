@@ -17,10 +17,9 @@
  */
 package net.linlan.oss.storage;
 
-import javax.annotation.Resource;
-
 import com.alibaba.fastjson2.JSONObject;
 
+import jakarta.annotation.Resource;
 import net.linlan.oss.config.CloudStorageConfig;
 import net.linlan.sys.base.service.BaseConfigWholeService;
 
