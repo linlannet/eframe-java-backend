@@ -60,8 +60,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -108,7 +108,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?resclassId=95&startTime=2026-03-09 00:08:33&refId=95&key=m7vy3e&q=631p7z&limit=10&orderBy=698&fileSize=975&fileIsvalid=true&appId=95&page=1&refType=n3w8w5&fileExtension=oyw3uq&endTime=2026-03-09 00:08:33&fileName=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/list.do?fileSize=546&resclassId=17&fileIsvalid=true&q=owkjnz&page=1&fileExtension=j7kj1e&refType=jw8vps&limit=10&orderBy=23&endTime=2026-03-09 22:49:14&refId=17&startTime=2026-03-09 22:49:14&appId=17&key=4pb18z&fileName=macie.hartmann
 ```
 **Response-fields:**
 
@@ -140,26 +140,26 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 659,
+    "totalCount": 956,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "id": "95",
-        "resclassId": "95",
-        "fileName": "julian.ortiz",
+        "id": "17",
+        "resclassId": "17",
+        "fileName": "macie.hartmann",
         "fileIsvalid": true,
-        "createTime": "2026-03-09 00:09:53",
-        "fileExtension": "twxsja",
+        "createTime": "2026-03-09 22:50:40",
+        "fileExtension": "i0d6oo",
         "ids": [
-          "saxa4l"
+          "sc2hxk"
         ]
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -189,9 +189,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -253,7 +253,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'writer.formatter.lastException.detailMessage=success&q=8v79k7&characterEncoding=v36t6u&fileName=julian.ortiz&appId=95&writer.writeBuffer=3&writer.writeBuffer=3&writer.psOut.closed=true&writer.psOut.autoFlush=true&refType=sri6iw&page=1&writer.psOut.closing=true&startTime=2026-03-09 00:08:33&committed=true&fileExtension=kdc3mq&key=lxinpg&writer.psOut.formatter.zero=9&writer.psOut.textOut.nextChar=280&writer.psOut.trouble=true&orderBy=135&writer.formatter.zero=s&status=108&contentType=zay4kg&writer.trouble=true&endTime=2026-03-09 00:08:33&writer.psOut.textOut.nChars=165&limit=10&bufferSize=10&resclassId=95&fileIsvalid=true&writer.autoFlush=true&refId=95&fileSize=220'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/export.do --data 'fileSize=226&fileExtension=iom8f7&contentType=hztqy9&key=25rtoy&bufferSize=10&writer.psOut.autoFlush=true&startTime=2026-03-09 22:49:14&writer.autoFlush=true&resclassId=17&writer.psOut.textOut.nChars=507&endTime=2026-03-09 22:49:14&committed=true&writer.psOut.closed=true&writer.psOut.closing=true&fileIsvalid=true&fileName=macie.hartmann&refId=17&refType=pxrvgp&writer.formatter.lastException.detailMessage=success&writer.psOut.textOut.nextChar=581&q=4ylzr2&writer.trouble=true&writer.psOut.trouble=true&page=1&limit=10&writer.writeBuffer=s&writer.writeBuffer=s&writer.psOut.formatter.zero=9&writer.formatter.zero=7&appId=17&status=750&orderBy=872&characterEncoding=jico7l'
 ```
 **Response-fields:**
 
@@ -272,9 +272,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "01kx96",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0bi0q3",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -305,7 +305,7 @@ id|string|   主键ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/info.do?id=17
 ```
 **Response-fields:**
 
@@ -332,18 +332,18 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "id": "95",
-    "resclassId": "95",
-    "fileName": "julian.ortiz",
+    "id": "17",
+    "resclassId": "17",
+    "fileName": "macie.hartmann",
     "fileIsvalid": true,
-    "createTime": "2026-03-09 00:09:53",
-    "fileExtension": "pbkzdw",
+    "createTime": "2026-03-09 22:50:40",
+    "fileExtension": "dctewl",
     "ids": [
-      "9l7y6q"
+      "chu875"
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -381,14 +381,14 @@ ids|array|数组|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/save.do --data '{
-  "id": "95",
-  "resclassId": "95",
-  "fileName": "julian.ortiz",
+  "id": "17",
+  "resclassId": "17",
+  "fileName": "macie.hartmann",
   "fileIsvalid": true,
-  "createTime": "2026-03-09 00:09:53",
-  "fileExtension": "krg4zk",
+  "createTime": "2026-03-09 22:50:40",
+  "fileExtension": "lq0l17",
   "ids": [
-    "ahxy33"
+    "bx6xjv"
   ]
 }'
 ```
@@ -409,9 +409,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "rxhsme",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "hdr06q",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -449,14 +449,14 @@ ids|array|数组|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/update.do --data '{
-  "id": "95",
-  "resclassId": "95",
-  "fileName": "julian.ortiz",
+  "id": "17",
+  "resclassId": "17",
+  "fileName": "macie.hartmann",
   "fileIsvalid": true,
-  "createTime": "2026-03-09 00:09:54",
-  "fileExtension": "qm3te8",
+  "createTime": "2026-03-09 22:50:40",
+  "fileExtension": "6wytgf",
   "ids": [
-    "s4xsvf"
+    "zuyl6p"
   ]
 }'
 ```
@@ -477,9 +477,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "c9suu4",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4d9b0p",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -517,14 +517,14 @@ ids|array|数组|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/delete.do --data '{
-  "id": "95",
-  "resclassId": "95",
-  "fileName": "julian.ortiz",
+  "id": "17",
+  "resclassId": "17",
+  "fileName": "macie.hartmann",
   "fileIsvalid": true,
-  "createTime": "2026-03-09 00:09:54",
-  "fileExtension": "i50qqi",
+  "createTime": "2026-03-09 22:50:40",
+  "fileExtension": "1jk2k0",
   "ids": [
-    "4qtqf6"
+    "6sm1qe"
   ]
 }'
 ```
@@ -545,9 +545,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1c2i7s",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "wluw24",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -591,9 +591,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "02lyai",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "au3gr5",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -625,9 +625,9 @@ delete|boolean|是否删除|false|-
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -671,93 +671,96 @@ writer|object|No comments found.|false|-
 characterEncoding|string|No comments found.|false|-
 committed|boolean|No comments found.|false|-
 bufferSize|int32|No comments found.|false|-
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -771,65 +774,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -841,59 +849,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -905,19 +910,14 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?httpServletMapping.matchValue=54pf3c&requestURL.value=10&requestURL.value=10&asyncContext.request.servletContext.serverInfo=5ohnvu&asyncContext.request.servletContext.requestCharacterEncoding=gl79zq&reader.markedChar=191&servletContext.sessionCookieConfig.path=g2zih4&asyncContext.request.servletConnection.connectionId=95&asyncContext.request.remotePort=315&writer.psOut.formatter.zero=d&asyncContext.request.servletContext.effectiveMinorVersion=265&writer.writeBuffer=z&writer.writeBuffer=z&protocol=8388bd&asyncContext.request.scheme=ft2ml3&asyncContext.request.asyncStarted=true&servletContext.virtualServerName=julian.ortiz&requestedSessionIdFromURL=true&asyncContext.request.reader.nChars=141&asyncContext.request.servletContext.minorVersion=225&writer.formatter.zero=a&contentLengthLong=776&cookies.=imqxax&cookies.=imqxax&servletContext.sessionCookieConfig.secure=true&asyncContext.request.reader.skipLF=true&session.servletContext.requestCharacterEncoding=brinrx&asyncContext.request.localName=julian.ortiz&writer.psOut.textOut.nextChar=889&session.servletContext.sessionCookieConfig.name=julian.ortiz&httpServletMapping.pattern=sbh2ex&requestId=95&session.lastAccessedTime=1772986113769&remoteHost=27oek1&asyncContext.request.servletContext.majorVersion=605&asyncContext.request.servletContext.virtualServerName=julian.ortiz&asyncContext.request.servletContext.contextPath=bpl79d&reader.skipLF=true&asyncContext.request.secure=true&asyncContext.response.bufferSize=10&asyncContext.request.servletConnection.secure=true&writer.psOut.trouble=true&servletContext.sessionCookieConfig.httpOnly=true&remotePort=428&asyncContext.request.servletContext.sessionTimeout=96&asyncContext.request.asyncContext.timeout=144&session.servletContext.sessionCookieConfig.domain=hirthe.com&reader.nextChar=858&asyncContext.request.requestId=95&asyncContext.request.serverName=julian.ortiz&contentType=odm7fu&session.servletContext.sessionCookieConfig.secure=true&asyncContext.timeout=667&asyncContext.request.protocolRequestId=95&reader.readAheadLimit=10&requestURI=irs8wu&contextPath=0pjo8e&asyncContext.request.protocol=nlpmwy&delete=true&servletContext.contextPath=n02sqk&session.servletContext.contextPath=7l53bk&serverPort=46&servletContext.servletContextName=julian.ortiz&bufferSize=10&servletContext.serverInfo=fh7olh&asyncContext.request.servletConnection.protocolConnectionId=95&session.servletContext.sessionCookieConfig.httpOnly=true&localPort=791&writer.trouble=true&asyncSupported=true&session.servletContext.minorVersion=28&asyncContext.request.contentType=z6wcv5&remoteUser=arzbhl&servletContext.requestCharacterEncoding=7j4636&httpServletMapping.mappingMatch=CONTEXT_ROOT&asyncContext.response.characterEncoding=pkzpvk&session.servletContext.sessionTimeout=575&servletContext.sessionCookieConfig.name=julian.ortiz&servletConnection.protocolConnectionId=95&servletConnection.secure=true&remoteAddr=bol3pm&scheme=2n1j8x&session.servletContext.servletContextName=julian.ortiz&servletContext.sessionCookieConfig.domain=hirthe.com&httpServletMapping.servletName=julian.ortiz&session.servletContext.majorVersion=72&asyncContext.request.asyncSupported=true&asyncContext.request.remoteHost=a4bv22&asyncContext.request.servletContext.responseCharacterEncoding=ilfvjh&servletContext.minorVersion=609&session.servletContext.responseCharacterEncoding=04u2nm&session.creationTime=1772986113769&asyncContext.request.reader.nextChar=871&requestURL.coder=73&requestURL.count=57&characterEncoding=yeftgh&writer.psOut.textOut.nChars=989&reader.nChars=317&asyncContext.request.characterEncoding=k33662&asyncContext.request.localPort=593&servletConnection.connectionId=95&requestedSessionId=95&secure=true&servletPath=8xxroj&session.new=true&reader.cb=h&reader.cb=h&servletContext.responseCharacterEncoding=6zrket&servletContext.effectiveMajorVersion=865&asyncContext.request.contentLength=151&servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.remoteAddr=dlly9g&session.servletContext.sessionCookieConfig.path=sw5a23&session.servletContext.serverInfo=2krm1e&localName=julian.ortiz&asyncContext.response.writer.autoFlush=true&session.servletContext.virtualServerName=julian.ortiz&writer.psOut.autoFlush=true&asyncContext.request.dispatcherType=FORWARD&pathInfo=z71o4r&requestURL.empty=true&writer.psOut.closing=true&session.servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.serverPort=522&asyncContext.request.servletConnection.protocol=jcc9wj&pathTranslated=mu0fq7&servletContext.majorVersion=214&reader.skipBuffer=1&reader.skipBuffer=1&writer.psOut.closed=true&reader.markedSkipLF=true&trailerFieldsReady=true&servletConnection.protocol=rpw9fu&servletContext.sessionCookieConfig.comment=hw2sj8&asyncContext.request.reader.readAheadLimit=10&userPrincipal.name=julian.ortiz&session.servletContext.effectiveMajorVersion=393&status=816&asyncContext.response.writer.trouble=true&asyncContext.response.committed=true&session.servletContext.sessionCookieConfig.comment=w4zmt7&asyncContext.request.contentLengthLong=835&queryString=11jc7o&asyncContext.request.reader.markedSkipLF=true&session.maxInactiveInterval=82&writer.formatter.lastException.detailMessage=success&asyncContext.request.localAddr=2s37ik&session.id=95&protocolRequestId=95&asyncContext.request.servletContext.effectiveMajorVersion=15&asyncStarted=true&authType=til1p5&contentLength=887&session.servletContext.effectiveMinorVersion=920&serverName=julian.ortiz&localAddr=r61ndm&asyncContext.request.reader.markedChar=793&asyncContext.response.contentType=il13xr&fileName=julian.ortiz&servletContext.effectiveMinorVersion=629&committed=true&dispatcherType=FORWARD&method=7caoem&requestedSessionIdFromCookie=true&writer.autoFlush=true&requestedSessionIdValid=true&asyncContext.request.servletContext.servletContextName=julian.ortiz&servletContext.sessionTimeout=767
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download.do?writer.psOut.textOut.nextChar=543&localName=macie.hartmann&httpServletMapping.pattern=uqiloh&remotePort=725&servletContext.sessionCookieConfig.name=macie.hartmann&asyncContext.request.servletContext.requestCharacterEncoding=f3fw55&requestedSessionIdFromCookie=true&asyncContext.request.asyncContext.timeout=849&servletContext.requestCharacterEncoding=5w5u13&asyncContext.request.serverPort=20&reader.skipBuffer=u&reader.skipBuffer=u&secure=true&userPrincipal.name=macie.hartmann&asyncContext.request.serverName=macie.hartmann&asyncContext.request.servletContext.effectiveMajorVersion=927&servletContext.sessionTimeout=119&reader.skipLF=true&httpServletMapping.servletName=macie.hartmann&writer.autoFlush=true&requestURI=fqhdot&reader.markedSkipLF=true&asyncContext.request.servletConnection.protocolConnectionId=17&asyncContext.request.remoteHost=wnidgn&asyncContext.request.localName=macie.hartmann&session.servletContext.responseCharacterEncoding=c25tr6&pathInfo=twp5s0&asyncSupported=true&writer.psOut.closing=true&writer.formatter.zero=t&httpServletMapping.mappingMatch=CONTEXT_ROOT&reader.readAheadLimit=10&servletConnection.secure=true&servletContext.sessionCookieConfig.secure=true&asyncContext.request.reader.skipLF=true&remoteAddr=ylqk1v&asyncContext.request.asyncSupported=true&scheme=jl9edr&contextPath=zq8n68&asyncContext.request.protocol=16a73e&asyncContext.request.secure=true&localAddr=ynrgt4&requestURL.count=838&writer.psOut.textOut.nChars=622&requestedSessionIdValid=true&asyncContext.request.servletConnection.connectionId=17&requestURL.empty=true&asyncContext.request.servletContext.contextPath=aouroj&session.servletContext.sessionTimeout=248&servletContext.majorVersion=942&servletContext.virtualServerName=macie.hartmann&asyncContext.response.contentType=eoz5vz&asyncContext.response.writer.trouble=true&cookies.=macie.hartmann&cookies.=macie.hartmann&session.servletContext.serverInfo=3hbzks&servletConnection.connectionId=17&remoteUser=cvmv3e&contentLength=648&asyncContext.request.reader.markedSkipLF=true&servletContext.sessionCookieConfig.maxAge=16&servletContext.sessionCookieConfig.path=ixwhn2&asyncContext.request.dispatcherType=FORWARD&asyncContext.request.servletContext.minorVersion=61&writer.psOut.closed=true&requestedSessionIdFromURL=true&servletContext.minorVersion=59&asyncContext.request.reader.readAheadLimit=10&session.servletContext.effectiveMajorVersion=820&asyncContext.request.servletContext.majorVersion=917&method=7dcoqx&writer.formatter.lastException.detailMessage=success&asyncContext.timeout=615&asyncContext.request.reader.markedChar=330&asyncContext.request.localAddr=8k34mh&session.servletContext.sessionCookieConfig.domain=kutch.co&contentType=nrk06r&asyncContext.request.reader.nChars=443&asyncContext.request.servletConnection.protocol=kgtpfy&asyncContext.response.bufferSize=10&session.servletContext.sessionCookieConfig.secure=true&reader.cb=3&reader.cb=3&session.id=17&delete=true&servletContext.servletContextName=macie.hartmann&writer.writeBuffer=p&writer.writeBuffer=p&session.servletContext.minorVersion=475&asyncContext.response.characterEncoding=qmc7p1&asyncStarted=true&session.servletContext.sessionCookieConfig.name=macie.hartmann&servletPath=2g13ae&session.servletContext.sessionCookieConfig.httpOnly=true&session.servletContext.sessionCookieConfig.maxAge=16&asyncContext.request.servletContext.servletContextName=macie.hartmann&pathTranslated=ji2wxv&reader.markedChar=155&asyncContext.request.protocolRequestId=17&dispatcherType=FORWARD&fileName=macie.hartmann&asyncContext.request.asyncStarted=true&committed=true&servletContext.responseCharacterEncoding=7hf0e4&asyncContext.request.localPort=349&servletContext.sessionCookieConfig.httpOnly=true&session.lastAccessedTime=1773067754226&serverName=macie.hartmann&session.servletContext.servletContextName=macie.hartmann&requestedSessionId=17&writer.psOut.formatter.zero=m&contentLengthLong=709&localPort=458&serverPort=57&session.servletContext.sessionCookieConfig.comment=dsm9kc&servletContext.sessionCookieConfig.comment=g1mhgn&asyncContext.request.contentLengthLong=509&servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.servletContext.effectiveMinorVersion=371&requestURL.coder=79&session.maxInactiveInterval=229&asyncContext.request.characterEncoding=lvjyir&asyncContext.request.scheme=b4lho6&asyncContext.response.writer.autoFlush=true&status=476&servletConnection.protocolConnectionId=17&session.servletContext.sessionCookieConfig.path=n2mxv8&servletContext.effectiveMinorVersion=481&asyncContext.request.reader.nextChar=447&asyncContext.request.remoteAddr=hehsei&bufferSize=10&session.servletContext.effectiveMinorVersion=262&asyncContext.response.committed=true&servletContext.contextPath=3hsuqn&asyncContext.request.servletContext.sessionTimeout=313&httpServletMapping.matchValue=3gwaoj&asyncContext.request.servletConnection.secure=true&writer.trouble=true&servletContext.effectiveMajorVersion=492&writer.psOut.autoFlush=true&reader.nextChar=717&requestId=17&asyncContext.request.servletContext.virtualServerName=macie.hartmann&trailerFieldsReady=true&session.servletContext.majorVersion=890&authType=v07b2t&asyncContext.request.requestId=17&protocolRequestId=17&session.creationTime=1773067754226&characterEncoding=wcral6&writer.psOut.trouble=true&protocol=7zytnr&servletConnection.protocol=p4v69m&queryString=zuk5wn&requestURL.value=9&requestURL.value=9&remoteHost=o4pkty&session.new=true&asyncContext.request.servletContext.serverInfo=w35xju&asyncContext.request.remotePort=556&asyncContext.request.servletContext.responseCharacterEncoding=aik4eo&reader.nChars=25&session.servletContext.contextPath=z4m103&asyncContext.request.contentLength=818&session.servletContext.requestCharacterEncoding=2dmtvk&servletContext.serverInfo=bftfm9&session.servletContext.virtualServerName=macie.hartmann&asyncContext.request.contentType=x11kxf
 ```
 **Response-fields:**
 
@@ -936,9 +936,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "g9w1q1",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ecsny0",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -965,93 +965,96 @@ token|string|令牌|true|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -1065,65 +1068,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -1135,59 +1143,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -1199,21 +1204,16 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -1260,7 +1260,7 @@ bufferSize|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/upload.do --data 'session.servletContext.sessionTimeout=877&session.maxInactiveInterval=860&session.servletContext.contextPath=36c54k&httpServletMapping.mappingMatch=CONTEXT_ROOT&requestId=95&dispatcherType=FORWARD&requestURL.empty=true&reader.readAheadLimit=10&servletContext.contextPath=y105ss&contentType=i412wf&writer.writeBuffer=w&writer.writeBuffer=w&asyncContext.response.characterEncoding=puad0a&writer.psOut.formatter.zero=8&asyncContext.request.remotePort=542&httpServletMapping.pattern=vzzeoj&asyncContext.request.contentLengthLong=630&requestURL.coder=43&contextPath=hhxevc&asyncContext.request.servletContext.majorVersion=869&asyncContext.request.servletContext.serverInfo=blprk7&servletContext.sessionCookieConfig.secure=true&serverName=julian.ortiz&asyncContext.request.serverPort=898&session.servletContext.servletContextName=julian.ortiz&asyncContext.request.servletContext.servletContextName=julian.ortiz&remoteUser=7sy8y2&asyncContext.response.bufferSize=10&session.id=95&asyncContext.request.servletContext.contextPath=951ab5&asyncContext.request.contentLength=464&asyncContext.request.servletConnection.connectionId=95&asyncContext.request.localPort=516&servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.servletContext.requestCharacterEncoding=1ra5aa&bufferSize=10&asyncContext.response.contentType=cjrs3s&asyncContext.request.reader.markedSkipLF=true&servletContext.servletContextName=julian.ortiz&writer.formatter.zero=j&session.servletContext.sessionCookieConfig.comment=4001mg&asyncContext.request.servletContext.responseCharacterEncoding=d9qqv9&method=ijn2ay&asyncContext.request.dispatcherType=FORWARD&servletConnection.protocol=ep7gsl&servletConnection.secure=true&contentType=jstrfh&asyncContext.request.remoteAddr=rlpxuh&writer.psOut.closed=true&characterEncoding=sqll6h&session.new=true&servletContext.virtualServerName=julian.ortiz&asyncContext.request.protocol=9293ka&asyncContext.request.contentType=10h6dg&asyncContext.request.servletContext.virtualServerName=julian.ortiz&session.servletContext.serverInfo=j7e2q2&servletContext.serverInfo=gy5tz3&asyncContext.request.asyncStarted=true&asyncContext.request.servletConnection.protocolConnectionId=95&requestedSessionIdValid=true&asyncContext.response.writer.trouble=true&session.servletContext.sessionCookieConfig.path=h12bab&asyncContext.request.remoteHost=4dpxlj&reader.skipBuffer=j&reader.skipBuffer=j&localName=julian.ortiz&asyncContext.request.protocolRequestId=95&servletContext.responseCharacterEncoding=txjym9&queryString=5wson1&remoteAddr=1k114b&servletConnection.connectionId=95&session.servletContext.minorVersion=974&writer.trouble=true&session.creationTime=1772986113769&localAddr=ckpor4&writer.formatter.lastException.detailMessage=success&session.servletContext.requestCharacterEncoding=7243k8&requestedSessionId=95&servletContext.sessionCookieConfig.httpOnly=true&asyncContext.response.writer.autoFlush=true&scheme=e7u4oq&session.servletContext.sessionCookieConfig.secure=true&userPrincipal.name=julian.ortiz&servletContext.effectiveMinorVersion=262&asyncContext.request.reader.nextChar=548&asyncSupported=true&writer.psOut.closing=true&asyncContext.request.serverName=julian.ortiz&session.servletContext.effectiveMinorVersion=772&httpServletMapping.servletName=julian.ortiz&asyncContext.request.servletContext.effectiveMajorVersion=32&trailerFieldsReady=true&reader.skipLF=true&committed=true&writer.psOut.textOut.nChars=344&session.servletContext.sessionCookieConfig.name=julian.ortiz&servletContext.sessionCookieConfig.comment=7qeyvz&servletContext.requestCharacterEncoding=cimtvc&protocol=kyjuwl&contentLength=963&cookies.=julian.ortiz&cookies.=julian.ortiz&reader.cb=j&reader.cb=j&servletConnection.protocolConnectionId=95&protocolRequestId=95&reader.nChars=993&writer.psOut.autoFlush=true&session.servletContext.effectiveMajorVersion=618&requestURI=euh8zd&asyncContext.request.characterEncoding=mjfgs8&session.servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.servletContext.effectiveMinorVersion=972&asyncContext.request.reader.nChars=251&writer.psOut.trouble=true&requestedSessionIdFromCookie=true&asyncContext.request.reader.readAheadLimit=10&servletContext.majorVersion=268&asyncContext.request.servletConnection.protocol=pkb2j8&serverPort=168&servletContext.sessionCookieConfig.path=3pqdkn&session.servletContext.virtualServerName=julian.ortiz&servletContext.sessionTimeout=991&remotePort=79&reader.markedSkipLF=true&asyncContext.request.scheme=h15rr3&requestURL.count=622&asyncContext.request.localAddr=i4m4wx&authType=fl5mrm&asyncContext.request.secure=true&requestURL.value=88&requestURL.value=88&servletContext.sessionCookieConfig.domain=hirthe.com&servletContext.minorVersion=511&writer.psOut.textOut.nextChar=481&requestedSessionIdFromURL=true&asyncContext.request.servletContext.minorVersion=795&session.servletContext.responseCharacterEncoding=2r78y6&characterEncoding=sltp40&session.lastAccessedTime=1772986113769&pathInfo=noxf3n&reader.markedChar=496&httpServletMapping.matchValue=h14xlr&asyncContext.request.reader.markedChar=23&session.servletContext.majorVersion=779&asyncContext.request.servletContext.sessionTimeout=223&asyncContext.response.committed=true&secure=true&contentLengthLong=797&session.servletContext.sessionCookieConfig.domain=hirthe.com&asyncContext.request.asyncContext.timeout=370&pathTranslated=kahqn4&status=872&cookies.=cuo1st&cookies.=cuo1st&servletPath=v1ir8a&asyncContext.request.requestId=95&reader.nextChar=368&servletContext.sessionCookieConfig.name=julian.ortiz&asyncContext.request.asyncSupported=true&asyncContext.request.servletConnection.secure=true&session.servletContext.sessionCookieConfig.httpOnly=true&remoteHost=apwh0b&asyncContext.request.localName=julian.ortiz&asyncContext.request.reader.skipLF=true&asyncStarted=true&servletContext.effectiveMajorVersion=356&asyncContext.timeout=984&writer.autoFlush=true&localPort=619'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/upload.do --data 'protocolRequestId=17&writer.formatter.lastException.detailMessage=success&session.servletContext.effectiveMajorVersion=497&reader.markedChar=744&status=897&httpServletMapping.mappingMatch=CONTEXT_ROOT&asyncContext.request.servletContext.servletContextName=macie.hartmann&writer.psOut.textOut.nChars=370&session.servletContext.virtualServerName=macie.hartmann&requestURL.empty=true&asyncContext.response.contentType=pphhtg&cookies.=gouoxj&cookies.=gouoxj&session.servletContext.minorVersion=282&characterEncoding=9pd39n&servletContext.majorVersion=274&asyncContext.request.protocol=bt41wt&session.servletContext.sessionCookieConfig.secure=true&asyncContext.request.characterEncoding=ltt4g3&servletContext.servletContextName=macie.hartmann&asyncContext.request.servletContext.effectiveMajorVersion=874&dispatcherType=FORWARD&writer.trouble=true&session.id=17&session.servletContext.servletContextName=macie.hartmann&secure=true&servletContext.virtualServerName=macie.hartmann&contentLength=792&asyncContext.request.servletContext.requestCharacterEncoding=cq2mrx&asyncContext.request.asyncSupported=true&committed=true&asyncContext.request.localPort=285&asyncContext.request.asyncContext.timeout=31&asyncContext.response.characterEncoding=zohq6u&asyncContext.request.localName=macie.hartmann&writer.psOut.autoFlush=true&requestedSessionIdValid=true&reader.nChars=373&writer.psOut.textOut.nextChar=631&method=biel6r&trailerFieldsReady=true&servletContext.sessionCookieConfig.maxAge=16&asyncContext.request.reader.readAheadLimit=10&writer.formatter.zero=b&servletContext.serverInfo=dyvf50&servletConnection.protocol=bhhi9t&servletContext.responseCharacterEncoding=uxkpmq&remoteHost=8c7wk3&cookies.=macie.hartmann&cookies.=macie.hartmann&writer.psOut.trouble=true&httpServletMapping.servletName=macie.hartmann&reader.markedSkipLF=true&writer.psOut.closing=true&httpServletMapping.pattern=y0zl91&queryString=1gugok&asyncContext.request.servletContext.contextPath=wfral2&writer.psOut.formatter.zero=m&httpServletMapping.matchValue=fiz7j8&reader.skipLF=true&asyncContext.request.servletContext.responseCharacterEncoding=p32iuq&asyncContext.response.committed=true&asyncContext.request.servletContext.majorVersion=290&asyncSupported=true&remoteUser=qosbqn&asyncContext.request.contentType=yivq7l&servletContext.sessionCookieConfig.name=macie.hartmann&asyncContext.request.reader.nChars=90&servletContext.effectiveMajorVersion=679&session.servletContext.serverInfo=a9yi4q&requestedSessionIdFromURL=true&servletConnection.connectionId=17&asyncContext.request.serverName=macie.hartmann&asyncContext.request.servletContext.serverInfo=yh949j&bufferSize=10&asyncContext.timeout=935&contentType=bu0zgq&requestedSessionIdFromCookie=true&session.maxInactiveInterval=699&asyncContext.request.localAddr=irizmt&userPrincipal.name=macie.hartmann&session.servletContext.contextPath=awgo0g&requestURL.count=846&session.servletContext.sessionCookieConfig.name=macie.hartmann&session.servletContext.majorVersion=682&asyncContext.request.asyncStarted=true&asyncContext.request.servletConnection.secure=true&asyncContext.request.remoteAddr=8nr4v9&authType=ti1gb1&writer.psOut.closed=true&requestId=17&requestURL.coder=116&servletContext.sessionCookieConfig.path=qy7eue&asyncContext.request.servletContext.sessionTimeout=719&protocol=flknyq&asyncContext.request.reader.markedChar=791&asyncContext.request.servletContext.minorVersion=529&asyncContext.request.reader.markedSkipLF=true&writer.writeBuffer=o&writer.writeBuffer=o&servletContext.sessionCookieConfig.secure=true&asyncContext.response.writer.trouble=true&scheme=0f8rvm&localAddr=s4hg7b&reader.nextChar=891&servletContext.effectiveMinorVersion=97&pathInfo=01cgke&localName=macie.hartmann&asyncContext.request.servletConnection.connectionId=17&asyncContext.response.bufferSize=10&session.servletContext.sessionCookieConfig.httpOnly=true&serverPort=3&session.servletContext.sessionTimeout=372&asyncContext.request.reader.skipLF=true&asyncContext.request.servletConnection.protocol=ggcx5h&reader.readAheadLimit=10&session.servletContext.sessionCookieConfig.comment=nu7s1g&writer.autoFlush=true&asyncContext.request.servletConnection.protocolConnectionId=17&asyncContext.request.dispatcherType=FORWARD&contextPath=ui4kow&servletContext.minorVersion=786&requestURI=pssnjv&servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.servletContext.effectiveMinorVersion=882&characterEncoding=jvslhg&session.servletContext.responseCharacterEncoding=rccd28&session.servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.remotePort=889&asyncContext.request.remoteHost=x6howm&localPort=456&asyncContext.request.contentLength=895&asyncContext.request.reader.nextChar=617&servletPath=l9kq7i&requestURL.value=87&requestURL.value=87&serverName=macie.hartmann&asyncContext.request.servletContext.virtualServerName=macie.hartmann&asyncContext.response.writer.autoFlush=true&asyncStarted=true&session.servletContext.requestCharacterEncoding=n28emx&servletContext.contextPath=lr7q8e&session.servletContext.sessionCookieConfig.path=aqoi0y&session.lastAccessedTime=1773067754226&requestedSessionId=17&reader.skipBuffer=u&reader.skipBuffer=u&reader.cb=b&reader.cb=b&servletConnection.secure=true&asyncContext.request.protocolRequestId=17&asyncContext.request.serverPort=158&servletConnection.protocolConnectionId=17&asyncContext.request.requestId=17&asyncContext.request.secure=true&pathTranslated=ji6hkt&contentLengthLong=274&session.creationTime=1773067754226&servletContext.sessionTimeout=816&contentType=v323a2&servletContext.sessionCookieConfig.comment=l48exw&servletContext.sessionCookieConfig.httpOnly=true&asyncContext.request.contentLengthLong=595&session.new=true&session.servletContext.sessionCookieConfig.maxAge=16&remotePort=462&remoteAddr=qfqeff&asyncContext.request.scheme=006ehw&servletContext.requestCharacterEncoding=l2eyp3&session.servletContext.effectiveMinorVersion=934'
 ```
 **Response-fields:**
 
@@ -1286,15 +1286,15 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "originFilename": "julian.ortiz",
-    "filename": "julian.ortiz",
-    "fileType": "x4vr4u",
-    "fileUrl": "www.kandace-stamm.org",
-    "fileHttpUrl": "www.kandace-stamm.org",
-    "statusCode": "58719"
+    "originFilename": "macie.hartmann",
+    "filename": "macie.hartmann",
+    "fileType": "y9jhwm",
+    "fileUrl": "www.velia-kozey.biz",
+    "fileHttpUrl": "www.velia-kozey.biz",
+    "statusCode": "22134"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -1322,93 +1322,96 @@ token|string|令牌|true|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 files|file|文件(array of file)|true|-
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -1422,65 +1425,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -1492,59 +1500,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -1556,19 +1561,14 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/uploads.do --data 'session.servletContext.contextPath=l19dwu&servletPath=1ksuq7&asyncSupported=true&asyncContext.request.reader.readAheadLimit=10&asyncContext.request.requestId=95&httpServletMapping.servletName=julian.ortiz&localAddr=5hdkvt&asyncContext.request.servletContext.majorVersion=826&asyncContext.request.servletContext.requestCharacterEncoding=i0nlu1&requestedSessionIdFromCookie=true&asyncContext.response.writer.trouble=true&session.servletContext.effectiveMinorVersion=893&localPort=449&asyncContext.request.protocol=vqvtug&requestURL.count=937&asyncContext.request.asyncStarted=true&servletContext.majorVersion=845&servletContext.requestCharacterEncoding=16ocxa&asyncContext.request.reader.markedSkipLF=true&session.servletContext.sessionTimeout=587&reader.nextChar=311&session.servletContext.effectiveMajorVersion=504&pathInfo=z0onwo&servletContext.effectiveMinorVersion=835&requestedSessionId=95&trailerFieldsReady=true&servletConnection.protocol=znswq5&secure=true&session.creationTime=1772986113769&reader.nChars=28&asyncContext.request.contentType=8qxmkb&asyncContext.response.bufferSize=10&dispatcherType=FORWARD&asyncContext.response.writer.autoFlush=true&asyncContext.response.contentType=8nngn7&method=ttji7h&contextPath=97t03p&cookies.=julian.ortiz&cookies.=julian.ortiz&authType=gd1x6s&asyncContext.request.asyncContext.timeout=81&reader.markedSkipLF=true&queryString=qnnvsy&httpServletMapping.matchValue=u9zygs&servletContext.sessionCookieConfig.path=5j3aui&asyncStarted=true&asyncContext.request.contentLength=442&servletContext.sessionTimeout=373&asyncContext.request.remotePort=103&asyncContext.request.localPort=329&servletConnection.secure=true&session.servletContext.requestCharacterEncoding=ivc3a0&asyncContext.request.servletContext.contextPath=7hi7mc&servletConnection.protocolConnectionId=95&asyncContext.request.secure=true&requestedSessionIdValid=true&servletContext.responseCharacterEncoding=fczgg3&contentLength=147&servletConnection.connectionId=95&protocolRequestId=95&session.lastAccessedTime=1772986113769&remoteHost=fqo9ck&requestURL.value=39&requestURL.value=39&servletContext.sessionCookieConfig.secure=true&session.id=95&session.servletContext.virtualServerName=julian.ortiz&session.servletContext.sessionCookieConfig.maxAge=14&session.new=true&asyncContext.request.dispatcherType=FORWARD&asyncContext.request.servletContext.servletContextName=julian.ortiz&protocol=qtrne7&asyncContext.request.servletConnection.protocolConnectionId=95&asyncContext.timeout=969&session.servletContext.majorVersion=992&session.servletContext.minorVersion=908&session.servletContext.sessionCookieConfig.path=t0dbh6&reader.skipBuffer=3&reader.skipBuffer=3&servletContext.effectiveMajorVersion=726&session.servletContext.sessionCookieConfig.secure=true&contentLengthLong=371&session.servletContext.sessionCookieConfig.httpOnly=true&characterEncoding=vpa5a0&servletContext.minorVersion=497&httpServletMapping.pattern=44g2v3&servletContext.sessionCookieConfig.comment=w8a4t4&servletContext.serverInfo=nld2bd&asyncContext.request.localAddr=g0rlbn&asyncContext.request.remoteAddr=wg0kk7&reader.markedChar=811&asyncContext.request.scheme=87o8ls&servletContext.contextPath=cx4mqe&asyncContext.request.servletConnection.secure=true&asyncContext.response.characterEncoding=0g1il7&userPrincipal.name=julian.ortiz&remoteUser=m9z80y&httpServletMapping.mappingMatch=CONTEXT_ROOT&session.servletContext.serverInfo=61y841&asyncContext.request.reader.nextChar=709&localName=julian.ortiz&asyncContext.request.reader.skipLF=true&asyncContext.request.servletContext.responseCharacterEncoding=ubjq3p&servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.servletContext.serverInfo=lz5in4&session.maxInactiveInterval=498&contentType=g1k6ov&asyncContext.request.reader.markedChar=925&servletContext.sessionCookieConfig.name=julian.ortiz&requestURL.coder=111&asyncContext.request.characterEncoding=fw5ttf&serverName=julian.ortiz&serverPort=30&requestURI=8ybl75&asyncContext.request.contentLengthLong=581&servletContext.servletContextName=julian.ortiz&asyncContext.response.committed=true&asyncContext.request.serverName=julian.ortiz&cookies.=tnf0we&cookies.=tnf0we&reader.skipLF=true&requestURL.empty=true&requestedSessionIdFromURL=true&servletContext.virtualServerName=julian.ortiz&pathTranslated=ksg44p&session.servletContext.sessionCookieConfig.comment=fjhdw9&asyncContext.request.servletContext.minorVersion=166&asyncContext.request.remoteHost=m3mq0x&asyncContext.request.servletContext.virtualServerName=julian.ortiz&asyncContext.request.serverPort=270&asyncContext.request.servletContext.sessionTimeout=92&asyncContext.request.servletConnection.connectionId=95&session.servletContext.responseCharacterEncoding=s12yo4&asyncContext.request.asyncSupported=true&remoteAddr=ykawf4&scheme=abtx5c&asyncContext.request.servletContext.effectiveMinorVersion=598&asyncContext.request.localName=julian.ortiz&reader.readAheadLimit=10&asyncContext.request.servletConnection.protocol=5julu4&session.servletContext.sessionCookieConfig.name=julian.ortiz&servletContext.sessionCookieConfig.httpOnly=true&asyncContext.request.reader.nChars=734&session.servletContext.sessionCookieConfig.domain=hirthe.com&reader.cb=9&reader.cb=9&servletContext.sessionCookieConfig.domain=hirthe.com&asyncContext.request.servletContext.effectiveMajorVersion=671&asyncContext.request.protocolRequestId=95&remotePort=613&requestId=95&session.servletContext.servletContextName=julian.ortiz'
+curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/uploads.do --data 'httpServletMapping.servletName=macie.hartmann&queryString=w18s5t&reader.nChars=695&asyncContext.request.scheme=l1w8zc&asyncContext.request.reader.nChars=443&session.servletContext.minorVersion=722&requestedSessionId=17&servletContext.sessionCookieConfig.secure=true&servletContext.sessionCookieConfig.httpOnly=true&session.servletContext.virtualServerName=macie.hartmann&session.servletContext.effectiveMajorVersion=321&method=633ynj&trailerFieldsReady=true&protocol=u5m8o4&asyncContext.request.reader.readAheadLimit=10&asyncContext.request.servletConnection.protocol=4xgdlt&asyncContext.request.secure=true&asyncContext.request.servletContext.virtualServerName=macie.hartmann&requestURL.empty=true&requestURL.count=290&localName=macie.hartmann&protocolRequestId=17&servletContext.requestCharacterEncoding=kmdjfm&asyncContext.request.servletConnection.secure=true&asyncContext.request.asyncSupported=true&asyncContext.response.characterEncoding=bkcor3&asyncContext.request.remoteHost=3es36x&asyncContext.request.contentLengthLong=566&asyncContext.request.serverName=macie.hartmann&session.servletContext.sessionTimeout=936&session.servletContext.sessionCookieConfig.httpOnly=true&asyncContext.response.bufferSize=10&asyncContext.request.contentLength=165&asyncContext.request.characterEncoding=o9tsdz&asyncContext.response.committed=true&contentLengthLong=21&session.servletContext.effectiveMinorVersion=132&session.servletContext.responseCharacterEncoding=h7hrua&asyncStarted=true&scheme=5lqbwl&session.servletContext.sessionCookieConfig.comment=j251y4&session.id=17&secure=true&reader.markedChar=735&asyncContext.request.servletContext.majorVersion=742&httpServletMapping.mappingMatch=CONTEXT_ROOT&reader.cb=h&reader.cb=h&serverName=macie.hartmann&servletContext.effectiveMajorVersion=774&servletContext.sessionCookieConfig.comment=a5yrok&asyncContext.request.servletContext.responseCharacterEncoding=26dgu4&session.servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.servletContext.effectiveMinorVersion=806&authType=q300xa&session.servletContext.sessionCookieConfig.name=macie.hartmann&session.servletContext.sessionCookieConfig.maxAge=16&contentType=3sw2gn&reader.readAheadLimit=10&asyncSupported=true&servletContext.minorVersion=827&servletContext.sessionTimeout=742&asyncContext.request.servletContext.minorVersion=943&asyncContext.request.servletContext.sessionTimeout=806&requestId=17&servletPath=cio61v&asyncContext.request.servletConnection.connectionId=17&servletConnection.secure=true&servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.reader.markedSkipLF=true&localPort=795&userPrincipal.name=macie.hartmann&servletContext.sessionCookieConfig.path=ccgswp&asyncContext.request.servletContext.requestCharacterEncoding=b7rlun&asyncContext.request.requestId=17&requestedSessionIdFromURL=true&asyncContext.request.protocolRequestId=17&asyncContext.request.dispatcherType=FORWARD&servletConnection.protocol=9csktv&asyncContext.request.remotePort=471&remotePort=589&servletContext.majorVersion=620&session.servletContext.servletContextName=macie.hartmann&cookies.=o12p37&cookies.=o12p37&reader.nextChar=273&asyncContext.request.reader.skipLF=true&session.new=true&asyncContext.request.servletContext.effectiveMajorVersion=293&session.servletContext.sessionCookieConfig.secure=true&remoteUser=1as4n4&httpServletMapping.matchValue=8qp3si&asyncContext.request.protocol=k2x17d&session.lastAccessedTime=1773067754226&contentLength=445&asyncContext.request.servletContext.serverInfo=x5qxoh&session.servletContext.sessionCookieConfig.path=wzu9bd&cookies.=macie.hartmann&cookies.=macie.hartmann&reader.skipLF=true&asyncContext.request.asyncContext.timeout=938&servletContext.contextPath=x7qc1t&asyncContext.response.contentType=li4lst&asyncContext.request.remoteAddr=jslnba&asyncContext.request.localPort=858&session.servletContext.contextPath=iojon6&asyncContext.response.writer.autoFlush=true&asyncContext.request.reader.markedChar=417&serverPort=165&servletContext.virtualServerName=macie.hartmann&remoteHost=b28o70&session.maxInactiveInterval=844&requestURI=l291lw&requestedSessionIdFromCookie=true&reader.skipBuffer=t&reader.skipBuffer=t&servletContext.effectiveMinorVersion=884&remoteAddr=2urk6k&servletContext.responseCharacterEncoding=idgard&asyncContext.request.servletContext.servletContextName=macie.hartmann&dispatcherType=FORWARD&requestURL.value=100&requestURL.value=100&session.servletContext.majorVersion=257&asyncContext.request.localAddr=b1w7w9&asyncContext.request.servletContext.contextPath=tg5ycl&characterEncoding=nptgdr&requestedSessionIdValid=true&servletConnection.connectionId=17&localAddr=9woutm&servletContext.serverInfo=5kxab4&contextPath=0ndajg&servletContext.sessionCookieConfig.name=macie.hartmann&asyncContext.request.asyncStarted=true&pathInfo=tckf9i&asyncContext.request.reader.nextChar=723&session.servletContext.requestCharacterEncoding=ba5awf&servletConnection.protocolConnectionId=17&httpServletMapping.pattern=5xxz6k&pathTranslated=opmlpo&requestURL.coder=87&asyncContext.request.localName=macie.hartmann&asyncContext.request.servletConnection.protocolConnectionId=17&asyncContext.request.serverPort=350&servletContext.sessionCookieConfig.maxAge=16&asyncContext.response.writer.trouble=true&servletContext.servletContextName=macie.hartmann&asyncContext.request.contentType=6levyo&asyncContext.timeout=507&session.servletContext.serverInfo=g6cc14&session.creationTime=1773067754226&reader.markedSkipLF=true'
 ```
 **Response-fields:**
 
@@ -1595,16 +1595,16 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "originFilename": "julian.ortiz",
-      "filename": "julian.ortiz",
-      "fileType": "4oof7d",
-      "fileUrl": "www.kandace-stamm.org",
-      "fileHttpUrl": "www.kandace-stamm.org",
-      "statusCode": "58719"
+      "originFilename": "macie.hartmann",
+      "filename": "macie.hartmann",
+      "fileType": "1eviho",
+      "fileUrl": "www.velia-kozey.biz",
+      "fileHttpUrl": "www.velia-kozey.biz",
+      "statusCode": "22134"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -1632,93 +1632,96 @@ token|string|令牌|true|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 resource|string|资源文件路径|false|-
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -1732,65 +1735,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -1802,59 +1810,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -1866,21 +1871,16 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -1927,7 +1927,7 @@ bufferSize|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?asyncContext.request.contentType=1ir0ys&asyncContext.response.committed=true&writer.writeBuffer=x&writer.writeBuffer=x&localName=julian.ortiz&servletContext.requestCharacterEncoding=wvfzp4&writer.psOut.textOut.nChars=220&asyncContext.request.servletContext.effectiveMinorVersion=317&asyncContext.request.serverPort=556&bufferSize=10&asyncContext.request.reader.markedChar=88&contentLength=529&asyncContext.response.writer.autoFlush=true&asyncContext.request.asyncStarted=true&httpServletMapping.pattern=olrdsn&asyncContext.response.characterEncoding=jinv59&requestURL.value=48&requestURL.value=48&writer.psOut.autoFlush=true&session.servletContext.serverInfo=we1k54&session.id=95&asyncContext.request.reader.markedSkipLF=true&requestURL.empty=true&asyncContext.request.contentLengthLong=212&requestURL.coder=4&secure=true&servletContext.serverInfo=p14a8p&servletContext.sessionCookieConfig.path=9stt5j&requestURL.count=421&writer.trouble=true&servletContext.sessionCookieConfig.name=julian.ortiz&httpServletMapping.servletName=julian.ortiz&trailerFieldsReady=true&remoteHost=g1ncdm&session.servletContext.sessionCookieConfig.comment=pmsgiy&reader.nextChar=761&dispatcherType=FORWARD&protocol=eqczqk&asyncContext.request.servletContext.responseCharacterEncoding=ywdv4v&reader.nChars=111&asyncContext.request.servletContext.requestCharacterEncoding=8kzgwc&asyncContext.request.remoteHost=t1ou38&pathInfo=hvx9nk&localPort=268&localAddr=pqxrha&asyncContext.response.contentType=mmbej7&writer.psOut.closing=true&asyncContext.request.localName=julian.ortiz&asyncContext.request.protocolRequestId=95&authType=edll0e&servletContext.servletContextName=julian.ortiz&asyncContext.request.servletConnection.connectionId=95&session.lastAccessedTime=1772986113769&characterEncoding=kf4zr8&session.servletContext.sessionTimeout=172&asyncContext.request.requestId=95&requestedSessionIdFromCookie=true&scheme=p99sl8&asyncContext.request.reader.readAheadLimit=10&asyncContext.request.asyncSupported=true&session.servletContext.responseCharacterEncoding=lggy9x&writer.autoFlush=true&requestedSessionId=95&servletContext.effectiveMajorVersion=611&session.servletContext.virtualServerName=julian.ortiz&asyncContext.response.writer.trouble=true&session.servletContext.sessionCookieConfig.httpOnly=true&httpServletMapping.matchValue=erhxln&reader.markedSkipLF=true&asyncContext.request.servletContext.majorVersion=121&writer.psOut.closed=true&session.servletContext.effectiveMajorVersion=75&asyncContext.request.remotePort=291&writer.formatter.lastException.detailMessage=success&method=gol9yx&contentLengthLong=153&servletConnection.protocol=fo3203&asyncContext.request.localPort=786&pathTranslated=ds7nmu&requestedSessionIdValid=true&asyncContext.request.servletContext.virtualServerName=julian.ortiz&asyncContext.request.servletContext.serverInfo=uvj8z2&session.servletContext.sessionCookieConfig.path=ps7vnz&servletContext.sessionTimeout=789&servletContext.effectiveMinorVersion=617&writer.psOut.trouble=true&writer.psOut.formatter.zero=f&contentType=1mf6ek&servletContext.sessionCookieConfig.secure=true&asyncContext.response.bufferSize=10&asyncSupported=true&asyncContext.request.remoteAddr=2rlqei&session.creationTime=1772986113769&session.servletContext.servletContextName=julian.ortiz&servletConnection.connectionId=95&servletContext.majorVersion=419&remoteUser=ti27wp&asyncContext.request.reader.skipLF=true&cookies.=julian.ortiz&cookies.=julian.ortiz&asyncStarted=true&servletConnection.secure=true&asyncContext.request.servletConnection.protocolConnectionId=95&servletContext.sessionCookieConfig.comment=soq68o&asyncContext.request.servletConnection.secure=true&servletContext.sessionCookieConfig.maxAge=14&session.servletContext.minorVersion=886&asyncContext.request.scheme=xflx8y&queryString=6na7dw&writer.psOut.textOut.nextChar=530&serverPort=67&reader.skipBuffer=s&reader.skipBuffer=s&asyncContext.request.servletContext.effectiveMajorVersion=882&committed=true&serverName=julian.ortiz&resource=kvtq3s&session.servletContext.sessionCookieConfig.domain=hirthe.com&session.servletContext.contextPath=fi8d9m&asyncContext.request.servletContext.sessionTimeout=8&asyncContext.request.serverName=julian.ortiz&asyncContext.request.reader.nChars=530&session.servletContext.sessionCookieConfig.name=julian.ortiz&requestId=95&servletContext.sessionCookieConfig.domain=hirthe.com&asyncContext.timeout=246&requestURI=dyshp9&reader.readAheadLimit=10&session.servletContext.effectiveMinorVersion=214&servletContext.responseCharacterEncoding=i8ajn6&reader.markedChar=887&asyncContext.request.contentLength=470&servletPath=4anjim&requestedSessionIdFromURL=true&asyncContext.request.reader.nextChar=397&asyncContext.request.protocol=e1094o&session.new=true&servletContext.minorVersion=608&reader.cb=v&reader.cb=v&servletContext.contextPath=mgnlob&asyncContext.request.servletContext.contextPath=0v0tci&session.servletContext.majorVersion=979&httpServletMapping.mappingMatch=CONTEXT_ROOT&session.servletContext.requestCharacterEncoding=ouz2x1&asyncContext.request.characterEncoding=0rkd6f&session.servletContext.sessionCookieConfig.maxAge=14&session.servletContext.sessionCookieConfig.secure=true&remotePort=657&contextPath=l3cwr7&asyncContext.request.servletContext.servletContextName=julian.ortiz&remoteAddr=skd766&asyncContext.request.localAddr=d3dqno&asyncContext.request.asyncContext.timeout=695&status=27&protocolRequestId=95&servletConnection.protocolConnectionId=95&asyncContext.request.dispatcherType=FORWARD&asyncContext.request.secure=true&writer.formatter.zero=x&userPrincipal.name=julian.ortiz&session.maxInactiveInterval=978&reader.skipLF=true&asyncContext.request.servletContext.minorVersion=398&servletContext.sessionCookieConfig.httpOnly=true&servletContext.virtualServerName=julian.ortiz&asyncContext.request.servletConnection.protocol=01d3wq
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/file/download/resource.do?requestedSessionId=17&asyncContext.request.asyncSupported=true&session.servletContext.serverInfo=1uadwn&session.servletContext.sessionTimeout=172&asyncContext.request.remoteAddr=o0ljlq&requestId=17&requestURL.empty=true&asyncContext.request.contentLength=917&asyncSupported=true&reader.readAheadLimit=10&asyncContext.request.reader.skipLF=true&writer.autoFlush=true&httpServletMapping.servletName=macie.hartmann&writer.psOut.trouble=true&session.servletContext.sessionCookieConfig.domain=kutch.co&pathTranslated=gp55wj&reader.markedChar=101&servletContext.sessionCookieConfig.secure=true&asyncContext.request.serverName=macie.hartmann&asyncContext.response.contentType=3a3cq0&session.lastAccessedTime=1773067754226&session.servletContext.effectiveMajorVersion=474&session.servletContext.minorVersion=776&cookies.=macie.hartmann&cookies.=macie.hartmann&session.servletContext.requestCharacterEncoding=etyydt&requestedSessionIdValid=true&reader.cb=5&reader.cb=5&secure=true&servletContext.requestCharacterEncoding=eadjzn&servletContext.sessionCookieConfig.httpOnly=true&asyncContext.request.localName=macie.hartmann&asyncContext.request.reader.nChars=593&asyncContext.request.servletContext.effectiveMajorVersion=840&localAddr=7xqxru&asyncContext.request.reader.markedSkipLF=true&asyncContext.response.committed=true&asyncContext.request.servletContext.effectiveMinorVersion=708&asyncContext.request.remotePort=99&writer.formatter.lastException.detailMessage=success&asyncContext.request.remoteHost=q7jdey&session.id=17&httpServletMapping.pattern=0agziz&servletConnection.secure=true&asyncContext.request.servletContext.minorVersion=416&requestURL.value=99&requestURL.value=99&asyncContext.request.asyncStarted=true&writer.psOut.closed=true&writer.psOut.closing=true&asyncContext.request.contentType=bh60m6&asyncContext.response.writer.autoFlush=true&session.servletContext.effectiveMinorVersion=706&writer.writeBuffer=m&writer.writeBuffer=m&dispatcherType=FORWARD&pathInfo=zjmxve&asyncContext.request.protocolRequestId=17&session.servletContext.majorVersion=729&httpServletMapping.mappingMatch=CONTEXT_ROOT&servletContext.effectiveMajorVersion=637&session.servletContext.sessionCookieConfig.name=macie.hartmann&httpServletMapping.matchValue=zrqdvy&reader.skipLF=true&asyncContext.request.localAddr=nezcl8&session.servletContext.sessionCookieConfig.httpOnly=true&servletContext.virtualServerName=macie.hartmann&asyncContext.timeout=877&queryString=4eftem&remoteAddr=h7f5c4&asyncContext.request.localPort=516&writer.psOut.autoFlush=true&reader.skipBuffer=g&reader.skipBuffer=g&asyncContext.request.reader.nextChar=195&asyncContext.request.requestId=17&contentLength=840&servletContext.sessionCookieConfig.path=mda81n&asyncContext.request.servletContext.responseCharacterEncoding=zbs4hi&writer.psOut.textOut.nChars=548&writer.psOut.textOut.nextChar=514&reader.markedSkipLF=true&asyncContext.request.secure=true&session.servletContext.contextPath=nv2bmu&asyncStarted=true&asyncContext.request.servletConnection.secure=true&remoteHost=9pf7b7&writer.psOut.formatter.zero=6&servletContext.serverInfo=3dq4x0&session.servletContext.responseCharacterEncoding=7fqwp2&remotePort=221&asyncContext.request.servletConnection.protocolConnectionId=17&servletConnection.protocolConnectionId=17&session.maxInactiveInterval=321&requestURI=mltjc8&contentType=ktsqpe&servletContext.responseCharacterEncoding=mayv9f&servletContext.sessionCookieConfig.comment=futpxu&committed=true&servletConnection.protocol=vainsh&asyncContext.request.servletContext.contextPath=7b7gtv&bufferSize=10&servletContext.majorVersion=595&reader.nextChar=331&session.servletContext.sessionCookieConfig.path=a7zwr5&asyncContext.request.asyncContext.timeout=589&session.servletContext.sessionCookieConfig.maxAge=16&servletContext.servletContextName=macie.hartmann&asyncContext.request.servletContext.sessionTimeout=122&asyncContext.request.servletContext.serverInfo=4muovl&requestURL.coder=108&servletContext.sessionCookieConfig.name=macie.hartmann&contextPath=ztudg6&authType=rmdmbw&servletConnection.connectionId=17&requestURL.count=69&method=966xyh&localName=macie.hartmann&characterEncoding=fv519r&servletContext.sessionTimeout=762&writer.formatter.zero=b&servletPath=hdmfn0&asyncContext.request.servletContext.virtualServerName=macie.hartmann&asyncContext.request.reader.markedChar=484&reader.nChars=842&serverPort=46&resource=g99iiv&trailerFieldsReady=true&userPrincipal.name=macie.hartmann&session.servletContext.sessionCookieConfig.secure=true&asyncContext.response.characterEncoding=pmu233&writer.trouble=true&session.servletContext.sessionCookieConfig.comment=ou9al5&session.creationTime=1773067754226&asyncContext.request.serverPort=152&protocol=ljs03y&asyncContext.request.characterEncoding=1pkqae&servletContext.sessionCookieConfig.maxAge=16&localPort=862&asyncContext.request.servletContext.requestCharacterEncoding=ydg7jr&status=245&serverName=macie.hartmann&asyncContext.request.contentLengthLong=623&asyncContext.response.bufferSize=10&asyncContext.request.servletConnection.connectionId=17&session.servletContext.servletContextName=macie.hartmann&session.servletContext.virtualServerName=macie.hartmann&asyncContext.request.dispatcherType=FORWARD&session.new=true&contentLengthLong=940&asyncContext.request.servletContext.majorVersion=512&asyncContext.request.reader.readAheadLimit=10&asyncContext.request.protocol=hhychd&servletContext.minorVersion=730&remoteUser=s1ydht&servletContext.contextPath=ykxljz&asyncContext.request.servletConnection.protocol=4s79vw&requestedSessionIdFromCookie=true&protocolRequestId=17&requestedSessionIdFromURL=true&servletContext.effectiveMinorVersion=861&asyncContext.request.servletContext.servletContextName=macie.hartmann&scheme=wwm920&asyncContext.request.scheme=wu283e&asyncContext.response.writer.trouble=true&servletContext.sessionCookieConfig.domain=kutch.co
 ```
 **Response-fields:**
 
@@ -1946,9 +1946,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "cdrk9l",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "pmbcd5",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -1988,7 +1988,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?page=1&configKey=wo8iaf&orderBy=169&startTime=2026-03-09 00:08:33&limit=10&configValue=x9rbeu&q=u8m352&endTime=2026-03-09 00:08:33&isDisabled=true&remark=jgqw04
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/list.do?endTime=2026-03-09 22:49:14&isDisabled=true&configKey=o9kbdi&startTime=2026-03-09 22:49:14&page=1&orderBy=193&q=8ka776&limit=10&configValue=26iyf7&remark=qo64rp
 ```
 **Response-fields:**
 
@@ -2018,22 +2018,22 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 388,
+    "totalCount": 725,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "configId": "95",
-        "configKey": "muhfyb",
-        "configValue": "p3h8b3",
+        "configId": "17",
+        "configKey": "cvtwhb",
+        "configValue": "z5jtwa",
         "isDisabled": true,
-        "remark": "rwg1u5"
+        "remark": "dyhrnd"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2062,9 +2062,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -2121,7 +2121,7 @@ remark|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'bufferSize=10&contentType=pfwt66&status=119&writer.writeBuffer=8&writer.writeBuffer=8&writer.formatter.lastException.detailMessage=success&writer.psOut.textOut.nChars=750&writer.psOut.autoFlush=true&writer.psOut.formatter.zero=w&endTime=2026-03-09 00:08:33&writer.formatter.zero=c&characterEncoding=17ihbo&isDisabled=true&writer.psOut.closing=true&committed=true&writer.psOut.closed=true&writer.psOut.textOut.nextChar=218&remark=uh48vb&limit=10&configKey=nd3ree&configValue=m1qd2z&page=1&orderBy=254&writer.psOut.trouble=true&q=wl494d&writer.autoFlush=true&writer.trouble=true&startTime=2026-03-09 00:08:33'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/export.do --data 'status=775&writer.formatter.lastException.detailMessage=success&writer.formatter.zero=h&contentType=al834g&writer.psOut.trouble=true&q=zwm595&writer.psOut.closing=true&writer.psOut.textOut.nextChar=505&remark=u4qvs1&orderBy=977&writer.psOut.closed=true&configKey=1hrpwp&writer.psOut.autoFlush=true&configValue=vwx3pu&writer.psOut.textOut.nChars=998&endTime=2026-03-09 22:49:14&writer.trouble=true&writer.psOut.formatter.zero=i&committed=true&limit=10&page=1&characterEncoding=f5sbyg&startTime=2026-03-09 22:49:14&writer.writeBuffer=r&writer.writeBuffer=r&isDisabled=true&writer.autoFlush=true&bufferSize=10'
 ```
 **Response-fields:**
 
@@ -2140,9 +2140,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "iq5ail",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "axupfk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2172,7 +2172,7 @@ configId|string|   配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/17.do
 ```
 **Response-fields:**
 
@@ -2197,14 +2197,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "configId": "95",
-    "configKey": "rnccwc",
-    "configValue": "2np79l",
+    "configId": "17",
+    "configKey": "bm8rdr",
+    "configValue": "ay25rc",
     "isDisabled": true,
-    "remark": "gec2k8"
+    "remark": "9v5d07"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2234,7 +2234,7 @@ configKey|string|    键值Key|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/9l7bxm.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/configKey/j62jtp.do
 ```
 **Response-fields:**
 
@@ -2259,14 +2259,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "configId": "95",
-    "configKey": "lac4yi",
-    "configValue": "x34t4h",
+    "configId": "17",
+    "configKey": "1vnq7f",
+    "configValue": "kulmhp",
     "isDisabled": true,
-    "remark": "1ep56z"
+    "remark": "9nsa10"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2301,11 +2301,11 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/save.do --data '{
-  "configId": "95",
-  "configKey": "lbirv8",
-  "configValue": "tgamjf",
+  "configId": "17",
+  "configKey": "3eesvv",
+  "configValue": "qqvsgw",
   "isDisabled": true,
-  "remark": "5yxczb"
+  "remark": "dzf4x0"
 }'
 ```
 **Response-fields:**
@@ -2325,9 +2325,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "o5tavj",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "npxx1o",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2362,11 +2362,11 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/configwhole/update.do --data '{
-  "configId": "95",
-  "configKey": "xeujwh",
-  "configValue": "iavnqw",
+  "configId": "17",
+  "configKey": "0tykda",
+  "configValue": "ndw3wt",
   "isDisabled": true,
-  "remark": "twfs1q"
+  "remark": "41krh0"
 }'
 ```
 **Response-fields:**
@@ -2386,9 +2386,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "0hu3kh",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "o3trn9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2437,9 +2437,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "t7e4fc",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "x95bho",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2482,9 +2482,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1a1xmz",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "8xcv1d",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2516,7 +2516,7 @@ username|string| 用户名|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=7h5aiw&username=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/list.do?ipaddr=h57ba1&username=macie.hartmann
 ```
 **Response-fields:**
 
@@ -2545,18 +2545,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "tokenId": "95",
-      "deptName": "julian.ortiz",
-      "username": "julian.ortiz",
-      "ipaddr": "a78llx",
-      "loginLocation": "yn2fse",
-      "browser": "cl1568",
-      "os": "b254la",
-      "loginTime": 1772986113769
+      "tokenId": "17",
+      "deptName": "macie.hartmann",
+      "username": "macie.hartmann",
+      "ipaddr": "lxetjs",
+      "loginLocation": "lk80up",
+      "browser": "sz6lhe",
+      "os": "trhix2",
+      "loginTime": 1773067754226
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2586,7 +2586,7 @@ tokenId|string|  token令牌|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/95.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/online/17.do
 ```
 **Response-fields:**
 
@@ -2605,9 +2605,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "vswq65",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "i2cla4",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2673,7 +2673,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?endTime=2026-03-09 00:08:33&searchCode=58719&idType=8smv65&nickname=shane.roberts&sex=zh76ft&isMobileConfirm=true&page=1&ids=7qa2w1&ids=7qa2w1&familyAddress=Suite 395 2647 Romaguera Court， North Dewey， NE 11167&nativePlace=vuqk0x&weixinId=95&orderBy=317&postCode=58719&spare3=lbzyr4&keywords=jq0ano&spare2=iturxc&spareMobile=1-508-337-4557&spare4=p1f8jk&spare1=63u0ja&name=julian.ortiz&namePy=a3xths&intro=p1jdq4&limit=10&sname=julian.ortiz&birthday=2026-03-09 00:09:53&homeTel=le2elm&startTime=2026-03-09 00:08:33&comefrom=4jfv02&idMobile=1-508-337-4557&qqNo=jr46xm&emergencePhone=(947) 505-4582&idNum=9hkqi1&q=b9argd&nameEn=96ebkj&address=Suite 395 2647 Romaguera Court， North Dewey， NE 11167
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/list.do?endTime=2026-03-09 22:49:14&familyAddress=914 MacGyver Walk， East Ling， AR 46738-5827&sex=qwt1dj&intro=uwfl01&ids=yny4b7&ids=yny4b7&idMobile=814-959-5738&spare4=yc1dl8&q=lca6eo&sname=macie.hartmann&homeTel=d0vxz4&emergencePhone=(727) 805-3214&searchCode=22134&address=914 MacGyver Walk， East Ling， AR 46738-5827&spareMobile=814-959-5738&isMobileConfirm=true&spare1=o4v1jv&name=macie.hartmann&limit=10&comefrom=prx1qi&page=1&namePy=c41esh&keywords=et600d&orderBy=8&startTime=2026-03-09 22:49:14&qqNo=z1tnzr&nickname=jin.wolff&nativePlace=to26tx&weixinId=17&idNum=c34oe4&nameEn=c0e1c5&birthday=2026-03-09 22:50:40&postCode=22134&spare2=6nl8hn&idType=zkvcha&spare3=9u4eso
 ```
 **Response-fields:**
 
@@ -2732,48 +2732,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:53",
-      "lastTime": "2026-03-09 00:09:53",
-      "id": "95",
-      "nickname": "shane.roberts",
-      "idName": "julian.ortiz",
-      "idNum": "t2lib9",
-      "idMobile": "1-508-337-4557",
-      "idType": "2hwj3f",
-      "namePy": "geaaw4",
-      "sname": "julian.ortiz",
-      "nameEn": "eumpmg",
-      "searchCode": "58719",
-      "sex": "x1yn0t",
-      "birthday": "2026-03-09 00:09:53",
-      "postCode": "58719",
-      "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-      "nativePlace": "3lewmo",
-      "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-      "homeTel": "9jexwj",
-      "qqNo": "qb9rza",
-      "weixinId": "95",
-      "weiboId": "95",
-      "spareMobile": "1-508-337-4557",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:40",
+      "lastTime": "2026-03-09 22:50:40",
+      "id": "17",
+      "nickname": "jin.wolff",
+      "idName": "macie.hartmann",
+      "idNum": "a0dv6c",
+      "idMobile": "814-959-5738",
+      "idType": "5onyvo",
+      "namePy": "c95xeo",
+      "sname": "macie.hartmann",
+      "nameEn": "3xvkog",
+      "searchCode": "22134",
+      "sex": "g71cp1",
+      "birthday": "2026-03-09 22:50:40",
+      "postCode": "22134",
+      "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+      "nativePlace": "xp58vd",
+      "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+      "homeTel": "sr43aw",
+      "qqNo": "tw88d3",
+      "weixinId": "17",
+      "weiboId": "17",
+      "spareMobile": "814-959-5738",
       "isMobileConfirm": true,
-      "emergencePhone": "(947) 505-4582",
-      "keywords": "wsfah8",
-      "intro": "0y6wr5",
-      "comefrom": "ivsji5",
-      "imagePath": "7bjdua",
-      "userSignature": "n9zsxo",
-      "ipRange": "5fgtmn",
-      "macCode": "58719",
-      "resume": "8dyahf",
-      "spare1": "c9cwvk",
-      "spare2": "kbx029",
-      "spare3": "g2qj95",
-      "spare4": "j428wj"
+      "emergencePhone": "(727) 805-3214",
+      "keywords": "anbeos",
+      "intro": "8jisgc",
+      "comefrom": "8eso6w",
+      "imagePath": "f6hlhz",
+      "userSignature": "beeilw",
+      "ipRange": "7fkjxu",
+      "macCode": "22134",
+      "resume": "u9rwnz",
+      "spare1": "dooxfy",
+      "spare2": "zab0lq",
+      "spare3": "kjl3cs",
+      "spare4": "3jlcp8"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2862,47 +2862,47 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:53",
-    "lastTime": "2026-03-09 00:09:53",
-    "id": "95",
-    "nickname": "shane.roberts",
-    "idName": "julian.ortiz",
-    "idNum": "ws0zir",
-    "idMobile": "1-508-337-4557",
-    "idType": "mpimu1",
-    "namePy": "zqt86p",
-    "sname": "julian.ortiz",
-    "nameEn": "rf2eu1",
-    "searchCode": "58719",
-    "sex": "aw09si",
-    "birthday": "2026-03-09 00:09:53",
-    "postCode": "58719",
-    "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-    "nativePlace": "t1gjfh",
-    "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-    "homeTel": "2id8tm",
-    "qqNo": "7y398y",
-    "weixinId": "95",
-    "weiboId": "95",
-    "spareMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:40",
+    "lastTime": "2026-03-09 22:50:40",
+    "id": "17",
+    "nickname": "jin.wolff",
+    "idName": "macie.hartmann",
+    "idNum": "4kko48",
+    "idMobile": "814-959-5738",
+    "idType": "radm9v",
+    "namePy": "30w3rc",
+    "sname": "macie.hartmann",
+    "nameEn": "euwwu9",
+    "searchCode": "22134",
+    "sex": "iqpil8",
+    "birthday": "2026-03-09 22:50:40",
+    "postCode": "22134",
+    "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+    "nativePlace": "n6oghb",
+    "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+    "homeTel": "xcsb8h",
+    "qqNo": "aorxap",
+    "weixinId": "17",
+    "weiboId": "17",
+    "spareMobile": "814-959-5738",
     "isMobileConfirm": true,
-    "emergencePhone": "(947) 505-4582",
-    "keywords": "ajyz9y",
-    "intro": "vnx8kr",
-    "comefrom": "gxnewk",
-    "imagePath": "20254q",
-    "userSignature": "hdppx9",
-    "ipRange": "59owud",
-    "macCode": "58719",
-    "resume": "rhphwm",
-    "spare1": "gotsfn",
-    "spare2": "t7tinx",
-    "spare3": "zqvmnx",
-    "spare4": "tj7nte"
+    "emergencePhone": "(727) 805-3214",
+    "keywords": "pz71zb",
+    "intro": "cb0bdn",
+    "comefrom": "5qr15s",
+    "imagePath": "nwfj6w",
+    "userSignature": "6h4t7i",
+    "ipRange": "1h90u1",
+    "macCode": "22134",
+    "resume": "iue1m3",
+    "spare1": "6dtuyb",
+    "spare2": "vwk878",
+    "spare3": "g7q63m",
+    "spare4": "xq2fx4"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -2971,44 +2971,44 @@ spare4|string|备用4|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:53",
-  "lastTime": "2026-03-09 00:09:53",
-  "id": "95",
-  "nickname": "shane.roberts",
-  "idName": "julian.ortiz",
-  "idNum": "shjzds",
-  "idMobile": "1-508-337-4557",
-  "idType": "mjs252",
-  "namePy": "xqxnzl",
-  "sname": "julian.ortiz",
-  "nameEn": "c3r6qs",
-  "searchCode": "58719",
-  "sex": "wc6x35",
-  "birthday": "2026-03-09 00:09:53",
-  "postCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "nativePlace": "v7nmqo",
-  "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "homeTel": "2h74yr",
-  "qqNo": "7i6ej7",
-  "weixinId": "95",
-  "weiboId": "95",
-  "spareMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:40",
+  "lastTime": "2026-03-09 22:50:40",
+  "id": "17",
+  "nickname": "jin.wolff",
+  "idName": "macie.hartmann",
+  "idNum": "a180hw",
+  "idMobile": "814-959-5738",
+  "idType": "hfxme0",
+  "namePy": "rmhafk",
+  "sname": "macie.hartmann",
+  "nameEn": "ssfrfr",
+  "searchCode": "22134",
+  "sex": "c3oruf",
+  "birthday": "2026-03-09 22:50:40",
+  "postCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "nativePlace": "kh8333",
+  "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "homeTel": "2tipnf",
+  "qqNo": "lgzmnu",
+  "weixinId": "17",
+  "weiboId": "17",
+  "spareMobile": "814-959-5738",
   "isMobileConfirm": true,
-  "emergencePhone": "(947) 505-4582",
-  "keywords": "9q861w",
-  "intro": "0aibqt",
-  "comefrom": "mprdgv",
-  "imagePath": "zrl9s9",
-  "userSignature": "rtpk3y",
-  "ipRange": "r2fkpt",
-  "macCode": "58719",
-  "resume": "bn9mci",
-  "spare1": "0iqjb3",
-  "spare2": "kth249",
-  "spare3": "85kl8w",
-  "spare4": "buvadu"
+  "emergencePhone": "(727) 805-3214",
+  "keywords": "5tejy0",
+  "intro": "gn9wbc",
+  "comefrom": "866u1c",
+  "imagePath": "tpfs4w",
+  "userSignature": "of5935",
+  "ipRange": "qljne6",
+  "macCode": "22134",
+  "resume": "ui3qs8",
+  "spare1": "po8hsb",
+  "spare2": "y1rrj8",
+  "spare3": "6pazut",
+  "spare4": "wejzan"
 }'
 ```
 **Response-fields:**
@@ -3028,9 +3028,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4p60bh",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "umzy9x",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3099,44 +3099,44 @@ spare4|string|备用4|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/baseuserext/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:53",
-  "lastTime": "2026-03-09 00:09:53",
-  "id": "95",
-  "nickname": "shane.roberts",
-  "idName": "julian.ortiz",
-  "idNum": "7ehr69",
-  "idMobile": "1-508-337-4557",
-  "idType": "6tv9yp",
-  "namePy": "le1579",
-  "sname": "julian.ortiz",
-  "nameEn": "x8edg2",
-  "searchCode": "58719",
-  "sex": "2e0vjh",
-  "birthday": "2026-03-09 00:09:53",
-  "postCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "nativePlace": "8t2w5q",
-  "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "homeTel": "s9qbvq",
-  "qqNo": "u87f52",
-  "weixinId": "95",
-  "weiboId": "95",
-  "spareMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:40",
+  "lastTime": "2026-03-09 22:50:40",
+  "id": "17",
+  "nickname": "jin.wolff",
+  "idName": "macie.hartmann",
+  "idNum": "9kdqq1",
+  "idMobile": "814-959-5738",
+  "idType": "3q4tgm",
+  "namePy": "zcd0fw",
+  "sname": "macie.hartmann",
+  "nameEn": "ju4o7d",
+  "searchCode": "22134",
+  "sex": "8fj3ne",
+  "birthday": "2026-03-09 22:50:40",
+  "postCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "nativePlace": "7c6s99",
+  "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "homeTel": "63m48d",
+  "qqNo": "n827gk",
+  "weixinId": "17",
+  "weiboId": "17",
+  "spareMobile": "814-959-5738",
   "isMobileConfirm": true,
-  "emergencePhone": "(947) 505-4582",
-  "keywords": "pnm7ka",
-  "intro": "wic4jy",
-  "comefrom": "4kzpog",
-  "imagePath": "cqgogb",
-  "userSignature": "w6et00",
-  "ipRange": "7ek9s1",
-  "macCode": "58719",
-  "resume": "afg20f",
-  "spare1": "w5209x",
-  "spare2": "01eqd9",
-  "spare3": "r8gcdv",
-  "spare4": "fkgk3v"
+  "emergencePhone": "(727) 805-3214",
+  "keywords": "yflxyx",
+  "intro": "rllm2i",
+  "comefrom": "go20di",
+  "imagePath": "ai88xz",
+  "userSignature": "jxksm5",
+  "ipRange": "h81prp",
+  "macCode": "22134",
+  "resume": "mqq5um",
+  "spare1": "i0gbog",
+  "spare2": "cux9jg",
+  "spare3": "s8837e",
+  "spare4": "nnaqu4"
 }'
 ```
 **Response-fields:**
@@ -3156,9 +3156,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "6700kp",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "fuvic9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3208,9 +3208,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "diroew",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "s87fnj",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3268,7 +3268,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuser/list.do?searchCode=58719&xzqhId=300&key=idz5g1&createType=103&lastAppId=95&endTime=2026-03-09 00:08:33&createTime=2026-03-09 00:08:33&bindOrganType=o8l9lq&isBindFrontUser=kpjg1t&description=pouuhr&workUserId=95&source=826&page=1&spare2=2evk3x&startTime=2026-03-09 00:08:33&limit=10&email=columbus.ankunding@gmail.com&q=9oiwa3&registerTime=2026-03-09 00:09:55&orderBy=863&srcCode=733&username=julian.ortiz&delFlag=9&bindOrganId=95&ids=hk5zq6&ids=hk5zq6&spare1=cl1tav&mobile=1-508-337-4557
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuser/list.do?ids=bxkluq&ids=bxkluq&lastAppId=17&username=macie.hartmann&workUserId=17&endTime=2026-03-09 22:49:14&startTime=2026-03-09 22:49:14&page=1&searchCode=22134&spare1=xmikac&spare2=mnsld6&srcCode=353&mobile=814-959-5738&limit=10&description=o0kweo&isBindFrontUser=934ps4&createTime=2026-03-09 22:49:14&bindOrganId=17&xzqhId=334&registerTime=2026-03-09 22:50:42&key=kquss7&bindOrganType=hlkesb&delFlag=2&email=latanya.ritchie@hotmail.com&createType=643&source=471&q=z5ktt5&orderBy=723
 ```
 **Response-fields:**
 
@@ -3327,48 +3327,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:55",
-      "lastTime": "2026-03-09 00:09:55",
-      "id": "95",
-      "xzqhId": 196,
-      "source": "6lv82k",
-      "createType": 472,
-      "username": "julian.ortiz",
-      "mobile": "1-508-337-4557",
-      "email": "columbus.ankunding@gmail.com",
-      "password": "99g7ab",
-      "salt": "4wwrzx",
-      "srcCode": 892,
-      "registerTime": "2026-03-09 00:09:55",
-      "registerIp": "207.227.60.208",
-      "currentLoginTime": "2026-03-09 00:09:55",
-      "currentLoginIp": "207.227.60.208",
-      "lastAppId": "95",
-      "lastLoginTime": "2026-03-09 00:09:55",
-      "lastLoginIp": "207.227.60.208",
-      "lastLogoutTime": "2026-03-09 00:09:55",
-      "loginCount": 948,
-      "resetKey": "g2snpm",
-      "resetPwd": "pinpwk",
-      "lastResetTime": "2026-03-09 00:09:55",
-      "errorTime": "2026-03-09 00:09:55",
-      "errorCount": 776,
-      "errorIp": "207.227.60.208",
-      "lockTime": "2026-03-09 00:09:55",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:42",
+      "lastTime": "2026-03-09 22:50:42",
+      "id": "17",
+      "xzqhId": 686,
+      "source": "ztifvo",
+      "createType": 213,
+      "username": "macie.hartmann",
+      "mobile": "814-959-5738",
+      "email": "latanya.ritchie@hotmail.com",
+      "password": "67bfzh",
+      "salt": "r3c4ug",
+      "srcCode": 816,
+      "registerTime": "2026-03-09 22:50:42",
+      "registerIp": "14.83.204.161",
+      "currentLoginTime": "2026-03-09 22:50:42",
+      "currentLoginIp": "14.83.204.161",
+      "lastAppId": "17",
+      "lastLoginTime": "2026-03-09 22:50:42",
+      "lastLoginIp": "14.83.204.161",
+      "lastLogoutTime": "2026-03-09 22:50:42",
+      "loginCount": 230,
+      "resetKey": "pvrtg0",
+      "resetPwd": "x6e81l",
+      "lastResetTime": "2026-03-09 22:50:42",
+      "errorTime": "2026-03-09 22:50:42",
+      "errorCount": 829,
+      "errorIp": "14.83.204.161",
+      "lockTime": "2026-03-09 22:50:42",
       "activation": true,
-      "activationCode": "58719",
-      "priority": 798,
-      "delFlag": 9,
-      "deleteTime": "2026-03-09 00:09:55",
-      "description": "3frhs4",
-      "spare1": "k7ttcf",
-      "spare2": "auw0rb",
-      "newPassword": "mihk0t"
+      "activationCode": "22134",
+      "priority": 471,
+      "delFlag": 2,
+      "deleteTime": "2026-03-09 22:50:42",
+      "description": "3hj3vd",
+      "spare1": "6gn5zd",
+      "spare2": "9xyhww",
+      "newPassword": "14ae6o"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3457,47 +3457,47 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:55",
-    "lastTime": "2026-03-09 00:09:55",
-    "id": "95",
-    "xzqhId": 639,
-    "source": "jrbbxp",
-    "createType": 986,
-    "username": "julian.ortiz",
-    "mobile": "1-508-337-4557",
-    "email": "columbus.ankunding@gmail.com",
-    "password": "nasts5",
-    "salt": "t63hee",
-    "srcCode": 336,
-    "registerTime": "2026-03-09 00:09:55",
-    "registerIp": "207.227.60.208",
-    "currentLoginTime": "2026-03-09 00:09:55",
-    "currentLoginIp": "207.227.60.208",
-    "lastAppId": "95",
-    "lastLoginTime": "2026-03-09 00:09:55",
-    "lastLoginIp": "207.227.60.208",
-    "lastLogoutTime": "2026-03-09 00:09:55",
-    "loginCount": 583,
-    "resetKey": "w58mbi",
-    "resetPwd": "nw1toa",
-    "lastResetTime": "2026-03-09 00:09:55",
-    "errorTime": "2026-03-09 00:09:55",
-    "errorCount": 363,
-    "errorIp": "207.227.60.208",
-    "lockTime": "2026-03-09 00:09:55",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:42",
+    "lastTime": "2026-03-09 22:50:42",
+    "id": "17",
+    "xzqhId": 625,
+    "source": "brhib9",
+    "createType": 727,
+    "username": "macie.hartmann",
+    "mobile": "814-959-5738",
+    "email": "latanya.ritchie@hotmail.com",
+    "password": "av52tk",
+    "salt": "61tpa4",
+    "srcCode": 728,
+    "registerTime": "2026-03-09 22:50:42",
+    "registerIp": "14.83.204.161",
+    "currentLoginTime": "2026-03-09 22:50:42",
+    "currentLoginIp": "14.83.204.161",
+    "lastAppId": "17",
+    "lastLoginTime": "2026-03-09 22:50:42",
+    "lastLoginIp": "14.83.204.161",
+    "lastLogoutTime": "2026-03-09 22:50:42",
+    "loginCount": 351,
+    "resetKey": "5p4n06",
+    "resetPwd": "2uds67",
+    "lastResetTime": "2026-03-09 22:50:42",
+    "errorTime": "2026-03-09 22:50:42",
+    "errorCount": 725,
+    "errorIp": "14.83.204.161",
+    "lockTime": "2026-03-09 22:50:42",
     "activation": true,
-    "activationCode": "58719",
-    "priority": 108,
-    "delFlag": 9,
-    "deleteTime": "2026-03-09 00:09:55",
-    "description": "9ege5l",
-    "spare1": "wkq3pt",
-    "spare2": "58p9eo",
-    "newPassword": "wb31rb"
+    "activationCode": "22134",
+    "priority": 821,
+    "delFlag": 2,
+    "deleteTime": "2026-03-09 22:50:42",
+    "description": "05jmzb",
+    "spare1": "ikd03a",
+    "spare2": "gkpntj",
+    "newPassword": "2bm1gk"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3566,44 +3566,44 @@ newPassword|string|新密码|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuser/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "xzqhId": 170,
-  "source": "fomp3j",
-  "createType": 705,
-  "username": "julian.ortiz",
-  "mobile": "1-508-337-4557",
-  "email": "columbus.ankunding@gmail.com",
-  "password": "0isi5b",
-  "salt": "fujgqu",
-  "srcCode": 483,
-  "registerTime": "2026-03-09 00:09:55",
-  "registerIp": "207.227.60.208",
-  "currentLoginTime": "2026-03-09 00:09:55",
-  "currentLoginIp": "207.227.60.208",
-  "lastAppId": "95",
-  "lastLoginTime": "2026-03-09 00:09:55",
-  "lastLoginIp": "207.227.60.208",
-  "lastLogoutTime": "2026-03-09 00:09:55",
-  "loginCount": 669,
-  "resetKey": "mc9y45",
-  "resetPwd": "k0b0x2",
-  "lastResetTime": "2026-03-09 00:09:55",
-  "errorTime": "2026-03-09 00:09:55",
-  "errorCount": 145,
-  "errorIp": "207.227.60.208",
-  "lockTime": "2026-03-09 00:09:55",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "xzqhId": 569,
+  "source": "5pmlzm",
+  "createType": 919,
+  "username": "macie.hartmann",
+  "mobile": "814-959-5738",
+  "email": "latanya.ritchie@hotmail.com",
+  "password": "mqp3vd",
+  "salt": "m6eoyo",
+  "srcCode": 718,
+  "registerTime": "2026-03-09 22:50:42",
+  "registerIp": "14.83.204.161",
+  "currentLoginTime": "2026-03-09 22:50:42",
+  "currentLoginIp": "14.83.204.161",
+  "lastAppId": "17",
+  "lastLoginTime": "2026-03-09 22:50:42",
+  "lastLoginIp": "14.83.204.161",
+  "lastLogoutTime": "2026-03-09 22:50:42",
+  "loginCount": 294,
+  "resetKey": "pfi9pl",
+  "resetPwd": "g9gc1g",
+  "lastResetTime": "2026-03-09 22:50:42",
+  "errorTime": "2026-03-09 22:50:42",
+  "errorCount": 981,
+  "errorIp": "14.83.204.161",
+  "lockTime": "2026-03-09 22:50:42",
   "activation": true,
-  "activationCode": "58719",
-  "priority": 55,
-  "delFlag": 9,
-  "deleteTime": "2026-03-09 00:09:55",
-  "description": "j61zxx",
-  "spare1": "pillqp",
-  "spare2": "xk80qs",
-  "newPassword": "4ts81m"
+  "activationCode": "22134",
+  "priority": 352,
+  "delFlag": 2,
+  "deleteTime": "2026-03-09 22:50:42",
+  "description": "hahdyj",
+  "spare1": "36ur9n",
+  "spare2": "abzbsc",
+  "newPassword": "2ir8ij"
 }'
 ```
 **Response-fields:**
@@ -3623,9 +3623,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7sp3an",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "mdfm8u",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3694,44 +3694,44 @@ newPassword|string|新密码|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuser/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "xzqhId": 713,
-  "source": "ozm0yg",
-  "createType": 582,
-  "username": "julian.ortiz",
-  "mobile": "1-508-337-4557",
-  "email": "columbus.ankunding@gmail.com",
-  "password": "mlcmgu",
-  "salt": "1hy3ei",
-  "srcCode": 89,
-  "registerTime": "2026-03-09 00:09:55",
-  "registerIp": "207.227.60.208",
-  "currentLoginTime": "2026-03-09 00:09:55",
-  "currentLoginIp": "207.227.60.208",
-  "lastAppId": "95",
-  "lastLoginTime": "2026-03-09 00:09:55",
-  "lastLoginIp": "207.227.60.208",
-  "lastLogoutTime": "2026-03-09 00:09:55",
-  "loginCount": 593,
-  "resetKey": "ribbj4",
-  "resetPwd": "je7sv5",
-  "lastResetTime": "2026-03-09 00:09:55",
-  "errorTime": "2026-03-09 00:09:55",
-  "errorCount": 922,
-  "errorIp": "207.227.60.208",
-  "lockTime": "2026-03-09 00:09:55",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "xzqhId": 581,
+  "source": "o4g55w",
+  "createType": 997,
+  "username": "macie.hartmann",
+  "mobile": "814-959-5738",
+  "email": "latanya.ritchie@hotmail.com",
+  "password": "fyu179",
+  "salt": "h7g0ej",
+  "srcCode": 774,
+  "registerTime": "2026-03-09 22:50:42",
+  "registerIp": "14.83.204.161",
+  "currentLoginTime": "2026-03-09 22:50:42",
+  "currentLoginIp": "14.83.204.161",
+  "lastAppId": "17",
+  "lastLoginTime": "2026-03-09 22:50:42",
+  "lastLoginIp": "14.83.204.161",
+  "lastLogoutTime": "2026-03-09 22:50:42",
+  "loginCount": 426,
+  "resetKey": "fxsjqy",
+  "resetPwd": "9ema8y",
+  "lastResetTime": "2026-03-09 22:50:42",
+  "errorTime": "2026-03-09 22:50:42",
+  "errorCount": 214,
+  "errorIp": "14.83.204.161",
+  "lockTime": "2026-03-09 22:50:42",
   "activation": true,
-  "activationCode": "58719",
-  "priority": 79,
-  "delFlag": 9,
-  "deleteTime": "2026-03-09 00:09:55",
-  "description": "ilsz5c",
-  "spare1": "p9qq3d",
-  "spare2": "fo5qcq",
-  "newPassword": "s1efgh"
+  "activationCode": "22134",
+  "priority": 641,
+  "delFlag": 2,
+  "deleteTime": "2026-03-09 22:50:42",
+  "description": "n7xgf8",
+  "spare1": "rcummv",
+  "spare2": "agw0gg",
+  "newPassword": "mljks0"
 }'
 ```
 **Response-fields:**
@@ -3751,9 +3751,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "3j6a61",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "y2fzpv",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3803,9 +3803,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "tmwixq",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "l5hgpl",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -3870,7 +3870,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuserext/list.do?idMobile=1-508-337-4557&searchCode=58719&spare3=94h85t&page=1&spare1=upy32s&intro=bvgzkm&sex=5yxq3l&postCode=58719&comefrom=e44ebd&qqNo=z91tit&sname=julian.ortiz&spareMobile=1-508-337-4557&spare4=cfn7gy&idType=xrrzqs&endTime=2026-03-09 00:08:33&nameEn=dgvmve&weixinId=95&familyAddress=Suite 395 2647 Romaguera Court， North Dewey， NE 11167&startTime=2026-03-09 00:08:33&isMobileConfirm=true&address=Suite 395 2647 Romaguera Court， North Dewey， NE 11167&nickname=shane.roberts&homeTel=smnmda&q=3rzr6e&namePy=kdatzh&birthday=2026-03-09 00:09:55&nativePlace=7hfm3l&limit=10&emergencePhone=(947) 505-4582&spare2=2t0dk6&idNum=pie8nq&keywords=kyl40c&name=julian.ortiz&orderBy=408&ids=wj1ktp&ids=wj1ktp
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuserext/list.do?orderBy=500&postCode=22134&familyAddress=914 MacGyver Walk， East Ling， AR 46738-5827&intro=pqhdv1&startTime=2026-03-09 22:49:14&nickname=jin.wolff&idNum=psd760&sname=macie.hartmann&spare1=7wm62g&sex=b6yxyz&spare2=0oetrx&birthday=2026-03-09 22:50:42&page=1&namePy=axwn6m&spare4=qu9cqa&endTime=2026-03-09 22:49:14&idType=gtn5l9&idMobile=814-959-5738&address=914 MacGyver Walk， East Ling， AR 46738-5827&spareMobile=814-959-5738&keywords=6fdanb&weixinId=17&isMobileConfirm=true&name=macie.hartmann&searchCode=22134&ids=nal1nj&ids=nal1nj&emergencePhone=(727) 805-3214&nativePlace=wcbdp4&q=5yjexw&homeTel=wdcppg&comefrom=4palqh&limit=10&qqNo=yx2b8u&spare3=lhpoc6&nameEn=16dnzt
 ```
 **Response-fields:**
 
@@ -3929,48 +3929,48 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:55",
-      "lastTime": "2026-03-09 00:09:55",
-      "id": "95",
-      "nickname": "shane.roberts",
-      "idName": "julian.ortiz",
-      "idNum": "likl0l",
-      "idMobile": "1-508-337-4557",
-      "idType": "vp7q7d",
-      "namePy": "6adgh1",
-      "sname": "julian.ortiz",
-      "nameEn": "quyonp",
-      "searchCode": "58719",
-      "sex": "1mkcw3",
-      "birthday": "2026-03-09 00:09:55",
-      "postCode": "58719",
-      "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-      "nativePlace": "6bghg9",
-      "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-      "homeTel": "3bdvur",
-      "qqNo": "3mvr7l",
-      "weixinId": "95",
-      "weiboId": "95",
-      "spareMobile": "1-508-337-4557",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:42",
+      "lastTime": "2026-03-09 22:50:42",
+      "id": "17",
+      "nickname": "jin.wolff",
+      "idName": "macie.hartmann",
+      "idNum": "rpdwtc",
+      "idMobile": "814-959-5738",
+      "idType": "da83s2",
+      "namePy": "cqmfs4",
+      "sname": "macie.hartmann",
+      "nameEn": "vrmj9a",
+      "searchCode": "22134",
+      "sex": "82wgob",
+      "birthday": "2026-03-09 22:50:42",
+      "postCode": "22134",
+      "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+      "nativePlace": "oq5wij",
+      "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+      "homeTel": "pxl4fb",
+      "qqNo": "8oe79a",
+      "weixinId": "17",
+      "weiboId": "17",
+      "spareMobile": "814-959-5738",
       "isMobileConfirm": true,
-      "emergencePhone": "(947) 505-4582",
-      "keywords": "bj9tt3",
-      "intro": "x2n9kb",
-      "comefrom": "fv9t7v",
-      "imagePath": "ro9r44",
-      "userSignature": "p4cso2",
-      "ipRange": "vxz72t",
-      "macCode": "58719",
-      "resume": "y9pj7u",
-      "spare1": "ro8jn4",
-      "spare2": "k5rva0",
-      "spare3": "fy75q1",
-      "spare4": "mk1wnr"
+      "emergencePhone": "(727) 805-3214",
+      "keywords": "5hhzjs",
+      "intro": "3bv0wo",
+      "comefrom": "krhne0",
+      "imagePath": "3woijq",
+      "userSignature": "fe7cxt",
+      "ipRange": "1qs5rn",
+      "macCode": "22134",
+      "resume": "ymxnc9",
+      "spare1": "mpfpmc",
+      "spare2": "ze58nn",
+      "spare3": "28vcu2",
+      "spare4": "t5csve"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4059,47 +4059,47 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:55",
-    "lastTime": "2026-03-09 00:09:55",
-    "id": "95",
-    "nickname": "shane.roberts",
-    "idName": "julian.ortiz",
-    "idNum": "8zr7r6",
-    "idMobile": "1-508-337-4557",
-    "idType": "5xlvzw",
-    "namePy": "oiy8h7",
-    "sname": "julian.ortiz",
-    "nameEn": "69j7sk",
-    "searchCode": "58719",
-    "sex": "whlh5s",
-    "birthday": "2026-03-09 00:09:55",
-    "postCode": "58719",
-    "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-    "nativePlace": "bok6qp",
-    "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-    "homeTel": "xuwmak",
-    "qqNo": "z4k54l",
-    "weixinId": "95",
-    "weiboId": "95",
-    "spareMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:42",
+    "lastTime": "2026-03-09 22:50:42",
+    "id": "17",
+    "nickname": "jin.wolff",
+    "idName": "macie.hartmann",
+    "idNum": "3gjmof",
+    "idMobile": "814-959-5738",
+    "idType": "wf8jln",
+    "namePy": "l9o8b3",
+    "sname": "macie.hartmann",
+    "nameEn": "d05rdr",
+    "searchCode": "22134",
+    "sex": "dolrif",
+    "birthday": "2026-03-09 22:50:42",
+    "postCode": "22134",
+    "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+    "nativePlace": "vxowsn",
+    "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+    "homeTel": "x5eoww",
+    "qqNo": "d37ot8",
+    "weixinId": "17",
+    "weiboId": "17",
+    "spareMobile": "814-959-5738",
     "isMobileConfirm": true,
-    "emergencePhone": "(947) 505-4582",
-    "keywords": "oeesfd",
-    "intro": "84zmgk",
-    "comefrom": "e91cka",
-    "imagePath": "gstz7u",
-    "userSignature": "8uv60l",
-    "ipRange": "s2uf30",
-    "macCode": "58719",
-    "resume": "4t8gx2",
-    "spare1": "duxi8u",
-    "spare2": "dhts0c",
-    "spare3": "of8hai",
-    "spare4": "4falem"
+    "emergencePhone": "(727) 805-3214",
+    "keywords": "tfi5qb",
+    "intro": "91ny3j",
+    "comefrom": "fdhy90",
+    "imagePath": "aankpn",
+    "userSignature": "fz6you",
+    "ipRange": "4nttzi",
+    "macCode": "22134",
+    "resume": "a2nv8o",
+    "spare1": "ddsrxk",
+    "spare2": "s9uzv9",
+    "spare3": "j0eden",
+    "spare4": "zdfep6"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4168,44 +4168,44 @@ spare4|string|备用4|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuserext/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "nickname": "shane.roberts",
-  "idName": "julian.ortiz",
-  "idNum": "i2kmub",
-  "idMobile": "1-508-337-4557",
-  "idType": "hxd5c4",
-  "namePy": "aj8w71",
-  "sname": "julian.ortiz",
-  "nameEn": "tuu5km",
-  "searchCode": "58719",
-  "sex": "kkz24z",
-  "birthday": "2026-03-09 00:09:55",
-  "postCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "nativePlace": "y3q6qo",
-  "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "homeTel": "qe2g5s",
-  "qqNo": "gyvt2o",
-  "weixinId": "95",
-  "weiboId": "95",
-  "spareMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "nickname": "jin.wolff",
+  "idName": "macie.hartmann",
+  "idNum": "foyu7i",
+  "idMobile": "814-959-5738",
+  "idType": "xlq4yo",
+  "namePy": "h65h2o",
+  "sname": "macie.hartmann",
+  "nameEn": "zh8st8",
+  "searchCode": "22134",
+  "sex": "e7bcyb",
+  "birthday": "2026-03-09 22:50:42",
+  "postCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "nativePlace": "yyo3ba",
+  "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "homeTel": "f5edeg",
+  "qqNo": "007t5p",
+  "weixinId": "17",
+  "weiboId": "17",
+  "spareMobile": "814-959-5738",
   "isMobileConfirm": true,
-  "emergencePhone": "(947) 505-4582",
-  "keywords": "iplgq8",
-  "intro": "zkmzdy",
-  "comefrom": "8uwz5y",
-  "imagePath": "al0yg6",
-  "userSignature": "hnsheh",
-  "ipRange": "epu6bt",
-  "macCode": "58719",
-  "resume": "ym2w91",
-  "spare1": "tg44j3",
-  "spare2": "v6el3j",
-  "spare3": "l9h4pc",
-  "spare4": "4itn36"
+  "emergencePhone": "(727) 805-3214",
+  "keywords": "ksxbwx",
+  "intro": "mc3qr2",
+  "comefrom": "qkpemq",
+  "imagePath": "n9v176",
+  "userSignature": "s6g5iy",
+  "ipRange": "j6vf7h",
+  "macCode": "22134",
+  "resume": "edtb8g",
+  "spare1": "0ztyiq",
+  "spare2": "appw7i",
+  "spare3": "5za9rn",
+  "spare4": "eladxd"
 }'
 ```
 **Response-fields:**
@@ -4225,9 +4225,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1cc4lz",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "2rfw8o",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4296,44 +4296,44 @@ spare4|string|备用4|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/baseuserext/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "nickname": "shane.roberts",
-  "idName": "julian.ortiz",
-  "idNum": "od0l9b",
-  "idMobile": "1-508-337-4557",
-  "idType": "n4ybx2",
-  "namePy": "74smbi",
-  "sname": "julian.ortiz",
-  "nameEn": "nhijud",
-  "searchCode": "58719",
-  "sex": "zlhpov",
-  "birthday": "2026-03-09 00:09:55",
-  "postCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "nativePlace": "98m8w7",
-  "familyAddress": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "homeTel": "mpa9ih",
-  "qqNo": "geyd4j",
-  "weixinId": "95",
-  "weiboId": "95",
-  "spareMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "nickname": "jin.wolff",
+  "idName": "macie.hartmann",
+  "idNum": "vdjucs",
+  "idMobile": "814-959-5738",
+  "idType": "9q0ohp",
+  "namePy": "fe5q35",
+  "sname": "macie.hartmann",
+  "nameEn": "6y8clw",
+  "searchCode": "22134",
+  "sex": "lng5fq",
+  "birthday": "2026-03-09 22:50:42",
+  "postCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "nativePlace": "yrimss",
+  "familyAddress": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "homeTel": "iqxv3r",
+  "qqNo": "rjgc8c",
+  "weixinId": "17",
+  "weiboId": "17",
+  "spareMobile": "814-959-5738",
   "isMobileConfirm": true,
-  "emergencePhone": "(947) 505-4582",
-  "keywords": "zu7q5r",
-  "intro": "jmd82r",
-  "comefrom": "2js8a3",
-  "imagePath": "lxpn63",
-  "userSignature": "df6vdm",
-  "ipRange": "uwrmj9",
-  "macCode": "58719",
-  "resume": "idg3ts",
-  "spare1": "2nazot",
-  "spare2": "74kmz2",
-  "spare3": "9cnyf8",
-  "spare4": "bws3b1"
+  "emergencePhone": "(727) 805-3214",
+  "keywords": "iu87jk",
+  "intro": "faqbjt",
+  "comefrom": "614jic",
+  "imagePath": "c186by",
+  "userSignature": "2zc4qe",
+  "ipRange": "nni9pp",
+  "macCode": "22134",
+  "resume": "kpqe0n",
+  "spare1": "2pgeon",
+  "spare2": "h1howc",
+  "spare3": "8o0nn5",
+  "spare4": "gztw1q"
 }'
 ```
 **Response-fields:**
@@ -4353,9 +4353,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4v2gpw",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "tefbox",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4405,9 +4405,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "9rs6gc",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "uvq7eh",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4465,7 +4465,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?recvGroupId=95&updateTime=2026-03-09 00:09:48&imagePath=l8bqj7&description=wpbsns&status=543&readStatus=h63ej9&updatorId=95&q=lfg8n3&creatorId=95&appId=95&bizType=eqtupz&organId=95&limit=10&startTime=2026-03-09 00:08:33&recvOrganId=95&id=145&msgUrl=www.kandace-stamm.org&iconStyle=39ud99&recvTargetid=95&page=1&content=stsq92&foreignId=95&endTime=2026-03-09 00:08:33&type=447&recvMemberId=95&orderBy=10&title=hzrn3y
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list.do?page=1&appId=17&recvOrganId=17&title=omnpxd&updateTime=2026-03-09 22:50:35&iconStyle=289a4f&id=907&type=67&q=duh197&orderBy=679&limit=10&creatorId=17&readStatus=mfjvtv&foreignId=17&msgUrl=www.velia-kozey.biz&organId=17&recvTargetid=17&startTime=2026-03-09 22:49:14&updatorId=17&description=5hr31h&endTime=2026-03-09 22:49:14&bizType=z119bl&status=555&content=jg3n5r&recvMemberId=17&recvGroupId=17&imagePath=f46omo
 ```
 **Response-fields:**
 
@@ -4508,32 +4508,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:48",
-      "lastTime": "2026-03-09 00:09:48",
-      "id": 272,
-      "appId": "95",
-      "organId": "95",
-      "bizType": "ip4rj9",
-      "type": 805,
-      "title": "06mj2p",
-      "content": "a4c9vv",
-      "msgUrl": "www.kandace-stamm.org",
-      "foreignId": "95",
-      "imagePath": "qk8z8c",
-      "iconStyle": "orlx8x",
-      "recvMemberId": "95",
-      "recvGroupId": "95",
-      "recvOrganId": "95",
-      "recvTargetid": "95",
-      "status": 843,
-      "updatorId": "95",
-      "updateTime": "2026-03-09 00:09:48",
-      "description": "mxv894"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:35",
+      "lastTime": "2026-03-09 22:50:35",
+      "id": 472,
+      "appId": "17",
+      "organId": "17",
+      "bizType": "cw3fi3",
+      "type": 163,
+      "title": "zewplz",
+      "content": "mnc3h1",
+      "msgUrl": "www.velia-kozey.biz",
+      "foreignId": "17",
+      "imagePath": "fz5dym",
+      "iconStyle": "40ego0",
+      "recvMemberId": "17",
+      "recvGroupId": "17",
+      "recvOrganId": "17",
+      "recvTargetid": "17",
+      "status": 12,
+      "updatorId": "17",
+      "updateTime": "2026-03-09 22:50:35",
+      "description": "mfkbf7"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4590,7 +4590,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?updatorId=95&id=357&startTime=2026-03-09 00:08:33&status=710&organId=95&recvTargetid=95&readStatus=y9dht7&appId=95&type=33&updateTime=2026-03-09 00:09:48&q=g2yc2r&page=1&recvOrganId=95&content=kj0y0y&description=j2rgs3&limit=10&recvGroupId=95&endTime=2026-03-09 00:08:33&orderBy=912&msgUrl=www.kandace-stamm.org&bizType=vzgsbi&imagePath=0kpzio&recvMemberId=95&foreignId=95&title=9qpdal&creatorId=95&iconStyle=sgifr2
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/list/myself.do?appId=17&limit=10&bizType=84vv1o&endTime=2026-03-09 22:49:14&q=slq7g4&id=241&foreignId=17&status=484&updatorId=17&page=1&type=785&title=gmn7rk&updateTime=2026-03-09 22:50:35&orderBy=924&organId=17&description=49nv2m&recvTargetid=17&recvOrganId=17&creatorId=17&recvGroupId=17&readStatus=w2ujbr&msgUrl=www.velia-kozey.biz&iconStyle=vtusir&content=dr3fey&startTime=2026-03-09 22:49:14&recvMemberId=17&imagePath=1fl95k
 ```
 **Response-fields:**
 
@@ -4633,32 +4633,32 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:48",
-      "lastTime": "2026-03-09 00:09:48",
-      "id": 114,
-      "appId": "95",
-      "organId": "95",
-      "bizType": "22ctj4",
-      "type": 453,
-      "title": "a1py0c",
-      "content": "jlswpp",
-      "msgUrl": "www.kandace-stamm.org",
-      "foreignId": "95",
-      "imagePath": "4ocs4n",
-      "iconStyle": "14ldnu",
-      "recvMemberId": "95",
-      "recvGroupId": "95",
-      "recvOrganId": "95",
-      "recvTargetid": "95",
-      "status": 910,
-      "updatorId": "95",
-      "updateTime": "2026-03-09 00:09:48",
-      "description": "g3ri44"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:35",
+      "lastTime": "2026-03-09 22:50:35",
+      "id": 48,
+      "appId": "17",
+      "organId": "17",
+      "bizType": "yo78id",
+      "type": 206,
+      "title": "jcimsq",
+      "content": "wfvxr8",
+      "msgUrl": "www.velia-kozey.biz",
+      "foreignId": "17",
+      "imagePath": "ceexux",
+      "iconStyle": "qbk1t5",
+      "recvMemberId": "17",
+      "recvGroupId": "17",
+      "recvOrganId": "17",
+      "recvTargetid": "17",
+      "status": 731,
+      "updatorId": "17",
+      "updateTime": "2026-03-09 22:50:35",
+      "description": "womyh6"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4688,9 +4688,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -4764,7 +4764,7 @@ readStatus|string|阅读状态 （查询关联表）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'writer.psOut.closed=true&endTime=2026-03-09 00:08:33&recvOrganId=95&updatorId=95&msgUrl=www.kandace-stamm.org&readStatus=23gkjo&writer.writeBuffer=z&writer.writeBuffer=z&committed=true&orderBy=727&iconStyle=bsw9mn&recvMemberId=95&characterEncoding=dgeqbv&writer.psOut.autoFlush=true&writer.psOut.closing=true&writer.formatter.lastException.detailMessage=success&bizType=a0uwkd&appId=95&writer.psOut.textOut.nChars=544&recvTargetid=95&writer.psOut.trouble=true&status=859&limit=10&writer.trouble=true&title=rzlyuq&bufferSize=10&organId=95&contentType=2b02jp&writer.formatter.zero=p&page=1&startTime=2026-03-09 00:08:33&creatorId=95&content=ndrsuc&imagePath=t0dnrh&writer.psOut.formatter.zero=r&updateTime=2026-03-09 00:09:48&type=796&recvGroupId=95&status=339&description=flp4v1&writer.psOut.textOut.nextChar=356&writer.autoFlush=true&foreignId=95&q=fqigad&id=916'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/export.do --data 'appId=17&writer.formatter.zero=5&limit=10&writer.psOut.trouble=true&bufferSize=10&writer.psOut.textOut.nChars=246&orderBy=280&writer.psOut.closed=true&foreignId=17&title=bxdyrm&imagePath=jm7rth&writer.psOut.formatter.zero=3&updatorId=17&writer.psOut.autoFlush=true&page=1&startTime=2026-03-09 22:49:14&content=qnqwy6&recvGroupId=17&q=wghtj0&organId=17&status=759&writer.formatter.lastException.detailMessage=success&iconStyle=dczdbq&recvMemberId=17&updateTime=2026-03-09 22:50:35&writer.psOut.textOut.nextChar=236&contentType=a9bx7x&committed=true&writer.psOut.closing=true&description=8p9nd3&creatorId=17&writer.autoFlush=true&recvTargetid=17&status=956&writer.writeBuffer=2&writer.writeBuffer=2&recvOrganId=17&characterEncoding=zcabaw&id=109&writer.trouble=true&readStatus=c4nl1f&bizType=wi1ao8&type=108&msgUrl=www.velia-kozey.biz&endTime=2026-03-09 22:49:14'
 ```
 **Response-fields:**
 
@@ -4783,9 +4783,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "gh7n0u",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "vp6ac2",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4858,31 +4858,31 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:48",
-    "lastTime": "2026-03-09 00:09:48",
-    "id": 494,
-    "appId": "95",
-    "organId": "95",
-    "bizType": "urrw98",
-    "type": 813,
-    "title": "d700io",
-    "content": "jhn1pc",
-    "msgUrl": "www.kandace-stamm.org",
-    "foreignId": "95",
-    "imagePath": "vf3b4b",
-    "iconStyle": "sbix0h",
-    "recvMemberId": "95",
-    "recvGroupId": "95",
-    "recvOrganId": "95",
-    "recvTargetid": "95",
-    "status": 483,
-    "updatorId": "95",
-    "updateTime": "2026-03-09 00:09:48",
-    "description": "jwpji3"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:35",
+    "lastTime": "2026-03-09 22:50:35",
+    "id": 19,
+    "appId": "17",
+    "organId": "17",
+    "bizType": "ckkqw6",
+    "type": 703,
+    "title": "gi00vw",
+    "content": "870utd",
+    "msgUrl": "www.velia-kozey.biz",
+    "foreignId": "17",
+    "imagePath": "dco944",
+    "iconStyle": "mzxk6x",
+    "recvMemberId": "17",
+    "recvGroupId": "17",
+    "recvOrganId": "17",
+    "recvTargetid": "17",
+    "status": 506,
+    "updatorId": "17",
+    "updateTime": "2026-03-09 22:50:35",
+    "description": "41gb10"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -4935,28 +4935,28 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:48",
-  "lastTime": "2026-03-09 00:09:48",
-  "id": 605,
-  "appId": "95",
-  "organId": "95",
-  "bizType": "m09w34",
-  "type": 309,
-  "title": "x36gye",
-  "content": "axsl0e",
-  "msgUrl": "www.kandace-stamm.org",
-  "foreignId": "95",
-  "imagePath": "odzn08",
-  "iconStyle": "vvrxw9",
-  "recvMemberId": "95",
-  "recvGroupId": "95",
-  "recvOrganId": "95",
-  "recvTargetid": "95",
-  "status": 500,
-  "updatorId": "95",
-  "updateTime": "2026-03-09 00:09:48",
-  "description": "qasgf1"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:35",
+  "lastTime": "2026-03-09 22:50:35",
+  "id": 427,
+  "appId": "17",
+  "organId": "17",
+  "bizType": "zmt4jh",
+  "type": 989,
+  "title": "4sp04e",
+  "content": "sznheb",
+  "msgUrl": "www.velia-kozey.biz",
+  "foreignId": "17",
+  "imagePath": "juhz5r",
+  "iconStyle": "d49535",
+  "recvMemberId": "17",
+  "recvGroupId": "17",
+  "recvOrganId": "17",
+  "recvTargetid": "17",
+  "status": 709,
+  "updatorId": "17",
+  "updateTime": "2026-03-09 22:50:35",
+  "description": "moamcz"
 }'
 ```
 **Response-fields:**
@@ -4976,9 +4976,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "9qbofc",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "os8t1d",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5031,28 +5031,28 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/notice/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:48",
-  "lastTime": "2026-03-09 00:09:48",
-  "id": 382,
-  "appId": "95",
-  "organId": "95",
-  "bizType": "uzy0a9",
-  "type": 870,
-  "title": "ghkgmk",
-  "content": "ascp6l",
-  "msgUrl": "www.kandace-stamm.org",
-  "foreignId": "95",
-  "imagePath": "qzs8w1",
-  "iconStyle": "cdjezm",
-  "recvMemberId": "95",
-  "recvGroupId": "95",
-  "recvOrganId": "95",
-  "recvTargetid": "95",
-  "status": 978,
-  "updatorId": "95",
-  "updateTime": "2026-03-09 00:09:48",
-  "description": "pm3v0g"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:35",
+  "lastTime": "2026-03-09 22:50:35",
+  "id": 862,
+  "appId": "17",
+  "organId": "17",
+  "bizType": "8ev198",
+  "type": 2,
+  "title": "1shs64",
+  "content": "pq28lb",
+  "msgUrl": "www.velia-kozey.biz",
+  "foreignId": "17",
+  "imagePath": "0660u2",
+  "iconStyle": "mf8lzn",
+  "recvMemberId": "17",
+  "recvGroupId": "17",
+  "recvOrganId": "17",
+  "recvTargetid": "17",
+  "status": 447,
+  "updatorId": "17",
+  "updateTime": "2026-03-09 22:50:35",
+  "description": "b5y1gn"
 }'
 ```
 **Response-fields:**
@@ -5072,9 +5072,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ndiun2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "9yxw7y",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5124,9 +5124,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ylx156",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "5y0n2w",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5170,9 +5170,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "9uowcm",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "k9cv6r",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5222,9 +5222,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "swu99k",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "bt7gni",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5274,9 +5274,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "f7h8km",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "gv66kv",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5321,11 +5321,11 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "mapKey1": "sii30u",
-    "mapKey2": "r8zbcp"
+    "mapKey1": "pvfqn8",
+    "mapKey2": "l7bwto"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5389,7 +5389,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/list.do?name=julian.ortiz&spare1=8l75s5&page=1&limit=10&aesKey=mgpjw6&cname=julian.ortiz&aesIvKey=dl5kjt&serverConf1=dla4ol&isDisabled=true&confLimit=10&startTime=2026-03-09 00:08:33&appId=95&endTime=2026-03-09 00:08:33&clientId=95&type=551&currCount=868&orderBy=521&serverType=a6sk29&organId=95&status=196&organName=julian.ortiz&q=gjkn8m&spare2=l07tmj&serverConf2=xm2zia&serverUrl=www.kandace-stamm.org&isAdmin=true&serverIp=207.227.60.208&clientSecret=5ishkw&serverConf3=ugnkj3&id=95&isSingle=true&description=01z3dz&inoutMode=955
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/list.do?isDisabled=true&organId=17&status=710&inoutMode=243&serverType=zn299u&isAdmin=true&startTime=2026-03-09 22:49:14&serverUrl=www.velia-kozey.biz&spare1=gwtink&endTime=2026-03-09 22:49:14&type=289&clientSecret=dt9sl5&id=17&serverConf1=35csd2&serverConf2=6sii78&clientId=17&currCount=20&spare2=pudxkh&cname=macie.hartmann&page=1&q=0s99yr&organName=macie.hartmann&aesIvKey=02148v&serverConf3=s4o33l&serverIp=14.83.204.161&name=macie.hartmann&aesKey=c7y11r&limit=10&isSingle=true&orderBy=89&description=ascm1u&confLimit=10&appId=17
 ```
 **Response-fields:**
 
@@ -5445,45 +5445,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:54",
-      "lastTime": "2026-03-09 00:09:54",
-      "id": "95",
-      "organId": "95",
-      "appId": "95",
-      "organName": "julian.ortiz",
-      "inoutMode": 484,
-      "name": "julian.ortiz",
-      "cname": "julian.ortiz",
-      "type": 105,
-      "clientId": "95",
-      "clientSecret": "kzewpl",
-      "aesKey": "ftiavm",
-      "aesIvKey": "gxdknd",
-      "serverIp": "207.227.60.208",
-      "serverType": "tnvrvz",
-      "serverUrl": "www.kandace-stamm.org",
-      "serverConf1": "qzgo8v",
-      "serverConf2": "u88jui",
-      "serverConf3": "i8lg7o",
-      "currCount": 446,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "id": "17",
+      "organId": "17",
+      "appId": "17",
+      "organName": "macie.hartmann",
+      "inoutMode": 451,
+      "name": "macie.hartmann",
+      "cname": "macie.hartmann",
+      "type": 622,
+      "clientId": "17",
+      "clientSecret": "xvccuu",
+      "aesKey": "7kbwiv",
+      "aesIvKey": "s7m3o2",
+      "serverIp": "14.83.204.161",
+      "serverType": "012eyr",
+      "serverUrl": "www.velia-kozey.biz",
+      "serverConf1": "khn2l5",
+      "serverConf2": "l92jt3",
+      "serverConf3": "60o14u",
+      "currCount": 412,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 696,
-      "description": "626mfj",
-      "spare1": "ld6wv4",
-      "spare2": "cgzp23",
-      "inOrganName": "julian.ortiz",
-      "userName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "inoutModeName": "julian.ortiz",
-      "typeName": "julian.ortiz"
+      "status": 130,
+      "description": "2khdb7",
+      "spare1": "68p9rr",
+      "spare2": "6b1z2g",
+      "inOrganName": "macie.hartmann",
+      "userName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "inoutModeName": "macie.hartmann",
+      "typeName": "macie.hartmann"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5514,7 +5514,7 @@ clientId|string| 客户ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getClientSecret.do?clientId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getClientSecret.do?clientId=17
 ```
 **Response-fields:**
 
@@ -5570,45 +5570,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:54",
-      "lastTime": "2026-03-09 00:09:54",
-      "id": "95",
-      "organId": "95",
-      "appId": "95",
-      "organName": "julian.ortiz",
-      "inoutMode": 267,
-      "name": "julian.ortiz",
-      "cname": "julian.ortiz",
-      "type": 149,
-      "clientId": "95",
-      "clientSecret": "qcvsmz",
-      "aesKey": "f2v8xq",
-      "aesIvKey": "ptsagz",
-      "serverIp": "207.227.60.208",
-      "serverType": "bmd58o",
-      "serverUrl": "www.kandace-stamm.org",
-      "serverConf1": "oc7ee8",
-      "serverConf2": "ucglqf",
-      "serverConf3": "noe6s1",
-      "currCount": 837,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "id": "17",
+      "organId": "17",
+      "appId": "17",
+      "organName": "macie.hartmann",
+      "inoutMode": 544,
+      "name": "macie.hartmann",
+      "cname": "macie.hartmann",
+      "type": 521,
+      "clientId": "17",
+      "clientSecret": "p8mv1h",
+      "aesKey": "26ezb0",
+      "aesIvKey": "5j4z56",
+      "serverIp": "14.83.204.161",
+      "serverType": "eiakgw",
+      "serverUrl": "www.velia-kozey.biz",
+      "serverConf1": "ih61rw",
+      "serverConf2": "g60gy7",
+      "serverConf3": "t43qde",
+      "currCount": 80,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 625,
-      "description": "sqzi0r",
-      "spare1": "ovmum9",
-      "spare2": "npxwya",
-      "inOrganName": "julian.ortiz",
-      "userName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "inoutModeName": "julian.ortiz",
-      "typeName": "julian.ortiz"
+      "status": 548,
+      "description": "b43iev",
+      "spare1": "30uper",
+      "spare2": "83elyx",
+      "inOrganName": "macie.hartmann",
+      "userName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "inoutModeName": "macie.hartmann",
+      "typeName": "macie.hartmann"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5639,7 +5639,7 @@ id|string|   账号ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getKeyParity.do?id=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/getKeyParity.do?id=17
 ```
 **Response-fields:**
 
@@ -5695,45 +5695,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:54",
-      "lastTime": "2026-03-09 00:09:54",
-      "id": "95",
-      "organId": "95",
-      "appId": "95",
-      "organName": "julian.ortiz",
-      "inoutMode": 399,
-      "name": "julian.ortiz",
-      "cname": "julian.ortiz",
-      "type": 207,
-      "clientId": "95",
-      "clientSecret": "t2jtqr",
-      "aesKey": "pls17r",
-      "aesIvKey": "z5phtg",
-      "serverIp": "207.227.60.208",
-      "serverType": "xgd3b8",
-      "serverUrl": "www.kandace-stamm.org",
-      "serverConf1": "ppdc5s",
-      "serverConf2": "525uhs",
-      "serverConf3": "5vlyvk",
-      "currCount": 925,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "id": "17",
+      "organId": "17",
+      "appId": "17",
+      "organName": "macie.hartmann",
+      "inoutMode": 858,
+      "name": "macie.hartmann",
+      "cname": "macie.hartmann",
+      "type": 531,
+      "clientId": "17",
+      "clientSecret": "d1d1iq",
+      "aesKey": "bnrb4c",
+      "aesIvKey": "wquzik",
+      "serverIp": "14.83.204.161",
+      "serverType": "ewv7od",
+      "serverUrl": "www.velia-kozey.biz",
+      "serverConf1": "ma6vqe",
+      "serverConf2": "surq22",
+      "serverConf3": "43o2bl",
+      "currCount": 853,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 354,
-      "description": "xgox63",
-      "spare1": "bqc7dh",
-      "spare2": "df8x3c",
-      "inOrganName": "julian.ortiz",
-      "userName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "inoutModeName": "julian.ortiz",
-      "typeName": "julian.ortiz"
+      "status": 469,
+      "description": "e94ei7",
+      "spare1": "rbnt2d",
+      "spare2": "wns4d7",
+      "inOrganName": "macie.hartmann",
+      "userName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "inoutModeName": "macie.hartmann",
+      "typeName": "macie.hartmann"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5809,7 +5809,7 @@ timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":0,"msg":"正常","data":Error restful return.,"requestId":"95","timestamp":"2026-03-09 00:08:33"}
+{"success":true,"code":0,"msg":"正常","data":Error restful return.,"requestId":"17","timestamp":"2026-03-09 22:49:14"}
 ```
 
 ### CoreAccount Operation. 新增平台账号信息数据操作逻辑，根据操作类型，执行新增操作.
@@ -5852,9 +5852,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "2tff4t",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ujntyn",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5898,9 +5898,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ydyp5v",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "74g5u0",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -5950,9 +5950,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1zkyoe",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "35mx98",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6015,7 +6015,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/authlist.do?serverConf2=fycqiu&limit=10&serverConf3=ao5u09&startTime=2026-03-09 00:08:33&serverType=n8qds6&currCount=9&isSingle=true&type=570&serverConf1=vabta7&inoutMode=934&cname=julian.ortiz&spare2=q3fimf&status=874&clientSecret=55vfbw&isDisabled=true&name=julian.ortiz&orderBy=990&q=hyf06e&endTime=2026-03-09 00:08:33&aesIvKey=hqdong&appId=95&isAdmin=true&serverIp=207.227.60.208&spare1=b7e5wg&serverUrl=www.kandace-stamm.org&page=1&clientId=95&aesKey=1v1su1&description=hjlhic&id=95&confLimit=10&organName=julian.ortiz&organId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/account/authlist.do?serverIp=14.83.204.161&serverConf1=dqh6r6&isAdmin=true&clientId=17&orderBy=641&name=macie.hartmann&confLimit=10&status=537&cname=macie.hartmann&endTime=2026-03-09 22:49:14&description=ia03fw&page=1&serverConf3=jfu35v&spare2=r0qppd&isSingle=true&serverConf2=bd29tf&limit=10&clientSecret=uweyys&aesKey=ocxfom&q=467fta&aesIvKey=v1oxse&startTime=2026-03-09 22:49:14&inoutMode=272&serverType=820r55&serverUrl=www.velia-kozey.biz&organName=macie.hartmann&currCount=731&appId=17&type=619&spare1=l89jpe&id=17&organId=17&isDisabled=true
 ```
 **Response-fields:**
 
@@ -6071,45 +6071,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:54",
-      "lastTime": "2026-03-09 00:09:54",
-      "id": "95",
-      "organId": "95",
-      "appId": "95",
-      "organName": "julian.ortiz",
-      "inoutMode": 66,
-      "name": "julian.ortiz",
-      "cname": "julian.ortiz",
-      "type": 949,
-      "clientId": "95",
-      "clientSecret": "wrb7rm",
-      "aesKey": "47pqtn",
-      "aesIvKey": "ndqsjy",
-      "serverIp": "207.227.60.208",
-      "serverType": "aobirw",
-      "serverUrl": "www.kandace-stamm.org",
-      "serverConf1": "z0akjo",
-      "serverConf2": "oas50r",
-      "serverConf3": "0pu712",
-      "currCount": 850,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "id": "17",
+      "organId": "17",
+      "appId": "17",
+      "organName": "macie.hartmann",
+      "inoutMode": 268,
+      "name": "macie.hartmann",
+      "cname": "macie.hartmann",
+      "type": 890,
+      "clientId": "17",
+      "clientSecret": "p64cwy",
+      "aesKey": "otdaw5",
+      "aesIvKey": "voaepp",
+      "serverIp": "14.83.204.161",
+      "serverType": "cwtbb2",
+      "serverUrl": "www.velia-kozey.biz",
+      "serverConf1": "i3l9ph",
+      "serverConf2": "15ai19",
+      "serverConf3": "p6ayre",
+      "currCount": 347,
       "confLimit": 10,
       "isAdmin": true,
       "isSingle": true,
       "isDisabled": true,
-      "status": 910,
-      "description": "j2p22v",
-      "spare1": "zrqx42",
-      "spare2": "vx0qxw",
-      "inOrganName": "julian.ortiz",
-      "userName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "inoutModeName": "julian.ortiz",
-      "typeName": "julian.ortiz"
+      "status": 986,
+      "description": "2kfdqr",
+      "spare1": "jecynb",
+      "spare2": "l9k7yz",
+      "inOrganName": "macie.hartmann",
+      "userName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "inoutModeName": "macie.hartmann",
+      "typeName": "macie.hartmann"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6146,9 +6146,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "y3iheu",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "cc0z4k",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6183,7 +6183,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?startTime=2026-03-09 00:08:33&limit=10&page=1&q=ficz9f&orderBy=926&endTime=2026-03-09 00:08:33
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/application.do?endTime=2026-03-09 22:49:14&page=1&orderBy=543&limit=10&q=hrziku&startTime=2026-03-09 22:49:14
 ```
 **Response-fields:**
 
@@ -6212,18 +6212,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "organNum": "7qce40",
-      "deptNum": "7iaifh",
-      "peopleNum": "pqjvik",
-      "roleNum": "3q8bly",
-      "dicTypeNum": "ml9mo5",
-      "appNum": "9u4bhg",
-      "fileNum": "g7qq1k",
-      "paramNum": "ayyg1q"
+      "organNum": "3fwugi",
+      "deptNum": "29i31f",
+      "peopleNum": "mgi7uc",
+      "roleNum": "n3b16y",
+      "dicTypeNum": "oa49qs",
+      "appNum": "5gbb98",
+      "fileNum": "3uyurt",
+      "paramNum": "fnemt3"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6258,7 +6258,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?orderBy=332&q=zxozr0&startTime=2026-03-09 00:08:33&endTime=2026-03-09 00:08:33&page=1&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/element.do?page=1&endTime=2026-03-09 22:49:14&q=bf2brd&startTime=2026-03-09 22:49:14&limit=10&orderBy=939
 ```
 **Response-fields:**
 
@@ -6281,12 +6281,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "objectNum": "l1a09a",
-      "modelNum": "u2l6qy"
+      "objectNum": "xq0wni",
+      "modelNum": "n1kkbo"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6321,7 +6321,7 @@ limit|int32|分页每页条数，默认10条|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?startTime=2026-03-09 00:08:33&limit=10&orderBy=347&endTime=2026-03-09 00:08:33&q=jp1zlu&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/index/manage.do?q=jqk347&orderBy=554&limit=10&startTime=2026-03-09 22:49:14&page=1&endTime=2026-03-09 22:49:14
 ```
 **Response-fields:**
 
@@ -6345,13 +6345,13 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "appNum": "5dq2qu",
-      "accountNum": "vuncbk",
-      "serviceOrganNum": "7iqc16"
+      "appNum": "jc38j3",
+      "accountNum": "rz4sju",
+      "serviceOrganNum": "76dj9s"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6405,7 +6405,7 @@ ids|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?path=dju1nv&startTime=2026-03-09 00:08:33&endTime=2026-03-09 00:08:33&page=1&orderBy=630&mode=769&isDisabled=true&status=423&domainId=95&organId=95&limit=10&ftpId=95&q=3zitfg&isSite=true&delFlag=9&appType=h4rssz&existKey=9bztfp&description=li324c&ids=q5hpy3&ids=q5hpy3&name=julian.ortiz&sertypeId=95&isMobileApp=true&xzqhId=549
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/selectList.do?endTime=2026-03-09 22:49:14&xzqhId=839&name=macie.hartmann&existKey=suge5q&delFlag=2&description=5905fs&path=srp3zh&isDisabled=true&organId=17&limit=10&domainId=17&isMobileApp=true&q=y14vnb&sertypeId=17&startTime=2026-03-09 22:49:14&page=1&ids=5gfrhi&ids=5gfrhi&appType=6iy8e8&orderBy=103&status=587&mode=231&isSite=true&ftpId=17
 ```
 **Response-fields:**
 
@@ -6449,33 +6449,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:50",
-      "lastTime": "2026-03-09 00:09:50",
-      "id": "95",
-      "ftpId": "95",
-      "domainId": "95",
-      "organId": "95",
-      "xzqhId": 118,
-      "sertypeId": "95",
-      "name": "julian.ortiz",
-      "path": "zs8n2w",
-      "appType": "bhxd36",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:37",
+      "lastTime": "2026-03-09 22:50:37",
+      "id": "17",
+      "ftpId": "17",
+      "domainId": "17",
+      "organId": "17",
+      "xzqhId": 721,
+      "sertypeId": "17",
+      "name": "macie.hartmann",
+      "path": "rzc1bx",
+      "appType": "c979kg",
       "isSite": true,
       "isDisabled": true,
       "isMobileApp": true,
-      "status": 912,
-      "priority": 815,
-      "delFlag": 9,
-      "deleteTime": "2026-03-09 00:09:50",
-      "description": "1ifo7b",
-      "spare1": "ye72s4",
-      "spare2": "mndk6n",
-      "xzqhName": "julian.ortiz"
+      "status": 860,
+      "priority": 340,
+      "delFlag": 2,
+      "deleteTime": "2026-03-09 22:50:37",
+      "description": "lx1swb",
+      "spare1": "0b9z4w",
+      "spare2": "awkg2g",
+      "xzqhName": "macie.hartmann"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6529,7 +6529,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?startTime=2026-03-09 00:08:33&sertypeId=95&delFlag=9&q=lz7752&limit=10&mode=959&name=julian.ortiz&xzqhId=369&isSite=true&appType=yagy83&existKey=6lq64a&endTime=2026-03-09 00:08:33&orderBy=262&page=1&organId=95&ftpId=95&path=jxm955&isDisabled=true&description=x85bzd&domainId=95&isMobileApp=true&status=309&ids=39vrm1&ids=39vrm1&idArr=d1yt87
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/list.do?isDisabled=true&delFlag=2&startTime=2026-03-09 22:49:14&idArr=n0h0q5&existKey=3vd58j&ids=k0rf1n&ids=k0rf1n&xzqhId=821&orderBy=731&path=92lby6&description=9g37ht&mode=70&isMobileApp=true&endTime=2026-03-09 22:49:14&organId=17&appType=t0j7zq&q=ggxhki&sertypeId=17&page=1&ftpId=17&name=macie.hartmann&limit=10&domainId=17&status=575&isSite=true
 ```
 **Response-fields:**
 
@@ -6577,40 +6577,40 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 5,
+    "totalCount": 706,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:51",
-        "lastTime": "2026-03-09 00:09:51",
-        "id": "95",
-        "ftpId": "95",
-        "domainId": "95",
-        "organId": "95",
-        "xzqhId": 523,
-        "sertypeId": "95",
-        "name": "julian.ortiz",
-        "path": "2cqi6r",
-        "appType": "el4qqc",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:37",
+        "lastTime": "2026-03-09 22:50:37",
+        "id": "17",
+        "ftpId": "17",
+        "domainId": "17",
+        "organId": "17",
+        "xzqhId": 189,
+        "sertypeId": "17",
+        "name": "macie.hartmann",
+        "path": "xycupp",
+        "appType": "9rcoxr",
         "isSite": true,
         "isDisabled": true,
         "isMobileApp": true,
-        "status": 78,
-        "priority": 183,
-        "delFlag": 9,
-        "deleteTime": "2026-03-09 00:09:51",
-        "description": "6eyaw9",
-        "spare1": "uryf61",
-        "spare2": "ol28wq",
-        "xzqhName": "julian.ortiz"
+        "status": 503,
+        "priority": 619,
+        "delFlag": 2,
+        "deleteTime": "2026-03-09 22:50:37",
+        "description": "47pxgg",
+        "spare1": "a0paqs",
+        "spare2": "ywif06",
+        "xzqhName": "macie.hartmann"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6640,9 +6640,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -6713,7 +6713,7 @@ idArr|string|id字符串|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'committed=true&page=1&status=352&writer.writeBuffer=a&writer.writeBuffer=a&writer.formatter.lastException.detailMessage=success&q=iddao7&domainId=95&sertypeId=95&isDisabled=true&writer.trouble=true&writer.psOut.autoFlush=true&name=julian.ortiz&organId=95&isSite=true&ids=mmljcn&ids=mmljcn&writer.psOut.formatter.zero=x&idArr=wgt2z5&writer.psOut.closing=true&endTime=2026-03-09 00:08:33&writer.psOut.trouble=true&status=956&writer.autoFlush=true&existKey=jp22af&limit=10&bufferSize=10&writer.psOut.textOut.nextChar=454&ftpId=95&characterEncoding=qf7aly&writer.psOut.closed=true&path=k5a169&description=kwjk8d&orderBy=628&appType=skedmu&xzqhId=782&writer.psOut.textOut.nChars=964&delFlag=9&contentType=rj09l4&writer.formatter.zero=m&startTime=2026-03-09 00:08:33&isMobileApp=true&mode=377'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/export.do --data 'writer.psOut.closed=true&isSite=true&page=1&writer.formatter.zero=j&ftpId=17&delFlag=2&domainId=17&writer.autoFlush=true&isDisabled=true&writer.writeBuffer=e&writer.writeBuffer=e&writer.psOut.textOut.nextChar=395&ids=bzldpe&ids=bzldpe&name=macie.hartmann&startTime=2026-03-09 22:49:14&orderBy=220&isMobileApp=true&writer.psOut.autoFlush=true&limit=10&status=274&writer.psOut.closing=true&writer.psOut.textOut.nChars=107&characterEncoding=xrtpy1&q=32yt9x&contentType=htibxs&path=8qnopf&committed=true&writer.formatter.lastException.detailMessage=success&writer.trouble=true&bufferSize=10&writer.psOut.formatter.zero=j&sertypeId=17&endTime=2026-03-09 22:49:14&xzqhId=485&writer.psOut.trouble=true&appType=0qfpav&status=187&description=9kyygh&mode=886&idArr=3uq6zq&organId=17&existKey=in1kv3'
 ```
 **Response-fields:**
 
@@ -6732,9 +6732,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "3r0qbh",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "rmsg3r",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6765,7 +6765,7 @@ appId|string| 参数ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/17.do
 ```
 **Response-fields:**
 
@@ -6812,36 +6812,36 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:51",
-    "lastTime": "2026-03-09 00:09:51",
-    "id": "95",
-    "ftpId": "95",
-    "domainId": "95",
-    "organId": "95",
-    "xzqhId": 948,
-    "sertypeId": "95",
-    "name": "julian.ortiz",
-    "path": "hkqh5a",
-    "appType": "off7zi",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:38",
+    "lastTime": "2026-03-09 22:50:38",
+    "id": "17",
+    "ftpId": "17",
+    "domainId": "17",
+    "organId": "17",
+    "xzqhId": 208,
+    "sertypeId": "17",
+    "name": "macie.hartmann",
+    "path": "vrq7hx",
+    "appType": "u9fkck",
     "isSite": true,
     "isDisabled": true,
     "isMobileApp": true,
-    "status": 612,
-    "priority": 65,
-    "delFlag": 9,
-    "deleteTime": "2026-03-09 00:09:51",
-    "description": "ewdxur",
-    "spare1": "u8h3mq",
-    "spare2": "16t8yd",
-    "xzqhName": "julian.ortiz",
-    "ftpName": "julian.ortiz",
-    "sertypeName": "julian.ortiz",
-    "domainName": "julian.ortiz",
-    "organName": "julian.ortiz"
+    "status": 742,
+    "priority": 626,
+    "delFlag": 2,
+    "deleteTime": "2026-03-09 22:50:38",
+    "description": "mugmwe",
+    "spare1": "y3401b",
+    "spare2": "lxs8zl",
+    "xzqhName": "macie.hartmann",
+    "ftpName": "macie.hartmann",
+    "sertypeName": "macie.hartmann",
+    "domainName": "macie.hartmann",
+    "organName": "macie.hartmann"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6895,30 +6895,30 @@ statusMap|object|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/save.do --data '{
-  "id": "95",
-  "ftpId": "95",
-  "ftpName": "julian.ortiz",
-  "domainId": "95",
-  "domainName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "xzqhId": 912,
-  "xzqhName": "julian.ortiz",
-  "sertypeId": "95",
-  "name": "julian.ortiz",
-  "path": "mb2lzx",
-  "appType": "6f5rz3",
+  "id": "17",
+  "ftpId": "17",
+  "ftpName": "macie.hartmann",
+  "domainId": "17",
+  "domainName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "xzqhId": 614,
+  "xzqhName": "macie.hartmann",
+  "sertypeId": "17",
+  "name": "macie.hartmann",
+  "path": "suvdvq",
+  "appType": "osrsyu",
   "isSite": true,
   "isOpen": true,
   "isMobileApp": true,
-  "status": 658,
-  "statusName": "julian.ortiz",
-  "priority": 845,
-  "createTime": "2026-03-09 00:09:51",
-  "description": "i81e7t",
-  "spare1": "7jtbit",
+  "status": 770,
+  "statusName": "macie.hartmann",
+  "priority": 164,
+  "createTime": "2026-03-09 22:50:38",
+  "description": "to5b2j",
+  "spare1": "vvi77a",
   "statusMap": {
-    "mapKey": "p63i8g"
+    "mapKey": "t7tu0h"
   }
 }'
 ```
@@ -6939,9 +6939,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "iot8oz",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "fkpdgz",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -6995,30 +6995,30 @@ statusMap|object|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/update.do --data '{
-  "id": "95",
-  "ftpId": "95",
-  "ftpName": "julian.ortiz",
-  "domainId": "95",
-  "domainName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "xzqhId": 651,
-  "xzqhName": "julian.ortiz",
-  "sertypeId": "95",
-  "name": "julian.ortiz",
-  "path": "0kalp1",
-  "appType": "dvbu8w",
+  "id": "17",
+  "ftpId": "17",
+  "ftpName": "macie.hartmann",
+  "domainId": "17",
+  "domainName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "xzqhId": 422,
+  "xzqhName": "macie.hartmann",
+  "sertypeId": "17",
+  "name": "macie.hartmann",
+  "path": "1wm4ka",
+  "appType": "xriwtz",
   "isSite": true,
   "isOpen": true,
   "isMobileApp": true,
-  "status": 716,
-  "statusName": "julian.ortiz",
-  "priority": 908,
-  "createTime": "2026-03-09 00:09:51",
-  "description": "vh42rj",
-  "spare1": "046nrs",
+  "status": 111,
+  "statusName": "macie.hartmann",
+  "priority": 557,
+  "createTime": "2026-03-09 22:50:38",
+  "description": "4cy8sx",
+  "spare1": "26h8fz",
   "statusMap": {
-    "mapKey": "g2caz1"
+    "mapKey": "2gjww6"
   }
 }'
 ```
@@ -7039,9 +7039,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4igj4u",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "cqv6ty",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7091,9 +7091,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "valg63",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "r6sr9r",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7136,15 +7136,15 @@ initPath|string|导入的文件路径|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/95.do --data '{
-  "id": "95",
+curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/init/17.do --data '{
+  "id": "17",
   "menuJsons": {
     "size": 10
   },
   "initJson": {},
-  "username": "julian.ortiz",
-  "password": "insetd",
-  "initPath": "7zz4t2"
+  "username": "macie.hartmann",
+  "password": "lior78",
+  "initPath": "aj9q8a"
 }'
 ```
 **Response-fields:**
@@ -7167,8 +7167,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7212,9 +7212,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "iy5qpv",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "e9yz9z",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7270,7 +7270,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?code=58719&searchCode=58719&rgt=419&deleteTime=2026-03-09 00:08:33&startTime=2026-03-09 00:08:33&limit=10&page=1&sname=julian.ortiz&isDisplay=true&areatypeIds=9v7m7d&areatypeIds=9v7m7d&orderBy=735&nameTotal=jawpfg&delFlag=9&lft=828&likeQuery=037tj2&nameEn=q1tg2h&countryId=95&ids=6evvha&ids=6evvha&areatypeId=95&description=m6i3u9&q=69h36y&name=julian.ortiz&parentId=648&endTime=2026-03-09 00:08:33&hasContent=true&parentIds=ln0lc6&parentIds=ln0lc6
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/xzqh/list.do?nameEn=d1lp2k&code=22134&parentIds=9oafry&parentIds=9oafry&areatypeIds=sx91be&areatypeIds=sx91be&hasContent=true&orderBy=194&page=1&limit=10&endTime=2026-03-09 22:49:14&ids=cccc0p&ids=cccc0p&countryId=17&startTime=2026-03-09 22:49:14&delFlag=2&likeQuery=2v1k5b&parentId=993&isDisplay=true&rgt=416&areatypeId=17&sname=macie.hartmann&searchCode=22134&deleteTime=2026-03-09 22:49:14&description=vy87i0&name=macie.hartmann&nameTotal=0sacuz&lft=199&q=npicdo
 ```
 **Response-fields:**
 
@@ -7319,41 +7319,41 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 653,
+    "totalCount": 38,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:51",
-        "lastTime": "2026-03-09 00:09:51",
-        "id": 898,
-        "parentId": 180,
-        "countryId": "95",
-        "areatypeId": "95",
-        "lft": 195,
-        "rgt": 950,
-        "code": "58719",
-        "name": "julian.ortiz",
-        "nameTotal": "2tz019",
-        "sname": "julian.ortiz",
-        "nameEn": "d9ws1q",
-        "searchCode": "58719",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:38",
+        "lastTime": "2026-03-09 22:50:38",
+        "id": 729,
+        "parentId": 429,
+        "countryId": "17",
+        "areatypeId": "17",
+        "lft": 134,
+        "rgt": 800,
+        "code": "22134",
+        "name": "macie.hartmann",
+        "nameTotal": "3dtcf9",
+        "sname": "macie.hartmann",
+        "nameEn": "8s70zn",
+        "searchCode": "22134",
         "isDisplay": true,
         "hasContent": true,
-        "priority": 41,
-        "delFlag": 9,
-        "deleteTime": "2026-03-09 00:09:51",
-        "description": "n6cwc1",
-        "countryName": "julian.ortiz",
-        "parentName": "julian.ortiz",
-        "areatypeName": "julian.ortiz"
+        "priority": 540,
+        "delFlag": 2,
+        "deleteTime": "2026-03-09 22:50:38",
+        "description": "fqdetw",
+        "countryName": "macie.hartmann",
+        "parentName": "macie.hartmann",
+        "areatypeName": "macie.hartmann"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7404,7 +7404,7 @@ isOrganWork|string|是否工作机构|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?description=vic56c&createType=943&ids=as2z08&ids=as2z08&key=4prqyp&orderBy=781&limit=10&isOrganWork=o2sy6f&orgtypeId=95&source=314&organCode=58719&xzqhId=824&name=julian.ortiz&spare1=kpeeo6&endTime=2026-03-09 00:08:33&page=1&delFlag=9&organName=julian.ortiz&spare2=24yaeq&unionCode=58719&q=ntjpgr&startTime=2026-03-09 00:08:33
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/app/organ/list.do?orgtypeId=17&ids=5w28nw&ids=5w28nw&isOrganWork=thj1c9&endTime=2026-03-09 22:49:14&delFlag=2&key=5le0q3&createType=119&source=404&spare1=nv9p92&spare2=ab5xp9&name=macie.hartmann&startTime=2026-03-09 22:49:14&limit=10&orderBy=865&organName=macie.hartmann&unionCode=22134&page=1&xzqhId=711&organCode=22134&description=476ut4&q=alfjgu
 ```
 **Response-fields:**
 
@@ -7434,22 +7434,22 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 647,
+    "totalCount": 349,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:51",
-        "lastTime": "2026-03-09 00:09:51",
-        "cmsKey": "anv8yf",
-        "cmsValue": "3l16th"
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:38",
+        "lastTime": "2026-03-09 22:50:38",
+        "cmsKey": "3wecll",
+        "cmsValue": "84jofh"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7499,7 +7499,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?page=1&dictLabel=473ktl&cssClass=xxbb0j&endTime=2026-03-09 00:08:33&isDefault=wcdy5w&orderBy=336&remark=aymjww&searchCode=58719&limit=10&cddValue=7icj2g&startTime=2026-03-09 00:08:33&name=julian.ortiz&key=0cgbdi&typeCode=58719&cddId=610&q=5mwge0&listClass=37fv9f&dictSort=808&status=zcgr4q&parentId=304
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/list.do?cddId=525&page=1&parentId=527&q=teaifo&limit=10&listClass=4drbxh&isDefault=rdrwr8&orderBy=709&endTime=2026-03-09 22:49:14&status=w1kt8s&remark=dy0tp0&name=macie.hartmann&cssClass=ukx7os&startTime=2026-03-09 22:49:14&dictLabel=wwkwkd&dictSort=638&cddValue=7vo7kt&key=z905u4&typeCode=22134&searchCode=22134
 ```
 **Response-fields:**
 
@@ -7537,30 +7537,30 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 377,
+    "totalCount": 964,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cddId": 797,
-        "typeCode": "58719",
-        "parentId": 787,
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "cddValue": "nzfuxe",
-        "searchCode": "58719",
-        "priority": 160,
-        "createTime": "2026-03-09 00:09:52",
-        "remark": "qh95yo",
-        "dictLabel": "69sdq7",
-        "typeCodeName": "julian.ortiz",
-        "parentName": "julian.ortiz"
+        "cddId": 46,
+        "typeCode": "22134",
+        "parentId": 887,
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "cddValue": "hu3db3",
+        "searchCode": "22134",
+        "priority": 209,
+        "createTime": "2026-03-09 22:50:39",
+        "remark": "iv0im8",
+        "dictLabel": "urpaeo",
+        "typeCodeName": "macie.hartmann",
+        "parentName": "macie.hartmann"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7589,9 +7589,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -7658,7 +7658,7 @@ parentId|int64|父节点ID|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'writer.psOut.textOut.nChars=516&writer.psOut.trouble=true&limit=10&cddId=288&bufferSize=10&typeCode=58719&characterEncoding=a3f6hb&writer.formatter.lastException.detailMessage=success&startTime=2026-03-09 00:08:33&page=1&writer.formatter.zero=1&writer.psOut.autoFlush=true&listClass=p59ygz&status=tz2y74&dictSort=790&orderBy=191&dictLabel=br4md2&writer.psOut.closed=true&writer.psOut.formatter.zero=8&q=i47df6&isDefault=ds2qpy&endTime=2026-03-09 00:08:33&parentId=242&remark=7khfoq&writer.psOut.closing=true&name=julian.ortiz&writer.writeBuffer=3&writer.writeBuffer=3&cddValue=uq3589&writer.trouble=true&committed=true&writer.autoFlush=true&status=12&writer.psOut.textOut.nextChar=594&searchCode=58719&cssClass=0bybtr&key=9uvswa&contentType=fxdljn'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/export.do --data 'typeCode=22134&status=447&cssClass=hl41cr&writer.trouble=true&writer.psOut.textOut.nextChar=558&committed=true&cddValue=a2fptw&q=pkvrtt&characterEncoding=zxpqy9&remark=mn1e8q&writer.autoFlush=true&name=macie.hartmann&writer.formatter.lastException.detailMessage=success&bufferSize=10&writer.formatter.zero=n&writer.psOut.closed=true&dictSort=480&parentId=465&status=xxz4gd&limit=10&writer.psOut.formatter.zero=c&startTime=2026-03-09 22:49:14&writer.psOut.textOut.nChars=170&page=1&key=fxv75y&endTime=2026-03-09 22:49:14&searchCode=22134&contentType=r18vf0&writer.psOut.closing=true&writer.writeBuffer=0&writer.writeBuffer=0&writer.psOut.autoFlush=true&writer.psOut.trouble=true&orderBy=340&cddId=353&isDefault=0zdmeg&listClass=9715yu&dictLabel=2sccpm'
 ```
 **Response-fields:**
 
@@ -7677,9 +7677,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "p69a0c",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "nz9hbh",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7709,7 +7709,7 @@ dictId|int64|   字典ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/7.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/552.do
 ```
 **Response-fields:**
 
@@ -7742,22 +7742,22 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "cddId": 282,
-    "typeCode": "58719",
-    "parentId": 207,
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "cddValue": "7il38w",
-    "searchCode": "58719",
-    "priority": 387,
-    "createTime": "2026-03-09 00:09:52",
-    "remark": "5rq6j7",
-    "dictLabel": "my0r66",
-    "typeCodeName": "julian.ortiz",
-    "parentName": "julian.ortiz"
+    "cddId": 647,
+    "typeCode": "22134",
+    "parentId": 272,
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "cddValue": "a24cok",
+    "searchCode": "22134",
+    "priority": 873,
+    "createTime": "2026-03-09 22:50:39",
+    "remark": "srpbt2",
+    "dictLabel": "yoykg3",
+    "typeCodeName": "macie.hartmann",
+    "parentName": "macie.hartmann"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7796,7 +7796,7 @@ roletypeId|string|角色分类ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/t67lzt.do?zparentId=95&roletypeId=95&typeCode=58719&parentId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/type/j0thh2.do?typeCode=22134&zparentId=17&parentId=17&roletypeId=17
 ```
 **Response-fields:**
 
@@ -7818,8 +7818,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7862,19 +7862,19 @@ parentName|string|父节点名称|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/save.do --data '{
-  "cddId": 394,
-  "typeCode": "58719",
-  "parentId": 496,
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "cddValue": "9a7jbc",
-  "searchCode": "58719",
-  "priority": 850,
-  "createTime": "2026-03-09 00:09:52",
-  "remark": "ymscax",
-  "dictLabel": "2yovx8",
-  "typeCodeName": "julian.ortiz",
-  "parentName": "julian.ortiz"
+  "cddId": 814,
+  "typeCode": "22134",
+  "parentId": 648,
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "cddValue": "67l6tw",
+  "searchCode": "22134",
+  "priority": 283,
+  "createTime": "2026-03-09 22:50:39",
+  "remark": "gnje26",
+  "dictLabel": "ygsypp",
+  "typeCodeName": "macie.hartmann",
+  "parentName": "macie.hartmann"
 }'
 ```
 **Response-fields:**
@@ -7894,9 +7894,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "5tp79y",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "w8ue4d",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -7939,19 +7939,19 @@ parentName|string|父节点名称|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/update.do --data '{
-  "cddId": 671,
-  "typeCode": "58719",
-  "parentId": 133,
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "cddValue": "z415oz",
-  "searchCode": "58719",
-  "priority": 20,
-  "createTime": "2026-03-09 00:09:52",
-  "remark": "f4qsat",
-  "dictLabel": "s3hs0h",
-  "typeCodeName": "julian.ortiz",
-  "parentName": "julian.ortiz"
+  "cddId": 133,
+  "typeCode": "22134",
+  "parentId": 324,
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "cddValue": "yfa9q2",
+  "searchCode": "22134",
+  "priority": 521,
+  "createTime": "2026-03-09 22:50:39",
+  "remark": "gndplm",
+  "dictLabel": "441dnn",
+  "typeCodeName": "macie.hartmann",
+  "parentName": "macie.hartmann"
 }'
 ```
 **Response-fields:**
@@ -7971,9 +7971,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "b6bfkv",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "16zdx9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8022,9 +8022,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ldgagy",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "kzqj7m",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8077,7 +8077,7 @@ showButton|string|是否显示button，默认不显示|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?metaId=95&gnType=tq0gnq&limit=10&status=z0o767&refresh=yx1sa5&roleId=95&appId=95&startTime=2026-03-09 00:08:33&positionId=95&organId=95&parentId=95&page=1&roletypeId=95&showButton=i6tejj&type=z4s2lu&positionType=657vpu&orderBy=382&subType=emh284&refType=o1rza8&wlType=had8bh&endTime=2026-03-09 00:08:33&groupId=95&q=n8mho2&key=61iicd
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/comm/tree.do?organId=17&groupId=17&status=zxy1yt&subType=repcr1&showButton=pgubd8&startTime=2026-03-09 22:49:14&parentId=17&refType=ot8t0l&key=hkld4t&appId=17&gnType=bsj3fg&wlType=aynzsn&page=1&orderBy=213&limit=10&roletypeId=17&positionType=481ubb&endTime=2026-03-09 22:49:14&positionId=17&roleId=17&q=emopg4&type=y8h0xg&metaId=17&refresh=2g1f6b
 ```
 **Response-fields:**
 
@@ -8111,18 +8111,18 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": "95",
-      "label": "puvqif",
-      "shortName": "julian.ortiz",
-      "organId": "95",
-      "areaId": 143,
-      "searchCode": "58719",
-      "childNum": 130,
+      "id": "17",
+      "label": "f231g7",
+      "shortName": "macie.hartmann",
+      "organId": "17",
+      "areaId": 215,
+      "searchCode": "22134",
+      "childNum": 547,
       "checked": true,
-      "entity": 822,
+      "entity": 330,
       "show": true,
       "showIcon": true,
-      "parentId": "95",
+      "parentId": "17",
       "children": [
         {
           "$ref": ".."
@@ -8130,8 +8130,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8182,7 +8182,7 @@ typeCodes|array|字典类型代码|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?existKey=u097ut&sname=julian.ortiz&page=1&cddValue=8kz8p7&endTime=2026-03-09 00:08:33&dispFlag=e5e8cn&parentId=619&description=j9a7sf&typeMode=4hqjzo&key=wjl2ab&searchCode=58719&delFlag=9&limit=10&isAllChild=d4feah&typeCodes=xxb5i8&typeCodes=xxb5i8&orderBy=153&ids=ocjdsr&ids=ocjdsr&cddLevel=729w00&q=w2n4hh&startTime=2026-03-09 00:08:33&typeCode=58719&name=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictionary/tree.do?name=macie.hartmann&page=1&parentId=861&delFlag=2&q=xjlnyx&cddValue=jnyz7g&key=6sfwso&orderBy=942&searchCode=22134&existKey=rf07zl&sname=macie.hartmann&startTime=2026-03-09 22:49:14&typeMode=18o1hu&typeCodes=j0c2r8&typeCodes=j0c2r8&cddLevel=23z1dg&dispFlag=k6o5g7&limit=10&endTime=2026-03-09 22:49:14&ids=hn2vi9&ids=hn2vi9&description=kv533u&isAllChild=fg40wo&typeCode=22134
 ```
 **Response-fields:**
 
@@ -8222,24 +8222,24 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:53",
-      "lastTime": "2026-03-09 00:09:53",
-      "id": 108,
-      "typeCode": "58719",
-      "parentId": 814,
-      "name": "julian.ortiz",
-      "sname": "julian.ortiz",
-      "cddValue": "wiy1sl",
-      "cddLevel": "5njlk8",
-      "searchCode": "58719",
-      "dispFlag": "zkh6uv",
-      "priority": 2,
-      "delFlag": 9,
-      "deleteTime": "2026-03-09 00:09:53",
-      "description": "e8dej6",
-      "spare1": "16nlt4",
-      "spare2": "3yzi84",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:39",
+      "lastTime": "2026-03-09 22:50:39",
+      "id": 702,
+      "typeCode": "22134",
+      "parentId": 271,
+      "name": "macie.hartmann",
+      "sname": "macie.hartmann",
+      "cddValue": "lz2fg5",
+      "cddLevel": "oi1jop",
+      "searchCode": "22134",
+      "dispFlag": "5oxetn",
+      "priority": 664,
+      "delFlag": 2,
+      "deleteTime": "2026-03-09 22:50:39",
+      "description": "lj1ztt",
+      "spare1": "j8r4rd",
+      "spare2": "ogts9u",
       "children": [
         {
           "$ref": ".."
@@ -8247,8 +8247,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8291,7 +8291,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?endTime=2026-03-09 00:08:33&limit=10&startTime=2026-03-09 00:08:33&status=x98fo8&name=julian.ortiz&orderBy=570&remark=oe0kxz&typeClass=tsw0l8&key=5xskfc&page=1&typeId=95&typeMode=226&q=daennk
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/list.do?name=macie.hartmann&status=p98kde&limit=10&typeMode=942&endTime=2026-03-09 22:49:14&orderBy=786&typeClass=azpixk&remark=ya8k11&page=1&startTime=2026-03-09 22:49:14&key=ix29ph&q=8z8q3f&typeId=17
 ```
 **Response-fields:**
 
@@ -8326,27 +8326,27 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 512,
+    "totalCount": 81,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "typeId": "95",
-        "name": "julian.ortiz",
-        "typeClass": "wbelbb",
-        "typeRef": "zp28au",
-        "typeMode": 345,
-        "searchCode": "58719",
-        "priority": 481,
-        "createTime": "2026-03-09 00:09:52",
-        "status": 429,
-        "remark": "qrj0jt"
+        "typeId": "17",
+        "name": "macie.hartmann",
+        "typeClass": "exfcvz",
+        "typeRef": "1nk7z0",
+        "typeMode": 517,
+        "searchCode": "22134",
+        "priority": 878,
+        "createTime": "2026-03-09 22:50:39",
+        "status": 966,
+        "remark": "ibynr1"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8375,9 +8375,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -8437,7 +8437,7 @@ key|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'typeMode=727&typeClass=j1o76w&writer.psOut.closed=true&typeId=95&writer.formatter.zero=2&name=julian.ortiz&characterEncoding=ydsm4p&writer.psOut.textOut.nextChar=529&status=3iws81&key=tf1gkm&bufferSize=10&writer.psOut.closing=true&writer.psOut.trouble=true&writer.psOut.formatter.zero=t&committed=true&q=qxgw0c&orderBy=375&endTime=2026-03-09 00:08:33&page=1&limit=10&writer.autoFlush=true&writer.psOut.textOut.nChars=607&writer.formatter.lastException.detailMessage=success&startTime=2026-03-09 00:08:33&remark=6xh51v&contentType=31oiqn&writer.trouble=true&writer.psOut.autoFlush=true&status=262&writer.writeBuffer=z&writer.writeBuffer=z'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/export.do --data 'writer.psOut.closing=true&characterEncoding=swnb2w&key=r08sqc&limit=10&contentType=v9rotr&status=qe247m&q=fqnozh&orderBy=200&endTime=2026-03-09 22:49:14&typeMode=282&name=macie.hartmann&bufferSize=10&writer.trouble=true&status=104&typeId=17&typeClass=gl9flx&writer.autoFlush=true&startTime=2026-03-09 22:49:14&writer.formatter.zero=k&writer.psOut.formatter.zero=o&page=1&writer.psOut.trouble=true&writer.psOut.textOut.nextChar=404&writer.psOut.closed=true&writer.psOut.textOut.nChars=597&remark=uxkix8&writer.psOut.autoFlush=true&committed=true&writer.writeBuffer=k&writer.writeBuffer=k&writer.formatter.lastException.detailMessage=success'
 ```
 **Response-fields:**
 
@@ -8456,9 +8456,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "pb8bzo",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "a4jfgh",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8488,7 +8488,7 @@ dictId|string|   字典分类ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/17.do
 ```
 **Response-fields:**
 
@@ -8518,19 +8518,19 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "typeId": "95",
-    "name": "julian.ortiz",
-    "typeClass": "hb4f25",
-    "typeRef": "b5cehy",
-    "typeMode": 607,
-    "searchCode": "58719",
-    "priority": 743,
-    "createTime": "2026-03-09 00:09:52",
-    "status": 404,
-    "remark": "8r976m"
+    "typeId": "17",
+    "name": "macie.hartmann",
+    "typeClass": "isb0cr",
+    "typeRef": "dczbru",
+    "typeMode": 275,
+    "searchCode": "22134",
+    "priority": 968,
+    "createTime": "2026-03-09 22:50:39",
+    "status": 530,
+    "remark": "y04iib"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8570,16 +8570,16 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/save.do --data '{
-  "typeId": "95",
-  "name": "julian.ortiz",
-  "typeClass": "nbpc12",
-  "typeRef": "bgf8r2",
-  "typeMode": 335,
-  "searchCode": "58719",
-  "priority": 605,
-  "createTime": "2026-03-09 00:09:52",
-  "status": 666,
-  "remark": "ilibra"
+  "typeId": "17",
+  "name": "macie.hartmann",
+  "typeClass": "fw8upp",
+  "typeRef": "arm9rf",
+  "typeMode": 390,
+  "searchCode": "22134",
+  "priority": 333,
+  "createTime": "2026-03-09 22:50:39",
+  "status": 738,
+  "remark": "7abjtd"
 }'
 ```
 **Response-fields:**
@@ -8599,9 +8599,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "x34lie",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "jg7gil",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8641,16 +8641,16 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/dictype/update.do --data '{
-  "typeId": "95",
-  "name": "julian.ortiz",
-  "typeClass": "5god2z",
-  "typeRef": "dpdcxp",
-  "typeMode": 63,
-  "searchCode": "58719",
-  "priority": 758,
-  "createTime": "2026-03-09 00:09:52",
-  "status": 97,
-  "remark": "ozpwmx"
+  "typeId": "17",
+  "name": "macie.hartmann",
+  "typeClass": "h8al46",
+  "typeRef": "ogz73z",
+  "typeMode": 425,
+  "searchCode": "22134",
+  "priority": 205,
+  "createTime": "2026-03-09 22:50:39",
+  "status": 436,
+  "remark": "2f2tjf"
 }'
 ```
 **Response-fields:**
@@ -8670,9 +8670,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "8sqiov",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "7ca57o",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8721,9 +8721,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "n5gf66",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "fvr854",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8766,9 +8766,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "8f1w1j",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "62863t",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8823,20 +8823,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "typeId": "95",
-      "name": "julian.ortiz",
-      "typeClass": "mz3ynz",
-      "typeRef": "kq7km4",
-      "typeMode": 461,
-      "searchCode": "58719",
-      "priority": 932,
-      "createTime": "2026-03-09 00:09:52",
-      "status": 13,
-      "remark": "pkohi1"
+      "typeId": "17",
+      "name": "macie.hartmann",
+      "typeClass": "7t6ry8",
+      "typeRef": "gb6se9",
+      "typeMode": 801,
+      "searchCode": "22134",
+      "priority": 362,
+      "createTime": "2026-03-09 22:50:39",
+      "status": 616,
+      "remark": "bcg7kv"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8913,46 +8913,46 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "cpu": {
-      "cpuNum": 771,
-      "total": 86.94,
-      "sys": 42.86,
-      "used": 19.13,
-      "wait": 91.35,
-      "free": 87.83
+      "cpuNum": 458,
+      "total": 61.05,
+      "sys": 25.38,
+      "used": 32.61,
+      "wait": 72.74,
+      "free": 98.97
     },
     "mem": {
-      "total": 0.07,
-      "used": 47.44,
-      "free": 68.30
+      "total": 2.11,
+      "used": 75.38,
+      "free": 19.18
     },
     "jvm": {
-      "total": 45.24,
-      "max": 28.87,
-      "free": 65.46,
-      "version": "0.77",
-      "home": "5hwkhy"
+      "total": 2.34,
+      "max": 95.78,
+      "free": 5.97,
+      "version": "0.2",
+      "home": "ewplj5"
     },
     "sys": {
-      "computerName": "julian.ortiz",
-      "computerIp": "207.227.60.208",
-      "userDir": "6o6ir8",
-      "osName": "julian.ortiz",
-      "osArch": "sgphnw"
+      "computerName": "macie.hartmann",
+      "computerIp": "14.83.204.161",
+      "userDir": "ybcuhu",
+      "osName": "macie.hartmann",
+      "osArch": "f5gg62"
     },
     "sysFiles": [
       {
-        "dirName": "julian.ortiz",
-        "sysTypeName": "julian.ortiz",
-        "typeName": "julian.ortiz",
-        "total": "lslxh9",
-        "free": "3xlm50",
-        "used": "oie9tc",
-        "usage": 88.25
+        "dirName": "macie.hartmann",
+        "sysTypeName": "macie.hartmann",
+        "typeName": "macie.hartmann",
+        "total": "bpn8gy",
+        "free": "og2bsw",
+        "used": "3a7lwd",
+        "usage": 61.20
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -8993,7 +8993,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?description=gu3wpn&endTime=2026-03-09 00:08:33&sname=julian.ortiz&q=mt2ek3&limit=10&name=julian.ortiz&orderBy=838&startTime=2026-03-09 00:08:33&page=1&delFlag=9
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/list.do?orderBy=403&page=1&name=macie.hartmann&delFlag=2&limit=10&startTime=2026-03-09 22:49:14&endTime=2026-03-09 22:49:14&sname=macie.hartmann&description=iccqby&q=cnpfma
 ```
 **Response-fields:**
 
@@ -9023,19 +9023,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:55",
-      "lastTime": "2026-03-09 00:09:55",
-      "id": "95",
-      "name": "julian.ortiz",
-      "sname": "julian.ortiz",
-      "priority": 409,
-      "delFlag": 9,
-      "description": "swiydp"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "id": "17",
+      "name": "macie.hartmann",
+      "sname": "macie.hartmann",
+      "priority": 363,
+      "delFlag": 2,
+      "description": "rsnvr5"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9065,9 +9065,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -9124,7 +9124,7 @@ description|string|描述|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'writer.trouble=true&writer.psOut.autoFlush=true&writer.psOut.closing=true&writer.formatter.zero=f&orderBy=164&page=1&sname=julian.ortiz&writer.writeBuffer=i&writer.writeBuffer=i&description=jb6nfp&writer.formatter.lastException.detailMessage=success&committed=true&contentType=ea3cg6&writer.psOut.trouble=true&limit=10&writer.psOut.closed=true&writer.autoFlush=true&writer.psOut.textOut.nextChar=506&delFlag=9&q=lxpxr6&status=143&bufferSize=10&name=julian.ortiz&characterEncoding=011v6j&writer.psOut.formatter.zero=8&startTime=2026-03-09 00:08:33&writer.psOut.textOut.nChars=99&endTime=2026-03-09 00:08:33'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/export.do --data 'writer.psOut.textOut.nChars=540&name=macie.hartmann&characterEncoding=p1zqff&sname=macie.hartmann&writer.psOut.closing=true&writer.autoFlush=true&committed=true&description=9wutwv&bufferSize=10&limit=10&writer.trouble=true&writer.formatter.zero=z&writer.psOut.closed=true&page=1&writer.formatter.lastException.detailMessage=success&q=htne7c&orderBy=580&writer.psOut.formatter.zero=r&startTime=2026-03-09 22:49:14&writer.writeBuffer=8&writer.writeBuffer=8&writer.psOut.trouble=true&contentType=aiwqdn&delFlag=2&writer.psOut.autoFlush=true&endTime=2026-03-09 22:49:14&writer.psOut.textOut.nextChar=372&status=472'
 ```
 **Response-fields:**
 
@@ -9143,9 +9143,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "vqobhl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "9vzagx",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9205,18 +9205,18 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:55",
-    "lastTime": "2026-03-09 00:09:55",
-    "id": "95",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "priority": 169,
-    "delFlag": 9,
-    "description": "1d26yr"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:41",
+    "lastTime": "2026-03-09 22:50:41",
+    "id": "17",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "priority": 690,
+    "delFlag": 2,
+    "description": "o3pm39"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9256,15 +9256,15 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "priority": 738,
-  "delFlag": 9,
-  "description": "l8x1ql"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:41",
+  "lastTime": "2026-03-09 22:50:41",
+  "id": "17",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "priority": 392,
+  "delFlag": 2,
+  "description": "4q7azf"
 }'
 ```
 **Response-fields:**
@@ -9284,9 +9284,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "6bsyhr",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0acqe0",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9326,15 +9326,15 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/righttype/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "priority": 8,
-  "delFlag": 9,
-  "description": "dhgklc"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:41",
+  "lastTime": "2026-03-09 22:50:41",
+  "id": "17",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "priority": 931,
+  "delFlag": 2,
+  "description": "1tcbjj"
 }'
 ```
 **Response-fields:**
@@ -9354,9 +9354,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ow74rz",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "rq8cvv",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9406,9 +9406,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "h3cjt4",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "s547je",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9462,7 +9462,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?spare2=g63chw&foreignId=95&description=lhuslw&delFlag=9&providerName=julian.ortiz&creatorId=95&startTime=2026-03-09 00:08:33&appId=95&organId=95&orderBy=377&q=7bn7i4&id=95&content=jqfubw&signature=6gsoee&subType=6rsipw&limit=10&name=julian.ortiz&type=okzifc&providerId=95&status=816&spare1=ht78tu&endTime=2026-03-09 00:08:33&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/list.do?delFlag=2&id=17&status=223&limit=10&foreignId=17&creatorId=17&orderBy=950&page=1&signature=iznnca&description=vzadf8&content=zsyk1k&q=g1m70u&startTime=2026-03-09 22:49:14&organId=17&providerId=17&providerName=macie.hartmann&subType=3jt3g0&appId=17&spare2=c6vr3u&spare1=rusjj8&endTime=2026-03-09 22:49:14&name=macie.hartmann&type=dwxf5d
 ```
 **Response-fields:**
 
@@ -9503,30 +9503,30 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:48",
-      "lastTime": "2026-03-09 00:09:48",
-      "id": "95",
-      "appId": "95",
-      "organId": "95",
-      "providerId": "95",
-      "providerName": "julian.ortiz",
-      "foreignId": "95",
-      "type": "e01v0b",
-      "subType": "si68hh",
-      "name": "julian.ortiz",
-      "signature": "g6euy0",
-      "content": "hfiyc1",
-      "priority": 619,
-      "status": 407,
-      "delFlag": 9,
-      "description": "8il1sh",
-      "spare1": "cpa09f",
-      "spare2": "g6sdx3"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:35",
+      "lastTime": "2026-03-09 22:50:35",
+      "id": "17",
+      "appId": "17",
+      "organId": "17",
+      "providerId": "17",
+      "providerName": "macie.hartmann",
+      "foreignId": "17",
+      "type": "1ihmkf",
+      "subType": "hgq3vi",
+      "name": "macie.hartmann",
+      "signature": "mvcq5i",
+      "content": "17uguu",
+      "priority": 825,
+      "status": 758,
+      "delFlag": 2,
+      "description": "6qtv0b",
+      "spare1": "q8v8ve",
+      "spare2": "8myrsh"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9597,29 +9597,29 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:48",
-    "lastTime": "2026-03-09 00:09:48",
-    "id": "95",
-    "appId": "95",
-    "organId": "95",
-    "providerId": "95",
-    "providerName": "julian.ortiz",
-    "foreignId": "95",
-    "type": "5hhilx",
-    "subType": "ptcua3",
-    "name": "julian.ortiz",
-    "signature": "cfy7wy",
-    "content": "fgrls2",
-    "priority": 623,
-    "status": 149,
-    "delFlag": 9,
-    "description": "49ard4",
-    "spare1": "8g5e1x",
-    "spare2": "8ims94"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:35",
+    "lastTime": "2026-03-09 22:50:35",
+    "id": "17",
+    "appId": "17",
+    "organId": "17",
+    "providerId": "17",
+    "providerName": "macie.hartmann",
+    "foreignId": "17",
+    "type": "fqqggt",
+    "subType": "3ksif7",
+    "name": "macie.hartmann",
+    "signature": "sgsy8n",
+    "content": "tyj4v7",
+    "priority": 295,
+    "status": 947,
+    "delFlag": 2,
+    "description": "ti3dc1",
+    "spare1": "ge3nyg",
+    "spare2": "s6zn8n"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9670,26 +9670,26 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "organId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "type": "old865",
-  "subType": "gd1md2",
-  "name": "julian.ortiz",
-  "signature": "0xfzhi",
-  "content": "nljc8d",
-  "priority": 182,
-  "status": 163,
-  "delFlag": 9,
-  "description": "mca3tz",
-  "spare1": "y2zkh2",
-  "spare2": "yom6k5"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:35",
+  "lastTime": "2026-03-09 22:50:35",
+  "id": "17",
+  "appId": "17",
+  "organId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "type": "qy857e",
+  "subType": "j8khk6",
+  "name": "macie.hartmann",
+  "signature": "8oxwya",
+  "content": "9shvvp",
+  "priority": 687,
+  "status": 824,
+  "delFlag": 2,
+  "description": "agr8bw",
+  "spare1": "5xnnt1",
+  "spare2": "k04onh"
 }'
 ```
 **Response-fields:**
@@ -9709,9 +9709,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "n9l8pm",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "5qc8nh",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9762,26 +9762,26 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/template/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "organId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "type": "aacm8l",
-  "subType": "btzn8x",
-  "name": "julian.ortiz",
-  "signature": "xy7rxx",
-  "content": "wdljhf",
-  "priority": 961,
-  "status": 481,
-  "delFlag": 9,
-  "description": "fcdrcz",
-  "spare1": "zah52u",
-  "spare2": "9u8qap"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:35",
+  "lastTime": "2026-03-09 22:50:35",
+  "id": "17",
+  "appId": "17",
+  "organId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "type": "tvcp56",
+  "subType": "yeple3",
+  "name": "macie.hartmann",
+  "signature": "nhghya",
+  "content": "zjqt9y",
+  "priority": 220,
+  "status": 864,
+  "delFlag": 2,
+  "description": "2ijkh5",
+  "spare1": "6dr6na",
+  "spare2": "qyhsff"
 }'
 ```
 **Response-fields:**
@@ -9801,9 +9801,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "xkxwfa",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "xc3bwi",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9853,9 +9853,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "37yis4",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ngy6ts",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -9922,7 +9922,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?opTime=2026-03-09 00:09:49&opUserId=95&opOrganId=95&q=0squ9a&msgAccountId=95&orderBy=623&endTime=2026-03-09 00:08:33&foreignId=95&appId=95&spare1=tdtn9v&msgContent=y7bvj9&msgOrganName=julian.ortiz&msgAbstract=o1ggqm&status=uesmhu&opOrganName=julian.ortiz&msgAccountName=julian.ortiz&type=jacjh3&msgModuleName=julian.ortiz&id=95&page=1&msgTitle=sjgo1j&bizType=sqj9of&msgModuleId=95&msgLabels=190zda&msgId=264&startTime=2026-03-09 00:08:33&msgOrganId=95&msgUrl=www.kandace-stamm.org&limit=10&description=n5e92d&msgUserName=julian.ortiz&spare2=faj4gw&msgType=596&creatorId=95&msgCreateTime=2026-03-09 00:09:49&msgUserId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/list.do?startTime=2026-03-09 22:49:14&opOrganName=macie.hartmann&endTime=2026-03-09 22:49:14&spare2=86xp34&bizType=ud3myb&limit=10&msgAccountId=17&page=1&msgUserName=macie.hartmann&msgModuleName=macie.hartmann&msgLabels=ewyiyk&opTime=2026-03-09 22:50:35&creatorId=17&appId=17&foreignId=17&type=vrxhxb&msgTitle=zmzlee&msgCreateTime=2026-03-09 22:50:35&msgUserId=17&q=l4pcir&opOrganId=17&spare1=vg2sb3&msgContent=9n1ywd&description=4g1f6f&msgAbstract=d5nqa5&msgUrl=www.velia-kozey.biz&status=fhymow&msgId=599&id=17&msgAccountName=macie.hartmann&msgOrganName=macie.hartmann&opUserId=17&msgOrganId=17&msgModuleId=17&orderBy=521&msgType=124
 ```
 **Response-fields:**
 
@@ -9975,42 +9975,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:49",
-      "lastTime": "2026-03-09 00:09:49",
-      "id": "95",
-      "appId": "95",
-      "foreignId": "95",
-      "type": "bjxy5m",
-      "bizType": "2nejy6",
-      "msgCreateTime": "2026-03-09 00:09:49",
-      "msgId": 753,
-      "msgType": 515,
-      "msgTitle": "tor6zr",
-      "msgAbstract": "vj3u59",
-      "msgAccountId": "95",
-      "msgAccountName": "julian.ortiz",
-      "msgModuleId": "95",
-      "msgModuleName": "julian.ortiz",
-      "msgUserId": "95",
-      "msgUserName": "julian.ortiz",
-      "msgOrganId": "95",
-      "msgOrganName": "julian.ortiz",
-      "msgUrl": "www.kandace-stamm.org",
-      "msgLabels": "z27zwl",
-      "msgContent": "i7v41e",
-      "status": "4dk8sq",
-      "opUserId": "95",
-      "opTime": "2026-03-09 00:09:49",
-      "opOrganId": "95",
-      "opOrganName": "julian.ortiz",
-      "description": "dtv425",
-      "spare1": "0o5r5o",
-      "spare2": "e9qnbl"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:36",
+      "lastTime": "2026-03-09 22:50:36",
+      "id": "17",
+      "appId": "17",
+      "foreignId": "17",
+      "type": "uzh2cy",
+      "bizType": "ywjny7",
+      "msgCreateTime": "2026-03-09 22:50:36",
+      "msgId": 573,
+      "msgType": 270,
+      "msgTitle": "rdpf17",
+      "msgAbstract": "qvlo0g",
+      "msgAccountId": "17",
+      "msgAccountName": "macie.hartmann",
+      "msgModuleId": "17",
+      "msgModuleName": "macie.hartmann",
+      "msgUserId": "17",
+      "msgUserName": "macie.hartmann",
+      "msgOrganId": "17",
+      "msgOrganName": "macie.hartmann",
+      "msgUrl": "www.velia-kozey.biz",
+      "msgLabels": "gr9h1z",
+      "msgContent": "jqcr8c",
+      "status": "0a2ecp",
+      "opUserId": "17",
+      "opTime": "2026-03-09 22:50:36",
+      "opOrganId": "17",
+      "opOrganName": "macie.hartmann",
+      "description": "2vj63u",
+      "spare1": "6a6uqz",
+      "spare2": "q6n43d"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10040,9 +10040,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -10125,7 +10125,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'msgModuleId=95&opTime=2026-03-09 00:09:49&msgTitle=b7bher&characterEncoding=75vgvs&page=1&msgModuleName=julian.ortiz&writer.psOut.closing=true&writer.psOut.textOut.nextChar=939&opUserId=95&creatorId=95&msgCreateTime=2026-03-09 00:09:49&committed=true&orderBy=31&msgContent=t07idj&msgAccountId=95&description=o0hhh0&writer.psOut.formatter.zero=1&msgAccountName=julian.ortiz&opOrganId=95&msgOrganId=95&writer.trouble=true&writer.psOut.closed=true&opOrganName=julian.ortiz&writer.psOut.autoFlush=true&msgLabels=5yojre&writer.writeBuffer=t&writer.writeBuffer=t&writer.psOut.textOut.nChars=197&id=95&msgUserId=95&appId=95&bizType=q903jm&msgUrl=www.kandace-stamm.org&writer.formatter.lastException.detailMessage=success&status=wem5sg&type=70wyk0&bufferSize=10&status=829&spare1=gt79gl&endTime=2026-03-09 00:08:33&q=mi24ez&contentType=4u50rd&msgOrganName=julian.ortiz&msgType=651&limit=10&msgId=252&spare2=cv1s9e&startTime=2026-03-09 00:08:33&writer.formatter.zero=4&foreignId=95&msgAbstract=kur8us&writer.psOut.trouble=true&writer.autoFlush=true&msgUserName=julian.ortiz'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/export.do --data 'writer.psOut.textOut.nChars=225&writer.autoFlush=true&orderBy=240&spare2=p8wrtk&msgUserName=macie.hartmann&bufferSize=10&creatorId=17&writer.writeBuffer=6&writer.writeBuffer=6&msgModuleId=17&writer.trouble=true&writer.psOut.autoFlush=true&committed=true&q=f7mefl&msgAbstract=j9wnxv&opUserId=17&startTime=2026-03-09 22:49:14&writer.formatter.lastException.detailMessage=success&msgCreateTime=2026-03-09 22:50:36&type=igqxa2&status=b19mxd&msgContent=phekxx&foreignId=17&msgType=630&msgAccountId=17&writer.psOut.closed=true&writer.psOut.textOut.nextChar=620&msgId=517&msgTitle=a3a9zh&characterEncoding=8yozwh&appId=17&description=gsram1&limit=10&msgOrganName=macie.hartmann&writer.psOut.closing=true&opTime=2026-03-09 22:50:36&opOrganName=macie.hartmann&writer.formatter.zero=6&endTime=2026-03-09 22:49:14&msgLabels=yad6xl&spare1=kogofe&id=17&msgUrl=www.velia-kozey.biz&msgOrganId=17&msgAccountName=macie.hartmann&msgModuleName=macie.hartmann&opOrganId=17&contentType=odpsxq&writer.psOut.trouble=true&bizType=2ohqpl&writer.psOut.formatter.zero=h&msgUserId=17&status=790&page=1'
 ```
 **Response-fields:**
 
@@ -10144,9 +10144,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "0x1ash",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "d0ub1w",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10229,41 +10229,41 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:49",
-    "lastTime": "2026-03-09 00:09:49",
-    "id": "95",
-    "appId": "95",
-    "foreignId": "95",
-    "type": "mt65mn",
-    "bizType": "vmbxi5",
-    "msgCreateTime": "2026-03-09 00:09:49",
-    "msgId": 943,
-    "msgType": 52,
-    "msgTitle": "h3134r",
-    "msgAbstract": "pzcr9k",
-    "msgAccountId": "95",
-    "msgAccountName": "julian.ortiz",
-    "msgModuleId": "95",
-    "msgModuleName": "julian.ortiz",
-    "msgUserId": "95",
-    "msgUserName": "julian.ortiz",
-    "msgOrganId": "95",
-    "msgOrganName": "julian.ortiz",
-    "msgUrl": "www.kandace-stamm.org",
-    "msgLabels": "zw9wfs",
-    "msgContent": "hv5w5y",
-    "status": "2z72ga",
-    "opUserId": "95",
-    "opTime": "2026-03-09 00:09:49",
-    "opOrganId": "95",
-    "opOrganName": "julian.ortiz",
-    "description": "qf2yzn",
-    "spare1": "q8bn9f",
-    "spare2": "pd6dsd"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:36",
+    "lastTime": "2026-03-09 22:50:36",
+    "id": "17",
+    "appId": "17",
+    "foreignId": "17",
+    "type": "mylenk",
+    "bizType": "vzv2fa",
+    "msgCreateTime": "2026-03-09 22:50:36",
+    "msgId": 411,
+    "msgType": 398,
+    "msgTitle": "2gkice",
+    "msgAbstract": "0x8og4",
+    "msgAccountId": "17",
+    "msgAccountName": "macie.hartmann",
+    "msgModuleId": "17",
+    "msgModuleName": "macie.hartmann",
+    "msgUserId": "17",
+    "msgUserName": "macie.hartmann",
+    "msgOrganId": "17",
+    "msgOrganName": "macie.hartmann",
+    "msgUrl": "www.velia-kozey.biz",
+    "msgLabels": "586upz",
+    "msgContent": "2x67tk",
+    "status": "tngqi7",
+    "opUserId": "17",
+    "opTime": "2026-03-09 22:50:36",
+    "opOrganId": "17",
+    "opOrganName": "macie.hartmann",
+    "description": "w83z1t",
+    "spare1": "gz8gsi",
+    "spare2": "oe8ho7"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10326,38 +10326,38 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "foreignId": "95",
-  "type": "qb12re",
-  "bizType": "3vfwfz",
-  "msgCreateTime": "2026-03-09 00:09:49",
-  "msgId": 151,
-  "msgType": 375,
-  "msgTitle": "k642uy",
-  "msgAbstract": "q7ym7x",
-  "msgAccountId": "95",
-  "msgAccountName": "julian.ortiz",
-  "msgModuleId": "95",
-  "msgModuleName": "julian.ortiz",
-  "msgUserId": "95",
-  "msgUserName": "julian.ortiz",
-  "msgOrganId": "95",
-  "msgOrganName": "julian.ortiz",
-  "msgUrl": "www.kandace-stamm.org",
-  "msgLabels": "rzu1xh",
-  "msgContent": "iw0kbi",
-  "status": "hgs4sk",
-  "opUserId": "95",
-  "opTime": "2026-03-09 00:09:49",
-  "opOrganId": "95",
-  "opOrganName": "julian.ortiz",
-  "description": "tqsk7q",
-  "spare1": "knjgg1",
-  "spare2": "0fld8t"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:36",
+  "lastTime": "2026-03-09 22:50:36",
+  "id": "17",
+  "appId": "17",
+  "foreignId": "17",
+  "type": "dc7xfz",
+  "bizType": "byl2gy",
+  "msgCreateTime": "2026-03-09 22:50:36",
+  "msgId": 425,
+  "msgType": 504,
+  "msgTitle": "m4s11n",
+  "msgAbstract": "y76n74",
+  "msgAccountId": "17",
+  "msgAccountName": "macie.hartmann",
+  "msgModuleId": "17",
+  "msgModuleName": "macie.hartmann",
+  "msgUserId": "17",
+  "msgUserName": "macie.hartmann",
+  "msgOrganId": "17",
+  "msgOrganName": "macie.hartmann",
+  "msgUrl": "www.velia-kozey.biz",
+  "msgLabels": "tfqlsi",
+  "msgContent": "l9wneb",
+  "status": "ok423w",
+  "opUserId": "17",
+  "opTime": "2026-03-09 22:50:36",
+  "opOrganId": "17",
+  "opOrganName": "macie.hartmann",
+  "description": "mkvxb4",
+  "spare1": "fl6rm8",
+  "spare2": "e2us7i"
 }'
 ```
 **Response-fields:**
@@ -10377,9 +10377,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4nvali",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "kjdj9b",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10442,38 +10442,38 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "foreignId": "95",
-  "type": "i1w55g",
-  "bizType": "j8ki7b",
-  "msgCreateTime": "2026-03-09 00:09:49",
-  "msgId": 503,
-  "msgType": 574,
-  "msgTitle": "jli2r5",
-  "msgAbstract": "9qty56",
-  "msgAccountId": "95",
-  "msgAccountName": "julian.ortiz",
-  "msgModuleId": "95",
-  "msgModuleName": "julian.ortiz",
-  "msgUserId": "95",
-  "msgUserName": "julian.ortiz",
-  "msgOrganId": "95",
-  "msgOrganName": "julian.ortiz",
-  "msgUrl": "www.kandace-stamm.org",
-  "msgLabels": "tdpq88",
-  "msgContent": "f3rbtv",
-  "status": "cicctt",
-  "opUserId": "95",
-  "opTime": "2026-03-09 00:09:49",
-  "opOrganId": "95",
-  "opOrganName": "julian.ortiz",
-  "description": "cwetlb",
-  "spare1": "f0bpz8",
-  "spare2": "asntqv"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:36",
+  "lastTime": "2026-03-09 22:50:36",
+  "id": "17",
+  "appId": "17",
+  "foreignId": "17",
+  "type": "owfbv0",
+  "bizType": "j70zds",
+  "msgCreateTime": "2026-03-09 22:50:36",
+  "msgId": 594,
+  "msgType": 813,
+  "msgTitle": "agqu3q",
+  "msgAbstract": "bk5sye",
+  "msgAccountId": "17",
+  "msgAccountName": "macie.hartmann",
+  "msgModuleId": "17",
+  "msgModuleName": "macie.hartmann",
+  "msgUserId": "17",
+  "msgUserName": "macie.hartmann",
+  "msgOrganId": "17",
+  "msgOrganName": "macie.hartmann",
+  "msgUrl": "www.velia-kozey.biz",
+  "msgLabels": "zkmpt7",
+  "msgContent": "7h0p2m",
+  "status": "9aewv6",
+  "opUserId": "17",
+  "opTime": "2026-03-09 22:50:36",
+  "opOrganId": "17",
+  "opOrganName": "macie.hartmann",
+  "description": "kv0zad",
+  "spare1": "keop6w",
+  "spare2": "bu32rw"
 }'
 ```
 **Response-fields:**
@@ -10493,9 +10493,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7khl4d",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ulkg0i",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10545,9 +10545,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "pnhlck",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "iqdjx8",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10579,7 +10579,7 @@ status|string|消息状态|true|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/raiv8q.do
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/message/read/414gxu.do
 ```
 **Response-fields:**
 
@@ -10598,9 +10598,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "xs6rw0",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "t3zxne",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10647,7 +10647,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?endTime=2026-03-09 00:08:33&status=144&keyWords=yfjjjq&startTime=2026-03-09 00:08:33&type=vr3cwp&positionId=95&areaId=428&page=1&limit=10&batchId=95&groupId=607&orderBy=691&q=82ft1i&syncMode=b90zhb&organId=95&appId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/list.do?batchId=17&startTime=2026-03-09 22:49:14&orderBy=363&endTime=2026-03-09 22:49:14&syncMode=cabg2h&areaId=881&appId=17&keyWords=lg5bbw&organId=17&status=655&limit=10&q=lxqi95&positionId=17&type=lfie3r&page=1&groupId=642
 ```
 **Response-fields:**
 
@@ -10721,66 +10721,66 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 134,
+    "totalCount": 986,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:48",
-        "lastTime": "2026-03-09 00:09:48",
-        "id": 99,
-        "appId": "95",
-        "saveSource": "by4xyr",
-        "unitName": "julian.ortiz",
-        "name": "julian.ortiz",
-        "idNum": "f16pcq",
-        "duty": "60jxn2",
-        "telephone": "(947) 505-4582",
-        "mobile": "1-508-337-4557",
-        "extInfo1": "ob147o",
-        "extInfo2": "4ghw1v",
-        "extInfo3": "l3kaqz",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:34",
+        "lastTime": "2026-03-09 22:50:34",
+        "id": 433,
+        "appId": "17",
+        "saveSource": "c56vw8",
+        "unitName": "macie.hartmann",
+        "name": "macie.hartmann",
+        "idNum": "e7n4b6",
+        "duty": "q6gpwh",
+        "telephone": "(727) 805-3214",
+        "mobile": "814-959-5738",
+        "extInfo1": "lqvkdl",
+        "extInfo2": "pdr426",
+        "extInfo3": "a17272",
         "needInitUser": true,
-        "userId": "95",
+        "userId": "17",
         "needInitOrgan": true,
-        "organId": "95",
-        "type": "dzepsa",
-        "foreignUrl": "www.kandace-stamm.org",
-        "bizType": 822,
-        "bizOrganId": "95",
-        "bizAreaId": 902,
+        "organId": "17",
+        "type": "nuegg8",
+        "foreignUrl": "www.velia-kozey.biz",
+        "bizType": 103,
+        "bizOrganId": "17",
+        "bizAreaId": 615,
         "bizGroupId": 13,
-        "bizPower": "x4xjyn",
-        "bizMultiInfo": "423al3",
+        "bizPower": "p6p0vc",
+        "bizMultiInfo": "sz7wby",
         "needSetOrgan": true,
         "needSetArea": true,
         "needSetGroup": true,
         "needSetPower": true,
-        "opUserId": "95",
-        "opOrganId": "95",
-        "opTime": "2026-03-09 00:09:48",
-        "opInfo": "8iot66",
-        "priority": 769,
-        "status": 196,
-        "delFlag": 9,
-        "dataBatch": "37ttzd",
-        "dataVersion": 417,
-        "updateTime": "2026-03-09 00:09:48",
-        "syncMode": "f6t3mk",
-        "syncTime": "2026-03-09 00:09:48",
-        "description": "i1w6nk",
-        "groupName": "julian.ortiz",
-        "positionName": "julian.ortiz",
-        "bizPowerName": "julian.ortiz",
-        "subdistrictName": "julian.ortiz",
-        "communityName": "julian.ortiz"
+        "opUserId": "17",
+        "opOrganId": "17",
+        "opTime": "2026-03-09 22:50:34",
+        "opInfo": "dbggxk",
+        "priority": 909,
+        "status": 746,
+        "delFlag": 2,
+        "dataBatch": "npfcee",
+        "dataVersion": 389,
+        "updateTime": "2026-03-09 22:50:34",
+        "syncMode": "zu0vak",
+        "syncTime": "2026-03-09 22:50:34",
+        "description": "xbifym",
+        "groupName": "macie.hartmann",
+        "positionName": "macie.hartmann",
+        "bizPowerName": "macie.hartmann",
+        "subdistrictName": "macie.hartmann",
+        "communityName": "macie.hartmann"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10810,9 +10810,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -10875,7 +10875,7 @@ keyWords|string|关键字|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'appId=95&writer.psOut.autoFlush=true&writer.psOut.closed=true&q=wd3qwz&writer.psOut.trouble=true&syncMode=wp3cxb&writer.writeBuffer=w&writer.writeBuffer=w&groupId=633&contentType=l3qquh&committed=true&writer.psOut.textOut.nChars=328&type=j5fxgi&writer.autoFlush=true&status=46&writer.trouble=true&characterEncoding=9nrgws&bufferSize=10&writer.psOut.formatter.zero=o&writer.psOut.textOut.nextChar=399&status=801&writer.formatter.zero=i&writer.psOut.closing=true&positionId=95&keyWords=odts7t&orderBy=166&organId=95&writer.formatter.lastException.detailMessage=success&areaId=2&batchId=95&startTime=2026-03-09 00:08:33&page=1&limit=10&endTime=2026-03-09 00:08:33'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/export.do --data 'groupId=872&writer.psOut.closed=true&appId=17&bufferSize=10&status=695&type=9iulng&writer.psOut.closing=true&limit=10&endTime=2026-03-09 22:49:14&startTime=2026-03-09 22:49:14&status=77&contentType=t25rso&orderBy=688&writer.writeBuffer=z&writer.writeBuffer=z&writer.formatter.zero=e&writer.psOut.trouble=true&syncMode=s9gv9p&characterEncoding=z9lamq&areaId=228&batchId=17&q=7f0thu&writer.formatter.lastException.detailMessage=success&organId=17&writer.psOut.textOut.nextChar=977&writer.psOut.autoFlush=true&committed=true&keyWords=s89pd7&writer.psOut.textOut.nChars=659&writer.trouble=true&writer.psOut.formatter.zero=o&page=1&positionId=17&writer.autoFlush=true'
 ```
 **Response-fields:**
 
@@ -10894,9 +10894,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "g00jdo",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4h3rc2",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -10927,7 +10927,7 @@ configId|int64| 配置ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/454.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/591.do
 ```
 **Response-fields:**
 
@@ -10996,58 +10996,58 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:48",
-    "lastTime": "2026-03-09 00:09:48",
-    "id": 130,
-    "appId": "95",
-    "saveSource": "1ji034",
-    "unitName": "julian.ortiz",
-    "name": "julian.ortiz",
-    "idNum": "hs0mlv",
-    "duty": "wchq1q",
-    "telephone": "(947) 505-4582",
-    "mobile": "1-508-337-4557",
-    "extInfo1": "0yxpri",
-    "extInfo2": "fmzwk2",
-    "extInfo3": "kvqilg",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:34",
+    "lastTime": "2026-03-09 22:50:34",
+    "id": 152,
+    "appId": "17",
+    "saveSource": "jojcsl",
+    "unitName": "macie.hartmann",
+    "name": "macie.hartmann",
+    "idNum": "u42kfr",
+    "duty": "rl4qp3",
+    "telephone": "(727) 805-3214",
+    "mobile": "814-959-5738",
+    "extInfo1": "5nbbpb",
+    "extInfo2": "0f8g8r",
+    "extInfo3": "slm4uy",
     "needInitUser": true,
-    "userId": "95",
+    "userId": "17",
     "needInitOrgan": true,
-    "organId": "95",
-    "type": "2xhp43",
-    "foreignUrl": "www.kandace-stamm.org",
-    "bizType": 793,
-    "bizOrganId": "95",
-    "bizAreaId": 296,
-    "bizGroupId": 341,
-    "bizPower": "lab4gb",
-    "bizMultiInfo": "73qb06",
+    "organId": "17",
+    "type": "9ptasw",
+    "foreignUrl": "www.velia-kozey.biz",
+    "bizType": 608,
+    "bizOrganId": "17",
+    "bizAreaId": 804,
+    "bizGroupId": 228,
+    "bizPower": "8fh6he",
+    "bizMultiInfo": "nhebz0",
     "needSetOrgan": true,
     "needSetArea": true,
     "needSetGroup": true,
     "needSetPower": true,
-    "opUserId": "95",
-    "opOrganId": "95",
-    "opTime": "2026-03-09 00:09:48",
-    "opInfo": "pyjjaa",
-    "priority": 665,
-    "status": 538,
-    "delFlag": 9,
-    "dataBatch": "4im63a",
-    "dataVersion": 762,
-    "updateTime": "2026-03-09 00:09:48",
-    "syncMode": "aso1f5",
-    "syncTime": "2026-03-09 00:09:48",
-    "description": "1e27ik",
-    "groupName": "julian.ortiz",
-    "positionName": "julian.ortiz",
-    "bizPowerName": "julian.ortiz",
-    "subdistrictName": "julian.ortiz",
-    "communityName": "julian.ortiz"
+    "opUserId": "17",
+    "opOrganId": "17",
+    "opTime": "2026-03-09 22:50:34",
+    "opInfo": "fq514v",
+    "priority": 194,
+    "status": 372,
+    "delFlag": 2,
+    "dataBatch": "d7wgg7",
+    "dataVersion": 374,
+    "updateTime": "2026-03-09 22:50:34",
+    "syncMode": "nl99go",
+    "syncTime": "2026-03-09 22:50:34",
+    "description": "mkxuky",
+    "groupName": "macie.hartmann",
+    "positionName": "macie.hartmann",
+    "bizPowerName": "macie.hartmann",
+    "subdistrictName": "macie.hartmann",
+    "communityName": "macie.hartmann"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11122,50 +11122,50 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:48",
-  "lastTime": "2026-03-09 00:09:48",
-  "id": 467,
-  "appId": "95",
-  "saveSource": "q9k20k",
-  "unitName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "idNum": "71cq9x",
-  "duty": "mgiuyv",
-  "telephone": "(947) 505-4582",
-  "mobile": "1-508-337-4557",
-  "extInfo1": "d261cv",
-  "extInfo2": "k7chvq",
-  "extInfo3": "wil9c2",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "id": 17,
+  "appId": "17",
+  "saveSource": "83vwut",
+  "unitName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "idNum": "8f09ml",
+  "duty": "lvwzg8",
+  "telephone": "(727) 805-3214",
+  "mobile": "814-959-5738",
+  "extInfo1": "ui75ow",
+  "extInfo2": "vh6eo6",
+  "extInfo3": "gdiwk3",
   "needInitUser": true,
-  "userId": "95",
+  "userId": "17",
   "needInitOrgan": true,
-  "organId": "95",
-  "type": "jx5xd4",
-  "foreignUrl": "www.kandace-stamm.org",
-  "bizType": 673,
-  "bizOrganId": "95",
-  "bizAreaId": 806,
-  "bizGroupId": 998,
-  "bizPower": "h4na8k",
-  "bizMultiInfo": "ayiz7x",
+  "organId": "17",
+  "type": "v956id",
+  "foreignUrl": "www.velia-kozey.biz",
+  "bizType": 560,
+  "bizOrganId": "17",
+  "bizAreaId": 295,
+  "bizGroupId": 114,
+  "bizPower": "9cz271",
+  "bizMultiInfo": "b6hcin",
   "needSetOrgan": true,
   "needSetArea": true,
   "needSetGroup": true,
   "needSetPower": true,
-  "opUserId": "95",
-  "opOrganId": "95",
-  "opTime": "2026-03-09 00:09:48",
-  "opInfo": "jjptsd",
-  "priority": 429,
-  "status": 806,
-  "delFlag": 9,
-  "dataBatch": "pvzwrg",
-  "dataVersion": 685,
-  "updateTime": "2026-03-09 00:09:48",
-  "syncMode": "vodpyg",
-  "syncTime": "2026-03-09 00:09:48",
-  "description": "xjpok9"
+  "opUserId": "17",
+  "opOrganId": "17",
+  "opTime": "2026-03-09 22:50:34",
+  "opInfo": "bntvs7",
+  "priority": 50,
+  "status": 374,
+  "delFlag": 2,
+  "dataBatch": "ie812d",
+  "dataVersion": 138,
+  "updateTime": "2026-03-09 22:50:34",
+  "syncMode": "wylvdp",
+  "syncTime": "2026-03-09 22:50:34",
+  "description": "u2c9sp"
 }'
 ```
 **Response-fields:**
@@ -11185,9 +11185,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "cgxqib",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "k3zkpt",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11262,50 +11262,50 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/preset/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:48",
-  "lastTime": "2026-03-09 00:09:48",
-  "id": 944,
-  "appId": "95",
-  "saveSource": "47fy7b",
-  "unitName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "idNum": "fb9c97",
-  "duty": "q430ym",
-  "telephone": "(947) 505-4582",
-  "mobile": "1-508-337-4557",
-  "extInfo1": "suingt",
-  "extInfo2": "xoebx1",
-  "extInfo3": "lktpcq",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "id": 451,
+  "appId": "17",
+  "saveSource": "xayo1i",
+  "unitName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "idNum": "dc4wpm",
+  "duty": "1rr3ql",
+  "telephone": "(727) 805-3214",
+  "mobile": "814-959-5738",
+  "extInfo1": "u9770q",
+  "extInfo2": "y87k1f",
+  "extInfo3": "y5ir3e",
   "needInitUser": true,
-  "userId": "95",
+  "userId": "17",
   "needInitOrgan": true,
-  "organId": "95",
-  "type": "4zbcw5",
-  "foreignUrl": "www.kandace-stamm.org",
-  "bizType": 220,
-  "bizOrganId": "95",
-  "bizAreaId": 241,
-  "bizGroupId": 812,
-  "bizPower": "slhi02",
-  "bizMultiInfo": "6rdsg7",
+  "organId": "17",
+  "type": "04lsi4",
+  "foreignUrl": "www.velia-kozey.biz",
+  "bizType": 101,
+  "bizOrganId": "17",
+  "bizAreaId": 156,
+  "bizGroupId": 327,
+  "bizPower": "snulql",
+  "bizMultiInfo": "qx5w37",
   "needSetOrgan": true,
   "needSetArea": true,
   "needSetGroup": true,
   "needSetPower": true,
-  "opUserId": "95",
-  "opOrganId": "95",
-  "opTime": "2026-03-09 00:09:48",
-  "opInfo": "fpuqyv",
-  "priority": 343,
-  "status": 191,
-  "delFlag": 9,
-  "dataBatch": "7sozcb",
-  "dataVersion": 124,
-  "updateTime": "2026-03-09 00:09:48",
-  "syncMode": "on8ypq",
-  "syncTime": "2026-03-09 00:09:48",
-  "description": "v3r6iy"
+  "opUserId": "17",
+  "opOrganId": "17",
+  "opTime": "2026-03-09 22:50:34",
+  "opInfo": "b76jue",
+  "priority": 486,
+  "status": 609,
+  "delFlag": 2,
+  "dataBatch": "t8wd2x",
+  "dataVersion": 332,
+  "updateTime": "2026-03-09 22:50:34",
+  "syncMode": "fsdrer",
+  "syncTime": "2026-03-09 22:50:34",
+  "description": "gc6btx"
 }'
 ```
 **Response-fields:**
@@ -11325,9 +11325,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "yasnpt",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "vph5r1",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11377,9 +11377,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "hu8k4n",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "609aiu",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11423,9 +11423,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "59rzan",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "2fwgvv",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11454,11 +11454,11 @@ appId|string|所在应用ID|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/register.do --data '{
-  "username": "julian.ortiz",
-  "password": "zyturx",
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-  "appId": "95"
+  "username": "macie.hartmann",
+  "password": "jwxe9n",
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+  "appId": "17"
 }'
 ```
 **Response-fields:**
@@ -11478,9 +11478,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4hirme",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4om49l",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11525,7 +11525,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?ipaddr=hnrevg&startTime=2026-03-09 00:08:33&orderBy=227&endTime=2026-03-09 00:08:33&loginTime=2026-03-09 00:09:49&q=j1eeg5&status=2un296&msg=c6f5vq&os=xhck0q&page=1&browser=tqzsh0&username=julian.ortiz&limit=10&infoId=17
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/list.do?username=macie.hartmann&loginTime=2026-03-09 22:50:36&infoId=39&limit=10&endTime=2026-03-09 22:49:14&msg=jw2u3n&orderBy=303&startTime=2026-03-09 22:49:14&ipaddr=5nqi6g&page=1&status=ztbgsy&os=ktgzwx&browser=53zo2v&q=9fe63u
 ```
 **Response-fields:**
 
@@ -11560,27 +11560,27 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 449,
+    "totalCount": 804,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "infoId": 930,
-        "username": "julian.ortiz",
-        "status": "g0uzw6",
-        "ipaddr": "y57iem",
-        "loginLocation": "kg8vjf",
-        "browser": "xu3g6a",
-        "os": "qdsidp",
-        "msg": "ct3u1r",
-        "loginTime": "2026-03-09 00:09:50",
-        "remark": "nj67ms"
+        "infoId": 381,
+        "username": "macie.hartmann",
+        "status": "dsjyv2",
+        "ipaddr": "sdk988",
+        "loginLocation": "hbksg3",
+        "browser": "238iyy",
+        "os": "2rslp7",
+        "msg": "lqae96",
+        "loginTime": "2026-03-09 22:50:36",
+        "remark": "dxq9ct"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11610,9 +11610,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -11673,7 +11673,7 @@ msg|string|提示消息|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'msg=h4mrc1&contentType=gm2lis&browser=34uyz4&status=rgzqht&writer.psOut.trouble=true&startTime=2026-03-09 00:08:33&ipaddr=kv1x4y&page=1&writer.psOut.closing=true&limit=10&os=6fn6v3&username=julian.ortiz&writer.psOut.textOut.nextChar=912&writer.psOut.autoFlush=true&endTime=2026-03-09 00:08:33&writer.formatter.lastException.detailMessage=success&writer.formatter.zero=l&bufferSize=10&loginTime=2026-03-09 00:09:50&status=729&writer.psOut.formatter.zero=f&writer.autoFlush=true&writer.trouble=true&writer.writeBuffer=8&writer.writeBuffer=8&infoId=381&orderBy=964&writer.psOut.closed=true&q=u6mpwm&writer.psOut.textOut.nChars=863&committed=true&characterEncoding=d6umcs'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/export.do --data 'browser=a4ozzt&writer.trouble=true&writer.psOut.textOut.nChars=715&status=184&limit=10&loginTime=2026-03-09 22:50:36&characterEncoding=e89wnm&msg=aclbv8&endTime=2026-03-09 22:49:14&writer.psOut.trouble=true&os=f38oht&writer.writeBuffer=3&writer.writeBuffer=3&status=fcf3fp&writer.formatter.lastException.detailMessage=success&writer.psOut.formatter.zero=4&writer.psOut.closing=true&contentType=bqvs6r&bufferSize=10&writer.psOut.textOut.nextChar=509&username=macie.hartmann&ipaddr=wd7twx&committed=true&orderBy=551&writer.autoFlush=true&writer.psOut.closed=true&page=1&startTime=2026-03-09 22:49:14&infoId=831&q=x97l1l&writer.formatter.zero=d&writer.psOut.autoFlush=true'
 ```
 **Response-fields:**
 
@@ -11692,9 +11692,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1y3o37",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "3ah8re",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11744,9 +11744,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "q6q9dl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "slyofb",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11790,9 +11790,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "srjieu",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "egk3lw",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11823,7 +11823,7 @@ username|string| 用户名|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/julian.ortiz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/loginlog/unlock/macie.hartmann.do
 ```
 **Response-fields:**
 
@@ -11842,9 +11842,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "owqzsv",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "htsrk6",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -11891,7 +11891,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?q=264meh&page=1&adminId=379&startTime=2026-03-09 00:08:33&userId=95&username=julian.ortiz&limit=10&organId=95&nickName=shane.roberts&endTime=2026-03-09 00:08:33&delFlag=9&email=columbus.ankunding@gmail.com&mobile=1-508-337-4557&status=vqaofk&deptId=756&orderBy=253
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/list.do?q=t7009e&endTime=2026-03-09 22:49:14&nickName=jin.wolff&startTime=2026-03-09 22:49:14&deptId=647&orderBy=200&adminId=403&status=pln5vh&page=1&delFlag=2&email=latanya.ritchie@hotmail.com&limit=10&userId=17&organId=17&username=macie.hartmann&mobile=814-959-5738
 ```
 **Response-fields:**
 
@@ -11997,60 +11997,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 879,
-      "userId": "95",
-      "deptId": 785,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "name": "julian.ortiz",
-      "username": "julian.ortiz",
-      "nickName": "shane.roberts",
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "fzdm7g",
-      "password": "2ae2sf",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 861,
+      "userId": "17",
+      "deptId": 165,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "name": "macie.hartmann",
+      "username": "macie.hartmann",
+      "nickName": "jin.wolff",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "2ubhr0",
+      "password": "j0sd0k",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 564,
-      "delFlag": 9,
-      "lastLoginIp": "207.227.60.208",
-      "lastLoginTime": "2026-03-09 00:09:44",
-      "description": "awfukh",
+      "status": 405,
+      "delFlag": 2,
+      "lastLoginIp": "14.83.204.161",
+      "lastLoginTime": "2026-03-09 22:50:30",
+      "description": "arc66h",
       "dept": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:44",
-        "lastTime": "2026-03-09 00:09:44",
-        "id": 112,
-        "organId": "95",
-        "parentId": 895,
-        "appId": "95",
-        "depttypeId": 582,
-        "foreignId": "95",
-        "createType": 251,
-        "type": "q2ab4z",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "areaCode": "58719",
-        "organLeader": "lwys78",
-        "leaderId": "95",
-        "leaderMobile": "1-508-337-4557",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:30",
+        "lastTime": "2026-03-09 22:50:30",
+        "id": 828,
+        "organId": "17",
+        "parentId": 126,
+        "appId": "17",
+        "depttypeId": 590,
+        "foreignId": "17",
+        "createType": 947,
+        "type": "kj5j66",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "areaCode": "22134",
+        "organLeader": "nzxglh",
+        "leaderId": "17",
+        "leaderMobile": "814-959-5738",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "58719",
-        "imagePath": "i5wz9c",
-        "priority": 903,
-        "status": 444,
-        "delFlag": 9,
-        "description": "uyap24",
-        "spare1": "smje1v",
-        "spare2": "dj90tl",
+        "searchCode": "22134",
+        "imagePath": "dwms8y",
+        "priority": 600,
+        "status": 991,
+        "delFlag": 2,
+        "description": "yv0rqt",
+        "spare1": "r9nfst",
+        "spare2": "xo0syf",
         "children": [
           {
             "$ref": ".."
@@ -12059,48 +12059,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:44",
-          "lastTime": "2026-03-09 00:09:44",
-          "id": 767,
-          "roletypeId": "95",
-          "appId": "95",
-          "name": "julian.ortiz",
-          "code": "58719",
-          "priority": 535,
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:30",
+          "lastTime": "2026-03-09 22:50:30",
+          "id": 698,
+          "roletypeId": "17",
+          "appId": "17",
+          "name": "macie.hartmann",
+          "code": "22134",
+          "priority": 57,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 584,
-          "description": "ozc6i6",
-          "areaType": "0l7mp6"
+          "status": 658,
+          "description": "8ph5hn",
+          "areaType": "uyg1de"
         }
       ],
       "roleIds": [
-        556
+        971
       ],
       "positionIds": [
-        "8ank7h"
+        "a1iobv"
       ],
-      "roleId": 545,
+      "roleId": 589,
       "userRoleList": [
         {
-          "id": 917,
-          "deptId": 75,
-          "deptName": "julian.ortiz",
-          "organId": "95",
-          "organName": "julian.ortiz",
-          "roleId": 816,
-          "roleName": "julian.ortiz",
-          "adminId": 393
+          "id": 343,
+          "deptId": 839,
+          "deptName": "macie.hartmann",
+          "organId": "17",
+          "organName": "macie.hartmann",
+          "roleId": 974,
+          "roleName": "macie.hartmann",
+          "adminId": 706
         }
       ],
-      "code": "58719",
-      "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+      "code": "22134",
+      "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -12131,7 +12131,7 @@ adminId|int64| 管理员ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/939].do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/[user/68].do
 ```
 **Response-fields:**
 
@@ -12285,60 +12285,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 285,
-      "userId": "95",
-      "deptId": 892,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "name": "julian.ortiz",
-      "username": "julian.ortiz",
-      "nickName": "shane.roberts",
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "82dtpq",
-      "password": "muxepc",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 322,
+      "userId": "17",
+      "deptId": 606,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "name": "macie.hartmann",
+      "username": "macie.hartmann",
+      "nickName": "jin.wolff",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "8xfshz",
+      "password": "hanqea",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 216,
-      "delFlag": 9,
-      "lastLoginIp": "207.227.60.208",
-      "lastLoginTime": "2026-03-09 00:09:44",
-      "description": "lza8q0",
+      "status": 917,
+      "delFlag": 2,
+      "lastLoginIp": "14.83.204.161",
+      "lastLoginTime": "2026-03-09 22:50:30",
+      "description": "09dcdx",
       "dept": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:44",
-        "lastTime": "2026-03-09 00:09:44",
-        "id": 93,
-        "organId": "95",
-        "parentId": 5,
-        "appId": "95",
-        "depttypeId": 472,
-        "foreignId": "95",
-        "createType": 202,
-        "type": "2sf8gu",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "areaCode": "58719",
-        "organLeader": "vsc280",
-        "leaderId": "95",
-        "leaderMobile": "1-508-337-4557",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:30",
+        "lastTime": "2026-03-09 22:50:30",
+        "id": 609,
+        "organId": "17",
+        "parentId": 96,
+        "appId": "17",
+        "depttypeId": 311,
+        "foreignId": "17",
+        "createType": 192,
+        "type": "s0zz51",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "areaCode": "22134",
+        "organLeader": "xqkfzl",
+        "leaderId": "17",
+        "leaderMobile": "814-959-5738",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "58719",
-        "imagePath": "tytsde",
-        "priority": 626,
-        "status": 555,
-        "delFlag": 9,
-        "description": "2tnyld",
-        "spare1": "krq8au",
-        "spare2": "yvi0qf",
+        "searchCode": "22134",
+        "imagePath": "zd3o34",
+        "priority": 725,
+        "status": 270,
+        "delFlag": 2,
+        "description": "eljvj1",
+        "spare1": "axmm0v",
+        "spare2": "jyzyhl",
         "children": [
           {
             "$ref": ".."
@@ -12347,116 +12347,116 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:44",
-          "lastTime": "2026-03-09 00:09:44",
-          "id": 765,
-          "roletypeId": "95",
-          "appId": "95",
-          "name": "julian.ortiz",
-          "code": "58719",
-          "priority": 904,
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:30",
+          "lastTime": "2026-03-09 22:50:30",
+          "id": 596,
+          "roletypeId": "17",
+          "appId": "17",
+          "name": "macie.hartmann",
+          "code": "22134",
+          "priority": 970,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 116,
-          "description": "2zlykq",
-          "areaType": "4coia9"
+          "status": 938,
+          "description": "s4oo5t",
+          "areaType": "8dn7oc"
         }
       ],
       "roleIds": [
-        137
+        602
       ],
       "positionIds": [
-        "sg6zt0"
+        "gp4acw"
       ],
-      "roleId": 79,
+      "roleId": 843,
       "userRoleList": [
         {
-          "id": 614,
-          "deptId": 267,
-          "deptName": "julian.ortiz",
-          "organId": "95",
-          "organName": "julian.ortiz",
-          "roleId": 774,
-          "roleName": "julian.ortiz",
-          "adminId": 648
+          "id": 653,
+          "deptId": 717,
+          "deptName": "macie.hartmann",
+          "organId": "17",
+          "organName": "macie.hartmann",
+          "roleId": 388,
+          "roleName": "macie.hartmann",
+          "adminId": 948
         }
       ],
-      "code": "58719",
-      "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+      "code": "22134",
+      "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
     },
     "roles": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:44",
-        "lastTime": "2026-03-09 00:09:44",
-        "roleId": 862,
-        "roleName": "julian.ortiz",
-        "roleKey": "y6kh3d",
-        "roleSort": 334,
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:30",
+        "lastTime": "2026-03-09 22:50:30",
+        "roleId": 25,
+        "roleName": "macie.hartmann",
+        "roleKey": "oh6wx5",
+        "roleSort": 260,
         "menuCheckStrictly": true,
         "deptCheckStrictly": true,
-        "status": 984,
+        "status": 740,
         "flag": true,
         "menuIds": [
-          34
+          912
         ],
         "deptIds": [
-          960
+          622
         ],
         "permissions": [
-          "grlwtd"
+          "6pqgiw"
         ],
-        "remark": "lab6g0",
-        "parentName": "julian.ortiz",
-        "appName": "julian.ortiz",
-        "roletypeId": "95",
-        "roletypeName": "julian.ortiz",
-        "priority": 704,
+        "remark": "mvw8lh",
+        "parentName": "macie.hartmann",
+        "appName": "macie.hartmann",
+        "roletypeId": "17",
+        "roletypeName": "macie.hartmann",
+        "priority": 577,
         "isSuper": true
       }
     ],
     "roleList": [
       {
-        "id": 575,
-        "roleId": 0,
-        "adminId": 267,
-        "deptId": 116,
-        "deptName": "julian.ortiz",
-        "organId": "95",
-        "organName": "julian.ortiz",
-        "roleName": "julian.ortiz"
+        "id": 44,
+        "roleId": 47,
+        "adminId": 257,
+        "deptId": 874,
+        "deptName": "macie.hartmann",
+        "organId": "17",
+        "organName": "macie.hartmann",
+        "roleName": "macie.hartmann"
       }
     ],
     "positions": [
       {
-        "postId": "95",
-        "postCode": "58719",
-        "postName": "julian.ortiz",
-        "postSort": 5,
-        "status": 459,
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:44",
-        "lastTime": "2026-03-09 00:09:44",
-        "delFlag": 9,
-        "remark": "45m3pe",
+        "postId": "17",
+        "postCode": "22134",
+        "postName": "macie.hartmann",
+        "postSort": 916,
+        "status": 485,
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:30",
+        "lastTime": "2026-03-09 22:50:30",
+        "delFlag": 2,
+        "remark": "fxl5tj",
         "ids": [
-          "rk42gu"
+          "epdodr"
         ],
-        "positionId": "95",
+        "positionId": "17",
         "flag": true
       }
     ],
     "roleIds": [
-      299
+      464
     ],
     "positionIds": [
-      "6rimba"
+      "246ros"
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -12518,7 +12518,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?page=1&description=aogw59&spare1=tnyro2&appId=95&isDisabled=true&name=julian.ortiz&searchCode=58719&imagePath=4yjwg8&status=684&delFlag=9&endTime=2026-03-09 00:08:33&sname=julian.ortiz&areaCode=58719&foreignId=95&organLeader=uha8uf&isVirtual=true&organId=95&orderBy=579&isOrganLevel=true&leaderId=95&depttypeId=117&q=o5603u&createType=419&creatorId=95&isLeaf=true&spare2=p34aa4&startTime=2026-03-09 00:08:33&leaderMobile=1-508-337-4557&parentId=380&type=uuy4bv&limit=10&deptId=452
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/deptTree.do?isOrganLevel=true&status=946&spare1=u4fot7&organLeader=j3x5z4&startTime=2026-03-09 22:49:14&type=o5yfxj&spare2=egv7v5&delFlag=2&foreignId=17&createType=751&q=6cu72l&description=21nlw4&areaCode=22134&appId=17&isDisabled=true&page=1&endTime=2026-03-09 22:49:14&deptId=781&limit=10&isLeaf=true&depttypeId=531&searchCode=22134&organId=17&name=macie.hartmann&orderBy=583&leaderMobile=814-959-5738&imagePath=hthdnm&isVirtual=true&leaderId=17&sname=macie.hartmann&creatorId=17&parentId=346
 ```
 **Response-fields:**
 
@@ -12542,8 +12542,8 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 854,
-      "label": "oo103t",
+      "id": 404,
+      "label": "9g077a",
       "children": [
         {
           "$ref": ".."
@@ -12551,8 +12551,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -12668,60 +12668,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 24,
-  "userId": "95",
-  "deptId": 175,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "1du25a",
-  "password": "6kmtmq",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 607,
+  "userId": "17",
+  "deptId": 324,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "15wq0i",
+  "password": "nu8ybu",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 10,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "description": "9fzi7c",
+  "status": 321,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:30",
+  "description": "jdyb6x",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:44",
-    "lastTime": "2026-03-09 00:09:44",
-    "id": 722,
-    "organId": "95",
-    "parentId": 348,
-    "appId": "95",
-    "depttypeId": 191,
-    "foreignId": "95",
-    "createType": 757,
-    "type": "88wqb4",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "secyo9",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:30",
+    "lastTime": "2026-03-09 22:50:30",
+    "id": 553,
+    "organId": "17",
+    "parentId": 637,
+    "appId": "17",
+    "depttypeId": 932,
+    "foreignId": "17",
+    "createType": 266,
+    "type": "bps6hk",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "l7fged",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "9600kh",
-    "priority": 414,
-    "status": 979,
-    "delFlag": 9,
-    "description": "m8p78v",
-    "spare1": "3i7q9r",
-    "spare2": "f77uo5",
+    "searchCode": "22134",
+    "imagePath": "qowvtp",
+    "priority": 102,
+    "status": 736,
+    "delFlag": 2,
+    "description": "memhqr",
+    "spare1": "u2se0o",
+    "spare2": "4kxkii",
     "children": [
       {
         "$ref": ".."
@@ -12730,44 +12730,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 992,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 766,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 861,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 859,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 362,
-      "description": "quk5yu",
-      "areaType": "0uxek9"
+      "status": 628,
+      "description": "qe41mq",
+      "areaType": "hyc9fd"
     }
   ],
   "roleIds": [
-    904
+    979
   ],
   "positionIds": [
-    "l393jn"
+    "yzxbbk"
   ],
-  "roleId": 820,
+  "roleId": 31,
   "userRoleList": [
     {
-      "id": 936,
-      "deptId": 523,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 114,
-      "roleName": "julian.ortiz",
-      "adminId": 927
+      "id": 53,
+      "deptId": 682,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 297,
+      "roleName": "macie.hartmann",
+      "adminId": 980
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -12787,9 +12787,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "61n6jo",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "zaaplk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -12905,60 +12905,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 127,
-  "userId": "95",
-  "deptId": 995,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "o5h63m",
-  "password": "ir573x",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 553,
+  "userId": "17",
+  "deptId": 819,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "so1951",
+  "password": "g0a3bw",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 250,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "description": "25b31a",
+  "status": 445,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:30",
+  "description": "wldmp9",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:44",
-    "lastTime": "2026-03-09 00:09:44",
-    "id": 944,
-    "organId": "95",
-    "parentId": 429,
-    "appId": "95",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:30",
+    "lastTime": "2026-03-09 22:50:30",
+    "id": 363,
+    "organId": "17",
+    "parentId": 264,
+    "appId": "17",
     "depttypeId": 134,
-    "foreignId": "95",
-    "createType": 697,
-    "type": "k9xxw1",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "sim35k",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "foreignId": "17",
+    "createType": 705,
+    "type": "wy5jz0",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "iowf6v",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "f1mjfk",
-    "priority": 952,
-    "status": 259,
-    "delFlag": 9,
-    "description": "zxsojf",
-    "spare1": "ab0ytd",
-    "spare2": "8fafeh",
+    "searchCode": "22134",
+    "imagePath": "tp8nm3",
+    "priority": 607,
+    "status": 977,
+    "delFlag": 2,
+    "description": "qurj7s",
+    "spare1": "a7ye68",
+    "spare2": "hpvdvl",
     "children": [
       {
         "$ref": ".."
@@ -12967,44 +12967,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 961,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 603,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 691,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 473,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 412,
-      "description": "3kdnu2",
-      "areaType": "vzea90"
+      "status": 880,
+      "description": "ag1gzr",
+      "areaType": "08gp39"
     }
   ],
   "roleIds": [
-    16
+    621
   ],
   "positionIds": [
-    "j74kpc"
+    "cz6fq6"
   ],
-  "roleId": 329,
+  "roleId": 242,
   "userRoleList": [
     {
-      "id": 92,
-      "deptId": 423,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 662,
-      "roleName": "julian.ortiz",
-      "adminId": 311
+      "id": 464,
+      "deptId": 892,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 240,
+      "roleName": "macie.hartmann",
+      "adminId": 755
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -13024,9 +13024,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ckrmde",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "6317vi",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13088,40 +13088,40 @@ positionIds|array|岗位组|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/disable/{id}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 106,
-  "userId": "95",
-  "organId": "95",
-  "deptId": 242,
-  "createType": 654,
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "mobile": "1-508-337-4557",
-  "email": "columbus.ankunding@gmail.com",
-  "password": "a7hkqi",
-  "salt": "pegyc0",
-  "imagePath": "8jjcbt",
-  "adminType": "hs4edg",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 846,
+  "userId": "17",
+  "organId": "17",
+  "deptId": 859,
+  "createType": 644,
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "mobile": "814-959-5738",
+  "email": "latanya.ritchie@hotmail.com",
+  "password": "fzrf24",
+  "salt": "49bhvy",
+  "imagePath": "hdjjut",
+  "adminType": "af0yf4",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "adminRange": "6qnvcb",
-  "adminPerms": "2b6t41",
-  "lastAppId": "95",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "lastLoginIp": "207.227.60.208",
-  "loginCount": 698,
-  "status": 544,
-  "delFlag": 9,
-  "spare1": "6eersl",
-  "spare2": "anhez4",
+  "adminRange": "2fjn6i",
+  "adminPerms": "pcvvaf",
+  "lastAppId": "17",
+  "lastLoginTime": "2026-03-09 22:50:30",
+  "lastLoginIp": "14.83.204.161",
+  "loginCount": 362,
+  "status": 174,
+  "delFlag": 2,
+  "spare1": "zy7nun",
+  "spare2": "k6pw62",
   "roleIds": [
-    290
+    829
   ],
   "positionIds": [
-    "qvlxpw"
+    "icw5sm"
   ]
 }'
 ```
@@ -13142,9 +13142,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "i7wyyh",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "z6me61",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13266,60 +13266,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetpassword/.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 51,
-  "userId": "95",
-  "deptId": 529,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "05g1pc",
-  "password": "jniu7d",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 404,
+  "userId": "17",
+  "deptId": 261,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "22wlle",
+  "password": "i8akqk",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 470,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "description": "yyb9tu",
+  "status": 355,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:30",
+  "description": "r1tcjw",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:44",
-    "lastTime": "2026-03-09 00:09:44",
-    "id": 262,
-    "organId": "95",
-    "parentId": 981,
-    "appId": "95",
-    "depttypeId": 23,
-    "foreignId": "95",
-    "createType": 690,
-    "type": "wbw00w",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "u6dyx1",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:30",
+    "lastTime": "2026-03-09 22:50:30",
+    "id": 383,
+    "organId": "17",
+    "parentId": 484,
+    "appId": "17",
+    "depttypeId": 97,
+    "foreignId": "17",
+    "createType": 212,
+    "type": "uagcpb",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "o0ouzr",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "f76wd4",
-    "priority": 162,
-    "status": 603,
-    "delFlag": 9,
-    "description": "gvfu4a",
-    "spare1": "z7iwsv",
-    "spare2": "jcwrli",
+    "searchCode": "22134",
+    "imagePath": "x64t8h",
+    "priority": 170,
+    "status": 358,
+    "delFlag": 2,
+    "description": "lrn98k",
+    "spare1": "fw4r78",
+    "spare2": "iimiw7",
     "children": [
       {
         "$ref": ".."
@@ -13328,44 +13328,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 637,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 75,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 939,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 317,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 631,
-      "description": "enf6kb",
-      "areaType": "eapemn"
+      "status": 262,
+      "description": "ojcvig",
+      "areaType": "7t7wge"
     }
   ],
   "roleIds": [
-    859
+    323
   ],
   "positionIds": [
-    "e0gq17"
+    "6dkhxw"
   ],
-  "roleId": 599,
+  "roleId": 681,
   "userRoleList": [
     {
-      "id": 280,
-      "deptId": 103,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 888,
-      "roleName": "julian.ortiz",
-      "adminId": 927
+      "id": 188,
+      "deptId": 518,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 304,
+      "roleName": "macie.hartmann",
+      "adminId": 895
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -13385,9 +13385,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "y8amz7",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "hswjgt",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13437,9 +13437,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "dyv7fz",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "6cdu5z",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13469,9 +13469,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -13534,7 +13534,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'writer.psOut.autoFlush=true&mobile=1-508-337-4557&q=vck3i6&adminId=359&status=947&organId=95&page=1&writer.psOut.textOut.nextChar=781&writer.formatter.zero=a&writer.psOut.trouble=true&writer.formatter.lastException.detailMessage=success&writer.psOut.textOut.nChars=774&deptId=949&bufferSize=10&writer.psOut.closing=true&delFlag=9&writer.psOut.formatter.zero=c&contentType=9ci88i&writer.psOut.closed=true&nickName=shane.roberts&writer.writeBuffer=t&writer.writeBuffer=t&writer.autoFlush=true&limit=10&endTime=2026-03-09 00:08:33&startTime=2026-03-09 00:08:33&email=columbus.ankunding@gmail.com&userId=95&orderBy=953&writer.trouble=true&characterEncoding=wqgwic&username=julian.ortiz&status=7y3x8y&committed=true'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/export.do --data 'writer.trouble=true&writer.writeBuffer=3&writer.writeBuffer=3&endTime=2026-03-09 22:49:14&limit=10&userId=17&username=macie.hartmann&q=y6v109&writer.psOut.textOut.nChars=253&deptId=566&startTime=2026-03-09 22:49:14&committed=true&writer.psOut.closing=true&writer.formatter.lastException.detailMessage=success&writer.formatter.zero=q&email=latanya.ritchie@hotmail.com&nickName=jin.wolff&delFlag=2&writer.psOut.autoFlush=true&writer.psOut.textOut.nextChar=41&orderBy=718&contentType=84o9rv&writer.autoFlush=true&adminId=119&status=t1nvd1&writer.psOut.closed=true&writer.psOut.formatter.zero=4&bufferSize=10&page=1&organId=17&status=948&characterEncoding=09g463&mobile=814-959-5738&writer.psOut.trouble=true'
 ```
 **Response-fields:**
 
@@ -13553,9 +13553,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "vedcr4",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "02i3g1",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13606,9 +13606,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "kc53z7",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4bo3k9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13638,9 +13638,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -13687,7 +13687,7 @@ bufferSize|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importTemplate.do --data 'writer.psOut.textOut.nChars=859&writer.psOut.autoFlush=true&writer.formatter.lastException.detailMessage=success&status=370&writer.trouble=true&characterEncoding=1l313a&bufferSize=10&writer.psOut.trouble=true&writer.psOut.formatter.zero=1&writer.autoFlush=true&writer.writeBuffer=8&writer.writeBuffer=8&writer.formatter.zero=b&writer.psOut.textOut.nextChar=911&writer.psOut.closing=true&committed=true&writer.psOut.closed=true&contentType=u5cagq'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/importTemplate.do --data 'writer.writeBuffer=t&writer.writeBuffer=t&writer.formatter.zero=p&writer.psOut.trouble=true&writer.psOut.textOut.nextChar=583&writer.psOut.closing=true&writer.autoFlush=true&writer.psOut.autoFlush=true&bufferSize=10&committed=true&writer.trouble=true&characterEncoding=58px2c&writer.psOut.textOut.nChars=630&contentType=chv1i9&writer.formatter.lastException.detailMessage=success&writer.psOut.formatter.zero=n&writer.psOut.closed=true&status=21'
 ```
 **Response-fields:**
 
@@ -13706,9 +13706,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "bnheic",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "bomq8l",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -13824,60 +13824,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/resetPwd.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 577,
-  "userId": "95",
-  "deptId": 950,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "q16k9f",
-  "password": "nwq9o6",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 245,
+  "userId": "17",
+  "deptId": 848,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "o7z5ad",
+  "password": "0ulewq",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 527,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "description": "okzng7",
+  "status": 346,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:30",
+  "description": "yl6j4o",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:44",
-    "lastTime": "2026-03-09 00:09:44",
-    "id": 782,
-    "organId": "95",
-    "parentId": 304,
-    "appId": "95",
-    "depttypeId": 222,
-    "foreignId": "95",
-    "createType": 541,
-    "type": "4gtx9c",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "4rj5dv",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:30",
+    "lastTime": "2026-03-09 22:50:30",
+    "id": 789,
+    "organId": "17",
+    "parentId": 879,
+    "appId": "17",
+    "depttypeId": 889,
+    "foreignId": "17",
+    "createType": 335,
+    "type": "0e7fx6",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "o4ft8k",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "ct94j0",
-    "priority": 502,
-    "status": 386,
-    "delFlag": 9,
-    "description": "gnsv8z",
-    "spare1": "aruu2a",
-    "spare2": "ls2kar",
+    "searchCode": "22134",
+    "imagePath": "ycc7ki",
+    "priority": 841,
+    "status": 283,
+    "delFlag": 2,
+    "description": "r3jnbi",
+    "spare1": "2z0zip",
+    "spare2": "f87lj1",
     "children": [
       {
         "$ref": ".."
@@ -13886,44 +13886,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 6,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 979,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:30",
+      "lastTime": "2026-03-09 22:50:30",
+      "id": 959,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 598,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 696,
-      "description": "b6rair",
-      "areaType": "57cw6g"
+      "status": 779,
+      "description": "ex0k5n",
+      "areaType": "4g5694"
     }
   ],
   "roleIds": [
-    411
+    669
   ],
   "positionIds": [
-    "h13sp2"
+    "u7333s"
   ],
-  "roleId": 890,
+  "roleId": 322,
   "userRoleList": [
     {
-      "id": 694,
-      "deptId": 492,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 315,
-      "roleName": "julian.ortiz",
-      "adminId": 599
+      "id": 349,
+      "deptId": 562,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 150,
+      "roleName": "macie.hartmann",
+      "adminId": 631
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -13943,9 +13943,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ujakw3",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "kzamco",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14061,60 +14061,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/changeStatus.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:44",
-  "lastTime": "2026-03-09 00:09:44",
-  "id": 646,
-  "userId": "95",
-  "deptId": 57,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "285y2z",
-  "password": "ehbm8s",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:31",
+  "lastTime": "2026-03-09 22:50:31",
+  "id": 805,
+  "userId": "17",
+  "deptId": 923,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "8hc2f2",
+  "password": "t2egpe",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 894,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:44",
-  "description": "60agtp",
+  "status": 324,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:31",
+  "description": "img8t5",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:44",
-    "lastTime": "2026-03-09 00:09:44",
-    "id": 209,
-    "organId": "95",
-    "parentId": 254,
-    "appId": "95",
-    "depttypeId": 892,
-    "foreignId": "95",
-    "createType": 313,
-    "type": "rc495y",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "5e713k",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:31",
+    "lastTime": "2026-03-09 22:50:31",
+    "id": 326,
+    "organId": "17",
+    "parentId": 263,
+    "appId": "17",
+    "depttypeId": 781,
+    "foreignId": "17",
+    "createType": 675,
+    "type": "3xxmnn",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "u1v92n",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "hzvmd7",
-    "priority": 125,
-    "status": 423,
-    "delFlag": 9,
-    "description": "1vtewx",
-    "spare1": "724g6u",
-    "spare2": "eijut9",
+    "searchCode": "22134",
+    "imagePath": "3u185r",
+    "priority": 446,
+    "status": 903,
+    "delFlag": 2,
+    "description": "wuqxi6",
+    "spare1": "l1drjn",
+    "spare2": "nps261",
     "children": [
       {
         "$ref": ".."
@@ -14123,44 +14123,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "id": 107,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 88,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:31",
+      "lastTime": "2026-03-09 22:50:31",
+      "id": 476,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 887,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 950,
-      "description": "b0h5q4",
-      "areaType": "un758x"
+      "status": 57,
+      "description": "k5pnt2",
+      "areaType": "t8e2la"
     }
   ],
   "roleIds": [
-    577
+    37
   ],
   "positionIds": [
-    "ntycvj"
+    "gv1vnz"
   ],
-  "roleId": 723,
+  "roleId": 614,
   "userRoleList": [
     {
-      "id": 225,
-      "deptId": 839,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 710,
-      "roleName": "julian.ortiz",
-      "adminId": 535
+      "id": 177,
+      "deptId": 673,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 554,
+      "roleName": "macie.hartmann",
+      "adminId": 226
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -14180,9 +14180,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "jklrw7",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "5s0f9o",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14213,7 +14213,7 @@ adminId|int64|    管理员ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/760.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole/798.do
 ```
 **Response-fields:**
 
@@ -14232,9 +14232,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "pbgf7m",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4wfh66",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14266,7 +14266,7 @@ roleIds|array|    角色Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=541&roleIds=xu86ns&roleIds=xu86ns'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/authRole.do --data 'adminId=424&roleIds=vteley&roleIds=vteley'
 ```
 **Response-fields:**
 
@@ -14285,9 +14285,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "hy1vab",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "buptsy",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14362,44 +14362,44 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "username": "julian.ortiz",
-      "password": "tqcotv",
+      "username": "macie.hartmann",
+      "password": "afuu18",
       "authorities": [
         {
           "object": "any object"
         }
       ],
-      "userId": "95",
-      "userLid": 375,
-      "appId": "95",
-      "deptId": 735,
-      "organId": "95",
-      "token": "jwa43n",
-      "viewName": "julian.ortiz",
+      "userId": "17",
+      "userLid": 348,
+      "appId": "17",
+      "deptId": 304,
+      "organId": "17",
+      "token": "21qk0j",
+      "viewName": "macie.hartmann",
       "needChangePassword": true,
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "1mf6b4",
-      "loginCount": 121,
-      "loginIp": "207.227.60.208",
-      "lastUpdatePasswordTime": "2026-03-09 00:09:44",
-      "lastTime": "2026-03-09 00:09:44",
-      "foreignId": "95",
-      "expireTime": "2026-03-09 00:09:44",
-      "loginTime": "2026-03-09 00:09:44",
-      "userType": "c59zmu",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "kpvjst",
+      "loginCount": 703,
+      "loginIp": "14.83.204.161",
+      "lastUpdatePasswordTime": "2026-03-09 22:50:31",
+      "lastTime": "2026-03-09 22:50:31",
+      "foreignId": "17",
+      "expireTime": "2026-03-09 22:50:31",
+      "loginTime": "2026-03-09 22:50:31",
+      "userType": "xlm7jk",
       "isSuperAdmin": true,
-      "loginBrowse": "rn2422",
-      "loginOs": "wpl62i",
+      "loginBrowse": "jwf1a2",
+      "loginOs": "udws6y",
       "perms": [
-        "l5ays5"
+        "v1br2o"
       ]
     },
-    "roleGroup": "6tvqvo",
-    "positionGroup": "1dn6kx"
+    "roleGroup": "bkprw6",
+    "positionGroup": "k5fbja"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14529,60 +14529,60 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:45",
-    "lastTime": "2026-03-09 00:09:45",
-    "id": 418,
-    "userId": "95",
-    "deptId": 443,
-    "deptName": "julian.ortiz",
-    "organId": "95",
-    "organName": "julian.ortiz",
-    "name": "julian.ortiz",
-    "username": "julian.ortiz",
-    "nickName": "shane.roberts",
-    "email": "columbus.ankunding@gmail.com",
-    "mobile": "1-508-337-4557",
-    "imagePath": "e5u1uv",
-    "password": "vq1n0z",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:31",
+    "lastTime": "2026-03-09 22:50:31",
+    "id": 858,
+    "userId": "17",
+    "deptId": 965,
+    "deptName": "macie.hartmann",
+    "organId": "17",
+    "organName": "macie.hartmann",
+    "name": "macie.hartmann",
+    "username": "macie.hartmann",
+    "nickName": "jin.wolff",
+    "email": "latanya.ritchie@hotmail.com",
+    "mobile": "814-959-5738",
+    "imagePath": "wgtgq6",
+    "password": "pyqpor",
     "isSuperAdmin": true,
     "isAuditAdmin": true,
     "isSelfAdmin": true,
-    "status": 976,
-    "delFlag": 9,
-    "lastLoginIp": "207.227.60.208",
-    "lastLoginTime": "2026-03-09 00:09:45",
-    "description": "wteuqb",
+    "status": 201,
+    "delFlag": 2,
+    "lastLoginIp": "14.83.204.161",
+    "lastLoginTime": "2026-03-09 22:50:31",
+    "description": "hjp1ub",
     "dept": {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:45",
-      "lastTime": "2026-03-09 00:09:45",
-      "id": 249,
-      "organId": "95",
-      "parentId": 526,
-      "appId": "95",
-      "depttypeId": 397,
-      "foreignId": "95",
-      "createType": 20,
-      "type": "cqrqt5",
-      "name": "julian.ortiz",
-      "sname": "julian.ortiz",
-      "areaCode": "58719",
-      "organLeader": "whxp6p",
-      "leaderId": "95",
-      "leaderMobile": "1-508-337-4557",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:31",
+      "lastTime": "2026-03-09 22:50:31",
+      "id": 603,
+      "organId": "17",
+      "parentId": 571,
+      "appId": "17",
+      "depttypeId": 679,
+      "foreignId": "17",
+      "createType": 766,
+      "type": "678f2v",
+      "name": "macie.hartmann",
+      "sname": "macie.hartmann",
+      "areaCode": "22134",
+      "organLeader": "pdc2yf",
+      "leaderId": "17",
+      "leaderMobile": "814-959-5738",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "58719",
-      "imagePath": "zr2sr0",
-      "priority": 29,
-      "status": 552,
-      "delFlag": 9,
-      "description": "hv22x0",
-      "spare1": "nmmeh8",
-      "spare2": "dijmh5",
+      "searchCode": "22134",
+      "imagePath": "m8mov7",
+      "priority": 295,
+      "status": 916,
+      "delFlag": 2,
+      "description": "ucpld9",
+      "spare1": "5lsjbf",
+      "spare2": "exmj3i",
       "children": [
         {
           "$ref": ".."
@@ -14591,47 +14591,47 @@ timestamp|string|返回时间戳字符串|-
     },
     "roles": [
       {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:45",
-        "lastTime": "2026-03-09 00:09:45",
-        "id": 588,
-        "roletypeId": "95",
-        "appId": "95",
-        "name": "julian.ortiz",
-        "code": "58719",
-        "priority": 649,
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:31",
+        "lastTime": "2026-03-09 22:50:31",
+        "id": 458,
+        "roletypeId": "17",
+        "appId": "17",
+        "name": "macie.hartmann",
+        "code": "22134",
+        "priority": 163,
         "isRegular": true,
         "isSuper": true,
         "isPublic": true,
-        "status": 905,
-        "description": "zz7k2h",
-        "areaType": "60no48"
+        "status": 967,
+        "description": "dgyo7o",
+        "areaType": "r0f669"
       }
     ],
     "roleIds": [
-      414
+      988
     ],
     "positionIds": [
-      "pedfml"
+      "whroc7"
     ],
-    "roleId": 460,
+    "roleId": 208,
     "userRoleList": [
       {
-        "id": 505,
-        "deptId": 404,
-        "deptName": "julian.ortiz",
-        "organId": "95",
-        "organName": "julian.ortiz",
-        "roleId": 997,
-        "roleName": "julian.ortiz",
-        "adminId": 61
+        "id": 838,
+        "deptId": 651,
+        "deptName": "macie.hartmann",
+        "organId": "17",
+        "organName": "macie.hartmann",
+        "roleId": 298,
+        "roleName": "macie.hartmann",
+        "adminId": 667
       }
     ],
-    "code": "58719",
-    "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+    "code": "22134",
+    "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14747,60 +14747,60 @@ uuid|string|uuid标识|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/profile.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:45",
-  "lastTime": "2026-03-09 00:09:45",
-  "id": 586,
-  "userId": "95",
-  "deptId": 28,
-  "deptName": "julian.ortiz",
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "name": "julian.ortiz",
-  "username": "julian.ortiz",
-  "nickName": "shane.roberts",
-  "email": "columbus.ankunding@gmail.com",
-  "mobile": "1-508-337-4557",
-  "imagePath": "taewxi",
-  "password": "82mg4i",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:31",
+  "lastTime": "2026-03-09 22:50:31",
+  "id": 344,
+  "userId": "17",
+  "deptId": 867,
+  "deptName": "macie.hartmann",
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "name": "macie.hartmann",
+  "username": "macie.hartmann",
+  "nickName": "jin.wolff",
+  "email": "latanya.ritchie@hotmail.com",
+  "mobile": "814-959-5738",
+  "imagePath": "01ai4p",
+  "password": "lvcgdw",
   "isSuperAdmin": true,
   "isAuditAdmin": true,
   "isSelfAdmin": true,
-  "status": 382,
-  "delFlag": 9,
-  "lastLoginIp": "207.227.60.208",
-  "lastLoginTime": "2026-03-09 00:09:45",
-  "description": "op0jif",
+  "status": 788,
+  "delFlag": 2,
+  "lastLoginIp": "14.83.204.161",
+  "lastLoginTime": "2026-03-09 22:50:31",
+  "description": "ug0hek",
   "dept": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:45",
-    "lastTime": "2026-03-09 00:09:45",
-    "id": 886,
-    "organId": "95",
-    "parentId": 555,
-    "appId": "95",
-    "depttypeId": 453,
-    "foreignId": "95",
-    "createType": 33,
-    "type": "izhw6r",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "k3oro3",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:31",
+    "lastTime": "2026-03-09 22:50:31",
+    "id": 234,
+    "organId": "17",
+    "parentId": 64,
+    "appId": "17",
+    "depttypeId": 680,
+    "foreignId": "17",
+    "createType": 908,
+    "type": "h7lhxy",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "1dosoa",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "ltfi9u",
-    "priority": 481,
-    "status": 423,
-    "delFlag": 9,
-    "description": "dgxzp8",
-    "spare1": "hemqyy",
-    "spare2": "w5fmnn",
+    "searchCode": "22134",
+    "imagePath": "o5vwnc",
+    "priority": 804,
+    "status": 9,
+    "delFlag": 2,
+    "description": "4rn8t0",
+    "spare1": "pfkf1f",
+    "spare2": "o17eey",
     "children": [
       {
         "$ref": ".."
@@ -14809,44 +14809,44 @@ curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${t
   },
   "roles": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:45",
-      "lastTime": "2026-03-09 00:09:45",
-      "id": 597,
-      "roletypeId": "95",
-      "appId": "95",
-      "name": "julian.ortiz",
-      "code": "58719",
-      "priority": 682,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:31",
+      "lastTime": "2026-03-09 22:50:31",
+      "id": 809,
+      "roletypeId": "17",
+      "appId": "17",
+      "name": "macie.hartmann",
+      "code": "22134",
+      "priority": 988,
       "isRegular": true,
       "isSuper": true,
       "isPublic": true,
-      "status": 767,
-      "description": "52xd3d",
-      "areaType": "bkg014"
+      "status": 231,
+      "description": "fcdraz",
+      "areaType": "cbghab"
     }
   ],
   "roleIds": [
-    171
+    40
   ],
   "positionIds": [
-    "o564e4"
+    "qysw17"
   ],
-  "roleId": 686,
+  "roleId": 447,
   "userRoleList": [
     {
-      "id": 501,
-      "deptId": 745,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "roleId": 712,
-      "roleName": "julian.ortiz",
-      "adminId": 395
+      "id": 321,
+      "deptId": 872,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "roleId": 243,
+      "roleName": "macie.hartmann",
+      "adminId": 571
     }
   ],
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
 }'
 ```
 **Response-fields:**
@@ -14867,8 +14867,8 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": true,
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14901,8 +14901,8 @@ newPassword|string|新密码|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/updatePwd.do --data '{
-  "oldPassword": "317k43",
-  "newPassword": "5l06j8"
+  "oldPassword": "7prrvm",
+  "newPassword": "oswjxe"
 }'
 ```
 **Response-fields:**
@@ -14925,8 +14925,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -14954,93 +14954,96 @@ token|string|令牌|true|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 file|file| 文件|true|-
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -15054,65 +15057,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -15124,59 +15132,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -15188,19 +15193,14 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/imagePath.do --data 'authType=um0arq&localPort=315&asyncContext.request.reader.skipLF=true&session.new=true&reader.markedSkipLF=true&asyncContext.request.reader.markedChar=760&servletConnection.secure=true&httpServletMapping.servletName=julian.ortiz&servletConnection.protocol=paq3lj&asyncContext.request.reader.readAheadLimit=10&servletContext.sessionCookieConfig.path=djjdg3&servletContext.servletContextName=julian.ortiz&servletConnection.connectionId=95&requestURL.count=80&asyncContext.request.protocolRequestId=95&localName=julian.ortiz&servletContext.effectiveMinorVersion=133&session.servletContext.sessionTimeout=177&session.servletContext.serverInfo=fmhu2o&asyncContext.request.servletContext.sessionTimeout=341&session.id=95&session.servletContext.effectiveMajorVersion=995&contextPath=7q4nh1&httpServletMapping.pattern=lhqe4o&session.servletContext.sessionCookieConfig.path=30o9yb&reader.nextChar=984&servletContext.sessionCookieConfig.secure=true&asyncContext.request.localName=julian.ortiz&asyncContext.request.servletContext.virtualServerName=julian.ortiz&asyncContext.request.asyncStarted=true&requestId=95&asyncContext.request.servletContext.servletContextName=julian.ortiz&session.servletContext.contextPath=o4yag4&session.creationTime=1772986113769&secure=true&asyncSupported=true&session.servletContext.virtualServerName=julian.ortiz&requestedSessionIdValid=true&serverPort=920&requestURL.coder=93&reader.skipLF=true&httpServletMapping.matchValue=9u8r0c&servletContext.minorVersion=680&servletContext.sessionCookieConfig.httpOnly=true&reader.nChars=844&asyncContext.request.servletContext.responseCharacterEncoding=ngpg63&session.servletContext.sessionCookieConfig.domain=hirthe.com&session.servletContext.sessionCookieConfig.maxAge=14&asyncContext.request.servletContext.serverInfo=t6f04d&userPrincipal.name=julian.ortiz&asyncContext.request.servletContext.requestCharacterEncoding=vrx22r&scheme=16s4c3&asyncContext.request.contentLengthLong=906&remotePort=340&servletContext.serverInfo=ojousd&asyncContext.response.bufferSize=10&remoteUser=h8jq0v&asyncContext.request.remoteHost=o9tef1&asyncContext.request.reader.nChars=212&requestedSessionId=95&servletContext.majorVersion=727&reader.markedChar=855&servletContext.effectiveMajorVersion=17&session.servletContext.majorVersion=518&contentLengthLong=599&asyncContext.request.requestId=95&servletContext.sessionCookieConfig.comment=acszew&session.servletContext.sessionCookieConfig.secure=true&asyncContext.request.contentLength=901&asyncContext.request.reader.nextChar=490&reader.readAheadLimit=10&session.servletContext.requestCharacterEncoding=tt0r6d&trailerFieldsReady=true&asyncContext.response.characterEncoding=zwsqlj&session.servletContext.sessionCookieConfig.comment=sys6im&session.servletContext.servletContextName=julian.ortiz&asyncContext.request.remoteAddr=01g0yj&cookies.=mkssrp&cookies.=mkssrp&servletContext.sessionCookieConfig.domain=hirthe.com&asyncContext.request.scheme=4798te&asyncContext.request.servletConnection.secure=true&servletContext.contextPath=uajhdt&remoteAddr=9l6vpr&asyncContext.request.asyncSupported=true&asyncContext.request.servletConnection.connectionId=95&servletPath=1jkof2&session.lastAccessedTime=1772986113769&servletContext.virtualServerName=julian.ortiz&asyncContext.request.asyncContext.timeout=386&characterEncoding=d14qvr&session.servletContext.sessionCookieConfig.httpOnly=true&remoteHost=td9ua9&servletConnection.protocolConnectionId=95&servletContext.sessionTimeout=425&servletContext.sessionCookieConfig.maxAge=14&session.servletContext.responseCharacterEncoding=b87dwd&session.maxInactiveInterval=504&protocol=eltrgv&asyncContext.request.remotePort=135&asyncContext.request.characterEncoding=5lebd9&asyncContext.request.serverName=julian.ortiz&asyncContext.request.secure=true&session.servletContext.effectiveMinorVersion=61&requestURI=83viv8&asyncContext.timeout=125&servletContext.requestCharacterEncoding=4sbk49&asyncContext.request.servletContext.minorVersion=786&asyncContext.request.protocol=r2stx8&servletContext.sessionCookieConfig.name=julian.ortiz&asyncContext.request.contentType=yhhm5u&asyncContext.request.dispatcherType=FORWARD&session.servletContext.sessionCookieConfig.name=julian.ortiz&asyncContext.response.writer.autoFlush=true&pathInfo=6erqde&dispatcherType=FORWARD&method=arnvbf&asyncContext.request.reader.markedSkipLF=true&requestedSessionIdFromCookie=true&asyncContext.request.servletContext.effectiveMinorVersion=749&asyncContext.request.serverPort=293&asyncContext.response.committed=true&serverName=julian.ortiz&asyncContext.request.servletContext.effectiveMajorVersion=925&asyncContext.request.servletContext.contextPath=lnkeke&reader.cb=v&reader.cb=v&queryString=m3wrve&asyncStarted=true&asyncContext.request.localPort=88&reader.skipBuffer=o&reader.skipBuffer=o&contentLength=313&asyncContext.request.localAddr=lk6ysh&cookies.=julian.ortiz&cookies.=julian.ortiz&localAddr=gn867j&contentType=5t6scv&session.servletContext.minorVersion=954&servletContext.responseCharacterEncoding=0mte76&asyncContext.response.contentType=eklsfe&httpServletMapping.mappingMatch=CONTEXT_ROOT&requestURL.empty=true&protocolRequestId=95&asyncContext.request.servletConnection.protocol=ovnafz&requestURL.value=104&requestURL.value=104&pathTranslated=9f6rde&asyncContext.response.writer.trouble=true&asyncContext.request.servletContext.majorVersion=137&requestedSessionIdFromURL=true&asyncContext.request.servletConnection.protocolConnectionId=95'
+curl -X POST -k -H 'Content-Type: multipart/form-data' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/user/imagePath.do --data 'servletConnection.protocol=ko597m&asyncContext.request.reader.markedChar=201&session.servletContext.requestCharacterEncoding=djhnvw&servletContext.sessionCookieConfig.name=macie.hartmann&servletContext.responseCharacterEncoding=9y0y06&reader.cb=m&reader.cb=m&servletContext.virtualServerName=macie.hartmann&httpServletMapping.mappingMatch=CONTEXT_ROOT&reader.skipBuffer=l&reader.skipBuffer=l&session.servletContext.sessionCookieConfig.httpOnly=true&asyncContext.request.secure=true&requestURL.empty=true&requestURL.coder=54&asyncContext.request.asyncStarted=true&session.servletContext.sessionCookieConfig.path=4afhbe&contentLengthLong=415&asyncContext.request.remoteHost=sfb3w6&session.servletContext.majorVersion=507&pathInfo=65s1ct&servletConnection.connectionId=17&servletPath=6idfcd&servletContext.sessionCookieConfig.secure=true&asyncContext.request.protocolRequestId=17&asyncContext.request.localPort=131&asyncContext.request.serverPort=959&servletContext.sessionCookieConfig.path=147p5k&asyncContext.request.remoteAddr=lcb1yv&asyncContext.request.servletContext.sessionTimeout=703&asyncContext.response.writer.trouble=true&cookies.=btvx03&cookies.=btvx03&servletContext.servletContextName=macie.hartmann&asyncContext.request.servletContext.servletContextName=macie.hartmann&asyncContext.request.reader.nChars=48&session.servletContext.effectiveMajorVersion=569&contentType=f1yrfp&requestId=17&asyncContext.request.servletConnection.connectionId=17&cookies.=macie.hartmann&cookies.=macie.hartmann&characterEncoding=jma9ur&userPrincipal.name=macie.hartmann&session.new=true&session.servletContext.sessionCookieConfig.domain=kutch.co&serverPort=666&session.servletContext.contextPath=hr44s8&session.servletContext.virtualServerName=macie.hartmann&asyncContext.request.servletContext.minorVersion=796&asyncContext.request.servletContext.contextPath=lgzoom&queryString=4upzju&asyncContext.request.reader.readAheadLimit=10&session.servletContext.responseCharacterEncoding=f40vjr&session.creationTime=1773067754226&asyncContext.request.servletConnection.secure=true&servletContext.sessionTimeout=444&asyncContext.request.servletContext.effectiveMajorVersion=193&session.servletContext.sessionTimeout=164&pathTranslated=sbbyjv&session.servletContext.serverInfo=5n8912&session.servletContext.minorVersion=657&session.id=17&asyncContext.request.servletContext.responseCharacterEncoding=esasis&asyncContext.request.serverName=macie.hartmann&servletContext.sessionCookieConfig.httpOnly=true&contextPath=opuif4&session.servletContext.sessionCookieConfig.comment=7ooxux&servletContext.majorVersion=286&servletConnection.secure=true&protocolRequestId=17&localName=macie.hartmann&asyncContext.request.scheme=z94svz&asyncContext.request.characterEncoding=urd6m0&remoteAddr=fbjhng&asyncContext.request.asyncContext.timeout=568&remoteUser=g8z2o6&asyncContext.timeout=467&asyncContext.request.servletContext.majorVersion=570&contentLength=178&asyncContext.response.bufferSize=10&requestedSessionId=17&trailerFieldsReady=true&reader.markedSkipLF=true&requestURL.value=19&requestURL.value=19&reader.nextChar=795&session.servletContext.effectiveMinorVersion=210&httpServletMapping.servletName=macie.hartmann&secure=true&servletContext.contextPath=v21xht&asyncContext.request.reader.nextChar=414&requestedSessionIdFromCookie=true&asyncContext.request.reader.markedSkipLF=true&reader.markedChar=934&asyncContext.request.servletContext.effectiveMinorVersion=834&asyncContext.request.contentType=ag6yrs&asyncContext.request.servletContext.requestCharacterEncoding=25ef0f&asyncContext.request.dispatcherType=FORWARD&session.maxInactiveInterval=282&requestedSessionIdFromURL=true&asyncContext.response.characterEncoding=u9gft5&asyncContext.request.requestId=17&servletContext.effectiveMajorVersion=856&asyncContext.request.contentLength=721&asyncSupported=true&servletContext.minorVersion=364&reader.readAheadLimit=10&serverName=macie.hartmann&localAddr=5az11o&servletContext.effectiveMinorVersion=606&httpServletMapping.matchValue=6gbvok&asyncContext.request.reader.skipLF=true&httpServletMapping.pattern=kkuyu4&session.servletContext.sessionCookieConfig.name=macie.hartmann&reader.nChars=985&servletContext.requestCharacterEncoding=ni0jzg&asyncContext.response.writer.autoFlush=true&protocol=z0fvbs&asyncContext.request.localAddr=u0l7v0&asyncContext.request.protocol=xuu4wg&asyncStarted=true&asyncContext.request.contentLengthLong=508&method=bfmlwr&asyncContext.request.localName=macie.hartmann&session.servletContext.sessionCookieConfig.maxAge=16&session.lastAccessedTime=1773067754226&localPort=52&session.servletContext.servletContextName=macie.hartmann&session.servletContext.sessionCookieConfig.secure=true&asyncContext.response.committed=true&authType=azp1pg&servletContext.sessionCookieConfig.domain=kutch.co&remoteHost=aqmpr3&asyncContext.request.servletConnection.protocolConnectionId=17&scheme=r7uxnn&requestURI=3ibig5&asyncContext.response.contentType=v255yt&requestURL.count=935&servletConnection.protocolConnectionId=17&servletContext.serverInfo=117l7y&dispatcherType=FORWARD&asyncContext.request.servletContext.virtualServerName=macie.hartmann&asyncContext.request.remotePort=5&requestedSessionIdValid=true&asyncContext.request.asyncSupported=true&asyncContext.request.servletConnection.protocol=u9pxw6&asyncContext.request.servletContext.serverInfo=46ofqp&reader.skipLF=true&remotePort=828&servletContext.sessionCookieConfig.comment=zi7mhe&servletContext.sessionCookieConfig.maxAge=16'
 ```
 **Response-fields:**
 
@@ -15221,10 +15221,10 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "imageUrl": "www.kandace-stamm.org"
+    "imageUrl": "www.velia-kozey.biz"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15281,7 +15281,7 @@ createTime|string|创建时间|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?status=999&endTime=2026-03-09 00:08:33&q=uglh3a&sname=julian.ortiz&orderBy=791&id=95&posType=5y01dy&posFunction=awl3e9&oname=julian.ortiz&description=967fdm&roletypeId=95&officePhone=(947) 505-4582&delFlag=9&name=julian.ortiz&ids=pk84ct&ids=pk84ct&startTime=2026-03-09 00:08:33&page=1&createTime=2026-03-09 00:08:33&postypeId=95&posRank=705&code=58719&isPub=true&mobilePhone=(947) 505-4582&groupId=95&positionId=95&limit=10&parentId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/list.do?posRank=33&ids=yrc23r&ids=yrc23r&limit=10&orderBy=587&officePhone=(727) 805-3214&roletypeId=17&oname=macie.hartmann&endTime=2026-03-09 22:49:14&posType=lnxd87&createTime=2026-03-09 22:49:14&posFunction=bso14a&name=macie.hartmann&code=22134&startTime=2026-03-09 22:49:14&positionId=17&parentId=17&description=4ye4ln&q=nafh43&groupId=17&sname=macie.hartmann&isPub=true&mobilePhone=(727) 805-3214&postypeId=17&page=1&delFlag=2&id=17&status=331
 ```
 **Response-fields:**
 
@@ -15319,32 +15319,32 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 155,
+    "totalCount": 402,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "postId": "95",
-        "postCode": "58719",
-        "postName": "julian.ortiz",
-        "postSort": 349,
-        "status": 957,
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:46",
-        "lastTime": "2026-03-09 00:09:46",
-        "delFlag": 9,
-        "remark": "zrc69a",
+        "postId": "17",
+        "postCode": "22134",
+        "postName": "macie.hartmann",
+        "postSort": 636,
+        "status": 805,
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:33",
+        "lastTime": "2026-03-09 22:50:33",
+        "delFlag": 2,
+        "remark": "b5h8t9",
         "ids": [
-          "xugnku"
+          "5axcik"
         ],
-        "positionId": "95",
+        "positionId": "17",
         "flag": true
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15373,9 +15373,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -15432,7 +15432,7 @@ delFlag|int32|删除标记（0正常 1删除）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'writer.psOut.closing=true&writer.trouble=true&writer.formatter.lastException.detailMessage=success&q=nbmkhk&bufferSize=10&writer.formatter.zero=d&page=1&delFlag=9&status=690&postCode=58719&writer.psOut.textOut.nextChar=749&writer.psOut.textOut.nChars=117&committed=true&startTime=2026-03-09 00:08:33&writer.psOut.closed=true&writer.psOut.trouble=true&characterEncoding=sftv6w&limit=10&writer.psOut.formatter.zero=i&writer.writeBuffer=5&writer.writeBuffer=5&endTime=2026-03-09 00:08:33&writer.autoFlush=true&writer.psOut.autoFlush=true&orderBy=359&status=358&contentType=cp84my&postName=julian.ortiz'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/export.do --data 'characterEncoding=zntxl6&endTime=2026-03-09 22:49:14&startTime=2026-03-09 22:49:14&writer.formatter.zero=9&postCode=22134&writer.psOut.autoFlush=true&bufferSize=10&contentType=mzyk4t&postName=macie.hartmann&delFlag=2&writer.psOut.formatter.zero=7&committed=true&writer.psOut.textOut.nextChar=899&writer.writeBuffer=g&writer.writeBuffer=g&orderBy=284&writer.formatter.lastException.detailMessage=success&limit=10&writer.psOut.textOut.nChars=444&writer.psOut.closing=true&status=924&q=xaxka0&writer.psOut.trouble=true&writer.autoFlush=true&writer.trouble=true&page=1&writer.psOut.closed=true&status=590'
 ```
 **Response-fields:**
 
@@ -15451,9 +15451,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "r1hgem",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "j45ids",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15483,7 +15483,7 @@ postId|string| 岗位Id|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/17.do
 ```
 **Response-fields:**
 
@@ -15544,50 +15544,50 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:47",
-    "lastTime": "2026-03-09 00:09:47",
-    "id": "95",
-    "parentId": "95",
-    "postypeId": "95",
-    "roletypeId": "95",
-    "userId": "95",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "code": "58719",
-    "oname": "julian.ortiz",
-    "posFunction": "qp8w4a",
-    "posRank": 731,
-    "posType": "g2n6h8",
-    "editorType": "daw7pq",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:33",
+    "lastTime": "2026-03-09 22:50:33",
+    "id": "17",
+    "parentId": "17",
+    "postypeId": "17",
+    "roletypeId": "17",
+    "userId": "17",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "code": "22134",
+    "oname": "macie.hartmann",
+    "posFunction": "fl9ttt",
+    "posRank": 79,
+    "posType": "g1x3nd",
+    "editorType": "nztqo4",
     "isEditorCreate": true,
-    "status": 945,
+    "status": 856,
     "isPub": true,
     "isAgent": true,
     "isLeader": true,
-    "leaderId": "95",
-    "manageDeptids": "hc63ik",
+    "leaderId": "17",
+    "manageDeptids": "k5j5s9",
     "isBigContact": true,
     "isSmallContact": true,
-    "mobilePhone": "(947) 505-4582",
-    "officePhone": "(947) 505-4582",
-    "buildingId": "95",
-    "roomNo": "sd2599",
-    "extQmType": "9w7lb6",
-    "extQmTypePhoto": "7bacwc",
-    "extPosName": "julian.ortiz",
-    "extOrganName": "julian.ortiz",
-    "priority": 367,
-    "priorityInOrgan": 833,
-    "priorityInDomain": 13,
-    "updaterId": "95",
-    "updateTime": "2026-03-09 00:09:47",
-    "delFlag": 9,
-    "description": "8pvbuf",
-    "remark": "e2sdux"
+    "mobilePhone": "(727) 805-3214",
+    "officePhone": "(727) 805-3214",
+    "buildingId": "17",
+    "roomNo": "lqw0h5",
+    "extQmType": "emazqn",
+    "extQmTypePhoto": "716aa6",
+    "extPosName": "macie.hartmann",
+    "extOrganName": "macie.hartmann",
+    "priority": 946,
+    "priorityInOrgan": 590,
+    "priorityInDomain": 637,
+    "updaterId": "17",
+    "updateTime": "2026-03-09 22:50:33",
+    "delFlag": 2,
+    "description": "mrhch7",
+    "remark": "iy9rx3"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15661,50 +15661,50 @@ postypeName|string|角色分类名称|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "id": "95",
-  "parentId": "95",
-  "postypeId": "95",
-  "roletypeId": "95",
-  "userId": "95",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "code": "58719",
-  "oname": "julian.ortiz",
-  "posFunction": "88dv0p",
-  "posRank": 959,
-  "posType": "6e8s8y",
-  "editorType": "yfcgel",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
+  "id": "17",
+  "parentId": "17",
+  "postypeId": "17",
+  "roletypeId": "17",
+  "userId": "17",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "code": "22134",
+  "oname": "macie.hartmann",
+  "posFunction": "1pbk7c",
+  "posRank": 819,
+  "posType": "9nzmna",
+  "editorType": "hwdaa6",
   "isEditorCreate": true,
-  "status": 856,
+  "status": 288,
   "isPub": true,
   "isAgent": true,
   "isLeader": true,
-  "leaderId": "95",
-  "manageDeptids": "3wc8sx",
+  "leaderId": "17",
+  "manageDeptids": "8fo8o1",
   "isBigContact": true,
   "isSmallContact": true,
-  "mobilePhone": "(947) 505-4582",
-  "officePhone": "(947) 505-4582",
-  "buildingId": "95",
-  "roomNo": "8uultp",
-  "extQmType": "pyzs50",
-  "extQmTypePhoto": "hz5nqi",
-  "extPosName": "julian.ortiz",
-  "extOrganName": "julian.ortiz",
-  "priority": 71,
-  "priorityInOrgan": 132,
-  "priorityInDomain": 479,
-  "updaterId": "95",
-  "updateTime": "2026-03-09 00:09:47",
-  "delFlag": 9,
-  "description": "e2ne35",
-  "remark": "o7ssnh",
-  "parentName": "julian.ortiz",
-  "roletypeName": "julian.ortiz",
-  "postypeName": "julian.ortiz"
+  "mobilePhone": "(727) 805-3214",
+  "officePhone": "(727) 805-3214",
+  "buildingId": "17",
+  "roomNo": "7ijgh6",
+  "extQmType": "elxxcy",
+  "extQmTypePhoto": "g8w60s",
+  "extPosName": "macie.hartmann",
+  "extOrganName": "macie.hartmann",
+  "priority": 612,
+  "priorityInOrgan": 949,
+  "priorityInDomain": 648,
+  "updaterId": "17",
+  "updateTime": "2026-03-09 22:50:33",
+  "delFlag": 2,
+  "description": "61905w",
+  "remark": "5kt6cg",
+  "parentName": "macie.hartmann",
+  "roletypeName": "macie.hartmann",
+  "postypeName": "macie.hartmann"
 }'
 ```
 **Response-fields:**
@@ -15724,9 +15724,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "a5xqbn",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "geaiak",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15800,50 +15800,50 @@ postypeName|string|角色分类名称|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "id": "95",
-  "parentId": "95",
-  "postypeId": "95",
-  "roletypeId": "95",
-  "userId": "95",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "code": "58719",
-  "oname": "julian.ortiz",
-  "posFunction": "vw98nc",
-  "posRank": 97,
-  "posType": "rscwt5",
-  "editorType": "e1932q",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
+  "id": "17",
+  "parentId": "17",
+  "postypeId": "17",
+  "roletypeId": "17",
+  "userId": "17",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "code": "22134",
+  "oname": "macie.hartmann",
+  "posFunction": "xubknr",
+  "posRank": 228,
+  "posType": "eh13lv",
+  "editorType": "xiatb9",
   "isEditorCreate": true,
-  "status": 720,
+  "status": 681,
   "isPub": true,
   "isAgent": true,
   "isLeader": true,
-  "leaderId": "95",
-  "manageDeptids": "27zngo",
+  "leaderId": "17",
+  "manageDeptids": "tx69f3",
   "isBigContact": true,
   "isSmallContact": true,
-  "mobilePhone": "(947) 505-4582",
-  "officePhone": "(947) 505-4582",
-  "buildingId": "95",
-  "roomNo": "49xh6q",
-  "extQmType": "9v9bq7",
-  "extQmTypePhoto": "lte016",
-  "extPosName": "julian.ortiz",
-  "extOrganName": "julian.ortiz",
-  "priority": 351,
-  "priorityInOrgan": 526,
-  "priorityInDomain": 947,
-  "updaterId": "95",
-  "updateTime": "2026-03-09 00:09:47",
-  "delFlag": 9,
-  "description": "ojqbs0",
-  "remark": "9p5p4a",
-  "parentName": "julian.ortiz",
-  "roletypeName": "julian.ortiz",
-  "postypeName": "julian.ortiz"
+  "mobilePhone": "(727) 805-3214",
+  "officePhone": "(727) 805-3214",
+  "buildingId": "17",
+  "roomNo": "b8pnj5",
+  "extQmType": "dnrbv2",
+  "extQmTypePhoto": "rffck7",
+  "extPosName": "macie.hartmann",
+  "extOrganName": "macie.hartmann",
+  "priority": 663,
+  "priorityInOrgan": 107,
+  "priorityInDomain": 951,
+  "updaterId": "17",
+  "updateTime": "2026-03-09 22:50:33",
+  "delFlag": 2,
+  "description": "n52ava",
+  "remark": "tpkznp",
+  "parentName": "macie.hartmann",
+  "roletypeName": "macie.hartmann",
+  "postypeName": "macie.hartmann"
 }'
 ```
 **Response-fields:**
@@ -15863,9 +15863,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "sz9zrv",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "jabwea",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15914,9 +15914,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7zr15d",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "qqj6fy",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -15959,20 +15959,20 @@ flag|boolean|用户是否存在此岗位标识 默认不存在|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/bind/{positionId}.do --data '{
-  "postId": "95",
-  "postCode": "58719",
-  "postName": "julian.ortiz",
-  "postSort": 43,
-  "status": 894,
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "delFlag": 9,
-  "remark": "nzq6oj",
+  "postId": "17",
+  "postCode": "22134",
+  "postName": "macie.hartmann",
+  "postSort": 874,
+  "status": 229,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
+  "delFlag": 2,
+  "remark": "9js6kc",
   "ids": [
-    "fv41zb"
+    "u8eb0s"
   ],
-  "positionId": "95",
+  "positionId": "17",
   "flag": true
 }'
 ```
@@ -15993,9 +15993,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "pp60wj",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "2uj8f2",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16031,10 +16031,10 @@ endTime|string|结束时间|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/position/unbind/{positionId}.do --data '{
-  "id": 56,
-  "roleId": 201,
-  "positionId": "95",
-  "status": 222,
+  "id": 619,
+  "roleId": 752,
+  "positionId": "17",
+  "status": 827,
   "beginTime": "2026-03-09",
   "endTime": "2026-03-09"
 }'
@@ -16056,9 +16056,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "tuhjby",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "c4mzdc",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16116,25 +16116,25 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "postId": "95",
-      "postCode": "58719",
-      "postName": "julian.ortiz",
-      "postSort": 252,
-      "status": 30,
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:47",
-      "lastTime": "2026-03-09 00:09:47",
-      "delFlag": 9,
-      "remark": "obam1t",
+      "postId": "17",
+      "postCode": "22134",
+      "postName": "macie.hartmann",
+      "postSort": 24,
+      "status": 160,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:33",
+      "lastTime": "2026-03-09 22:50:33",
+      "delFlag": 2,
+      "remark": "08vpxz",
       "ids": [
-        "d8rzo9"
+        "0rbsir"
       ],
-      "positionId": "95",
+      "positionId": "17",
       "flag": true
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16180,7 +16180,7 @@ time|int64|执行时长|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?username=julian.ortiz&endTime=2026-03-09 00:08:33&q=nduml5&srcCode=897&startTime=2026-03-09 00:08:33&page=1&category=600&limit=10&userId=95&orderBy=345&operation=0d39cy&method=os0y05&ip=207.227.60.208&time=1772986113769&appId=95&createTime=2026-03-09 00:09:50
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/list.do?category=8&username=macie.hartmann&operation=idlo0c&q=bt95n9&startTime=2026-03-09 22:49:14&endTime=2026-03-09 22:49:14&time=1773067754226&ip=14.83.204.161&limit=10&createTime=2026-03-09 22:50:37&method=04a4fr&orderBy=105&srcCode=46&userId=17&page=1&appId=17
 ```
 **Response-fields:**
 
@@ -16225,39 +16225,39 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 66,
+    "totalCount": 457,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "operId": 214,
-        "title": "ldnsxl",
-        "businessType": 186,
-        "businessTypeName": "julian.ortiz",
+        "operId": 996,
+        "title": "ej3pis",
+        "businessType": 465,
+        "businessTypeName": "macie.hartmann",
         "businessTypes": [
-          930
+          605
         ],
-        "method": "sreawe",
-        "requestMethod": "07eq80",
-        "operatorType": 958,
-        "operName": "julian.ortiz",
-        "deptName": "julian.ortiz",
-        "operUrl": "www.kandace-stamm.org",
-        "operIp": "207.227.60.208",
-        "operLocation": "ftvt1x",
-        "operParam": "qc38jh",
-        "jsonResult": "eo2j22",
-        "status": 838,
-        "errorMsg": "9kr6sn",
-        "operTime": "2026-03-09 00:09:50",
-        "costTime": 1772986113769,
-        "remark": "citlca"
+        "method": "x1i76n",
+        "requestMethod": "96gfab",
+        "operatorType": 777,
+        "operName": "macie.hartmann",
+        "deptName": "macie.hartmann",
+        "operUrl": "www.velia-kozey.biz",
+        "operIp": "14.83.204.161",
+        "operLocation": "ab27sa",
+        "operParam": "6vz0tz",
+        "jsonResult": "zhbe8l",
+        "status": 434,
+        "errorMsg": "3o9fov",
+        "operTime": "2026-03-09 22:50:37",
+        "costTime": 1773067754226,
+        "remark": "hcq5nc"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16286,9 +16286,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -16351,7 +16351,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'limit=10&writer.formatter.lastException.detailMessage=success&title=iejqmo&businessType=284&writer.psOut.closing=true&writer.psOut.closed=true&operIp=207.227.60.208&writer.trouble=true&startTime=2026-03-09 00:08:33&operTime=2026-03-09 00:09:50&endTime=2026-03-09 00:08:33&writer.psOut.trouble=true&writer.psOut.textOut.nChars=261&deptName=julian.ortiz&operId=856&operName=julian.ortiz&characterEncoding=547qhf&writer.psOut.autoFlush=true&remark=gyytz8&bufferSize=10&orderBy=158&contentType=z0fpkh&page=1&writer.psOut.formatter.zero=6&operatorType=235&writer.autoFlush=true&q=wy5lkf&writer.writeBuffer=q&writer.writeBuffer=q&writer.formatter.zero=v&status=420&committed=true&writer.psOut.textOut.nextChar=44&status=362'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/commlog/export.do --data 'limit=10&writer.trouble=true&writer.psOut.closed=true&writer.psOut.autoFlush=true&endTime=2026-03-09 22:49:14&committed=true&operatorType=734&writer.autoFlush=true&orderBy=64&remark=fuocau&writer.psOut.formatter.zero=a&writer.psOut.textOut.nextChar=798&writer.formatter.zero=e&writer.psOut.textOut.nChars=598&operIp=14.83.204.161&characterEncoding=syqek6&bufferSize=10&operId=449&q=5bojkf&startTime=2026-03-09 22:49:14&operTime=2026-03-09 22:50:37&writer.formatter.lastException.detailMessage=success&writer.psOut.trouble=true&writer.psOut.closing=true&status=988&businessType=620&page=1&operName=macie.hartmann&writer.writeBuffer=o&writer.writeBuffer=o&contentType=nh4mn3&status=297&title=oxx11z&deptName=macie.hartmann'
 ```
 **Response-fields:**
 
@@ -16370,9 +16370,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7zf8aw",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "e5gyw9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16421,9 +16421,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ryhksj",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "1g737m",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16464,7 +16464,7 @@ wlType|string|机构类型|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?delFlag=9&q=wimbjl&organName=julian.ortiz&orderBy=158&endTime=2026-03-09 00:08:33&wlType=uvbo99&organId=95&page=1&limit=10&startTime=2026-03-09 00:08:33
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/list.do?orderBy=32&organId=17&wlType=n21dwk&organName=macie.hartmann&page=1&limit=10&startTime=2026-03-09 22:49:14&endTime=2026-03-09 22:49:14&delFlag=2&q=hh6lsy
 ```
 **Response-fields:**
 
@@ -16503,28 +16503,28 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {
       "ids": [
-        "pfjn7c"
+        "8fkjte"
       ],
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "organSName": "julian.ortiz",
-      "organCode": "58719",
-      "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-      "wlType": "x81b2i",
-      "wlTypeName": "julian.ortiz",
-      "priority": 572,
-      "delFlag": 9,
-      "createTime": "2026-03-09 00:09:54",
-      "lastTime": "2026-03-09 00:09:54",
-      "contactName": "julian.ortiz",
-      "contactEmail": "columbus.ankunding@gmail.com",
-      "contactMobile": "1-508-337-4557",
-      "description": "vmsdwy",
-      "tel": "bc7u96"
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "organSName": "macie.hartmann",
+      "organCode": "22134",
+      "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+      "wlType": "eoncwr",
+      "wlTypeName": "macie.hartmann",
+      "priority": 793,
+      "delFlag": 2,
+      "createTime": "2026-03-09 22:50:41",
+      "lastTime": "2026-03-09 22:50:41",
+      "contactName": "macie.hartmann",
+      "contactEmail": "latanya.ritchie@hotmail.com",
+      "contactMobile": "814-959-5738",
+      "description": "r3lw3e",
+      "tel": "gfi8pv"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16593,27 +16593,27 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "ids": [
-      "bszy20"
+      "4wpc74"
     ],
-    "organId": "95",
-    "organName": "julian.ortiz",
-    "organSName": "julian.ortiz",
-    "organCode": "58719",
-    "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-    "wlType": "stimkz",
-    "wlTypeName": "julian.ortiz",
-    "priority": 528,
-    "delFlag": 9,
-    "createTime": "2026-03-09 00:09:54",
-    "lastTime": "2026-03-09 00:09:54",
-    "contactName": "julian.ortiz",
-    "contactEmail": "columbus.ankunding@gmail.com",
-    "contactMobile": "1-508-337-4557",
-    "description": "f7mae8",
-    "tel": "osxj10"
+    "organId": "17",
+    "organName": "macie.hartmann",
+    "organSName": "macie.hartmann",
+    "organCode": "22134",
+    "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+    "wlType": "xb8mpn",
+    "wlTypeName": "macie.hartmann",
+    "priority": 888,
+    "delFlag": 2,
+    "createTime": "2026-03-09 22:50:41",
+    "lastTime": "2026-03-09 22:50:41",
+    "contactName": "macie.hartmann",
+    "contactEmail": "latanya.ritchie@hotmail.com",
+    "contactMobile": "814-959-5738",
+    "description": "pv719a",
+    "tel": "t6d2bf"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16662,24 +16662,24 @@ tel|string|单位电话|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/save.do --data '{
   "ids": [
-    "qqde1q"
+    "im1cek"
   ],
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "organSName": "julian.ortiz",
-  "organCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "wlType": "2eaulr",
-  "wlTypeName": "julian.ortiz",
-  "priority": 585,
-  "delFlag": 9,
-  "createTime": "2026-03-09 00:09:54",
-  "lastTime": "2026-03-09 00:09:54",
-  "contactName": "julian.ortiz",
-  "contactEmail": "columbus.ankunding@gmail.com",
-  "contactMobile": "1-508-337-4557",
-  "description": "3os51v",
-  "tel": "329nim"
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "organSName": "macie.hartmann",
+  "organCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "wlType": "5h0eer",
+  "wlTypeName": "macie.hartmann",
+  "priority": 944,
+  "delFlag": 2,
+  "createTime": "2026-03-09 22:50:41",
+  "lastTime": "2026-03-09 22:50:41",
+  "contactName": "macie.hartmann",
+  "contactEmail": "latanya.ritchie@hotmail.com",
+  "contactMobile": "814-959-5738",
+  "description": "7dumtn",
+  "tel": "n62jc7"
 }'
 ```
 **Response-fields:**
@@ -16699,9 +16699,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "anv9eo",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "casj27",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16750,24 +16750,24 @@ tel|string|单位电话|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/update.do --data '{
   "ids": [
-    "0k9r8x"
+    "mp0spo"
   ],
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "organSName": "julian.ortiz",
-  "organCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "wlType": "ntzbkp",
-  "wlTypeName": "julian.ortiz",
-  "priority": 914,
-  "delFlag": 9,
-  "createTime": "2026-03-09 00:09:54",
-  "lastTime": "2026-03-09 00:09:54",
-  "contactName": "julian.ortiz",
-  "contactEmail": "columbus.ankunding@gmail.com",
-  "contactMobile": "1-508-337-4557",
-  "description": "jyxngs",
-  "tel": "59hghc"
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "organSName": "macie.hartmann",
+  "organCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "wlType": "ikxn3x",
+  "wlTypeName": "macie.hartmann",
+  "priority": 282,
+  "delFlag": 2,
+  "createTime": "2026-03-09 22:50:41",
+  "lastTime": "2026-03-09 22:50:41",
+  "contactName": "macie.hartmann",
+  "contactEmail": "latanya.ritchie@hotmail.com",
+  "contactMobile": "814-959-5738",
+  "description": "2mv39b",
+  "tel": "rv0xiy"
 }'
 ```
 **Response-fields:**
@@ -16787,9 +16787,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4h4e23",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "81ch4m",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16839,9 +16839,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "u2v1ry",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "48gxgf",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16890,24 +16890,24 @@ tel|string|单位电话|false|-
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/organ/disable/{id}.do --data '{
   "ids": [
-    "dmhvmo"
+    "vh645a"
   ],
-  "organId": "95",
-  "organName": "julian.ortiz",
-  "organSName": "julian.ortiz",
-  "organCode": "58719",
-  "address": "Suite 395 2647 Romaguera Court， North Dewey， NE 11167",
-  "wlType": "8agq9b",
-  "wlTypeName": "julian.ortiz",
-  "priority": 30,
-  "delFlag": 9,
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "contactName": "julian.ortiz",
-  "contactEmail": "columbus.ankunding@gmail.com",
-  "contactMobile": "1-508-337-4557",
-  "description": "kxt9uy",
-  "tel": "fz5dmq"
+  "organId": "17",
+  "organName": "macie.hartmann",
+  "organSName": "macie.hartmann",
+  "organCode": "22134",
+  "address": "914 MacGyver Walk， East Ling， AR 46738-5827",
+  "wlType": "pbm7cf",
+  "wlTypeName": "macie.hartmann",
+  "priority": 605,
+  "delFlag": 2,
+  "createTime": "2026-03-09 22:50:41",
+  "lastTime": "2026-03-09 22:50:41",
+  "contactName": "macie.hartmann",
+  "contactEmail": "latanya.ritchie@hotmail.com",
+  "contactMobile": "814-959-5738",
+  "description": "ha2p9l",
+  "tel": "25qtpe"
 }'
 ```
 **Response-fields:**
@@ -16927,9 +16927,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "y5hxjl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "q5p68t",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -16992,7 +16992,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?areaCode=58719&name=julian.ortiz&sname=julian.ortiz&deptId=21&endTime=2026-03-09 00:08:33&creatorId=95&foreignId=95&spare1=mmu9gr&startTime=2026-03-09 00:08:33&organId=95&isOrganLevel=true&createType=496&description=7gv42r&isVirtual=true&imagePath=oq43sp&appId=95&isLeaf=true&type=moihdi&delFlag=9&limit=10&depttypeId=84&isDisabled=true&leaderId=95&status=12&q=8csxwz&page=1&spare2=46fat9&organLeader=gj66lx&parentId=997&searchCode=58719&leaderMobile=1-508-337-4557&orderBy=350
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list.do?page=1&organId=17&isLeaf=true&description=374ltz&isDisabled=true&sname=macie.hartmann&areaCode=22134&deptId=191&isOrganLevel=true&orderBy=171&parentId=617&depttypeId=970&isVirtual=true&name=macie.hartmann&endTime=2026-03-09 22:49:14&limit=10&leaderMobile=814-959-5738&type=nqbjoy&searchCode=22134&createType=150&foreignId=17&organLeader=8xhn6h&status=100&creatorId=17&delFlag=2&startTime=2026-03-09 22:49:14&q=s005hl&appId=17&spare1=hcvdvp&spare2=zb2r1o&imagePath=2npwku&leaderId=17
 ```
 **Response-fields:**
 
@@ -17027,22 +17027,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "pageNum": 900,
+    "pageNum": 827,
     "pageSize": 10,
-    "startRow": 181,
-    "endRow": 861,
-    "total": 142,
-    "pages": 448,
+    "startRow": 290,
+    "endRow": 915,
+    "total": 792,
+    "pages": 738,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "o0prdd",
-    "orderBy": "kxlgjf",
+    "countColumn": "c5q9wd",
+    "orderBy": "hyu4y1",
     "orderByOnly": true,
     "boundSqlInterceptor": {}
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17104,7 +17104,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?organId=95&isOrganLevel=true&deptId=740&sname=julian.ortiz&isVirtual=true&foreignId=95&leaderId=95&q=m8b7s7&searchCode=58719&areaCode=58719&leaderMobile=1-508-337-4557&type=dqktwq&spare2=8ve4df&createType=764&name=julian.ortiz&imagePath=8lgfs4&parentId=763&organLeader=jgvrcm&startTime=2026-03-09 00:08:33&page=1&isDisabled=true&status=419&depttypeId=692&isLeaf=true&creatorId=95&limit=10&delFlag=9&description=ytrtki&appId=95&orderBy=450&endTime=2026-03-09 00:08:33&spare1=m1z24e
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/page.do?searchCode=22134&limit=10&appId=17&endTime=2026-03-09 22:49:14&spare1=g906va&organLeader=a5cf47&isVirtual=true&deptId=943&q=p0o25l&name=macie.hartmann&organId=17&isLeaf=true&description=vwfzio&isOrganLevel=true&areaCode=22134&startTime=2026-03-09 22:49:14&parentId=381&type=h9wdjh&leaderMobile=814-959-5738&page=1&imagePath=051m6h&status=854&depttypeId=871&sname=macie.hartmann&isDisabled=true&creatorId=17&delFlag=2&orderBy=525&spare2=ql8fdh&foreignId=17&createType=341&leaderId=17
 ```
 **Response-fields:**
 
@@ -17139,22 +17139,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "pageNum": 966,
+    "pageNum": 986,
     "pageSize": 10,
-    "startRow": 223,
-    "endRow": 435,
-    "total": 379,
-    "pages": 481,
+    "startRow": 13,
+    "endRow": 297,
+    "total": 130,
+    "pages": 335,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "kbo0ui",
-    "orderBy": "56oqg3",
+    "countColumn": "he08qb",
+    "orderBy": "fzr2qy",
     "orderByOnly": true,
     "boundSqlInterceptor": {}
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17185,7 +17185,7 @@ deptId|int64| 部门ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/229.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/list/exclude/234.do
 ```
 **Response-fields:**
 
@@ -17238,42 +17238,42 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "id": 308,
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "parentId": 5,
-      "appId": "95",
-      "depttypeId": 780,
-      "foreignId": "95",
-      "createType": 54,
-      "type": "z206rx",
-      "name": "julian.ortiz",
-      "sname": "julian.ortiz",
-      "areaCode": "58719",
-      "organLeader": "q3cg75",
-      "leaderId": "95",
-      "leaderMobile": "1-508-337-4557",
+      "id": 964,
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "parentId": 886,
+      "appId": "17",
+      "depttypeId": 626,
+      "foreignId": "17",
+      "createType": 22,
+      "type": "dvakig",
+      "name": "macie.hartmann",
+      "sname": "macie.hartmann",
+      "areaCode": "22134",
+      "organLeader": "svomaa",
+      "leaderId": "17",
+      "leaderMobile": "814-959-5738",
       "isOrganLevel": true,
       "isVirtual": true,
       "isLeaf": true,
       "isDisabled": true,
-      "searchCode": "58719",
-      "imagePath": "1qwn06",
-      "priority": 527,
-      "status": 808,
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:43",
-      "lastTime": "2026-03-09 00:09:43",
-      "delFlag": 9,
-      "description": "7cqx89",
-      "spare1": "lqrdhm",
-      "spare2": "uak98m",
-      "parentName": "julian.ortiz",
-      "childNum": "23jv63"
+      "searchCode": "22134",
+      "imagePath": "z7671s",
+      "priority": 238,
+      "status": 137,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:29",
+      "lastTime": "2026-03-09 22:50:29",
+      "delFlag": 2,
+      "description": "h828mh",
+      "spare1": "8scvpn",
+      "spare2": "ezmpcg",
+      "parentName": "macie.hartmann",
+      "childNum": "j3fxv0"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17304,7 +17304,7 @@ deptId|int64| 部门ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/259.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/22.do
 ```
 **Response-fields:**
 
@@ -17356,41 +17356,41 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "id": 894,
-    "organId": "95",
-    "organName": "julian.ortiz",
-    "parentId": 96,
-    "appId": "95",
-    "depttypeId": 416,
-    "foreignId": "95",
-    "createType": 59,
-    "type": "z0k2kb",
-    "name": "julian.ortiz",
-    "sname": "julian.ortiz",
-    "areaCode": "58719",
-    "organLeader": "rsltkj",
-    "leaderId": "95",
-    "leaderMobile": "1-508-337-4557",
+    "id": 348,
+    "organId": "17",
+    "organName": "macie.hartmann",
+    "parentId": 9,
+    "appId": "17",
+    "depttypeId": 380,
+    "foreignId": "17",
+    "createType": 129,
+    "type": "7c7jx9",
+    "name": "macie.hartmann",
+    "sname": "macie.hartmann",
+    "areaCode": "22134",
+    "organLeader": "bktmf7",
+    "leaderId": "17",
+    "leaderMobile": "814-959-5738",
     "isOrganLevel": true,
     "isVirtual": true,
     "isLeaf": true,
     "isDisabled": true,
-    "searchCode": "58719",
-    "imagePath": "gnf4aw",
-    "priority": 44,
-    "status": 761,
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:43",
-    "lastTime": "2026-03-09 00:09:43",
-    "delFlag": 9,
-    "description": "ysixga",
-    "spare1": "azauaf",
-    "spare2": "pzj91s",
-    "parentName": "julian.ortiz",
-    "childNum": "vp23tj"
+    "searchCode": "22134",
+    "imagePath": "2la2ch",
+    "priority": 625,
+    "status": 283,
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:29",
+    "lastTime": "2026-03-09 22:50:29",
+    "delFlag": 2,
+    "description": "nromy1",
+    "spare1": "citx0k",
+    "spare2": "z581bp",
+    "parentName": "macie.hartmann",
+    "childNum": "iqt8cj"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17452,7 +17452,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?creatorId=95&page=1&type=14ju6n&sname=julian.ortiz&isOrganLevel=true&isVirtual=true&name=julian.ortiz&parentId=924&status=257&spare1=lnhq0d&appId=95&delFlag=9&isLeaf=true&depttypeId=333&areaCode=58719&isDisabled=true&searchCode=58719&imagePath=f9r0sz&q=z8x4st&limit=10&endTime=2026-03-09 00:08:33&foreignId=95&leaderId=95&organId=95&orderBy=328&createType=670&leaderMobile=1-508-337-4557&spare2=444uwl&deptId=857&organLeader=phcytl&description=qvyuki&startTime=2026-03-09 00:08:33
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/tree.do?description=xjlp5l&isOrganLevel=true&deptId=437&delFlag=2&leaderMobile=814-959-5738&isLeaf=true&depttypeId=167&orderBy=488&limit=10&areaCode=22134&leaderId=17&sname=macie.hartmann&startTime=2026-03-09 22:49:14&q=5aueyc&foreignId=17&type=4mrh5j&spare1=h7962h&imagePath=qsiud7&organId=17&spare2=xeyys0&createType=482&name=macie.hartmann&endTime=2026-03-09 22:49:14&searchCode=22134&page=1&isDisabled=true&creatorId=17&isVirtual=true&parentId=213&organLeader=s5f16v&status=645&appId=17
 ```
 **Response-fields:**
 
@@ -17482,11 +17482,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "ldhowm",
-      "id": "95",
-      "parentId": "95",
-      "extId": "95",
-      "href": "y1z9cm",
+      "title": "onnqmj",
+      "id": "17",
+      "parentId": "17",
+      "extId": "17",
+      "href": "ezzhm8",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -17497,8 +17497,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17559,35 +17559,35 @@ children|array|子部门|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:43",
-  "lastTime": "2026-03-09 00:09:43",
-  "id": 873,
-  "organId": "95",
-  "parentId": 25,
-  "appId": "95",
-  "depttypeId": 13,
-  "foreignId": "95",
-  "createType": 848,
-  "type": "57mn14",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "areaCode": "58719",
-  "organLeader": "enkvyu",
-  "leaderId": "95",
-  "leaderMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:29",
+  "lastTime": "2026-03-09 22:50:29",
+  "id": 849,
+  "organId": "17",
+  "parentId": 303,
+  "appId": "17",
+  "depttypeId": 49,
+  "foreignId": "17",
+  "createType": 375,
+  "type": "js14a6",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "areaCode": "22134",
+  "organLeader": "hsx333",
+  "leaderId": "17",
+  "leaderMobile": "814-959-5738",
   "isOrganLevel": true,
   "isVirtual": true,
   "isLeaf": true,
   "isDisabled": true,
-  "searchCode": "58719",
-  "imagePath": "iznzmg",
-  "priority": 302,
-  "status": 771,
-  "delFlag": 9,
-  "description": "udjg63",
-  "spare1": "gt8yar",
-  "spare2": "6ucupc",
+  "searchCode": "22134",
+  "imagePath": "t5iuze",
+  "priority": 585,
+  "status": 531,
+  "delFlag": 2,
+  "description": "9bv4ul",
+  "spare1": "qpmmit",
+  "spare2": "0veixd",
   "children": [
     {
       "$ref": ".."
@@ -17612,9 +17612,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "gxe5cj",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "x8e4ek",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17675,35 +17675,35 @@ children|array|子部门|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:43",
-  "lastTime": "2026-03-09 00:09:43",
-  "id": 980,
-  "organId": "95",
-  "parentId": 42,
-  "appId": "95",
-  "depttypeId": 511,
-  "foreignId": "95",
-  "createType": 121,
-  "type": "pukq65",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "areaCode": "58719",
-  "organLeader": "2q4wl6",
-  "leaderId": "95",
-  "leaderMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:29",
+  "lastTime": "2026-03-09 22:50:29",
+  "id": 882,
+  "organId": "17",
+  "parentId": 408,
+  "appId": "17",
+  "depttypeId": 760,
+  "foreignId": "17",
+  "createType": 447,
+  "type": "jl8cti",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "areaCode": "22134",
+  "organLeader": "1j7kug",
+  "leaderId": "17",
+  "leaderMobile": "814-959-5738",
   "isOrganLevel": true,
   "isVirtual": true,
   "isLeaf": true,
   "isDisabled": true,
-  "searchCode": "58719",
-  "imagePath": "0qcsj9",
-  "priority": 6,
-  "status": 439,
-  "delFlag": 9,
-  "description": "2ry7yf",
-  "spare1": "85cpdf",
-  "spare2": "hi7cw7",
+  "searchCode": "22134",
+  "imagePath": "rkotba",
+  "priority": 952,
+  "status": 467,
+  "delFlag": 2,
+  "description": "i4jc09",
+  "spare1": "bqyz78",
+  "spare2": "x70sr2",
   "children": [
     {
       "$ref": ".."
@@ -17728,9 +17728,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "8og1nn",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "t7egnw",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17780,9 +17780,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "somhs0",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "52u43d",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17843,35 +17843,35 @@ children|array|子部门|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/dept/disable/{id}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:43",
-  "lastTime": "2026-03-09 00:09:43",
-  "id": 464,
-  "organId": "95",
-  "parentId": 142,
-  "appId": "95",
-  "depttypeId": 54,
-  "foreignId": "95",
-  "createType": 933,
-  "type": "kdcy4z",
-  "name": "julian.ortiz",
-  "sname": "julian.ortiz",
-  "areaCode": "58719",
-  "organLeader": "crg8t2",
-  "leaderId": "95",
-  "leaderMobile": "1-508-337-4557",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:30",
+  "lastTime": "2026-03-09 22:50:30",
+  "id": 178,
+  "organId": "17",
+  "parentId": 623,
+  "appId": "17",
+  "depttypeId": 58,
+  "foreignId": "17",
+  "createType": 679,
+  "type": "ngeizh",
+  "name": "macie.hartmann",
+  "sname": "macie.hartmann",
+  "areaCode": "22134",
+  "organLeader": "nxnwrk",
+  "leaderId": "17",
+  "leaderMobile": "814-959-5738",
   "isOrganLevel": true,
   "isVirtual": true,
   "isLeaf": true,
   "isDisabled": true,
-  "searchCode": "58719",
-  "imagePath": "kb6rol",
-  "priority": 753,
-  "status": 810,
-  "delFlag": 9,
-  "description": "edufub",
-  "spare1": "n2cr2n",
-  "spare2": "06azla",
+  "searchCode": "22134",
+  "imagePath": "1jflk0",
+  "priority": 325,
+  "status": 620,
+  "delFlag": 2,
+  "description": "1bt08z",
+  "spare1": "vtt6lx",
+  "spare2": "kka4na",
   "children": [
     {
       "$ref": ".."
@@ -17896,9 +17896,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "xxpccs",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "cwyxa8",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -17927,11 +17927,11 @@ appId|string|所在应用ID|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login.do --data '{
-  "username": "julian.ortiz",
-  "password": "ikkfim",
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-  "appId": "95"
+  "username": "macie.hartmann",
+  "password": "15u3ok",
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+  "appId": "17"
 }'
 ```
 **Response-fields:**
@@ -17957,14 +17957,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "userId": "95",
-    "token": "67nr8m",
-    "updateTime": "2026-03-09 00:09:45",
-    "expireTime": "2026-03-09 00:09:45",
+    "userId": "17",
+    "token": "7vcjko",
+    "updateTime": "2026-03-09 22:50:32",
+    "expireTime": "2026-03-09 22:50:32",
     "mobileConfirm": true
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18090,60 +18090,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:45",
-      "lastTime": "2026-03-09 00:09:45",
-      "id": 284,
-      "userId": "95",
-      "deptId": 128,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "name": "julian.ortiz",
-      "username": "julian.ortiz",
-      "nickName": "shane.roberts",
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "3hee78",
-      "password": "p8mymd",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:32",
+      "lastTime": "2026-03-09 22:50:32",
+      "id": 553,
+      "userId": "17",
+      "deptId": 24,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "name": "macie.hartmann",
+      "username": "macie.hartmann",
+      "nickName": "jin.wolff",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "0lo7kd",
+      "password": "d9rqi7",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 999,
-      "delFlag": 9,
-      "lastLoginIp": "207.227.60.208",
-      "lastLoginTime": "2026-03-09 00:09:45",
-      "description": "h4bh1v",
+      "status": 510,
+      "delFlag": 2,
+      "lastLoginIp": "14.83.204.161",
+      "lastLoginTime": "2026-03-09 22:50:32",
+      "description": "j8j0xw",
       "dept": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:45",
-        "lastTime": "2026-03-09 00:09:45",
-        "id": 846,
-        "organId": "95",
-        "parentId": 617,
-        "appId": "95",
-        "depttypeId": 945,
-        "foreignId": "95",
-        "createType": 823,
-        "type": "phnaqj",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "areaCode": "58719",
-        "organLeader": "mjajhp",
-        "leaderId": "95",
-        "leaderMobile": "1-508-337-4557",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:32",
+        "lastTime": "2026-03-09 22:50:32",
+        "id": 775,
+        "organId": "17",
+        "parentId": 78,
+        "appId": "17",
+        "depttypeId": 743,
+        "foreignId": "17",
+        "createType": 170,
+        "type": "vj1p4r",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "areaCode": "22134",
+        "organLeader": "bptuuf",
+        "leaderId": "17",
+        "leaderMobile": "814-959-5738",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "58719",
-        "imagePath": "gy1qsx",
-        "priority": 394,
-        "status": 912,
-        "delFlag": 9,
-        "description": "bxmf9b",
-        "spare1": "x1lnbq",
-        "spare2": "s4p7oa",
+        "searchCode": "22134",
+        "imagePath": "q9vq0s",
+        "priority": 359,
+        "status": 820,
+        "delFlag": 2,
+        "description": "r3nnb2",
+        "spare1": "9pxo6l",
+        "spare2": "nr02yo",
         "children": [
           {
             "$ref": ".."
@@ -18152,54 +18152,54 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:45",
-          "lastTime": "2026-03-09 00:09:45",
-          "id": 32,
-          "roletypeId": "95",
-          "appId": "95",
-          "name": "julian.ortiz",
-          "code": "58719",
-          "priority": 960,
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:32",
+          "lastTime": "2026-03-09 22:50:32",
+          "id": 496,
+          "roletypeId": "17",
+          "appId": "17",
+          "name": "macie.hartmann",
+          "code": "22134",
+          "priority": 612,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 583,
-          "description": "ci8t59",
-          "areaType": "wraglu"
+          "status": 977,
+          "description": "t0wop8",
+          "areaType": "b6qaes"
         }
       ],
       "roleIds": [
-        971
+        365
       ],
       "positionIds": [
-        "6ikhce"
+        "9s01aq"
       ],
-      "roleId": 553,
+      "roleId": 931,
       "userRoleList": [
         {
-          "id": 908,
-          "deptId": 225,
-          "deptName": "julian.ortiz",
-          "organId": "95",
-          "organName": "julian.ortiz",
-          "roleId": 497,
-          "roleName": "julian.ortiz",
-          "adminId": 715
+          "id": 915,
+          "deptId": 824,
+          "deptName": "macie.hartmann",
+          "organId": "17",
+          "organName": "macie.hartmann",
+          "roleId": 58,
+          "roleName": "macie.hartmann",
+          "adminId": 727
         }
       ],
-      "code": "58719",
-      "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+      "code": "22134",
+      "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
     },
     "roles": [
-      "4o34cm"
+      "xkd1uh"
     ],
     "permissions": [
-      "tlbk6s"
+      "3knof1"
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18257,33 +18257,33 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "accountId": "95",
-    "areaId": 972,
-    "groupId": 67,
-    "positionId": "95",
-    "tplSolution": "7leiyy",
+    "accountId": "17",
+    "areaId": 865,
+    "groupId": 694,
+    "positionId": "17",
+    "tplSolution": "bebj3p",
     "menuList": [
       {
-        "id": 449,
-        "parentId": 371,
-        "name": "julian.ortiz",
-        "ename": "julian.ortiz",
-        "type": "26ctbv",
-        "perms": "qn5qwx",
-        "menuLevel": 899,
-        "urlType": "0d094u",
-        "url": "www.kandace-stamm.org",
-        "menuSeq": "7xkp73",
-        "icon": "b5bulk",
-        "imagePath": "lcda0l",
-        "css": "0w6k4q",
-        "description": "xddhlk",
-        "todoTotalApi": "4x16aj"
+        "id": 796,
+        "parentId": 725,
+        "name": "macie.hartmann",
+        "ename": "macie.hartmann",
+        "type": "gcwi4h",
+        "perms": "wcv7ce",
+        "menuLevel": 585,
+        "urlType": "n8vjgk",
+        "url": "www.velia-kozey.biz",
+        "menuSeq": "fbvlu1",
+        "icon": "6r9uqe",
+        "imagePath": "xegbei",
+        "css": "gvyuaj",
+        "description": "n5bfet",
+        "todoTotalApi": "012mqx"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18302,93 +18302,96 @@ timestamp|string|返回时间戳字符串|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-method|string|No comments found.|false|-
 userPrincipal|object|No comments found.|false|-
 └─name|string|No comments found.|false|-
+method|string|No comments found.|false|-
+headerNames|object|No comments found.|false|-
+trailerFields|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 session|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─id|string|No comments found.|false|-
 └─creationTime|int64|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─maxInactiveInterval|int32|No comments found.|false|-
 └─lastAccessedTime|int64|No comments found.|false|-
 └─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
 └─new|boolean|No comments found.|false|-
-└─maxInactiveInterval|int32|No comments found.|false|-
-headerNames|object|No comments found.|false|-
-trailerFields|map|No comments found.|false|-
-└─any object|object|any object.|false|-
-requestURI|string|No comments found.|false|-
-pathTranslated|string|No comments found.|false|-
-remoteUser|string|No comments found.|false|-
-requestURL|object|No comments found.|false|-
-└─empty|boolean|No comments found.|false|-
-└─value|array|No comments found.|false|-
-└─coder|int8|No comments found.|false|-
-└─count|int32|No comments found.|false|-
-authType|string|No comments found.|false|-
-queryString|string|No comments found.|false|-
-servletPath|string|No comments found.|false|-
-contextPath|string|No comments found.|false|-
-pathInfo|string|No comments found.|false|-
 parts|array|No comments found.|false|-
-requestedSessionIdValid|boolean|No comments found.|false|-
-httpServletMapping|object|No comments found.|false|-
-└─pattern|string|No comments found.|false|-
-└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
-└─servletName|string|No comments found.|false|-
-└─matchValue|string|No comments found.|false|-
-requestedSessionIdFromCookie|boolean|No comments found.|false|-
-trailerFieldsReady|boolean|No comments found.|false|-
-requestedSessionIdFromURL|boolean|No comments found.|false|-
-requestedSessionId|string|No comments found.|false|-
 cookies|array|No comments found.|false|-
 └─name|string|No comments found.|false|-
 └─value|string|No comments found.|false|-
 └─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+httpServletMapping|object|No comments found.|false|-
+└─pattern|string|No comments found.|false|-
+└─matchValue|string|No comments found.|false|-
+└─servletName|string|No comments found.|false|-
+└─mappingMatch|enum|null<br/>CONTEXT_ROOT<br/>DEFAULT<br/>EXACT<br/>EXTENSION<br/>PATH<br/>|false|-
+requestedSessionId|string|No comments found.|false|-
+requestedSessionIdFromURL|boolean|No comments found.|false|-
+requestedSessionIdFromCookie|boolean|No comments found.|false|-
+requestedSessionIdValid|boolean|No comments found.|false|-
+trailerFieldsReady|boolean|No comments found.|false|-
+authType|string|No comments found.|false|-
+pathInfo|string|No comments found.|false|-
+pathTranslated|string|No comments found.|false|-
+servletPath|string|No comments found.|false|-
+requestURL|object|No comments found.|false|-
+└─empty|boolean|No comments found.|false|-
+└─value|array|No comments found.|false|-
+└─coder|int8|No comments found.|false|-
+└─count|int32|No comments found.|false|-
+contextPath|string|No comments found.|false|-
+remoteUser|string|No comments found.|false|-
+requestURI|string|No comments found.|false|-
+queryString|string|No comments found.|false|-
+contentLengthLong|int64|No comments found.|false|-
+contentType|string|No comments found.|false|-
+localName|string|No comments found.|false|-
+attributeNames|object|No comments found.|false|-
+parameterNames|object|No comments found.|false|-
+parameterMap|map|No comments found.|false|-
+└─any object|object|any object.|false|-
 scheme|string|No comments found.|false|-
 inputStream|object|No comments found.|false|-
 protocol|string|No comments found.|false|-
 locale|object|No comments found.|false|-
 contentLength|int32|No comments found.|false|-
-contentLengthLong|int64|No comments found.|false|-
-contentType|string|No comments found.|false|-
-localName|string|No comments found.|false|-
-attributeNames|object|No comments found.|false|-
-parameterMap|map|No comments found.|false|-
-└─any object|object|any object.|false|-
+characterEncoding|string|No comments found.|false|-
+localPort|int32|No comments found.|false|-
 reader|object|No comments found.|false|-
 └─lock|object|No comments found.|false|-
 └─skipBuffer|array|No comments found.|false|-
@@ -18402,65 +18405,70 @@ reader|object|No comments found.|false|-
 └─readAheadLimit|int32|No comments found.|false|-
 └─skipLF|boolean|No comments found.|false|-
 └─markedSkipLF|boolean|No comments found.|false|-
-parameterNames|object|No comments found.|false|-
+secure|boolean|No comments found.|false|-
 requestId|string|No comments found.|false|-
-characterEncoding|string|No comments found.|false|-
+remotePort|int32|No comments found.|false|-
+servletConnection|object|No comments found.|false|-
+└─protocol|string|No comments found.|false|-
+└─secure|boolean|No comments found.|false|-
+└─connectionId|string|No comments found.|false|-
+└─protocolConnectionId|string|No comments found.|false|-
+protocolRequestId|string|No comments found.|false|-
+serverPort|int32|No comments found.|false|-
 serverName|string|No comments found.|false|-
+remoteAddr|string|No comments found.|false|-
+localAddr|string|No comments found.|false|-
 locales|object|No comments found.|false|-
-dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 servletContext|object|No comments found.|false|-
+└─attributeNames|object|No comments found.|false|-
 └─classLoader|object|No comments found.|false|-
 └─majorVersion|int32|No comments found.|false|-
 └─minorVersion|int32|No comments found.|false|-
-└─attributeNames|object|No comments found.|false|-
+└─sessionTimeout|int32|No comments found.|false|-
+└─serverInfo|string|No comments found.|false|-
 └─effectiveMajorVersion|int32|No comments found.|false|-
 └─effectiveMinorVersion|int32|No comments found.|false|-
-└─initParameterNames|object|No comments found.|false|-
-└─servletContextName|string|No comments found.|false|-
-└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
+└─responseCharacterEncoding|string|No comments found.|false|-
+└─requestCharacterEncoding|string|No comments found.|false|-
 └─filterRegistrations|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspPropertyGroups|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─taglibs|array|No comments found.|false|-
-└─defaultSessionTrackingModes|array|No comments found.|false|-
-└─responseCharacterEncoding|string|No comments found.|false|-
 └─virtualServerName|string|No comments found.|false|-
+└─servletContextName|string|No comments found.|false|-
+└─defaultSessionTrackingModes|array|No comments found.|false|-
+└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 └─effectiveSessionTrackingModes|array|No comments found.|false|-
+└─initParameterNames|object|No comments found.|false|-
 └─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─name|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─path|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributes|map|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─comment|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─domain|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─maxAge|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─httpOnly|boolean|No comments found.|false|-
 └─contextPath|string|No comments found.|false|-
-└─sessionTimeout|int32|No comments found.|false|-
-└─serverInfo|string|No comments found.|false|-
-asyncSupported|boolean|No comments found.|false|-
-asyncStarted|boolean|No comments found.|false|-
-localAddr|string|No comments found.|false|-
-remoteHost|string|No comments found.|false|-
-remoteAddr|string|No comments found.|false|-
-serverPort|int32|No comments found.|false|-
 asyncContext|object|No comments found.|false|-
 └─request|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─scheme|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─inputStream|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLength|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentLengthLong|int64|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterMap|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─reader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipBuffer|array|No comments found.|false|-
@@ -18472,59 +18480,56 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─readAheadLimit|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─skipLF|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─markedSkipLF|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─parameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locales|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContext|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─classLoader|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─majorVersion|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─minorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─attributeNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionTimeout|int32|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverInfo|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteAddr|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─serverPort|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMajorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveMinorVersion|int32|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─jspConfigDescriptor|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─responseCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─requestCharacterEncoding|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─filterRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─virtualServerName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletContextName|string|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─defaultSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletRegistrations|map|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─any object|object|any object.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─effectiveSessionTrackingModes|array|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─initParameterNames|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─sessionCookieConfig|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contextPath|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─request|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─timeout|int64|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─servletConnection|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocol|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolConnectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─connectionId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─protocolRequestId|string|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remotePort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─localPort|int32|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─secure|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncStarted|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─asyncSupported|boolean|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─remoteHost|string|No comments found.|false|-
 └─timeout|int64|No comments found.|false|-
 └─response|object|No comments found.|false|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─contentType|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─outputStream|object|No comments found.|false|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─locale|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writer|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─writeBuffer|array|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─lock|object|No comments found.|false|-
@@ -18536,19 +18541,14 @@ asyncContext|object|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─characterEncoding|string|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─committed|boolean|No comments found.|false|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─bufferSize|int32|No comments found.|false|-
-servletConnection|object|No comments found.|false|-
-└─protocol|string|No comments found.|false|-
-└─protocolConnectionId|string|No comments found.|false|-
-└─connectionId|string|No comments found.|false|-
-└─secure|boolean|No comments found.|false|-
-protocolRequestId|string|No comments found.|false|-
-remotePort|int32|No comments found.|false|-
-localPort|int32|No comments found.|false|-
-secure|boolean|No comments found.|false|-
+asyncStarted|boolean|No comments found.|false|-
+dispatcherType|enum|null<br/>FORWARD<br/>INCLUDE<br/>REQUEST<br/>ASYNC<br/>ERROR<br/>|false|-
+asyncSupported|boolean|No comments found.|false|-
+remoteHost|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -i https://linlan.net/eframe_backend/platLogin.do --data 'asyncContext.request.dispatcherType=FORWARD&requestURL.count=931&asyncContext.request.servletConnection.secure=true&asyncSupported=true&session.servletContext.sessionCookieConfig.httpOnly=true&httpServletMapping.mappingMatch=CONTEXT_ROOT&session.servletContext.effectiveMajorVersion=408&method=mhr1q0&servletContext.requestCharacterEncoding=2xzzsq&localPort=637&session.servletContext.sessionCookieConfig.name=julian.ortiz&asyncContext.timeout=376&asyncContext.request.requestId=95&servletContext.sessionCookieConfig.name=julian.ortiz&asyncContext.request.servletContext.requestCharacterEncoding=nxoeiu&characterEncoding=omc855&asyncContext.request.reader.markedChar=896&cookies.=vv13j0&cookies.=vv13j0&session.servletContext.servletContextName=julian.ortiz&cookies.=julian.ortiz&cookies.=julian.ortiz&session.servletContext.sessionCookieConfig.path=uf3ijg&servletContext.virtualServerName=julian.ortiz&asyncContext.request.localName=julian.ortiz&asyncContext.response.characterEncoding=bsa8z2&reader.skipBuffer=j&reader.skipBuffer=j&queryString=1coi6d&contextPath=6i8qi9&servletContext.sessionCookieConfig.path=vqyhzd&asyncContext.request.servletContext.serverInfo=3azuf9&servletContext.sessionCookieConfig.httpOnly=true&servletContext.sessionCookieConfig.comment=o12bzu&requestURL.coder=9&servletContext.sessionTimeout=548&pathInfo=0obr7l&remoteAddr=cc7w1q&asyncContext.request.servletContext.minorVersion=469&asyncContext.request.secure=true&requestId=95&asyncContext.response.writer.autoFlush=true&asyncContext.request.contentType=gy4u54&servletConnection.protocolConnectionId=95&servletConnection.secure=true&protocolRequestId=95&reader.readAheadLimit=10&serverName=julian.ortiz&reader.skipLF=true&asyncContext.response.contentType=mbexgk&asyncContext.request.characterEncoding=6p71q7&session.servletContext.serverInfo=merc3q&asyncContext.request.reader.nextChar=428&servletContext.sessionCookieConfig.maxAge=14&servletContext.serverInfo=f0zmi1&requestedSessionIdValid=true&servletContext.majorVersion=281&asyncContext.request.servletContext.majorVersion=933&asyncContext.request.servletContext.virtualServerName=julian.ortiz&session.servletContext.sessionCookieConfig.domain=hirthe.com&pathTranslated=nhx984&requestURL.empty=true&servletContext.sessionCookieConfig.domain=hirthe.com&asyncContext.request.remotePort=550&asyncContext.request.contentLength=762&asyncContext.request.localAddr=b79du4&session.creationTime=1772986113769&secure=true&serverPort=718&asyncContext.request.remoteAddr=rnat6m&asyncContext.request.protocol=8654d4&asyncContext.response.bufferSize=10&session.lastAccessedTime=1772986113769&session.maxInactiveInterval=100&asyncContext.request.servletConnection.protocol=ohuy8z&session.servletContext.contextPath=ggzxkh&contentType=el76hf&servletContext.responseCharacterEncoding=03d3wg&session.servletContext.sessionCookieConfig.comment=k7c84d&asyncContext.request.localPort=207&asyncContext.request.servletContext.servletContextName=julian.ortiz&reader.nChars=166&asyncContext.request.asyncSupported=true&requestURL.value=36&requestURL.value=36&servletPath=8eiipe&asyncContext.request.contentLengthLong=506&asyncContext.request.reader.markedSkipLF=true&userPrincipal.name=julian.ortiz&asyncStarted=true&asyncContext.request.remoteHost=4xp5pf&asyncContext.request.servletContext.effectiveMajorVersion=121&asyncContext.request.asyncContext.timeout=855&session.servletContext.sessionCookieConfig.maxAge=14&session.servletContext.minorVersion=374&protocol=3dt7j4&session.id=95&requestURI=y7ufis&authType=t7dtev&session.servletContext.sessionCookieConfig.secure=true&servletContext.effectiveMajorVersion=754&servletContext.servletContextName=julian.ortiz&session.servletContext.sessionTimeout=500&asyncContext.request.reader.nChars=559&scheme=n1tb8r&session.servletContext.requestCharacterEncoding=sycf00&asyncContext.request.asyncStarted=true&asyncContext.request.protocolRequestId=95&reader.nextChar=415&httpServletMapping.pattern=zxwsjx&reader.markedSkipLF=true&dispatcherType=FORWARD&servletContext.effectiveMinorVersion=957&httpServletMapping.servletName=julian.ortiz&requestedSessionIdFromCookie=true&asyncContext.request.servletContext.sessionTimeout=718&reader.markedChar=300&httpServletMapping.matchValue=1ggp5g&localAddr=tz0cag&servletContext.minorVersion=73&asyncContext.request.reader.skipLF=true&asyncContext.request.servletContext.effectiveMinorVersion=926&asyncContext.request.serverName=julian.ortiz&asyncContext.request.servletContext.responseCharacterEncoding=4jixeh&servletConnection.protocol=u8l7pe&servletContext.contextPath=o3oijw&remoteHost=lfqnu1&asyncContext.request.servletConnection.connectionId=95&asyncContext.response.writer.trouble=true&asyncContext.request.servletContext.contextPath=l5w5p5&asyncContext.request.reader.readAheadLimit=10&session.servletContext.responseCharacterEncoding=meg3lo&asyncContext.request.servletConnection.protocolConnectionId=95&session.servletContext.effectiveMinorVersion=57&session.servletContext.virtualServerName=julian.ortiz&trailerFieldsReady=true&asyncContext.request.scheme=2n5hx3&requestedSessionId=95&requestedSessionIdFromURL=true&contentLength=761&session.servletContext.majorVersion=237&reader.cb=9&reader.cb=9&asyncContext.request.serverPort=628&asyncContext.response.committed=true&remotePort=674&remoteUser=72q37u&localName=julian.ortiz&session.new=true&servletContext.sessionCookieConfig.secure=true&servletConnection.connectionId=95&contentLengthLong=874'
+curl -X POST -k -i https://linlan.net/eframe_backend/platLogin.do --data 'asyncContext.request.reader.markedSkipLF=true&servletContext.minorVersion=74&reader.cb=r&reader.cb=r&reader.nChars=564&asyncContext.request.scheme=90lvry&asyncContext.request.servletContext.requestCharacterEncoding=4wjpr6&session.servletContext.sessionCookieConfig.secure=true&userPrincipal.name=macie.hartmann&remoteAddr=e6ng2v&asyncContext.request.servletContext.contextPath=86ivze&protocol=75jqvv&queryString=2ha9cd&asyncContext.response.writer.trouble=true&reader.nextChar=305&session.lastAccessedTime=1773067754226&reader.skipLF=true&servletContext.sessionCookieConfig.maxAge=16&authType=zci3hu&pathInfo=wsrb7j&pathTranslated=zugen0&requestURL.coder=116&requestURL.value=50&requestURL.value=50&session.creationTime=1773067754226&asyncContext.request.servletContext.effectiveMinorVersion=771&asyncContext.response.committed=true&remoteUser=8jueix&servletContext.sessionCookieConfig.comment=azn2m9&asyncContext.request.servletConnection.protocol=m3fkkz&session.new=true&remotePort=632&contentLengthLong=859&requestURL.empty=true&serverPort=87&session.servletContext.effectiveMajorVersion=791&servletContext.sessionCookieConfig.httpOnly=true&asyncContext.request.reader.nChars=840&asyncContext.request.reader.nextChar=993&session.servletContext.effectiveMinorVersion=444&asyncContext.request.servletContext.serverInfo=j97tx8&servletConnection.secure=true&session.servletContext.serverInfo=gprii7&servletConnection.protocolConnectionId=17&session.servletContext.sessionTimeout=468&session.servletContext.virtualServerName=macie.hartmann&asyncContext.request.reader.skipLF=true&contentType=rs7l6p&asyncContext.response.characterEncoding=gnomn7&reader.markedSkipLF=true&session.servletContext.sessionCookieConfig.path=grwp8s&session.id=17&remoteHost=uch75j&session.servletContext.sessionCookieConfig.name=macie.hartmann&trailerFieldsReady=true&serverName=macie.hartmann&characterEncoding=u9numc&asyncContext.request.localPort=929&servletContext.effectiveMajorVersion=588&asyncContext.request.servletContext.majorVersion=250&asyncContext.request.asyncContext.timeout=326&servletContext.responseCharacterEncoding=8db44t&requestURL.count=615&asyncContext.timeout=567&localPort=283&dispatcherType=FORWARD&session.servletContext.responseCharacterEncoding=sr49b2&asyncContext.request.contentLengthLong=613&asyncContext.response.contentType=cayr1w&servletConnection.connectionId=17&asyncContext.request.servletConnection.secure=true&servletContext.majorVersion=844&contextPath=xfhdzo&secure=true&servletContext.servletContextName=macie.hartmann&servletContext.serverInfo=q1ztse&reader.skipBuffer=4&reader.skipBuffer=4&servletContext.requestCharacterEncoding=pfqdpw&asyncContext.request.contentType=4428l6&session.servletContext.servletContextName=macie.hartmann&reader.readAheadLimit=10&asyncContext.request.secure=true&asyncContext.request.servletContext.effectiveMajorVersion=893&asyncContext.request.reader.readAheadLimit=10&asyncContext.request.protocol=94u5n1&servletConnection.protocol=0qoc7g&asyncContext.request.reader.markedChar=886&asyncContext.request.remoteAddr=qf7uuz&httpServletMapping.matchValue=36ag7s&cookies.=macie.hartmann&cookies.=macie.hartmann&session.servletContext.sessionCookieConfig.maxAge=16&asyncSupported=true&servletContext.sessionCookieConfig.secure=true&session.servletContext.sessionCookieConfig.comment=uilcb9&asyncContext.request.servletContext.sessionTimeout=803&localAddr=z86xch&asyncContext.request.servletConnection.protocolConnectionId=17&httpServletMapping.servletName=macie.hartmann&cookies.=woqio8&cookies.=woqio8&contentLength=321&httpServletMapping.pattern=5wzl6u&session.servletContext.majorVersion=596&method=88u84u&session.servletContext.sessionCookieConfig.httpOnly=true&reader.markedChar=662&servletPath=9ydg8o&asyncContext.request.remoteHost=did13d&session.servletContext.contextPath=klcicj&asyncContext.request.requestId=17&asyncContext.request.serverPort=487&asyncContext.response.writer.autoFlush=true&localName=macie.hartmann&requestId=17&asyncContext.request.servletConnection.connectionId=17&asyncContext.request.protocolRequestId=17&scheme=12ryfp&session.servletContext.minorVersion=653&servletContext.sessionTimeout=599&asyncContext.request.localName=macie.hartmann&requestedSessionIdFromCookie=true&asyncContext.request.localAddr=fa31eq&httpServletMapping.mappingMatch=CONTEXT_ROOT&requestedSessionIdValid=true&asyncContext.request.dispatcherType=FORWARD&asyncContext.request.servletContext.servletContextName=macie.hartmann&asyncContext.request.remotePort=447&session.servletContext.requestCharacterEncoding=hlb966&asyncContext.request.serverName=macie.hartmann&asyncContext.request.servletContext.responseCharacterEncoding=bppunj&requestedSessionId=17&servletContext.virtualServerName=macie.hartmann&servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.characterEncoding=jbmmqi&asyncContext.request.asyncStarted=true&servletContext.sessionCookieConfig.name=macie.hartmann&asyncContext.request.contentLength=30&asyncContext.request.servletContext.minorVersion=453&servletContext.contextPath=9dikal&requestedSessionIdFromURL=true&requestURI=jtut4j&servletContext.sessionCookieConfig.path=kfx571&asyncStarted=true&session.servletContext.sessionCookieConfig.domain=kutch.co&asyncContext.request.asyncSupported=true&asyncContext.request.servletContext.virtualServerName=macie.hartmann&session.maxInactiveInterval=114&protocolRequestId=17&asyncContext.response.bufferSize=10&servletContext.effectiveMinorVersion=994'
 ```
 **Response-fields:**
 
@@ -18594,40 +18594,40 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "id": "95",
+    "id": "17",
     "isAdmin": true,
     "isEncryt": true,
-    "publicKey": "ub8o6b",
-    "aesKey": "h836j2",
-    "clientId": "95",
-    "serverUrl": "www.kandace-stamm.org",
-    "serverConf1": "lqqfrl",
+    "publicKey": "a6s4lw",
+    "aesKey": "hhqo2s",
+    "clientId": "17",
+    "serverUrl": "www.velia-kozey.biz",
+    "serverConf1": "c66hx5",
     "appConf": {
-      "siteId": 985,
-      "appId": "95",
-      "topXzqhId": "95",
+      "siteId": 408,
+      "appId": "17",
+      "topXzqhId": "17",
       "appConfJson": {
-        "mapKey": "182uxn"
+        "mapKey": "2xuaac"
       }
     },
     "isWork": true,
     "workConfig": {
-      "layout": "jqw6hw",
+      "layout": "ggpou1",
       "siteInfo": {
-        "id": 699,
-        "appId": "95",
-        "areaCode": "58719",
-        "path": "rjc1w1",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "layout": "w5t97p",
-        "logoUrl": "www.kandace-stamm.org",
-        "cdnUrl": "www.kandace-stamm.org"
+        "id": 289,
+        "appId": "17",
+        "areaCode": "22134",
+        "path": "gjkqj8",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "layout": "m2ljzw",
+        "logoUrl": "www.velia-kozey.biz",
+        "cdnUrl": "www.velia-kozey.biz"
       }
     }
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18655,11 +18655,11 @@ appId|string|所在应用ID|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/third/ecorgan/login.do --data '{
-  "username": "julian.ortiz",
-  "password": "o1vz7g",
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-  "appId": "95"
+  "username": "macie.hartmann",
+  "password": "g89z2c",
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+  "appId": "17"
 }'
 ```
 **Response-fields:**
@@ -18685,14 +18685,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "userId": "95",
-    "token": "e5fqf8",
-    "updateTime": "2026-03-09 00:09:46",
-    "expireTime": "2026-03-09 00:09:46",
+    "userId": "17",
+    "token": "i42vrb",
+    "updateTime": "2026-03-09 22:50:32",
+    "expireTime": "2026-03-09 22:50:32",
     "mobileConfirm": true
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18716,7 +18716,7 @@ uuid|string|登录sessionId|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=4ec13ebe-addd-4cd2-92d1-aec9105972ba&code=58719
+curl -X GET -k -i https://linlan.net/eframe_backend/captcha/verify.do?uuid=6d4068f9-6101-49f3-9a46-fa6d27cef4a5&code=22134
 ```
 **Response-fields:**
 
@@ -18735,9 +18735,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "rknzpf",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "raycy2",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18787,8 +18787,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18837,14 +18837,14 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "cacheName": "julian.ortiz",
-      "cacheKey": "emzweq",
-      "cacheValue": "uh1of4",
-      "remark": "dov34m"
+      "cacheName": "macie.hartmann",
+      "cacheKey": "os7ysa",
+      "cacheValue": "7iiqkv",
+      "remark": "pqby29"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18874,7 +18874,7 @@ cacheName|string|    缓存名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/julian.ortiz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getKeys/macie.hartmann.do
 ```
 **Response-fields:**
 
@@ -18896,8 +18896,8 @@ timestamp|string|返回时间戳字符串|-
   "data": [
     {}
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18928,7 +18928,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/julian.ortiz/j5h6lb.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/getValue/macie.hartmann/rcdgd6.do
 ```
 **Response-fields:**
 
@@ -18952,13 +18952,13 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "cacheName": "julian.ortiz",
-    "cacheKey": "fyto77",
-    "cacheValue": "b8bcp0",
-    "remark": "vk4kdj"
+    "cacheName": "macie.hartmann",
+    "cacheKey": "e842yv",
+    "cacheValue": "mlglij",
+    "remark": "ya359q"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -18988,7 +18988,7 @@ cacheName|string|    缓存名称前缀|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/julian.ortiz.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheName/macie.hartmann.do
 ```
 **Response-fields:**
 
@@ -19007,9 +19007,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "bxop8m",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "hf5xpk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19039,7 +19039,7 @@ cacheKey|string|    缓存Key名称|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/g1o1bv.do
+curl -X DELETE -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/cache/clearCacheKey/tt02dj.do
 ```
 **Response-fields:**
 
@@ -19058,9 +19058,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "r3l4lf",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "rmbfo1",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19103,9 +19103,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7e5drn",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "uymm9w",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19149,7 +19149,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?orderBy=471&startTime=2026-03-09 00:08:33&menuName=julian.ortiz&visible=1yqfux&limit=10&menuId=484&delFlag=bw9vx6&endTime=2026-03-09 00:08:33&parentId=666&page=1&status=h0lxhk&currAppId=95&q=9kp98k&menuType=b4uosc
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/list.do?page=1&menuId=561&parentId=257&endTime=2026-03-09 22:49:14&currAppId=17&delFlag=x7b84o&limit=10&menuName=macie.hartmann&orderBy=579&visible=4sathb&q=nibn41&status=9nx8jj&startTime=2026-03-09 22:49:14&menuType=rs6zuq
 ```
 **Response-fields:**
 
@@ -19206,56 +19206,56 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "menuId": 910,
-      "menuName": "julian.ortiz",
-      "type": "qd4dtl",
-      "typeName": "julian.ortiz",
-      "parentName": "julian.ortiz",
-      "parentId": 403,
-      "priority": 475,
-      "path": "yzeogs",
-      "component": "5oekbm",
-      "query": "9s6xll",
-      "routeName": "julian.ortiz",
-      "isFrame": "ag2yq4",
-      "isCache": "eq25o8",
-      "menuType": "oenofl",
-      "menuTypeName": "julian.ortiz",
-      "visible": "uf06go",
-      "status": "oflho8",
-      "perms": "45pg3b",
-      "icon": "rs199u",
-      "imagePath": "u8d3yv",
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:46",
-      "lastTime": "2026-03-09 00:09:46",
+      "menuId": 967,
+      "menuName": "macie.hartmann",
+      "type": "ngiu91",
+      "typeName": "macie.hartmann",
+      "parentName": "macie.hartmann",
+      "parentId": 42,
+      "priority": 419,
+      "path": "zqo68e",
+      "component": "s37g0d",
+      "query": "4qqlxr",
+      "routeName": "macie.hartmann",
+      "isFrame": "d6z41c",
+      "isCache": "iwhnua",
+      "menuType": "t2cxbu",
+      "menuTypeName": "macie.hartmann",
+      "visible": "p0sjpp",
+      "status": "n143jt",
+      "perms": "rf3733",
+      "icon": "wg3iqw",
+      "imagePath": "j9zp4w",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:32",
+      "lastTime": "2026-03-09 22:50:32",
       "children": [
         {
           "$ref": ".."
         }
       ],
-      "childNum": 320,
-      "description": "bgscth",
-      "listJson": "2ttmda",
-      "delFlag": 9,
+      "childNum": 887,
+      "description": "0f6bij",
+      "listJson": "howkc0",
+      "delFlag": 2,
       "permsList": [
         {
-          "permsName": "julian.ortiz",
-          "permsStr": "t3ccg2"
+          "permsName": "macie.hartmann",
+          "permsStr": "cuorb6"
         }
       ],
       "buttonMenuList": [
         {
-          "id": "95",
-          "parentId": "95",
-          "code": "58719",
-          "name": "julian.ortiz"
+          "id": "17",
+          "parentId": "17",
+          "code": "22134",
+          "name": "macie.hartmann"
         }
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19298,7 +19298,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?endTime=2026-03-09 00:08:33&menuName=julian.ortiz&currAppId=95&delFlag=lfkbpq&parentId=338&status=gmxw4o&visible=efz77a&q=fmgs0s&menuType=s8yna5&orderBy=826&startTime=2026-03-09 00:08:33&page=1&limit=10&menuId=794
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/page.do?delFlag=lptwm1&currAppId=17&startTime=2026-03-09 22:49:14&status=1hl5sr&q=lmrpus&limit=10&parentId=241&orderBy=665&menuId=508&menuName=macie.hartmann&endTime=2026-03-09 22:49:14&visible=t2oiwk&menuType=yx08x5&page=1
 ```
 **Response-fields:**
 
@@ -19333,22 +19333,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "pageNum": 276,
+    "pageNum": 446,
     "pageSize": 10,
-    "startRow": 23,
-    "endRow": 777,
-    "total": 822,
-    "pages": 223,
+    "startRow": 111,
+    "endRow": 634,
+    "total": 77,
+    "pages": 176,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "ylwjca",
-    "orderBy": "tckhl4",
+    "countColumn": "6zpmcg",
+    "orderBy": "cni7h7",
     "orderByOnly": true,
     "boundSqlInterceptor": {}
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19378,7 +19378,7 @@ menuId|int64| 菜单ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/597.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/581.do
 ```
 **Response-fields:**
 
@@ -19434,55 +19434,55 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "menuId": 7,
-    "menuName": "julian.ortiz",
-    "type": "8ki0ir",
-    "typeName": "julian.ortiz",
-    "parentName": "julian.ortiz",
-    "parentId": 223,
-    "priority": 382,
-    "path": "14h36d",
-    "component": "r6t9sh",
-    "query": "94em7n",
-    "routeName": "julian.ortiz",
-    "isFrame": "nn1kj2",
-    "isCache": "6zuhok",
-    "menuType": "z3pk7p",
-    "menuTypeName": "julian.ortiz",
-    "visible": "uj5wtd",
-    "status": "e8riib",
-    "perms": "kp7cg0",
-    "icon": "id6l80",
-    "imagePath": "i8phs4",
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:46",
-    "lastTime": "2026-03-09 00:09:46",
+    "menuId": 801,
+    "menuName": "macie.hartmann",
+    "type": "hsqb5v",
+    "typeName": "macie.hartmann",
+    "parentName": "macie.hartmann",
+    "parentId": 226,
+    "priority": 781,
+    "path": "pipoqd",
+    "component": "pdi75a",
+    "query": "s26o95",
+    "routeName": "macie.hartmann",
+    "isFrame": "bkon60",
+    "isCache": "9kipdp",
+    "menuType": "w4qjp2",
+    "menuTypeName": "macie.hartmann",
+    "visible": "f9gfsb",
+    "status": "56cbhb",
+    "perms": "m2d22f",
+    "icon": "yk15z1",
+    "imagePath": "hfs1ll",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:32",
+    "lastTime": "2026-03-09 22:50:32",
     "children": [
       {
         "$ref": ".."
       }
     ],
-    "childNum": 671,
-    "description": "r4q5mm",
-    "listJson": "a1ko9k",
-    "delFlag": 9,
+    "childNum": 416,
+    "description": "5obfhk",
+    "listJson": "1k3pye",
+    "delFlag": 2,
     "permsList": [
       {
-        "permsName": "julian.ortiz",
-        "permsStr": "068s2e"
+        "permsName": "macie.hartmann",
+        "permsStr": "brheim"
       }
     ],
     "buttonMenuList": [
       {
-        "id": "95",
-        "parentId": "95",
-        "code": "58719",
-        "name": "julian.ortiz"
+        "id": "17",
+        "parentId": "17",
+        "code": "22134",
+        "name": "macie.hartmann"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19525,7 +19525,7 @@ delFlag|string|状态0正常1停用2已删除|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?endTime=2026-03-09 00:08:33&menuType=iwiiag&status=x076px&startTime=2026-03-09 00:08:33&menuId=912&limit=10&visible=3ff6y1&delFlag=p5ph6g&parentId=408&orderBy=43&currAppId=95&page=1&q=81dgo7&menuName=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeselect.do?parentId=374&orderBy=751&endTime=2026-03-09 22:49:14&status=f1nflq&delFlag=pqxtk1&startTime=2026-03-09 22:49:14&currAppId=17&limit=10&visible=iyp2wj&menuId=37&page=1&menuType=owmi1k&menuName=macie.hartmann&q=9ni847
 ```
 **Response-fields:**
 
@@ -19551,12 +19551,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      982
+      433
     ],
     "menus": [
       {
-        "id": 317,
-        "label": "khf624",
+        "id": 764,
+        "label": "kiqqpn",
         "children": [
           {
             "$ref": ".."
@@ -19565,8 +19565,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19630,7 +19630,7 @@ menuIds|array|菜单ID集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?popPosition=995&orderBy=301&description=mvcwqr&isMenuAll=ahdloh&spare1=vii0cw&q=idgd3j&page=1&code=58719&parentId=604&subCount=782&parentRoot=cdbxqn&imagePath=ibwaau&menuIds=gxjcgl&menuIds=gxjcgl&isProtect=true&offset=1&startTime=2026-03-09 00:08:33&parentNull=gceafp&isDisplay=true&typeNoButton=8alkx1&appId=95&limit=10&endTime=2026-03-09 00:08:33&isCheck=true&name=julian.ortiz&urlType=25iktp&type=23jp3h&appIds=syf9b6&appIds=syf9b6&icon=jamqzy&shortCut=wumqio&createTime=2026-03-09 00:08:33&isDisabled=true&url=www.kandace-stamm.org&delFlag=9&menuLevel=319&spare2=6fa75y
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/treeInit.do?menuLevel=796&spare1=gatlbh&spare2=5fm337&description=mew1yp&shortCut=kme9fc&isDisabled=true&limit=10&isCheck=true&menuIds=5n28cr&menuIds=5n28cr&orderBy=85&createTime=2026-03-09 22:49:14&parentRoot=wuky7g&name=macie.hartmann&page=1&offset=1&appId=17&startTime=2026-03-09 22:49:14&delFlag=2&typeNoButton=b2melb&isMenuAll=63doc9&popPosition=478&parentId=44&urlType=pdkkzp&appIds=j9per3&appIds=j9per3&isDisplay=true&endTime=2026-03-09 22:49:14&url=www.velia-kozey.biz&q=ar7fxp&subCount=868&type=h9z967&isProtect=true&imagePath=omyxwo&code=22134&parentNull=61fjql&icon=kpnay4
 ```
 **Response-fields:**
 
@@ -19660,11 +19660,11 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "title": "rprpar",
-      "id": "95",
-      "parentId": "95",
-      "extId": "95",
-      "href": "k5h3ag",
+      "title": "v4eu7t",
+      "id": "17",
+      "parentId": "17",
+      "extId": "17",
+      "href": "5z38ep",
       "spread": true,
       "checked": true,
       "disabled": true,
@@ -19675,8 +19675,8 @@ timestamp|string|返回时间戳字符串|-
       ]
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19706,7 +19706,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/831.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/roleMenuTreeselect/167.do
 ```
 **Response-fields:**
 
@@ -19732,12 +19732,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      698
+      845
     ],
     "menus": [
       {
-        "id": 178,
-        "label": "90jrk9",
+        "id": 650,
+        "label": "p4jmy7",
         "children": [
           {
             "$ref": ".."
@@ -19746,8 +19746,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19813,50 +19813,50 @@ buttonMenuList|array|子菜单按钮|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save/single.do --data '{
-  "menuId": 761,
-  "menuName": "julian.ortiz",
-  "type": "h9fkh4",
-  "typeName": "julian.ortiz",
-  "parentName": "julian.ortiz",
-  "parentId": 738,
-  "priority": 977,
-  "path": "uh3h96",
-  "component": "ltf0js",
-  "query": "2mnb2s",
-  "routeName": "julian.ortiz",
-  "isFrame": "u0sdx3",
-  "isCache": "tb9cc6",
-  "menuType": "57l4i4",
-  "menuTypeName": "julian.ortiz",
-  "visible": "xkbp31",
-  "status": "wp6mqi",
-  "perms": "ugxzt8",
-  "icon": "o5qjuk",
-  "imagePath": "0o6a12",
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:46",
-  "lastTime": "2026-03-09 00:09:46",
+  "menuId": 403,
+  "menuName": "macie.hartmann",
+  "type": "3zpep8",
+  "typeName": "macie.hartmann",
+  "parentName": "macie.hartmann",
+  "parentId": 29,
+  "priority": 268,
+  "path": "kjl4ck",
+  "component": "jncumc",
+  "query": "h2uj7n",
+  "routeName": "macie.hartmann",
+  "isFrame": "fcbivt",
+  "isCache": "ft8y27",
+  "menuType": "2841je",
+  "menuTypeName": "macie.hartmann",
+  "visible": "twjiuo",
+  "status": "p1s0nr",
+  "perms": "e7eiff",
+  "icon": "lpg4oc",
+  "imagePath": "4xa75o",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
   "children": [
     {
       "$ref": ".."
     }
   ],
-  "childNum": 352,
-  "description": "won2d9",
-  "listJson": "1jkcwj",
-  "delFlag": 9,
+  "childNum": 306,
+  "description": "h1w5f7",
+  "listJson": "pymzrr",
+  "delFlag": 2,
   "permsList": [
     {
-      "permsName": "julian.ortiz",
-      "permsStr": "q0l3le"
+      "permsName": "macie.hartmann",
+      "permsStr": "es39hv"
     }
   ],
   "buttonMenuList": [
     {
-      "id": "95",
-      "parentId": "95",
-      "code": "58719",
-      "name": "julian.ortiz"
+      "id": "17",
+      "parentId": "17",
+      "code": "22134",
+      "name": "macie.hartmann"
     }
   ]
 }'
@@ -19878,9 +19878,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "mv00vb",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "lqrjpt",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -19946,50 +19946,50 @@ buttonMenuList|array|子菜单按钮|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update/single.do --data '{
-  "menuId": 605,
-  "menuName": "julian.ortiz",
-  "type": "2efxwu",
-  "typeName": "julian.ortiz",
-  "parentName": "julian.ortiz",
-  "parentId": 950,
-  "priority": 183,
-  "path": "7wb8cl",
-  "component": "orlehh",
-  "query": "nkt11i",
-  "routeName": "julian.ortiz",
-  "isFrame": "p6qdlv",
-  "isCache": "j6lhy3",
-  "menuType": "eovk1t",
-  "menuTypeName": "julian.ortiz",
-  "visible": "mxjrm2",
-  "status": "rupskl",
-  "perms": "c2y0zn",
-  "icon": "k16qg4",
-  "imagePath": "yqoiz9",
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:46",
-  "lastTime": "2026-03-09 00:09:46",
+  "menuId": 875,
+  "menuName": "macie.hartmann",
+  "type": "4pe1bx",
+  "typeName": "macie.hartmann",
+  "parentName": "macie.hartmann",
+  "parentId": 560,
+  "priority": 227,
+  "path": "sdi6wq",
+  "component": "uu77om",
+  "query": "nlmcme",
+  "routeName": "macie.hartmann",
+  "isFrame": "cxbpj5",
+  "isCache": "qovl6o",
+  "menuType": "fhpiiq",
+  "menuTypeName": "macie.hartmann",
+  "visible": "fzx47e",
+  "status": "gl06nc",
+  "perms": "brbkbu",
+  "icon": "xvmsno",
+  "imagePath": "u8d0kx",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
   "children": [
     {
       "$ref": ".."
     }
   ],
-  "childNum": 524,
-  "description": "unonjw",
-  "listJson": "4wf0n1",
-  "delFlag": 9,
+  "childNum": 818,
+  "description": "rg4vrz",
+  "listJson": "cehrvk",
+  "delFlag": 2,
   "permsList": [
     {
-      "permsName": "julian.ortiz",
-      "permsStr": "e2u3gs"
+      "permsName": "macie.hartmann",
+      "permsStr": "0l00ed"
     }
   ],
   "buttonMenuList": [
     {
-      "id": "95",
-      "parentId": "95",
-      "code": "58719",
-      "name": "julian.ortiz"
+      "id": "17",
+      "parentId": "17",
+      "code": "22134",
+      "name": "macie.hartmann"
     }
   ]
 }'
@@ -20011,9 +20011,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "oe5ubl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "l71nue",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20079,50 +20079,50 @@ buttonMenuList|array|子菜单按钮|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/save.do --data '{
-  "menuId": 401,
-  "menuName": "julian.ortiz",
-  "type": "5t7phg",
-  "typeName": "julian.ortiz",
-  "parentName": "julian.ortiz",
-  "parentId": 433,
-  "priority": 136,
-  "path": "2b7vmy",
-  "component": "pf48wx",
-  "query": "m7wemc",
-  "routeName": "julian.ortiz",
-  "isFrame": "6g6fku",
-  "isCache": "gwadu3",
-  "menuType": "klj04e",
-  "menuTypeName": "julian.ortiz",
-  "visible": "xr8um2",
-  "status": "9om9j2",
-  "perms": "zedscv",
-  "icon": "lq4lh0",
-  "imagePath": "jjl1qg",
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:46",
-  "lastTime": "2026-03-09 00:09:46",
+  "menuId": 207,
+  "menuName": "macie.hartmann",
+  "type": "3zqbpu",
+  "typeName": "macie.hartmann",
+  "parentName": "macie.hartmann",
+  "parentId": 531,
+  "priority": 379,
+  "path": "lkhh8p",
+  "component": "715a20",
+  "query": "o0kdrv",
+  "routeName": "macie.hartmann",
+  "isFrame": "8p95e0",
+  "isCache": "p4ckg4",
+  "menuType": "oev6v1",
+  "menuTypeName": "macie.hartmann",
+  "visible": "zi0xst",
+  "status": "fd98ei",
+  "perms": "aliks0",
+  "icon": "72y19x",
+  "imagePath": "dtbqtl",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
   "children": [
     {
       "$ref": ".."
     }
   ],
-  "childNum": 999,
-  "description": "xoes31",
-  "listJson": "sz8vjb",
-  "delFlag": 9,
+  "childNum": 104,
+  "description": "vzki1n",
+  "listJson": "yq0vqe",
+  "delFlag": 2,
   "permsList": [
     {
-      "permsName": "julian.ortiz",
-      "permsStr": "61x2e8"
+      "permsName": "macie.hartmann",
+      "permsStr": "vfrayl"
     }
   ],
   "buttonMenuList": [
     {
-      "id": "95",
-      "parentId": "95",
-      "code": "58719",
-      "name": "julian.ortiz"
+      "id": "17",
+      "parentId": "17",
+      "code": "22134",
+      "name": "macie.hartmann"
     }
   ]
 }'
@@ -20144,9 +20144,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "h3yt8j",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "19pqi3",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20212,50 +20212,50 @@ buttonMenuList|array|子菜单按钮|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/update.do --data '{
-  "menuId": 669,
-  "menuName": "julian.ortiz",
-  "type": "3aderc",
-  "typeName": "julian.ortiz",
-  "parentName": "julian.ortiz",
-  "parentId": 116,
-  "priority": 535,
-  "path": "5c25s4",
-  "component": "5a4of3",
-  "query": "48akg8",
-  "routeName": "julian.ortiz",
-  "isFrame": "3a38s8",
-  "isCache": "jvx166",
-  "menuType": "xzvv0k",
-  "menuTypeName": "julian.ortiz",
-  "visible": "u9go97",
-  "status": "gxac9u",
-  "perms": "y98sz6",
-  "icon": "9oilwb",
-  "imagePath": "b1dsqr",
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:46",
-  "lastTime": "2026-03-09 00:09:46",
+  "menuId": 719,
+  "menuName": "macie.hartmann",
+  "type": "cm3ipy",
+  "typeName": "macie.hartmann",
+  "parentName": "macie.hartmann",
+  "parentId": 25,
+  "priority": 841,
+  "path": "ojpvef",
+  "component": "8jam4u",
+  "query": "47azok",
+  "routeName": "macie.hartmann",
+  "isFrame": "8skxn7",
+  "isCache": "0jvxwm",
+  "menuType": "h7jhnl",
+  "menuTypeName": "macie.hartmann",
+  "visible": "iy83mr",
+  "status": "y4xbed",
+  "perms": "1bgy8o",
+  "icon": "8cx9x7",
+  "imagePath": "q6wcct",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
   "children": [
     {
       "$ref": ".."
     }
   ],
-  "childNum": 180,
-  "description": "y0uduv",
-  "listJson": "8b8vac",
-  "delFlag": 9,
+  "childNum": 654,
+  "description": "b72mz2",
+  "listJson": "3k3f9x",
+  "delFlag": 2,
   "permsList": [
     {
-      "permsName": "julian.ortiz",
-      "permsStr": "zyhg0f"
+      "permsName": "macie.hartmann",
+      "permsStr": "1rtk6b"
     }
   ],
   "buttonMenuList": [
     {
-      "id": "95",
-      "parentId": "95",
-      "code": "58719",
-      "name": "julian.ortiz"
+      "id": "17",
+      "parentId": "17",
+      "code": "22134",
+      "name": "macie.hartmann"
     }
   ]
 }'
@@ -20277,9 +20277,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "hgchlk",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "pkft3i",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20328,9 +20328,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "qs4czq",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "iof76s",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20397,41 +20397,41 @@ list|array|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/menu/disable/{id}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:46",
-  "lastTime": "2026-03-09 00:09:46",
-  "id": 300,
-  "parentId": 273,
-  "appId": "95",
-  "name": "julian.ortiz",
-  "ename": "julian.ortiz",
-  "sname": "julian.ortiz",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:33",
+  "lastTime": "2026-03-09 22:50:33",
+  "id": 341,
+  "parentId": 484,
+  "appId": "17",
+  "name": "macie.hartmann",
+  "ename": "macie.hartmann",
+  "sname": "macie.hartmann",
   "isProtect": true,
-  "type": "v9zf0c",
-  "userId": "95",
-  "code": "58719",
-  "menuLevel": 176,
-  "subCount": 500,
-  "perms": "y02q56",
-  "urlType": "bg9j73",
-  "url": "www.kandace-stamm.org",
-  "icon": "jfoujk",
-  "popPosition": 45,
-  "imagePath": "awrgfm",
-  "css": "er3ztx",
-  "jsEvent": "waf7jw",
-  "menuSeq": "t5twyr",
-  "shortCut": "7vjza1",
+  "type": "6nmuuk",
+  "userId": "17",
+  "code": "22134",
+  "menuLevel": 838,
+  "subCount": 480,
+  "perms": "ljg3ey",
+  "urlType": "jmxoe0",
+  "url": "www.velia-kozey.biz",
+  "icon": "bnzctb",
+  "popPosition": 987,
+  "imagePath": "q6009o",
+  "css": "v69gn9",
+  "jsEvent": "lvnpbv",
+  "menuSeq": "vqyioa",
+  "shortCut": "neadec",
   "isLeaf": true,
   "isDisplay": true,
   "isDisabled": true,
   "isCheck": true,
-  "priority": 111,
-  "delFlag": 9,
-  "deleteTime": "2026-03-09 00:09:46",
-  "description": "6kblk7",
-  "spare1": "24jjwg",
-  "spare2": "c4boq6",
+  "priority": 122,
+  "delFlag": 2,
+  "deleteTime": "2026-03-09 22:50:33",
+  "description": "vrqjtf",
+  "spare1": "tzlw4s",
+  "spare2": "k69e79",
   "open": true,
   "list": [
     {
@@ -20457,9 +20457,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "5j6yya",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "onp52t",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20499,7 +20499,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleKey=bhr3gd&status=703&orderBy=108&roleId=637&startTime=2026-03-09 00:08:33&limit=10&roleName=julian.ortiz&q=b1mch3&endTime=2026-03-09 00:08:33&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/list.do?roleKey=oxouox&status=637&roleId=140&q=hxg757&page=1&limit=10&roleName=macie.hartmann&endTime=2026-03-09 22:49:14&orderBy=334&startTime=2026-03-09 22:49:14
 ```
 **Response-fields:**
 
@@ -20541,37 +20541,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:47",
-      "lastTime": "2026-03-09 00:09:47",
-      "roleId": 422,
-      "roleName": "julian.ortiz",
-      "roleKey": "mxcqdh",
-      "roleSort": 147,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:34",
+      "lastTime": "2026-03-09 22:50:34",
+      "roleId": 467,
+      "roleName": "macie.hartmann",
+      "roleKey": "qh5is1",
+      "roleSort": 961,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 545,
+      "status": 102,
       "flag": true,
       "menuIds": [
-        165
+        698
       ],
       "deptIds": [
-        541
+        295
       ],
       "permissions": [
-        "7n6u09"
+        "42bo4f"
       ],
-      "remark": "efvkqg",
-      "parentName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "roletypeId": "95",
-      "roletypeName": "julian.ortiz",
-      "priority": 448,
+      "remark": "4fh9yn",
+      "parentName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "roletypeId": "17",
+      "roletypeName": "macie.hartmann",
+      "priority": 223,
       "isSuper": true
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20600,9 +20600,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -20659,7 +20659,7 @@ status|int32|角色状态（0未生效 1正常）|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'orderBy=927&bufferSize=10&writer.autoFlush=true&roleName=julian.ortiz&writer.psOut.closed=true&q=sxbhx7&writer.psOut.trouble=true&writer.psOut.textOut.nChars=598&writer.psOut.autoFlush=true&roleId=823&committed=true&writer.formatter.lastException.detailMessage=success&writer.psOut.closing=true&page=1&characterEncoding=od3d70&writer.psOut.textOut.nextChar=25&status=472&roleKey=l4gqb2&status=775&endTime=2026-03-09 00:08:33&writer.writeBuffer=m&writer.writeBuffer=m&writer.psOut.formatter.zero=i&writer.trouble=true&contentType=rdsfna&startTime=2026-03-09 00:08:33&limit=10&writer.formatter.zero=9'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/export.do --data 'startTime=2026-03-09 22:49:14&writer.writeBuffer=w&writer.writeBuffer=w&q=tznmxl&characterEncoding=tu5u5m&writer.formatter.lastException.detailMessage=success&writer.autoFlush=true&writer.psOut.autoFlush=true&committed=true&writer.psOut.textOut.nChars=114&contentType=n4ag2h&writer.formatter.zero=6&writer.psOut.formatter.zero=9&writer.psOut.textOut.nextChar=551&roleName=macie.hartmann&roleKey=2gb49y&roleId=79&status=226&writer.psOut.trouble=true&bufferSize=10&limit=10&writer.psOut.closed=true&page=1&writer.trouble=true&orderBy=449&endTime=2026-03-09 22:49:14&status=183&writer.psOut.closing=true'
 ```
 **Response-fields:**
 
@@ -20678,9 +20678,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "dwdl6o",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4lw78i",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20710,7 +20710,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/936.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/862.do
 ```
 **Response-fields:**
 
@@ -20751,36 +20751,36 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:47",
-    "lastTime": "2026-03-09 00:09:47",
-    "roleId": 471,
-    "roleName": "julian.ortiz",
-    "roleKey": "63aerz",
-    "roleSort": 924,
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:34",
+    "lastTime": "2026-03-09 22:50:34",
+    "roleId": 919,
+    "roleName": "macie.hartmann",
+    "roleKey": "7xxkb3",
+    "roleSort": 823,
     "menuCheckStrictly": true,
     "deptCheckStrictly": true,
-    "status": 718,
+    "status": 485,
     "flag": true,
     "menuIds": [
-      196
+      952
     ],
     "deptIds": [
-      868
+      358
     ],
     "permissions": [
-      "u3rosz"
+      "xnrazx"
     ],
-    "remark": "gu7958",
-    "parentName": "julian.ortiz",
-    "appName": "julian.ortiz",
-    "roletypeId": "95",
-    "roletypeName": "julian.ortiz",
-    "priority": 168,
+    "remark": "rubvn0",
+    "parentName": "macie.hartmann",
+    "appName": "macie.hartmann",
+    "roletypeId": "17",
+    "roletypeName": "macie.hartmann",
+    "priority": 133,
     "isSuper": true
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20831,32 +20831,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 217,
-  "roleName": "julian.ortiz",
-  "roleKey": "54jzwi",
-  "roleSort": 713,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 245,
+  "roleName": "macie.hartmann",
+  "roleKey": "dsxgxr",
+  "roleSort": 667,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 962,
+  "status": 431,
   "flag": true,
   "menuIds": [
-    56
+    102
   ],
   "deptIds": [
-    861
+    844
   ],
   "permissions": [
-    "96atlv"
+    "15k1zn"
   ],
-  "remark": "aqbdqj",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 969,
+  "remark": "junpq8",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 76,
   "isSuper": true
 }'
 ```
@@ -20877,9 +20877,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "c6c462",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "lp7bc4",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -20930,32 +20930,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 758,
-  "roleName": "julian.ortiz",
-  "roleKey": "6ycwnc",
-  "roleSort": 937,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 825,
+  "roleName": "macie.hartmann",
+  "roleKey": "iyiqkv",
+  "roleSort": 797,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 395,
+  "status": 168,
   "flag": true,
   "menuIds": [
-    103
+    290
   ],
   "deptIds": [
-    76
+    638
   ],
   "permissions": [
-    "3qb1jm"
+    "ydd7l6"
   ],
-  "remark": "6k6hxd",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 717,
+  "remark": "znhws9",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 277,
   "isSuper": true
 }'
 ```
@@ -20976,9 +20976,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "txtpru",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "f7ybi3",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21029,32 +21029,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/save/all.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 400,
-  "roleName": "julian.ortiz",
-  "roleKey": "00it5x",
-  "roleSort": 519,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 445,
+  "roleName": "macie.hartmann",
+  "roleKey": "3zrmro",
+  "roleSort": 802,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 330,
+  "status": 845,
   "flag": true,
   "menuIds": [
-    38
+    387
   ],
   "deptIds": [
-    38
+    21
   ],
   "permissions": [
-    "guoxwn"
+    "xylado"
   ],
-  "remark": "hdp4di",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 303,
+  "remark": "k4crgy",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 777,
   "isSuper": true
 }'
 ```
@@ -21075,9 +21075,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "l1bvww",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "mpnkjj",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21128,32 +21128,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/update/all.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 705,
-  "roleName": "julian.ortiz",
-  "roleKey": "p4j3e0",
-  "roleSort": 850,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 572,
+  "roleName": "macie.hartmann",
+  "roleKey": "j1lict",
+  "roleSort": 73,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 732,
+  "status": 421,
   "flag": true,
   "menuIds": [
-    811
+    154
   ],
   "deptIds": [
-    793
+    458
   ],
   "permissions": [
-    "1d80me"
+    "whwodw"
   ],
-  "remark": "gmod91",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 296,
+  "remark": "3ti2fu",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 259,
   "isSuper": true
 }'
 ```
@@ -21174,9 +21174,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "9a7u7l",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "7kajqm",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21225,9 +21225,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "cafvsp",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "iqsnew",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21272,21 +21272,21 @@ areaType|string|地域类型|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/disable/{roleId}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "id": 444,
-  "roletypeId": "95",
-  "appId": "95",
-  "name": "julian.ortiz",
-  "code": "58719",
-  "priority": 888,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "id": 854,
+  "roletypeId": "17",
+  "appId": "17",
+  "name": "macie.hartmann",
+  "code": "22134",
+  "priority": 962,
   "isRegular": true,
   "isSuper": true,
   "isPublic": true,
-  "status": 965,
-  "description": "otuesy",
-  "areaType": "2y25pl"
+  "status": 951,
+  "description": "fkz66o",
+  "areaType": "i1mgmt"
 }'
 ```
 **Response-fields:**
@@ -21306,9 +21306,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ak3rhm",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "x4xsqg",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21359,32 +21359,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindMenu/{roleId}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 369,
-  "roleName": "julian.ortiz",
-  "roleKey": "pzjwof",
-  "roleSort": 443,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 452,
+  "roleName": "macie.hartmann",
+  "roleKey": "vu5wts",
+  "roleSort": 654,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 438,
+  "status": 780,
   "flag": true,
   "menuIds": [
-    720
+    573
   ],
   "deptIds": [
-    31
+    896
   ],
   "permissions": [
-    "0giolj"
+    "o5tcy3"
   ],
-  "remark": "5npouz",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 922,
+  "remark": "22xrtv",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 338,
   "isSuper": true
 }'
 ```
@@ -21405,9 +21405,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "85sp8e",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "rpm0kv",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21458,32 +21458,32 @@ isSuper|boolean|是否拥有所有权限|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/bindDept/{roleId}.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:47",
-  "lastTime": "2026-03-09 00:09:47",
-  "roleId": 634,
-  "roleName": "julian.ortiz",
-  "roleKey": "wv0vrz",
-  "roleSort": 396,
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:34",
+  "lastTime": "2026-03-09 22:50:34",
+  "roleId": 484,
+  "roleName": "macie.hartmann",
+  "roleKey": "cnlm2y",
+  "roleSort": 474,
   "menuCheckStrictly": true,
   "deptCheckStrictly": true,
-  "status": 911,
+  "status": 579,
   "flag": true,
   "menuIds": [
-    656
+    783
   ],
   "deptIds": [
-    966
+    602
   ],
   "permissions": [
-    "jqzh5j"
+    "y1t6mr"
   ],
-  "remark": "p8ldit",
-  "parentName": "julian.ortiz",
-  "appName": "julian.ortiz",
-  "roletypeId": "95",
-  "roletypeName": "julian.ortiz",
-  "priority": 540,
+  "remark": "say9hy",
+  "parentName": "macie.hartmann",
+  "appName": "macie.hartmann",
+  "roletypeId": "17",
+  "roletypeName": "macie.hartmann",
+  "priority": 793,
   "isSuper": true
 }'
 ```
@@ -21504,9 +21504,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "rbnc3k",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "2pdwas",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21572,37 +21572,37 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:47",
-      "lastTime": "2026-03-09 00:09:47",
-      "roleId": 149,
-      "roleName": "julian.ortiz",
-      "roleKey": "7cvb8r",
-      "roleSort": 966,
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:34",
+      "lastTime": "2026-03-09 22:50:34",
+      "roleId": 778,
+      "roleName": "macie.hartmann",
+      "roleKey": "ljfkz8",
+      "roleSort": 370,
       "menuCheckStrictly": true,
       "deptCheckStrictly": true,
-      "status": 55,
+      "status": 318,
       "flag": true,
       "menuIds": [
-        162
+        963
       ],
       "deptIds": [
-        948
+        388
       ],
       "permissions": [
-        "nuoc79"
+        "tobrxb"
       ],
-      "remark": "ld70ei",
-      "parentName": "julian.ortiz",
-      "appName": "julian.ortiz",
-      "roletypeId": "95",
-      "roletypeName": "julian.ortiz",
-      "priority": 256,
+      "remark": "xs1h44",
+      "parentName": "macie.hartmann",
+      "appName": "macie.hartmann",
+      "roletypeId": "17",
+      "roletypeName": "macie.hartmann",
+      "priority": 956,
       "isSuper": true
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21647,7 +21647,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?username=julian.ortiz&adminId=532&email=columbus.ankunding@gmail.com&mobile=1-508-337-4557&endTime=2026-03-09 00:08:33&delFlag=9&q=ctl1aw&page=1&deptId=628&userId=95&limit=10&status=08csg0&organId=95&startTime=2026-03-09 00:08:33&nickName=shane.roberts&orderBy=477
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/allocatedList.do?endTime=2026-03-09 22:49:14&username=macie.hartmann&limit=10&status=cz3rp6&email=latanya.ritchie@hotmail.com&deptId=291&userId=17&q=stubjq&startTime=2026-03-09 22:49:14&page=1&delFlag=2&adminId=945&orderBy=717&organId=17&mobile=814-959-5738&nickName=jin.wolff
 ```
 **Response-fields:**
 
@@ -21753,60 +21753,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:47",
-      "lastTime": "2026-03-09 00:09:47",
-      "id": 43,
-      "userId": "95",
-      "deptId": 731,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "name": "julian.ortiz",
-      "username": "julian.ortiz",
-      "nickName": "shane.roberts",
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "zc8n9s",
-      "password": "sdisle",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:34",
+      "lastTime": "2026-03-09 22:50:34",
+      "id": 910,
+      "userId": "17",
+      "deptId": 236,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "name": "macie.hartmann",
+      "username": "macie.hartmann",
+      "nickName": "jin.wolff",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "r1vdll",
+      "password": "8vl0ck",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 211,
-      "delFlag": 9,
-      "lastLoginIp": "207.227.60.208",
-      "lastLoginTime": "2026-03-09 00:09:47",
-      "description": "lcxs2o",
+      "status": 469,
+      "delFlag": 2,
+      "lastLoginIp": "14.83.204.161",
+      "lastLoginTime": "2026-03-09 22:50:34",
+      "description": "b47jqe",
       "dept": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:47",
-        "lastTime": "2026-03-09 00:09:47",
-        "id": 938,
-        "organId": "95",
-        "parentId": 691,
-        "appId": "95",
-        "depttypeId": 519,
-        "foreignId": "95",
-        "createType": 722,
-        "type": "pmur9p",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "areaCode": "58719",
-        "organLeader": "2reva6",
-        "leaderId": "95",
-        "leaderMobile": "1-508-337-4557",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:34",
+        "lastTime": "2026-03-09 22:50:34",
+        "id": 594,
+        "organId": "17",
+        "parentId": 170,
+        "appId": "17",
+        "depttypeId": 583,
+        "foreignId": "17",
+        "createType": 195,
+        "type": "fp2xi3",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "areaCode": "22134",
+        "organLeader": "zph8fc",
+        "leaderId": "17",
+        "leaderMobile": "814-959-5738",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "58719",
-        "imagePath": "tz7fn2",
-        "priority": 264,
-        "status": 464,
-        "delFlag": 9,
-        "description": "ysoboe",
-        "spare1": "gd54if",
-        "spare2": "2bst0h",
+        "searchCode": "22134",
+        "imagePath": "egzajn",
+        "priority": 859,
+        "status": 658,
+        "delFlag": 2,
+        "description": "pnda60",
+        "spare1": "o6btuf",
+        "spare2": "cdlv84",
         "children": [
           {
             "$ref": ".."
@@ -21815,48 +21815,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:47",
-          "lastTime": "2026-03-09 00:09:47",
-          "id": 262,
-          "roletypeId": "95",
-          "appId": "95",
-          "name": "julian.ortiz",
-          "code": "58719",
-          "priority": 743,
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:34",
+          "lastTime": "2026-03-09 22:50:34",
+          "id": 470,
+          "roletypeId": "17",
+          "appId": "17",
+          "name": "macie.hartmann",
+          "code": "22134",
+          "priority": 727,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 523,
-          "description": "k9o1wn",
-          "areaType": "kx4mjd"
+          "status": 900,
+          "description": "t23y17",
+          "areaType": "9vu9gd"
         }
       ],
       "roleIds": [
-        95
+        996
       ],
       "positionIds": [
-        "72fg51"
+        "16yumt"
       ],
-      "roleId": 796,
+      "roleId": 276,
       "userRoleList": [
         {
-          "id": 59,
-          "deptId": 449,
-          "deptName": "julian.ortiz",
-          "organId": "95",
-          "organName": "julian.ortiz",
-          "roleId": 465,
-          "roleName": "julian.ortiz",
-          "adminId": 387
+          "id": 905,
+          "deptId": 73,
+          "deptName": "macie.hartmann",
+          "organId": "17",
+          "organName": "macie.hartmann",
+          "roleId": 221,
+          "roleName": "macie.hartmann",
+          "adminId": 585
         }
       ],
-      "code": "58719",
-      "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+      "code": "22134",
+      "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -21901,7 +21901,7 @@ delFlag|int32|删除标志（0代表存在 1代表删除）|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?startTime=2026-03-09 00:08:33&limit=10&nickName=shane.roberts&mobile=1-508-337-4557&organId=95&email=columbus.ankunding@gmail.com&adminId=990&q=i89z54&username=julian.ortiz&deptId=513&orderBy=431&userId=95&endTime=2026-03-09 00:08:33&status=vj4h4j&delFlag=9&page=1
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/unallocatedList.do?page=1&userId=17&organId=17&mobile=814-959-5738&delFlag=2&endTime=2026-03-09 22:49:14&startTime=2026-03-09 22:49:14&limit=10&deptId=504&status=y5a7hn&username=macie.hartmann&orderBy=343&q=nfrg4g&adminId=371&nickName=jin.wolff&email=latanya.ritchie@hotmail.com
 ```
 **Response-fields:**
 
@@ -22007,60 +22007,60 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:47",
-      "lastTime": "2026-03-09 00:09:47",
-      "id": 942,
-      "userId": "95",
-      "deptId": 998,
-      "deptName": "julian.ortiz",
-      "organId": "95",
-      "organName": "julian.ortiz",
-      "name": "julian.ortiz",
-      "username": "julian.ortiz",
-      "nickName": "shane.roberts",
-      "email": "columbus.ankunding@gmail.com",
-      "mobile": "1-508-337-4557",
-      "imagePath": "brphj4",
-      "password": "e7146w",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:34",
+      "lastTime": "2026-03-09 22:50:34",
+      "id": 969,
+      "userId": "17",
+      "deptId": 270,
+      "deptName": "macie.hartmann",
+      "organId": "17",
+      "organName": "macie.hartmann",
+      "name": "macie.hartmann",
+      "username": "macie.hartmann",
+      "nickName": "jin.wolff",
+      "email": "latanya.ritchie@hotmail.com",
+      "mobile": "814-959-5738",
+      "imagePath": "gxilkq",
+      "password": "b3a1ad",
       "isSuperAdmin": true,
       "isAuditAdmin": true,
       "isSelfAdmin": true,
-      "status": 212,
-      "delFlag": 9,
-      "lastLoginIp": "207.227.60.208",
-      "lastLoginTime": "2026-03-09 00:09:47",
-      "description": "tbrtcm",
+      "status": 2,
+      "delFlag": 2,
+      "lastLoginIp": "14.83.204.161",
+      "lastLoginTime": "2026-03-09 22:50:34",
+      "description": "x28irm",
       "dept": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:47",
-        "lastTime": "2026-03-09 00:09:47",
-        "id": 462,
-        "organId": "95",
-        "parentId": 41,
-        "appId": "95",
-        "depttypeId": 149,
-        "foreignId": "95",
-        "createType": 138,
-        "type": "e40edt",
-        "name": "julian.ortiz",
-        "sname": "julian.ortiz",
-        "areaCode": "58719",
-        "organLeader": "k63geh",
-        "leaderId": "95",
-        "leaderMobile": "1-508-337-4557",
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:34",
+        "lastTime": "2026-03-09 22:50:34",
+        "id": 756,
+        "organId": "17",
+        "parentId": 773,
+        "appId": "17",
+        "depttypeId": 477,
+        "foreignId": "17",
+        "createType": 563,
+        "type": "xyspsm",
+        "name": "macie.hartmann",
+        "sname": "macie.hartmann",
+        "areaCode": "22134",
+        "organLeader": "09sg7y",
+        "leaderId": "17",
+        "leaderMobile": "814-959-5738",
         "isOrganLevel": true,
         "isVirtual": true,
         "isLeaf": true,
         "isDisabled": true,
-        "searchCode": "58719",
-        "imagePath": "gc74r2",
-        "priority": 263,
-        "status": 925,
-        "delFlag": 9,
-        "description": "1xc137",
-        "spare1": "x4skro",
-        "spare2": "vcwrzx",
+        "searchCode": "22134",
+        "imagePath": "wfwy7z",
+        "priority": 940,
+        "status": 663,
+        "delFlag": 2,
+        "description": "qvlrnw",
+        "spare1": "vmkvix",
+        "spare2": "l64rg5",
         "children": [
           {
             "$ref": ".."
@@ -22069,48 +22069,48 @@ timestamp|string|返回时间戳字符串|-
       },
       "roles": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:47",
-          "lastTime": "2026-03-09 00:09:47",
-          "id": 466,
-          "roletypeId": "95",
-          "appId": "95",
-          "name": "julian.ortiz",
-          "code": "58719",
-          "priority": 86,
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:34",
+          "lastTime": "2026-03-09 22:50:34",
+          "id": 556,
+          "roletypeId": "17",
+          "appId": "17",
+          "name": "macie.hartmann",
+          "code": "22134",
+          "priority": 377,
           "isRegular": true,
           "isSuper": true,
           "isPublic": true,
-          "status": 998,
-          "description": "rihqxw",
-          "areaType": "cu9twq"
+          "status": 334,
+          "description": "0rpuu8",
+          "areaType": "p0kyfz"
         }
       ],
       "roleIds": [
-        674
+        28
       ],
       "positionIds": [
-        "iqyo52"
+        "0nfzn3"
       ],
-      "roleId": 731,
+      "roleId": 712,
       "userRoleList": [
         {
-          "id": 912,
-          "deptId": 592,
-          "deptName": "julian.ortiz",
-          "organId": "95",
-          "organName": "julian.ortiz",
-          "roleId": 631,
-          "roleName": "julian.ortiz",
-          "adminId": 839
+          "id": 886,
+          "deptId": 519,
+          "deptName": "macie.hartmann",
+          "organId": "17",
+          "organName": "macie.hartmann",
+          "roleId": 926,
+          "roleName": "macie.hartmann",
+          "adminId": 1
         }
       ],
-      "code": "58719",
-      "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba"
+      "code": "22134",
+      "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22143,9 +22143,9 @@ adminId|int64|公共管理用户ID|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancel.do --data '{
-  "id": 900,
-  "roleId": 690,
-  "adminId": 877
+  "id": 171,
+  "roleId": 726,
+  "adminId": 158
 }'
 ```
 **Response-fields:**
@@ -22165,9 +22165,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ygbch2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "s5qtmf",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22198,7 +22198,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=87&adminIds=0uujxj&adminIds=0uujxj'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/cancelAll.do --data 'roleId=335&adminIds=wtpcz7&adminIds=wtpcz7'
 ```
 **Response-fields:**
 
@@ -22217,9 +22217,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "dcgarl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "7rklgw",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22250,7 +22250,7 @@ adminIds|array| 管理员Ids,[array of int64]|false|
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'roleId=619&adminIds=bp26f2&adminIds=bp26f2'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/authUser/selectAll.do --data 'adminIds=82vg2f&adminIds=82vg2f&roleId=522'
 ```
 **Response-fields:**
 
@@ -22269,9 +22269,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "257jjq",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "lym3ir",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22301,7 +22301,7 @@ roleId|int64| 角色ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/654.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/admin/role/deptTree/637.do
 ```
 **Response-fields:**
 
@@ -22327,12 +22327,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "checkedKeys": [
-      638
+      793
     ],
     "depts": [
       {
-        "id": 669,
-        "label": "4teufk",
+        "id": 305,
+        "label": "ux65tv",
         "children": [
           {
             "$ref": ".."
@@ -22341,8 +22341,8 @@ timestamp|string|返回时间戳字符串|-
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22414,7 +22414,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?todoAbstract=mdosyn&opOrganName=julian.ortiz&page=1&todoLabels=ir5asb&opUserId=95&endTime=2026-03-09 00:08:33&status=hmq2o9&foreignId=95&todoAccountName=julian.ortiz&todoProcessName=julian.ortiz&spare2=ucc7mu&startTime=2026-03-09 00:08:33&todoUserId=95&appId=95&todoName=julian.ortiz&id=95&todoContent=iwk47m&todoOrganId=95&todoAccountId=95&bizType=wp7xbq&q=qysi3m&todoModuleId=95&todoCurrInfo=v1tu7e&description=l8fe5n&limit=10&todoId=95&todoOrganName=julian.ortiz&todoProcessStatus=fp1bax&todoUserName=julian.ortiz&todoCreateTime=2026-03-09 00:09:49&opTime=2026-03-09 00:09:49&todoModuleName=julian.ortiz&todoType=b6crim&todoNextInfo=nu2ziq&todoUrl=www.kandace-stamm.org&type=u1rp7v&spare1=bf2wjs&creatorId=95&orderBy=6&todoProcessInfo=ua9f0u&opOrganId=95
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/list.do?startTime=2026-03-09 22:49:14&todoAccountName=macie.hartmann&bizType=r1gvn8&todoCreateTime=2026-03-09 22:50:36&todoModuleName=macie.hartmann&todoNextInfo=2xjdfv&spare1=rln7o2&limit=10&todoAbstract=7azyeg&todoProcessInfo=72vk70&todoUserId=17&status=44pceo&todoName=macie.hartmann&appId=17&page=1&endTime=2026-03-09 22:49:14&todoUrl=www.velia-kozey.biz&spare2=blom6o&todoModuleId=17&id=17&opOrganId=17&opOrganName=macie.hartmann&todoId=17&todoType=opyvq0&description=sxdpsa&todoOrganName=macie.hartmann&q=bkb0o6&todoLabels=607pil&creatorId=17&todoCurrInfo=g5ydtq&orderBy=726&type=1ev2xh&todoAccountId=17&opUserId=17&opTime=2026-03-09 22:50:36&foreignId=17&todoProcessStatus=gani8q&todoOrganId=17&todoUserName=macie.hartmann&todoProcessName=macie.hartmann&todoContent=3tnjzj
 ```
 **Response-fields:**
 
@@ -22472,47 +22472,47 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:49",
-      "lastTime": "2026-03-09 00:09:49",
-      "id": "95",
-      "appId": "95",
-      "foreignId": "95",
-      "type": "wwkzo7",
-      "bizType": "8sejdd",
-      "todoCreateTime": "2026-03-09 00:09:49",
-      "todoId": "95",
-      "todoType": "q4mm35",
-      "todoName": "julian.ortiz",
-      "todoAbstract": "ote853",
-      "todoAccountId": "95",
-      "todoAccountName": "julian.ortiz",
-      "todoModuleId": "95",
-      "todoModuleName": "julian.ortiz",
-      "todoUserId": "95",
-      "todoUserName": "julian.ortiz",
-      "todoOrganId": "95",
-      "todoOrganName": "julian.ortiz",
-      "todoProcessName": "julian.ortiz",
-      "todoProcessStatus": "jxw4cn",
-      "todoProcessInfo": "qxxi48",
-      "todoCurrInfo": "rhuzw8",
-      "todoNextInfo": "on9i9g",
-      "todoUrl": "www.kandace-stamm.org",
-      "todoLabels": "0oo2de",
-      "todoContent": "p6n853",
-      "status": "3xuoys",
-      "opUserId": "95",
-      "opTime": "2026-03-09 00:09:49",
-      "opOrganId": "95",
-      "opOrganName": "julian.ortiz",
-      "description": "565npg",
-      "spare1": "f15nql",
-      "spare2": "adahsu"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:36",
+      "lastTime": "2026-03-09 22:50:36",
+      "id": "17",
+      "appId": "17",
+      "foreignId": "17",
+      "type": "mfqw3g",
+      "bizType": "rrlun0",
+      "todoCreateTime": "2026-03-09 22:50:36",
+      "todoId": "17",
+      "todoType": "9ygbkr",
+      "todoName": "macie.hartmann",
+      "todoAbstract": "uu1cbh",
+      "todoAccountId": "17",
+      "todoAccountName": "macie.hartmann",
+      "todoModuleId": "17",
+      "todoModuleName": "macie.hartmann",
+      "todoUserId": "17",
+      "todoUserName": "macie.hartmann",
+      "todoOrganId": "17",
+      "todoOrganName": "macie.hartmann",
+      "todoProcessName": "macie.hartmann",
+      "todoProcessStatus": "5pxcnr",
+      "todoProcessInfo": "pz3q58",
+      "todoCurrInfo": "6b5fn7",
+      "todoNextInfo": "dymzvx",
+      "todoUrl": "www.velia-kozey.biz",
+      "todoLabels": "uogo4m",
+      "todoContent": "aw69qw",
+      "status": "m4jom9",
+      "opUserId": "17",
+      "opTime": "2026-03-09 22:50:36",
+      "opOrganId": "17",
+      "opOrganName": "macie.hartmann",
+      "description": "4tqqxl",
+      "spare1": "lqdq7p",
+      "spare2": "hyn6tt"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22542,9 +22542,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -22632,7 +22632,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'writer.autoFlush=true&endTime=2026-03-09 00:08:33&todoContent=w28gsa&todoCurrInfo=4mmuc3&status=587&writer.psOut.textOut.nextChar=509&opOrganId=95&writer.trouble=true&bizType=46hzt8&todoAbstract=e0ccmz&todoModuleName=julian.ortiz&page=1&todoUserName=julian.ortiz&writer.psOut.formatter.zero=s&todoOrganId=95&id=95&bufferSize=10&todoUrl=www.kandace-stamm.org&todoNextInfo=gooasl&spare1=z2vynm&todoCreateTime=2026-03-09 00:09:49&writer.writeBuffer=c&writer.writeBuffer=c&todoType=tf0158&writer.psOut.textOut.nChars=692&status=lxp6sp&opTime=2026-03-09 00:09:49&todoModuleId=95&writer.formatter.lastException.detailMessage=success&limit=10&opOrganName=julian.ortiz&todoId=95&orderBy=134&appId=95&spare2=sty190&writer.psOut.closing=true&opUserId=95&todoAccountName=julian.ortiz&committed=true&q=gd93vs&writer.psOut.trouble=true&description=74tqce&writer.psOut.closed=true&contentType=x7y9zm&foreignId=95&writer.formatter.zero=h&todoUserId=95&creatorId=95&todoProcessName=julian.ortiz&todoProcessInfo=p8mgyc&todoOrganName=julian.ortiz&type=oro95q&startTime=2026-03-09 00:08:33&todoLabels=7qp5xc&writer.psOut.autoFlush=true&characterEncoding=20ol1d&todoName=julian.ortiz&todoAccountId=95&todoProcessStatus=190lr8'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/export.do --data 'todoOrganName=macie.hartmann&todoUrl=www.velia-kozey.biz&opUserId=17&writer.trouble=true&opTime=2026-03-09 22:50:36&characterEncoding=93vejy&todoUserId=17&todoModuleName=macie.hartmann&todoProcessInfo=c3u1zv&spare2=qvn3a8&todoAccountName=macie.hartmann&todoProcessName=macie.hartmann&todoLabels=6toceu&writer.formatter.zero=a&appId=17&spare1=gojftf&todoAbstract=ue0c6y&writer.formatter.lastException.detailMessage=success&writer.autoFlush=true&todoId=17&todoContent=wlbrfg&id=17&writer.psOut.trouble=true&writer.psOut.textOut.nChars=242&bizType=gu8y5v&writer.psOut.formatter.zero=4&writer.psOut.closing=true&todoOrganId=17&committed=true&status=g5ag3f&creatorId=17&writer.psOut.closed=true&type=nvau5h&todoCurrInfo=26yaie&limit=10&opOrganId=17&writer.psOut.textOut.nextChar=51&status=901&writer.writeBuffer=5&writer.writeBuffer=5&todoAccountId=17&todoUserName=macie.hartmann&todoType=koy021&todoCreateTime=2026-03-09 22:50:36&q=asbqpd&foreignId=17&todoName=macie.hartmann&endTime=2026-03-09 22:49:14&bufferSize=10&todoProcessStatus=jqtxz6&page=1&startTime=2026-03-09 22:49:14&todoNextInfo=izywk8&orderBy=768&description=qkbb01&writer.psOut.autoFlush=true&contentType=i08vyi&opOrganName=macie.hartmann&todoModuleId=17'
 ```
 **Response-fields:**
 
@@ -22651,9 +22651,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "i27ex9",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "i7qxil",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22741,46 +22741,46 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:49",
-    "lastTime": "2026-03-09 00:09:49",
-    "id": "95",
-    "appId": "95",
-    "foreignId": "95",
-    "type": "2s0635",
-    "bizType": "od6156",
-    "todoCreateTime": "2026-03-09 00:09:49",
-    "todoId": "95",
-    "todoType": "xral01",
-    "todoName": "julian.ortiz",
-    "todoAbstract": "gieodc",
-    "todoAccountId": "95",
-    "todoAccountName": "julian.ortiz",
-    "todoModuleId": "95",
-    "todoModuleName": "julian.ortiz",
-    "todoUserId": "95",
-    "todoUserName": "julian.ortiz",
-    "todoOrganId": "95",
-    "todoOrganName": "julian.ortiz",
-    "todoProcessName": "julian.ortiz",
-    "todoProcessStatus": "p4spox",
-    "todoProcessInfo": "sq1yxb",
-    "todoCurrInfo": "j1bm3c",
-    "todoNextInfo": "pfj0ab",
-    "todoUrl": "www.kandace-stamm.org",
-    "todoLabels": "okcek5",
-    "todoContent": "msw40f",
-    "status": "801b1n",
-    "opUserId": "95",
-    "opTime": "2026-03-09 00:09:49",
-    "opOrganId": "95",
-    "opOrganName": "julian.ortiz",
-    "description": "5m80bz",
-    "spare1": "ts6efz",
-    "spare2": "zrzop5"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:36",
+    "lastTime": "2026-03-09 22:50:36",
+    "id": "17",
+    "appId": "17",
+    "foreignId": "17",
+    "type": "vo7sqn",
+    "bizType": "styld4",
+    "todoCreateTime": "2026-03-09 22:50:36",
+    "todoId": "17",
+    "todoType": "lnuym8",
+    "todoName": "macie.hartmann",
+    "todoAbstract": "mq6yz0",
+    "todoAccountId": "17",
+    "todoAccountName": "macie.hartmann",
+    "todoModuleId": "17",
+    "todoModuleName": "macie.hartmann",
+    "todoUserId": "17",
+    "todoUserName": "macie.hartmann",
+    "todoOrganId": "17",
+    "todoOrganName": "macie.hartmann",
+    "todoProcessName": "macie.hartmann",
+    "todoProcessStatus": "q39ade",
+    "todoProcessInfo": "h7mljk",
+    "todoCurrInfo": "js3hqd",
+    "todoNextInfo": "x6xm00",
+    "todoUrl": "www.velia-kozey.biz",
+    "todoLabels": "lgxgv4",
+    "todoContent": "rn6110",
+    "status": "i1wmup",
+    "opUserId": "17",
+    "opTime": "2026-03-09 22:50:36",
+    "opOrganId": "17",
+    "opOrganName": "macie.hartmann",
+    "description": "41u0uc",
+    "spare1": "fkuxnu",
+    "spare2": "eyz8n1"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22848,43 +22848,43 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "foreignId": "95",
-  "type": "064udh",
-  "bizType": "mi8var",
-  "todoCreateTime": "2026-03-09 00:09:49",
-  "todoId": "95",
-  "todoType": "yhb30y",
-  "todoName": "julian.ortiz",
-  "todoAbstract": "0j78fh",
-  "todoAccountId": "95",
-  "todoAccountName": "julian.ortiz",
-  "todoModuleId": "95",
-  "todoModuleName": "julian.ortiz",
-  "todoUserId": "95",
-  "todoUserName": "julian.ortiz",
-  "todoOrganId": "95",
-  "todoOrganName": "julian.ortiz",
-  "todoProcessName": "julian.ortiz",
-  "todoProcessStatus": "95eatr",
-  "todoProcessInfo": "f4lvlh",
-  "todoCurrInfo": "9m9h1e",
-  "todoNextInfo": "nprgdx",
-  "todoUrl": "www.kandace-stamm.org",
-  "todoLabels": "zprr4m",
-  "todoContent": "xa8ltf",
-  "status": "stpneq",
-  "opUserId": "95",
-  "opTime": "2026-03-09 00:09:49",
-  "opOrganId": "95",
-  "opOrganName": "julian.ortiz",
-  "description": "hwwigd",
-  "spare1": "uwhnp0",
-  "spare2": "4y3ja5"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:36",
+  "lastTime": "2026-03-09 22:50:36",
+  "id": "17",
+  "appId": "17",
+  "foreignId": "17",
+  "type": "wt6dxb",
+  "bizType": "k1z6dl",
+  "todoCreateTime": "2026-03-09 22:50:36",
+  "todoId": "17",
+  "todoType": "ihifh8",
+  "todoName": "macie.hartmann",
+  "todoAbstract": "tl2e54",
+  "todoAccountId": "17",
+  "todoAccountName": "macie.hartmann",
+  "todoModuleId": "17",
+  "todoModuleName": "macie.hartmann",
+  "todoUserId": "17",
+  "todoUserName": "macie.hartmann",
+  "todoOrganId": "17",
+  "todoOrganName": "macie.hartmann",
+  "todoProcessName": "macie.hartmann",
+  "todoProcessStatus": "z217s7",
+  "todoProcessInfo": "e15cwo",
+  "todoCurrInfo": "5suvhp",
+  "todoNextInfo": "mrilwm",
+  "todoUrl": "www.velia-kozey.biz",
+  "todoLabels": "9aokhe",
+  "todoContent": "jztv3n",
+  "status": "50w42a",
+  "opUserId": "17",
+  "opTime": "2026-03-09 22:50:36",
+  "opOrganId": "17",
+  "opOrganName": "macie.hartmann",
+  "description": "ud53lh",
+  "spare1": "btvboj",
+  "spare2": "rq0ppn"
 }'
 ```
 **Response-fields:**
@@ -22904,9 +22904,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "bzme3y",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "oltwmz",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -22974,43 +22974,43 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/todo/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:49",
-  "lastTime": "2026-03-09 00:09:49",
-  "id": "95",
-  "appId": "95",
-  "foreignId": "95",
-  "type": "5zuqhs",
-  "bizType": "mc09lr",
-  "todoCreateTime": "2026-03-09 00:09:49",
-  "todoId": "95",
-  "todoType": "0647ym",
-  "todoName": "julian.ortiz",
-  "todoAbstract": "a4i9gt",
-  "todoAccountId": "95",
-  "todoAccountName": "julian.ortiz",
-  "todoModuleId": "95",
-  "todoModuleName": "julian.ortiz",
-  "todoUserId": "95",
-  "todoUserName": "julian.ortiz",
-  "todoOrganId": "95",
-  "todoOrganName": "julian.ortiz",
-  "todoProcessName": "julian.ortiz",
-  "todoProcessStatus": "1abxei",
-  "todoProcessInfo": "5cik9h",
-  "todoCurrInfo": "hwn2ey",
-  "todoNextInfo": "ryzopn",
-  "todoUrl": "www.kandace-stamm.org",
-  "todoLabels": "zlufp5",
-  "todoContent": "nwmehh",
-  "status": "atclc1",
-  "opUserId": "95",
-  "opTime": "2026-03-09 00:09:49",
-  "opOrganId": "95",
-  "opOrganName": "julian.ortiz",
-  "description": "4rh2tj",
-  "spare1": "3muzfd",
-  "spare2": "q3kzpc"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:36",
+  "lastTime": "2026-03-09 22:50:36",
+  "id": "17",
+  "appId": "17",
+  "foreignId": "17",
+  "type": "7x7as4",
+  "bizType": "vbrokn",
+  "todoCreateTime": "2026-03-09 22:50:36",
+  "todoId": "17",
+  "todoType": "dt0rm0",
+  "todoName": "macie.hartmann",
+  "todoAbstract": "y5me6f",
+  "todoAccountId": "17",
+  "todoAccountName": "macie.hartmann",
+  "todoModuleId": "17",
+  "todoModuleName": "macie.hartmann",
+  "todoUserId": "17",
+  "todoUserName": "macie.hartmann",
+  "todoOrganId": "17",
+  "todoOrganName": "macie.hartmann",
+  "todoProcessName": "macie.hartmann",
+  "todoProcessStatus": "iza7s5",
+  "todoProcessInfo": "cxact3",
+  "todoCurrInfo": "mqnl0g",
+  "todoNextInfo": "rcszxm",
+  "todoUrl": "www.velia-kozey.biz",
+  "todoLabels": "itl1oh",
+  "todoContent": "85f28s",
+  "status": "y49fxo",
+  "opUserId": "17",
+  "opTime": "2026-03-09 22:50:36",
+  "opOrganId": "17",
+  "opOrganName": "macie.hartmann",
+  "description": "136mzn",
+  "spare1": "imd2u9",
+  "spare2": "fhga06"
 }'
 ```
 **Response-fields:**
@@ -23030,9 +23030,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "y6xo0c",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "fmxi4n",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23082,9 +23082,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7iw8kh",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4phjnk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23141,7 +23141,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?deleteTime=2026-03-09 00:08:33&areatypeId=95&startTime=2026-03-09 00:08:33&likeQuery=i87ztl&page=1&searchCode=58719&endTime=2026-03-09 00:08:33&countryId=95&limit=10&rgt=927&nameEn=cty5sv&lft=874&code=58719&parentIds=ma33sr&parentIds=ma33sr&nameTotal=eflrey&sname=julian.ortiz&name=julian.ortiz&orderBy=406&ids=4rzjxh&ids=4rzjxh&parentId=608&isDisplay=true&hasContent=true&description=g19w0c&delFlag=9&areatypeIds=qlh5ju&areatypeIds=qlh5ju&q=bxrpsw
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/list.do?endTime=2026-03-09 22:49:14&isDisplay=true&startTime=2026-03-09 22:49:14&rgt=821&areatypeId=17&hasContent=true&delFlag=2&description=7s7acn&parentId=233&code=22134&limit=10&orderBy=932&deleteTime=2026-03-09 22:49:14&ids=66gm7x&ids=66gm7x&parentIds=iniu4p&parentIds=iniu4p&areatypeIds=9g52ff&areatypeIds=9g52ff&page=1&sname=macie.hartmann&countryId=17&likeQuery=6z17qn&name=macie.hartmann&q=7uzzv2&lft=384&nameEn=bz09e2&searchCode=22134&nameTotal=4toj14
 ```
 **Response-fields:**
 
@@ -23183,31 +23183,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:53",
-      "lastTime": "2026-03-09 00:09:53",
-      "id": 139,
-      "parentId": 428,
-      "countryId": "95",
-      "areatypeId": "95",
-      "lft": 733,
-      "rgt": 601,
-      "code": "58719",
-      "name": "julian.ortiz",
-      "nameTotal": "kv9k6i",
-      "sname": "julian.ortiz",
-      "nameEn": "z9bix1",
-      "searchCode": "58719",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:40",
+      "lastTime": "2026-03-09 22:50:40",
+      "id": 353,
+      "parentId": 28,
+      "countryId": "17",
+      "areatypeId": "17",
+      "lft": 519,
+      "rgt": 642,
+      "code": "22134",
+      "name": "macie.hartmann",
+      "nameTotal": "n1t2v9",
+      "sname": "macie.hartmann",
+      "nameEn": "es9swi",
+      "searchCode": "22134",
       "isDisplay": true,
       "hasContent": true,
-      "priority": 408,
-      "delFlag": 9,
-      "deleteTime": "2026-03-09 00:09:53",
-      "description": "zgz2mi"
+      "priority": 809,
+      "delFlag": 2,
+      "deleteTime": "2026-03-09 22:50:40",
+      "description": "5p2wzs"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23237,9 +23237,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -23312,7 +23312,7 @@ ids|array|id集合|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'bufferSize=10&rgt=708&areatypeIds=xvytsr&areatypeIds=xvytsr&writer.autoFlush=true&areatypeId=95&parentIds=scutou&parentIds=scutou&writer.psOut.autoFlush=true&writer.formatter.zero=j&writer.psOut.closed=true&writer.formatter.lastException.detailMessage=success&characterEncoding=1iui8g&writer.psOut.textOut.nChars=748&startTime=2026-03-09 00:08:33&description=tnrp8z&parentId=54&contentType=mnifb2&writer.psOut.closing=true&likeQuery=gzfnjm&committed=true&orderBy=543&status=560&limit=10&isDisplay=true&lft=87&writer.writeBuffer=f&writer.writeBuffer=f&page=1&deleteTime=2026-03-09 00:08:33&ids=n01r5d&ids=n01r5d&writer.trouble=true&writer.psOut.textOut.nextChar=37&writer.psOut.trouble=true&endTime=2026-03-09 00:08:33&countryId=95&nameTotal=gjrxau&q=0qdynj&code=58719&nameEn=wzylsa&delFlag=9&searchCode=58719&hasContent=true&name=julian.ortiz&writer.psOut.formatter.zero=t&sname=julian.ortiz'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/export.do --data 'writer.psOut.formatter.zero=h&writer.psOut.autoFlush=true&searchCode=22134&parentIds=n1j86i&parentIds=n1j86i&writer.formatter.zero=a&description=b8oeqx&ids=3b2tsa&ids=3b2tsa&countryId=17&q=7jsc47&endTime=2026-03-09 22:49:14&writer.trouble=true&writer.psOut.textOut.nextChar=229&committed=true&bufferSize=10&writer.writeBuffer=c&writer.writeBuffer=c&rgt=445&orderBy=686&contentType=zzrvji&areatypeId=17&writer.formatter.lastException.detailMessage=success&lft=431&nameTotal=x3ixxs&sname=macie.hartmann&isDisplay=true&parentId=114&delFlag=2&deleteTime=2026-03-09 22:49:14&name=macie.hartmann&areatypeIds=nuvqg4&areatypeIds=nuvqg4&likeQuery=p42ypq&hasContent=true&writer.psOut.trouble=true&startTime=2026-03-09 22:49:14&status=133&code=22134&limit=10&writer.psOut.closing=true&writer.psOut.textOut.nChars=408&nameEn=jko59d&writer.psOut.closed=true&characterEncoding=mxeuxq&writer.autoFlush=true&page=1'
 ```
 **Response-fields:**
 
@@ -23331,9 +23331,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "nwl31a",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0lsyp5",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23405,30 +23405,30 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:53",
-    "lastTime": "2026-03-09 00:09:53",
-    "id": 991,
-    "parentId": 815,
-    "countryId": "95",
-    "areatypeId": "95",
-    "lft": 311,
-    "rgt": 26,
-    "code": "58719",
-    "name": "julian.ortiz",
-    "nameTotal": "opmvtp",
-    "sname": "julian.ortiz",
-    "nameEn": "j3gdsj",
-    "searchCode": "58719",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:40",
+    "lastTime": "2026-03-09 22:50:40",
+    "id": 183,
+    "parentId": 532,
+    "countryId": "17",
+    "areatypeId": "17",
+    "lft": 474,
+    "rgt": 549,
+    "code": "22134",
+    "name": "macie.hartmann",
+    "nameTotal": "79dgf0",
+    "sname": "macie.hartmann",
+    "nameEn": "lisbwf",
+    "searchCode": "22134",
     "isDisplay": true,
     "hasContent": true,
-    "priority": 241,
-    "delFlag": 9,
-    "deleteTime": "2026-03-09 00:09:53",
-    "description": "6darv8"
+    "priority": 396,
+    "delFlag": 2,
+    "deleteTime": "2026-03-09 22:50:40",
+    "description": "47vd8f"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23480,27 +23480,27 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:53",
-  "lastTime": "2026-03-09 00:09:53",
-  "id": 495,
-  "parentId": 825,
-  "countryId": "95",
-  "areatypeId": "95",
-  "lft": 651,
-  "rgt": 118,
-  "code": "58719",
-  "name": "julian.ortiz",
-  "nameTotal": "1w9486",
-  "sname": "julian.ortiz",
-  "nameEn": "4eeddk",
-  "searchCode": "58719",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:40",
+  "lastTime": "2026-03-09 22:50:40",
+  "id": 53,
+  "parentId": 650,
+  "countryId": "17",
+  "areatypeId": "17",
+  "lft": 345,
+  "rgt": 341,
+  "code": "22134",
+  "name": "macie.hartmann",
+  "nameTotal": "h4vpi0",
+  "sname": "macie.hartmann",
+  "nameEn": "2gamam",
+  "searchCode": "22134",
   "isDisplay": true,
   "hasContent": true,
-  "priority": 24,
-  "delFlag": 9,
-  "deleteTime": "2026-03-09 00:09:53",
-  "description": "og9j9w"
+  "priority": 348,
+  "delFlag": 2,
+  "deleteTime": "2026-03-09 22:50:40",
+  "description": "jkgryu"
 }'
 ```
 **Response-fields:**
@@ -23520,9 +23520,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "5gmi4g",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0pm2ti",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23574,27 +23574,27 @@ description|string|描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/xzqh/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:53",
-  "lastTime": "2026-03-09 00:09:53",
-  "id": 664,
-  "parentId": 687,
-  "countryId": "95",
-  "areatypeId": "95",
-  "lft": 835,
-  "rgt": 487,
-  "code": "58719",
-  "name": "julian.ortiz",
-  "nameTotal": "e12saf",
-  "sname": "julian.ortiz",
-  "nameEn": "9ltf4m",
-  "searchCode": "58719",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:40",
+  "lastTime": "2026-03-09 22:50:40",
+  "id": 116,
+  "parentId": 826,
+  "countryId": "17",
+  "areatypeId": "17",
+  "lft": 337,
+  "rgt": 571,
+  "code": "22134",
+  "name": "macie.hartmann",
+  "nameTotal": "jzrxnh",
+  "sname": "macie.hartmann",
+  "nameEn": "82dktn",
+  "searchCode": "22134",
   "isDisplay": true,
   "hasContent": true,
-  "priority": 345,
-  "delFlag": 9,
-  "deleteTime": "2026-03-09 00:09:53",
-  "description": "j5bxhl"
+  "priority": 933,
+  "delFlag": 2,
+  "deleteTime": "2026-03-09 22:50:40",
+  "description": "w7ayu7"
 }'
 ```
 **Response-fields:**
@@ -23614,9 +23614,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "a04f96",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ru4dh4",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23666,9 +23666,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "mf7s49",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "02k2jk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23711,7 +23711,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?limit=10&description=yj9go7&existKey=7ce8a5&delFlag=9&startTime=2026-03-09 00:08:33&page=1&q=rjig1u&orderBy=965&type=7qwvj4&code=58719&name=julian.ortiz&endTime=2026-03-09 00:08:33
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/list.do?delFlag=2&type=0b4q4t&startTime=2026-03-09 22:49:14&page=1&limit=10&existKey=yirw3o&q=3kifnh&code=22134&description=udvu4v&orderBy=540&endTime=2026-03-09 22:49:14&name=macie.hartmann
 ```
 **Response-fields:**
 
@@ -23742,20 +23742,20 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:55",
-      "lastTime": "2026-03-09 00:09:55",
-      "id": "95",
-      "name": "julian.ortiz",
-      "type": "v2vjha",
-      "code": "58719",
-      "priority": 313,
-      "delFlag": 9,
-      "description": "yuplf8"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:42",
+      "lastTime": "2026-03-09 22:50:42",
+      "id": "17",
+      "name": "macie.hartmann",
+      "type": "1r64hp",
+      "code": "22134",
+      "priority": 707,
+      "delFlag": 2,
+      "description": "l7z7b9"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23785,9 +23785,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -23846,7 +23846,7 @@ existKey|string|existKey|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'writer.psOut.closed=true&writer.psOut.trouble=true&contentType=vyni42&writer.formatter.zero=n&writer.psOut.autoFlush=true&code=58719&characterEncoding=wnb3k3&name=julian.ortiz&writer.autoFlush=true&writer.trouble=true&q=mwofse&committed=true&writer.psOut.closing=true&description=o9upec&limit=10&writer.psOut.textOut.nextChar=294&orderBy=377&writer.psOut.textOut.nChars=559&startTime=2026-03-09 00:08:33&delFlag=9&writer.formatter.lastException.detailMessage=success&status=283&endTime=2026-03-09 00:08:33&page=1&type=o8ki1i&writer.psOut.formatter.zero=l&bufferSize=10&existKey=8q8xh3&writer.writeBuffer=0&writer.writeBuffer=0'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/export.do --data 'startTime=2026-03-09 22:49:14&type=7h07l0&name=macie.hartmann&code=22134&writer.psOut.textOut.nChars=107&writer.autoFlush=true&description=j09tbw&q=n1agzw&orderBy=60&bufferSize=10&writer.psOut.autoFlush=true&writer.psOut.closed=true&page=1&writer.writeBuffer=9&writer.writeBuffer=9&endTime=2026-03-09 22:49:14&contentType=phvdkz&delFlag=2&writer.formatter.zero=5&writer.psOut.textOut.nextChar=824&writer.trouble=true&writer.psOut.closing=true&characterEncoding=kao6ud&limit=10&existKey=8axzeb&committed=true&writer.psOut.trouble=true&status=776&writer.formatter.lastException.detailMessage=success&writer.psOut.formatter.zero=t'
 ```
 **Response-fields:**
 
@@ -23865,9 +23865,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "ak95ul",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "igs552",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23928,19 +23928,19 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:55",
-    "lastTime": "2026-03-09 00:09:55",
-    "id": "95",
-    "name": "julian.ortiz",
-    "type": "8j5bp2",
-    "code": "58719",
-    "priority": 87,
-    "delFlag": 9,
-    "description": "v9nli7"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:42",
+    "lastTime": "2026-03-09 22:50:42",
+    "id": "17",
+    "name": "macie.hartmann",
+    "type": "ot316f",
+    "code": "22134",
+    "priority": 330,
+    "delFlag": 2,
+    "description": "uuxdbn"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -23981,16 +23981,16 @@ description|string|角色描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "name": "julian.ortiz",
-  "type": "hsd52b",
-  "code": "58719",
-  "priority": 898,
-  "delFlag": 9,
-  "description": "282k70"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "name": "macie.hartmann",
+  "type": "2f0npy",
+  "code": "22134",
+  "priority": 322,
+  "delFlag": 2,
+  "description": "3sc61w"
 }'
 ```
 **Response-fields:**
@@ -24010,9 +24010,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "5dvo0f",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0ll8kr",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24053,16 +24053,16 @@ description|string|角色描述|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/roletype/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:55",
-  "lastTime": "2026-03-09 00:09:55",
-  "id": "95",
-  "name": "julian.ortiz",
-  "type": "v1gzv6",
-  "code": "58719",
-  "priority": 773,
-  "delFlag": 9,
-  "description": "thssb7"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:42",
+  "lastTime": "2026-03-09 22:50:42",
+  "id": "17",
+  "name": "macie.hartmann",
+  "type": "deglo3",
+  "code": "22134",
+  "priority": 522,
+  "delFlag": 2,
+  "description": "6ermb5"
 }'
 ```
 **Response-fields:**
@@ -24082,9 +24082,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "yfqnn9",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "ik4157",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24134,9 +24134,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "4144qr",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "jtaiw3",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24175,7 +24175,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?cfgKey=9ube3q&q=1d67j1&limit=10&startTime=2026-03-09 00:08:33&endTime=2026-03-09 00:08:33&page=1&cfgValue=py16l6&orderBy=987&ids=6wjxml&ids=6wjxml
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/list.do?q=j0z46o&startTime=2026-03-09 22:49:14&cfgValue=dcvbh9&ids=hx6g1d&ids=hx6g1d&orderBy=162&endTime=2026-03-09 22:49:14&page=1&limit=10&cfgKey=q8w23u
 ```
 **Response-fields:**
 
@@ -24202,19 +24202,19 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "totalCount": 437,
+    "totalCount": 440,
     "pageSize": 10,
     "totalPage": 1,
     "currPage": 1,
     "list": [
       {
-        "cfgKey": "k3uhlq",
-        "cfgValue": "mbzn0m"
+        "cfgKey": "hztq5y",
+        "cfgValue": "skvszn"
       }
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24243,9 +24243,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -24301,7 +24301,7 @@ ids|array|数组|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'writer.psOut.formatter.zero=w&cfgKey=7j1ywe&startTime=2026-03-09 00:08:33&q=7hlh5f&committed=true&writer.writeBuffer=4&writer.writeBuffer=4&orderBy=496&status=378&page=1&writer.formatter.lastException.detailMessage=success&cfgValue=wa0fuv&writer.psOut.textOut.nextChar=252&characterEncoding=ckyd78&contentType=ag55yq&writer.psOut.autoFlush=true&writer.psOut.textOut.nChars=642&writer.psOut.closed=true&writer.psOut.trouble=true&writer.autoFlush=true&bufferSize=10&ids=vt3z8j&ids=vt3z8j&writer.trouble=true&writer.formatter.zero=g&writer.psOut.closing=true&limit=10&endTime=2026-03-09 00:08:33'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/export.do --data 'writer.formatter.lastException.detailMessage=success&writer.psOut.trouble=true&writer.psOut.textOut.nChars=418&writer.psOut.closed=true&cfgKey=dn93p4&characterEncoding=xq6dlj&q=v6f5g9&page=1&writer.formatter.zero=2&cfgValue=kb6ws8&writer.trouble=true&orderBy=9&bufferSize=10&limit=10&status=146&writer.writeBuffer=0&writer.writeBuffer=0&writer.autoFlush=true&writer.psOut.textOut.nextChar=267&writer.psOut.closing=true&endTime=2026-03-09 22:49:14&committed=true&writer.psOut.autoFlush=true&writer.psOut.formatter.zero=f&contentType=apyzqh&startTime=2026-03-09 22:49:14&ids=l4lafu&ids=l4lafu'
 ```
 **Response-fields:**
 
@@ -24320,9 +24320,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "88g5ud",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "08rpgr",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24352,7 +24352,7 @@ cfgKey|string|   配置KEY|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/yhhacg.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/m312ov.do
 ```
 **Response-fields:**
 
@@ -24374,11 +24374,11 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "cfgKey": "czdsfn",
-    "cfgValue": "j1crbi"
+    "cfgKey": "t8gnmi",
+    "cfgValue": "rdj0xn"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24410,8 +24410,8 @@ cfgValue|string|配置项值|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/save.do --data '{
-  "cfgKey": "1lrdr0",
-  "cfgValue": "7i69ab"
+  "cfgKey": "5t5q2z",
+  "cfgValue": "y370ec"
 }'
 ```
 **Response-fields:**
@@ -24431,9 +24431,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "9l9504",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "juieah",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24465,8 +24465,8 @@ cfgValue|string|配置项值|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/system/parts/update.do --data '{
-  "cfgKey": "8x11nv",
-  "cfgValue": "5j6hud"
+  "cfgKey": "ywz1bm",
+  "cfgValue": "zikz0h"
 }'
 ```
 **Response-fields:**
@@ -24486,9 +24486,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "s837ml",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "8o1hjw",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24537,9 +24537,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "38twua",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "yqrrzf",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24582,9 +24582,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7mgdg6",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "7h1w33",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24627,12 +24627,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-    "img": "sij93u",
-    "code": "58719"
+    "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+    "img": "7ddqv6",
+    "code": "22134"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24674,12 +24674,12 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "captchaEnabled": true,
-    "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-    "img": "0pibf9",
-    "code": "58719"
+    "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+    "img": "zb21tk",
+    "code": "22134"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24784,7 +24784,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?columns[0].isQuery=33jkas&tableComment=fxie7u&pkColumn.isInsert=lgwofy&columns[0].columnName=julian.ortiz&creatorId=95&columns[0].isRequired=wxm1hs&subTable.createTime=2026-03-09 00:09:56&limit=10&subTable.subTable.creatorId=95&columns[0].dictType=ph4qwq&subTable.tableName=julian.ortiz&subTable.pkColumn.isIncrement=1i4vzl&subTable.subTableFkName=julian.ortiz&subTable.pkColumn.javaField=sd99b2&subTable.page=1&subTable.pkColumn.lastTime=2026-03-09 00:09:56&subTable.subTable.subTableName=julian.ortiz&subTable.subTable.createTime=2026-03-09 00:09:56&subTable.subTable.lastTime=2026-03-09 00:09:56&subTable.pkColumn.creatorId=95&subTable.tableComment=or7i18&subTable.functionAuthor=Antonetta Watsica&subTable.subTable.parentMenuName=julian.ortiz&pkColumn.isRequired=jwhc4c&columns[0].columnComment=khb2pm&columns[0].isIncrement=f17f4p&subTable.columns[0].javaType=bq3zv2&lastTime=2026-03-09 00:09:56&subTable.columns[0].dictType=va7bon&subTable.columns[0].isIncrement=fiqw40&pkColumn.isIncrement=5vg06f&subTable.tableId=875&tableId=281&subTable.treeCode=58719&functionAuthor=Antonetta Watsica&pkColumn.columnType=vx5595&columns[0].lastTime=2026-03-09 00:09:56&functionName=julian.ortiz&subTable.className=julian.ortiz&subTable.genPath=46b7j3&subTable.subTable.subTableFkName=julian.ortiz&subTable.subTable.genPath=qq1tcd&columns[0].columnType=219b03&subTable.pkColumn.columnType=yo3l1a&subTable.columns[0].tableId=409&subTable.subTable.tableComment=rbaubx&subTable.subTable.formColNum=302&pkColumn.isQuery=6xlvrs&subTable.lastTime=2026-03-09 00:09:56&subTable.columns[0].isPk=6utlzt&subTable.columns[0].isEdit=9pyiyl&subTable.subTable.treeName=julian.ortiz&columns[0].javaField=1cyxit&subTable.pkColumn.isList=ehueti&moduleName=julian.ortiz&subTable.formColNum=352&subTable.columns[0].isInsert=koc2qe&columns[0].isList=geyd7l&pkColumn.columnName=julian.ortiz&pkColumn.columnComment=hzon6p&columns[0].queryType=9jbymm&columns[0].priority=246&optionLists=csipon&subTable.subTable.functionName=julian.ortiz&subTable.subTable.moduleName=julian.ortiz&subTable.subTable.page=1&treeParentCode=58719&pkColumn.lastTime=2026-03-09 00:09:56&treeName=julian.ortiz&pkColumn.creatorId=95&subTable.subTable.packageName=julian.ortiz&subTable.subTable.tplWebType=hy2iks&subTable.tplCategory=juatch&subTable.genType=5rpva6&subTable.pkColumn.isRequired=vbmvfo&subTable.subTable.businessName=julian.ortiz&subTable.limit=10&subTable.treeName=julian.ortiz&columns[0].isInsert=vs5mmf&pkColumn.tableId=251&subTable.pkColumn.columnId=474&subTable.subTable.functionAuthor=Antonetta Watsica&columns[0].isEdit=ua0okj&subTable.columns[0].isQuery=frqrum&subTableFkName=julian.ortiz&pkColumn.isEdit=qt9ith&pkColumn.createTime=2026-03-09 00:09:56&subTable.moduleName=julian.ortiz&subTable.businessName=julian.ortiz&subTable.pkColumn.isQuery=141rxc&subTable.pkColumn.htmlType=ef3ftu&Description=kni7bw&subTable.pkColumn.isInsert=6ltcpn&subTable.creatorId=95&subTable.subTableName=julian.ortiz&subTable.Description=tb5jkc&subTable.pkColumn.dictType=i7ll35&columns[0].creatorId=95&genType=uvqn52&pkColumn.queryType=mhe2qi&subTable.optionLists=q1i0rr&page=1&subTable.columns[0].columnComment=9zm2x7&subTable.columns[0].isRequired=4b5n4s&subTable.pkColumn.tableId=911&pkColumn.isPk=802zds&pkColumn.priority=228&subTable.subTable.tableId=750&subTable.tplWebType=ije54o&pkColumn.columnId=108&subTable.subTable.optionLists=udo3n4&subTable.pkColumn.columnName=julian.ortiz&formColNum=324&subTable.pkColumn.queryType=vshulj&subTable.subTable.Description=svtsct&businessName=julian.ortiz&subTable.subTable.limit=10&subTable.columns[0].creatorId=95&subTable.columns[0].htmlType=44yjse&columns[0].createTime=2026-03-09 00:09:56&pkColumn.javaField=xu47au&className=julian.ortiz&subTable.subTable.className=julian.ortiz&subTable.subTable.treeParentCode=58719&subTable.columns[0].lastTime=2026-03-09 00:09:56&subTable.columns[0].priority=320&tplCategory=4q2my5&subTable.pkColumn.priority=646&treeCode=58719&subTable.pkColumn.columnComment=5gfnep&subTable.columns[0].javaField=0fku65&createTime=2026-03-09 00:09:56&pkColumn.dictType=x697bg&packageName=julian.ortiz&pkColumn.htmlType=z4qtg2&subTable.pkColumn.javaType=wkh1ua&subTable.subTable.tplCategory=scc3ks&subTable.columns[0].columnName=julian.ortiz&columns[0].columnId=96&pkColumn.javaType=m7k98w&subTable.pkColumn.isEdit=smvvq9&subTable.columns[0].isList=io41b5&subTable.parentMenuId=563&subTable.packageName=julian.ortiz&subTable.parentMenuName=julian.ortiz&parentMenuId=578&parentMenuName=julian.ortiz&genPath=p4jkhn&subTable.subTable.parentMenuId=352&subTable.columns[0].columnId=776&subTable.subTable.genType=lktoxf&subTable.subTable.treeCode=58719&pkColumn.isList=jssngx&subTable.columns[0].createTime=2026-03-09 00:09:56&columns[0].isPk=ht2dc7&subTable.columns[0].queryType=1svfer&subTableName=julian.ortiz&tableName=julian.ortiz&columns[0].javaType=mn88xr&columns[0].tableId=34&subTable.pkColumn.createTime=2026-03-09 00:09:56&subTable.treeParentCode=58719&subTable.subTable.tableName=julian.ortiz&subTable.functionName=julian.ortiz&subTable.columns[0].columnType=caelly&subTable.pkColumn.isPk=rrdn40&tplWebType=dfbna7&columns[0].htmlType=ltf98s
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/list.do?subTable.page=1&columns[0].dictType=fdriwz&subTable.pkColumn.dictType=35d6i3&subTable.pkColumn.priority=900&tableComment=6w4hvf&subTable.pkColumn.htmlType=6jk34q&subTable.columns[0].columnComment=zp85ms&columns[0].columnType=7336e5&subTable.moduleName=macie.hartmann&businessName=macie.hartmann&columns[0].columnName=macie.hartmann&columns[0].columnComment=j5rnwk&columns[0].isPk=l2in1x&columns[0].htmlType=1qr2n6&subTable.subTable.treeCode=22134&parentMenuName=macie.hartmann&subTable.tableName=macie.hartmann&subTable.subTable.parentMenuId=540&subTable.columns[0].isEdit=qlnoyo&subTable.subTable.functionName=macie.hartmann&treeName=macie.hartmann&pkColumn.columnName=macie.hartmann&pkColumn.htmlType=wxob96&pkColumn.lastTime=2026-03-09 22:50:42&pkColumn.creatorId=17&pkColumn.priority=284&subTable.pkColumn.isInsert=4q6jma&subTable.columns[0].dictType=s0pp19&pkColumn.javaType=1p3glk&pkColumn.isIncrement=g06m3i&pkColumn.columnType=1or5ma&pkColumn.isQuery=r2ze9r&subTable.columns[0].javaType=9fwgo7&pkColumn.columnComment=k0vjql&optionLists=9n1da2&parentMenuId=754&subTable.tplWebType=9wfnt7&subTable.tableId=412&subTable.subTableFkName=macie.hartmann&subTable.subTable.subTableFkName=macie.hartmann&subTable.subTable.packageName=macie.hartmann&columns[0].isInsert=ig9z3b&subTable.columns[0].isPk=mkr4az&columns[0].queryType=576p3m&className=macie.hartmann&subTable.columns[0].htmlType=fbd2e3&subTable.subTable.className=macie.hartmann&subTable.subTable.moduleName=macie.hartmann&subTable.formColNum=849&pkColumn.isList=oai3si&subTable.subTable.page=1&subTable.columns[0].isQuery=eukd1z&packageName=macie.hartmann&functionAuthor=Lauralee Gutmann PhD&columns[0].priority=129&subTable.subTable.treeParentCode=22134&columns[0].columnId=94&genPath=n5sh4i&subTable.pkColumn.queryType=kjdwjn&pkColumn.isInsert=qmyxcq&subTable.subTable.businessName=macie.hartmann&subTable.subTable.Description=l7sj8k&subTable.treeName=macie.hartmann&columns[0].tableId=229&treeCode=22134&subTable.columns[0].lastTime=2026-03-09 22:50:42&tplWebType=75bc31&pkColumn.columnId=207&subTable.subTableName=macie.hartmann&subTable.pkColumn.createTime=2026-03-09 22:50:42&subTable.pkColumn.javaField=6m7x0p&subTable.columns[0].isIncrement=bjtyjo&pkColumn.isRequired=t9yqs4&subTable.columns[0].isList=pyxkpw&columns[0].createTime=2026-03-09 22:50:42&subTable.tplCategory=951z6u&subTable.pkColumn.columnName=macie.hartmann&genType=hz39dx&pkColumn.dictType=tp9g2y&subTable.columns[0].isRequired=jjq35z&subTable.pkColumn.isEdit=l0z5mz&subTable.treeParentCode=22134&subTable.parentMenuName=macie.hartmann&subTable.columns[0].javaField=bda3ee&columns[0].lastTime=2026-03-09 22:50:42&columns[0].isEdit=6yqox4&tableId=152&subTable.subTable.creatorId=17&subTable.packageName=macie.hartmann&subTable.functionAuthor=Lauralee Gutmann PhD&subTable.subTable.genType=ucjq6p&subTable.columns[0].columnName=macie.hartmann&subTable.subTable.tplCategory=m3g8dy&subTable.columns[0].tableId=32&subTable.columns[0].columnType=dwg6wh&columns[0].isQuery=i7xr8z&limit=10&formColNum=293&columns[0].isList=1bw02v&moduleName=macie.hartmann&subTable.lastTime=2026-03-09 22:50:42&columns[0].isRequired=94z405&tplCategory=qcmdkq&subTable.pkColumn.isRequired=wgd7jt&subTableFkName=macie.hartmann&subTable.pkColumn.columnType=zavdoy&subTableName=macie.hartmann&pkColumn.queryType=h5oirh&pkColumn.javaField=2ejzbw&subTable.pkColumn.isIncrement=1s584l&subTable.subTable.functionAuthor=Lauralee Gutmann PhD&subTable.subTable.treeName=macie.hartmann&subTable.businessName=macie.hartmann&subTable.subTable.tableComment=paq4vn&subTable.subTable.genPath=lxr2oi&subTable.optionLists=dftia6&subTable.subTable.optionLists=q5b76a&subTable.columns[0].creatorId=17&subTable.Description=pu1nvm&Description=h0feha&subTable.genPath=xc0vul&subTable.subTable.tableName=macie.hartmann&subTable.columns[0].priority=54&subTable.pkColumn.lastTime=2026-03-09 22:50:42&subTable.subTable.createTime=2026-03-09 22:50:42&subTable.tableComment=rm1g4i&subTable.treeCode=22134&pkColumn.isEdit=1fa3qd&subTable.pkColumn.isList=kzm1kv&subTable.subTable.formColNum=179&subTable.className=macie.hartmann&subTable.pkColumn.columnComment=8kwwer&subTable.pkColumn.tableId=131&subTable.columns[0].columnId=739&subTable.subTable.parentMenuName=macie.hartmann&pkColumn.tableId=235&subTable.columns[0].queryType=xhfv40&page=1&creatorId=17&createTime=2026-03-09 22:50:42&subTable.subTable.subTableName=macie.hartmann&subTable.limit=10&subTable.creatorId=17&columns[0].creatorId=17&subTable.pkColumn.isPk=njnfgq&subTable.pkColumn.javaType=v7arus&subTable.parentMenuId=353&columns[0].isIncrement=2zyd6o&subTable.subTable.tableId=735&treeParentCode=22134&subTable.subTable.tplWebType=jaxn66&subTable.genType=f9d8qs&subTable.subTable.lastTime=2026-03-09 22:50:42&pkColumn.isPk=geu84w&columns[0].javaField=3x1uew&subTable.columns[0].isInsert=8tdl72&functionName=macie.hartmann&subTable.pkColumn.creatorId=17&subTable.subTable.limit=10&subTable.columns[0].createTime=2026-03-09 22:50:42&subTable.createTime=2026-03-09 22:50:42&columns[0].javaType=x298ee&subTable.pkColumn.columnId=928&subTable.functionName=macie.hartmann&subTable.pkColumn.isQuery=8673sx&lastTime=2026-03-09 22:50:42&tableName=macie.hartmann&pkColumn.createTime=2026-03-09 22:50:42
 ```
 **Response-fields:**
 
@@ -24879,83 +24879,83 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:56",
-      "lastTime": "2026-03-09 00:09:56",
-      "tableId": 436,
-      "tableName": "julian.ortiz",
-      "tableComment": "j2b4yq",
-      "subTableName": "julian.ortiz",
-      "subTableFkName": "julian.ortiz",
-      "className": "julian.ortiz",
-      "tplCategory": "iku4p1",
-      "tplWebType": "31ns5m",
-      "packageName": "julian.ortiz",
-      "moduleName": "julian.ortiz",
-      "businessName": "julian.ortiz",
-      "functionName": "julian.ortiz",
-      "functionAuthor": "Antonetta Watsica",
-      "formColNum": 989,
-      "genType": "w5zkzz",
-      "genPath": "emx1vw",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:42",
+      "lastTime": "2026-03-09 22:50:42",
+      "tableId": 575,
+      "tableName": "macie.hartmann",
+      "tableComment": "2wdjlb",
+      "subTableName": "macie.hartmann",
+      "subTableFkName": "macie.hartmann",
+      "className": "macie.hartmann",
+      "tplCategory": "apbez7",
+      "tplWebType": "1x8chj",
+      "packageName": "macie.hartmann",
+      "moduleName": "macie.hartmann",
+      "businessName": "macie.hartmann",
+      "functionName": "macie.hartmann",
+      "functionAuthor": "Lauralee Gutmann PhD",
+      "formColNum": 101,
+      "genType": "c6dmjy",
+      "genPath": "y6zevp",
       "pkColumn": {
-        "creatorId": "95",
-        "createTime": "2026-03-09 00:09:56",
-        "lastTime": "2026-03-09 00:09:56",
-        "columnId": 253,
-        "tableId": 23,
-        "columnName": "julian.ortiz",
-        "columnComment": "c7jwqt",
-        "columnType": "ubpwu9",
-        "javaType": "9xfbdw",
-        "javaField": "a88yq4",
-        "isPk": "j6736v",
-        "isIncrement": "cgzbos",
-        "isRequired": "tda6y3",
-        "isInsert": "vs1asv",
-        "isEdit": "j4smlg",
-        "isList": "k5ya71",
-        "isQuery": "g2m76r",
-        "queryType": "9q7pum",
-        "htmlType": "1gmvpk",
-        "dictType": "3b82bo",
-        "priority": 190
+        "creatorId": "17",
+        "createTime": "2026-03-09 22:50:42",
+        "lastTime": "2026-03-09 22:50:42",
+        "columnId": 590,
+        "tableId": 400,
+        "columnName": "macie.hartmann",
+        "columnComment": "g7stbx",
+        "columnType": "ca9p0p",
+        "javaType": "7ajzyf",
+        "javaField": "cof2dv",
+        "isPk": "r7xly0",
+        "isIncrement": "9kj3nj",
+        "isRequired": "gy3b8g",
+        "isInsert": "vg8m3q",
+        "isEdit": "aj6r9d",
+        "isList": "1dtaam",
+        "isQuery": "iypw18",
+        "queryType": "mkblqu",
+        "htmlType": "bmkib4",
+        "dictType": "c3jt8m",
+        "priority": 76
       },
       "subTable": {
         "$ref": "..."
       },
       "columns": [
         {
-          "creatorId": "95",
-          "createTime": "2026-03-09 00:09:56",
-          "lastTime": "2026-03-09 00:09:56",
-          "columnId": 519,
-          "tableId": 14,
-          "columnName": "julian.ortiz",
-          "columnComment": "uu9wd7",
-          "columnType": "5zwtof",
-          "javaType": "cczo9u",
-          "javaField": "qmsgd1",
-          "isPk": "y3uvdg",
-          "isIncrement": "kk7k8v",
-          "isRequired": "0o09mx",
-          "isInsert": "wddb1f",
-          "isEdit": "1oi1v0",
-          "isList": "v0w48f",
-          "isQuery": "9ci38i",
-          "queryType": "hgkj2v",
-          "htmlType": "ttidvu",
-          "dictType": "4rgb70",
-          "priority": 3
+          "creatorId": "17",
+          "createTime": "2026-03-09 22:50:42",
+          "lastTime": "2026-03-09 22:50:42",
+          "columnId": 733,
+          "tableId": 253,
+          "columnName": "macie.hartmann",
+          "columnComment": "r9ukni",
+          "columnType": "p3xqpv",
+          "javaType": "mvo0ki",
+          "javaField": "hjst1l",
+          "isPk": "gpe9ki",
+          "isIncrement": "572c5e",
+          "isRequired": "lmosja",
+          "isInsert": "j9i91e",
+          "isEdit": "ltt1st",
+          "isList": "kvpfah",
+          "isQuery": "j2ew58",
+          "queryType": "hotb07",
+          "htmlType": "7w2ks0",
+          "dictType": "jrkv88",
+          "priority": 694
         }
       ],
-      "optionLists": "z26xgx",
-      "treeCode": "58719",
-      "treeParentCode": "58719",
-      "treeName": "julian.ortiz",
-      "parentMenuId": 590,
-      "parentMenuName": "julian.ortiz",
-      "Description": "yyvehs",
+      "optionLists": "f1xibp",
+      "treeCode": "22134",
+      "treeParentCode": "22134",
+      "treeName": "macie.hartmann",
+      "parentMenuId": 914,
+      "parentMenuName": "macie.hartmann",
+      "Description": "y1yqte",
       "page": 1,
       "limit": 10,
       "params": {
@@ -24963,8 +24963,8 @@ timestamp|string|返回时间戳字符串|-
       }
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -24994,7 +24994,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/656.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/518.do
 ```
 **Response-fields:**
 
@@ -25019,8 +25019,8 @@ timestamp|string|返回时间戳字符串|-
       "waring": "You may use java.util.Object for Map value; doc-generate can't be handle."
     }
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25123,7 +25123,7 @@ params|map|请求参数|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?page=1&subTable.businessName=julian.ortiz&limit=10&subTable.pkColumn.lastTime=2026-03-09 00:09:56&subTable.creatorId=95&moduleName=julian.ortiz&subTable.subTable.createTime=2026-03-09 00:09:56&subTable.pkColumn.columnType=ingwol&columns[0].javaType=6xs71r&subTable.subTable.parentMenuName=julian.ortiz&subTable.pkColumn.columnComment=dkde3w&functionAuthor=Antonetta Watsica&pkColumn.htmlType=y4sa4k&pkColumn.columnId=853&subTable.functionName=julian.ortiz&pkColumn.queryType=l3abju&subTable.pkColumn.tableId=814&subTable.columns[0].lastTime=2026-03-09 00:09:56&pkColumn.isInsert=tlvoyh&subTable.genPath=mzfxs1&subTable.columns[0].columnType=xgtm1c&subTable.parentMenuName=julian.ortiz&treeCode=58719&subTable.subTableName=julian.ortiz&columns[0].isQuery=figchv&parentMenuId=604&formColNum=984&subTable.subTable.functionName=julian.ortiz&subTable.columns[0].isRequired=euyviw&columns[0].isRequired=zrl73g&pkColumn.createTime=2026-03-09 00:09:56&pkColumn.isRequired=teggry&tableComment=o8nb3s&tplWebType=dx89tk&optionLists=dbsnn4&columns[0].priority=436&subTable.pkColumn.isQuery=dd67gp&subTable.pkColumn.isInsert=z89lhv&columns[0].queryType=x471ab&subTable.subTable.page=1&subTable.subTable.treeParentCode=58719&pkColumn.javaType=nnjmth&genType=yk08ti&subTable.columns[0].isQuery=hffhjf&className=julian.ortiz&pkColumn.isPk=2pgant&subTable.subTable.subTableName=julian.ortiz&pkColumn.isList=kva6tu&columns[0].tableId=576&pkColumn.lastTime=2026-03-09 00:09:56&subTable.pkColumn.javaType=n89vfe&subTable.subTable.genPath=2d6mxf&subTable.optionLists=5991ry&subTable.pkColumn.creatorId=95&pkColumn.javaField=s5wqz7&subTable.subTable.treeName=julian.ortiz&subTable.treeCode=58719&subTable.columns[0].isEdit=7v328j&columns[0].creatorId=95&subTable.columns[0].isInsert=aetlhd&functionName=julian.ortiz&businessName=julian.ortiz&pkColumn.columnType=p6t25x&subTable.moduleName=julian.ortiz&subTable.subTable.lastTime=2026-03-09 00:09:56&subTable.subTable.moduleName=julian.ortiz&subTable.parentMenuId=652&subTable.functionAuthor=Antonetta Watsica&subTable.subTable.tableName=julian.ortiz&subTable.pkColumn.isIncrement=90zesh&subTable.pkColumn.isEdit=eimyuu&subTable.subTable.className=julian.ortiz&subTableName=julian.ortiz&subTable.createTime=2026-03-09 00:09:56&tplCategory=e24qcg&pkColumn.tableId=440&subTable.columns[0].isPk=fe5oo9&subTable.columns[0].htmlType=jefsdy&columns[0].javaField=7e9b4f&subTable.pkColumn.columnId=510&subTable.page=1&columns[0].isList=e2gner&tableName=julian.ortiz&parentMenuName=julian.ortiz&lastTime=2026-03-09 00:09:56&subTable.pkColumn.priority=104&columns[0].columnComment=f3b6jk&subTable.subTable.subTableFkName=julian.ortiz&subTable.columns[0].columnName=julian.ortiz&columns[0].columnName=julian.ortiz&genPath=a9o5er&subTable.pkColumn.isRequired=jxs9vk&subTable.subTable.genType=zkks85&subTable.columns[0].dictType=fnud3q&pkColumn.columnComment=n0wiwh&subTable.treeName=julian.ortiz&columns[0].isInsert=nk7lsi&tableId=760&subTable.subTable.limit=10&columns[0].htmlType=0qijh7&pkColumn.isQuery=3ry5i7&subTable.subTable.businessName=julian.ortiz&subTable.columns[0].queryType=5kx2wz&pkColumn.isEdit=eq6na6&pkColumn.creatorId=95&subTable.columns[0].columnId=43&subTable.subTable.formColNum=312&subTable.packageName=julian.ortiz&subTable.columns[0].priority=128&createTime=2026-03-09 00:09:56&subTable.pkColumn.dictType=n49llo&subTable.subTable.tplWebType=8391w2&subTable.subTable.functionAuthor=Antonetta Watsica&subTable.subTable.tplCategory=kmlnr9&subTable.tplWebType=4pbmz8&subTable.columns[0].tableId=463&subTable.columns[0].isIncrement=2htqvd&subTable.columns[0].javaField=uvnskn&columns[0].columnId=465&treeParentCode=58719&subTable.columns[0].createTime=2026-03-09 00:09:56&subTable.columns[0].creatorId=95&columns[0].createTime=2026-03-09 00:09:56&columns[0].isPk=ogas4b&subTable.Description=55nmoc&pkColumn.dictType=iojxrq&subTable.columns[0].isList=hojeyo&subTable.tableComment=3tnlv1&subTable.formColNum=579&subTable.pkColumn.queryType=iifimi&pkColumn.isIncrement=v04dsl&subTable.pkColumn.htmlType=c13tnr&subTable.pkColumn.isPk=k88irm&subTable.tableId=403&pkColumn.priority=917&subTable.pkColumn.createTime=2026-03-09 00:09:56&subTable.pkColumn.javaField=gqat8k&subTable.subTable.optionLists=iy2nix&columns[0].columnType=yvmiuk&columns[0].isIncrement=9fsqye&subTable.subTableFkName=julian.ortiz&subTable.lastTime=2026-03-09 00:09:56&subTable.subTable.creatorId=95&subTable.subTable.packageName=julian.ortiz&subTable.treeParentCode=58719&subTable.pkColumn.columnName=julian.ortiz&subTable.subTable.treeCode=58719&subTable.genType=zu4i1s&treeName=julian.ortiz&subTable.limit=10&columns[0].isEdit=e8ojrd&subTable.columns[0].javaType=tidati&packageName=julian.ortiz&pkColumn.columnName=julian.ortiz&Description=wsik9h&creatorId=95&subTable.subTable.parentMenuId=896&subTable.subTable.Description=4lciol&subTable.tableName=julian.ortiz&columns[0].lastTime=2026-03-09 00:09:56&subTable.className=julian.ortiz&subTable.subTable.tableComment=djtblt&subTable.subTable.tableId=113&subTable.tplCategory=mwxprh&subTable.columns[0].columnComment=d8eam8&subTable.pkColumn.isList=2xkjnc&columns[0].dictType=l249zc&subTableFkName=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/db/list.do?subTable.subTable.parentMenuName=macie.hartmann&subTable.pkColumn.isPk=mwkii4&formColNum=724&functionName=macie.hartmann&subTable.pkColumn.isQuery=f5wmjh&columns[0].createTime=2026-03-09 22:50:43&subTable.pkColumn.htmlType=0qozz4&subTable.pkColumn.columnType=v2rs1s&subTable.pkColumn.columnName=macie.hartmann&subTable.pkColumn.createTime=2026-03-09 22:50:43&subTable.subTable.functionName=macie.hartmann&subTable.pkColumn.priority=949&columns[0].queryType=ga3lrs&subTable.pkColumn.javaField=gz4r13&subTable.treeCode=22134&tableName=macie.hartmann&pkColumn.columnComment=sbe5rk&subTable.pkColumn.columnId=97&subTable.formColNum=153&subTable.pkColumn.isList=5oupfr&subTable.subTable.packageName=macie.hartmann&tplCategory=8ixy2u&pkColumn.isIncrement=16pg26&genPath=zgu8vq&subTable.creatorId=17&columns[0].columnName=macie.hartmann&columns[0].dictType=aly992&subTable.subTable.subTableName=macie.hartmann&columns[0].columnId=413&functionAuthor=Lauralee Gutmann PhD&subTable.genType=lw4pn2&subTable.columns[0].priority=303&creatorId=17&lastTime=2026-03-09 22:50:43&columns[0].isPk=84tbzr&subTable.columns[0].isEdit=uzb1km&createTime=2026-03-09 22:50:43&tableId=312&subTable.columns[0].isRequired=i4t2ia&subTable.subTable.parentMenuId=374&parentMenuName=macie.hartmann&Description=y3rivr&packageName=macie.hartmann&columns[0].javaField=lo94dx&subTable.columns[0].javaType=zy0qo2&pkColumn.htmlType=m161us&subTable.subTable.moduleName=macie.hartmann&subTable.columns[0].isIncrement=2g66w6&subTable.subTable.treeParentCode=22134&columns[0].creatorId=17&subTable.pkColumn.isRequired=5xhzix&subTable.subTable.treeName=macie.hartmann&subTable.subTable.tableName=macie.hartmann&className=macie.hartmann&subTable.subTable.creatorId=17&subTable.subTableFkName=macie.hartmann&tplWebType=ynl79s&subTable.moduleName=macie.hartmann&subTable.subTable.limit=10&columns[0].isQuery=fsgg7x&pkColumn.creatorId=17&columns[0].javaType=6wzd37&subTable.treeName=macie.hartmann&subTable.subTable.createTime=2026-03-09 22:50:43&subTable.columns[0].dictType=w7dwkp&pkColumn.isEdit=ftdlvz&subTable.subTable.optionLists=9h9r5n&subTable.pkColumn.creatorId=17&subTable.subTable.subTableFkName=macie.hartmann&columns[0].columnType=jd4m2w&treeParentCode=22134&subTable.columns[0].isList=i3m0d6&subTable.subTable.tableId=194&subTable.pkColumn.dictType=cg4a82&subTable.subTable.Description=cbb6up&subTable.subTableName=macie.hartmann&subTable.columns[0].columnComment=jzgi4u&treeName=macie.hartmann&subTable.functionName=macie.hartmann&subTable.subTable.lastTime=2026-03-09 22:50:43&columns[0].isRequired=bgmd91&subTable.columns[0].isQuery=gyywsq&pkColumn.priority=80&subTable.subTable.tableComment=ns4o1a&subTable.pkColumn.javaType=kiy5x2&pkColumn.isRequired=sqz86q&subTable.columns[0].isInsert=qdd69w&subTable.limit=10&columns[0].isIncrement=p9m2ep&subTable.parentMenuName=macie.hartmann&subTableName=macie.hartmann&pkColumn.createTime=2026-03-09 22:50:43&subTable.createTime=2026-03-09 22:50:43&pkColumn.isPk=1rg186&subTable.columns[0].isPk=0113nk&pkColumn.dictType=lvxrrr&genType=pv96zz&subTable.subTable.formColNum=92&pkColumn.tableId=708&subTable.columns[0].lastTime=2026-03-09 22:50:43&subTable.packageName=macie.hartmann&subTable.subTable.treeCode=22134&subTable.subTable.page=1&subTable.columns[0].columnName=macie.hartmann&subTable.tableComment=wtmmxt&subTable.businessName=macie.hartmann&subTable.functionAuthor=Lauralee Gutmann PhD&subTable.subTable.genType=cf5t8b&moduleName=macie.hartmann&pkColumn.javaType=jxk0i2&subTable.pkColumn.isEdit=01lc9i&subTable.subTable.businessName=macie.hartmann&subTable.pkColumn.tableId=803&page=1&pkColumn.columnType=rwbdj0&subTable.subTable.functionAuthor=Lauralee Gutmann PhD&subTable.columns[0].columnId=113&pkColumn.lastTime=2026-03-09 22:50:43&subTable.subTable.className=macie.hartmann&subTable.columns[0].tableId=5&businessName=macie.hartmann&subTable.pkColumn.isIncrement=hb2n8c&subTable.pkColumn.isInsert=ytluq1&subTable.columns[0].javaField=5htg3w&subTable.columns[0].createTime=2026-03-09 22:50:43&subTable.genPath=kpk7v5&columns[0].tableId=37&subTable.columns[0].creatorId=17&pkColumn.columnId=411&subTable.lastTime=2026-03-09 22:50:43&subTable.tplCategory=z9o83p&subTable.pkColumn.queryType=o3mbgp&columns[0].isInsert=5r0ktd&limit=10&subTable.columns[0].columnType=bf38wm&pkColumn.javaField=udizd2&subTable.className=macie.hartmann&pkColumn.isInsert=6kzjdh&subTable.subTable.genPath=ldjtp3&treeCode=22134&columns[0].isEdit=8zy5yl&columns[0].priority=915&pkColumn.isQuery=bbohii&subTable.pkColumn.lastTime=2026-03-09 22:50:43&parentMenuId=570&subTable.optionLists=1soukd&pkColumn.isList=08i651&subTable.columns[0].htmlType=4fy3of&tableComment=3gvbdp&pkColumn.columnName=macie.hartmann&subTable.subTable.tplWebType=7dzi0x&subTable.columns[0].queryType=d0v2n6&subTable.parentMenuId=955&columns[0].lastTime=2026-03-09 22:50:43&columns[0].columnComment=hcy54u&columns[0].isList=8yxsl2&columns[0].htmlType=22menz&optionLists=ingo24&subTable.treeParentCode=22134&subTable.page=1&subTable.subTable.tplCategory=mhqxnq&subTable.Description=zwl0ez&subTable.tableName=macie.hartmann&subTableFkName=macie.hartmann&subTable.tplWebType=fv5bsr&pkColumn.queryType=aefm6d&subTable.tableId=465&subTable.pkColumn.columnComment=shl57a
 ```
 **Response-fields:**
 
@@ -25158,22 +25158,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "size": 10,
-    "pageNum": 352,
+    "pageNum": 802,
     "pageSize": 10,
-    "startRow": 916,
-    "endRow": 782,
-    "total": 277,
-    "pages": 392,
+    "startRow": 691,
+    "endRow": 914,
+    "total": 174,
+    "pages": 940,
     "count": true,
     "reasonable": true,
     "pageSizeZero": true,
-    "countColumn": "1j3idk",
-    "orderBy": "j4yvd8",
+    "countColumn": "dt2x7s",
+    "orderBy": "zspvec",
     "orderByOnly": true,
     "boundSqlInterceptor": {}
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25203,7 +25203,7 @@ tableId|int64|表对象ID|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=356
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/column/{tableId}.do?tableId=96
 ```
 **Response-fields:**
 
@@ -25245,31 +25245,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:56",
-      "lastTime": "2026-03-09 00:09:56",
-      "columnId": 548,
-      "tableId": 182,
-      "columnName": "julian.ortiz",
-      "columnComment": "pmclkp",
-      "columnType": "opyjvj",
-      "javaType": "7umayh",
-      "javaField": "6ha4y7",
-      "isPk": "6ep60d",
-      "isIncrement": "bjz7mr",
-      "isRequired": "xbe4wq",
-      "isInsert": "92lc1p",
-      "isEdit": "7ikh6r",
-      "isList": "b9ok49",
-      "isQuery": "m11fci",
-      "queryType": "2a22ai",
-      "htmlType": "uwn3r4",
-      "dictType": "o09oj8",
-      "priority": 962
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:43",
+      "lastTime": "2026-03-09 22:50:43",
+      "columnId": 829,
+      "tableId": 685,
+      "columnName": "macie.hartmann",
+      "columnComment": "r3rtce",
+      "columnType": "n972kd",
+      "javaType": "uifrl6",
+      "javaField": "rfa6xv",
+      "isPk": "u0os5d",
+      "isIncrement": "hzkbzu",
+      "isRequired": "s6o58t",
+      "isInsert": "okrkou",
+      "isEdit": "4dv8j0",
+      "isList": "9lt05f",
+      "isQuery": "wnpv9p",
+      "queryType": "l5w6tv",
+      "htmlType": "1iscaf",
+      "dictType": "5kk697",
+      "priority": 628
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25299,7 +25299,7 @@ tables|string|表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=17w6uu'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/importTable.do --data 'tables=uhcrca'
 ```
 **Response-fields:**
 
@@ -25318,9 +25318,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "0a61zk",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "6kk7ij",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25350,7 +25350,7 @@ sql|string|  SQL脚本|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=36tarj'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/createTable.do --data 'sql=ee5kmo'
 ```
 **Response-fields:**
 
@@ -25369,9 +25369,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "3h3ibt",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "sgnhfk",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25475,83 +25475,83 @@ params|map|请求参数|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:56",
-  "lastTime": "2026-03-09 00:09:56",
-  "tableId": 304,
-  "tableName": "julian.ortiz",
-  "tableComment": "xux138",
-  "subTableName": "julian.ortiz",
-  "subTableFkName": "julian.ortiz",
-  "className": "julian.ortiz",
-  "tplCategory": "yr81qh",
-  "tplWebType": "ed3glj",
-  "packageName": "julian.ortiz",
-  "moduleName": "julian.ortiz",
-  "businessName": "julian.ortiz",
-  "functionName": "julian.ortiz",
-  "functionAuthor": "Antonetta Watsica",
-  "formColNum": 986,
-  "genType": "da0smh",
-  "genPath": "t87vtn",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:43",
+  "lastTime": "2026-03-09 22:50:43",
+  "tableId": 668,
+  "tableName": "macie.hartmann",
+  "tableComment": "w0epgs",
+  "subTableName": "macie.hartmann",
+  "subTableFkName": "macie.hartmann",
+  "className": "macie.hartmann",
+  "tplCategory": "fjss87",
+  "tplWebType": "klry0b",
+  "packageName": "macie.hartmann",
+  "moduleName": "macie.hartmann",
+  "businessName": "macie.hartmann",
+  "functionName": "macie.hartmann",
+  "functionAuthor": "Lauralee Gutmann PhD",
+  "formColNum": 165,
+  "genType": "lrjhvi",
+  "genPath": "ydi8x1",
   "pkColumn": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:56",
-    "lastTime": "2026-03-09 00:09:56",
-    "columnId": 140,
-    "tableId": 311,
-    "columnName": "julian.ortiz",
-    "columnComment": "dok1dj",
-    "columnType": "ue0dl7",
-    "javaType": "lyudi5",
-    "javaField": "x6lzh3",
-    "isPk": "quurjp",
-    "isIncrement": "z6ghbs",
-    "isRequired": "06ficv",
-    "isInsert": "97j1gk",
-    "isEdit": "af0evb",
-    "isList": "le994n",
-    "isQuery": "35u5qs",
-    "queryType": "u910ic",
-    "htmlType": "k1ah9z",
-    "dictType": "17whsy",
-    "priority": 91
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:43",
+    "lastTime": "2026-03-09 22:50:43",
+    "columnId": 182,
+    "tableId": 87,
+    "columnName": "macie.hartmann",
+    "columnComment": "qpiy81",
+    "columnType": "k2goi7",
+    "javaType": "svo50v",
+    "javaField": "lwzxfx",
+    "isPk": "8enmzj",
+    "isIncrement": "ivjnui",
+    "isRequired": "hw68z0",
+    "isInsert": "yh80jt",
+    "isEdit": "qcm9qe",
+    "isList": "teeule",
+    "isQuery": "gnl3m8",
+    "queryType": "gdf918",
+    "htmlType": "2xg339",
+    "dictType": "xe7iai",
+    "priority": 910
   },
   "subTable": {
     "$ref": "..."
   },
   "columns": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:56",
-      "lastTime": "2026-03-09 00:09:56",
-      "columnId": 983,
-      "tableId": 351,
-      "columnName": "julian.ortiz",
-      "columnComment": "lsyllg",
-      "columnType": "oik9e1",
-      "javaType": "ooqrpe",
-      "javaField": "6femyp",
-      "isPk": "5rwqpq",
-      "isIncrement": "7x05h8",
-      "isRequired": "fm0odu",
-      "isInsert": "fbhqes",
-      "isEdit": "cn3m2u",
-      "isList": "1hisb6",
-      "isQuery": "gsza8g",
-      "queryType": "5fppm3",
-      "htmlType": "bw6u0p",
-      "dictType": "dadufi",
-      "priority": 927
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:43",
+      "lastTime": "2026-03-09 22:50:43",
+      "columnId": 103,
+      "tableId": 552,
+      "columnName": "macie.hartmann",
+      "columnComment": "jegdrw",
+      "columnType": "6np8k8",
+      "javaType": "1ur9bc",
+      "javaField": "d30nnk",
+      "isPk": "qd17rs",
+      "isIncrement": "aup7cn",
+      "isRequired": "d8kkhn",
+      "isInsert": "3jldoe",
+      "isEdit": "clt0h4",
+      "isList": "quqb5p",
+      "isQuery": "5wktz9",
+      "queryType": "uhc88i",
+      "htmlType": "ys9g6t",
+      "dictType": "ocphmp",
+      "priority": 198
     }
   ],
-  "optionLists": "x84m3b",
-  "treeCode": "58719",
-  "treeParentCode": "58719",
-  "treeName": "julian.ortiz",
-  "parentMenuId": 66,
-  "parentMenuName": "julian.ortiz",
-  "Description": "nazrv7",
+  "optionLists": "7kpuli",
+  "treeCode": "22134",
+  "treeParentCode": "22134",
+  "treeName": "macie.hartmann",
+  "parentMenuId": 401,
+  "parentMenuName": "macie.hartmann",
+  "Description": "j14b74",
   "page": 1,
   "limit": 10,
   "params": {
@@ -25576,9 +25576,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "1fswbk",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "0i0mqg",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25627,9 +25627,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "n6cv82",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "mycspq",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25659,7 +25659,7 @@ tableId|int64|表对象ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/366.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/preview/803.do
 ```
 **Response-fields:**
 
@@ -25679,11 +25679,11 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "mapKey1": "hd7in3",
-    "mapKey2": "u7deul"
+    "mapKey1": "01vuu2",
+    "mapKey2": "c3rvqf"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25718,9 +25718,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -25767,7 +25767,7 @@ bufferSize|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/julian.ortiz.do?bufferSize=10&writer.psOut.textOut.nChars=352&committed=true&writer.trouble=true&writer.formatter.zero=2&writer.autoFlush=true&writer.formatter.lastException.detailMessage=success&writer.psOut.closed=true&status=143&writer.writeBuffer=t&writer.writeBuffer=t&writer.psOut.formatter.zero=g&writer.psOut.closing=true&writer.psOut.textOut.nextChar=505&contentType=yk65ta&writer.psOut.trouble=true&writer.psOut.autoFlush=true&characterEncoding=9tibai
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/download/macie.hartmann.do?status=655&writer.writeBuffer=j&writer.writeBuffer=j&bufferSize=10&writer.autoFlush=true&committed=true&contentType=uzfprw&writer.psOut.autoFlush=true&writer.psOut.closing=true&writer.trouble=true&writer.psOut.formatter.zero=4&characterEncoding=kfjv7s&writer.formatter.zero=f&writer.psOut.closed=true&writer.psOut.textOut.nChars=616&writer.psOut.textOut.nextChar=598&writer.formatter.lastException.detailMessage=success&writer.psOut.trouble=true
 ```
 **Response-fields:**
 
@@ -25786,9 +25786,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "8h9i77",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "yo24bt",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25818,7 +25818,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/julian.ortiz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/genCode/macie.hartmann.do
 ```
 **Response-fields:**
 
@@ -25837,9 +25837,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "mzuzzg",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "7sx9tr",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25869,7 +25869,7 @@ tableName|string|表名称|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/julian.ortiz.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/synchDb/macie.hartmann.do
 ```
 **Response-fields:**
 
@@ -25888,9 +25888,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "hqo0fq",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4td41b",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -25919,9 +25919,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -25969,7 +25969,7 @@ tables|string|   表名称前缀|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?characterEncoding=njr17t&tables=q9p9jb&writer.trouble=true&writer.formatter.lastException.detailMessage=success&writer.psOut.closed=true&writer.psOut.trouble=true&bufferSize=10&writer.autoFlush=true&writer.formatter.zero=n&status=12&writer.writeBuffer=1&writer.writeBuffer=1&writer.psOut.textOut.nChars=72&writer.psOut.autoFlush=true&committed=true&writer.psOut.textOut.nextChar=677&contentType=ft57x4&writer.psOut.closing=true&writer.psOut.formatter.zero=7
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/tool/gen/batchGenCode.do?writer.psOut.autoFlush=true&writer.psOut.textOut.nChars=307&writer.psOut.textOut.nextChar=743&writer.autoFlush=true&bufferSize=10&contentType=4joerr&characterEncoding=6vy50k&committed=true&writer.psOut.closing=true&tables=hqnuse&status=185&writer.writeBuffer=9&writer.writeBuffer=9&writer.psOut.trouble=true&writer.formatter.lastException.detailMessage=success&writer.trouble=true&writer.formatter.zero=n&writer.psOut.formatter.zero=a&writer.psOut.closed=true
 ```
 **Response-fields:**
 
@@ -25988,9 +25988,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "b7ycmp",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "00e34k",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26035,7 +26035,7 @@ description|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/list.do?expireTime=2026-03-09 00:09:42&updateTime=2026-03-09 00:09:42&foreignId=95&startTime=2026-03-09 00:08:33&loginIp=207.227.60.208&q=ynxr5x&description=7xhq35&page=1&token=s9nsr4&orderBy=501&endTime=2026-03-09 00:08:33&username=julian.ortiz&limit=10&id=349
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/token/list.do?orderBy=244&q=v715x8&endTime=2026-03-09 22:49:14&page=1&id=275&limit=10&description=x71x88&username=macie.hartmann&foreignId=17&loginIp=14.83.204.161&updateTime=2026-03-09 22:50:28&startTime=2026-03-09 22:49:14&expireTime=2026-03-09 22:50:28&token=owjxvv
 ```
 **Response-fields:**
 
@@ -26068,22 +26068,22 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:42",
-      "lastTime": "2026-03-09 00:09:42",
-      "id": 176,
-      "userId": "95",
-      "token": "uguh72",
-      "foreignId": "95",
-      "username": "julian.ortiz",
-      "loginIp": "207.227.60.208",
-      "updateTime": "2026-03-09 00:09:42",
-      "expireTime": "2026-03-09 00:09:42",
-      "description": "ylftmd"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:28",
+      "lastTime": "2026-03-09 22:50:28",
+      "id": 988,
+      "userId": "17",
+      "token": "scannk",
+      "foreignId": "17",
+      "username": "macie.hartmann",
+      "loginIp": "14.83.204.161",
+      "updateTime": "2026-03-09 22:50:28",
+      "expireTime": "2026-03-09 22:50:28",
+      "description": "velj6b"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26133,9 +26133,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "evj1m8",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "hozn09",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26193,7 +26193,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?description=8xc6k4&page=1&msgUrl=www.kandace-stamm.org&returnInfo=76svp3&bizSubtype=jh5nas&delFlag=9&limit=10&spare2=651avy&foreignId=95&creatorId=95&q=8sd7g5&providerId=95&status=0c5crf&orderBy=125&providerName=julian.ortiz&sendTime=2026-03-09&startTime=2026-03-09 00:08:33&bizType=fjuu98&returnTime=2026-03-09 00:09:40&sendStatus=z23xyb&spare1=58avz2&appId=95&receiverName=julian.ortiz&content=6hd8lg&endTime=2026-03-09 00:08:33&id=892&receiverMobile=1-508-337-4557
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/list.do?returnInfo=8n7dmc&page=1&content=odg1qs&limit=10&sendTime=2026-03-09&spare2=qiid8s&providerName=macie.hartmann&startTime=2026-03-09 22:49:14&delFlag=2&endTime=2026-03-09 22:49:14&spare1=i8xdt3&receiverName=macie.hartmann&status=lh9tdc&creatorId=17&q=v5l6zw&bizType=g05ady&orderBy=81&receiverMobile=814-959-5738&appId=17&providerId=17&bizSubtype=r4mve6&description=5iil10&foreignId=17&returnTime=2026-03-09 22:50:27&msgUrl=www.velia-kozey.biz&id=202&sendStatus=yllkix
 ```
 **Response-fields:**
 
@@ -26237,33 +26237,33 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:41",
-      "lastTime": "2026-03-09 00:09:41",
-      "id": 924,
-      "appId": "95",
-      "providerId": "95",
-      "providerName": "julian.ortiz",
-      "foreignId": "95",
-      "receiverMobile": "1-508-337-4557",
-      "receiverName": "julian.ortiz",
-      "bizType": "ubsbwz",
-      "bizSubtype": "ffiw2t",
-      "content": "91o8tn",
-      "msgUrl": "www.kandace-stamm.org",
-      "status": "9vw17h",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:27",
+      "lastTime": "2026-03-09 22:50:27",
+      "id": 319,
+      "appId": "17",
+      "providerId": "17",
+      "providerName": "macie.hartmann",
+      "foreignId": "17",
+      "receiverMobile": "814-959-5738",
+      "receiverName": "macie.hartmann",
+      "bizType": "98do37",
+      "bizSubtype": "tjzvwg",
+      "content": "m1bzbq",
+      "msgUrl": "www.velia-kozey.biz",
+      "status": "77xtl0",
       "sendTime": "2026-03-09",
-      "sendStatus": "c0xqov",
-      "returnTime": "2026-03-09 00:09:41",
-      "returnInfo": "5ad02t",
-      "delFlag": 9,
-      "description": "sehrhg",
-      "spare1": "1zm6hn",
-      "spare2": "5ug69d"
+      "sendStatus": "j0mzcr",
+      "returnTime": "2026-03-09 22:50:27",
+      "returnInfo": "fcq9md",
+      "delFlag": 2,
+      "description": "gxcpp1",
+      "spare1": "4nxl2l",
+      "spare2": "8eiwqd"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26337,32 +26337,32 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:41",
-    "lastTime": "2026-03-09 00:09:41",
-    "id": 659,
-    "appId": "95",
-    "providerId": "95",
-    "providerName": "julian.ortiz",
-    "foreignId": "95",
-    "receiverMobile": "1-508-337-4557",
-    "receiverName": "julian.ortiz",
-    "bizType": "2i7k2f",
-    "bizSubtype": "n6izhn",
-    "content": "vxru4q",
-    "msgUrl": "www.kandace-stamm.org",
-    "status": "srswvb",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:27",
+    "lastTime": "2026-03-09 22:50:27",
+    "id": 302,
+    "appId": "17",
+    "providerId": "17",
+    "providerName": "macie.hartmann",
+    "foreignId": "17",
+    "receiverMobile": "814-959-5738",
+    "receiverName": "macie.hartmann",
+    "bizType": "w7j9m5",
+    "bizSubtype": "u69spx",
+    "content": "tl8gsu",
+    "msgUrl": "www.velia-kozey.biz",
+    "status": "5cdp0h",
     "sendTime": "2026-03-09",
-    "sendStatus": "pvlnfa",
-    "returnTime": "2026-03-09 00:09:41",
-    "returnInfo": "40fzkk",
-    "delFlag": 9,
-    "description": "i8mmuf",
-    "spare1": "v81n6q",
-    "spare2": "9p74oh"
+    "sendStatus": "2wjyrc",
+    "returnTime": "2026-03-09 22:50:27",
+    "returnInfo": "ohonco",
+    "delFlag": 2,
+    "description": "1tib4f",
+    "spare1": "les4j0",
+    "spare2": "9kfx1y"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26416,29 +26416,29 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:41",
-  "lastTime": "2026-03-09 00:09:41",
-  "id": 761,
-  "appId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "receiverMobile": "1-508-337-4557",
-  "receiverName": "julian.ortiz",
-  "bizType": "v9175q",
-  "bizSubtype": "4s0t43",
-  "content": "uqbqq2",
-  "msgUrl": "www.kandace-stamm.org",
-  "status": "3ry6y5",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:27",
+  "lastTime": "2026-03-09 22:50:27",
+  "id": 211,
+  "appId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "receiverMobile": "814-959-5738",
+  "receiverName": "macie.hartmann",
+  "bizType": "svf4wg",
+  "bizSubtype": "v4mfko",
+  "content": "gsr38y",
+  "msgUrl": "www.velia-kozey.biz",
+  "status": "m9jm1e",
   "sendTime": "2026-03-09",
-  "sendStatus": "dzlcz9",
-  "returnTime": "2026-03-09 00:09:41",
-  "returnInfo": "lzazoj",
-  "delFlag": 9,
-  "description": "1wmh04",
-  "spare1": "ox2g7j",
-  "spare2": "35pked"
+  "sendStatus": "f9z8vn",
+  "returnTime": "2026-03-09 22:50:27",
+  "returnInfo": "r0ke60",
+  "delFlag": 2,
+  "description": "x40sty",
+  "spare1": "ijmnat",
+  "spare2": "yl2jt2"
 }'
 ```
 **Response-fields:**
@@ -26458,9 +26458,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "wkiizf",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "hoxadg",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26514,29 +26514,29 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/smssendrecord/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:41",
-  "lastTime": "2026-03-09 00:09:41",
-  "id": 723,
-  "appId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "receiverMobile": "1-508-337-4557",
-  "receiverName": "julian.ortiz",
-  "bizType": "koxamv",
-  "bizSubtype": "q12sog",
-  "content": "9errog",
-  "msgUrl": "www.kandace-stamm.org",
-  "status": "r7z3yr",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:27",
+  "lastTime": "2026-03-09 22:50:27",
+  "id": 717,
+  "appId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "receiverMobile": "814-959-5738",
+  "receiverName": "macie.hartmann",
+  "bizType": "5dcnvt",
+  "bizSubtype": "f3mmag",
+  "content": "zpakex",
+  "msgUrl": "www.velia-kozey.biz",
+  "status": "zxwe58",
   "sendTime": "2026-03-09",
-  "sendStatus": "yvv3aj",
-  "returnTime": "2026-03-09 00:09:41",
-  "returnInfo": "2ill74",
-  "delFlag": 9,
-  "description": "1sxkgh",
-  "spare1": "gx2puv",
-  "spare2": "nk85kr"
+  "sendStatus": "3kogm6",
+  "returnTime": "2026-03-09 22:50:27",
+  "returnInfo": "5bo591",
+  "delFlag": 2,
+  "description": "w9kkea",
+  "spare1": "bhtto0",
+  "spare2": "omvc4y"
 }'
 ```
 **Response-fields:**
@@ -26556,9 +26556,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "kw2oz5",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "tdtajo",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26608,9 +26608,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "5he1j2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "zq8r5k",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26638,10 +26638,10 @@ appId|string|所在应用ID|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/sms.do --data '{
-  "mobile": "1-508-337-4557",
-  "code": "58719",
-  "uuid": "4ec13ebe-addd-4cd2-92d1-aec9105972ba",
-  "appId": "95"
+  "mobile": "814-959-5738",
+  "code": "22134",
+  "uuid": "6d4068f9-6101-49f3-9a46-fa6d27cef4a5",
+  "appId": "17"
 }'
 ```
 **Response-fields:**
@@ -26667,14 +26667,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "userId": "95",
-    "token": "n25j4s",
-    "updateTime": "2026-03-09 00:09:40",
-    "expireTime": "2026-03-09 00:09:40",
+    "userId": "17",
+    "token": "lpo0j7",
+    "updateTime": "2026-03-09 22:50:26",
+    "expireTime": "2026-03-09 22:50:26",
     "mobileConfirm": true
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26697,7 +26697,7 @@ mobile|string|手机号码|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=1-508-337-4557'
+curl -X POST -k -i https://linlan.net/eframe_backend/login/otp/send.do --data 'mobile=814-959-5738'
 ```
 **Response-fields:**
 
@@ -26716,9 +26716,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "qojind",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "4ozg1f",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26752,17 +26752,17 @@ content|string|邮件正文|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/send.do --data '{
-  "id": 109,
-  "platform": 243,
-  "mailFormat": "jhyg82",
-  "mailFrom": "diraaf",
-  "formAlias": "y4guwo",
-  "mailTos": "wx6ncf",
-  "receiversName": "julian.ortiz",
-  "templateName": "julian.ortiz",
-  "tagName": "julian.ortiz",
-  "subject": "wyyznc",
-  "content": "blq0mz"
+  "id": 678,
+  "platform": 181,
+  "mailFormat": "7vjcse",
+  "mailFrom": "adfs6s",
+  "formAlias": "f2o6gb",
+  "mailTos": "1g9w98",
+  "receiversName": "macie.hartmann",
+  "templateName": "macie.hartmann",
+  "tagName": "macie.hartmann",
+  "subject": "6o832q",
+  "content": "5cfgzz"
 }'
 ```
 **Response-fields:**
@@ -26782,9 +26782,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "wt6zp3",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "nqs0y0",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26811,10 +26811,10 @@ nickname|string|昵称|true|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/register.do --data '{
-  "email": "columbus.ankunding@gmail.com",
-  "code": "58719",
-  "password": "t8zewf",
-  "nickname": "shane.roberts"
+  "email": "latanya.ritchie@hotmail.com",
+  "code": "22134",
+  "password": "yxgkwu",
+  "nickname": "jin.wolff"
 }'
 ```
 **Response-fields:**
@@ -26835,8 +26835,8 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": true,
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26863,10 +26863,10 @@ nickname|string|昵称|true|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/mail/email/forgot.do --data '{
-  "email": "columbus.ankunding@gmail.com",
-  "code": "58719",
-  "password": "uno4ny",
-  "nickname": "shane.roberts"
+  "email": "latanya.ritchie@hotmail.com",
+  "code": "22134",
+  "password": "ov5qy0",
+  "nickname": "jin.wolff"
 }'
 ```
 **Response-fields:**
@@ -26887,8 +26887,8 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": true,
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -26943,7 +26943,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/list.do?limit=10&serverType=6ioulz&email=columbus.ankunding@gmail.com&foreignId=95&q=6lu5n0&spare1=pyinn1&organId=95&accountId=95&endTime=2026-03-09 00:08:33&delFlag=9&nickName=shane.roberts&mobile=1-508-337-4557&unionId=95&description=mznheh&additionInfo=wwmue2&creatorId=95&startTime=2026-03-09 00:08:33&id=125&openId=95&orderBy=994&areaCode=58719&page=1&spare2=7ok8pb&avatarUrl=www.kandace-stamm.org
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/list.do?endTime=2026-03-09 22:49:14&q=yk9uzm&serverType=gd6rx5&openId=17&id=906&avatarUrl=www.velia-kozey.biz&accountId=17&limit=10&startTime=2026-03-09 22:49:14&unionId=17&additionInfo=gnzyap&areaCode=22134&foreignId=17&email=latanya.ritchie@hotmail.com&mobile=814-959-5738&nickName=jin.wolff&delFlag=2&description=5hpwn6&spare1=viwkt6&creatorId=17&page=1&spare2=v1g4uu&orderBy=929&organId=17
 ```
 **Response-fields:**
 
@@ -26985,31 +26985,31 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:42",
-      "lastTime": "2026-03-09 00:09:42",
-      "id": 109,
-      "userId": "95",
-      "organId": "95",
-      "foreignId": "95",
-      "accountId": "95",
-      "accountType": "sccml6",
-      "unionId": "95",
-      "openId": "95",
-      "email": "columbus.ankunding@gmail.com",
-      "areaCode": "58719",
-      "mobile": "1-508-337-4557",
-      "nickName": "shane.roberts",
-      "avatarUrl": "www.kandace-stamm.org",
-      "additionInfo": "qmmz6q",
-      "delFlag": 9,
-      "description": "3gpoyp",
-      "spare1": "ohpkxw",
-      "spare2": "cb31gv"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:28",
+      "lastTime": "2026-03-09 22:50:28",
+      "id": 737,
+      "userId": "17",
+      "organId": "17",
+      "foreignId": "17",
+      "accountId": "17",
+      "accountType": "9styc8",
+      "unionId": "17",
+      "openId": "17",
+      "email": "latanya.ritchie@hotmail.com",
+      "areaCode": "22134",
+      "mobile": "814-959-5738",
+      "nickName": "jin.wolff",
+      "avatarUrl": "www.velia-kozey.biz",
+      "additionInfo": "mgglqa",
+      "delFlag": 2,
+      "description": "ka9p3g",
+      "spare1": "z05myg",
+      "spare2": "j7z6x1"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27081,30 +27081,30 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:42",
-    "lastTime": "2026-03-09 00:09:42",
-    "id": 976,
-    "userId": "95",
-    "organId": "95",
-    "foreignId": "95",
-    "accountId": "95",
-    "accountType": "btsze4",
-    "unionId": "95",
-    "openId": "95",
-    "email": "columbus.ankunding@gmail.com",
-    "areaCode": "58719",
-    "mobile": "1-508-337-4557",
-    "nickName": "shane.roberts",
-    "avatarUrl": "www.kandace-stamm.org",
-    "additionInfo": "soa3wr",
-    "delFlag": 9,
-    "description": "bj9ik6",
-    "spare1": "m761we",
-    "spare2": "xdf7wd"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:28",
+    "lastTime": "2026-03-09 22:50:28",
+    "id": 799,
+    "userId": "17",
+    "organId": "17",
+    "foreignId": "17",
+    "accountId": "17",
+    "accountType": "3y1dl5",
+    "unionId": "17",
+    "openId": "17",
+    "email": "latanya.ritchie@hotmail.com",
+    "areaCode": "22134",
+    "mobile": "814-959-5738",
+    "nickName": "jin.wolff",
+    "avatarUrl": "www.velia-kozey.biz",
+    "additionInfo": "sbfbn5",
+    "delFlag": 2,
+    "description": "wiq84q",
+    "spare1": "2c4pe3",
+    "spare2": "3ogl56"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27156,27 +27156,27 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:42",
-  "lastTime": "2026-03-09 00:09:42",
-  "id": 393,
-  "userId": "95",
-  "organId": "95",
-  "foreignId": "95",
-  "accountId": "95",
-  "accountType": "t1k56d",
-  "unionId": "95",
-  "openId": "95",
-  "email": "columbus.ankunding@gmail.com",
-  "areaCode": "58719",
-  "mobile": "1-508-337-4557",
-  "nickName": "shane.roberts",
-  "avatarUrl": "www.kandace-stamm.org",
-  "additionInfo": "fvi4aw",
-  "delFlag": 9,
-  "description": "390csn",
-  "spare1": "j1a7li",
-  "spare2": "vccs4a"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:28",
+  "lastTime": "2026-03-09 22:50:28",
+  "id": 494,
+  "userId": "17",
+  "organId": "17",
+  "foreignId": "17",
+  "accountId": "17",
+  "accountType": "spsyjd",
+  "unionId": "17",
+  "openId": "17",
+  "email": "latanya.ritchie@hotmail.com",
+  "areaCode": "22134",
+  "mobile": "814-959-5738",
+  "nickName": "jin.wolff",
+  "avatarUrl": "www.velia-kozey.biz",
+  "additionInfo": "057r4y",
+  "delFlag": 2,
+  "description": "kbldl9",
+  "spare1": "j0xldf",
+  "spare2": "84ngeg"
 }'
 ```
 **Response-fields:**
@@ -27196,9 +27196,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "505hlk",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "44ao28",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27250,27 +27250,27 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/member/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:42",
-  "lastTime": "2026-03-09 00:09:42",
-  "id": 256,
-  "userId": "95",
-  "organId": "95",
-  "foreignId": "95",
-  "accountId": "95",
-  "accountType": "mmq088",
-  "unionId": "95",
-  "openId": "95",
-  "email": "columbus.ankunding@gmail.com",
-  "areaCode": "58719",
-  "mobile": "1-508-337-4557",
-  "nickName": "shane.roberts",
-  "avatarUrl": "www.kandace-stamm.org",
-  "additionInfo": "qc85ch",
-  "delFlag": 9,
-  "description": "1kzcz1",
-  "spare1": "dlyykz",
-  "spare2": "j99sa1"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:28",
+  "lastTime": "2026-03-09 22:50:28",
+  "id": 268,
+  "userId": "17",
+  "organId": "17",
+  "foreignId": "17",
+  "accountId": "17",
+  "accountType": "w4vbgr",
+  "unionId": "17",
+  "openId": "17",
+  "email": "latanya.ritchie@hotmail.com",
+  "areaCode": "22134",
+  "mobile": "814-959-5738",
+  "nickName": "jin.wolff",
+  "avatarUrl": "www.velia-kozey.biz",
+  "additionInfo": "jfm8ng",
+  "delFlag": 2,
+  "description": "lig43j",
+  "spare1": "a5vz1f",
+  "spare2": "iotqe3"
 }'
 ```
 **Response-fields:**
@@ -27290,9 +27290,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "aj15b5",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "giobtm",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27342,9 +27342,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "kxofg0",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "wxb9la",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27394,7 +27394,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/list.do?bindTime=2026-03-09 00:09:41&endTime=2026-03-09 00:08:33&accountId=95&delFlag=9&description=tqh9y1&page=1&userId=95&startTime=2026-03-09 00:08:33&limit=10&id=95&accountKey=v2sjvz&creatorId=95&spare1=9dvk9o&orderBy=248&memberId=612&additionInfo=oey1rd&q=vh2818&spare2=yyzbe3&username=julian.ortiz
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/list.do?additionInfo=zkmidk&page=1&orderBy=851&bindTime=2026-03-09 22:50:28&creatorId=17&delFlag=2&startTime=2026-03-09 22:49:14&description=nbwwr1&spare2=yejwi6&q=tj9zkz&id=17&userId=17&username=macie.hartmann&endTime=2026-03-09 22:49:14&accountId=17&spare1=a4hmdf&memberId=96&limit=10&accountKey=afus0f
 ```
 **Response-fields:**
 
@@ -27431,26 +27431,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:42",
-      "lastTime": "2026-03-09 00:09:42",
-      "id": "95",
-      "memberId": 99,
-      "userId": "95",
-      "username": "julian.ortiz",
-      "accountId": "95",
-      "accountKey": "la6rkf",
-      "bindTime": "2026-03-09 00:09:42",
-      "additionInfo": "tkjq7p",
-      "delFlag": 9,
-      "description": "jnl38i",
-      "spare1": "x2m1gn",
-      "spare2": "j5j7lo",
-      "openType": "2n1nwz"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:28",
+      "lastTime": "2026-03-09 22:50:28",
+      "id": "17",
+      "memberId": 203,
+      "userId": "17",
+      "username": "macie.hartmann",
+      "accountId": "17",
+      "accountKey": "ovwwis",
+      "bindTime": "2026-03-09 22:50:28",
+      "additionInfo": "ba5rud",
+      "delFlag": 2,
+      "description": "84g8jc",
+      "spare1": "ddwctl",
+      "spare2": "vchked",
+      "openType": "8trct9"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27516,24 +27516,24 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:42",
-    "lastTime": "2026-03-09 00:09:42",
-    "id": "95",
-    "memberId": 408,
-    "userId": "95",
-    "username": "julian.ortiz",
-    "accountId": "95",
-    "accountKey": "ivjgzi",
-    "bindTime": "2026-03-09 00:09:42",
-    "additionInfo": "xmjxgw",
-    "delFlag": 9,
-    "description": "msxln2",
-    "spare1": "hhhsur",
-    "spare2": "ce8jv4"
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:28",
+    "lastTime": "2026-03-09 22:50:28",
+    "id": "17",
+    "memberId": 882,
+    "userId": "17",
+    "username": "macie.hartmann",
+    "accountId": "17",
+    "accountKey": "hwxa4m",
+    "bindTime": "2026-03-09 22:50:28",
+    "additionInfo": "o3fiyj",
+    "delFlag": 2,
+    "description": "xlq8dz",
+    "spare1": "y8u3gm",
+    "spare2": "s6lgc9"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27579,21 +27579,21 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:42",
-  "lastTime": "2026-03-09 00:09:42",
-  "id": "95",
-  "memberId": 937,
-  "userId": "95",
-  "username": "julian.ortiz",
-  "accountId": "95",
-  "accountKey": "1tke8p",
-  "bindTime": "2026-03-09 00:09:42",
-  "additionInfo": "wtifae",
-  "delFlag": 9,
-  "description": "26xd20",
-  "spare1": "zo5dfi",
-  "spare2": "hgbesx"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:28",
+  "lastTime": "2026-03-09 22:50:28",
+  "id": "17",
+  "memberId": 347,
+  "userId": "17",
+  "username": "macie.hartmann",
+  "accountId": "17",
+  "accountKey": "xn5p5o",
+  "bindTime": "2026-03-09 22:50:28",
+  "additionInfo": "9yrv61",
+  "delFlag": 2,
+  "description": "t7pgwx",
+  "spare1": "de3fdk",
+  "spare2": "je858g"
 }'
 ```
 **Response-fields:**
@@ -27613,9 +27613,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "tobmel",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "n1x6lg",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27661,21 +27661,21 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:42",
-  "lastTime": "2026-03-09 00:09:42",
-  "id": "95",
-  "memberId": 111,
-  "userId": "95",
-  "username": "julian.ortiz",
-  "accountId": "95",
-  "accountKey": "6th7iy",
-  "bindTime": "2026-03-09 00:09:42",
-  "additionInfo": "5cgvgf",
-  "delFlag": 9,
-  "description": "da4ca4",
-  "spare1": "ve5u63",
-  "spare2": "ze3n5o"
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:28",
+  "lastTime": "2026-03-09 22:50:28",
+  "id": "17",
+  "memberId": 40,
+  "userId": "17",
+  "username": "macie.hartmann",
+  "accountId": "17",
+  "accountKey": "r1cvc4",
+  "bindTime": "2026-03-09 22:50:28",
+  "additionInfo": "atwx65",
+  "delFlag": 2,
+  "description": "6bgtcz",
+  "spare1": "wcb1ad",
+  "spare2": "vtlmyt"
 }'
 ```
 **Response-fields:**
@@ -27695,9 +27695,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "v4z32s",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "e6vngn",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27747,9 +27747,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "m5z5oe",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "m39841",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27798,7 +27798,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/mylist.do?spare1=iu3kh6&page=1&username=julian.ortiz&accountKey=298yv6&userId=95&delFlag=9&orderBy=332&q=ajb1kf&bindTime=2026-03-09 00:09:42&endTime=2026-03-09 00:08:33&memberId=776&accountId=95&id=95&additionInfo=ug4y6l&description=gs50yi&creatorId=95&startTime=2026-03-09 00:08:33&spare2=gv69tt&limit=10
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/third/memberbind/mylist.do?description=64igwt&creatorId=17&page=1&accountKey=rz3obr&limit=10&delFlag=2&endTime=2026-03-09 22:49:14&orderBy=203&spare2=1yehgp&id=17&startTime=2026-03-09 22:49:14&memberId=287&userId=17&username=macie.hartmann&accountId=17&bindTime=2026-03-09 22:50:28&additionInfo=plve9b&spare1=uja46p&q=wxcj5s
 ```
 **Response-fields:**
 
@@ -27835,26 +27835,26 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:42",
-      "lastTime": "2026-03-09 00:09:42",
-      "id": "95",
-      "memberId": 680,
-      "userId": "95",
-      "username": "julian.ortiz",
-      "accountId": "95",
-      "accountKey": "mf9jcg",
-      "bindTime": "2026-03-09 00:09:42",
-      "additionInfo": "k1a1rg",
-      "delFlag": 9,
-      "description": "1o0co9",
-      "spare1": "6mcfo1",
-      "spare2": "p0qneb",
-      "openType": "dr2o1d"
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:28",
+      "lastTime": "2026-03-09 22:50:28",
+      "id": "17",
+      "memberId": 884,
+      "userId": "17",
+      "username": "macie.hartmann",
+      "accountId": "17",
+      "accountKey": "zeko7u",
+      "bindTime": "2026-03-09 22:50:28",
+      "additionInfo": "fvvoep",
+      "delFlag": 2,
+      "description": "icer50",
+      "spare1": "zpm0gz",
+      "spare2": "kwoxst",
+      "openType": "d9cswc"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27883,9 +27883,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -27932,7 +27932,7 @@ bufferSize|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/render/其他.do?writer.writeBuffer=x&writer.writeBuffer=x&writer.formatter.lastException.detailMessage=success&contentType=mvf974&writer.psOut.autoFlush=true&characterEncoding=nbt4k1&committed=true&bufferSize=10&writer.formatter.zero=n&writer.autoFlush=true&writer.psOut.closing=true&writer.psOut.formatter.zero=e&writer.psOut.closed=true&writer.psOut.trouble=true&writer.trouble=true&writer.psOut.textOut.nextChar=51&status=70&writer.psOut.textOut.nChars=250
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/render/其他.do?writer.formatter.zero=c&committed=true&contentType=jtfuam&writer.formatter.lastException.detailMessage=success&bufferSize=10&characterEncoding=p63nuj&writer.psOut.closed=true&writer.psOut.textOut.nChars=767&writer.psOut.formatter.zero=p&writer.writeBuffer=t&writer.writeBuffer=t&writer.psOut.textOut.nextChar=81&writer.trouble=true&writer.psOut.autoFlush=true&writer.autoFlush=true&writer.psOut.trouble=true&status=308&writer.psOut.closing=true
 ```
 **Response-fields:**
 
@@ -27951,9 +27951,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "zmconl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "9dcbnz",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -27987,7 +27987,7 @@ oauth_verifier|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/callback/其他.do?state=x249v0&authorization_code=58719&oauth_token=kawd80&oauth_verifier=lfj2qn&auth_code=58719&code=58719
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/callback/其他.do?authorization_code=22134&auth_code=22134&code=22134&oauth_token=ribxfi&state=ewzxgt&oauth_verifier=37j0tw
 ```
 **Response-fields:**
 
@@ -28003,16 +28003,16 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─error|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─1xxInformational|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─3xxRedirection|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─5xxServerError|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─4xxClientError|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─2xxSuccessful|boolean|No comments found.|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─4xxClientError|boolean|No comments found.|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─5xxServerError|boolean|No comments found.|-
 └─cleared|boolean|No comments found.|-
 requestId|string|请求ID|-
 timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":0,"msg":"正常","data":Forward or redirect to a page view.,"requestId":"95","timestamp":"2026-03-09 00:08:33"}
+{"success":true,"code":0,"msg":"正常","data":Forward or redirect to a page view.,"requestId":"17","timestamp":"2026-03-09 22:49:14"}
 ```
 
 ### 社交平台登录方法，第三步
@@ -28037,9 +28037,9 @@ state|string|state|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social.do --data '{
-  "platformType": "kfduif",
-  "code": "58719",
-  "state": "6xrik3"
+  "platformType": "p0br26",
+  "code": "22134",
+  "state": "7xct6a"
 }'
 ```
 **Response-fields:**
@@ -28065,14 +28065,14 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "userId": "95",
-    "token": "3sd3in",
-    "updateTime": "2026-03-09 00:09:41",
-    "expireTime": "2026-03-09 00:09:41",
+    "userId": "17",
+    "token": "z6ohyy",
+    "updateTime": "2026-03-09 22:50:27",
+    "expireTime": "2026-03-09 22:50:27",
     "mobileConfirm": true
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28099,10 +28099,10 @@ bindFrom|string|绑定来自，关联BindFromEnum, admin_work:管理WEB端;web:�
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social/bind.do --data '{
-  "platformType": "wtd4hg",
-  "code": "58719",
-  "state": "kt8i9j",
-  "bindFrom": "o240lf"
+  "platformType": "ogwfrh",
+  "code": "22134",
+  "state": "w6wqf3",
+  "bindFrom": "ok8m0z"
 }'
 ```
 **Response-fields:**
@@ -28122,9 +28122,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "7g2n8o",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "x43e9k",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28151,10 +28151,10 @@ bindFrom|string|绑定来自，关联BindFromEnum, admin_work:管理WEB端;web:�
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -i https://linlan.net/eframe_backend/login/social/unBind.do --data '{
-  "platformType": "io8522",
-  "code": "58719",
-  "state": "1qgxff",
-  "bindFrom": "rzj74d"
+  "platformType": "b9ljto",
+  "code": "22134",
+  "state": "beairn",
+  "bindFrom": "uzi5tn"
 }'
 ```
 **Response-fields:**
@@ -28174,9 +28174,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "jxhlm2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "wbykrs",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28200,7 +28200,7 @@ uuid|string|第三方用户ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/revoke/其他/4ec13ebe-addd-4cd2-92d1-aec9105972ba.do
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/revoke/其他/6d4068f9-6101-49f3-9a46-fa6d27cef4a5.do
 ```
 **Response-fields:**
 
@@ -28222,8 +28222,8 @@ timestamp|string|返回时间戳字符串|-
   "data": {
     "waring": "You may have used non-display generics."
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28247,7 +28247,7 @@ uuid|string|第三方用户ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/refresh/其他/4ec13ebe-addd-4cd2-92d1-aec9105972ba.do
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/refresh/其他/6d4068f9-6101-49f3-9a46-fa6d27cef4a5.do
 ```
 **Response-fields:**
 
@@ -28268,8 +28268,8 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {},
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28302,16 +28302,16 @@ data|object|返回数据对象|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─error|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─1xxInformational|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─3xxRedirection|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─5xxServerError|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─4xxClientError|boolean|No comments found.|-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─2xxSuccessful|boolean|No comments found.|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─4xxClientError|boolean|No comments found.|-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─5xxServerError|boolean|No comments found.|-
 └─cleared|boolean|No comments found.|-
 requestId|string|请求ID|-
 timestamp|string|返回时间戳字符串|-
 
 **Response-example:**
 ```
-{"success":true,"code":0,"msg":"正常","data":Forward or redirect to a page view.,"requestId":"95","timestamp":"2026-03-09 00:08:33"}
+{"success":true,"code":0,"msg":"正常","data":Forward or redirect to a page view.,"requestId":"17","timestamp":"2026-03-09 22:49:14"}
 ```
 
 ### 获取通用用户信息
@@ -28333,7 +28333,7 @@ source|string|   用户来源|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/userInfo.do?source=un8c55
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/userInfo.do?source=0fhtys
 ```
 **Response-fields:**
 
@@ -28386,45 +28386,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "id": 117,
-      "userId": "95",
-      "xzqhId": 170,
-      "source": "u6vifd",
-      "username": "julian.ortiz",
-      "mobile": "1-508-337-4557",
-      "email": "columbus.ankunding@gmail.com",
-      "password": "fy5my0",
-      "organId": "95",
-      "foreignId": "95",
-      "accountId": "95",
-      "accountType": "6fxbhw",
-      "unionId": "95",
-      "openId": "95",
-      "nickName": "shane.roberts",
-      "avatarUrl": "www.kandace-stamm.org",
-      "registerTime": "2026-03-09 00:09:41",
-      "lastLoginTime": "2026-03-09 00:09:41",
-      "lastLoginIp": "207.227.60.208",
-      "loginCount": 505,
-      "lockTime": "2026-03-09 00:09:41",
+      "id": 547,
+      "userId": "17",
+      "xzqhId": 471,
+      "source": "9qeasg",
+      "username": "macie.hartmann",
+      "mobile": "814-959-5738",
+      "email": "latanya.ritchie@hotmail.com",
+      "password": "frbfwe",
+      "organId": "17",
+      "foreignId": "17",
+      "accountId": "17",
+      "accountType": "k304j8",
+      "unionId": "17",
+      "openId": "17",
+      "nickName": "jin.wolff",
+      "avatarUrl": "www.velia-kozey.biz",
+      "registerTime": "2026-03-09 22:50:28",
+      "lastLoginTime": "2026-03-09 22:50:28",
+      "lastLoginIp": "14.83.204.161",
+      "loginCount": 440,
+      "lockTime": "2026-03-09 22:50:28",
       "activation": true,
-      "activationCode": "58719",
-      "priority": 863,
-      "createTime": "2026-03-09 00:09:41",
-      "delFlag": 9,
-      "description": "q3gld5",
-      "spare1": "ucvlrw",
-      "spare2": "v8ngnt"
+      "activationCode": "22134",
+      "priority": 833,
+      "createTime": "2026-03-09 22:50:28",
+      "delFlag": 2,
+      "description": "dzbd8l",
+      "spare1": "k0xz3g",
+      "spare2": "tak6it"
     },
     "roles": [
-      893
+      803
     ],
     "permissions": [
-      "ky7snm"
+      "71yj4l"
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28447,7 +28447,7 @@ source|string|   用户来源|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -i https://linlan.net/eframe_backend/login/social/workUserInfo.do?source=mnnfk0
+curl -X GET -k -i https://linlan.net/eframe_backend/login/social/workUserInfo.do?source=b2w3ti
 ```
 **Response-fields:**
 
@@ -28500,45 +28500,45 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": {
     "user": {
-      "id": 928,
-      "userId": "95",
-      "xzqhId": 358,
-      "source": "jd6j5j",
-      "username": "julian.ortiz",
-      "mobile": "1-508-337-4557",
-      "email": "columbus.ankunding@gmail.com",
-      "password": "30z1cb",
-      "organId": "95",
-      "foreignId": "95",
-      "accountId": "95",
-      "accountType": "t67t9n",
-      "unionId": "95",
-      "openId": "95",
-      "nickName": "shane.roberts",
-      "avatarUrl": "www.kandace-stamm.org",
-      "registerTime": "2026-03-09 00:09:41",
-      "lastLoginTime": "2026-03-09 00:09:41",
-      "lastLoginIp": "207.227.60.208",
-      "loginCount": 330,
-      "lockTime": "2026-03-09 00:09:41",
+      "id": 650,
+      "userId": "17",
+      "xzqhId": 551,
+      "source": "zo0aij",
+      "username": "macie.hartmann",
+      "mobile": "814-959-5738",
+      "email": "latanya.ritchie@hotmail.com",
+      "password": "hlkczy",
+      "organId": "17",
+      "foreignId": "17",
+      "accountId": "17",
+      "accountType": "fxn5a5",
+      "unionId": "17",
+      "openId": "17",
+      "nickName": "jin.wolff",
+      "avatarUrl": "www.velia-kozey.biz",
+      "registerTime": "2026-03-09 22:50:28",
+      "lastLoginTime": "2026-03-09 22:50:28",
+      "lastLoginIp": "14.83.204.161",
+      "loginCount": 696,
+      "lockTime": "2026-03-09 22:50:28",
       "activation": true,
-      "activationCode": "58719",
-      "priority": 429,
-      "createTime": "2026-03-09 00:09:41",
-      "delFlag": 9,
-      "description": "k42ix0",
-      "spare1": "yzt1j6",
-      "spare2": "zgzlkh"
+      "activationCode": "22134",
+      "priority": 625,
+      "createTime": "2026-03-09 22:50:28",
+      "delFlag": 2,
+      "description": "nym0b0",
+      "spare1": "ulqm3x",
+      "spare2": "ufa0su"
     },
     "roles": [
-      259
+      800
     ],
     "permissions": [
-      "37g8af"
+      "dyjz58"
     ]
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28577,7 +28577,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?status=992&invokeTarget=vm69v2&jobGroup=egj9x5&cronExpression=5xkeb6&misfirePolicy=69erpa&concurrent=lmi1mt&jobName=julian.ortiz&remark=v3x1yh&jobId=15
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/list.do?misfirePolicy=ig0kin&cronExpression=vt10u8&concurrent=deyoxz&invokeTarget=m0ul8b&jobName=macie.hartmann&status=550&remark=7qt1vp&jobGroup=4v846p&jobId=228
 ```
 **Response-fields:**
 
@@ -28607,19 +28607,19 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "jobId": "95",
-      "jobName": "julian.ortiz",
-      "jobGroup": "nxvi39",
-      "invokeTarget": "7g4xqh",
-      "cronExpression": "w5ijxn",
-      "misfirePolicy": "ss2gzv",
-      "concurrent": "qx7pso",
-      "status": 246,
-      "remark": "f367iy"
+      "jobId": "17",
+      "jobName": "macie.hartmann",
+      "jobGroup": "vydl0h",
+      "invokeTarget": "eaqd86",
+      "cronExpression": "n3rvbj",
+      "misfirePolicy": "0npydi",
+      "concurrent": "vfosnw",
+      "status": 273,
+      "remark": "3j8xft"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28648,9 +28648,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -28706,7 +28706,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'status=487&misfirePolicy=97j611&concurrent=gyfyos&writer.psOut.closing=true&jobName=julian.ortiz&characterEncoding=oppwrd&writer.psOut.textOut.nChars=537&invokeTarget=dz6m82&committed=true&writer.formatter.lastException.detailMessage=success&writer.autoFlush=true&jobId=648&writer.psOut.autoFlush=true&writer.psOut.trouble=true&bufferSize=10&writer.trouble=true&jobGroup=noyxao&status=457&writer.writeBuffer=9&writer.writeBuffer=9&writer.formatter.zero=i&contentType=82ndy5&writer.psOut.closed=true&cronExpression=u6tw28&remark=5rwc8i&writer.psOut.textOut.nextChar=181&writer.psOut.formatter.zero=m'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/export.do --data 'writer.trouble=true&misfirePolicy=3ms3p0&concurrent=nmbs1c&writer.psOut.formatter.zero=1&jobGroup=2k5fe5&committed=true&writer.autoFlush=true&bufferSize=10&writer.psOut.textOut.nChars=411&writer.formatter.zero=t&writer.psOut.autoFlush=true&writer.writeBuffer=t&writer.writeBuffer=t&contentType=xw40l7&cronExpression=phf237&characterEncoding=inulpj&writer.psOut.textOut.nextChar=269&status=283&writer.psOut.closed=true&writer.psOut.closing=true&invokeTarget=q2mdfa&remark=fuqrjv&jobName=macie.hartmann&status=760&writer.psOut.trouble=true&writer.formatter.lastException.detailMessage=success&jobId=169'
 ```
 **Response-fields:**
 
@@ -28725,9 +28725,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "zlw6sl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "dnkatd",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28757,7 +28757,7 @@ jobId|string|    任务ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/17.do
 ```
 **Response-fields:**
 
@@ -28786,18 +28786,18 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "jobId": "95",
-    "jobName": "julian.ortiz",
-    "jobGroup": "gdaqic",
-    "invokeTarget": "4s0jbf",
-    "cronExpression": "wt54ql",
-    "misfirePolicy": "b0jtey",
-    "concurrent": "hpfdka",
-    "status": 263,
-    "remark": "dxw8c8"
+    "jobId": "17",
+    "jobName": "macie.hartmann",
+    "jobGroup": "xmfv7b",
+    "invokeTarget": "n75m2y",
+    "cronExpression": "iratpe",
+    "misfirePolicy": "7tw1jx",
+    "concurrent": "66q4iy",
+    "status": 392,
+    "remark": "5gkk37"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28836,15 +28836,15 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/save.do --data '{
-  "jobId": "95",
-  "jobName": "julian.ortiz",
-  "jobGroup": "wa1vga",
-  "invokeTarget": "aad46d",
-  "cronExpression": "zhkgal",
-  "misfirePolicy": "qgb9ng",
-  "concurrent": "vqsuab",
-  "status": 824,
-  "remark": "569nde"
+  "jobId": "17",
+  "jobName": "macie.hartmann",
+  "jobGroup": "m3abwv",
+  "invokeTarget": "4au7ci",
+  "cronExpression": "1rc44u",
+  "misfirePolicy": "zsr2p0",
+  "concurrent": "9basf5",
+  "status": 728,
+  "remark": "87sgqj"
 }'
 ```
 **Response-fields:**
@@ -28864,9 +28864,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "2jdof5",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "oj1vb9",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28905,15 +28905,15 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/update.do --data '{
-  "jobId": "95",
-  "jobName": "julian.ortiz",
-  "jobGroup": "6408xs",
-  "invokeTarget": "befo8j",
-  "cronExpression": "bq41mp",
-  "misfirePolicy": "6mbdlk",
-  "concurrent": "38ite7",
-  "status": 72,
-  "remark": "0odklr"
+  "jobId": "17",
+  "jobName": "macie.hartmann",
+  "jobGroup": "24owej",
+  "invokeTarget": "oy21os",
+  "cronExpression": "icgm02",
+  "misfirePolicy": "jgywkp",
+  "concurrent": "bbgp6j",
+  "status": 563,
+  "remark": "tcxaa8"
 }'
 ```
 **Response-fields:**
@@ -28933,9 +28933,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "vfbvjl",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "pury6x",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -28974,15 +28974,15 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/changeStatus.do --data '{
-  "jobId": "95",
-  "jobName": "julian.ortiz",
-  "jobGroup": "jj81dx",
-  "invokeTarget": "qqo6wm",
-  "cronExpression": "pxlz3e",
-  "misfirePolicy": "rv32ac",
-  "concurrent": "rwfrel",
-  "status": 425,
-  "remark": "552x68"
+  "jobId": "17",
+  "jobName": "macie.hartmann",
+  "jobGroup": "lprjd2",
+  "invokeTarget": "rdngwd",
+  "cronExpression": "acpe3c",
+  "misfirePolicy": "evqho0",
+  "concurrent": "f7xq5e",
+  "status": 478,
+  "remark": "pvn2zq"
 }'
 ```
 **Response-fields:**
@@ -29002,9 +29002,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "3urft2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "l3bkeu",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29043,15 +29043,15 @@ remark|string|备注|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/job/run.do --data '{
-  "jobId": "95",
-  "jobName": "julian.ortiz",
-  "jobGroup": "923fck",
-  "invokeTarget": "7odzos",
-  "cronExpression": "3p41c8",
-  "misfirePolicy": "zn0ebz",
-  "concurrent": "jejfsh",
-  "status": 46,
-  "remark": "cfzzt6"
+  "jobId": "17",
+  "jobName": "macie.hartmann",
+  "jobGroup": "7gj2s5",
+  "invokeTarget": "1bhgml",
+  "cronExpression": "m6h8c4",
+  "misfirePolicy": "l60kwb",
+  "concurrent": "h2xxcg",
+  "status": 210,
+  "remark": "6y464h"
 }'
 ```
 **Response-fields:**
@@ -29071,9 +29071,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "afgxql",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "up6vqx",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29122,9 +29122,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "xyqgur",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "u88a8x",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29168,7 +29168,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?status=274&exceptionInfo=ec1mql&startTime=2026-03-09 00:09:42&jobLogId=833&remark=dep3bt&jobGroup=gqtrqu&jobId=95&jobMessage=success&creatorId=95&lastTime=2026-03-09 00:09:42&createTime=2026-03-09 00:09:42&jobName=julian.ortiz&stopTime=2026-03-09 00:09:42&invokeTarget=wii42e
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/list.do?creatorId=17&lastTime=2026-03-09 22:50:29&remark=qzq3ln&jobLogId=579&exceptionInfo=uy38yz&jobGroup=h7w2w3&startTime=2026-03-09 22:50:29&jobName=macie.hartmann&jobMessage=success&createTime=2026-03-09 22:50:29&status=735&jobId=17&stopTime=2026-03-09 22:50:29&invokeTarget=ktvbr8
 ```
 **Response-fields:**
 
@@ -29200,21 +29200,21 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:42",
-      "lastTime": "2026-03-09 00:09:42",
-      "jobLogId": "95",
-      "jobId": "95",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:29",
+      "lastTime": "2026-03-09 22:50:29",
+      "jobLogId": "17",
+      "jobId": "17",
       "jobMessage": "success",
-      "status": 721,
-      "exceptionInfo": "fp88rt",
-      "startTime": "2026-03-09 00:09:42",
-      "stopTime": "2026-03-09 00:09:42",
-      "remark": "gmczne"
+      "status": 890,
+      "exceptionInfo": "746jdl",
+      "startTime": "2026-03-09 22:50:29",
+      "stopTime": "2026-03-09 22:50:29",
+      "remark": "c96iel"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29243,9 +29243,9 @@ Parameter | Type|Description|Required|Since
 status|int32|No comments found.|false|-
 headerNames|array|No comments found.|false|-
 trailerFields|object|No comments found.|false|-
-locale|object|No comments found.|false|-
 contentType|string|No comments found.|false|-
 outputStream|object|No comments found.|false|-
+locale|object|No comments found.|false|-
 writer|object|No comments found.|false|-
 └─writeBuffer|array|No comments found.|false|-
 └─lock|object|No comments found.|false|-
@@ -29306,7 +29306,7 @@ remark|string|备注|false|-
 
 **Request-example:**
 ```
-curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'writer.writeBuffer=6&writer.writeBuffer=6&jobId=95&writer.psOut.trouble=true&characterEncoding=is8gdz&jobGroup=modc8g&startTime=2026-03-09 00:09:42&invokeTarget=njpxuy&status=728&contentType=94xqmg&writer.psOut.formatter.zero=5&lastTime=2026-03-09 00:09:42&writer.autoFlush=true&committed=true&writer.psOut.textOut.nChars=539&writer.psOut.textOut.nextChar=187&writer.formatter.zero=w&writer.formatter.lastException.detailMessage=success&exceptionInfo=8fpmns&stopTime=2026-03-09 00:09:42&writer.psOut.closing=true&jobName=julian.ortiz&status=399&creatorId=95&writer.trouble=true&writer.psOut.closed=true&jobLogId=902&remark=4grvbc&bufferSize=10&jobMessage=success&createTime=2026-03-09 00:09:42&writer.psOut.autoFlush=true'
+curl -X POST -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/export.do --data 'writer.psOut.closing=true&bufferSize=10&contentType=59gfxn&creatorId=17&jobName=macie.hartmann&writer.psOut.trouble=true&writer.formatter.zero=n&status=131&lastTime=2026-03-09 22:50:29&writer.autoFlush=true&writer.formatter.lastException.detailMessage=success&writer.psOut.closed=true&status=675&writer.psOut.formatter.zero=i&jobLogId=532&exceptionInfo=7imwen&jobMessage=success&createTime=2026-03-09 22:50:29&jobId=17&startTime=2026-03-09 22:50:29&remark=a61u4e&committed=true&characterEncoding=0psf84&writer.trouble=true&invokeTarget=101zws&writer.writeBuffer=1&writer.writeBuffer=1&writer.psOut.textOut.nextChar=643&jobGroup=jw0ksu&writer.psOut.autoFlush=true&writer.psOut.textOut.nChars=336&stopTime=2026-03-09 22:50:29'
 ```
 **Response-fields:**
 
@@ -29325,9 +29325,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "fv544b",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "6lycur",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29357,7 +29357,7 @@ jobLogId|string|    任务日志ID|true|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/95.do
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/monitor/joblog/17.do
 ```
 **Response-fields:**
 
@@ -29388,20 +29388,20 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:42",
-    "lastTime": "2026-03-09 00:09:42",
-    "jobLogId": "95",
-    "jobId": "95",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:29",
+    "lastTime": "2026-03-09 22:50:29",
+    "jobLogId": "17",
+    "jobId": "17",
     "jobMessage": "success",
-    "status": 875,
-    "exceptionInfo": "53nu76",
-    "startTime": "2026-03-09 00:09:42",
-    "stopTime": "2026-03-09 00:09:42",
-    "remark": "j66x7i"
+    "status": 724,
+    "exceptionInfo": "wh7qf5",
+    "startTime": "2026-03-09 22:50:29",
+    "stopTime": "2026-03-09 22:50:29",
+    "remark": "jusk0m"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29450,9 +29450,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "mqloi2",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "8tffvf",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29511,7 +29511,7 @@ spare2|string|备用2|false|-
 
 **Request-example:**
 ```
-curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?receiverEmail=columbus.ankunding@gmail.com&creatorId=95&delFlag=9&content=o97ddm&status=kbezf5&id=89&bizType=t7an2x&sendTime=2026-03-09&spare1=y5rpc6&foreignId=95&readTime=2026-03-09 00:09:40&providerId=95&providerName=julian.ortiz&title=z96oy3&endTime=2026-03-09 00:08:33&senderName=julian.ortiz&description=iwug0y&page=1&msgUrl=www.kandace-stamm.org&spare2=wela11&sendStatus=pkk15p&limit=10&orderBy=825&readStatus=jj479c&appId=95&startTime=2026-03-09 00:08:33&receiverName=julian.ortiz&q=sm83ub
+curl -X GET -k -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/list.do?endTime=2026-03-09 22:49:14&appId=17&senderName=macie.hartmann&bizType=dwk51g&receiverEmail=latanya.ritchie@hotmail.com&description=1ns657&spare1=y150wl&foreignId=17&providerName=macie.hartmann&status=hwybj3&msgUrl=www.velia-kozey.biz&orderBy=778&delFlag=2&title=nttrwx&content=dan2h6&spare2=k7jfmu&readTime=2026-03-09 22:50:26&page=1&creatorId=17&providerId=17&readStatus=sog34o&id=150&startTime=2026-03-09 22:49:14&q=nunie9&sendStatus=leo7xk&limit=10&sendTime=2026-03-09&receiverName=macie.hartmann
 ```
 **Response-fields:**
 
@@ -29556,34 +29556,34 @@ timestamp|string|返回时间戳字符串|-
   "msg": "正常",
   "data": [
     {
-      "creatorId": "95",
-      "createTime": "2026-03-09 00:09:40",
-      "lastTime": "2026-03-09 00:09:40",
-      "id": 703,
-      "appId": "95",
-      "providerId": "95",
-      "providerName": "julian.ortiz",
-      "foreignId": "95",
-      "senderName": "julian.ortiz",
-      "receiverEmail": "columbus.ankunding@gmail.com",
-      "receiverName": "julian.ortiz",
-      "bizType": "exvom0",
-      "title": "4ex7nn",
-      "content": "lolhzn",
-      "msgUrl": "www.kandace-stamm.org",
-      "status": "82210n",
+      "creatorId": "17",
+      "createTime": "2026-03-09 22:50:26",
+      "lastTime": "2026-03-09 22:50:26",
+      "id": 347,
+      "appId": "17",
+      "providerId": "17",
+      "providerName": "macie.hartmann",
+      "foreignId": "17",
+      "senderName": "macie.hartmann",
+      "receiverEmail": "latanya.ritchie@hotmail.com",
+      "receiverName": "macie.hartmann",
+      "bizType": "zflpxv",
+      "title": "vetyhv",
+      "content": "thuo55",
+      "msgUrl": "www.velia-kozey.biz",
+      "status": "83g39h",
       "sendTime": "2026-03-09",
-      "sendStatus": "aoofkv",
-      "readTime": "2026-03-09 00:09:40",
-      "readStatus": "iihq6w",
-      "delFlag": 9,
-      "description": "9chapp",
-      "spare1": "fa03yc",
-      "spare2": "jo6yk9"
+      "sendStatus": "og2af5",
+      "readTime": "2026-03-09 22:50:26",
+      "readStatus": "p7kx8y",
+      "delFlag": 2,
+      "description": "mx5z4i",
+      "spare1": "0t5aa5",
+      "spare2": "ru0078"
     }
   ],
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29658,33 +29658,33 @@ timestamp|string|返回时间戳字符串|-
   "code": 0,
   "msg": "正常",
   "data": {
-    "creatorId": "95",
-    "createTime": "2026-03-09 00:09:40",
-    "lastTime": "2026-03-09 00:09:40",
-    "id": 465,
-    "appId": "95",
-    "providerId": "95",
-    "providerName": "julian.ortiz",
-    "foreignId": "95",
-    "senderName": "julian.ortiz",
-    "receiverEmail": "columbus.ankunding@gmail.com",
-    "receiverName": "julian.ortiz",
-    "bizType": "1gw97z",
-    "title": "qii2l3",
-    "content": "821qci",
-    "msgUrl": "www.kandace-stamm.org",
-    "status": "n0ttmr",
+    "creatorId": "17",
+    "createTime": "2026-03-09 22:50:26",
+    "lastTime": "2026-03-09 22:50:26",
+    "id": 635,
+    "appId": "17",
+    "providerId": "17",
+    "providerName": "macie.hartmann",
+    "foreignId": "17",
+    "senderName": "macie.hartmann",
+    "receiverEmail": "latanya.ritchie@hotmail.com",
+    "receiverName": "macie.hartmann",
+    "bizType": "w5wse5",
+    "title": "5harhc",
+    "content": "gdcyth",
+    "msgUrl": "www.velia-kozey.biz",
+    "status": "k233g1",
     "sendTime": "2026-03-09",
-    "sendStatus": "bc9ldx",
-    "readTime": "2026-03-09 00:09:40",
-    "readStatus": "s9ssj5",
-    "delFlag": 9,
-    "description": "b6dmkx",
-    "spare1": "j1ntf6",
-    "spare2": "vt4b95"
+    "sendStatus": "70icnk",
+    "readTime": "2026-03-09 22:50:26",
+    "readStatus": "94ukfu",
+    "delFlag": 2,
+    "description": "rk0tml",
+    "spare1": "69mja2",
+    "spare2": "6jpa7k"
   },
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29739,30 +29739,30 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/save.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:40",
-  "lastTime": "2026-03-09 00:09:40",
-  "id": 900,
-  "appId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "senderName": "julian.ortiz",
-  "receiverEmail": "columbus.ankunding@gmail.com",
-  "receiverName": "julian.ortiz",
-  "bizType": "qgytzw",
-  "title": "39m0yr",
-  "content": "nobi8z",
-  "msgUrl": "www.kandace-stamm.org",
-  "status": "qx6sfl",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:26",
+  "lastTime": "2026-03-09 22:50:26",
+  "id": 517,
+  "appId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "senderName": "macie.hartmann",
+  "receiverEmail": "latanya.ritchie@hotmail.com",
+  "receiverName": "macie.hartmann",
+  "bizType": "5z5sby",
+  "title": "5t3a8z",
+  "content": "ofqx5z",
+  "msgUrl": "www.velia-kozey.biz",
+  "status": "ezoz0a",
   "sendTime": "2026-03-09",
-  "sendStatus": "2xh9id",
-  "readTime": "2026-03-09 00:09:40",
-  "readStatus": "f2br3q",
-  "delFlag": 9,
-  "description": "69b5sn",
-  "spare1": "w2h0d0",
-  "spare2": "xg1oa4"
+  "sendStatus": "xqk4us",
+  "readTime": "2026-03-09 22:50:26",
+  "readStatus": "2zfxvt",
+  "delFlag": 2,
+  "description": "hghexz",
+  "spare1": "ohi566",
+  "spare2": "7npl42"
 }'
 ```
 **Response-fields:**
@@ -29782,9 +29782,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "azzv25",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "znhisl",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29839,30 +29839,30 @@ spare2|string|备用2|false|-
 **Request-example:**
 ```
 curl -X POST -k -H 'Content-Type: application/json; charset=utf-8' -H 'token:${token}' -i https://linlan.net/eframe_backend/api/store/mailsendrecord/update.do --data '{
-  "creatorId": "95",
-  "createTime": "2026-03-09 00:09:40",
-  "lastTime": "2026-03-09 00:09:40",
-  "id": 256,
-  "appId": "95",
-  "providerId": "95",
-  "providerName": "julian.ortiz",
-  "foreignId": "95",
-  "senderName": "julian.ortiz",
-  "receiverEmail": "columbus.ankunding@gmail.com",
-  "receiverName": "julian.ortiz",
-  "bizType": "gt5aao",
-  "title": "n8fom8",
-  "content": "zic8n3",
-  "msgUrl": "www.kandace-stamm.org",
-  "status": "3mb7ax",
+  "creatorId": "17",
+  "createTime": "2026-03-09 22:50:26",
+  "lastTime": "2026-03-09 22:50:26",
+  "id": 151,
+  "appId": "17",
+  "providerId": "17",
+  "providerName": "macie.hartmann",
+  "foreignId": "17",
+  "senderName": "macie.hartmann",
+  "receiverEmail": "latanya.ritchie@hotmail.com",
+  "receiverName": "macie.hartmann",
+  "bizType": "y8g0rk",
+  "title": "qg6wiz",
+  "content": "0n3l8v",
+  "msgUrl": "www.velia-kozey.biz",
+  "status": "ddsenu",
   "sendTime": "2026-03-09",
-  "sendStatus": "5rq264",
-  "readTime": "2026-03-09 00:09:40",
-  "readStatus": "natizh",
-  "delFlag": 9,
-  "description": "8x5640",
-  "spare1": "g6lkn3",
-  "spare2": "arl6be"
+  "sendStatus": "5q54xv",
+  "readTime": "2026-03-09 22:50:26",
+  "readStatus": "u8yty1",
+  "delFlag": 2,
+  "description": "k05xph",
+  "spare1": "vgpe97",
+  "spare2": "0tvm09"
 }'
 ```
 **Response-fields:**
@@ -29882,9 +29882,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "fcdvm1",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "93h4to",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
@@ -29934,9 +29934,9 @@ timestamp|string|返回时间戳字符串|-
   "success": true,
   "code": 0,
   "msg": "正常",
-  "data": "s51noo",
-  "requestId": "95",
-  "timestamp": "2026-03-09 00:08:33"
+  "data": "vpzqyc",
+  "requestId": "17",
+  "timestamp": "2026-03-09 22:49:14"
 }
 ```
 
