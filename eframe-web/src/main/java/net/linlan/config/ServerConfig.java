@@ -17,10 +17,9 @@
  */
 package net.linlan.config;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Component;
 
+import jakarta.servlet.http.HttpServletRequest;
 import net.linlan.utils.ServletUtils;
 
 /**

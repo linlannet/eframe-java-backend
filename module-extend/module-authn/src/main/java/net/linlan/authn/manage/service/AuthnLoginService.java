@@ -19,8 +19,6 @@ package net.linlan.authn.manage.service;
 
 import java.sql.Timestamp;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -28,6 +26,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.mail.dto.EmailRegisterDto;
 import net.linlan.authn.manage.vo.MobileLoginBody;
 import net.linlan.authn.sms.cache.SmsSendCache;

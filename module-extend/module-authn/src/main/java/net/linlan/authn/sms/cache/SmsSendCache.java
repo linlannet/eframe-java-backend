@@ -17,12 +17,11 @@
  */
 package net.linlan.authn.sms.cache;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
 
+import jakarta.annotation.Resource;
 import net.linlan.sys.web.RedisService;
 
 /**

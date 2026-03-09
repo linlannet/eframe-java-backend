@@ -19,8 +19,6 @@ package net.linlan.frame.view.admin.manager;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 
 import com.github.pagehelper.Page;
@@ -28,6 +26,7 @@ import com.google.common.collect.Lists;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.script.json.StringMap;

@@ -23,10 +23,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.frame.admin.dao.AdminRoleDao;
 import net.linlan.frame.admin.dao.AdminUserRoleDao;

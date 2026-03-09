@@ -20,7 +20,6 @@ package net.linlan.frame.api.open;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 
 import org.springframework.util.FastByteArrayOutputStream;
@@ -30,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.code.kaptcha.Producer;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.annotation.PlatLog;

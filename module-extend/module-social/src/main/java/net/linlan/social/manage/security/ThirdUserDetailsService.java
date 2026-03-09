@@ -17,11 +17,10 @@
  */
 package net.linlan.social.manage.security;
 
-import javax.annotation.Resource;
-
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.social.manage.vo.ThirdUserVo;

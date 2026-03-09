@@ -24,11 +24,11 @@
     <parent>
         <groupId>net.linlan.eframe</groupId>
         <artifactId>eframe-java-backend</artifactId>
-        <version>1.1.15</version>
+        <version>1.2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>eframe-web</artifactId>
-    <version>1.1.15</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>eframe-web</name>
     <description>
@@ -38,10 +38,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <maven.version>3.1.0</maven.version>
-        <maven.compile.version>3.7.0</maven.compile.version>
-
     </properties>
     <url>https://gitee.com/linlannet/eframe-java-backend.git</url>
     <licenses>
@@ -187,7 +183,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -260,17 +259,17 @@
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-authn</artifactId>
-            <version>1.1.15</version>
+            <version>${linlan.eframe.version}</version>
         </dependency>
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-oss</artifactId>
-            <version>1.1.15</version>
+            <version>${linlan.eframe.version}</version>
         </dependency>
         <dependency>
             <groupId>net.linlan.eframe</groupId>
             <artifactId>module-social</artifactId>
-            <version>1.1.15</version>
+            <version>${linlan.eframe.version}</version>
         </dependency>
 
     </dependencies>

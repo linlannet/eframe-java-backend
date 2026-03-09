@@ -17,10 +17,9 @@
  */
 package net.linlan.sys.comm.storage;
 
-import javax.annotation.Resource;
-
 import com.alibaba.fastjson2.JSON;
 
+import jakarta.annotation.Resource;
 import net.linlan.sys.base.service.BaseConfigWholeService;
 
 /**

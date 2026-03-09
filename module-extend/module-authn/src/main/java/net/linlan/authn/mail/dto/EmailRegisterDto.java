@@ -17,9 +17,9 @@
  */
 package net.linlan.authn.mail.dto;
 
-import javax.validation.constraints.NotNull;
-
 import lombok.Data;
+
+import jakarta.validation.constraints.NotNull;
 
 /**
  * 邮箱注册类

@@ -20,8 +20,6 @@ package net.linlan.oss.service;
 import java.util.Date;
 import java.util.Locale;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -29,6 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.commons.script.json.JsonUtils;
 import net.linlan.oss.storage.OSSFactory;

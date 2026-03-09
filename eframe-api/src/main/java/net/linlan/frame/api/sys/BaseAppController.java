@@ -20,9 +20,6 @@ package net.linlan.frame.api.sys;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +29,8 @@ import com.alibaba.fastjson2.JSONObject;
 import com.github.pagehelper.Page;
 import com.google.common.collect.Lists;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 import net.linlan.annotation.AuthIgnore;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;

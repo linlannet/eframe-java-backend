@@ -22,11 +22,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import jakarta.annotation.Resource;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.dto.AdminUserDto;
 import net.linlan.frame.admin.service.AdminMenuService;

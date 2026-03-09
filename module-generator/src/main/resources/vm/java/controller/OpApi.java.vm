@@ -1,6 +1,6 @@
 package ${packageName}.api;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import net.linlan.annotation.LimitScope;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.github.pagehelper.Page;
 import java.util.List;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import net.linlan.annotation.Encrypt;
 import net.linlan.commons.core.RandomUtils;

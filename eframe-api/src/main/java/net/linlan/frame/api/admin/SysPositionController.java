@@ -19,9 +19,6 @@ package net.linlan.frame.api.admin;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +31,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.pagehelper.Page;
 import com.google.common.collect.Lists;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.commons.core.ObjectUtils;

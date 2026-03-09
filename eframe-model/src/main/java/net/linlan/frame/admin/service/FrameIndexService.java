@@ -19,12 +19,11 @@ package net.linlan.frame.admin.service;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.frame.admin.dao.FrameIndexDao;
 import net.linlan.frame.admin.dto.IndexApplicationDto;
 import net.linlan.frame.admin.dto.IndexElementDto;

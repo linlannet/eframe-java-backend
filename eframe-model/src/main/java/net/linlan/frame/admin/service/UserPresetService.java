@@ -21,8 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +29,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.frame.admin.constant.PresetTypeEnum;
 import net.linlan.frame.admin.dao.UserPresetDao;
 import net.linlan.frame.admin.dto.UserPresetDto;

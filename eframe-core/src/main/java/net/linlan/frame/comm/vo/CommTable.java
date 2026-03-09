@@ -19,11 +19,10 @@ package net.linlan.frame.comm.vo;
 
 import java.util.List;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-
 import lombok.Data;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import net.linlan.utils.entity.BaseEntity;
 
 /**

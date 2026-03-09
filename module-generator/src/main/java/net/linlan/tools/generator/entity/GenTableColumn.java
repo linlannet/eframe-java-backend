@@ -17,10 +17,9 @@
  */
 package net.linlan.tools.generator.entity;
 
-import javax.validation.constraints.NotBlank;
-
 import lombok.Data;
 
+import jakarta.validation.constraints.NotBlank;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.utils.entity.BaseEntity;

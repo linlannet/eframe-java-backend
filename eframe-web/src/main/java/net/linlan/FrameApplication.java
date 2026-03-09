@@ -17,8 +17,6 @@
  */
 package net.linlan;
 
-import javax.annotation.PostConstruct;
-
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -34,6 +32,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 
+import jakarta.annotation.PostConstruct;
 import net.linlan.config.DynamicDataSourceConfig;
 
 /**

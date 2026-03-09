@@ -23,8 +23,6 @@ import java.time.ZoneId;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import javax.annotation.Resource;
-
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.*;
@@ -35,6 +33,7 @@ import org.springframework.util.CollectionUtils;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.utils.constant.CacheConstants;
 import redis.clients.jedis.Jedis;

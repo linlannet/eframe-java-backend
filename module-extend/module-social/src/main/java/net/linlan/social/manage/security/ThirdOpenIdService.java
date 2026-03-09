@@ -17,10 +17,9 @@
  */
 package net.linlan.social.manage.security;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import me.zhyd.oauth.model.AuthCallback;
 import me.zhyd.oauth.model.AuthResponse;
 import me.zhyd.oauth.model.AuthUser;

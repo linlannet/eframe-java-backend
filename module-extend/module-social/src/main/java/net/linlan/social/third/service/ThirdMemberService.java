@@ -21,14 +21,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
+import jakarta.annotation.Resource;
 import me.zhyd.oauth.config.AuthConfig;
 import me.zhyd.oauth.model.AuthUser;
 import me.zhyd.oauth.request.*;

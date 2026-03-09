@@ -40,7 +40,7 @@
     }],
     "errorCodeDictionaries": [{ //错误码列表，没有需求可以不设置
         "title": "http状态码字典",
-        "enumClassName": "net.linlan.frame.mbiz.constant.HttpStatusEnum", //错误码枚举类
+        "enumClassName": "net.linlan.frame.mbiz.constant.HttpStatusExtend", //错误码枚举类
         "codeField": "code",//错误码的code码字段名称
         "descField": "msg"//错误码的描述信息对应的字段名
     }],
@@ -75,9 +75,6 @@
         "value": "true"//设置响应码的值
     }],
     "requestParamsTable": true, // 是否将请求参数表展示在文档中，默认true，@since 2.2.5
-    "requestBodyAdvice":{ ////自smart-doc 2.1.4 起，支持设置RequestBodyAdvice统一请求包装类，非必须
-        "className":"net.linlan.commons.core.RequestAdvice"
-    },
     "customRequestFields": [{ //自定义请求体的注释，@since 2.1.3，非必须
         "name":"source", //属性名
         "desc":"来源", //描述

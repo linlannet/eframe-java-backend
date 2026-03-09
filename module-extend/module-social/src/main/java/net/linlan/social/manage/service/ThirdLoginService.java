@@ -17,8 +17,6 @@
  */
 package net.linlan.social.manage.service;
 
-import javax.annotation.Resource;
-
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
@@ -26,6 +24,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.frame.FrameUserDetails;
 import net.linlan.frame.admin.constant.LogCategoryEnum;
 import net.linlan.frame.comm.manager.AsyncManager;

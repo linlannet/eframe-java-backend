@@ -19,17 +19,16 @@ package net.linlan.frame.comm.security.handle;
 
 import java.io.IOException;
 
-import javax.annotation.Resource;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 
 import com.alibaba.fastjson2.JSON;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.frame.FrameUserDetails;

@@ -19,14 +19,13 @@ package net.linlan.social.permission.service;
 
 import java.util.*;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.group.dto.PublicGroupListDto;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;

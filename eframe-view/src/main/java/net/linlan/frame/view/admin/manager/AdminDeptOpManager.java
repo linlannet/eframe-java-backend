@@ -19,12 +19,11 @@ package net.linlan.frame.view.admin.manager;
 
 import java.io.Serializable;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.admin.entity.AdminDept;

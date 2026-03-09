@@ -20,13 +20,12 @@ package net.linlan.frame.view.admin.manager;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.annotation.Resource;
-import javax.validation.Validator;
-
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
+import jakarta.validation.Validator;
 import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.RandomUtils;
 import net.linlan.commons.core.StringUtils;

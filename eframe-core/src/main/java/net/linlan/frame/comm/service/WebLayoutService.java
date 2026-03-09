@@ -17,10 +17,9 @@
  */
 package net.linlan.frame.comm.service;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.Resource;
 import net.linlan.commons.core.StringUtils;
 import net.linlan.frame.admin.dto.AppConfigDto;
 import net.linlan.frame.admin.dto.WebLayoutDto;

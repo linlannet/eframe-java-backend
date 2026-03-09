@@ -19,11 +19,10 @@ package net.linlan.oss.config;
 
 import java.io.Serializable;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
 import lombok.Data;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import net.linlan.oss.storage.group.AliyunGroup;
 import net.linlan.oss.storage.group.QcloudGroup;
 import net.linlan.oss.storage.group.QiniuGroup;

@@ -21,13 +21,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.manage.constant.MessageSendStatus;
 import net.linlan.authn.manage.constant.MessageStatus;
 import net.linlan.authn.sms.dao.SmsSendRecordDao;

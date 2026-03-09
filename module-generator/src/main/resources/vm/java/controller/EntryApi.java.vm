@@ -9,7 +9,7 @@ import net.linlan.commons.core.ObjectUtils;
 import net.linlan.commons.core.http.ResponseEntity;
 import net.linlan.commons.core.annotation.PlatLog;
 import net.linlan.commons.db.page.Pagination;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 

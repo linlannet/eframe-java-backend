@@ -20,8 +20,6 @@ package net.linlan.sys.base.service;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +28,7 @@ import com.github.pagehelper.PageHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
+import jakarta.annotation.Resource;
 import net.linlan.sys.base.dao.BaseXzqhDao;
 import net.linlan.sys.base.dto.BaseXzqhDto;
 import net.linlan.sys.base.dto.BaseXzqhListDto;

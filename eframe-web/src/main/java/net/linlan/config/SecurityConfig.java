@@ -20,8 +20,6 @@ package net.linlan.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,6 +42,7 @@ import org.springframework.web.filter.CorsFilter;
 
 import lombok.AllArgsConstructor;
 
+import jakarta.annotation.Resource;
 import net.linlan.authn.sms.security.MobileAuthenticationProvider;
 import net.linlan.authn.sms.security.MobileUserDetailsService;
 import net.linlan.authn.sms.security.MobileVerifyCodeService;
@@ -181,17 +180,17 @@ public class SecurityConfig {
             // 注解标记允许匿名访问的url
             .authorizeHttpRequests((requests) -> {
                 permitAllUrlProperties.getUrls()
-                    .forEach(url -> requests.antMatchers(url).permitAll());
+                    .forEach(url -> requests.requestMatchers(url).permitAll());
                 // 对于登录login 注册register 和开放类接口api/open/等 允许匿名访问
                 requests
-                    .antMatchers("/login", "/third/ecorgan/login", "/platLogin", "/register",
+                    .requestMatchers("/login", "/third/ecorgan/login", "/platLogin", "/register",
                         "/api/open/**", "/login/**", "/register/**")
                     .permitAll()
                     // 静态资源，可匿名访问
-                    .antMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css",
+                    .requestMatchers(HttpMethod.GET, "/", "/*.html", "/**/*.html", "/**/*.css",
                         "/**/*.js", "/profile/**")
                     .permitAll()
-                    .antMatchers("/swagger-ui.html", "/swagger-resources/**", "/webjars/**",
+                    .requestMatchers("/swagger-ui.html", "/swagger-resources/**", "/webjars/**",
                         "/*/api-docs", "/druid/**")
                     .permitAll()
                     // 除上面外的所有请求全部需要鉴权认证

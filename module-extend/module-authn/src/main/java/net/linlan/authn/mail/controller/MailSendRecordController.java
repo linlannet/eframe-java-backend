@@ -19,13 +19,12 @@ package net.linlan.authn.mail.controller;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import com.github.pagehelper.Page;
 
+import jakarta.annotation.Resource;
 import net.linlan.annotation.Encrypt;
 import net.linlan.annotation.LimitScope;
 import net.linlan.authn.mail.dto.MailSendRecordDto;

@@ -20,8 +20,6 @@ package net.linlan.utils.upload;
 import java.io.File;
 import java.io.IOException;
 
-import javax.servlet.ServletContext;
-
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +27,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.multipart.MultipartFile;
 
+import jakarta.servlet.ServletContext;
 import net.linlan.commons.core.FilePathUtils;
 import net.linlan.commons.core.StringUtils;
 
@@ -161,7 +160,7 @@ public class FileRepository implements ServletContextAware {
     /* (non-Javadoc)
      * Title:setServletContext
      * @param servletContext
-     * @see org.springframework.web.context.ServletContextAware#setServletContext(javax.servlet.ServletContext)
+     * @see org.springframework.web.context.ServletContextAware#setServletContext(jakarta.servlet.ServletContext)
      */
     public void setServletContext(ServletContext servletContext) {
         this.ctx = servletContext;
